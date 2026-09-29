@@ -430,6 +430,317 @@
           "event": "idea rejected in telegram"
         }
       ]
+    },
+    {
+      "id": "2026-09-29-11",
+      "proposed_at": "2026-09-29",
+      "stream": "fun",
+      "title": "«Ми з козацької старшини»: коротка арифметика родинного міфу",
+      "summary": "Порахуємо, скільки старшини було насправді: 6 полковників і 60 сотників у реєстровому війську 1625–1630 рр., до 150 осіб на Січі. І чому «усі предки — козаки» не сходиться з реєстрами. Іронічний тред про міф, який є в кожній родині.",
+      "why_now": "",
+      "sources": [
+        "https://uk.wikipedia.org/wiki/Козацька_старшина"
+      ],
+      "status": "proposed",
+      "thread": {
+        "status": "none",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-09-29T22:00:00+00:00",
+          "event": "proposed by ideas routine"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-29-12",
+      "proposed_at": "2026-09-29",
+      "stream": "fun",
+      "title": "Мертві душі — це не вигадка Гоголя, а ревізька бюрократія",
+      "summary": "Померлий селянин лишався в ревізьких списках до наступної ревізії — на цьому побудовано афери Чичикова. Тред про те, як «живі» предки зникають з казок із запізненням, і що з цим робити генеалогу.",
+      "why_now": "",
+      "sources": [
+        "https://uk.wikipedia.org/wiki/Ревізькі_казки",
+        "https://uk.wikipedia.org/wiki/Мертві_душі"
+      ],
+      "status": "proposed",
+      "thread": {
+        "status": "none",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-09-29T22:00:00+00:00",
+          "event": "proposed by ideas routine"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-29-13",
+      "proposed_at": "2026-09-29",
+      "stream": "fun",
+      "title": "Ваш Федір у метриці — Theodorus: пригоди латинізованих імен",
+      "summary": "В австро-угорських метричних книгах імена записували латиною (Theodorus замість Федір). Кумедна добірка того, як предок «змінює ім'я» від запису до запису, і як не впасти у відчай.",
+      "why_now": "",
+      "sources": [
+        "https://uk.wikipedia.org/wiki/Метрична_книга"
+      ],
+      "status": "proposed",
+      "thread": {
+        "status": "none",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-09-29T22:00:00+00:00",
+          "event": "proposed by ideas routine"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-29-14",
+      "proposed_at": "2026-09-29",
+      "stream": "fun",
+      "title": "Мій прадід народився на 12 днів раніше: юліанський календар у метриках",
+      "summary": "У XIX ст. Юліанський календар відставав на 12 днів, у XX — на 13; в Україні новий стиль ввели 1 березня 1918 р. Тред про «день народження», що не збігається з сімейним, і про те, чому це не помилка предка.",
+      "why_now": "Позачасова; річниця переходу на новий стиль — 1 березня",
+      "sources": [
+        "https://uk.wikipedia.org/wiki/Юліанський_календар"
+      ],
+      "status": "proposed",
+      "thread": {
+        "status": "none",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-09-29T22:00:00+00:00",
+          "event": "proposed by ideas routine"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-29-15",
+      "proposed_at": "2026-09-29",
+      "stream": "fun",
+      "title": "Скоропис: це не почерк, це шифр",
+      "summary": "Скоропис виріс із півуставу в XIV ст., мав скорочення й виноси літер над рядком, а українські форми відрізнялись від російських і білоруських. Іронія про години над однією сторінкою — і що робити, коли писар «не любив» літеру.",
+      "why_now": "",
+      "sources": [
+        "https://uk.wikipedia.org/wiki/Скоропис"
+      ],
+      "status": "proposed",
+      "thread": {
+        "status": "none",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-09-29T22:00:00+00:00",
+          "event": "proposed by ideas routine"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-29-16",
+      "proposed_at": "2026-09-29",
+      "stream": "fun",
+      "title": "340 тисяч втратили дворянство: шляхетський міф і перевірка 1832–1852",
+      "summary": "Російська перевірка шляхетства 1832–1852 рр. позбавила статусу близько 340 тисяч осіб на українських землях. Тред про родинне «ми шляхтичі» і про те, чому без документів воно не працює — без глузування з історії.",
+      "why_now": "",
+      "sources": [
+        "https://uk.wikipedia.org/wiki/Шляхта"
+      ],
+      "status": "proposed",
+      "thread": {
+        "status": "none",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-09-29T22:00:00+00:00",
+          "event": "proposed by ideas routine"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-29-17",
+      "proposed_at": "2026-09-29",
+      "stream": "fun",
+      "title": "Сидоренко чи Сидорчук: карта прізвищ за суфіксом",
+      "summary": "-енко частіше на Наддніпрянщині, -ук — на Західному Поліссі, Волині й Поділлі; -ський означає походження з місця. Жартівливе «вгадай регіон предків за прізвищем» і чесне пояснення, чому це лише підказка.",
+      "why_now": "",
+      "sources": [
+        "https://uk.wikipedia.org/wiki/Українські_прізвища"
+      ],
+      "status": "proposed",
+      "thread": {
+        "status": "none",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-09-29T22:00:00+00:00",
+          "event": "proposed by ideas routine"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-29-18",
+      "proposed_at": "2026-09-29",
+      "stream": "fun",
+      "title": "Церква рахувала, хто не прийшов на сповідь: сповідні розписи",
+      "summary": "Сповідні розписи фіксували, хто ходив на сповідь, а хто уникав; за ухилення були штрафи (скасовані до 1800 р.). Тред про «найдавніший облік прогульників» і про те, як він допомагає генеалогові.",
+      "why_now": "",
+      "sources": [
+        "https://uk.wikipedia.org/wiki/Сповідний_розпис"
+      ],
+      "status": "proposed",
+      "thread": {
+        "status": "none",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-09-29T22:00:00+00:00",
+          "event": "proposed by ideas routine"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-29-19",
+      "proposed_at": "2026-09-29",
+      "stream": "fun",
+      "title": "Козак прийшов на Січ і став «Іваном Ніхто»: прізвища запорожців",
+      "summary": "Багато прізвищ з'явилося за часів Запорозької Січі, коли новобранці брали нові. Іронічний тред про предка, що «загубив» прізвище у вступі до війська, і про те, чому лінія обривається на XVII ст.",
+      "why_now": "",
+      "sources": [
+        "https://uk.wikipedia.org/wiki/Українські_прізвища"
+      ],
+      "status": "proposed",
+      "thread": {
+        "status": "none",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-09-29T22:00:00+00:00",
+          "event": "proposed by ideas routine"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-29-20",
+      "proposed_at": "2026-09-29",
+      "stream": "fun",
+      "title": "Два примірники метрики — і жодного, коли вони потрібні",
+      "summary": "Метричні книги вели у двох примірниках: один у парафії, другий у духовній консисторії. Причини смерті описано суб'єктивно, а форми різні. Тред про генеалога, що шукає «той самий» запис у двох місцях.",
+      "why_now": "",
+      "sources": [
+        "https://uk.wikipedia.org/wiki/Метрична_книга"
+      ],
+      "status": "proposed",
+      "thread": {
+        "status": "none",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-09-29T22:00:00+00:00",
+          "event": "proposed by ideas routine"
+        }
+      ]
     }
   ]
 }
