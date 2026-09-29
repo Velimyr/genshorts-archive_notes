@@ -759,9 +759,10 @@
       ],
       "status": "approved",
       "thread": {
-        "status": "queued",
+        "status": "posted",
         "file": "data/texts/2026-09-29-20/thread.md",
-        "approved_sha": "7e029950e283b0da"
+        "approved_sha": "7e029950e283b0da",
+        "permalink": "https://www.threads.com/@velimyr/post/Dd4wMK0oOh8"
       },
       "script": {
         "status": "none",
@@ -810,6 +811,10 @@
         {
           "at": "2026-09-29T21:43:40+00:00",
           "event": "thread queued for Threads"
+        },
+        {
+          "at": "2026-09-29T21:50:43+00:00",
+          "event": "thread posted to Threads (5 posts)"
         }
       ]
     }
