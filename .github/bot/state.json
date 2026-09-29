@@ -1,5 +1,5 @@
 {
-  "offset": 928736937,
+  "offset": 928736938,
   "sent": {
     "idea:test-01": 882,
     "idea:2026-09-29-01": 888,
@@ -92,6 +92,9 @@
     },
     "25": {
       "kind": "nav"
+    },
+    "26": {
+      "kind": "menu"
     }
   },
   "approved_threads": {},
