@@ -74,7 +74,7 @@
       "sources": [
         "https://uinp.gov.ua/pres-centr/novyny/u-babynomu-yaru-vshanuvaly-pamyait-zhertv-masovyh-rozstriliv"
       ],
-      "status": "proposed",
+      "status": "rejected",
       "thread": {
         "status": "none",
         "file": null
@@ -92,6 +92,10 @@
         {
           "at": "2026-09-29T20:22:24Z",
           "event": "proposed by ideas routine"
+        },
+        {
+          "at": "2026-09-29T20:25:14+00:00",
+          "event": "idea rejected in telegram"
         }
       ]
     },
@@ -105,7 +109,7 @@
         "https://uinp.gov.ua/pres-centr/novyny/pamyat-yak-sprotyv-u-muzeyi-maydanu-vidznachyly-richnycyu-vidkryttya-mizhnarodnogo-memorialu-u-bykivni",
         "https://zaxid.net/rodovid_i_genealogiya_yak_shukati_v_arhivah_potribni_dokumenti_instruktsiya_n1615494"
       ],
-      "status": "proposed",
+      "status": "rejected",
       "thread": {
         "status": "none",
         "file": null
@@ -123,6 +127,10 @@
         {
           "at": "2026-09-29T20:22:24Z",
           "event": "proposed by ideas routine"
+        },
+        {
+          "at": "2026-09-29T20:25:15+00:00",
+          "event": "idea rejected in telegram"
         }
       ]
     },
@@ -135,7 +143,7 @@
       "sources": [
         "https://www.kmu.gov.ua/news/ponad-105-milioniv-dokumentiv-ukrainski-arkhivy-otsyfrovuiut-natsionalnu-pamiat-popry-shyrokomasshtabnu-viinu"
       ],
-      "status": "proposed",
+      "status": "approved",
       "thread": {
         "status": "none",
         "file": null
@@ -153,6 +161,10 @@
         {
           "at": "2026-09-29T20:22:24Z",
           "event": "proposed by ideas routine"
+        },
+        {
+          "at": "2026-09-29T20:25:15+00:00",
+          "event": "idea approved in telegram"
         }
       ]
     },
@@ -165,7 +177,7 @@
       "sources": [
         "https://www.kmu.gov.ua/news/ukrderzharkhiv-masshtabne-otsyfruvannia-dokumentiv-startuvalo-v-derzhavnomu-arkhivi-kirovohradskoi-oblasti"
       ],
-      "status": "proposed",
+      "status": "rejected",
       "thread": {
         "status": "none",
         "file": null
@@ -183,6 +195,10 @@
         {
           "at": "2026-09-29T20:22:24Z",
           "event": "proposed by ideas routine"
+        },
+        {
+          "at": "2026-09-29T20:25:17+00:00",
+          "event": "idea rejected in telegram"
         }
       ]
     },
@@ -195,7 +211,7 @@
       "sources": [
         "https://www.familysearch.org/en/search/collection/5000404"
       ],
-      "status": "proposed",
+      "status": "rejected",
       "thread": {
         "status": "none",
         "file": null
@@ -213,6 +229,10 @@
         {
           "at": "2026-09-29T20:22:24Z",
           "event": "proposed by ideas routine"
+        },
+        {
+          "at": "2026-09-29T20:25:17+00:00",
+          "event": "idea rejected in telegram"
         }
       ]
     },
@@ -225,7 +245,7 @@
       "sources": [
         "https://www.familysearch.org/en/search/collection/5000394"
       ],
-      "status": "proposed",
+      "status": "rejected",
       "thread": {
         "status": "none",
         "file": null
@@ -243,6 +263,10 @@
         {
           "at": "2026-09-29T20:22:24Z",
           "event": "proposed by ideas routine"
+        },
+        {
+          "at": "2026-09-29T20:25:18+00:00",
+          "event": "idea rejected in telegram"
         }
       ]
     },
@@ -256,7 +280,7 @@
         "https://e.archivelviv.gov.ua/",
         "https://zaxid.net/rodovid_i_genealogiya_yak_shukati_v_arhivah_potribni_dokumenti_instruktsiya_n1615494"
       ],
-      "status": "proposed",
+      "status": "rejected",
       "thread": {
         "status": "none",
         "file": null
@@ -274,6 +298,10 @@
         {
           "at": "2026-09-29T20:22:24Z",
           "event": "proposed by ideas routine"
+        },
+        {
+          "at": "2026-09-29T20:25:18+00:00",
+          "event": "idea rejected in telegram"
         }
       ]
     },
@@ -286,7 +314,7 @@
       "sources": [
         "https://zaxid.net/rodovid_i_genealogiya_yak_shukati_v_arhivah_potribni_dokumenti_instruktsiya_n1615494"
       ],
-      "status": "proposed",
+      "status": "approved",
       "thread": {
         "status": "none",
         "file": null
@@ -304,6 +332,10 @@
         {
           "at": "2026-09-29T20:22:24Z",
           "event": "proposed by ideas routine"
+        },
+        {
+          "at": "2026-09-29T20:25:19+00:00",
+          "event": "idea approved in telegram"
         }
       ]
     },
@@ -317,7 +349,7 @@
         "https://inventarium.org.ua/",
         "https://inventarium.org.ua/unidentified/d2076453-2553-4e22-9719-f699495bc368"
       ],
-      "status": "proposed",
+      "status": "rejected",
       "thread": {
         "status": "none",
         "file": null
@@ -335,6 +367,10 @@
         {
           "at": "2026-09-29T20:22:24Z",
           "event": "proposed by ideas routine"
+        },
+        {
+          "at": "2026-09-29T20:25:19+00:00",
+          "event": "idea rejected in telegram"
         }
       ]
     },
@@ -347,7 +383,7 @@
       "sources": [
         "https://t.me/s/uagenealogy"
       ],
-      "status": "proposed",
+      "status": "rejected",
       "thread": {
         "status": "none",
         "file": null
@@ -365,6 +401,10 @@
         {
           "at": "2026-09-29T20:22:24Z",
           "event": "proposed by ideas routine"
+        },
+        {
+          "at": "2026-09-29T20:25:20+00:00",
+          "event": "idea rejected in telegram"
         }
       ]
     }
