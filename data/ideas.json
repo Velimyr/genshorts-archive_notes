@@ -441,7 +441,7 @@
       "sources": [
         "https://uk.wikipedia.org/wiki/Козацька_старшина"
       ],
-      "status": "proposed",
+      "status": "approved",
       "thread": {
         "status": "none",
         "file": null
@@ -459,6 +459,10 @@
         {
           "at": "2026-09-29T22:00:00+00:00",
           "event": "proposed by ideas routine"
+        },
+        {
+          "at": "2026-09-29T21:30:06+00:00",
+          "event": "idea approved in telegram"
         }
       ]
     },
@@ -473,7 +477,7 @@
         "https://uk.wikipedia.org/wiki/Ревізькі_казки",
         "https://uk.wikipedia.org/wiki/Мертві_душі"
       ],
-      "status": "proposed",
+      "status": "approved",
       "thread": {
         "status": "none",
         "file": null
@@ -491,6 +495,10 @@
         {
           "at": "2026-09-29T22:00:00+00:00",
           "event": "proposed by ideas routine"
+        },
+        {
+          "at": "2026-09-29T21:30:07+00:00",
+          "event": "idea approved in telegram"
         }
       ]
     },
@@ -504,7 +512,7 @@
       "sources": [
         "https://uk.wikipedia.org/wiki/Метрична_книга"
       ],
-      "status": "proposed",
+      "status": "approved",
       "thread": {
         "status": "none",
         "file": null
@@ -522,6 +530,10 @@
         {
           "at": "2026-09-29T22:00:00+00:00",
           "event": "proposed by ideas routine"
+        },
+        {
+          "at": "2026-09-29T21:30:07+00:00",
+          "event": "idea approved in telegram"
         }
       ]
     },
@@ -535,7 +547,7 @@
       "sources": [
         "https://uk.wikipedia.org/wiki/Юліанський_календар"
       ],
-      "status": "proposed",
+      "status": "approved",
       "thread": {
         "status": "none",
         "file": null
@@ -553,6 +565,10 @@
         {
           "at": "2026-09-29T22:00:00+00:00",
           "event": "proposed by ideas routine"
+        },
+        {
+          "at": "2026-09-29T21:30:08+00:00",
+          "event": "idea approved in telegram"
         }
       ]
     },
@@ -566,7 +582,7 @@
       "sources": [
         "https://uk.wikipedia.org/wiki/Скоропис"
       ],
-      "status": "proposed",
+      "status": "approved",
       "thread": {
         "status": "none",
         "file": null
@@ -584,6 +600,10 @@
         {
           "at": "2026-09-29T22:00:00+00:00",
           "event": "proposed by ideas routine"
+        },
+        {
+          "at": "2026-09-29T21:30:09+00:00",
+          "event": "idea approved in telegram"
         }
       ]
     },
@@ -597,7 +617,7 @@
       "sources": [
         "https://uk.wikipedia.org/wiki/Шляхта"
       ],
-      "status": "proposed",
+      "status": "approved",
       "thread": {
         "status": "none",
         "file": null
@@ -615,6 +635,10 @@
         {
           "at": "2026-09-29T22:00:00+00:00",
           "event": "proposed by ideas routine"
+        },
+        {
+          "at": "2026-09-29T21:30:09+00:00",
+          "event": "idea approved in telegram"
         }
       ]
     },
@@ -628,7 +652,7 @@
       "sources": [
         "https://uk.wikipedia.org/wiki/Українські_прізвища"
       ],
-      "status": "proposed",
+      "status": "rejected",
       "thread": {
         "status": "none",
         "file": null
@@ -646,6 +670,10 @@
         {
           "at": "2026-09-29T22:00:00+00:00",
           "event": "proposed by ideas routine"
+        },
+        {
+          "at": "2026-09-29T21:30:10+00:00",
+          "event": "idea rejected in telegram"
         }
       ]
     },
@@ -659,7 +687,7 @@
       "sources": [
         "https://uk.wikipedia.org/wiki/Сповідний_розпис"
       ],
-      "status": "proposed",
+      "status": "approved",
       "thread": {
         "status": "none",
         "file": null
@@ -677,6 +705,10 @@
         {
           "at": "2026-09-29T22:00:00+00:00",
           "event": "proposed by ideas routine"
+        },
+        {
+          "at": "2026-09-29T21:30:11+00:00",
+          "event": "idea approved in telegram"
         }
       ]
     },
@@ -690,7 +722,7 @@
       "sources": [
         "https://uk.wikipedia.org/wiki/Українські_прізвища"
       ],
-      "status": "proposed",
+      "status": "rejected",
       "thread": {
         "status": "none",
         "file": null
@@ -708,6 +740,10 @@
         {
           "at": "2026-09-29T22:00:00+00:00",
           "event": "proposed by ideas routine"
+        },
+        {
+          "at": "2026-09-29T21:30:11+00:00",
+          "event": "idea rejected in telegram"
         }
       ]
     },
@@ -721,7 +757,7 @@
       "sources": [
         "https://uk.wikipedia.org/wiki/Метрична_книга"
       ],
-      "status": "proposed",
+      "status": "approved",
       "thread": {
         "status": "none",
         "file": null
@@ -739,6 +775,10 @@
         {
           "at": "2026-09-29T22:00:00+00:00",
           "event": "proposed by ideas routine"
+        },
+        {
+          "at": "2026-09-29T21:30:12+00:00",
+          "event": "idea approved in telegram"
         }
       ]
     }
