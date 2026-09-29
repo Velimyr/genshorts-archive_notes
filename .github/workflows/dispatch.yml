@@ -1,0 +1,46 @@
+name: telegram-dispatch
+
+# Щопівгодини 07:05–23:35 за Києвом (UTC+3; узимку на годину раніше),
+# а також одразу після змін у data/ і вручну.
+on:
+  schedule:
+    - cron: "5,35 4-20 * * *"
+  push:
+    branches: [main]
+    paths: ["data/**"]
+  workflow_dispatch:
+
+concurrency:
+  group: telegram-dispatch
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  dispatch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Exchange with Telegram
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          ROUTINE_TEXTS_URL: ${{ secrets.ROUTINE_TEXTS_URL }}
+          ROUTINE_TEXTS_TOKEN: ${{ secrets.ROUTINE_TEXTS_TOKEN }}
+        run: python3 .github/bot/dispatch.py
+
+      - name: Save state
+        run: |
+          git config user.name "genshorts-dispatch"
+          git config user.email "genshorts-dispatch@users.noreply.github.com"
+          git add data .github/bot/state.json
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m "dispatch: telegram exchange"
+          for attempt in 1 2 3; do
+            git pull --rebase && git push && exit 0
+            sleep 5
+          done
+          exit 1

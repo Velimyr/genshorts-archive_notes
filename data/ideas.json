@@ -5,9 +5,32 @@
       "proposed_at": "2026-09-28",
       "title": "Огляд Інвентаріуму: реєстр інвентарних описів маєтків",
       "summary": "Що таке Інвентаріум, як шукати населений пункт чи шифр справи; приклад: Меджибіж, інвентар 1724 р., ЦДІАК 20-1-44.",
-      "sources": ["https://inventarium.org.ua/", "https://inventarium.org.ua/about"],
-      "status": "video_done",
-      "history": [{"at": "2026-09-28", "status": "video_done", "note": "зроблено вручну до запуску пайплайна; наголоси ще не вичитані"}]
+      "sources": [
+        "https://inventarium.org.ua/",
+        "https://inventarium.org.ua/about"
+      ],
+      "status": "approved",
+      "history": [
+        {
+          "at": "2026-09-28T20:30:00+00:00",
+          "event": "зроблено вручну до запуску пайплайна; наголоси ще не вичитані"
+        }
+      ],
+      "why_now": "",
+      "thread": {
+        "status": "none",
+        "file": null
+      },
+      "script": {
+        "status": "approved",
+        "file": null
+      },
+      "video": {
+        "status": "rendered",
+        "telegram_message_id": null,
+        "file": "output/2026-09-28_огляд_інвентаріуму.mp4"
+      },
+      "revisions": []
     }
   ]
 }
