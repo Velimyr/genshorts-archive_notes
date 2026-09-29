@@ -314,6 +314,16 @@ class Bot:
         self.fire.setdefault("ideas", set()).add(stream)
         self.send(f"🔎 Шукаю 10 ідей: {stream_label(stream)}. Це займе близько 10 хвилин.")
 
+    def send_preview(self, idea: dict, body: str, topic: str) -> None:
+        digest = sha(body)
+        topic_line = (f"🏷 Тема: {topic}" if topic else "🏷 Тема не задана — без неї публікація недоступна.")
+        buttons = [("✅ Публікувати в Threads", f"confirm:{idea['id']}:{digest}")] if topic else []
+        self.send(f"{stream_label(idea.get('stream'))} · фінальна перевірка — «{idea['title']}»\n\n{body}"
+                  f"\n\nℹ️ Блок «Джерела» в Threads не публікується.\n{topic_line}\n"
+                  "↩️ Щоб задати чи змінити тему — відповідайте на це повідомлення її назвою (без #).",
+                  kb(buttons + [("❌ Скасувати", "cancel")]),
+                  {"kind": "preview", "idea": idea["id"], "sha": digest, "text": body, "topic": topic})
+
     # ------------------------------------------------------------ вхідні
 
     def on_callback(self, cq: dict) -> None:
@@ -373,17 +383,14 @@ class Bot:
                 idea["thread"]["status"] = "ready"
                 self.send(f"⚠️ «{idea['title']}»: у треді є [ПЕРЕВІРИТИ], не публікую. {UNVERIFIED_HINT}")
                 return
-            digest = sha(body)
-            self.send(f"{stream_label(idea.get('stream'))} · фінальна перевірка — «{idea['title']}»\n\n{body}"
-                      "\n\nℹ️ Блок «Джерела» в Threads не публікується.",
-                      kb([("✅ Публікувати в Threads", f"confirm:{idea['id']}:{digest}"), ("❌ Скасувати", "cancel")]),
-                      {"kind": "preview", "idea": idea["id"], "sha": digest, "text": body})
+            self.send_preview(idea, body, self.state.get("last_topic", ""))
         elif action == "confirm":
             idea, digest = self.ideas.get(parts[1]), parts[2]
             if not idea or record.get("sha") != digest or idea.get("thread", {}).get("status") != "approved":
                 return
             # У чергу йде саме той текст, який користувач щойно бачив.
             self.state["approved_threads"][idea["id"]] = {"sha": digest, "text": record["text"],
+                                                          "topic": record.get("topic", ""),
                                                           "approved_at": now(), "posted": False}
             idea["thread"]["status"] = "queued"
             history(idea, "thread queued for Threads")
@@ -412,6 +419,17 @@ class Bot:
 
         reply_id = (msg.get("reply_to_message") or {}).get("message_id")
         record = self.state["messages"].get(str(reply_id)) if reply_id else None
+        if text and record and record.get("kind") == "preview":
+            topic = text.lstrip("#").strip()
+            if not (1 <= len(topic) <= 50) or "." in topic or "&" in topic:
+                self.send("⚠️ Тема має бути до 50 символів, без крапок і «&».", reply_to=msg["message_id"])
+                return
+            idea = self.ideas.get(record["idea"])
+            if idea and idea.get("thread", {}).get("status") == "approved":
+                self.state["last_topic"] = topic
+                self.close_buttons(reply_id, f"🏷 Тему змінено на «{topic}»")
+                self.send_preview(idea, record["text"], topic)
+            return
         if not text or not record or record.get("kind") != "thread":
             return
         idea = self.ideas.get(record["idea"])
@@ -483,6 +501,8 @@ class Bot:
             try:
                 for text in posts[len(posted):]:
                     params = {"media_type": "TEXT", "text": text}
+                    if not posted and item.get("topic"):
+                        params["topic_tag"] = item["topic"]
                     if posted:
                         params["reply_to_id"] = posted[-1]
                         time.sleep(10)  # дати Threads «доварити» попередній пост
