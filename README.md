@@ -26,9 +26,9 @@
       "why_now": "річниця / нове оцифрування / обговорення — чому саме зараз",
       "sources": ["https://..."],
       "status": "proposed | approved | rejected",
-      "thread": {"status": "none | ready | revise | approved | posted", "file": "data/texts/<id>/thread.md"},
-      "script": {"status": "none | ready | revise | approved", "file": "data/texts/<id>/script.md"},
-      "video":  {"status": "none | rendered | regen | accepted", "telegram_message_id": null},
+      "thread": {"status": "none | requested | ready | revise | approved | queued | posted", "file": "data/texts/<id>/thread.md"},
+      "script": {"status": "none | requested | ready | revise | approved", "file": "data/texts/<id>/script.md"},
+      "video":  {"status": "none | requested | rendered | regen | accepted", "telegram_message_id": null},
       "revisions": [{"kind": "thread | script | both", "text": "правки користувача", "at": "..."}],
       "history": [{"at": "...", "event": "..."}]
     }
@@ -37,7 +37,8 @@
 ```
 
 - Нові ідеї додаються зі `status: "proposed"`, `thread/script/video.status: "none"`.
-- Для погодженої ідеї (`status: "approved"`) пишуться `data/texts/<id>/thread.md` і `script.md`, відповідні `status` стають `ready` — диспетчер надішле їх у Telegram.
+- Автор обирає в Telegram тему й формат → `requested`; задача «Тексти» пише файл і ставить `ready`; диспетчер надсилає текст.
+- «✅ Готово» під текстом → `approved` (текст фінальний). Далі в меню «Публікуємо?»: тред → `queued` → `posted`; сценарій → `video.status: requested` → Мак генерує відео.
 - `revise` означає: є нові правки в `revisions`, текст треба переписати й знову поставити `ready`.
 - Ідеї ніколи не видаляються: весь список — це історія, з якою звіряються нові ідеї, щоб теми не повторювалися.
 

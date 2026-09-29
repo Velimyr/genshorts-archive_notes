@@ -1,10 +1,10 @@
 name: telegram-dispatch
 
-# Щопівгодини 07:05–23:35 за Києвом (UTC+3; узимку на годину раніше),
+# Раз на 20 хвилин 07:00–23:40 за Києвом (UTC+3; узимку на годину раніше),
 # а також одразу після змін у data/ і вручну.
 on:
   schedule:
-    - cron: "5,35 4-20 * * *"
+    - cron: "*/20 4-20 * * *"
   push:
     branches: [main]
     paths: ["data/**"]
@@ -28,6 +28,8 @@ jobs:
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          ROUTINE_IDEAS_URL: ${{ secrets.ROUTINE_IDEAS_URL }}
+          ROUTINE_IDEAS_TOKEN: ${{ secrets.ROUTINE_IDEAS_TOKEN }}
           ROUTINE_TEXTS_URL: ${{ secrets.ROUTINE_TEXTS_URL }}
           ROUTINE_TEXTS_TOKEN: ${{ secrets.ROUTINE_TEXTS_TOKEN }}
         run: python3 .github/bot/dispatch.py
