@@ -160,7 +160,9 @@ def fire_routine(name: str, note: str) -> str | None:
 
 
 class ThreadsError(Exception):
-    pass
+    def __init__(self, message: str, status: int = 0):
+        super().__init__(message)
+        self.status = status
 
 
 def threads_call(method: str, path: str, **params):
@@ -174,10 +176,23 @@ def threads_call(method: str, path: str, **params):
             return json.load(response)
     except urllib.error.HTTPError as exc:
         try:
-            message = json.load(exc).get("error", {}).get("message", "")
+            error = json.load(exc).get("error", {})
         except ValueError:
-            message = ""
-        raise ThreadsError(f"HTTP {exc.code} {message}".strip()) from None
+            error = {}
+        details = " ".join(f"{k}={error[k]}" for k in ("message", "type", "code", "error_subcode", "fbtrace_id") if error.get(k))
+        print(f"[threads] {method} {path.split('/')[-1]} -> HTTP {exc.code} {details}")
+        raise ThreadsError(f"HTTP {exc.code} {error.get('message', '')}".strip(), exc.code) from None
+
+
+def threads_retry(method: str, path: str, **params):
+    """Повторює запит при збоях 5xx на боці Threads."""
+    for attempt in range(3):
+        try:
+            return threads_call(method, path, **params)
+        except ThreadsError as exc:
+            if exc.status < 500 or attempt == 2:
+                raise
+            time.sleep(10 * (attempt + 1))
 
 
 def threads_length(text: str) -> int:
@@ -447,15 +462,16 @@ class Bot:
                     params = {"media_type": "TEXT", "text": text}
                     if posted:
                         params["reply_to_id"] = posted[-1]
-                    container = threads_call("POST", f"{THREADS_USER_ID}/threads", **params)["id"]
+                        time.sleep(10)  # дати Threads «доварити» попередній пост
+                    container = threads_retry("POST", f"{THREADS_USER_ID}/threads", **params)["id"]
                     for _ in range(20):  # Threads радить дочекатися обробки контейнера
-                        status = threads_call("GET", container, fields="status,error_message")
+                        status = threads_retry("GET", container, fields="status,error_message")
                         if status.get("status") in ("FINISHED", "PUBLISHED"):
                             break
                         if status.get("status") in ("ERROR", "EXPIRED"):
                             raise ThreadsError(status.get("error_message") or status["status"])
                         time.sleep(3)
-                    posted.append(threads_call("POST", f"{THREADS_USER_ID}/threads_publish", creation_id=container)["id"])
+                    posted.append(threads_retry("POST", f"{THREADS_USER_ID}/threads_publish", creation_id=container)["id"])
                     save_json(STATE_FILE, self.state)
             except ThreadsError as exc:
                 item["attempts"] = item.get("attempts", 0) + 1
