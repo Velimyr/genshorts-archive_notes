@@ -1,6 +1,13 @@
 {
   "offset": 0,
-  "sent": {},
-  "messages": {},
+  "sent": {
+    "idea:test-01": 882
+  },
+  "messages": {
+    "882": {
+      "kind": "idea",
+      "idea": "test-01"
+    }
+  },
   "approved_threads": {}
 }
