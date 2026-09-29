@@ -64,6 +64,309 @@
         }
       ],
       "test": true
+    },
+    {
+      "id": "2026-09-29-01",
+      "proposed_at": "2026-09-29",
+      "title": "Бабин Яр, 29 вересня: пам'ять і документи про жертв",
+      "summary": "Щорічне вшанування жертв масових розстрілів у Бабиному Яру — привід нагадати, що доля родин, які зникли в 1941-му, теж залишає слід в архівах. Глядач дізнається, з чого почати пошук відомостей про постраждалих родичів.",
+      "why_now": "29 вересня — день вшанування; УІНП повідомив про захід цього дня.",
+      "sources": [
+        "https://uinp.gov.ua/pres-centr/novyny/u-babynomu-yaru-vshanuvaly-pamyait-zhertv-masovyh-rozstriliv"
+      ],
+      "status": "proposed",
+      "thread": {
+        "status": "none",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-09-29T20:22:24Z",
+          "event": "proposed by ideas routine"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-29-02",
+      "proposed_at": "2026-09-29",
+      "title": "Биківня: річниця відкриття міжнародного меморіалу",
+      "summary": "У Музеї Майдану відзначили річницю відкриття міжнародного меморіалу в Биківні. Розкажіть, чому такі місця пам'яті важливі для родин репресованих і де шукати справи репресованих осіб (їх називає й архівна інструкція zaxid.net).",
+      "why_now": "Річницю відзначили 22 вересня 2026.",
+      "sources": [
+        "https://uinp.gov.ua/pres-centr/novyny/pamyat-yak-sprotyv-u-muzeyi-maydanu-vidznachyly-richnycyu-vidkryttya-mizhnarodnogo-memorialu-u-bykivni",
+        "https://zaxid.net/rodovid_i_genealogiya_yak_shukati_v_arhivah_potribni_dokumenti_instruktsiya_n1615494"
+      ],
+      "status": "proposed",
+      "thread": {
+        "status": "none",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-09-29T20:22:24Z",
+          "event": "proposed by ideas routine"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-29-03",
+      "proposed_at": "2026-09-29",
+      "title": "105 мільйонів цифрових копій: що це дає генеалогу",
+      "summary": "Українські архіви за 2022–2025 створили понад 105,5 млн цифрових копій (1,55 млн одиниць зберігання). Поясніть, що з цього корисно шукачам предків і чому варто регулярно перевіряти сайти архівів; на 2026–2030 заплановано ще понад 150 млн копій.",
+      "why_now": "Свіжа новина Кабміну про підсумки та плани оцифрування.",
+      "sources": [
+        "https://www.kmu.gov.ua/news/ponad-105-milioniv-dokumentiv-ukrainski-arkhivy-otsyfrovuiut-natsionalnu-pamiat-popry-shyrokomasshtabnu-viinu"
+      ],
+      "status": "proposed",
+      "thread": {
+        "status": "none",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-09-29T20:22:24Z",
+          "event": "proposed by ideas routine"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-29-04",
+      "proposed_at": "2026-09-29",
+      "title": "Кіровоградський архів і FamilySearch: 91 634 справи на оцифрування",
+      "summary": "Держархів Кіровоградської області за партнерством із FamilySearch International оцифровує метричні книги, акти цивільного стану та інші документи — близько 91 634 одиниць зберігання, ~14 млн аркушів. Розкажіть, як це пов'язано з онлайн-колекціями FamilySearch.",
+      "why_now": "Оцифрування триває, у FamilySearch з'являються нові колекції з України.",
+      "sources": [
+        "https://www.kmu.gov.ua/news/ukrderzharkhiv-masshtabne-otsyfruvannia-dokumentiv-startuvalo-v-derzhavnomu-arkhivi-kirovohradskoi-oblasti"
+      ],
+      "status": "proposed",
+      "thread": {
+        "status": "none",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-09-29T20:22:24Z",
+          "event": "proposed by ideas routine"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-29-05",
+      "proposed_at": "2026-09-29",
+      "title": "FamilySearch: сповідні розписи Хмельниччини 1795–1915",
+      "summary": "Нова колекція має 57 797 записів і 1 201 зображення; сповідні розписи слугують замінником перепису. Покажіть, які дані там є (ім'я, вік, місце проживання, зв'язок із главою родини) і як шукати.",
+      "why_now": "Колекцію додано у серпні 2026.",
+      "sources": [
+        "https://www.familysearch.org/en/search/collection/5000404"
+      ],
+      "status": "proposed",
+      "thread": {
+        "status": "none",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-09-29T20:22:24Z",
+          "event": "proposed by ideas routine"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-29-06",
+      "proposed_at": "2026-09-29",
+      "title": "Сповідні розписи Кіровоградщини 1796–1918: 432 тисячі записів",
+      "summary": "Колекція FamilySearch містить 432 735 записів і 6 773 зображення. Поясніть, чим сповідні розписи корисні, коли метрики втрачені, і як звірити вік із метричними книгами.",
+      "why_now": "Колекція нещодавно з'явилася у FamilySearch.",
+      "sources": [
+        "https://www.familysearch.org/en/search/collection/5000394"
+      ],
+      "status": "proposed",
+      "thread": {
+        "status": "none",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-09-29T20:22:24Z",
+          "event": "proposed by ideas routine"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-29-07",
+      "proposed_at": "2026-09-29",
+      "title": "e.archivelviv.gov.ua: повнотекстовий пошук у Львівському архіві",
+      "summary": "Онлайн-ресурс Держархіву Львівської області дозволяє шукати за назвами фондів, справ, іменними покажчиками й оцифрованими справами; неоцифровані матеріали можна замовити через особистий кабінет. Покажіть перші кроки пошуку.",
+      "why_now": "",
+      "sources": [
+        "https://e.archivelviv.gov.ua/",
+        "https://zaxid.net/rodovid_i_genealogiya_yak_shukati_v_arhivah_potribni_dokumenti_instruktsiya_n1615494"
+      ],
+      "status": "proposed",
+      "thread": {
+        "status": "none",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-09-29T20:22:24Z",
+          "event": "proposed by ideas routine"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-29-08",
+      "proposed_at": "2026-09-29",
+      "title": "З чого почати родовід: 3 кроки перед архівом",
+      "summary": "Опитайте старших родичів, перегляньте домашні документи й поговоріть зі старожилами. Далі шукайте в архіві за місцем народження предків, а не за нинішнім місцем проживання родини.",
+      "why_now": "",
+      "sources": [
+        "https://zaxid.net/rodovid_i_genealogiya_yak_shukati_v_arhivah_potribni_dokumenti_instruktsiya_n1615494"
+      ],
+      "status": "proposed",
+      "thread": {
+        "status": "none",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-09-29T20:22:24Z",
+          "event": "proposed by ideas routine"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-29-09",
+      "proposed_at": "2026-09-29",
+      "title": "Допоможіть Інвентаріуму: неідентифіковані населені пункти",
+      "summary": "Інвентаріум збирає справи, де ще не встановлено, якого села стосується інвентар — наприклад, опис Лисянського василіанського монастиря та села Монастирки (1834, РГИА 823-3-3334). Розкажіть, як краєзнавець може запропонувати ідентифікацію.",
+      "why_now": "",
+      "sources": [
+        "https://inventarium.org.ua/",
+        "https://inventarium.org.ua/unidentified/d2076453-2553-4e22-9719-f699495bc368"
+      ],
+      "status": "proposed",
+      "thread": {
+        "status": "none",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-09-29T20:22:24Z",
+          "event": "proposed by ideas routine"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-29-10",
+      "proposed_at": "2026-09-29",
+      "title": "Сповідні розписи чи сімейні списки 1876: що надійніше",
+      "summary": "У Telegram-каналі генеалогів пояснили, що вік у сповідних розписах часто записували зі слів і його треба перевіряти за метриками, а сімейні списки 1876 у Кіровоградському архіві (ф. 78) охоплюють кілька поколінь. Порівняйте ці джерела.",
+      "why_now": "Тема нещодавно обговорювалась у каналі @uagenealogy.",
+      "sources": [
+        "https://t.me/s/uagenealogy"
+      ],
+      "status": "proposed",
+      "thread": {
+        "status": "none",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-09-29T20:22:24Z",
+          "event": "proposed by ideas routine"
+        }
+      ]
     }
   ]
 }
