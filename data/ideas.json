@@ -759,7 +759,7 @@
       ],
       "status": "approved",
       "thread": {
-        "status": "ready",
+        "status": "revise",
         "file": "data/texts/2026-09-29-20/thread.md"
       },
       "script": {
@@ -770,7 +770,13 @@
         "status": "none",
         "telegram_message_id": null
       },
-      "revisions": [],
+      "revisions": [
+        {
+          "kind": "thread",
+          "text": "Як вийшло: парафіяльні примірники здебільшого лежать у фондах церков, \n Заміни на Як вийшло: парафіяльні примірники здебільшого згоріли, загубилися, чи лежать в священника під ліжком",
+          "at": "2026-09-29T21:38:08+00:00"
+        }
+      ],
       "history": [
         {
           "at": "2026-09-29T22:00:00+00:00",
@@ -787,6 +793,10 @@
         {
           "at": "2026-09-29T21:33:17+00:00",
           "event": "thread ready"
+        },
+        {
+          "at": "2026-09-29T21:38:08+00:00",
+          "event": "thread revision requested"
         }
       ]
     }
