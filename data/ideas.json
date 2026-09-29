@@ -759,7 +759,7 @@
       ],
       "status": "approved",
       "thread": {
-        "status": "approved",
+        "status": "queued",
         "file": "data/texts/2026-09-29-20/thread.md",
         "approved_sha": "7e029950e283b0da"
       },
@@ -806,6 +806,10 @@
         {
           "at": "2026-09-29T21:40:10+00:00",
           "event": "thread text approved in telegram"
+        },
+        {
+          "at": "2026-09-29T21:43:40+00:00",
+          "event": "thread queued for Threads"
         }
       ]
     }
