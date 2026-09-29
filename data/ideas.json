@@ -31,6 +31,29 @@
         "file": "output/2026-09-28_огляд_інвентаріуму.mp4"
       },
       "revisions": []
+    },
+    {
+      "id": "test-01",
+      "proposed_at": "2026-09-29",
+      "title": "ТЕСТ пайплайна (не справжня ідея)",
+      "summary": "Перевірка кнопок: натисніть ✅ або ❌. Цей запис потім буде позначено як тестовий.",
+      "why_now": "",
+      "sources": [],
+      "status": "proposed",
+      "thread": {
+        "status": "none",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": []
     }
   ]
 }
