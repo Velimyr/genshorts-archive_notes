@@ -1,5 +1,5 @@
 {
-  "offset": 0,
+  "offset": 928736921,
   "sent": {
     "idea:test-01": 882,
     "idea:2026-09-29-01": 888,
@@ -18,7 +18,11 @@
     "thread:2026-09-29-08:d40ae31c3f1bf458": 903,
     "script:2026-09-29-08:0ef4daca5172ace3": 904
   },
-  "messages": {},
+  "messages": {
+    "4": {
+      "kind": "ask"
+    }
+  },
   "approved_threads": {},
   "asked": {
     "ideas": "2026-09-29",
