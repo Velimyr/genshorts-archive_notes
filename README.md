@@ -7,8 +7,8 @@
 
 | Хто | Може змінювати | Не чіпає |
 |---|---|---|
-| Хмарний Claude (routines) | `data/ideas.json` (нові ідеї; поля `thread`, `script` своїх текстів), `data/texts/**` | `.github/**`, `data/stress_*.json`, статуси погодження |
-| Диспетчер Telegram (`.github/bot/dispatch.py`, GitHub Actions) | статуси погодження, `revisions`, `data/stress_requests.json`, `.github/bot/state.json` | тексти |
+| Хмарний Claude (routines) | `data/ideas.json` (нові ідеї; поле `thread` своїх текстів), `data/texts/**`, статус запитів у `data/requests.json` | `.github/**`, `data/stress_*.json`, статуси погодження |
+| Диспетчер Telegram (`.github/bot/dispatch.py`, GitHub Actions) | статуси погодження, `revisions`, нові запити в `data/requests.json`, `data/stress_requests.json`, `.github/bot/state.json` | тексти |
 | Мак (генерація відео) | поле `video`, `data/stress_dict.json`, `data/stress_requests.json` (позначає оброблені) | `.github/**` |
 
 **Папку `.github/` змінює лише власник репозиторію вручну.**
@@ -21,6 +21,7 @@
     {
       "id": "2026-09-29-01",
       "proposed_at": "2026-09-29",
+      "stream": "big | small | fun",
       "title": "Коротка назва теми",
       "summary": "2–3 речення: про що ролик і що корисного дізнається глядач",
       "why_now": "річниця / нове оцифрування / обговорення — чому саме зараз",
@@ -41,6 +42,13 @@
 - «✅ Готово» під текстом → `approved` (текст фінальний). Далі в меню «Публікуємо?»: тред → `queued` → `posted`; сценарій → `video.status: requested` → Мак генерує відео.
 - `revise` означає: є нові правки в `revisions`, текст треба переписати й знову поставити `ready`.
 - Ідеї ніколи не видаляються: весь список — це історія, з якою звіряються нові ідеї, щоб теми не повторювалися.
+
+## Потоки й запити
+
+- `stream`: `big` — великий серйозний тред (6–10 постів), `small` — малий серйозний (2–3), `fun` — жартівливий, іронічно-саркастичний (3–5). Ідея належить одному потоку.
+- `data/requests.json` — запити на ідеї з Telegram: `{"ideas": [{"stream", "requested_at", "status": "pending | done", "done_at", "idea_ids"}]}`.
+- У `thread.md` пости розділені рядком `---`; останній блок `Джерела:` — лише для автора, у Threads не публікується.
+- Сценарії відео тимчасово не пишуться.
 
 ## Наголоси
 
