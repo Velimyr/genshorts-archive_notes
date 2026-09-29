@@ -24,7 +24,10 @@ import json
 import os
 import re
 import sys
+import time
+import unicodedata
 import urllib.error
+import urllib.parse
 import urllib.request
 from datetime import datetime, timezone
 from pathlib import Path
@@ -43,6 +46,12 @@ ROUTINES = {
     "ideas": (os.environ.get("ROUTINE_IDEAS_URL", "").strip(), os.environ.get("ROUTINE_IDEAS_TOKEN", "").strip()),
     "texts": (os.environ.get("ROUTINE_TEXTS_URL", "").strip(), os.environ.get("ROUTINE_TEXTS_TOKEN", "").strip()),
 }
+
+THREADS_TOKEN = os.environ.get("THREADS_ACCESS_TOKEN", "").strip()
+THREADS_USER_ID = os.environ.get("THREADS_USER_ID", "").strip()
+THREADS_TOKEN_UPDATED = os.environ.get("THREADS_TOKEN_UPDATED", "").strip()  # YYYY-MM-DD
+THREADS_API = "https://graph.threads.net/v1.0"
+THREADS_POST_LIMIT = 500
 
 KYIV = ZoneInfo("Europe/Kyiv")
 ASK_AT = {"ideas": 9, "texts": 12, "publish": 18}  # година за Києвом
@@ -148,6 +157,39 @@ def fire_routine(name: str, note: str) -> str | None:
             return None
     except urllib.error.HTTPError as exc:
         return f"не вдалося запустити задачу «{name}»: HTTP {exc.code}"
+
+
+class ThreadsError(Exception):
+    pass
+
+
+def threads_call(method: str, path: str, **params):
+    params["access_token"] = THREADS_TOKEN
+    query = urllib.parse.urlencode(params)
+    url = f"{THREADS_API}/{path}"
+    request = (urllib.request.Request(f"{url}?{query}") if method == "GET"
+               else urllib.request.Request(url, data=query.encode(), method="POST"))
+    try:
+        with urllib.request.urlopen(request, timeout=30) as response:
+            return json.load(response)
+    except urllib.error.HTTPError as exc:
+        try:
+            message = json.load(exc).get("error", {}).get("message", "")
+        except ValueError:
+            message = ""
+        raise ThreadsError(f"HTTP {exc.code} {message}".strip()) from None
+
+
+def threads_length(text: str) -> int:
+    """Довжина за правилами Threads: емодзі рахуються за кількістю байтів UTF-8."""
+    return sum(len(ch.encode("utf-8")) if ord(ch) > 0xFFFF or unicodedata.category(ch) == "So" else 1
+               for ch in text)
+
+
+def thread_posts(text: str) -> list[str]:
+    """Пости треду без службового блоку «Джерела»."""
+    blocks = [b.strip() for b in re.split(r"\n\s*---\s*\n", text) if b.strip()]
+    return [b for b in blocks if not b.lower().startswith("джерела")]
 
 
 class Bot:
@@ -300,7 +342,8 @@ class Bot:
             if body is None or idea.get("thread", {}).get("status") != "approved":
                 return
             digest = sha(body)
-            self.send(f"{stream_label(idea.get('stream'))} · фінальна перевірка — «{idea['title']}»\n\n{body}",
+            self.send(f"{stream_label(idea.get('stream'))} · фінальна перевірка — «{idea['title']}»\n\n{body}"
+                      "\n\nℹ️ Блок «Джерела» в Threads не публікується.",
                       kb([("✅ Публікувати в Threads", f"confirm:{idea['id']}:{digest}"), ("❌ Скасувати", "cancel")]),
                       {"kind": "preview", "idea": idea["id"], "sha": digest, "text": body})
         elif action == "confirm":
@@ -313,7 +356,8 @@ class Bot:
             idea["thread"]["status"] = "queued"
             history(idea, "thread queued for Threads")
             self.close_buttons(mid, "✅ У черзі на Threads")
-            self.send("🧵 Тред у черзі на публікацію. (Автопостинг у Threads ще підключаємо.)",
+            self.send("🧵 Тред у черзі — публікую в Threads." if THREADS_TOKEN and THREADS_USER_ID
+                      else "🧵 Тред у черзі. Threads ще не підключено (немає секретів THREADS_*).",
                       kb([("📣 Ще публікація", "go:publish")]), {"kind": "nav"})
         elif action == "cancel":
             self.close_buttons(mid, "Скасовано")
@@ -383,6 +427,67 @@ class Bot:
                 {"kind": "thread", "idea": idea["id"], "sha": digest})
             self.state["sent"][key] = mid
 
+    def publish_queued(self):
+        """Публікує один тред за запуск; прогрес зберігає після кожного поста."""
+        if not (THREADS_TOKEN and THREADS_USER_ID):
+            return
+        for idea_id, item in self.state["approved_threads"].items():
+            if item.get("posted") or item.get("failed"):
+                continue
+            idea = self.ideas.get(idea_id, {"title": idea_id})
+            posts = thread_posts(item["text"])
+            too_long = [n for n, p in enumerate(posts, 1) if threads_length(p) > THREADS_POST_LIMIT]
+            if not posts or too_long:
+                item["failed"] = f"пости {too_long} довші за {THREADS_POST_LIMIT} символів" if too_long else "порожній тред"
+                self.send(f"⚠️ Не публікую «{idea['title']}»: {item['failed']}.")
+                return
+            posted = item.setdefault("posted_ids", [])
+            try:
+                for text in posts[len(posted):]:
+                    params = {"media_type": "TEXT", "text": text}
+                    if posted:
+                        params["reply_to_id"] = posted[-1]
+                    container = threads_call("POST", f"{THREADS_USER_ID}/threads", **params)["id"]
+                    for _ in range(20):  # Threads радить дочекатися обробки контейнера
+                        status = threads_call("GET", container, fields="status,error_message")
+                        if status.get("status") in ("FINISHED", "PUBLISHED"):
+                            break
+                        if status.get("status") in ("ERROR", "EXPIRED"):
+                            raise ThreadsError(status.get("error_message") or status["status"])
+                        time.sleep(3)
+                    posted.append(threads_call("POST", f"{THREADS_USER_ID}/threads_publish", creation_id=container)["id"])
+                    save_json(STATE_FILE, self.state)
+            except ThreadsError as exc:
+                item["attempts"] = item.get("attempts", 0) + 1
+                if item["attempts"] >= 3:
+                    item["failed"] = str(exc)
+                self.send(f"⚠️ Публікація «{idea['title']}» зупинилась на пості {len(posted) + 1}/{len(posts)}: {exc}."
+                          + (" Більше не пробую." if item.get("failed") else " Спробую наступного запуску."))
+                return
+            permalink = ""
+            try:
+                permalink = threads_call("GET", posted[0], fields="permalink").get("permalink", "")
+            except ThreadsError:
+                pass
+            item.update({"posted": True, "posted_at": now(), "permalink": permalink})
+            if idea_id in self.ideas:
+                self.ideas[idea_id]["thread"]["status"] = "posted"
+                self.ideas[idea_id]["thread"]["permalink"] = permalink
+                history(self.ideas[idea_id], f"thread posted to Threads ({len(posted)} posts)")
+            self.send(f"✅ Опубліковано в Threads: «{idea['title']}» ({len(posted)} постів)\n{permalink}",
+                      kb([("📣 Ще публікація", "go:publish")]), {"kind": "nav"})
+            return
+
+    def token_reminder(self):
+        if not THREADS_TOKEN_UPDATED:
+            return
+        age = (datetime.now(KYIV).date() - datetime.fromisoformat(THREADS_TOKEN_UPDATED).date()).days
+        week = datetime.now(KYIV).strftime("%G-%V")
+        if age >= 50 and self.state.get("token_reminded") != week:
+            self.state["token_reminded"] = week
+            self.send(f"🔑 Токену Threads {age} днів (діє 60). Оновіть на Маці:\n"
+                      "cd ~/GenShorts && MoneyPrinterTurbo/.venv/bin/python tools/threads_token.py refresh")
+
     def scheduled_prompts(self):
         local = datetime.now(KYIV)
         today = local.date().isoformat()
@@ -409,8 +514,10 @@ class Bot:
             elif "message" in update:
                 self.on_message(update["message"])
 
+        self.publish_queued()
         self.send_new_ideas()
         self.send_ready_threads()
+        self.token_reminder()
         self.scheduled_prompts()
 
         save_json(IDEAS_FILE, self.ideas_doc)

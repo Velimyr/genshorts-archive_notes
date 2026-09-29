@@ -20,7 +20,7 @@ permissions:
 jobs:
   dispatch:
     runs-on: ubuntu-latest
-    timeout-minutes: 5
+    timeout-minutes: 15
     steps:
       - uses: actions/checkout@v4
 
@@ -32,6 +32,9 @@ jobs:
           ROUTINE_IDEAS_TOKEN: ${{ secrets.ROUTINE_IDEAS_TOKEN }}
           ROUTINE_TEXTS_URL: ${{ secrets.ROUTINE_TEXTS_URL }}
           ROUTINE_TEXTS_TOKEN: ${{ secrets.ROUTINE_TEXTS_TOKEN }}
+          THREADS_ACCESS_TOKEN: ${{ secrets.THREADS_ACCESS_TOKEN }}
+          THREADS_USER_ID: ${{ secrets.THREADS_USER_ID }}
+          THREADS_TOKEN_UPDATED: ${{ vars.THREADS_TOKEN_UPDATED }}
         run: python3 .github/bot/dispatch.py
 
       - name: Save state
