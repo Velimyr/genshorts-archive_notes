@@ -39,7 +39,7 @@
       "summary": "Перевірка кнопок: натисніть ✅ або ❌. Цей запис потім буде позначено як тестовий.",
       "why_now": "",
       "sources": [],
-      "status": "proposed",
+      "status": "approved",
       "thread": {
         "status": "none",
         "file": null
@@ -53,7 +53,12 @@
         "telegram_message_id": null
       },
       "revisions": [],
-      "history": []
+      "history": [
+        {
+          "at": "2026-09-29T20:09:43+00:00",
+          "event": "idea approved in telegram"
+        }
+      ]
     }
   ]
 }
