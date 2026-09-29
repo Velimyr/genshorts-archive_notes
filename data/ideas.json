@@ -14,12 +14,16 @@
         {
           "at": "2026-09-28T20:30:00+00:00",
           "event": "зроблено вручну до запуску пайплайна; наголоси ще не вичитані"
+        },
+        {
+          "at": "2026-09-29T20:31:25+00:00",
+          "event": "thread ready"
         }
       ],
       "why_now": "",
       "thread": {
-        "status": "none",
-        "file": null
+        "status": "ready",
+        "file": "data/texts/2026-09-28-01/thread.md"
       },
       "script": {
         "status": "approved",
@@ -145,12 +149,12 @@
       ],
       "status": "approved",
       "thread": {
-        "status": "none",
-        "file": null
+        "status": "ready",
+        "file": "data/texts/2026-09-29-03/thread.md"
       },
       "script": {
-        "status": "none",
-        "file": null
+        "status": "ready",
+        "file": "data/texts/2026-09-29-03/script.md"
       },
       "video": {
         "status": "none",
@@ -165,6 +169,14 @@
         {
           "at": "2026-09-29T20:25:15+00:00",
           "event": "idea approved in telegram"
+        },
+        {
+          "at": "2026-09-29T20:31:25+00:00",
+          "event": "thread ready"
+        },
+        {
+          "at": "2026-09-29T20:31:25+00:00",
+          "event": "script ready"
         }
       ]
     },
@@ -316,12 +328,12 @@
       ],
       "status": "approved",
       "thread": {
-        "status": "none",
-        "file": null
+        "status": "ready",
+        "file": "data/texts/2026-09-29-08/thread.md"
       },
       "script": {
-        "status": "none",
-        "file": null
+        "status": "ready",
+        "file": "data/texts/2026-09-29-08/script.md"
       },
       "video": {
         "status": "none",
@@ -336,6 +348,14 @@
         {
           "at": "2026-09-29T20:25:19+00:00",
           "event": "idea approved in telegram"
+        },
+        {
+          "at": "2026-09-29T20:31:25+00:00",
+          "event": "thread ready"
+        },
+        {
+          "at": "2026-09-29T20:31:25+00:00",
+          "event": "script ready"
         }
       ]
     },
