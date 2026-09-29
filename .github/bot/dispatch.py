@@ -201,6 +201,15 @@ def threads_length(text: str) -> int:
                for ch in text)
 
 
+def unverified(text: str) -> int:
+    """Кількість позначок [ПЕРЕВІРИТИ] — з ними текст не можна погоджувати й публікувати."""
+    return len(re.findall(r"\[\s*перевірити\s*\]", text, flags=re.IGNORECASE))
+
+
+UNVERIFIED_HINT = ("Поки вони є, тред не можна погодити чи опублікувати. Дайте правку відповіддю на тред: "
+                   "підтвердіть факт (наприклад, «факт про … правильний, прибери позначку») або попросіть його прибрати.")
+
+
 def thread_posts(text: str) -> list[str]:
     """Пости треду без службового блоку «Джерела»."""
     blocks = [b.strip() for b in re.split(r"\n\s*---\s*\n", text) if b.strip()]
@@ -345,6 +354,10 @@ class Bot:
         elif action in ("done", "thread"):
             # «✅ Готово» під тредом (і кнопка старого формату «thread:<id>:yes»).
             idea = self.ideas.get(parts[1])
+            marks = unverified(self.thread_text(idea) or "") if idea else 0
+            if marks:
+                self.send(f"⚠️ У треді є позначки [ПЕРЕВІРИТИ] ({marks}). {UNVERIFIED_HINT}", reply_to=mid)
+                return
             if idea and idea.get("thread", {}).get("status") in ("ready", "revise"):
                 idea["thread"]["status"] = "approved"
                 idea["thread"]["approved_sha"] = record.get("sha")
@@ -355,6 +368,10 @@ class Bot:
             idea = self.ideas.get(parts[1])
             body = self.thread_text(idea) if idea else None
             if body is None or idea.get("thread", {}).get("status") != "approved":
+                return
+            if unverified(body):
+                idea["thread"]["status"] = "ready"
+                self.send(f"⚠️ «{idea['title']}»: у треді є [ПЕРЕВІРИТИ], не публікую. {UNVERIFIED_HINT}")
                 return
             digest = sha(body)
             self.send(f"{stream_label(idea.get('stream'))} · фінальна перевірка — «{idea['title']}»\n\n{body}"
@@ -435,8 +452,10 @@ class Bot:
             key = f"thread:{idea['id']}:{digest}"
             if key in self.state["sent"]:
                 continue
+            marks = unverified(body)
+            warning = f"\n\n⚠️ Є позначки [ПЕРЕВІРИТИ] ({marks}). {UNVERIFIED_HINT}" if marks else ""
             mid = self.send(
-                f"{stream_label(idea.get('stream'))} · тред — «{idea['title']}»\n\n{body}\n\n"
+                f"{stream_label(idea.get('stream'))} · тред — «{idea['title']}»\n\n{body}{warning}\n\n"
                 "↩️ Правки — відповіддю на це повідомлення.",
                 kb([("✅ Готово", f"done:{idea['id']}")]),
                 {"kind": "thread", "idea": idea["id"], "sha": digest})
@@ -450,6 +469,10 @@ class Bot:
             if item.get("posted") or item.get("failed"):
                 continue
             idea = self.ideas.get(idea_id, {"title": idea_id})
+            if unverified(item["text"]):
+                item["failed"] = "у тексті є [ПЕРЕВІРИТИ]"
+                self.send(f"⚠️ Не публікую «{idea['title']}»: у тексті є [ПЕРЕВІРИТИ].")
+                return
             posts = thread_posts(item["text"])
             too_long = [n for n, p in enumerate(posts, 1) if threads_length(p) > THREADS_POST_LIMIT]
             if not posts or too_long:
