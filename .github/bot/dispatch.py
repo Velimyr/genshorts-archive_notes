@@ -76,7 +76,9 @@ HELP = ("Кнопки внизу: 💡 Ідеї — нові ідеї, ✍️ Т
         "📋 Черга — стан тем.\nСвоя тема — просто напишіть її звичайним повідомленням.")
 ASK_AT = {"ideas": 9, "texts": 12}  # година за Києвом
 REPORT_AT = (6, 18)  # неділя, 18:00 за Києвом — тижневий звіт
-SLOT_GAP = timedelta(hours=3)  # мінімальний проміжок між запланованими публікаціями
+SLOT_GAP = timedelta(hours=4)  # мінімальний проміжок між публікаціями бота
+DAILY_LIMIT = 2  # тредів бота на день: 1 серйозний + 1 жартівливий, або 2 жартівливі
+ALTERNATION_HORIZON = timedelta(days=3)  # скільки шукати слот із чергуванням, перш ніж поступитися
 REMIND_BEFORE = timedelta(hours=1)  # нагадування, якщо на рекомендований час нічого не заплановано
 WEEKDAYS = ["Пн", "Вт", "Ср", "Чт", "Пт", "Сб", "Нд"]
 METRICS = "views,likes,replies,reposts,quotes,shares"
@@ -480,14 +482,50 @@ class Bot:
                 items.append((parse_time(at), idea_id, item))
         return sorted(items, key=lambda x: x[0])
 
-    def free_slots(self, count: int = 3) -> list[datetime]:
-        busy = [moment for moment, _, _ in self.scheduled()]
-        return [s for s in self.recommended_slots() if all(abs(s - b) >= SLOT_GAP for b in busy)][:count]
+    @staticmethod
+    def category(idea: dict | None) -> str:
+        """«S» — серйозний (великий чи малий), «F» — жартівливий."""
+        return "F" if (idea or {}).get("stream") == "fun" else "S"
+
+    def bot_publications(self, exclude: str | None = None) -> list[tuple[datetime, str]]:
+        """Заплановані й уже опубліковані треди бота: (момент, категорія)."""
+        result = []
+        for idea_id, item in self.state["approved_threads"].items():
+            if idea_id == exclude or item.get("failed"):
+                continue
+            at = item.get("posted_at") if item.get("posted") else item.get("publish_at")
+            if at and at != "pending":
+                result.append((parse_time(at), self.category(self.ideas.get(idea_id))))
+        return sorted(result)
+
+    def slot_allowed(self, slot: datetime, cat: str, pubs, strict: bool) -> bool:
+        if any(abs(slot - moment) < SLOT_GAP for moment, _ in pubs):
+            return False
+        same_day = [c for moment, c in pubs if moment.astimezone(KYIV).date() == slot.date()]
+        if len(same_day) >= DAILY_LIMIT or (cat == "S" and "S" in same_day):
+            return False
+        if strict:  # серйозні й жартівливі — по черзі
+            before = [c for moment, c in pubs if moment < slot]
+            after = [c for moment, c in pubs if moment > slot]
+            if (before and before[-1] == cat) or (after and after[0] == cat):
+                return False
+        return True
+
+    def free_slots(self, count: int = 3, idea: dict | None = None) -> list[datetime]:
+        """Рекомендовані слоти за правилами: ліміт на день, проміжок, чергування категорій.
+        Чергування поступається лише тоді, коли в найближчі дні підходящого слоту немає."""
+        cat = self.category(idea)
+        pubs = self.bot_publications(exclude=(idea or {}).get("id"))
+        slots = self.recommended_slots()
+        horizon = datetime.now(KYIV) + ALTERNATION_HORIZON
+        strict = [s for s in slots if s <= horizon and self.slot_allowed(s, cat, pubs, strict=True)]
+        loose = [s for s in slots if s not in strict and self.slot_allowed(s, cat, pubs, strict=False)]
+        return sorted(strict)[:count] or sorted(loose)[:count]
 
     def auto_schedule(self, idea: dict) -> None:
         """Ставить тред на найближчу вільну рекомендовану годину; змінити можна кнопками."""
         item = self.state["approved_threads"].get(idea["id"])
-        slots = self.free_slots(1)
+        slots = self.free_slots(1, idea)
         if not item or not slots:
             self.ask_when(idea)
             return
@@ -500,9 +538,10 @@ class Bot:
                   {"kind": "when"})
 
     def ask_when(self, idea: dict) -> None:
-        rows = [[(f"🕒 {fmt_slot(s)}", f"when:{idea['id']}:{int(s.timestamp())}")] for s in self.free_slots()]
+        rows = [[(f"🕒 {fmt_slot(s)}", f"when:{idea['id']}:{int(s.timestamp())}")] for s in self.free_slots(3, idea)]
         rows += [[("⚡ Опублікувати зараз", f"when:{idea['id']}:now")], [("↩️ Не публікувати", f"unq:{idea['id']}")]]
-        self.send(f"🕒 Коли публікуємо «{idea['title']}»?\nЗапропоновано найближчі рекомендовані години, вільні від інших публікацій.",
+        self.send(f"🕒 Коли публікуємо «{idea['title']}»?\nЗапропоновано найближчі рекомендовані години за правилами розкладу "
+                  "(до 2 тредів на день, 1 серйозний, серйозні й жартівливі по черзі).",
                   kb(*rows), {"kind": "when"})
 
     # ------------------------------------------------------------ вхідні
@@ -899,11 +938,13 @@ class Bot:
             if key in reminded or any(abs(slot - b) < SLOT_GAP / 2 for b in busy):
                 continue
             reminded.append(key)
+            day_cats = [c for moment, c in self.bot_publications() if moment.astimezone(KYIV).date() == slot.date()]
+            serious = "" if "S" in day_cats else " Серйозного треду на сьогодні теж немає."
             if self.grouped(lambda i: i.get("thread", {}).get("status") == "approved"):
-                self.send(f"⏰ {slot:%H:%M} — рекомендований час публікації, але нічого не заплановано.",
+                self.send(f"⏰ {slot:%H:%M} — рекомендований час публікації, але нічого не заплановано.{serious}",
                           kb([("📣 Обрати тред", "go:publish")]), {"kind": "nav"})
             else:
-                self.send(f"⏰ {slot:%H:%M} — рекомендований час публікації, але готових тредів немає.",
+                self.send(f"⏰ {slot:%H:%M} — рекомендований час публікації, але готових тредів немає.{serious}",
                           kb([("✍️ Написати тред", "go:texts")]), {"kind": "nav"})
         self.state["reminded_slots"] = reminded[-50:]
 
