@@ -871,6 +871,326 @@
           "event": "thread ready"
         }
       ]
+    },
+    {
+      "id": "2026-09-30-01",
+      "proposed_at": "2026-09-30",
+      "stream": "small",
+      "title": "З якого року шукати метрику: 1724 чи 1784",
+      "summary": "Метричні книги вели не скрізь і не завжди: у Російській імперії обов'язково з 1724 р. (за рішенням Синоду), в Австрії — офіційний статус з 20 лютого 1784 р. Тому спершу з'ясуйте, під чиєю владою жили предки, — це підкаже, з якого року й якою мовою (латина в Габсбурзьких землях) шукати.",
+      "why_now": "Позачасова практична порада для початківців.",
+      "sources": [
+        "https://uk.wikipedia.org/wiki/Метрична_книга"
+      ],
+      "images": [],
+      "status": "proposed",
+      "thread": {
+        "status": "none",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-09-30T07:52:50+00:00",
+          "event": "proposed by ideas routine"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-30-02",
+      "proposed_at": "2026-09-30",
+      "stream": "small",
+      "title": "Ревізії: для лівобережних і правобережних предків різні роки",
+      "summary": "Ревізій було десять (1719–1858), але на Слобожанщині перша припала на 1718–1727 рр., на Лівобережжі — четверта (1781–1787), на Правобережжі — п'ята (1794–1808). Одна помилка з роком — і шукаєте не той фонд.",
+      "why_now": "",
+      "sources": [
+        "https://uk.wikipedia.org/wiki/Ревізькі_казки"
+      ],
+      "images": [],
+      "status": "proposed",
+      "thread": {
+        "status": "none",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-09-30T07:52:50+00:00",
+          "event": "proposed by ideas routine"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-30-03",
+      "proposed_at": "2026-09-30",
+      "stream": "small",
+      "title": "Хто складав ревізькі казки — і чому це впливає на довіру",
+      "summary": "У містах списки подавала міська влада, у державних селах — старости, у приватних маєтках — власник чи управитель. Джерело однакове за формою, але різне за інтересом: так само й ставтеся до точності віку та складу родини.",
+      "why_now": "",
+      "sources": [
+        "https://uk.wikipedia.org/wiki/Ревізькі_казки"
+      ],
+      "images": [],
+      "status": "proposed",
+      "thread": {
+        "status": "none",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-09-30T07:52:50+00:00",
+          "event": "proposed by ideas routine"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-30-04",
+      "proposed_at": "2026-09-30",
+      "stream": "small",
+      "title": "Сповідний розпис: кого в ньому немає",
+      "summary": "Сповідні розписи фіксували присутність на сповіді для осіб від 7 років, форма склалася в 1737–1742 рр. і майже не змінювалася до 1917 р. Отже, немовлят і малих дітей там шукати марно — їх слід шукати в метриках.",
+      "why_now": "",
+      "sources": [
+        "https://uk.wikipedia.org/wiki/Сповідні_розписи"
+      ],
+      "images": [],
+      "status": "proposed",
+      "thread": {
+        "status": "none",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-09-30T07:52:50+00:00",
+          "event": "proposed by ideas routine"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-30-05",
+      "proposed_at": "2026-09-30",
+      "stream": "small",
+      "title": "Метричні книги Галичини: понад 3000 уже онлайн",
+      "summary": "За матеріалом Радіо Свобода, понад 3000 римо-католицьких метричних книг Галичини оцифровано й доступно в мережі (ЦДІА України у Львові). Тред: що це за книги, кому вони корисні, як не проґавити свій приход. Перед публікацією звірити цифру з поточним станом.",
+      "why_now": "Оцифрування триває; корисно нагадати про наявні онлайн-колекції.",
+      "sources": [
+        "https://www.radiosvoboda.org/a/arkhivy-dokumenty-metrychni-knyhy/31545958.html"
+      ],
+      "images": [],
+      "status": "proposed",
+      "thread": {
+        "status": "none",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-09-30T07:52:50+00:00",
+          "event": "proposed by ideas routine"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-30-06",
+      "proposed_at": "2026-09-30",
+      "stream": "small",
+      "title": "1796 рік: які губернії були на місці вашого краю",
+      "summary": "Реформа 1796 р. створила на українських землях Малоросійську (Чернігів), Слобідську (Харків), розширену Київську й Подільську (Кам'янець) губернії; повіти ж існували як нижня ланка. Практика: за місцем села визначаємо губернію й повіт — і лише тоді вибираємо архів.",
+      "why_now": "",
+      "sources": [
+        "https://uk.wikipedia.org/wiki/Адміністративно-територіальний_поділ_Російської_імперії"
+      ],
+      "images": [],
+      "status": "proposed",
+      "thread": {
+        "status": "none",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-09-30T07:52:50+00:00",
+          "event": "proposed by ideas routine"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-30-07",
+      "proposed_at": "2026-09-30",
+      "stream": "small",
+      "title": "Меджибіж в Інвентаріумі: як перевірити своє село за хвилину",
+      "summary": "Приклад пошуку: населений пункт Меджибіж (Меджибізька громада, Хмельницький район) має в реєстрі 1 інвентар. Показуємо, як за назвою знайти код, уточнити однойменні села й побачити, чи є про нього інвентар, — і чому «нуль» не означає, що документів немає.",
+      "why_now": "",
+      "sources": [
+        "https://inventarium.org.ua/"
+      ],
+      "images": [],
+      "status": "proposed",
+      "thread": {
+        "status": "none",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-09-30T07:52:50+00:00",
+          "event": "proposed by ideas routine"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-30-08",
+      "proposed_at": "2026-09-30",
+      "stream": "small",
+      "title": "Формулярні списки: предок-службовець залишив біографію",
+      "summary": "Серед джерел для генеалога — службові (формулярні) списки: біографії чиновників, учителів, лікарів, офіцерів. Якщо хтось із родини служив, шукайте його службовий список — там значно більше, ніж у метриці.",
+      "why_now": "",
+      "sources": [
+        "https://zaxid.net/rodovid_i_genealogiya_yak_shukati_v_arhivah_potribni_dokumenti_instruktsiya_n1615494"
+      ],
+      "images": [],
+      "status": "proposed",
+      "thread": {
+        "status": "none",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-09-30T07:52:50+00:00",
+          "event": "proposed by ideas routine"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-30-09",
+      "proposed_at": "2026-09-30",
+      "stream": "small",
+      "title": "Архів шукаємо там, де жили предки, а не ви",
+      "summary": "Поширений міф: «предок жив у Києві — пишу до київського архіву». Справи лежать за місцем життя тих, кого шукаєте, а якщо не оцифровано — можна писати листом або йти особисто з паспортом і заявою.",
+      "why_now": "",
+      "sources": [
+        "https://zaxid.net/rodovid_i_genealogiya_yak_shukati_v_arhivah_potribni_dokumenti_instruktsiya_n1615494"
+      ],
+      "images": [],
+      "status": "proposed",
+      "thread": {
+        "status": "none",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-09-30T07:52:50+00:00",
+          "event": "proposed by ideas routine"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-30-10",
+      "proposed_at": "2026-09-30",
+      "stream": "small",
+      "title": "Лише 5% архівів оцифровано: що з цього випливає",
+      "summary": "За матеріалом Радіо Свобода, з 82 млн документів держархівної системи оцифровано близько 5%; керівництво служби обіцяло єдиний пошуковий портал за кілька років. Порада: не чекати, а складати список справ, які потрібні, і замовляти копії. Звірити актуальність цифр.",
+      "why_now": "",
+      "sources": [
+        "https://www.radiosvoboda.org/a/arkhivy-dokumenty-metrychni-knyhy/31545958.html"
+      ],
+      "images": [],
+      "status": "proposed",
+      "thread": {
+        "status": "none",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-09-30T07:52:50+00:00",
+          "event": "proposed by ideas routine"
+        }
+      ]
     }
   ]
 }
