@@ -320,12 +320,19 @@ class Bot:
             "pub", "📣 Немає готових тредів. Написати: /texts", quiet)
 
     def show_queue(self):
-        lines = ["📋 Погоджені теми"]
-        for stream, ideas in self.grouped(lambda i: i.get("status") == "approved"):
+        groups = self.grouped(lambda i: i.get("status") == "approved"
+                              and i.get("thread", {}).get("status") not in ("posted", "cancelled"))
+        if not groups:
+            self.send("📋 Погоджених тем немає.")
+            return
+        lines, buttons, n = ["📋 Погоджені теми (🗑 N — скасувати тему):"], [], 0
+        for stream, ideas in groups:
             lines.append(f"\n{stream_label(stream)}")
             for idea in ideas:
-                lines.append(f"• {idea['title']} — тред: {idea.get('thread', {}).get('status', 'none')}")
-        self.send("\n".join(lines) if len(lines) > 1 else "📋 Погоджених тем немає.")
+                n += 1
+                lines.append(f"{n}. {idea['title']} — тред: {idea.get('thread', {}).get('status', 'none')}")
+                buttons.append((f"🗑 {n}", f"drop:{idea['id']}"))
+        self.send("\n".join(lines), kb(*chunks(buttons, 5)), {"kind": "menu"})
 
     def request_ideas(self, stream: str):
         pending = [r for r in self.requests["ideas"] if r.get("status") == "pending"]
@@ -473,6 +480,24 @@ class Bot:
         elif action == "own":
             self.close_buttons(mid, f"✅ {stream_label(parts[2])}")
             self.create_own_idea(parts[1], parts[2])
+        elif action == "drop":
+            idea = self.ideas.get(parts[1])
+            if idea:
+                self.send(f"🗑 Скасувати тему «{idea['title']}»?\nТред не буде опубліковано, "
+                          "тема зникне з меню й більше не пропонуватиметься.",
+                          kb([("Так, скасувати", f"dropyes:{idea['id']}"), ("Ні", "cancel")]), {"kind": "confirm"})
+        elif action == "dropyes":
+            idea = self.ideas.get(parts[1])
+            if not idea:
+                return
+            if idea.get("thread", {}).get("status") == "posted":
+                self.close_buttons(mid, "Вже опубліковано")
+                return
+            idea["status"] = "cancelled"
+            idea.setdefault("thread", {})["status"] = "cancelled"
+            self.state["approved_threads"].pop(idea["id"], None)
+            history(idea, "cancelled by author in telegram")
+            self.close_buttons(mid, "🗑 Тему скасовано")
         elif action == "cancel":
             self.close_buttons(mid, "Скасовано")
 
@@ -555,7 +580,7 @@ class Bot:
             mid = self.send(
                 f"{stream_label(idea.get('stream'))} · тред — «{idea['title']}»\n\n{body}{warning}\n\n"
                 "↩️ Правки — відповіддю на це повідомлення.",
-                kb([("✅ Готово", f"done:{idea['id']}")]),
+                kb([("✅ Готово", f"done:{idea['id']}"), ("🗑 Скасувати тему", f"drop:{idea['id']}")]),
                 {"kind": "thread", "idea": idea["id"], "sha": digest})
             self.state["sent"][key] = mid
 
