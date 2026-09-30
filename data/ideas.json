@@ -395,7 +395,7 @@
       ],
       "status": "approved",
       "thread": {
-        "status": "revise",
+        "status": "ready",
         "file": "data/texts/2026-09-29-08/thread.md"
       },
       "script": {
@@ -433,6 +433,10 @@
         {
           "at": "2026-09-30T19:01:06+00:00",
           "event": "thread revision requested"
+        },
+        {
+          "at": "2026-09-30T19:20:00+00:00",
+          "event": "thread ready"
         }
       ],
       "stream": "big"
