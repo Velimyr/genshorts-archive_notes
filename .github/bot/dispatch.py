@@ -433,6 +433,7 @@ class Bot:
         elif thread == "scheduled" and item.get("publish_at") not in (None, "pending"):
             lines.append(f"🕒 Заплановано на {fmt_slot(parse_time(item['publish_at']))}.")
             rows = [[("⬆️ Раніше", f"move:{iid}:up"), ("⬇️ Пізніше", f"move:{iid}:down")],
+                    [("🖼 Фото й тема", f"pub:{iid}")],
                     [("⚡ Опублікувати зараз", f"when:{iid}:now")],
                     [("🕒 Інший час", f"askwhen:{iid}"), ("↩️ Зняти з розкладу", f"unq:{iid}")]]
         elif thread == "posted":
@@ -693,7 +694,7 @@ class Bot:
         elif action == "pub":
             idea = self.ideas.get(parts[1])
             body = self.thread_text(idea) if idea else None
-            if body is None or idea.get("thread", {}).get("status") != "approved":
+            if body is None or idea.get("thread", {}).get("status") not in ("approved", "queued", "scheduled"):
                 return
             if unverified(body):
                 idea["thread"]["status"] = "ready"
@@ -702,8 +703,13 @@ class Bot:
             self.send_preview(idea, body, self.state.get("last_topic", ""))
         elif action == "confirm":
             idea, digest = self.ideas.get(parts[1]), parts[2]
-            if not idea or record.get("sha") != digest or idea.get("thread", {}).get("status") != "approved":
+            if not idea or record.get("sha") != digest or \
+                    idea.get("thread", {}).get("status") not in ("approved", "queued", "scheduled"):
                 return
+            previous = self.state["approved_threads"].get(idea["id"], {})
+            if previous.get("posted") or previous.get("posted_ids"):
+                return
+            keep_time = previous.get("publish_at") if previous.get("publish_at") not in (None, "pending") else None
             # У чергу йде саме той текст, який користувач щойно бачив.
             photo = int(parts[3]) if len(parts) > 3 and parts[3].isdigit() else 0
             images = idea.get("images", [])
@@ -717,7 +723,12 @@ class Bot:
             idea["thread"]["status"] = "queued"
             history(idea, "thread approved for Threads, awaiting time")
             self.close_buttons(mid, "✅ Текст і фото обрано")
-            self.auto_schedule(idea)
+            if keep_time:
+                self.state["approved_threads"][idea["id"]]["publish_at"] = keep_time
+                idea["thread"]["status"] = "scheduled"
+                self.send(f"🖼 Фото й тему оновлено, час без змін: {fmt_slot(parse_time(keep_time))}.")
+            else:
+                self.auto_schedule(idea)
         elif action == "askwhen":
             idea = self.ideas.get(parts[1])
             if idea and idea["id"] in self.state["approved_threads"]:
