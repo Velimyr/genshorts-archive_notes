@@ -39,6 +39,11 @@ REQUESTS_FILE = ROOT / "data" / "requests.json"
 STRESS_FILE = ROOT / "data" / "stress_requests.json"
 STATE_FILE = Path(__file__).resolve().parent / "state.json"
 FIRE_FILE = Path(os.environ.get("RUNNER_TEMP", "/tmp")) / "genshorts_fire.json"
+ACK_FILE = Path(os.environ.get("RUNNER_TEMP", "/tmp")) / "genshorts_ack.json"
+# Черга оновлень у Cloudflare Worker (вебхук). Без неї — старий режим getUpdates.
+QUEUE_URL = os.environ.get("QUEUE_URL", "").strip().rstrip("/")
+QUEUE_SECRET = os.environ.get("QUEUE_SECRET", "").strip()
+EVENT_UPDATE = os.environ.get("EVENT_UPDATE", "").strip()
 
 TOKEN = os.environ["TELEGRAM_BOT_TOKEN"].strip()
 CHAT_ID = int(os.environ["TELEGRAM_CHAT_ID"].strip())
@@ -140,6 +145,17 @@ def split_for_telegram(text: str) -> list[str]:
     if current:
         parts.append(current)
     return parts
+
+
+def queue_call(method: str, path: str, body=None):
+    request = urllib.request.Request(
+        f"{QUEUE_URL}{path}", method=method,
+        data=json.dumps(body).encode() if body is not None else None,
+        headers={"Authorization": f"Bearer {QUEUE_SECRET}", "Content-Type": "application/json",
+                 "User-Agent": "genshorts-dispatch"},
+    )
+    with urllib.request.urlopen(request, timeout=30) as response:
+        return json.load(response)
 
 
 def fire_routine(name: str, note: str) -> str | None:
@@ -645,11 +661,29 @@ class Bot:
         self.send("Меню тепер унизу чату 👇\n" + HELP, MAIN_KEYBOARD)
         self.state["menu_version"] = MENU_VERSION
 
+    def collect_updates(self) -> list[dict]:
+        if not (QUEUE_URL and QUEUE_SECRET):
+            updates = tg("getUpdates", offset=self.state["offset"], timeout=0,
+                         allowed_updates=["message", "callback_query"]) or []
+            if updates:
+                self.state["offset"] = updates[-1]["update_id"] + 1
+            return updates
+        found = {}
+        if EVENT_UPDATE:
+            update = json.loads(EVENT_UPDATE)
+            found[update["update_id"]] = update
+        # Черга підхоплює й оновлення, чиї запуски GitHub скасував через паралельність.
+        for update in queue_call("GET", "/pending"):
+            found[update["update_id"]] = update
+        done = set(self.state.setdefault("processed", []))
+        save_json(ACK_FILE, sorted(found))
+        return [found[i] for i in sorted(found) if i not in done]
+
     def run(self) -> int:
-        updates = tg("getUpdates", offset=self.state["offset"], timeout=0,
-                     allowed_updates=["message", "callback_query"]) or []
+        updates = self.collect_updates()
         for update in updates:
-            self.state["offset"] = update["update_id"] + 1
+            self.state.setdefault("processed", []).append(update["update_id"])
+            self.state["processed"] = self.state["processed"][-500:]
             if "callback_query" in update:
                 self.on_callback(update["callback_query"])
             elif "message" in update:
@@ -672,7 +706,11 @@ class Bot:
 
 
 def fire_pending() -> int:
-    """Окремий крок після пушу: задачі клонують репозиторій уже з новими запитами."""
+    """Окремий крок після пушу: задачі клонують репозиторій уже з новими запитами,
+    а черга вебхука очищується лише від оновлень, які вже збережено в репозиторії."""
+    acked = load_json(ACK_FILE, [])
+    if acked and QUEUE_URL and QUEUE_SECRET:
+        queue_call("POST", "/ack", {"ids": acked})
     pending = load_json(FIRE_FILE, {})
     for name, ids in pending.items():
         error = fire_routine(name, "Нові запити: " + ", ".join(ids))

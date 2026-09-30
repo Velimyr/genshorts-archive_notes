@@ -1,0 +1,14 @@
+name = "genshorts-telegram"
+main = "worker.js"
+compatibility_date = "2026-09-01"
+
+[vars]
+GITHUB_REPO = "Velimyr/genshorts-archive_notes"
+
+[[kv_namespaces]]
+binding = "QUEUE"
+id = "KV_NAMESPACE_ID"
+
+# Щогодини о :07 з 07:07 до 23:07 за Києвом (UTC+3): запитання за розкладом і повторні спроби.
+[triggers]
+crons = ["7 4-20 * * *"]
