@@ -25,7 +25,9 @@
       "title": "Коротка назва теми",
       "summary": "2–3 речення: про що ролик і що корисного дізнається глядач",
       "why_now": "річниця / нове оцифрування / обговорення — чому саме зараз",
+      "origin": "routine | author",
       "sources": ["https://..."],
+      "images": [{"url": "пряме посилання на JPEG/PNG", "page": "сторінка файлу", "credit": "підпис", "license": "..."}],
       "status": "proposed | approved | rejected",
       "thread": {"status": "none | requested | ready | revise | approved | queued | posted", "file": "data/texts/<id>/thread.md"},
       "script": {"status": "none | requested | ready | revise | approved", "file": "data/texts/<id>/script.md"},
@@ -49,6 +51,8 @@
 - `data/requests.json` — запити на ідеї з Telegram: `{"ideas": [{"stream", "requested_at", "status": "pending | done", "done_at", "idea_ids"}]}`.
 - У `thread.md` пости розділені рядком `---`; останній блок `Джерела:` — лише для автора, у Threads не публікується.
 - Сценарії відео тимчасово не пишуться.
+- `images` — до 3 фото з відкритою ліцензією для першого поста треду; зберігаються лише посилання (Threads забирає фото за публічною адресою). Автор обирає фото на фінальній перевірці; підпис `credit` додається в останній пост.
+- `origin: "author"` — тема, яку автор написав боту сам; джерела й фото знаходить задача «Тексти».
 
 ## Наголоси
 

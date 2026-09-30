@@ -54,6 +54,12 @@ THREADS_API = "https://graph.threads.net/v1.0"
 THREADS_POST_LIMIT = 500
 
 KYIV = ZoneInfo("Europe/Kyiv")
+MENU_VERSION = 1
+MENU_BUTTONS = {"💡 Ідеї": "/ideas", "✍️ Тексти": "/texts", "📣 Публікація": "/publish", "📋 Черга": "/queue"}
+MAIN_KEYBOARD = {"keyboard": [[{"text": "💡 Ідеї"}, {"text": "✍️ Тексти"}], [{"text": "📣 Публікація"}, {"text": "📋 Черга"}]],
+                 "is_persistent": True, "resize_keyboard": True}
+HELP = ("Кнопки внизу: 💡 Ідеї — нові ідеї, ✍️ Тексти — написати тред, 📣 Публікація — опублікувати, "
+        "📋 Черга — стан тем.\nСвоя тема — просто напишіть її звичайним повідомленням.")
 ASK_AT = {"ideas": 9, "texts": 12, "publish": 18}  # година за Києвом
 TG_LIMIT = 3900
 STREAMS = {
@@ -94,7 +100,7 @@ def tg(method: str, **params):
     except urllib.error.HTTPError as exc:
         description = json.load(exc).get("description", "")
         # Старі callback-запити Telegram відхиляє — це не помилка пайплайна.
-        if method in ("answerCallbackQuery", "editMessageReplyMarkup"):
+        if method in ("answerCallbackQuery", "editMessageReplyMarkup", "sendPhoto", "setMyCommands"):
             print(f"[tg] {method}: {description}")
             return None
         raise SystemExit(f"[tg] {method} failed: {description}")
@@ -314,15 +320,60 @@ class Bot:
         self.fire.setdefault("ideas", set()).add(stream)
         self.send(f"🔎 Шукаю 10 ідей: {stream_label(stream)}. Це займе близько 10 хвилин.")
 
+    def show_photos(self, idea: dict) -> list[int]:
+        """Показує кандидатів на фото один раз; повертає номери тих, що Telegram зміг відкрити."""
+        shown = self.state.setdefault("photos_shown", {})
+        if idea["id"] not in shown:
+            ok = []
+            for n, image in enumerate(idea.get("images", [])[:3], 1):
+                caption = f"🖼 {n} · {image.get('credit', '')}"[:1000]
+                if tg("sendPhoto", chat_id=CHAT_ID, photo=image.get("url", ""), caption=caption):
+                    ok.append(n)
+            shown[idea["id"]] = ok
+        return shown[idea["id"]]
+
     def send_preview(self, idea: dict, body: str, topic: str) -> None:
         digest = sha(body)
+        photos = self.show_photos(idea)
         topic_line = (f"🏷 Тема: {topic}" if topic else "🏷 Тема не задана — без неї публікація недоступна.")
-        buttons = [("✅ Публікувати в Threads", f"confirm:{idea['id']}:{digest}")] if topic else []
+        photo_line = (f"\n📷 Фото до першого поста: варіанти {', '.join(map(str, photos))} вище. "
+                      "Підпис автора фото буде додано в останній пост." if photos else "")
+        rows = []
+        if topic:
+            rows = [[(f"✅ Публікувати з фото {n}", f"confirm:{idea['id']}:{digest}:{n}")] for n in photos]
+            rows.append([("✅ Публікувати без фото", f"confirm:{idea['id']}:{digest}:0")])
+        rows.append([("❌ Скасувати", "cancel")])
         self.send(f"{stream_label(idea.get('stream'))} · фінальна перевірка — «{idea['title']}»\n\n{body}"
-                  f"\n\nℹ️ Блок «Джерела» в Threads не публікується.\n{topic_line}\n"
+                  f"\n\nℹ️ Блок «Джерела» в Threads не публікується.{photo_line}\n{topic_line}\n"
                   "↩️ Щоб задати чи змінити тему — відповідайте на це повідомлення її назвою (без #).",
-                  kb(buttons + [("❌ Скасувати", "cancel")]),
+                  kb(*rows),
                   {"kind": "preview", "idea": idea["id"], "sha": digest, "text": body, "topic": topic})
+
+    def propose_topic(self, text: str) -> None:
+        pid = sha(text + now())[:8]
+        self.state.setdefault("proposals", {})[pid] = {"text": text, "at": now()}
+        rows = [[(stream_label(s), f"own:{pid}:{s}")] for s in STREAMS] + [[("❌ Скасувати", "cancel")]]
+        self.send(f"💡 Ваша тема: «{text}»\nОберіть потік — і я одразу почну писати тред:", kb(*rows), {"kind": "own"})
+
+    def create_own_idea(self, pid: str, stream: str) -> None:
+        proposal = self.state.get("proposals", {}).pop(pid, None)
+        if proposal is None or stream not in STREAMS:
+            return
+        today = datetime.now(KYIV).date().isoformat()
+        n = 1 + sum(1 for i in self.ideas if i.startswith(f"{today}-a"))
+        text = proposal["text"]
+        idea = {
+            "id": f"{today}-a{n:02d}", "proposed_at": today, "stream": stream, "origin": "author",
+            "title": text if len(text) <= 80 else text[:79] + "…", "summary": text, "why_now": "",
+            "sources": [], "images": [], "status": "approved",
+            "thread": {"status": "requested", "file": None}, "script": {"status": "none", "file": None},
+            "video": {"status": "none", "telegram_message_id": None}, "revisions": [],
+            "history": [{"at": now(), "event": "author topic from telegram; thread requested"}],
+        }
+        self.ideas_doc["ideas"].append(idea)
+        self.ideas[idea["id"]] = idea
+        self.fire.setdefault("texts", set()).add(idea["id"])
+        self.send(f"✍️ Пишу тред ({stream_label(stream)}): «{idea['title']}». Надішлю, щойно буде готовий.")
 
     # ------------------------------------------------------------ вхідні
 
@@ -389,8 +440,13 @@ class Bot:
             if not idea or record.get("sha") != digest or idea.get("thread", {}).get("status") != "approved":
                 return
             # У чергу йде саме той текст, який користувач щойно бачив.
+            photo = int(parts[3]) if len(parts) > 3 and parts[3].isdigit() else 0
+            images = idea.get("images", [])
+            image = images[photo - 1] if 0 < photo <= len(images) else None
             self.state["approved_threads"][idea["id"]] = {"sha": digest, "text": record["text"],
                                                           "topic": record.get("topic", ""),
+                                                          "image": ({"url": image.get("url"), "credit": image.get("credit", "")}
+                                                                    if image else None),
                                                           "approved_at": now(), "posted": False}
             idea["thread"]["status"] = "queued"
             history(idea, "thread queued for Threads")
@@ -398,6 +454,9 @@ class Bot:
             self.send("🧵 Тред у черзі — публікую в Threads." if THREADS_TOKEN and THREADS_USER_ID
                       else "🧵 Тред у черзі. Threads ще не підключено (немає секретів THREADS_*).",
                       kb([("📣 Ще публікація", "go:publish")]), {"kind": "nav"})
+        elif action == "own":
+            self.close_buttons(mid, f"✅ {stream_label(parts[2])}")
+            self.create_own_idea(parts[1], parts[2])
         elif action == "cancel":
             self.close_buttons(mid, "Скасовано")
 
@@ -405,6 +464,7 @@ class Bot:
         if msg.get("chat", {}).get("id") != CHAT_ID:
             return
         text = (msg.get("text") or "").strip()
+        text = MENU_BUTTONS.get(text, text)
         command = text.split()[0].split("@")[0] if text.startswith("/") else ""
         if command == "/ideas":
             return self.ask_ideas()
@@ -415,7 +475,9 @@ class Bot:
         if command == "/queue":
             return self.show_queue()
         if command in ("/start", "/help"):
-            return self.send("Команди: /ideas — нові ідеї, /texts — написати тред, /publish — публікація, /queue — стан тем.")
+            return self.send(HELP, MAIN_KEYBOARD)
+        if command:
+            return
 
         reply_id = (msg.get("reply_to_message") or {}).get("message_id")
         record = self.state["messages"].get(str(reply_id)) if reply_id else None
@@ -430,6 +492,8 @@ class Bot:
                 self.close_buttons(reply_id, f"🏷 Тему змінено на «{topic}»")
                 self.send_preview(idea, record["text"], topic)
             return
+        if text and not reply_id:
+            return self.propose_topic(text)
         if not text or not record or record.get("kind") != "thread":
             return
         idea = self.ideas.get(record["idea"])
@@ -492,6 +556,9 @@ class Bot:
                 self.send(f"⚠️ Не публікую «{idea['title']}»: у тексті є [ПЕРЕВІРИТИ].")
                 return
             posts = thread_posts(item["text"])
+            image = item.get("image")
+            if posts and image and image.get("credit"):
+                posts[-1] = f"{posts[-1]}\n\nФото: {image['credit']}"
             too_long = [n for n, p in enumerate(posts, 1) if threads_length(p) > THREADS_POST_LIMIT]
             if not posts or too_long:
                 item["failed"] = f"пости {too_long} довші за {THREADS_POST_LIMIT} символів" if too_long else "порожній тред"
@@ -501,6 +568,8 @@ class Bot:
             try:
                 for text in posts[len(posted):]:
                     params = {"media_type": "TEXT", "text": text}
+                    if not posted and image and image.get("url"):
+                        params.update(media_type="IMAGE", image_url=image["url"])
                     if not posted and item.get("topic"):
                         params["topic_tag"] = item["topic"]
                     if posted:
@@ -563,6 +632,19 @@ class Bot:
 
     # ------------------------------------------------------------ запуск
 
+    def ensure_menu(self) -> None:
+        if self.state.get("menu_version") == MENU_VERSION:
+            return
+        tg("setMyCommands", commands=[
+            {"command": "ideas", "description": "Нові ідеї"},
+            {"command": "texts", "description": "Написати тред"},
+            {"command": "publish", "description": "Публікація"},
+            {"command": "queue", "description": "Стан тем"},
+            {"command": "help", "description": "Довідка"},
+        ])
+        self.send("Меню тепер унизу чату 👇\n" + HELP, MAIN_KEYBOARD)
+        self.state["menu_version"] = MENU_VERSION
+
     def run(self) -> int:
         updates = tg("getUpdates", offset=self.state["offset"], timeout=0,
                      allowed_updates=["message", "callback_query"]) or []
@@ -573,6 +655,7 @@ class Bot:
             elif "message" in update:
                 self.on_message(update["message"])
 
+        self.ensure_menu()
         self.publish_queued()
         self.send_new_ideas()
         self.send_ready_threads()
