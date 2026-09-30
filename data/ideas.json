@@ -1130,7 +1130,7 @@
       "images": [],
       "status": "approved",
       "thread": {
-        "status": "ready",
+        "status": "revise",
         "file": "data/texts/2026-09-30-07/thread.md"
       },
       "script": {
@@ -1141,7 +1141,13 @@
         "status": "none",
         "telegram_message_id": null
       },
-      "revisions": [],
+      "revisions": [
+        {
+          "kind": "thread",
+          "text": "Більше науково - популярного стилю більше пояснень",
+          "at": "2026-09-30T14:36:30+00:00"
+        }
+      ],
       "history": [
         {
           "at": "2026-09-30T07:52:50+00:00",
@@ -1158,6 +1164,10 @@
         {
           "at": "2026-09-30T14:31:17+00:00",
           "event": "thread ready"
+        },
+        {
+          "at": "2026-09-30T14:36:30+00:00",
+          "event": "thread revision requested"
         }
       ]
     },
