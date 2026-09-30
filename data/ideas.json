@@ -395,7 +395,7 @@
       ],
       "status": "approved",
       "thread": {
-        "status": "ready",
+        "status": "revise",
         "file": "data/texts/2026-09-29-08/thread.md"
       },
       "script": {
@@ -406,7 +406,13 @@
         "status": "none",
         "telegram_message_id": null
       },
-      "revisions": [],
+      "revisions": [
+        {
+          "kind": "thread",
+          "text": "Це дуже маленьки тред. Не треба згадок про захід нет",
+          "at": "2026-09-30T19:01:06+00:00"
+        }
+      ],
       "history": [
         {
           "at": "2026-09-29T20:22:24Z",
@@ -423,6 +429,10 @@
         {
           "at": "2026-09-29T20:31:25+00:00",
           "event": "script ready"
+        },
+        {
+          "at": "2026-09-30T19:01:06+00:00",
+          "event": "thread revision requested"
         }
       ],
       "stream": "big"
