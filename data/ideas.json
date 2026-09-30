@@ -154,7 +154,7 @@
       ],
       "status": "approved",
       "thread": {
-        "status": "ready",
+        "status": "revise",
         "file": "data/texts/2026-09-29-03/thread.md"
       },
       "script": {
@@ -165,7 +165,13 @@
         "status": "none",
         "telegram_message_id": null
       },
-      "revisions": [],
+      "revisions": [
+        {
+          "kind": "thread",
+          "text": "3-4 повідомлення перепиши. Не згадуй лише описи, а дай інформацію що оцифровують справи і вдосконалюють описи.\nПро голову ДАСУ не згадуй. \nНе забудь фото ілюстративні",
+          "at": "2026-09-30T16:39:54+00:00"
+        }
+      ],
       "history": [
         {
           "at": "2026-09-29T20:22:24Z",
@@ -182,6 +188,10 @@
         {
           "at": "2026-09-29T20:31:25+00:00",
           "event": "script ready"
+        },
+        {
+          "at": "2026-09-30T16:39:54+00:00",
+          "event": "thread revision requested"
         }
       ],
       "stream": "big"
