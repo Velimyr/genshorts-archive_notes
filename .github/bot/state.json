@@ -198,6 +198,9 @@
     },
     "62": {
       "kind": "confirm"
+    },
+    "63": {
+      "kind": "menu"
     }
   },
   "approved_threads": {
@@ -221,7 +224,7 @@
   },
   "asked": {
     "ideas": "2026-09-30",
-    "texts": "2026-09-29",
+    "texts": "2026-09-30",
     "publish": "2026-09-29"
   },
   "menu_version": 1,
