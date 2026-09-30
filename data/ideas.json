@@ -826,12 +826,31 @@
       "title": "Напиши великий тред про Описовий Блукач. Окрема увага на важливість фонду 442 я…",
       "summary": "Напиши великий тред про Описовий Блукач. Окрема увага на важливість фонду 442 який розпізнає спільнота і заклик долучитися",
       "why_now": "",
-      "sources": [],
-      "images": [],
+      "sources": [
+        "https://t.me/archivist_notes/436",
+        "https://t.me/archivist_notes/462",
+        "https://t.me/archivist_notes/468",
+        "https://t.me/archivist_notes/480",
+        "https://t.me/archivist_notes/484",
+        "https://t.me/archivist_notes/510",
+        "https://t.me/archivist_notes/514",
+        "https://t.me/archivist_notes/520",
+        "https://uk.wikisource.org/wiki/Архів:ЦДІАК/442",
+        "https://commons.wikimedia.org/wiki/File:ЦДІАК_фонд_442_опис_445.pdf",
+        "https://openheritage.online/uk/collections/093b0a92-1343-4856-8c2a-f3c8078d6725"
+      ],
+      "images": [
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/%D0%A6%D0%94%D0%86%D0%90%D0%9A_%D1%84%D0%BE%D0%BD%D0%B4_442_%D0%BE%D0%BF%D0%B8%D1%81_445.pdf/page5-1280px-%D0%A6%D0%94%D0%86%D0%90%D0%9A_%D1%84%D0%BE%D0%BD%D0%B4_442_%D0%BE%D0%BF%D0%B8%D1%81_445.pdf.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:%D0%A6%D0%94%D0%86%D0%90%D0%9A_%D1%84%D0%BE%D0%BD%D0%B4_442_%D0%BE%D0%BF%D0%B8%D1%81_445.pdf",
+          "credit": "ЦДІАК України / Wikimedia Commons, public domain",
+          "license": "Public domain"
+        }
+      ],
       "status": "approved",
       "thread": {
-        "status": "requested",
-        "file": null
+        "status": "ready",
+        "file": "data/texts/2026-09-30-a01/thread.md"
       },
       "script": {
         "status": "none",
@@ -846,6 +865,10 @@
         {
           "at": "2026-09-30T07:09:56+00:00",
           "event": "author topic from telegram; thread requested"
+        },
+        {
+          "at": "2026-09-30T07:13:20+00:00",
+          "event": "thread ready"
         }
       ]
     }
