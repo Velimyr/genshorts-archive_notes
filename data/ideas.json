@@ -987,7 +987,7 @@
         "https://uk.wikipedia.org/wiki/Сповідні_розписи"
       ],
       "images": [],
-      "status": "proposed",
+      "status": "rejected",
       "thread": {
         "status": "none",
         "file": null
@@ -1005,6 +1005,10 @@
         {
           "at": "2026-09-30T07:52:50+00:00",
           "event": "proposed by ideas routine"
+        },
+        {
+          "at": "2026-09-30T07:55:02+00:00",
+          "event": "idea rejected in telegram"
         }
       ]
     },
@@ -1019,7 +1023,7 @@
         "https://www.radiosvoboda.org/a/arkhivy-dokumenty-metrychni-knyhy/31545958.html"
       ],
       "images": [],
-      "status": "proposed",
+      "status": "rejected",
       "thread": {
         "status": "none",
         "file": null
@@ -1037,6 +1041,10 @@
         {
           "at": "2026-09-30T07:52:50+00:00",
           "event": "proposed by ideas routine"
+        },
+        {
+          "at": "2026-09-30T07:55:02+00:00",
+          "event": "idea rejected in telegram"
         }
       ]
     },
@@ -1051,7 +1059,7 @@
         "https://uk.wikipedia.org/wiki/Адміністративно-територіальний_поділ_Російської_імперії"
       ],
       "images": [],
-      "status": "proposed",
+      "status": "rejected",
       "thread": {
         "status": "none",
         "file": null
@@ -1069,6 +1077,10 @@
         {
           "at": "2026-09-30T07:52:50+00:00",
           "event": "proposed by ideas routine"
+        },
+        {
+          "at": "2026-09-30T07:55:03+00:00",
+          "event": "idea rejected in telegram"
         }
       ]
     },
