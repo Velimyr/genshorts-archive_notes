@@ -8,13 +8,13 @@
       "origin": "manual",
       "has_photo": false,
       "latest": {
-        "views": 3183,
-        "likes": 66,
+        "views": 3411,
+        "likes": 70,
         "replies": 34,
         "reposts": 3,
         "quotes": 2,
         "shares": 7,
-        "at": "2026-09-30T16:51:30+00:00"
+        "at": "2026-09-30T18:01:19+00:00"
       }
     },
     "18115539982812462": {
@@ -31,13 +31,13 @@
       "has_photo": false,
       "scheduled": false,
       "latest": {
-        "views": 1723,
-        "likes": 37,
+        "views": 1778,
+        "likes": 40,
         "replies": 20,
         "reposts": 0,
         "quotes": 0,
         "shares": 0,
-        "at": "2026-09-30T16:51:30+00:00"
+        "at": "2026-09-30T18:01:20+00:00"
       }
     },
     "17920561887438251": {
@@ -48,13 +48,21 @@
       "origin": "manual",
       "has_photo": false,
       "latest": {
-        "views": 567,
+        "views": 571,
         "likes": 31,
         "replies": 4,
         "reposts": 0,
         "quotes": 0,
         "shares": 0,
-        "at": "2026-09-30T16:51:30+00:00"
+        "at": "2026-09-30T18:01:20+00:00"
+      },
+      "h24": {
+        "views": 571,
+        "likes": 31,
+        "replies": 4,
+        "reposts": 0,
+        "quotes": 0,
+        "shares": 0
       }
     },
     "18108923843270472": {
@@ -71,7 +79,7 @@
         "reposts": 0,
         "quotes": 0,
         "shares": 0,
-        "at": "2026-09-30T16:51:31+00:00"
+        "at": "2026-09-30T18:01:21+00:00"
       },
       "h24": {
         "views": 169,
@@ -96,7 +104,7 @@
         "reposts": 0,
         "quotes": 0,
         "shares": 2,
-        "at": "2026-09-30T16:51:31+00:00"
+        "at": "2026-09-30T18:01:21+00:00"
       },
       "h24": {
         "views": 1136,
@@ -121,7 +129,7 @@
         "reposts": 0,
         "quotes": 1,
         "shares": 0,
-        "at": "2026-09-30T16:51:31+00:00"
+        "at": "2026-09-30T18:01:22+00:00"
       },
       "h24": {
         "views": 1302,
@@ -148,13 +156,13 @@
       "origin": "manual",
       "has_photo": false,
       "latest": {
-        "views": 10310,
+        "views": 10312,
         "likes": 277,
         "replies": 40,
         "reposts": 5,
         "quotes": 1,
         "shares": 55,
-        "at": "2026-09-30T16:51:32+00:00"
+        "at": "2026-09-30T18:01:22+00:00"
       },
       "h24": {
         "views": 10298,
@@ -181,13 +189,13 @@
       "origin": "manual",
       "has_photo": true,
       "latest": {
-        "views": 938,
+        "views": 939,
         "likes": 38,
         "replies": 18,
         "reposts": 0,
         "quotes": 1,
         "shares": 4,
-        "at": "2026-09-30T16:51:32+00:00"
+        "at": "2026-09-30T18:01:22+00:00"
       },
       "h24": {
         "views": 934,
@@ -214,13 +222,13 @@
       "origin": "manual",
       "has_photo": false,
       "latest": {
-        "views": 20126,
+        "views": 20128,
         "likes": 303,
         "replies": 41,
         "reposts": 4,
         "quotes": 2,
         "shares": 66,
-        "at": "2026-09-30T16:51:32+00:00"
+        "at": "2026-09-30T18:01:23+00:00"
       },
       "h24": {
         "views": 20116,
@@ -253,7 +261,7 @@
         "reposts": 0,
         "quotes": 0,
         "shares": 0,
-        "at": "2026-09-30T16:51:33+00:00"
+        "at": "2026-09-30T18:01:23+00:00"
       },
       "h24": {
         "views": 211,
@@ -286,7 +294,7 @@
         "reposts": 0,
         "quotes": 0,
         "shares": 1,
-        "at": "2026-09-30T16:51:33+00:00"
+        "at": "2026-09-30T18:01:24+00:00"
       },
       "h24": {
         "views": 1424,
@@ -319,7 +327,7 @@
         "reposts": 0,
         "quotes": 0,
         "shares": 5,
-        "at": "2026-09-30T16:51:34+00:00"
+        "at": "2026-09-30T18:01:24+00:00"
       },
       "h24": {
         "views": 3353,
@@ -360,7 +368,7 @@
         "reposts": 0,
         "quotes": 0,
         "shares": 0,
-        "at": "2026-09-30T16:51:34+00:00"
+        "at": "2026-09-30T18:01:25+00:00"
       },
       "h24": {
         "views": 402,
@@ -401,7 +409,7 @@
         "reposts": 1,
         "quotes": 0,
         "shares": 0,
-        "at": "2026-09-30T16:51:34+00:00"
+        "at": "2026-09-30T18:01:25+00:00"
       },
       "h24": {
         "views": 194,
@@ -426,7 +434,8 @@
         "reposts": 1,
         "quotes": 0,
         "shares": 0
-      }
+      },
+      "final": true
     },
     "18131755576669240": {
       "timestamp": "2026-09-22T11:54:22+0000",
@@ -595,7 +604,30 @@
         "shares": 0
       },
       "final": true
+    },
+    "18198771793346973": {
+      "timestamp": "2026-09-30T17:09:46+0000",
+      "permalink": "https://www.threads.com/@velimyr/post/Dd61noUmtm3",
+      "media_type": "IMAGE",
+      "text_len": 238,
+      "origin": "bot",
+      "idea": "2026-09-29-11",
+      "title": "«Ми з козацької старшини»: коротка арифметика родинного міфу",
+      "stream": "fun",
+      "topic": "Генеалогія",
+      "posts_count": 5,
+      "has_photo": true,
+      "scheduled": true,
+      "latest": {
+        "views": 46,
+        "likes": 4,
+        "replies": 16,
+        "reposts": 0,
+        "quotes": 0,
+        "shares": 0,
+        "at": "2026-09-30T18:01:19+00:00"
+      }
     }
   },
-  "updated_at": "2026-09-30T16:51:34+00:00"
+  "updated_at": "2026-09-30T18:01:25+00:00"
 }
