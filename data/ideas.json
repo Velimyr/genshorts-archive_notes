@@ -745,8 +745,15 @@
         {
           "at": "2026-09-30T20:11:53+00:00",
           "event": "thread text approved in telegram"
+        },
+        {
+          "at": "2026-09-30T20:19:08+00:00",
+          "event": "photo search requested in telegram"
         }
-      ]
+      ],
+      "photo_request": true,
+      "photo_keywords": "",
+      "photo_requested_at": "2026-09-30T20:19:08+00:00"
     },
     {
       "id": "2026-09-29-13",
