@@ -503,14 +503,15 @@ class Bot:
     def show_photos(self, idea: dict) -> list[int]:
         """Показує кандидатів на фото один раз; повертає номери тих, що Telegram зміг відкрити."""
         shown = self.state.setdefault("photos_shown", {})
-        if idea["id"] not in shown:
+        key = f"{idea['id']}:{sha(json.dumps([i.get('url') for i in idea.get('images', [])[:3]]))}"
+        if key not in shown:
             ok = []
             for n, image in enumerate(idea.get("images", [])[:3], 1):
                 caption = f"🖼 {n} · {image.get('credit', '')}"[:1000]
                 if tg("sendPhoto", chat_id=CHAT_ID, photo=image.get("url", ""), caption=caption):
                     ok.append(n)
-            shown[idea["id"]] = ok
-        return shown[idea["id"]]
+            shown[key] = ok
+        return shown[key]
 
     def send_preview(self, idea: dict, body: str, topic: str) -> None:
         digest = sha(body)
