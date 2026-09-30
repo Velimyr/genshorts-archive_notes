@@ -417,7 +417,8 @@ class Bot:
             rows = [[("🕒 Запланувати", f"pub:{iid}")]]
         elif thread == "scheduled" and item.get("publish_at") not in (None, "pending"):
             lines.append(f"🕒 Заплановано на {fmt_slot(parse_time(item['publish_at']))}.")
-            rows = [[("⚡ Опублікувати зараз", f"when:{iid}:now")],
+            rows = [[("⬆️ Раніше", f"move:{iid}:up"), ("⬇️ Пізніше", f"move:{iid}:down")],
+                    [("⚡ Опублікувати зараз", f"when:{iid}:now")],
                     [("🕒 Інший час", f"askwhen:{iid}"), ("↩️ Зняти з розкладу", f"unq:{iid}")]]
         elif thread == "posted":
             analytics = load_json(ANALYTICS_FILE, {"posts": {}}).get("posts", {})
@@ -430,6 +431,49 @@ class Bot:
         if thread not in ("posted", "cancelled") and idea.get("status") != "cancelled":
             rows.append([("🗑 Скасувати тему", f"drop:{iid}")])
         self.send("\n".join(lines), kb(*rows) if rows else None, {"kind": "item", "idea": iid})
+
+    def rule_warning(self, idea_id: str, moment: datetime) -> str:
+        """Порожній рядок, якщо слот відповідає правилам розкладу, інакше — попередження."""
+        pubs = self.bot_publications(exclude=idea_id)
+        cat = self.category(self.ideas.get(idea_id))
+        if not self.slot_allowed(moment.astimezone(KYIV), cat, pubs, strict=False):
+            return "⚠️ Порушує правила розкладу (ліміт на день, 1 серйозний на день або проміжок 4 год)."
+        if not self.slot_allowed(moment.astimezone(KYIV), cat, pubs, strict=True):
+            return "ℹ️ Порушено чергування серйозних і жартівливих."
+        return ""
+
+    def move_item(self, idea: dict, direction: str) -> None:
+        """Переносить заплановану тему на сусідній рекомендований слот; зайнятий — обмін."""
+        item = self.state["approved_threads"].get(idea["id"], {})
+        if item.get("posted") or item.get("posted_ids") or item.get("publish_at") in (None, "pending"):
+            return
+        current = parse_time(item["publish_at"])
+        earliest = datetime.now(KYIV) + timedelta(minutes=15)
+        slots = [s for s in self.recommended_slots(days=21) if s >= earliest]
+        if direction == "down":
+            target = next((s for s in slots if s > current + timedelta(minutes=1)), None)
+        else:
+            earlier = [s for s in slots if s < current - timedelta(minutes=1)]
+            target = earlier[-1] if earlier else None
+        if target is None:
+            self.send("Раніших рекомендованих слотів немає." if direction == "up" else "Пізніших слотів немає.")
+            return
+        other = next((i for m, i, _ in self.scheduled() if i != idea["id"] and abs(m - target) < timedelta(minutes=1)), None)
+        item["publish_at"] = target.isoformat()
+        history(idea, f"thread moved to {item['publish_at']}")
+        notes = [f"🕒 «{idea['title']}» → {fmt_slot(target)}."]
+        if other:
+            other_item = self.state["approved_threads"][other]
+            other_item["publish_at"] = current.isoformat()
+            if other in self.ideas:
+                history(self.ideas[other], f"thread swapped to {other_item['publish_at']}")
+            notes.append(f"🔁 Обмін: «{self.ideas.get(other, {}).get('title', other)}» → {fmt_slot(current)}.")
+        for idea_id, moment in [(idea["id"], target)] + ([(other, current)] if other else []):
+            warning = self.rule_warning(idea_id, moment)
+            if warning:
+                notes.append(f"{warning} («{self.ideas.get(idea_id, {}).get('title', idea_id)}»)")
+        self.send("\n".join(notes))
+        self.show_item(idea)
 
     def request_ideas(self, stream: str):
         pending = [r for r in self.requests["ideas"] if r.get("status") == "pending"]
@@ -691,6 +735,10 @@ class Bot:
             idea = self.ideas.get(parts[1])
             if idea:
                 self.show_item(idea)
+        elif action == "move":
+            idea = self.ideas.get(parts[1])
+            if idea:
+                self.move_item(idea, parts[2])
         elif action == "show":
             idea = self.ideas.get(parts[1])
             body = self.thread_text(idea) if idea else None
