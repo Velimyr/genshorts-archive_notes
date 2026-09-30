@@ -2,8 +2,8 @@
 //
 // Telegram надсилає сюди кожне оновлення (вебхук). Воркер кладе його в чергу (KV) і
 // одразу запускає диспетчер у GitHub Actions. Диспетчер забирає чергу через /pending і
-// після обробки підтверджує через /ack. Раз на годину (cron) воркер також запускає
-// диспетчер — для запитань за розкладом і повторних спроб публікації.
+// після обробки підтверджує через /ack. Cron кожні 5 хвилин: щогодинний запуск і
+// точний запуск у момент запланованої публікації чи нагадування (/due).
 //
 // Токена бота тут немає. Секрети воркера: TG_WEBHOOK_SECRET (перевірка, що запит від
 // Telegram), QUEUE_SECRET (доступ диспетчера до черги), GITHUB_TOKEN (fine-grained,
@@ -67,10 +67,26 @@ export default {
       return new Response(JSON.stringify({ deleted: ids.length }), { headers: JSON_HEADERS });
     }
 
+    if (request.method === "POST" && url.pathname === "/due") {
+      // Диспетчер повідомляє найближчий момент публікації чи нагадування (unix-секунди).
+      if (!authorized(request, env)) return new Response("forbidden", { status: 403 });
+      const { at = 0 } = await request.json();
+      if (at > 0) await env.QUEUE.put("due", String(at));
+      else await env.QUEUE.delete("due");
+      return new Response(JSON.stringify({ due: at }), { headers: JSON_HEADERS });
+    }
+
     return new Response("not found", { status: 404 });
   },
 
+  // Кожні 5 хвилин: щогодинний запуск (о :00, 07:00–23:00 за Києвом) або запуск,
+  // коли настав час запланованої публікації чи нагадування.
   async scheduled(event, env, ctx) {
-    ctx.waitUntil(triggerDispatcher(env, ""));
+    const moment = new Date(event.scheduledTime);
+    const hourly = moment.getUTCMinutes() < 5 && moment.getUTCHours() >= 4 && moment.getUTCHours() <= 20;
+    const due = Number((await env.QUEUE.get("due")) || 0);
+    const dueNow = due > 0 && moment.getTime() >= due * 1000;
+    if (dueNow) await env.QUEUE.delete("due");
+    if (hourly || dueNow) ctx.waitUntil(triggerDispatcher(env, ""));
   },
 };

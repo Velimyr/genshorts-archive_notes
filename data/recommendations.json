@@ -1,0 +1,62 @@
+{
+  "updated_at": "2026-09-30",
+  "basis": "baseline",
+  "sample_size": 0,
+  "slots": [
+    {
+      "weekday": 0,
+      "hour": 9
+    },
+    {
+      "weekday": 0,
+      "hour": 13
+    },
+    {
+      "weekday": 1,
+      "hour": 9
+    },
+    {
+      "weekday": 1,
+      "hour": 13
+    },
+    {
+      "weekday": 2,
+      "hour": 9
+    },
+    {
+      "weekday": 2,
+      "hour": 13
+    },
+    {
+      "weekday": 3,
+      "hour": 9
+    },
+    {
+      "weekday": 3,
+      "hour": 13
+    },
+    {
+      "weekday": 4,
+      "hour": 9
+    },
+    {
+      "weekday": 4,
+      "hour": 13
+    },
+    {
+      "weekday": 5,
+      "hour": 11
+    },
+    {
+      "weekday": 6,
+      "hour": 11
+    }
+  ],
+  "notes": "Стартові слоти з загальних досліджень Threads: найкраще працюють ранок і обід у будні (8–14), вечір і ніч слабші; день тижня важить менше за годину; у вихідні — пізній ранок. Дослідження переважно на англомовній аудиторії, тож це лише старт: слоти уточнюватиме щотижнева аналітика вашого акаунта.",
+  "sources": [
+    "https://buffer.com/resources/the-best-time-to-post-on-threads/",
+    "https://www.elvenflow.com/best-time-to-post-on-threads",
+    "https://www.socialpilot.co/insights/best-time-to-post-on-threads"
+  ],
+  "content": {}
+}

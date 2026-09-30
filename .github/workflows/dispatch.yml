@@ -39,6 +39,8 @@ jobs:
           ROUTINE_IDEAS_TOKEN: ${{ secrets.ROUTINE_IDEAS_TOKEN }}
           ROUTINE_TEXTS_URL: ${{ secrets.ROUTINE_TEXTS_URL }}
           ROUTINE_TEXTS_TOKEN: ${{ secrets.ROUTINE_TEXTS_TOKEN }}
+          ROUTINE_ANALYTICS_URL: ${{ secrets.ROUTINE_ANALYTICS_URL }}
+          ROUTINE_ANALYTICS_TOKEN: ${{ secrets.ROUTINE_ANALYTICS_TOKEN }}
           THREADS_ACCESS_TOKEN: ${{ secrets.THREADS_ACCESS_TOKEN }}
           THREADS_USER_ID: ${{ secrets.THREADS_USER_ID }}
           THREADS_TOKEN_UPDATED: ${{ vars.THREADS_TOKEN_UPDATED }}
@@ -68,6 +70,8 @@ jobs:
           ROUTINE_IDEAS_TOKEN: ${{ secrets.ROUTINE_IDEAS_TOKEN }}
           ROUTINE_TEXTS_URL: ${{ secrets.ROUTINE_TEXTS_URL }}
           ROUTINE_TEXTS_TOKEN: ${{ secrets.ROUTINE_TEXTS_TOKEN }}
+          ROUTINE_ANALYTICS_URL: ${{ secrets.ROUTINE_ANALYTICS_URL }}
+          ROUTINE_ANALYTICS_TOKEN: ${{ secrets.ROUTINE_ANALYTICS_TOKEN }}
           QUEUE_URL: ${{ vars.QUEUE_URL }}
           QUEUE_SECRET: ${{ secrets.QUEUE_SECRET }}
         run: python3 .github/bot/dispatch.py --fire

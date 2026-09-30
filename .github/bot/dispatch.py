@@ -11,8 +11,12 @@
    data/requests.json → задача «Ідеї» шукає 10 ідей цього потоку → ✅/❌.
 2. Тексти (12:00): погоджені теми без треду, згруповані за потоками → користувач
    обирає тему → задача «Тексти» пише тред → «✅ Готово» або правки відповіддю.
-3. Публікація (18:00): готові треди за потоками → бот ще раз показує текст →
-   після підтвердження тред стає в чергу на Threads.
+3. Публікація: готові треди за потоками → фінальна перевірка (тема, фото) → час:
+   найближчий рекомендований слот або «зараз». Заплановане публікується саме
+   (воркер будить диспетчер у потрібний момент). Якщо на рекомендований час нічого
+   не заплановано — нагадування за годину.
+4. Аналітика: щогодини статистика всіх постів акаунта в data/analytics.json;
+   щонеділі о 18:00 задача «Аналітика» пише звіт і оновлює data/recommendations.json.
 
 Команди: /ideas, /texts, /publish, /queue.
 Режим `--fire` (окремий крок workflow після пушу) запускає хмарні задачі, щоб вони
@@ -29,7 +33,7 @@ import unicodedata
 import urllib.error
 import urllib.parse
 import urllib.request
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from zoneinfo import ZoneInfo
 
@@ -37,6 +41,9 @@ ROOT = Path(__file__).resolve().parents[2]
 IDEAS_FILE = ROOT / "data" / "ideas.json"
 REQUESTS_FILE = ROOT / "data" / "requests.json"
 STRESS_FILE = ROOT / "data" / "stress_requests.json"
+ANALYTICS_FILE = ROOT / "data" / "analytics.json"
+RECS_FILE = ROOT / "data" / "recommendations.json"
+REPORTS_DIR = ROOT / "data" / "reports"
 STATE_FILE = Path(__file__).resolve().parent / "state.json"
 FIRE_FILE = Path(os.environ.get("RUNNER_TEMP", "/tmp")) / "genshorts_fire.json"
 ACK_FILE = Path(os.environ.get("RUNNER_TEMP", "/tmp")) / "genshorts_ack.json"
@@ -50,6 +57,8 @@ CHAT_ID = int(os.environ["TELEGRAM_CHAT_ID"].strip())
 ROUTINES = {
     "ideas": (os.environ.get("ROUTINE_IDEAS_URL", "").strip(), os.environ.get("ROUTINE_IDEAS_TOKEN", "").strip()),
     "texts": (os.environ.get("ROUTINE_TEXTS_URL", "").strip(), os.environ.get("ROUTINE_TEXTS_TOKEN", "").strip()),
+    "analytics": (os.environ.get("ROUTINE_ANALYTICS_URL", "").strip(),
+                  os.environ.get("ROUTINE_ANALYTICS_TOKEN", "").strip()),
 }
 
 THREADS_TOKEN = os.environ.get("THREADS_ACCESS_TOKEN", "").strip()
@@ -65,7 +74,12 @@ MAIN_KEYBOARD = {"keyboard": [[{"text": "💡 Ідеї"}, {"text": "✍️ Те�
                  "is_persistent": True, "resize_keyboard": True}
 HELP = ("Кнопки внизу: 💡 Ідеї — нові ідеї, ✍️ Тексти — написати тред, 📣 Публікація — опублікувати, "
         "📋 Черга — стан тем.\nСвоя тема — просто напишіть її звичайним повідомленням.")
-ASK_AT = {"ideas": 9, "texts": 12, "publish": 18}  # година за Києвом
+ASK_AT = {"ideas": 9, "texts": 12}  # година за Києвом
+REPORT_AT = (6, 18)  # неділя, 18:00 за Києвом — тижневий звіт
+SLOT_GAP = timedelta(hours=3)  # мінімальний проміжок між запланованими публікаціями
+REMIND_BEFORE = timedelta(hours=1)  # нагадування, якщо на рекомендований час нічого не заплановано
+WEEKDAYS = ["Пн", "Вт", "Ср", "Чт", "Пт", "Сб", "Нд"]
+METRICS = "views,likes,replies,reposts,quotes,shares"
 TG_LIMIT = 3900
 STREAMS = {
     "big": ("🧵", "Великий серйозний"),
@@ -109,6 +123,16 @@ def tg(method: str, **params):
             print(f"[tg] {method}: {description}")
             return None
         raise SystemExit(f"[tg] {method} failed: {description}")
+
+
+def fmt_slot(moment: datetime) -> str:
+    local = moment.astimezone(KYIV)
+    return f"{WEEKDAYS[local.weekday()]} {local:%d.%m %H:%M}"
+
+
+def parse_time(value: str) -> datetime:
+    """ISO-час з репозиторію чи Threads (формат «+0000» теж)."""
+    return datetime.fromisoformat(re.sub(r"([+-]\d\d)(\d\d)$", r"\1:\2", value))
 
 
 def kb(*rows):
@@ -321,7 +345,19 @@ class Bot:
 
     def show_queue(self):
         groups = self.grouped(lambda i: i.get("status") == "approved"
-                              and i.get("thread", {}).get("status") not in ("posted", "cancelled"))
+                              and i.get("thread", {}).get("status") not in ("posted", "cancelled", "queued", "scheduled"))
+        planned = [(m, i, it) for m, i, it in self.scheduled()]
+        pending = [(i, it) for i, it in self.state["approved_threads"].items()
+                   if it.get("publish_at") == "pending" and not it.get("posted")]
+        if planned or pending:
+            lines, buttons = ["🕒 Заплановані публікації (↩️ N — зняти з черги):"], []
+            for n, (moment, idea_id, _) in enumerate(planned, 1):
+                lines.append(f"{n}. {fmt_slot(moment)} — {self.ideas.get(idea_id, {}).get('title', idea_id)}")
+                buttons.append((f"↩️ {n}", f"unq:{idea_id}"))
+            for idea_id, _ in pending:
+                lines.append(f"• час не обрано — {self.ideas.get(idea_id, {}).get('title', idea_id)}")
+                buttons.append(("🕒 Обрати час", f"askwhen:{idea_id}"))
+            self.send("\n".join(lines), kb(*chunks(buttons, 4)), {"kind": "menu"})
         if not groups:
             self.send("📋 Погоджених тем немає.")
             return
@@ -398,6 +434,37 @@ class Bot:
         self.fire.setdefault("texts", set()).add(idea["id"])
         self.send(f"✍️ Пишу тред ({stream_label(stream)}): «{idea['title']}». Надішлю, щойно буде готовий.")
 
+    def recommended_slots(self, days: int = 7) -> list[datetime]:
+        recs = load_json(RECS_FILE, {"slots": []})
+        start = datetime.now(KYIV)
+        result = []
+        for offset in range(days + 1):
+            day = (start + timedelta(days=offset)).date()
+            for slot in recs.get("slots", []):
+                if slot.get("weekday") == day.weekday():
+                    moment = datetime(day.year, day.month, day.day, slot.get("hour", 9), slot.get("minute", 0), tzinfo=KYIV)
+                    if moment > start + timedelta(minutes=15):
+                        result.append(moment)
+        return sorted(result)
+
+    def scheduled(self) -> list[tuple[datetime, str, dict]]:
+        items = []
+        for idea_id, item in self.state["approved_threads"].items():
+            at = item.get("publish_at")
+            if not item.get("posted") and not item.get("failed") and at and at != "pending":
+                items.append((parse_time(at), idea_id, item))
+        return sorted(items, key=lambda x: x[0])
+
+    def free_slots(self, count: int = 3) -> list[datetime]:
+        busy = [moment for moment, _, _ in self.scheduled()]
+        return [s for s in self.recommended_slots() if all(abs(s - b) >= SLOT_GAP for b in busy)][:count]
+
+    def ask_when(self, idea: dict) -> None:
+        rows = [[(f"🕒 {fmt_slot(s)}", f"when:{idea['id']}:{int(s.timestamp())}")] for s in self.free_slots()]
+        rows += [[("⚡ Опублікувати зараз", f"when:{idea['id']}:now")], [("↩️ Не публікувати", f"unq:{idea['id']}")]]
+        self.send(f"🕒 Коли публікуємо «{idea['title']}»?\nЗапропоновано найближчі рекомендовані години, вільні від інших публікацій.",
+                  kb(*rows), {"kind": "when"})
+
     # ------------------------------------------------------------ вхідні
 
     def on_callback(self, cq: dict) -> None:
@@ -470,13 +537,40 @@ class Bot:
                                                           "topic": record.get("topic", ""),
                                                           "image": ({"url": image.get("url"), "credit": image.get("credit", "")}
                                                                     if image else None),
-                                                          "approved_at": now(), "posted": False}
+                                                          "approved_at": now(), "posted": False,
+                                                          "publish_at": "pending"}
             idea["thread"]["status"] = "queued"
-            history(idea, "thread queued for Threads")
-            self.close_buttons(mid, "✅ У черзі на Threads")
-            self.send("🧵 Тред у черзі — публікую в Threads." if THREADS_TOKEN and THREADS_USER_ID
-                      else "🧵 Тред у черзі. Threads ще не підключено (немає секретів THREADS_*).",
-                      kb([("📣 Ще публікація", "go:publish")]), {"kind": "nav"})
+            history(idea, "thread approved for Threads, awaiting time")
+            self.close_buttons(mid, "✅ Текст і фото обрано")
+            self.ask_when(idea)
+        elif action == "askwhen":
+            idea = self.ideas.get(parts[1])
+            if idea and idea["id"] in self.state["approved_threads"]:
+                self.ask_when(idea)
+        elif action == "when":
+            idea, item = self.ideas.get(parts[1]), self.state["approved_threads"].get(parts[1])
+            if not idea or not item or item.get("posted") or item.get("posted_ids"):
+                return
+            if parts[2] == "now":
+                item["publish_at"] = now()
+                label = "⚡ Публікую зараз"
+            else:
+                item["publish_at"] = datetime.fromtimestamp(int(parts[2]), KYIV).isoformat()
+                label = f"🕒 {fmt_slot(parse_time(item['publish_at']))}"
+            idea["thread"]["status"] = "scheduled"
+            history(idea, f"thread scheduled: {item['publish_at']}")
+            self.close_buttons(mid, label)
+            if parts[2] != "now":
+                self.send(f"🕒 «{idea['title']}» заплановано на {label[2:]}. Змінити чи зняти — у 📋 Черга.")
+        elif action == "unq":
+            idea, item = self.ideas.get(parts[1]), self.state["approved_threads"].get(parts[1])
+            if not idea or not item or item.get("posted") or item.get("posted_ids"):
+                return
+            self.state["approved_threads"].pop(idea["id"])
+            idea["thread"]["status"] = "approved"
+            history(idea, "thread unscheduled")
+            self.close_buttons(mid, "↩️ Знято з черги")
+            self.send(f"↩️ «{idea['title']}» знято з черги — тред знову серед готових (📣 Публікація).")
         elif action == "own":
             self.close_buttons(mid, f"✅ {stream_label(parts[2])}")
             self.create_own_idea(parts[1], parts[2])
@@ -588,8 +682,12 @@ class Bot:
         """Публікує один тред за запуск; прогрес зберігає після кожного поста."""
         if not (THREADS_TOKEN and THREADS_USER_ID):
             return
+        current = datetime.now(timezone.utc)
         for idea_id, item in self.state["approved_threads"].items():
             if item.get("posted") or item.get("failed"):
+                continue
+            at = item.get("publish_at")
+            if at == "pending" or (at and parse_time(at) > current):
                 continue
             idea = self.ideas.get(idea_id, {"title": idea_id})
             if unverified(item["text"]):
@@ -657,6 +755,129 @@ class Bot:
             self.send(f"🔑 Токену Threads {age} днів (діє 60). Оновіть на Маці:\n"
                       "cd ~/GenShorts && MoneyPrinterTurbo/.venv/bin/python tools/threads_token.py refresh")
 
+    def fetch_insights(self, media_id: str) -> dict | None:
+        for metrics in (METRICS, "views,likes,replies,reposts,quotes"):
+            try:
+                response = threads_call("GET", f"{media_id}/insights", metric=metrics)
+            except ThreadsError:
+                continue
+            values = {}
+            for item in response.get("data", []):
+                value = (item.get("total_value") or {}).get("value")
+                if value is None and item.get("values"):
+                    value = item["values"][0].get("value")
+                values[item.get("name")] = value
+            return values
+        return None
+
+    def collect_analytics(self) -> None:
+        """Раз на годину: список постів акаунта й статистика; зрізи через 24 год, 3 і 7 днів."""
+        if not (THREADS_TOKEN and THREADS_USER_ID):
+            return
+        last = self.state.get("analytics_at")
+        if last and datetime.now(timezone.utc) - parse_time(last) < timedelta(minutes=50):
+            return
+        self.state["analytics_at"] = now()
+        data = load_json(ANALYTICS_FILE, {"posts": {}})
+        posts = data.setdefault("posts", {})
+        bot_roots = {item["posted_ids"][0]: (idea_id, item)
+                     for idea_id, item in self.state["approved_threads"].items() if item.get("posted_ids")}
+        after, pages = None, (1 if posts else 6)
+        try:
+            for _ in range(pages):
+                params = {"fields": "id,timestamp,media_type,permalink,text", "limit": 50}
+                if after:
+                    params["after"] = after
+                page = threads_call("GET", f"{THREADS_USER_ID}/threads", **params)
+                for post in page.get("data", []):
+                    record = posts.setdefault(post["id"], {})
+                    record.update({"timestamp": post.get("timestamp"), "permalink": post.get("permalink"),
+                                   "media_type": post.get("media_type"), "text_len": len(post.get("text") or "")})
+                    if post["id"] in bot_roots:
+                        idea_id, item = bot_roots[post["id"]]
+                        idea = self.ideas.get(idea_id, {})
+                        record.update({"origin": "bot", "idea": idea_id, "title": idea.get("title"),
+                                       "stream": idea.get("stream"), "topic": item.get("topic"),
+                                       "posts_count": len(item.get("posted_ids", [])), "has_photo": bool(item.get("image")),
+                                       "scheduled": item.get("publish_at") not in (None, "pending")})
+                    else:
+                        record.setdefault("origin", "manual")
+                        record.setdefault("has_photo", post.get("media_type") not in ("TEXT_POST", "TEXT"))
+                paging = page.get("paging", {})
+                after = paging.get("cursors", {}).get("after")
+                if not paging.get("next"):
+                    break
+            budget, current = 40, datetime.now(timezone.utc)
+            for media_id, record in sorted(posts.items(), key=lambda kv: kv[1].get("timestamp") or "", reverse=True):
+                if budget <= 0 or not record.get("timestamp"):
+                    continue
+                age = current - parse_time(record["timestamp"])
+                if age > timedelta(days=8) and record.get("final"):
+                    continue
+                metrics = self.fetch_insights(media_id)
+                budget -= 1
+                if metrics is None:
+                    continue
+                record["latest"] = {**metrics, "at": now()}
+                for label, hours in (("h24", 24), ("h72", 72), ("h168", 168)):
+                    if age >= timedelta(hours=hours) and label not in record:
+                        record[label] = metrics
+                if age > timedelta(days=8):
+                    record["final"] = True
+        except ThreadsError as exc:
+            print(f"[analytics] {exc}")
+        data["updated_at"] = now()
+        save_json(ANALYTICS_FILE, data)
+
+    def weekly_report(self) -> None:
+        local = datetime.now(KYIV)
+        week = local.strftime("%G-%V")
+        if (local.weekday(), local.hour) >= REPORT_AT and local.weekday() == REPORT_AT[0] \
+                and self.state.get("report_week") != week:
+            self.state["report_week"] = week
+            self.fire.setdefault("analytics", set()).add(week)
+            self.send("📊 Готую тижневий звіт про ефективність тредів — надішлю, щойно буде готовий.")
+
+    def send_reports(self) -> None:
+        if not REPORTS_DIR.is_dir():
+            return
+        for path in sorted(REPORTS_DIR.glob("*.md")):
+            key = f"report:{path.name}"
+            if key not in self.state["sent"]:
+                self.state["sent"][key] = self.send(path.read_text(encoding="utf-8").strip())
+
+    def slot_reminders(self) -> None:
+        current = datetime.now(KYIV)
+        reminded = self.state.setdefault("reminded_slots", [])
+        busy = [moment for moment, _, _ in self.scheduled()]
+        for slot in self.recommended_slots(days=1):
+            if not (timedelta(0) < slot - current <= REMIND_BEFORE + timedelta(minutes=5)):
+                continue
+            key = slot.isoformat()
+            if key in reminded or any(abs(slot - b) < SLOT_GAP / 2 for b in busy):
+                continue
+            reminded.append(key)
+            if self.grouped(lambda i: i.get("thread", {}).get("status") == "approved"):
+                self.send(f"⏰ {slot:%H:%M} — рекомендований час публікації, але нічого не заплановано.",
+                          kb([("📣 Обрати тред", "go:publish")]), {"kind": "nav"})
+            else:
+                self.send(f"⏰ {slot:%H:%M} — рекомендований час публікації, але готових тредів немає.",
+                          kb([("✍️ Написати тред", "go:texts")]), {"kind": "nav"})
+        self.state["reminded_slots"] = reminded[-50:]
+
+    def next_due(self) -> int:
+        """Найближчий момент, коли воркер має розбудити диспетчер: публікація чи нагадування."""
+        current = datetime.now(KYIV)
+        busy = [m for m, _, _ in self.scheduled()]
+        moments = [m for m in busy if m > current]
+        reminded = set(self.state.get("reminded_slots", []))
+        for slot in self.recommended_slots(days=2):
+            if any(abs(slot - b) < SLOT_GAP / 2 for b in busy):
+                continue
+            if slot.isoformat() not in reminded and slot - REMIND_BEFORE > current:
+                moments.append(slot - REMIND_BEFORE)
+        return int(min(moments).timestamp()) if moments else 0
+
     def scheduled_prompts(self):
         local = datetime.now(KYIV)
         today = local.date().isoformat()
@@ -668,8 +889,6 @@ class Bot:
                 self.ask_ideas()
             elif name == "texts":
                 self.menu_texts(quiet=True)
-            else:
-                self.menu_publish(quiet=True)
 
     # ------------------------------------------------------------ запуск
 
@@ -716,16 +935,25 @@ class Bot:
 
         self.ensure_menu()
         self.publish_queued()
+        self.collect_analytics()
         self.send_new_ideas()
         self.send_ready_threads()
+        self.send_reports()
         self.token_reminder()
         self.scheduled_prompts()
+        self.slot_reminders()
+        self.weekly_report()
 
         save_json(IDEAS_FILE, self.ideas_doc)
         save_json(REQUESTS_FILE, self.requests)
         save_json(STRESS_FILE, self.stress)
         save_json(STATE_FILE, self.state)
         save_json(FIRE_FILE, {name: sorted(ids) for name, ids in self.fire.items()})
+        if QUEUE_URL and QUEUE_SECRET:
+            try:
+                queue_call("POST", "/due", {"at": self.next_due()})
+            except (urllib.error.URLError, ValueError) as exc:
+                print(f"[due] {exc}")
         print(f"[dispatch] updates: {len(updates)}, to fire: {sorted(self.fire)}")
         return 0
 
