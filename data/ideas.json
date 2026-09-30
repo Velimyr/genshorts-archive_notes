@@ -553,7 +553,7 @@
       ],
       "status": "approved",
       "thread": {
-        "status": "approved",
+        "status": "scheduled",
         "file": "data/texts/2026-09-29-14/thread.md",
         "approved_sha": "1ed2737e98d69185"
       },
@@ -586,6 +586,14 @@
         {
           "at": "2026-09-30T09:39:37+00:00",
           "event": "thread text approved in telegram"
+        },
+        {
+          "at": "2026-09-30T11:59:59+00:00",
+          "event": "thread approved for Threads, awaiting time"
+        },
+        {
+          "at": "2026-09-30T11:59:59+00:00",
+          "event": "thread auto-scheduled: 2026-10-01T09:00:00+03:00"
         }
       ]
     },
