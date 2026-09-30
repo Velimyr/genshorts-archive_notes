@@ -520,8 +520,7 @@ class Bot:
         digest = sha(body)
         photos = self.show_photos(idea)
         topic_line = (f"🏷 Тема: {topic}" if topic else "🏷 Тема не задана — без неї публікація недоступна.")
-        photo_line = (f"\n📷 Фото до першого поста: варіанти {', '.join(map(str, photos))} вище. "
-                      "Підпис автора фото буде додано в останній пост." if photos else "")
+        photo_line = (f"\n📷 Фото до першого поста: варіанти {', '.join(map(str, photos))} вище." if photos else "")
         rows = []
         if topic:
             rows = [[(f"🕒 Запланувати з фото {n}", f"confirm:{idea['id']}:{digest}:{n}")] for n in photos]
@@ -912,8 +911,6 @@ class Bot:
                 return
             posts = thread_posts(item["text"])
             image = item.get("image")
-            if posts and image and image.get("credit"):
-                posts[-1] = f"{posts[-1]}\n\nФото: {image['credit']}"
             too_long = [n for n, p in enumerate(posts, 1) if threads_length(p) > THREADS_POST_LIMIT]
             if not posts or too_long:
                 item["failed"] = f"пости {too_long} довші за {THREADS_POST_LIMIT} символів" if too_long else "порожній тред"
