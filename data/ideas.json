@@ -9,7 +9,7 @@
         "https://inventarium.org.ua/",
         "https://inventarium.org.ua/about"
       ],
-      "status": "approved",
+      "status": "cancelled",
       "history": [
         {
           "at": "2026-09-28T20:30:00+00:00",
@@ -18,11 +18,15 @@
         {
           "at": "2026-09-29T20:31:25+00:00",
           "event": "thread ready"
+        },
+        {
+          "at": "2026-09-30T08:17:59+00:00",
+          "event": "cancelled by author in telegram"
         }
       ],
       "why_now": "",
       "thread": {
-        "status": "ready",
+        "status": "cancelled",
         "file": "data/texts/2026-09-28-01/thread.md"
       },
       "script": {
