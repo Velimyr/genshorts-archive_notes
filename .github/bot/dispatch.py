@@ -344,30 +344,54 @@ class Bot:
             "pub", "📣 Немає готових тредів. Написати: /texts", quiet)
 
     def show_queue(self):
-        groups = self.grouped(lambda i: i.get("status") == "approved"
-                              and i.get("thread", {}).get("status") not in ("posted", "cancelled", "queued", "scheduled"))
-        planned = [(m, i, it) for m, i, it in self.scheduled()]
-        pending = [(i, it) for i, it in self.state["approved_threads"].items()
-                   if it.get("publish_at") == "pending" and not it.get("posted")]
-        if planned or pending:
-            lines, buttons = ["🕒 Заплановані публікації (↩️ N — зняти з черги):"], []
-            for n, (moment, idea_id, _) in enumerate(planned, 1):
-                lines.append(f"{n}. {fmt_slot(moment)} — {self.ideas.get(idea_id, {}).get('title', idea_id)}")
-                buttons.append((f"↩️ {n}", f"unq:{idea_id}"))
-            for idea_id, _ in pending:
-                lines.append(f"• час не обрано — {self.ideas.get(idea_id, {}).get('title', idea_id)}")
-                buttons.append(("🕒 Обрати час", f"askwhen:{idea_id}"))
-            self.send("\n".join(lines), kb(*chunks(buttons, 4)), {"kind": "menu"})
-        if not groups:
-            self.send("📋 Погоджених тем немає.")
-            return
-        lines, buttons, n = ["📋 Погоджені теми (🗑 N — скасувати тему):"], [], 0
-        for stream, ideas in groups:
-            lines.append(f"\n{stream_label(stream)}")
-            for idea in ideas:
+        """Зведення тем за стадіями з кнопками дій."""
+        stream_icon = {s: icon for s, (icon, _) in STREAMS.items()}
+        items = self.state["approved_threads"]
+        analytics = load_json(ANALYTICS_FILE, {"posts": {}}).get("posts", {})
+        week_ago = datetime.now(timezone.utc) - timedelta(days=7)
+        stages = [
+            ("💡 Погоджені ідеї, тексту ще немає", "🗑", "drop", []),
+            ("✍️ Тред пишеться", "🗑", "drop", []),
+            ("👀 Чекає вашого погодження", "🗑", "drop", []),
+            ("✅ Готові, без часу публікації", "🕒", "pub", []),
+            ("🕒 Заплановано", "↩️", "unq", []),
+            ("📤 Опубліковано за 7 днів", None, None, []),
+        ]
+        for idea in self.ideas.values():
+            thread = idea.get("thread", {}).get("status", "none")
+            if idea.get("test") or idea.get("status") not in ("approved",) and thread != "posted":
+                continue
+            item = items.get(idea["id"], {})
+            if thread == "none":
+                stages[0][3].append((idea, ""))
+            elif thread in ("requested", "revise"):
+                stages[1][3].append((idea, ""))
+            elif thread == "ready":
+                stages[2][3].append((idea, ""))
+            elif thread == "approved" or (thread == "queued" and item.get("publish_at") == "pending"):
+                stages[3][3].append((idea, ""))
+            elif thread == "scheduled" and item.get("publish_at") not in (None, "pending"):
+                stages[4][3].append((idea, fmt_slot(parse_time(item["publish_at"]))))
+            elif thread == "posted" and item.get("posted_at") and parse_time(item["posted_at"]) > week_ago:
+                views = (analytics.get((item.get("posted_ids") or [""])[0], {}).get("latest") or {}).get("views")
+                stages[5][3].append((idea, f"{views} переглядів" if views is not None else ""))
+        stages[4][3].sort(key=lambda x: parse_time(items[x[0]["id"]]["publish_at"]))
+        lines, buttons, n = ["📋 Стан тем"], [], 0
+        for title, icon, action, rows in stages:
+            if not rows:
+                continue
+            lines.append(f"\n{title} ({len(rows)})")
+            for idea, extra in rows:
                 n += 1
-                lines.append(f"{n}. {idea['title']} — тред: {idea.get('thread', {}).get('status', 'none')}")
-                buttons.append((f"🗑 {n}", f"drop:{idea['id']}"))
+                label = f"{extra} — " if extra and action == "unq" else ""
+                suffix = f" — {extra}" if extra and action != "unq" else ""
+                lines.append(f"{stream_icon.get(idea.get('stream'), '•')} {n}. {label}{idea['title']}{suffix}")
+                if action:
+                    buttons.append((f"{icon} {n}", f"{action}:{idea['id']}"))
+        if n == 0:
+            self.send("📋 Погоджених тем немає. Нові ідеї — 💡 Ідеї.")
+            return
+        lines.append("\n🗑 N — скасувати тему · 🕒 N — запланувати · ↩️ N — зняти з розкладу")
         self.send("\n".join(lines), kb(*chunks(buttons, 5)), {"kind": "menu"})
 
     def request_ideas(self, stream: str):
@@ -399,11 +423,12 @@ class Bot:
                       "Підпис автора фото буде додано в останній пост." if photos else "")
         rows = []
         if topic:
-            rows = [[(f"✅ Публікувати з фото {n}", f"confirm:{idea['id']}:{digest}:{n}")] for n in photos]
-            rows.append([("✅ Публікувати без фото", f"confirm:{idea['id']}:{digest}:0")])
+            rows = [[(f"🕒 Запланувати з фото {n}", f"confirm:{idea['id']}:{digest}:{n}")] for n in photos]
+            rows.append([("🕒 Запланувати без фото", f"confirm:{idea['id']}:{digest}:0")])
         rows.append([("❌ Скасувати", "cancel")])
         self.send(f"{stream_label(idea.get('stream'))} · фінальна перевірка — «{idea['title']}»\n\n{body}"
                   f"\n\nℹ️ Блок «Джерела» в Threads не публікується.{photo_line}\n{topic_line}\n"
+                  "🕒 Після вибору фото тред автоматично стане на найближчу вільну рекомендовану годину.\n"
                   "↩️ Щоб задати чи змінити тему — відповідайте на це повідомлення її назвою (без #).",
                   kb(*rows),
                   {"kind": "preview", "idea": idea["id"], "sha": digest, "text": body, "topic": topic})
@@ -458,6 +483,21 @@ class Bot:
     def free_slots(self, count: int = 3) -> list[datetime]:
         busy = [moment for moment, _, _ in self.scheduled()]
         return [s for s in self.recommended_slots() if all(abs(s - b) >= SLOT_GAP for b in busy)][:count]
+
+    def auto_schedule(self, idea: dict) -> None:
+        """Ставить тред на найближчу вільну рекомендовану годину; змінити можна кнопками."""
+        item = self.state["approved_threads"].get(idea["id"])
+        slots = self.free_slots(1)
+        if not item or not slots:
+            self.ask_when(idea)
+            return
+        item["publish_at"] = slots[0].isoformat()
+        idea["thread"]["status"] = "scheduled"
+        history(idea, f"thread auto-scheduled: {item['publish_at']}")
+        self.send(f"🕒 «{idea['title']}» заплановано на {fmt_slot(slots[0])} — найближчу вільну рекомендовану годину.",
+                  kb([("⚡ Опублікувати зараз", f"when:{idea['id']}:now")],
+                     [("🕒 Інший час", f"askwhen:{idea['id']}"), ("↩️ Зняти з розкладу", f"unq:{idea['id']}")]),
+                  {"kind": "when"})
 
     def ask_when(self, idea: dict) -> None:
         rows = [[(f"🕒 {fmt_slot(s)}", f"when:{idea['id']}:{int(s.timestamp())}")] for s in self.free_slots()]
@@ -514,7 +554,9 @@ class Bot:
                 idea["thread"]["approved_sha"] = record.get("sha")
                 history(idea, "thread text approved in telegram")
             self.close_buttons(mid, "✅ Тред готовий")
-            self.send("Що далі?", kb([("➡️ До публікації", "go:publish"), ("✍️ Ще тред", "go:texts")]), {"kind": "nav"})
+            body = self.thread_text(idea) if idea else None
+            if body and idea.get("thread", {}).get("status") == "approved":
+                self.send_preview(idea, body, self.state.get("last_topic", ""))
         elif action == "pub":
             idea = self.ideas.get(parts[1])
             body = self.thread_text(idea) if idea else None
@@ -542,7 +584,7 @@ class Bot:
             idea["thread"]["status"] = "queued"
             history(idea, "thread approved for Threads, awaiting time")
             self.close_buttons(mid, "✅ Текст і фото обрано")
-            self.ask_when(idea)
+            self.auto_schedule(idea)
         elif action == "askwhen":
             idea = self.ideas.get(parts[1])
             if idea and idea["id"] in self.state["approved_threads"]:
@@ -570,7 +612,7 @@ class Bot:
             idea["thread"]["status"] = "approved"
             history(idea, "thread unscheduled")
             self.close_buttons(mid, "↩️ Знято з черги")
-            self.send(f"↩️ «{idea['title']}» знято з черги — тред знову серед готових (📣 Публікація).")
+            self.send(f"↩️ «{idea['title']}» знято з розкладу — тред серед готових без часу (📣 Публікація).")
         elif action == "own":
             self.close_buttons(mid, f"✅ {stream_label(parts[2])}")
             self.create_own_idea(parts[1], parts[2])
