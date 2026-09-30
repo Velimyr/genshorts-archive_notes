@@ -847,9 +847,9 @@
           "license": "Public domain"
         }
       ],
-      "status": "approved",
+      "status": "cancelled",
       "thread": {
-        "status": "ready",
+        "status": "cancelled",
         "file": "data/texts/2026-09-30-a01/thread.md"
       },
       "script": {
@@ -869,6 +869,10 @@
         {
           "at": "2026-09-30T07:13:20+00:00",
           "event": "thread ready"
+        },
+        {
+          "at": "2026-09-30T08:15:48+00:00",
+          "event": "cancelled by author in telegram"
         }
       ]
     },
