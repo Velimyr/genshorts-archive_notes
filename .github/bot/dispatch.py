@@ -68,12 +68,15 @@ THREADS_API = "https://graph.threads.net/v1.0"
 THREADS_POST_LIMIT = 500
 
 KYIV = ZoneInfo("Europe/Kyiv")
-MENU_VERSION = 1
-MENU_BUTTONS = {"💡 Ідеї": "/ideas", "✍️ Тексти": "/texts", "📣 Публікація": "/publish", "📋 Черга": "/queue"}
-MAIN_KEYBOARD = {"keyboard": [[{"text": "💡 Ідеї"}, {"text": "✍️ Тексти"}], [{"text": "📣 Публікація"}, {"text": "📋 Черга"}]],
+MENU_VERSION = 2
+MENU_BUTTONS = {"💡 Ідеї": "/ideas", "✍️ Тексти": "/texts", "📣 Публікація": "/publish", "📋 Черга": "/queue",
+                "📤 Опубліковані": "/published"}
+MAIN_KEYBOARD = {"keyboard": [[{"text": "💡 Ідеї"}, {"text": "✍️ Тексти"}], [{"text": "📣 Публікація"}, {"text": "📋 Черга"}],
+                              [{"text": "📤 Опубліковані"}]],
                  "is_persistent": True, "resize_keyboard": True}
 HELP = ("Кнопки внизу: 💡 Ідеї — нові ідеї, ✍️ Тексти — написати тред, 📣 Публікація — опублікувати, "
-        "📋 Черга — стан тем.\nСвоя тема — просто напишіть її звичайним повідомленням.")
+        "📋 Черга — стан тем, 📤 Опубліковані — треди в Threads зі статистикою.\n"
+        "Своя тема — просто напишіть її звичайним повідомленням.")
 ASK_AT = {"ideas": 9, "texts": 12}  # година за Києвом
 REPORT_AT = (6, 18)  # неділя, 18:00 за Києвом — тижневий звіт
 SLOT_GAP = timedelta(hours=4)  # мінімальний проміжок між публікаціями бота
@@ -349,19 +352,16 @@ class Bot:
         """Зведення тем за стадіями з кнопками дій."""
         stream_icon = {s: icon for s, (icon, _) in STREAMS.items()}
         items = self.state["approved_threads"]
-        analytics = load_json(ANALYTICS_FILE, {"posts": {}}).get("posts", {})
-        week_ago = datetime.now(timezone.utc) - timedelta(days=7)
         stages = [
             ("💡 Погоджені ідеї, тексту ще немає", "🗑", "drop", []),
             ("✍️ Тред пишеться", "🗑", "drop", []),
             ("👀 Чекає вашого погодження", "🗑", "drop", []),
             ("✅ Готові, без часу публікації", "🕒", "pub", []),
             ("🕒 Заплановано", "↩️", "unq", []),
-            ("📤 Опубліковано за 7 днів", None, None, []),
         ]
         for idea in self.ideas.values():
             thread = idea.get("thread", {}).get("status", "none")
-            if idea.get("test") or idea.get("status") not in ("approved",) and thread != "posted":
+            if idea.get("test") or idea.get("status") != "approved" or thread == "posted":
                 continue
             item = items.get(idea["id"], {})
             if thread == "none":
@@ -374,9 +374,6 @@ class Bot:
                 stages[3][3].append((idea, ""))
             elif thread == "scheduled" and item.get("publish_at") not in (None, "pending"):
                 stages[4][3].append((idea, fmt_slot(parse_time(item["publish_at"]))))
-            elif thread == "posted" and item.get("posted_at") and parse_time(item["posted_at"]) > week_ago:
-                views = (analytics.get((item.get("posted_ids") or [""])[0], {}).get("latest") or {}).get("views")
-                stages[5][3].append((idea, f"{views} переглядів" if views is not None else ""))
         stages[4][3].sort(key=lambda x: parse_time(items[x[0]["id"]]["publish_at"]))
         lines, buttons, n = ["📋 Стан тем"], [], 0
         for title, icon, action, rows in stages:
@@ -393,6 +390,24 @@ class Bot:
             self.send("📋 Погоджених тем немає. Нові ідеї — 💡 Ідеї.")
             return
         lines.append("\nНатисніть номер теми, щоб побачити, що з нею можна зробити.")
+        self.send("\n".join(lines), kb(*chunks(buttons, 5)), {"kind": "menu"})
+
+    def show_published(self) -> None:
+        analytics = load_json(ANALYTICS_FILE, {"posts": {}}).get("posts", {})
+        posted = [(parse_time(item["posted_at"]), idea_id, item) for idea_id, item in self.state["approved_threads"].items()
+                  if item.get("posted") and item.get("posted_at")]
+        if not posted:
+            self.send("📤 Через бота ще нічого не опубліковано.")
+            return
+        stream_icon = {s: icon for s, (icon, _) in STREAMS.items()}
+        lines, buttons = ["📤 Опубліковані треди (нові вгорі):"], []
+        for n, (moment, idea_id, item) in enumerate(sorted(posted, reverse=True)[:20], 1):
+            idea = self.ideas.get(idea_id, {"title": idea_id})
+            latest = analytics.get((item.get("posted_ids") or [""])[0], {}).get("latest") or {}
+            views = f" — 👁 {latest['views']}" if latest.get("views") is not None else ""
+            lines.append(f"{stream_icon.get(idea.get('stream'), '•')} {n}. {fmt_slot(moment)} · {idea['title']}{views}")
+            buttons.append((str(n), f"item:{idea_id}"))
+        lines.append("\nНатисніть номер, щоб побачити статистику й посилання.")
         self.send("\n".join(lines), kb(*chunks(buttons, 5)), {"kind": "menu"})
 
     def show_item(self, idea: dict) -> None:
@@ -783,6 +798,8 @@ class Bot:
             return self.menu_publish()
         if command == "/queue":
             return self.show_queue()
+        if command == "/published":
+            return self.show_published()
         if command in ("/start", "/help"):
             return self.send(HELP, MAIN_KEYBOARD)
         if command:
@@ -1078,9 +1095,10 @@ class Bot:
             {"command": "texts", "description": "Написати тред"},
             {"command": "publish", "description": "Публікація"},
             {"command": "queue", "description": "Стан тем"},
+            {"command": "published", "description": "Опубліковані треди"},
             {"command": "help", "description": "Довідка"},
         ])
-        self.send("Меню тепер унизу чату 👇\n" + HELP, MAIN_KEYBOARD)
+        self.send("Меню оновлено 👇\n" + HELP, MAIN_KEYBOARD)
         self.state["menu_version"] = MENU_VERSION
 
     def collect_updates(self) -> list[dict]:
