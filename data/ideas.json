@@ -446,11 +446,35 @@
         {
           "at": "2026-09-30T19:12:55+00:00",
           "event": "photo search requested in telegram"
+        },
+        {
+          "at": "2026-09-30T19:40:00+00:00",
+          "event": "photos found"
         }
       ],
       "stream": "big",
-      "photo_request": true,
-      "photo_requested_at": "2026-09-30T19:12:55+00:00"
+      "photo_request": false,
+      "photo_requested_at": "2026-09-30T19:12:55+00:00",
+      "images": [
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Abandoned_family_memories_and_household_items_in_Popasne_Dnipropetrovsk_Oblast_Ukraine_by_baby-bear.org_05.jpg/1280px-Abandoned_family_memories_and_household_items_in_Popasne_Dnipropetrovsk_Oblast_Ukraine_by_baby-bear.org_05.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Abandoned_family_memories_and_household_items_in_Popasne_Dnipropetrovsk_Oblast_Ukraine_by_baby-bear.org_05.jpg",
+          "credit": "Natalka Ukraine (baby-bear.org) / Wikimedia Commons, CC BY 4.0",
+          "license": "CC BY 4.0"
+        },
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Abandoned_family_memories_and_household_items_in_Popasne_Dnipropetrovsk_Oblast_Ukraine_by_baby-bear.org_01.jpg/1280px-Abandoned_family_memories_and_household_items_in_Popasne_Dnipropetrovsk_Oblast_Ukraine_by_baby-bear.org_01.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Abandoned_family_memories_and_household_items_in_Popasne_Dnipropetrovsk_Oblast_Ukraine_by_baby-bear.org_01.jpg",
+          "credit": "Natalka Ukraine (baby-bear.org) / Wikimedia Commons, CC BY 4.0",
+          "license": "CC BY 4.0"
+        },
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/%D0%9C%D0%B5%D1%82%D1%80%D0%B8%D1%87%D0%BD%D0%B0_%D0%BA%D0%BD%D0%B8%D0%B3%D0%B0_%D1%81._%D0%9C%D0%BE%D1%80%D0%B8%D0%BD%D0%B5%D1%86%D1%8C_%D0%97%D0%B2%D0%B5%D0%BD%D0%B8%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D1%81%D1%8C%D0%BA%D0%BE%D0%B3%D0%BE_%D0%BF%D0%BE%D0%B2%D1%96%D1%82%D1%83.pdf/page1-1280px-%D0%9C%D0%B5%D1%82%D1%80%D0%B8%D1%87%D0%BD%D0%B0_%D0%BA%D0%BD%D0%B8%D0%B3%D0%B0_%D1%81._%D0%9C%D0%BE%D1%80%D0%B8%D0%BD%D0%B5%D1%86%D1%8C_%D0%97%D0%B2%D0%B5%D0%BD%D0%B8%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D1%81%D1%8C%D0%BA%D0%BE%D0%B3%D0%BE_%D0%BF%D0%BE%D0%B2%D1%96%D1%82%D1%83.pdf.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:%D0%9C%D0%B5%D1%82%D1%80%D0%B8%D1%87%D0%BD%D0%B0_%D0%BA%D0%BD%D0%B8%D0%B3%D0%B0_%D1%81._%D0%9C%D0%BE%D1%80%D0%B8%D0%BD%D0%B5%D1%86%D1%8C_%D0%97%D0%B2%D0%B5%D0%BD%D0%B8%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D1%81%D1%8C%D0%BA%D0%BE%D0%B3%D0%BE_%D0%BF%D0%BE%D0%B2%D1%96%D1%82%D1%83.pdf",
+          "credit": "Київська духовна консисторія / Wikimedia Commons, Public domain",
+          "license": "Public domain"
+        }
+      ]
     },
     {
       "id": "2026-09-29-09",
