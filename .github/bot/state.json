@@ -107,6 +107,9 @@
     },
     "31": {
       "kind": "nav"
+    },
+    "33": {
+      "kind": "ask"
     }
   },
   "approved_threads": {
@@ -129,8 +132,9 @@
     }
   },
   "asked": {
-    "ideas": "2026-09-29",
+    "ideas": "2026-09-30",
     "texts": "2026-09-29",
     "publish": "2026-09-29"
-  }
+  },
+  "menu_version": 1
 }
