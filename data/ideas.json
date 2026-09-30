@@ -883,7 +883,7 @@
         "https://uk.wikipedia.org/wiki/Метрична_книга"
       ],
       "images": [],
-      "status": "proposed",
+      "status": "rejected",
       "thread": {
         "status": "none",
         "file": null
@@ -901,6 +901,10 @@
         {
           "at": "2026-09-30T07:52:50+00:00",
           "event": "proposed by ideas routine"
+        },
+        {
+          "at": "2026-09-30T07:56:22+00:00",
+          "event": "idea rejected in telegram"
         }
       ]
     },
