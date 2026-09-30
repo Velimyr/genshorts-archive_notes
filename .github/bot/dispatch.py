@@ -446,7 +446,7 @@ class Bot:
                          + (f"\n{idea['thread'].get('permalink')}" if idea["thread"].get("permalink") else ""))
         if thread in ("ready", "approved", "queued", "scheduled"):
             count = len(idea.get("images", []))
-            rows.append([(f"🔄 Знайти інші фото (зараз {count})", f"photos:{iid}:more") if count
+            rows.append([(f"🔄 Інші фото ({count})", f"photos:{iid}:more") if count
                          else ("🖼 Знайти фото", f"photos:{iid}"),
                          ("🔎 Фото за словами", f"photokw:{iid}")])
         if thread not in ("posted", "cancelled") and idea.get("status") != "cancelled":
@@ -791,8 +791,9 @@ class Bot:
         elif action == "photokw":
             idea = self.ideas.get(parts[1])
             if idea:
-                self.send(f"🔎 Напишіть ключові слова для пошуку фото до «{idea['title']}» — "
-                          "відповіддю на це повідомлення (напр. «метрична книга 1850 Київська губернія»).",
+                self.state["awaiting"] = {"kind": "photokw", "idea": idea["id"], "at": now()}
+                self.send(f"🔎 Напишіть наступним повідомленням ключові слова для пошуку фото до «{idea['title']}» "
+                          "(напр. «метрична книга 1850 Київська губернія»).",
                           None, {"kind": "photokw", "idea": idea["id"]})
         elif action == "move":
             idea = self.ideas.get(parts[1])
@@ -834,6 +835,8 @@ class Bot:
         text = (msg.get("text") or "").strip()
         text = MENU_BUTTONS.get(text, text)
         command = text.split()[0].split("@")[0] if text.startswith("/") else ""
+        if command:
+            self.state.pop("awaiting", None)
         if command == "/ideas":
             return self.ask_ideas()
         if command in ("/texts", "/text"):
@@ -867,6 +870,12 @@ class Bot:
                 self.close_buttons(reply_id, f"🏷 Тему змінено на «{topic}»")
                 self.send_preview(idea, record["text"], topic)
             return
+        awaiting = self.state.pop("awaiting", None)
+        if text and not reply_id and awaiting and \
+                datetime.now(timezone.utc) - parse_time(awaiting["at"]) < timedelta(minutes=30):
+            idea = self.ideas.get(awaiting.get("idea"))
+            if awaiting.get("kind") == "photokw" and idea:
+                return self.request_photos(idea, keywords=text[:200])
         if text and not reply_id:
             return self.propose_topic(text)
         if not text or not record or record.get("kind") != "thread":
@@ -1141,8 +1150,8 @@ class Bot:
             rows = []
             if idea.get("images") and status in ("approved", "queued", "scheduled"):
                 rows.append([(label, f"pub:{idea['id']}")])
-            rows.append([("🔄 Знайти інші фото", f"photos:{idea['id']}:more"), ("🔎 Фото за словами", f"photokw:{idea['id']}")])
-            text += "\n↩️ Або відповідайте на це повідомлення ключовими словами для нового пошуку."
+            rows.append([("🔄 Інші фото", f"photos:{idea['id']}:more"), ("🔎 Фото за словами", f"photokw:{idea['id']}")])
+            text += "\n🔎 «Фото за словами» — шукати за вашими ключовими словами."
             self.state["sent"][key] = self.send(text, kb(*rows), {"kind": "photos", "idea": idea["id"]})
 
     def scheduled_prompts(self):
