@@ -444,6 +444,9 @@ class Bot:
             lines.append(f"📤 Опубліковано{(' ' + fmt_slot(parse_time(item['posted_at']))) if item.get('posted_at') else ''}."
                          + (f"\n{stats}" if stats else "")
                          + (f"\n{idea['thread'].get('permalink')}" if idea["thread"].get("permalink") else ""))
+        if thread in ("ready", "approved", "queued", "scheduled"):
+            count = len(idea.get("images", []))
+            rows.append([(f"🖼 Знайти фото{f' (зараз {count})' if count else ''}", f"photos:{iid}")])
         if thread not in ("posted", "cancelled") and idea.get("status") != "cancelled":
             rows.append([("🗑 Скасувати тему", f"drop:{iid}")])
         self.send("\n".join(lines), kb(*rows) if rows else None, {"kind": "item", "idea": iid})
@@ -523,7 +526,7 @@ class Bot:
         if topic:
             rows = [[(f"🕒 Запланувати з фото {n}", f"confirm:{idea['id']}:{digest}:{n}")] for n in photos]
             rows.append([("🕒 Запланувати без фото", f"confirm:{idea['id']}:{digest}:0")])
-        rows.append([("❌ Скасувати", "cancel")])
+        rows.append([("🖼 Знайти фото", f"photos:{idea['id']}"), ("❌ Скасувати", "cancel")])
         self.send(f"{stream_label(idea.get('stream'))} · фінальна перевірка — «{idea['title']}»\n\n{body}"
                   f"\n\nℹ️ Блок «Джерела» в Threads не публікується.{photo_line}\n{topic_line}\n"
                   "🕒 Після вибору фото тред автоматично стане на найближчу вільну рекомендовану годину.\n"
@@ -762,6 +765,14 @@ class Bot:
             idea = self.ideas.get(parts[1])
             if idea:
                 self.show_item(idea)
+        elif action == "photos":
+            idea = self.ideas.get(parts[1])
+            if idea and not idea.get("photo_request"):
+                idea["photo_request"] = True
+                idea["photo_requested_at"] = now()
+                history(idea, "photo search requested in telegram")
+                self.fire.setdefault("texts", set()).add(idea["id"])
+                self.send(f"🔎 Шукаю фото для «{idea['title']}» — надішлю, щойно знайду.")
         elif action == "move":
             idea = self.ideas.get(parts[1])
             if idea:
@@ -1085,6 +1096,27 @@ class Bot:
                 moments.append(slot - REMIND_BEFORE)
         return int(min(moments).timestamp()) if moments else 0
 
+    def send_photo_results(self) -> None:
+        """Повідомляє про завершений пошук фото, запитаний кнопкою."""
+        for idea in self.ideas.values():
+            requested = idea.get("photo_requested_at")
+            if not requested or idea.get("photo_request"):
+                continue
+            key = f"photos:{idea['id']}:{requested}"
+            if key in self.state["sent"]:
+                continue
+            if idea.get("images"):
+                photos = self.show_photos(idea)
+                text = (f"🖼 Для «{idea['title']}» знайдено фото: {', '.join(map(str, photos))} (вище). "
+                        "Обрати можна на фінальній перевірці." if photos else
+                        f"🖼 Для «{idea['title']}» знайшлися фото, але Telegram не зміг їх відкрити — Threads теж не зможе.")
+            else:
+                text = f"🖼 Для «{idea['title']}» доречних фото з відкритою ліцензією не знайшлося."
+            status = idea.get("thread", {}).get("status")
+            label = "🖼 Обрати фото" if status == "scheduled" else "🕒 Обрати фото й запланувати"
+            markup = kb([(label, f"pub:{idea['id']}")]) if idea.get("images") and status in ("approved", "queued", "scheduled") else None
+            self.state["sent"][key] = self.send(text, markup, {"kind": "nav"} if markup else None)
+
     def scheduled_prompts(self):
         local = datetime.now(KYIV)
         today = local.date().isoformat()
@@ -1147,6 +1179,7 @@ class Bot:
         self.send_new_ideas()
         self.send_ready_threads()
         self.send_reports()
+        self.send_photo_results()
         self.token_reminder()
         self.scheduled_prompts()
         self.slot_reminders()
