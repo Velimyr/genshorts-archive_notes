@@ -698,7 +698,7 @@
       ],
       "status": "approved",
       "thread": {
-        "status": "ready",
+        "status": "revise",
         "file": "data/texts/2026-09-29-12/thread.md"
       },
       "script": {
@@ -709,7 +709,13 @@
         "status": "none",
         "telegram_message_id": null
       },
-      "revisions": [],
+      "revisions": [
+        {
+          "kind": "thread",
+          "text": "Без згадок про Пушкіна і чічікова менше літератури більше генеалогії",
+          "at": "2026-09-30T20:07:36+00:00"
+        }
+      ],
       "history": [
         {
           "at": "2026-09-29T22:00:00+00:00",
@@ -726,6 +732,10 @@
         {
           "at": "2026-09-30T20:05:25+00:00",
           "event": "thread ready"
+        },
+        {
+          "at": "2026-09-30T20:07:36+00:00",
+          "event": "thread revision requested"
         }
       ]
     },
