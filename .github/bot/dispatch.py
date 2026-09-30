@@ -388,13 +388,48 @@ class Bot:
                 label = f"{extra} — " if extra and action == "unq" else ""
                 suffix = f" — {extra}" if extra and action != "unq" else ""
                 lines.append(f"{stream_icon.get(idea.get('stream'), '•')} {n}. {label}{idea['title']}{suffix}")
-                if action:
-                    buttons.append((f"{icon} {n}", f"{action}:{idea['id']}"))
+                buttons.append((str(n), f"item:{idea['id']}"))
         if n == 0:
             self.send("📋 Погоджених тем немає. Нові ідеї — 💡 Ідеї.")
             return
-        lines.append("\n🗑 N — скасувати тему · 🕒 N — запланувати · ↩️ N — зняти з розкладу")
+        lines.append("\nНатисніть номер теми, щоб побачити, що з нею можна зробити.")
         self.send("\n".join(lines), kb(*chunks(buttons, 5)), {"kind": "menu"})
+
+    def show_item(self, idea: dict) -> None:
+        """Картка теми з діями, доречними на її стадії."""
+        thread = idea.get("thread", {}).get("status", "none")
+        item = self.state["approved_threads"].get(idea["id"], {})
+        iid = idea["id"]
+        lines = [f"{stream_label(idea.get('stream'))}\n«{idea['title']}»"]
+        rows = []
+        if idea.get("status") == "cancelled" or thread == "cancelled":
+            lines.append("🗑 Тему скасовано.")
+        elif thread == "none":
+            lines.append("💡 Ідея погоджена, треду ще немає.")
+            rows = [[("✍️ Написати тред", f"write:{iid}")]]
+        elif thread in ("requested", "revise"):
+            lines.append("✍️ Тред пишеться — прийде за кілька хвилин.")
+        elif thread == "ready":
+            lines.append("👀 Тред написано, чекає вашого погодження.")
+            rows = [[("👀 Показати тред", f"show:{iid}")]]
+        elif thread == "approved" or (thread == "queued" and item.get("publish_at") == "pending"):
+            lines.append("✅ Тред готовий, час публікації не обрано.")
+            rows = [[("🕒 Запланувати", f"pub:{iid}")]]
+        elif thread == "scheduled" and item.get("publish_at") not in (None, "pending"):
+            lines.append(f"🕒 Заплановано на {fmt_slot(parse_time(item['publish_at']))}.")
+            rows = [[("⚡ Опублікувати зараз", f"when:{iid}:now")],
+                    [("🕒 Інший час", f"askwhen:{iid}"), ("↩️ Зняти з розкладу", f"unq:{iid}")]]
+        elif thread == "posted":
+            analytics = load_json(ANALYTICS_FILE, {"posts": {}}).get("posts", {})
+            latest = (analytics.get((item.get("posted_ids") or [""])[0], {}).get("latest") or {})
+            names = {"views": "👁 перегляди", "likes": "❤️ лайки", "replies": "💬 відповіді", "reposts": "🔁 репости"}
+            stats = " · ".join(f"{names[k]} {latest[k]}" for k in names if latest.get(k) is not None)
+            lines.append(f"📤 Опубліковано{(' ' + fmt_slot(parse_time(item['posted_at']))) if item.get('posted_at') else ''}."
+                         + (f"\n{stats}" if stats else "")
+                         + (f"\n{idea['thread'].get('permalink')}" if idea["thread"].get("permalink") else ""))
+        if thread not in ("posted", "cancelled") and idea.get("status") != "cancelled":
+            rows.append([("🗑 Скасувати тему", f"drop:{iid}")])
+        self.send("\n".join(lines), kb(*rows) if rows else None, {"kind": "item", "idea": iid})
 
     def request_ideas(self, stream: str):
         pending = [r for r in self.requests["ideas"] if r.get("status") == "pending"]
@@ -652,6 +687,15 @@ class Bot:
             history(idea, "thread unscheduled")
             self.close_buttons(mid, "↩️ Знято з черги")
             self.send(f"↩️ «{idea['title']}» знято з розкладу — тред серед готових без часу (📣 Публікація).")
+        elif action == "item":
+            idea = self.ideas.get(parts[1])
+            if idea:
+                self.show_item(idea)
+        elif action == "show":
+            idea = self.ideas.get(parts[1])
+            body = self.thread_text(idea) if idea else None
+            if body and idea.get("thread", {}).get("status") in ("ready", "revise"):
+                self.send_thread(idea, body)
         elif action == "own":
             self.close_buttons(mid, f"✅ {stream_label(parts[2])}")
             self.create_own_idea(parts[1], parts[2])
@@ -665,7 +709,8 @@ class Bot:
             idea = self.ideas.get(parts[1])
             if not idea:
                 return
-            if idea.get("thread", {}).get("status") == "posted":
+            if idea.get("thread", {}).get("status") == "posted" or \
+                    self.state["approved_threads"].get(idea["id"], {}).get("posted_ids"):
                 self.close_buttons(mid, "Вже опубліковано")
                 return
             idea["status"] = "cancelled"
@@ -750,14 +795,16 @@ class Bot:
             key = f"thread:{idea['id']}:{digest}"
             if key in self.state["sent"]:
                 continue
-            marks = unverified(body)
-            warning = f"\n\n⚠️ Є позначки [ПЕРЕВІРИТИ] ({marks}). {UNVERIFIED_HINT}" if marks else ""
-            mid = self.send(
-                f"{stream_label(idea.get('stream'))} · тред — «{idea['title']}»\n\n{body}{warning}\n\n"
-                "↩️ Правки — відповіддю на це повідомлення.",
-                kb([("✅ Готово", f"done:{idea['id']}"), ("🗑 Скасувати тему", f"drop:{idea['id']}")]),
-                {"kind": "thread", "idea": idea["id"], "sha": digest})
-            self.state["sent"][key] = mid
+            self.state["sent"][key] = self.send_thread(idea, body)
+
+    def send_thread(self, idea: dict, body: str) -> int:
+        marks = unverified(body)
+        warning = f"\n\n⚠️ Є позначки [ПЕРЕВІРИТИ] ({marks}). {UNVERIFIED_HINT}" if marks else ""
+        return self.send(
+            f"{stream_label(idea.get('stream'))} · тред — «{idea['title']}»\n\n{body}{warning}\n\n"
+            "↩️ Правки — відповіддю на це повідомлення.",
+            kb([("✅ Готово", f"done:{idea['id']}"), ("🗑 Скасувати тему", f"drop:{idea['id']}")]),
+            {"kind": "thread", "idea": idea["id"], "sha": sha(body)})
 
     def publish_queued(self):
         """Публікує один тред за запуск; прогрес зберігає після кожного поста."""
