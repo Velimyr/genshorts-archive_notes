@@ -1130,7 +1130,7 @@
       "images": [],
       "status": "approved",
       "thread": {
-        "status": "none",
+        "status": "requested",
         "file": null
       },
       "script": {
@@ -1150,6 +1150,10 @@
         {
           "at": "2026-09-30T07:55:40+00:00",
           "event": "idea approved in telegram"
+        },
+        {
+          "at": "2026-09-30T14:30:20+00:00",
+          "event": "thread requested in telegram"
         }
       ]
     },
