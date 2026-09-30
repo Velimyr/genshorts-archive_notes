@@ -64,7 +64,9 @@ curl -s "https://commons.wikimedia.org/w/api.php?action=query&format=json&genera
 
 Шукай кількома запитами (українською, англійською, польською чи російською назвою
 документа, місця, архіву). З відповіді бери:
-- `url` — `imageinfo[0].thumburl` (мініатюра 1280 px), лише `image/jpeg` або `image/png`;
+- `url` — `imageinfo[0].thumburl` (мініатюра 1280 px), якщо вона закінчується на `.jpg`,
+  `.jpeg` або `.png`. Підходять і PDF/DjVu-скани архівних справ (на Commons їх багато
+  викладають ДАЗО, ЦДІАК та інші архіви) — Commons віддає їхню сторінку як JPG-мініатюру;
 - `page` — `imageinfo[0].descriptionurl`;
 - `license` — `extmetadata.LicenseShortName.value`;
 - `credit` — коротко: автор з `extmetadata.Artist.value` (без HTML) + `/ Wikimedia Commons, <ліцензія>`.
