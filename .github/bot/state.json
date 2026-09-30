@@ -124,6 +124,9 @@
       "kind": "thread",
       "idea": "2026-09-30-a01",
       "sha": "c010dd4362c2bd01"
+    },
+    "40": {
+      "kind": "menu"
     }
   },
   "approved_threads": {
@@ -153,6 +156,7 @@
   "menu_version": 1,
   "proposals": {},
   "processed": [
-    928736941
+    928736941,
+    928736942
   ]
 }
