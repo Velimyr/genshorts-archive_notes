@@ -446,10 +446,28 @@ class Bot:
                          + (f"\n{idea['thread'].get('permalink')}" if idea["thread"].get("permalink") else ""))
         if thread in ("ready", "approved", "queued", "scheduled"):
             count = len(idea.get("images", []))
-            rows.append([(f"🖼 Знайти фото{f' (зараз {count})' if count else ''}", f"photos:{iid}")])
+            rows.append([(f"🔄 Знайти інші фото (зараз {count})", f"photos:{iid}:more") if count
+                         else ("🖼 Знайти фото", f"photos:{iid}"),
+                         ("🔎 Фото за словами", f"photokw:{iid}")])
         if thread not in ("posted", "cancelled") and idea.get("status") != "cancelled":
             rows.append([("🗑 Скасувати тему", f"drop:{iid}")])
         self.send("\n".join(lines), kb(*rows) if rows else None, {"kind": "item", "idea": iid})
+
+    def request_photos(self, idea: dict, more: bool = False, keywords: str = "") -> None:
+        """Запит на пошук фото; «інші» й пошук за словами виключають уже показані фото."""
+        if idea.get("photo_request"):
+            self.send(f"🔎 Фото для «{idea['title']}» вже шукаються — надішлю, щойно знайду.")
+            return
+        if more or keywords:
+            excluded = idea.setdefault("images_excluded", [])
+            excluded += [i.get("url") for i in idea.get("images", []) if i.get("url") and i.get("url") not in excluded]
+        idea["photo_request"] = True
+        idea["photo_keywords"] = keywords
+        idea["photo_requested_at"] = now()
+        history(idea, f"photo search requested in telegram{': ' + keywords if keywords else ' (more)' if more else ''}")
+        self.fire.setdefault("texts", set()).add(idea["id"])
+        what = f" за словами «{keywords}»" if keywords else (" (інші)" if more else "")
+        self.send(f"🔎 Шукаю фото{what} для «{idea['title']}» — надішлю, щойно знайду.")
 
     def rule_warning(self, idea_id: str, moment: datetime) -> str:
         """Порожній рядок, якщо слот відповідає правилам розкладу, інакше — попередження."""
@@ -525,7 +543,9 @@ class Bot:
         if topic:
             rows = [[(f"🕒 Запланувати з фото {n}", f"confirm:{idea['id']}:{digest}:{n}")] for n in photos]
             rows.append([("🕒 Запланувати без фото", f"confirm:{idea['id']}:{digest}:0")])
-        rows.append([("🖼 Знайти фото", f"photos:{idea['id']}"), ("❌ Скасувати", "cancel")])
+        rows.append([("🔄 Інші фото", f"photos:{idea['id']}:more") if photos else ("🖼 Знайти фото", f"photos:{idea['id']}"),
+                     ("🔎 Фото за словами", f"photokw:{idea['id']}")])
+        rows.append([("❌ Скасувати", "cancel")])
         self.send(f"{stream_label(idea.get('stream'))} · фінальна перевірка — «{idea['title']}»\n\n{body}"
                   f"\n\nℹ️ Блок «Джерела» в Threads не публікується.{photo_line}\n{topic_line}\n"
                   "🕒 Після вибору фото тред автоматично стане на найближчу вільну рекомендовану годину.\n"
@@ -766,12 +786,14 @@ class Bot:
                 self.show_item(idea)
         elif action == "photos":
             idea = self.ideas.get(parts[1])
-            if idea and not idea.get("photo_request"):
-                idea["photo_request"] = True
-                idea["photo_requested_at"] = now()
-                history(idea, "photo search requested in telegram")
-                self.fire.setdefault("texts", set()).add(idea["id"])
-                self.send(f"🔎 Шукаю фото для «{idea['title']}» — надішлю, щойно знайду.")
+            if idea:
+                self.request_photos(idea, more=len(parts) > 2 and parts[2] == "more")
+        elif action == "photokw":
+            idea = self.ideas.get(parts[1])
+            if idea:
+                self.send(f"🔎 Напишіть ключові слова для пошуку фото до «{idea['title']}» — "
+                          "відповіддю на це повідомлення (напр. «метрична книга 1850 Київська губернія»).",
+                          None, {"kind": "photokw", "idea": idea["id"]})
         elif action == "move":
             idea = self.ideas.get(parts[1])
             if idea:
@@ -829,6 +851,11 @@ class Bot:
 
         reply_id = (msg.get("reply_to_message") or {}).get("message_id")
         record = self.state["messages"].get(str(reply_id)) if reply_id else None
+        if text and record and record.get("kind") in ("photos", "photokw"):
+            idea = self.ideas.get(record["idea"])
+            if idea:
+                self.request_photos(idea, keywords=text[:200])
+            return
         if text and record and record.get("kind") == "preview":
             topic = text.lstrip("#").strip()
             if not (1 <= len(topic) <= 50) or "." in topic or "&" in topic:
@@ -1111,8 +1138,12 @@ class Bot:
                 text = f"🖼 Для «{idea['title']}» доречних фото з відкритою ліцензією не знайшлося."
             status = idea.get("thread", {}).get("status")
             label = "🖼 Обрати фото" if status == "scheduled" else "🕒 Обрати фото й запланувати"
-            markup = kb([(label, f"pub:{idea['id']}")]) if idea.get("images") and status in ("approved", "queued", "scheduled") else None
-            self.state["sent"][key] = self.send(text, markup, {"kind": "nav"} if markup else None)
+            rows = []
+            if idea.get("images") and status in ("approved", "queued", "scheduled"):
+                rows.append([(label, f"pub:{idea['id']}")])
+            rows.append([("🔄 Знайти інші фото", f"photos:{idea['id']}:more"), ("🔎 Фото за словами", f"photokw:{idea['id']}")])
+            text += "\n↩️ Або відповідайте на це повідомлення ключовими словами для нового пошуку."
+            self.state["sent"][key] = self.send(text, kb(*rows), {"kind": "photos", "idea": idea["id"]})
 
     def scheduled_prompts(self):
         local = datetime.now(KYIV)
