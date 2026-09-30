@@ -25,7 +25,11 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 15
     steps:
+      # Саме гілка main, а не коміт на момент натискання: запуски стоять у черзі,
+      # і кожен має починати з результату попереднього.
       - uses: actions/checkout@v4
+        with:
+          ref: main
 
       - name: Exchange with Telegram
         env:
