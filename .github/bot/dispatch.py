@@ -1186,6 +1186,12 @@ class Bot:
             key = f"photos:{idea['id']}:{requested}"
             if key in self.state["sent"]:
                 continue
+            if idea.get("photo_error"):
+                self.state["sent"][key] = self.send(
+                    f"⚠️ Пошук фото для «{idea['title']}» не вдався: {idea['photo_error']}",
+                    kb([("🔄 Спробувати ще", f"photos:{idea['id']}"), ("🔎 Фото за словами", f"photokw:{idea['id']}")]),
+                    {"kind": "photos", "idea": idea["id"]})
+                continue
             if idea.get("images"):
                 photos = self.show_photos(idea)
                 text = (f"🖼 Для «{idea['title']}» знайдено фото: {', '.join(map(str, photos))} (вище). "
@@ -1211,11 +1217,26 @@ class Bot:
             "ideas": {r["stream"] for r in self.requests.get("ideas", []) if r.get("status") == "pending"},
         }
         current = datetime.now(timezone.utc)
+        revives = self.state.setdefault("revive_count", {})
+        names = {"texts": "Тексти", "ideas": "Ідеї"}
         for name, ids in pending.items():
+            if not ids:
+                revives.pop(name, None)
+                continue
             last = fired.get(name)
-            if ids and name not in self.fire and (not last or current - parse_time(last) > STALE_AFTER):
-                self.fire.setdefault(name, set()).update(ids)
-                print(f"[revive] {name}: {sorted(ids)}")
+            if name in self.fire or (last and current - parse_time(last) <= STALE_AFTER):
+                continue
+            revives[name] = revives.get(name, 0) + 1
+            what = ", ".join(f"«{self.ideas[i]['title']}»" for i in sorted(ids) if i in self.ideas) or "запит ідей"
+            if revives[name] > 3:
+                if revives[name] == 4:
+                    self.send(f"⚠️ Задача «{names[name]}» тричі не завершила роботу ({what}). "
+                              "Більше не перезапускаю автоматично — напишіть мені, розберемося.")
+                continue
+            self.fire.setdefault(name, set()).update(ids)
+            print(f"[revive] {name}: {sorted(ids)}")
+            self.send(f"⏳ Задача «{names[name]}» не завершила роботу ({what}) — перезапускаю "
+                      f"(спроба {revives[name]} з 3).")
         for name in self.fire:
             fired[name] = now()
 
@@ -1322,7 +1343,12 @@ def fire_pending() -> int:
                 error = f"не вдалося запустити задачу «{name}»: {exc}"
                 time.sleep(5 * (attempt + 1))
         if error:
-            print(f"[routine] {error}")  # незавершену роботу перезапустить самовідновлення
+            print(f"[routine] {error}")
+            try:
+                tg("sendMessage", chat_id=CHAT_ID,
+                   text=f"⚠️ {error[0].upper() + error[1:]}. Повторю автоматично приблизно за 30 хвилин.")
+            except SystemExit:
+                pass
     return 0
 
 

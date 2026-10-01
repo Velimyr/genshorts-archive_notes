@@ -56,27 +56,37 @@
 Для **кожної** ідеї підбери **до 3 фото** (поле `images`): скан документа, сторінка
 метричної книги, мапа, фото архіву чи місцевості, портрет історичної особи.
 
-**Як шукати (обов'язково для кожної ідеї):** API Wikimedia Commons, наприклад
+**Як шукати (обов'язково для кожної ідеї).** Два джерела по черзі; до наступного
+переходь, якщо в попередньому немає доречних фото:
 
-```bash
-curl -s "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrnamespace=6&gsrlimit=8&gsrsearch=<ключові+слова>&prop=imageinfo&iiprop=url|extmetadata|mime&iiurlwidth=1280"
-```
+1. **Wikimedia Commons API**:
+   ```bash
+   curl -s "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrnamespace=6&gsrlimit=8&gsrsearch=<ключові+слова>&prop=imageinfo&iiprop=url|extmetadata|mime&iiurlwidth=1280"
+   ```
+   - `url` — `imageinfo[0].thumburl` (мініатюра 1280 px), якщо вона закінчується на `.jpg`,
+     `.jpeg` або `.png`. Підходять і PDF/DjVu-скани архівних справ (на Commons їх багато
+     викладають ДАЗО, ЦДІАК та інші архіви) — Commons віддає їхню сторінку як JPG-мініатюру;
+   - `page` — `imageinfo[0].descriptionurl`;
+   - `license` — `extmetadata.LicenseShortName.value`;
+   - `credit` — коротко: автор з `extmetadata.Artist.value` (без HTML) + `/ Wikimedia Commons, <ліцензія>`.
+2. **Openverse API** (Flickr, музеї, бібліотеки, архіви):
+   ```bash
+   curl -s "https://api.openverse.org/v1/images/?q=<ключові+слова>&license=by,by-sa,cc0,pdm&page_size=10"
+   ```
+   - `url` — `results[].url` (JPEG/PNG; перевір, що відкривається);
+   - `page` — `results[].foreign_landing_url`;
+   - `license` — `results[].license` + `license_version`;
+   - `credit` — `results[].creator` + ` / <source>, <ліцензія>`.
 
 Шукай кількома запитами (українською, англійською, польською чи російською назвою
-документа, місця, архіву). З відповіді бери:
-- `url` — `imageinfo[0].thumburl` (мініатюра 1280 px), якщо вона закінчується на `.jpg`,
-  `.jpeg` або `.png`. Підходять і PDF/DjVu-скани архівних справ (на Commons їх багато
-  викладають ДАЗО, ЦДІАК та інші архіви) — Commons віддає їхню сторінку як JPG-мініатюру;
-- `page` — `imageinfo[0].descriptionurl`;
-- `license` — `extmetadata.LicenseShortName.value`;
-- `credit` — коротко: автор з `extmetadata.Artist.value` (без HTML) + `/ Wikimedia Commons, <ліцензія>`.
+документа, місця, архіву).
 
 Правила:
 - Лише **public domain, CC0, CC BY, CC BY-SA**. Файли з іншими ліцензіями пропускай.
 - Фото має справді стосуватися теми (не випадкова картинка за словом).
 - **Жодних згенерованих зображень**, стокових фото без ліцензії чи скріншотів чужих статей.
-- `"images": []` допустимо лише після реальної спроби пошуку, коли нічого доречного з
-  відкритою ліцензією немає. У підсумку вкажи, для яких ідей фото не знайшлося.
+- `"images": []` допустимо лише після реальної спроби пошуку в обох джерелах, коли нічого
+  доречного з відкритою ліцензією немає. У підсумку вкажи, для яких ідей фото не знайшлося.
 
 ## Формат запису
 ```json
