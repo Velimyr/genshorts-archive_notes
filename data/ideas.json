@@ -1764,6 +1764,37 @@
           "event": "idea rejected in telegram"
         }
       ]
+    },
+    {
+      "id": "2026-10-01-a01",
+      "proposed_at": "2026-10-01",
+      "stream": "fun",
+      "origin": "author",
+      "title": "Про випадкову знахідку архіву https://shotam.info/dyrektor-muzeiu-vypadkovo-zna…",
+      "summary": "Про випадкову знахідку архіву https://shotam.info/dyrektor-muzeiu-vypadkovo-znayshov-200-richnyy-rodynnyy-arkhiv-shcho-lezhav-na-horyshchi/",
+      "why_now": "",
+      "sources": [],
+      "images": [],
+      "status": "approved",
+      "thread": {
+        "status": "requested",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-10-01T19:09:51+00:00",
+          "event": "author topic from telegram; thread requested"
+        }
+      ]
     }
   ]
 }
