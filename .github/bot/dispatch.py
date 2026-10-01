@@ -68,6 +68,7 @@ THREADS_API = "https://graph.threads.net/v1.0"
 THREADS_POST_LIMIT = 500
 
 KYIV = ZoneInfo("Europe/Kyiv")
+DEFAULT_TAG = "Генеалогія"  # стандартна тема поста в Threads
 MENU_VERSION = 2
 MENU_BUTTONS = {"💡 Ідеї": "/ideas", "✍️ Тексти": "/texts", "📣 Публікація": "/publish", "📋 Черга": "/queue",
                 "📤 Опубліковані": "/published"}
@@ -539,21 +540,34 @@ class Bot:
     def send_preview(self, idea: dict, body: str, topic: str) -> None:
         digest = sha(body)
         photos = self.show_photos(idea)
-        topic_line = (f"🏷 Тема: {topic}" if topic else "🏷 Тема не задана — без неї публікація недоступна.")
+        topic_line = (f"🏷 Тема поста: {topic}" if topic else "🏷 Тема поста не обрана — оберіть кнопкою нижче.")
         photo_line = (f"\n📷 Фото до першого поста: варіанти {', '.join(map(str, photos))} вище." if photos else "")
         rows = []
         if topic:
             rows = [[(f"🕒 Запланувати з фото {n}", f"confirm:{idea['id']}:{digest}:{n}")] for n in photos]
             rows.append([("🕒 Запланувати без фото", f"confirm:{idea['id']}:{digest}:0")])
+            rows.append([("🏷 Змінити тему", f"tagask:{idea['id']}")])
+        else:
+            rows.append([(f"🏷 {DEFAULT_TAG}", f"tag:{idea['id']}:std"), ("✏️ Своя тема", f"tag:{idea['id']}:own")])
         rows.append([("🔄 Інші фото", f"photos:{idea['id']}:more") if photos else ("🖼 Знайти фото", f"photos:{idea['id']}"),
                      ("🔎 Фото за словами", f"photokw:{idea['id']}")])
         rows.append([("❌ Скасувати", "cancel")])
         self.send(f"{stream_label(idea.get('stream'))} · фінальна перевірка — «{idea['title']}»\n\n{body}"
                   f"\n\nℹ️ Блок «Джерела» в Threads не публікується.{photo_line}\n{topic_line}\n"
-                  "🕒 Після вибору фото тред автоматично стане на найближчу вільну рекомендовану годину.\n"
-                  "↩️ Щоб задати чи змінити тему — відповідайте на це повідомлення її назвою (без #).",
+                  "🕒 Після вибору фото тред автоматично стане на найближчу вільну рекомендовану годину.",
                   kb(*rows),
                   {"kind": "preview", "idea": idea["id"], "sha": digest, "text": body, "topic": topic})
+
+    def apply_topic(self, idea: dict, topic: str) -> None:
+        topic = topic.lstrip("#").strip()
+        if not (1 <= len(topic) <= 50) or "." in topic or "&" in topic:
+            self.state["awaiting"] = {"kind": "tag", "idea": idea["id"], "at": now()}
+            self.send("⚠️ Тема має бути до 50 символів, без крапок і «&». Напишіть іншу.")
+            return
+        self.state["last_topic"] = topic
+        body = self.thread_text(idea)
+        if body and idea.get("thread", {}).get("status") in ("approved", "queued", "scheduled"):
+            self.send_preview(idea, body, topic)
 
     def propose_topic(self, text: str) -> None:
         pid = sha(text + now())[:8]
@@ -790,6 +804,23 @@ class Bot:
             idea = self.ideas.get(parts[1])
             if idea:
                 self.request_photos(idea, more=len(parts) > 2 and parts[2] == "more")
+        elif action == "tagask":
+            idea = self.ideas.get(parts[1])
+            if idea:
+                self.send(f"🏷 Тема поста для «{idea['title']}»:",
+                          kb([(f"🏷 {DEFAULT_TAG}", f"tag:{idea['id']}:std"), ("✏️ Своя тема", f"tag:{idea['id']}:own")]),
+                          {"kind": "tagask", "idea": idea["id"]})
+        elif action == "tag":
+            idea = self.ideas.get(parts[1])
+            if not idea:
+                return
+            if parts[2] == "std":
+                self.close_buttons(mid, f"🏷 {DEFAULT_TAG}")
+                self.apply_topic(idea, DEFAULT_TAG)
+            else:
+                self.close_buttons(mid, "✏️ Своя тема")
+                self.state["awaiting"] = {"kind": "tag", "idea": idea["id"], "at": now()}
+                self.send("✏️ Напишіть тему поста наступним повідомленням (до 50 символів, без # і крапок).")
         elif action == "photokw":
             idea = self.ideas.get(parts[1])
             if idea:
@@ -862,15 +893,10 @@ class Bot:
                 self.request_photos(idea, keywords=text[:200])
             return
         if text and record and record.get("kind") == "preview":
-            topic = text.lstrip("#").strip()
-            if not (1 <= len(topic) <= 50) or "." in topic or "&" in topic:
-                self.send("⚠️ Тема має бути до 50 символів, без крапок і «&».", reply_to=msg["message_id"])
-                return
             idea = self.ideas.get(record["idea"])
-            if idea and idea.get("thread", {}).get("status") == "approved":
-                self.state["last_topic"] = topic
-                self.close_buttons(reply_id, f"🏷 Тему змінено на «{topic}»")
-                self.send_preview(idea, record["text"], topic)
+            if idea:
+                self.close_buttons(reply_id, "🏷 Тему змінено")
+                self.apply_topic(idea, text)
             return
         awaiting = self.state.pop("awaiting", None)
         if text and not reply_id and awaiting and \
@@ -878,6 +904,8 @@ class Bot:
             idea = self.ideas.get(awaiting.get("idea"))
             if awaiting.get("kind") == "photokw" and idea:
                 return self.request_photos(idea, keywords=text[:200])
+            if awaiting.get("kind") == "tag" and idea:
+                return self.apply_topic(idea, text)
         if text and not reply_id:
             return self.propose_topic(text)
         if not text or not record or record.get("kind") != "thread":
