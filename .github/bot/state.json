@@ -657,6 +657,9 @@
     },
     "259": {
       "kind": "menu"
+    },
+    "261": {
+      "kind": "own"
     }
   },
   "approved_threads": {
@@ -788,6 +791,10 @@
     "4a746de4": {
       "text": "Родина, фото, дім",
       "at": "2026-09-30T19:31:21+00:00"
+    },
+    "37e515b8": {
+      "text": "Про випадкову знахідку архіву https://shotam.info/dyrektor-muzeiu-vypadkovo-znayshov-200-richnyy-rodynnyy-arkhiv-shcho-lezhav-na-horyshchi/",
+      "at": "2026-10-01T19:09:32+00:00"
     }
   },
   "processed": [
@@ -912,7 +919,8 @@
     928737059,
     928737060,
     928737061,
-    928737062
+    928737062,
+    928737063
   ],
   "analytics_at": "2026-10-01T19:01:25+00:00",
   "reminded_slots": [
