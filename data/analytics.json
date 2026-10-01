@@ -8,13 +8,13 @@
       "origin": "manual",
       "has_photo": false,
       "latest": {
-        "views": 5226,
-        "likes": 98,
+        "views": 5431,
+        "likes": 100,
         "replies": 34,
         "reposts": 4,
         "quotes": 2,
         "shares": 15,
-        "at": "2026-10-01T05:01:18+00:00"
+        "at": "2026-10-01T06:02:50+00:00"
       }
     },
     "18115539982812462": {
@@ -31,13 +31,13 @@
       "has_photo": false,
       "scheduled": false,
       "latest": {
-        "views": 2008,
+        "views": 2010,
         "likes": 42,
         "replies": 20,
         "reposts": 0,
         "quotes": 0,
         "shares": 0,
-        "at": "2026-10-01T05:01:18+00:00"
+        "at": "2026-10-01T06:02:50+00:00"
       },
       "h24": {
         "views": 2007,
@@ -62,7 +62,7 @@
         "reposts": 0,
         "quotes": 0,
         "shares": 0,
-        "at": "2026-10-01T05:01:18+00:00"
+        "at": "2026-10-01T06:02:50+00:00"
       },
       "h24": {
         "views": 571,
@@ -81,13 +81,13 @@
       "origin": "manual",
       "has_photo": true,
       "latest": {
-        "views": 188,
+        "views": 189,
         "likes": 5,
         "replies": 0,
         "reposts": 0,
         "quotes": 0,
         "shares": 0,
-        "at": "2026-10-01T05:01:19+00:00"
+        "at": "2026-10-01T06:02:50+00:00"
       },
       "h24": {
         "views": 169,
@@ -112,10 +112,18 @@
         "reposts": 0,
         "quotes": 0,
         "shares": 2,
-        "at": "2026-10-01T05:01:19+00:00"
+        "at": "2026-10-01T06:02:50+00:00"
       },
       "h24": {
         "views": 1136,
+        "likes": 28,
+        "replies": 13,
+        "reposts": 0,
+        "quotes": 0,
+        "shares": 2
+      },
+      "h72": {
+        "views": 1150,
         "likes": 28,
         "replies": 13,
         "reposts": 0,
@@ -137,7 +145,7 @@
         "reposts": 0,
         "quotes": 1,
         "shares": 0,
-        "at": "2026-10-01T05:01:19+00:00"
+        "at": "2026-10-01T06:02:51+00:00"
       },
       "h24": {
         "views": 1302,
@@ -170,7 +178,7 @@
         "reposts": 5,
         "quotes": 1,
         "shares": 55,
-        "at": "2026-10-01T05:01:19+00:00"
+        "at": "2026-10-01T06:02:51+00:00"
       },
       "h24": {
         "views": 10298,
@@ -203,7 +211,7 @@
         "reposts": 0,
         "quotes": 1,
         "shares": 4,
-        "at": "2026-10-01T05:01:20+00:00"
+        "at": "2026-10-01T06:02:51+00:00"
       },
       "h24": {
         "views": 934,
@@ -230,13 +238,13 @@
       "origin": "manual",
       "has_photo": false,
       "latest": {
-        "views": 20141,
+        "views": 20142,
         "likes": 303,
         "replies": 41,
         "reposts": 4,
         "quotes": 2,
         "shares": 66,
-        "at": "2026-10-01T05:01:20+00:00"
+        "at": "2026-10-01T06:02:52+00:00"
       },
       "h24": {
         "views": 20116,
@@ -269,7 +277,7 @@
         "reposts": 0,
         "quotes": 0,
         "shares": 0,
-        "at": "2026-10-01T05:01:20+00:00"
+        "at": "2026-10-01T06:02:53+00:00"
       },
       "h24": {
         "views": 211,
@@ -302,7 +310,7 @@
         "reposts": 0,
         "quotes": 0,
         "shares": 1,
-        "at": "2026-10-01T05:01:20+00:00"
+        "at": "2026-10-01T06:02:53+00:00"
       },
       "h24": {
         "views": 1424,
@@ -335,7 +343,7 @@
         "reposts": 0,
         "quotes": 0,
         "shares": 5,
-        "at": "2026-10-01T05:01:21+00:00"
+        "at": "2026-10-01T06:02:53+00:00"
       },
       "h24": {
         "views": 3353,
@@ -628,15 +636,38 @@
       "has_photo": true,
       "scheduled": true,
       "latest": {
-        "views": 1158,
+        "views": 1258,
         "likes": 12,
-        "replies": 33,
+        "replies": 40,
         "reposts": 0,
         "quotes": 0,
         "shares": 0,
-        "at": "2026-10-01T05:01:18+00:00"
+        "at": "2026-10-01T06:02:49+00:00"
+      }
+    },
+    "18116898074083334": {
+      "timestamp": "2026-10-01T06:01:26+0000",
+      "permalink": "https://www.threads.com/@velimyr/post/Dd8N76akatR",
+      "media_type": "TEXT_POST",
+      "text_len": 285,
+      "origin": "bot",
+      "idea": "2026-09-29-14",
+      "title": "Мій прадід народився на 12 днів раніше: юліанський календар у метриках",
+      "stream": "fun",
+      "topic": "Генеалогія",
+      "posts_count": 4,
+      "has_photo": false,
+      "scheduled": true,
+      "latest": {
+        "views": 0,
+        "likes": 1,
+        "replies": 3,
+        "reposts": 0,
+        "quotes": 1,
+        "shares": 0,
+        "at": "2026-10-01T06:02:49+00:00"
       }
     }
   },
-  "updated_at": "2026-10-01T05:01:21+00:00"
+  "updated_at": "2026-10-01T06:02:53+00:00"
 }
