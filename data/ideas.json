@@ -1799,7 +1799,7 @@
       ],
       "status": "approved",
       "thread": {
-        "status": "revise",
+        "status": "ready",
         "file": "data/texts/2026-10-01-a01/thread.md"
       },
       "script": {
@@ -1842,6 +1842,10 @@
         {
           "at": "2026-10-01T19:30:29+00:00",
           "event": "thread revision requested"
+        },
+        {
+          "at": "2026-10-01T19:32:20+00:00",
+          "event": "thread ready"
         }
       ]
     }
