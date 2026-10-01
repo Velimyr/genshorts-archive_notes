@@ -2049,7 +2049,7 @@
         "https://uk.wikipedia.org/wiki/Шематизм"
       ],
       "images": [],
-      "status": "proposed",
+      "status": "approved",
       "thread": {
         "status": "none",
         "file": null
@@ -2067,6 +2067,10 @@
         {
           "at": "2026-10-01T20:10:43+00:00",
           "event": "proposed by ideas routine"
+        },
+        {
+          "at": "2026-10-01T20:15:29+00:00",
+          "event": "idea approved in telegram"
         }
       ]
     },
@@ -2139,7 +2143,7 @@
           "license": "Public domain"
         }
       ],
-      "status": "proposed",
+      "status": "approved",
       "thread": {
         "status": "none",
         "file": null
@@ -2157,6 +2161,10 @@
         {
           "at": "2026-10-01T20:10:43+00:00",
           "event": "proposed by ideas routine"
+        },
+        {
+          "at": "2026-10-01T20:15:29+00:00",
+          "event": "idea approved in telegram"
         }
       ]
     },
@@ -2218,7 +2226,7 @@
         "https://eprints.oa.edu.ua/8641/1/10.pdf"
       ],
       "images": [],
-      "status": "proposed",
+      "status": "approved",
       "thread": {
         "status": "none",
         "file": null
@@ -2236,6 +2244,10 @@
         {
           "at": "2026-10-01T20:10:43+00:00",
           "event": "proposed by ideas routine"
+        },
+        {
+          "at": "2026-10-01T20:15:30+00:00",
+          "event": "idea approved in telegram"
         }
       ]
     },
