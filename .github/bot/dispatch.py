@@ -468,6 +468,7 @@ class Bot:
             excluded = idea.setdefault("images_excluded", [])
             excluded += [i.get("url") for i in idea.get("images", []) if i.get("url") and i.get("url") not in excluded]
         idea["photo_request"] = True
+        idea["photo_error"] = ""
         idea["photo_keywords"] = keywords
         idea["photo_requested_at"] = now()
         history(idea, f"photo search requested in telegram{': ' + keywords if keywords else ' (more)' if more else ''}")
