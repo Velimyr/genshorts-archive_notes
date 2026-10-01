@@ -18,7 +18,7 @@
 
 Зараз музей перекладає й розшифровує рукописи. Після цього, каже директор, можна буде визначити імена очільників гмін і їхні підписи.
 
-Уся історія знахідки — у статті: https://shotam.info/dyrektor-muzeiu-vypadkovo-znayshov-200-richnyy-rodynnyy-arkhiv-shcho-lezhav-na-horyshchi/
+Уся історія знахідки — у статті: https://suspilne.media/lutsk/1415893-sukav-foto-znajsov-dokumenti-u-muzei-na-volini-doslidzuut-200-litni-aktovi-zapisi/
 ---
 Джерела:
 https://shotam.info/dyrektor-muzeiu-vypadkovo-znayshov-200-richnyy-rodynnyy-arkhiv-shcho-lezhav-na-horyshchi/
