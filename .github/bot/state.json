@@ -514,6 +514,9 @@
     },
     "195": {
       "kind": "ask"
+    },
+    "196": {
+      "kind": "nav"
     }
   },
   "approved_threads": {
@@ -540,15 +543,18 @@
       "topic": "Генеалогія",
       "image": null,
       "approved_at": "2026-09-30T11:59:59+00:00",
-      "posted": false,
+      "posted": true,
       "publish_at": "2026-10-01T09:00:00+03:00",
       "posted_ids": [
         "18116898074083334",
         "18383956909239693",
         "17945991861071863",
-        "18126027953481529"
+        "18126027953481529",
+        "17878429590553892"
       ],
-      "attempts": 1
+      "attempts": 1,
+      "posted_at": "2026-10-01T06:07:51+00:00",
+      "permalink": "https://www.threads.com/@velimyr/post/Dd8N76akatR"
     },
     "2026-09-29-11": {
       "sha": "a315c5711052a4b6",
