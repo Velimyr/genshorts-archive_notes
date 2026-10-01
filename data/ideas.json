@@ -2013,7 +2013,7 @@
           "license": "CC BY-SA 4.0"
         }
       ],
-      "status": "proposed",
+      "status": "approved",
       "thread": {
         "status": "none",
         "file": null
@@ -2031,6 +2031,10 @@
         {
           "at": "2026-10-01T20:10:43+00:00",
           "event": "proposed by ideas routine"
+        },
+        {
+          "at": "2026-10-01T20:15:13+00:00",
+          "event": "idea approved in telegram"
         }
       ]
     },
