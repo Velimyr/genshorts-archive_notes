@@ -18,7 +18,7 @@
 
 Перш ніж розбирати стару хату, загляньте на горище й у шафи. Не викидайте папери: сфотографуйте їх і покажіть місцевому музею чи архіву. Порожню скриню ще ніхто не каталогізував.
 
-Більше — у «Записках диванного архівіста»: https://t.me/archivist_notes
+Уся історія знахідки — у статті: https://shotam.info/dyrektor-muzeiu-vypadkovo-znayshov-200-richnyy-rodynnyy-arkhiv-shcho-lezhav-na-horyshchi/
 ---
 Джерела:
 https://shotam.info/dyrektor-muzeiu-vypadkovo-znayshov-200-richnyy-rodynnyy-arkhiv-shcho-lezhav-na-horyshchi/
