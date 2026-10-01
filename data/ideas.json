@@ -1799,7 +1799,7 @@
       ],
       "status": "approved",
       "thread": {
-        "status": "ready",
+        "status": "revise",
         "file": "data/texts/2026-10-01-a01/thread.md"
       },
       "script": {
@@ -1825,6 +1825,11 @@
           "kind": "thread",
           "text": "Звідки ти взяв фразу про \"за життя власників\" і \"чуже горище\" не фантазуй",
           "at": "2026-10-01T19:38:05+00:00"
+        },
+        {
+          "kind": "thread",
+          "text": "Заміни посилання в статті на оце https://suspilne.media/lutsk/1415893-sukav-foto-znajsov-dokumenti-u-muzei-na-volini-doslidzuut-200-litni-aktovi-zapisi/",
+          "at": "2026-10-01T19:41:42+00:00"
         }
       ],
       "history": [
@@ -1859,6 +1864,10 @@
         {
           "at": "2026-10-01T19:39:08+00:00",
           "event": "thread ready"
+        },
+        {
+          "at": "2026-10-01T19:41:42+00:00",
+          "event": "thread revision requested"
         }
       ]
     }
