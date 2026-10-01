@@ -2048,8 +2048,21 @@
         {
           "at": "2026-10-01T21:06:12+00:00",
           "event": "thread text approved in telegram"
+        },
+        {
+          "at": "2026-10-01T21:06:57+00:00",
+          "event": "photo search requested in telegram (more)"
         }
-      ]
+      ],
+      "images_excluded": [
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b5/%D0%92%D0%B8%D1%82%D1%8F%D0%B3_%D1%96%D0%B7_%D0%94%D0%90%D0%96%D0%9E_1-78-1134_%D1%81%D1%82._853-865_1855_%D0%9C%D0%B5%D1%82%D1%80%D0%B8%D1%87%D0%BD%D0%B0_%D0%BA%D0%BD%D0%B8%D0%B3%D0%B0_%D1%81._%D0%A2%D1%80%D0%BE%D1%81%D1%82%D1%8F%D0%BD%D0%B5%D1%86%D1%8C_%D0%A0%D1%96%D0%B2%D0%BD%D0%B5%D0%BD%D1%81%D1%8C%D0%BA%D0%BE%D0%B3%D0%BE_%D0%BF%D0%BE%D0%B2%D1%96%D1%82%D1%83.pdf/page1-1280px-%D0%92%D0%B8%D1%82%D1%8F%D0%B3_%D1%96%D0%B7_%D0%94%D0%90%D0%96%D0%9E_1-78-1134_%D1%81%D1%82._853-865_1855_%D0%9C%D0%B5%D1%82%D1%80%D0%B8%D1%87%D0%BD%D0%B0_%D0%BA%D0%BD%D0%B8%D0%B3%D0%B0_%D1%81._%D0%A2%D1%80%D0%BE%D1%81%D1%82%D1%8F%D0%BD%D0%B5%D1%86%D1%8C_%D0%A0%D1%96%D0%B2%D0%BD%D0%B5%D0%BD%D1%81%D1%8C%D0%BA%D0%BE%D0%B3%D0%BE_%D0%BF%D0%BE%D0%B2%D1%96%D1%82%D1%83.pdf.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/36/%D0%94%D0%90%D0%96%D0%9E_1-84-27._1783-1808._%D0%9C%D0%B5%D1%82%D1%80%D0%B8%D1%87%D0%BD%D0%B0_%D0%BA%D0%BD%D0%B8%D0%B3%D0%B0_%D1%81%D0%B5%D0%BB%D0%B0_%D0%9C%D0%B8%D0%B4%D1%81%D1%8C%D0%BA._%D0%9D%D0%B0%D1%80%D0%BE%D0%B4%D0%B6%D0%B5%D0%BD%D0%BD%D1%8F.pdf/page1-960px-%D0%94%D0%90%D0%96%D0%9E_1-84-27._1783-1808._%D0%9C%D0%B5%D1%82%D1%80%D0%B8%D1%87%D0%BD%D0%B0_%D0%BA%D0%BD%D0%B8%D0%B3%D0%B0_%D1%81%D0%B5%D0%BB%D0%B0_%D0%9C%D0%B8%D0%B4%D1%81%D1%8C%D0%BA._%D0%9D%D0%B0%D1%80%D0%BE%D0%B4%D0%B6%D0%B5%D0%BD%D0%BD%D1%8F.pdf.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4c/%D0%97%D0%92%D0%95%D0%94%D0%95%D0%9D%D0%98%D0%99_%D0%9A%D0%90%D0%A2%D0%90%D0%9B%D0%9E%D0%93_%D0%9C%D0%95%D0%A2%D0%A0%D0%98%D0%A7%D0%9D%D0%98%D0%A5_%D0%9A%D0%9D%D0%98%D0%93%2C_%D0%A9%D0%9E_%D0%97%D0%91%D0%95%D0%A0%D0%86%D0%93%D0%90%D0%AE%D0%A2%D0%AC%D0%A1%D0%AF_%D0%92_%D0%94%D0%95%D0%A0%D0%96%D0%90%D0%92%D0%9D%D0%98%D0%A5_%D0%90%D0%A0%D0%A5%D0%86%D0%92%D0%90%D0%A5_%D0%A3%D0%9A%D0%A0%D0%90%D0%87%D0%9D%D0%98_%D0%BC%D1%96%D0%B6%D0%B0%D1%80%D1%85%D1%96%D0%B2%D0%BD%D0%B8%D0%B9_%D0%B4%D0%BE%D0%B2%D1%96%D0%B4%D0%BD%D0%B8%D0%BA._%D0%A2._10_%D0%9A%D0%BD.1.pdf/page1-960px-thumbnail.pdf.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+      ],
+      "photo_request": true,
+      "photo_error": "",
+      "photo_keywords": "",
+      "photo_requested_at": "2026-10-01T21:06:57+00:00"
     },
     {
       "id": "2026-10-01-03",
