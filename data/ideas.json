@@ -761,6 +761,10 @@
         {
           "at": "2026-10-01T07:11:21+00:00",
           "event": "thread auto-scheduled: 2026-10-02T13:00:00+03:00"
+        },
+        {
+          "at": "2026-10-01T07:12:09+00:00",
+          "event": "thread scheduled: 2026-10-03T15:00:00+03:00"
         }
       ],
       "photo_request": false,
