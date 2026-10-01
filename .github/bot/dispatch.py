@@ -211,9 +211,10 @@ def fire_routine(name: str, note: str) -> str | None:
 
 
 class ThreadsError(Exception):
-    def __init__(self, message: str, status: int = 0):
+    def __init__(self, message: str, status: int = 0, subcode: int = 0):
         super().__init__(message)
         self.status = status
+        self.subcode = subcode
 
 
 def threads_call(method: str, path: str, **params):
@@ -232,7 +233,8 @@ def threads_call(method: str, path: str, **params):
             error = {}
         details = " ".join(f"{k}={error[k]}" for k in ("message", "type", "code", "error_subcode", "fbtrace_id") if error.get(k))
         print(f"[threads] {method} {path.split('/')[-1]} -> HTTP {exc.code} {details}")
-        raise ThreadsError(f"HTTP {exc.code} {error.get('message', '')}".strip(), exc.code) from None
+        raise ThreadsError(f"HTTP {exc.code} {error.get('message', '')}".strip(), exc.code,
+                           int(error.get("error_subcode") or 0)) from None
 
 
 def threads_retry(method: str, path: str, **params):
@@ -964,21 +966,36 @@ class Bot:
                         params["reply_to_id"] = posted[-1]
                         time.sleep(10)  # дати Threads «доварити» попередній пост
                     container = threads_retry("POST", f"{THREADS_USER_ID}/threads", **params)["id"]
-                    for _ in range(20):  # Threads радить дочекатися обробки контейнера
+                    for _ in range(40):  # Threads радить дочекатися обробки контейнера (до 2 хв)
                         status = threads_retry("GET", container, fields="status,error_message")
                         if status.get("status") in ("FINISHED", "PUBLISHED"):
                             break
                         if status.get("status") in ("ERROR", "EXPIRED"):
                             raise ThreadsError(status.get("error_message") or status["status"])
                         time.sleep(3)
-                    posted.append(threads_retry("POST", f"{THREADS_USER_ID}/threads_publish", creation_id=container)["id"])
+                    else:
+                        raise ThreadsError("Threads не встиг обробити пост за 2 хвилини")
+                    for attempt in range(4):
+                        try:
+                            posted.append(threads_retry("POST", f"{THREADS_USER_ID}/threads_publish",
+                                                        creation_id=container)["id"])
+                            break
+                        except ThreadsError as exc:
+                            # 4279009 — «ресурс не існує»: пост ще не доступний для публікації.
+                            if exc.subcode != 4279009 or attempt == 3:
+                                raise
+                            time.sleep(15 * (attempt + 1))
                     save_json(STATE_FILE, self.state)
             except ThreadsError as exc:
                 item["attempts"] = item.get("attempts", 0) + 1
                 if item["attempts"] >= 3:
                     item["failed"] = str(exc)
-                self.send(f"⚠️ Публікація «{idea['title']}» зупинилась на пості {len(posted) + 1}/{len(posts)}: {exc}."
-                          + (" Більше не пробую." if item.get("failed") else " Спробую наступного запуску."))
+                done = (f"Опубліковано {len(posted)} з {len(posts)} постів. " if posted else "Нічого не опубліковано. ")
+                follow = (" Більше не пробую — напишіть мені, розберемося." if item.get("failed") else
+                          f" Повторю автоматично протягом години й продовжу з поста {len(posted) + 1} — "
+                          "уже опубліковані пости не дублюються.")
+                self.send(f"⚠️ «{idea['title']}»: пост {len(posted) + 1} не вийшов через збій Threads ({exc}). "
+                          f"{done}{follow}")
                 return
             permalink = ""
             try:
