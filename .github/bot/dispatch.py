@@ -69,6 +69,7 @@ THREADS_POST_LIMIT = 500
 
 KYIV = ZoneInfo("Europe/Kyiv")
 DEFAULT_TAG = "Генеалогія"  # стандартна тема поста в Threads
+STALE_AFTER = timedelta(minutes=30)  # незавершена робота без запуску задачі довше — перезапуск
 MENU_VERSION = 2
 MENU_BUTTONS = {"💡 Ідеї": "/ideas", "✍️ Тексти": "/texts", "📣 Публікація": "/publish", "📋 Черга": "/queue",
                 "📤 Опубліковані": "/published"}
@@ -458,7 +459,9 @@ class Bot:
 
     def request_photos(self, idea: dict, more: bool = False, keywords: str = "") -> None:
         """Запит на пошук фото; «інші» й пошук за словами виключають уже показані фото."""
-        if idea.get("photo_request"):
+        requested = idea.get("photo_requested_at")
+        if idea.get("photo_request") and requested and \
+                datetime.now(timezone.utc) - parse_time(requested) < STALE_AFTER:
             self.send(f"🔎 Фото для «{idea['title']}» вже шукаються — надішлю, щойно знайду.")
             return
         if more or keywords:
@@ -1199,6 +1202,23 @@ class Bot:
             text += "\n🔎 «Фото за словами» — шукати за вашими ключовими словами."
             self.state["sent"][key] = self.send(text, kb(*rows), {"kind": "photos", "idea": idea["id"]})
 
+    def revive_stale_work(self) -> None:
+        """Якщо є незавершена робота, а задачу давно не запускали (обрив мережі тощо) — запуск."""
+        fired = self.state.setdefault("fired_at", {})
+        pending = {
+            "texts": {i["id"] for i in self.ideas.values()
+                      if i.get("thread", {}).get("status") in ("requested", "revise") or i.get("photo_request")},
+            "ideas": {r["stream"] for r in self.requests.get("ideas", []) if r.get("status") == "pending"},
+        }
+        current = datetime.now(timezone.utc)
+        for name, ids in pending.items():
+            last = fired.get(name)
+            if ids and name not in self.fire and (not last or current - parse_time(last) > STALE_AFTER):
+                self.fire.setdefault(name, set()).update(ids)
+                print(f"[revive] {name}: {sorted(ids)}")
+        for name in self.fire:
+            fired[name] = now()
+
     def scheduled_prompts(self):
         local = datetime.now(KYIV)
         today = local.date().isoformat()
@@ -1267,6 +1287,7 @@ class Bot:
         self.slot_reminders()
         self.weekly_report()
 
+        self.revive_stale_work()
         save_json(IDEAS_FILE, self.ideas_doc)
         save_json(REQUESTS_FILE, self.requests)
         save_json(STRESS_FILE, self.stress)
@@ -1286,12 +1307,22 @@ def fire_pending() -> int:
     а черга вебхука очищується лише від оновлень, які вже збережено в репозиторії."""
     acked = load_json(ACK_FILE, [])
     if acked and QUEUE_URL and QUEUE_SECRET:
-        queue_call("POST", "/ack", {"ids": acked})
+        try:
+            queue_call("POST", "/ack", {"ids": acked})
+        except (urllib.error.URLError, OSError, ValueError) as exc:
+            print(f"[ack] {exc}")  # не критично: оброблені оновлення відсіються за списком processed
     pending = load_json(FIRE_FILE, {})
     for name, ids in pending.items():
-        error = fire_routine(name, "Нові запити: " + ", ".join(ids))
+        error = None
+        for attempt in range(3):
+            try:
+                error = fire_routine(name, "Нові запити: " + ", ".join(ids))
+                break
+            except (urllib.error.URLError, OSError) as exc:
+                error = f"не вдалося запустити задачу «{name}»: {exc}"
+                time.sleep(5 * (attempt + 1))
         if error:
-            tg("sendMessage", chat_id=CHAT_ID, text=f"⚠️ {error}.")
+            print(f"[routine] {error}")  # незавершену роботу перезапустить самовідновлення
     return 0
 
 
