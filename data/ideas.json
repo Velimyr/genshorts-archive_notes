@@ -2432,6 +2432,378 @@
           "event": "idea approved in telegram"
         }
       ]
+    },
+    {
+      "id": "2026-10-02-01",
+      "proposed_at": "2026-10-02",
+      "stream": "small",
+      "title": "Рівне й Миколаїв: нові сповідні розписи на FamilySearch",
+      "summary": "FamilySearch у серпні 2026 додав «Ukraine, Rivne, Confession Lists, 1799–1939» (564 349 індексованих записів із 9 036 зображень) і оновив миколаївську колекцію 1795–1925 (204 678 записів). Пост-новина: що це за джерело й як шукати родину за індексом.",
+      "why_now": "Нові колекції з'явилися 17 серпня 2026 р.",
+      "sources": [
+        "https://www.geneamusings.com/2026/08/added-and-updated-familysearch-record_01992907494.html"
+      ],
+      "images": [
+        {
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/34/Rivne_location_map.png/1280px-Rivne_location_map.png",
+          "page": "https://commons.wikimedia.org/wiki/File:Rivne_location_map.png",
+          "credit": "Smat / Wikimedia Commons, CC BY-SA 2.0",
+          "license": "CC BY-SA 2.0"
+        },
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/2/22/Nikolaev-ukraine-city-history-2.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Nikolaev-ukraine-city-history-2.jpg",
+          "credit": "Unknown author / Wikimedia Commons, Public domain",
+          "license": "Public domain"
+        }
+      ],
+      "status": "proposed",
+      "thread": {
+        "status": "none",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-10-02T07:00:00+00:00",
+          "event": "proposed by ideas routine"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-02-02",
+      "proposed_at": "2026-10-02",
+      "stream": "small",
+      "title": "Київські сповідні розписи: 51 млн записів — «перепис» 1741–1918",
+      "summary": "Колекція FamilySearch «Ukraine, Kyiv, Confession Lists, 1741–1918» налічує понад 51 млн записів і ~40 тис. зображень; оригінали — у ЦДІАК, мова — російська. У постах: що в записі (імена, вік, чи був на сповіді) і чому це «замінник перепису».",
+      "why_now": "",
+      "sources": [
+        "https://www.familysearch.org/search/collection/2290980"
+      ],
+      "images": [],
+      "status": "proposed",
+      "thread": {
+        "status": "none",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-10-02T07:00:00+00:00",
+          "event": "proposed by ideas routine"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-02-03",
+      "proposed_at": "2026-10-02",
+      "stream": "small",
+      "title": "Увага, застаріла база: «Births and Baptisms 1784–1879» на FamilySearch",
+      "summary": "Колекція «Ukraine, Births and Baptisms, 1784–1879» — «спадкова» (Legacy), складена 2010 р.: лише 13 191 запис, переважно Одеса (11 482) і Львів (2 070). Порада: не робити висновок «мене там нема — і метрик нема», а переходити до повних колекцій метрик.",
+      "why_now": "",
+      "sources": [
+        "https://familysearch.org/search/collection/1771086"
+      ],
+      "images": [],
+      "status": "proposed",
+      "thread": {
+        "status": "none",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-10-02T07:00:00+00:00",
+          "event": "proposed by ideas routine"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-02-04",
+      "proposed_at": "2026-10-02",
+      "stream": "small",
+      "title": "Магдебурзьке право: у якому місті шукати міські книги й коли воно з'явилося",
+      "summary": "Львів отримав магдебурзьке право 1356 р., Галич — 1367, Белз — 1377, Холм — 1382, Перемишль — 1389, Луцьк і Кам'янець-Подільський — 1432, Київ — 1494. Дата допомагає зрозуміти, з якого часу очікувати війтівські й лавничі книги міста предків.",
+      "why_now": "",
+      "sources": [
+        "https://uk.wikipedia.org/wiki/Магдебурзьке_право"
+      ],
+      "images": [
+        {
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/55/City_Hall%2C_Lviv_0070.JPG/1280px-City_Hall%2C_Lviv_0070.JPG",
+          "page": "https://commons.wikimedia.org/wiki/File:City_Hall,_Lviv_0070.JPG",
+          "credit": "Antanana / Wikimedia Commons, CC BY-SA 3.0",
+          "license": "CC BY-SA 3.0"
+        }
+      ],
+      "status": "proposed",
+      "thread": {
+        "status": "none",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-10-02T07:00:00+00:00",
+          "event": "proposed by ideas routine"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-02-05",
+      "proposed_at": "2026-10-02",
+      "stream": "small",
+      "title": "Дворянська родовідна книга: шість частин і чому в 6-й вас може не бути",
+      "summary": "Дворянські родовідні книги за Жалуваною грамотою Катерини II 1785 р. мали шість частин — від дарованого дворянства до давніх родів, і вписували лише спадкових дворян. Одна порада: де шукати доказ «шляхетства» й чого не варто чекати від особистого дворянства.",
+      "why_now": "",
+      "sources": [
+        "https://uk.wikipedia.org/wiki/Дворянська_родовідна_книга"
+      ],
+      "images": [],
+      "status": "proposed",
+      "thread": {
+        "status": "none",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-10-02T07:00:00+00:00",
+          "event": "proposed by ideas routine"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-02-06",
+      "proposed_at": "2026-10-02",
+      "stream": "small",
+      "title": "Столипінське переселення: 1,2 млн українців в Азію — де слід у документах",
+      "summary": "1906–1913 рр. з дев'яти українських губерній до Азії виїхало 1,2 млн селян (пік 1909 — 290 тис.), чверть повернулася. Пост про те, чому предок міг зникнути з села й які землевпорядні комісії залишили документи.",
+      "why_now": "",
+      "sources": [
+        "https://uk.wikipedia.org/wiki/Столипінська_аграрна_реформа"
+      ],
+      "images": [],
+      "status": "proposed",
+      "thread": {
+        "status": "none",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-10-02T07:00:00+00:00",
+          "event": "proposed by ideas routine"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-02-07",
+      "proposed_at": "2026-10-02",
+      "stream": "small",
+      "title": "Волость: найнижча ланка, де писарь вів списки, яких немає в метриках",
+      "summary": "Після 1861 р. волость (300–2000 ревізьких душ, до 12 верст від центру) мала правління з писарем: податки, рекрути, земельні й спадкові справи. Коротка порада — шукати волосні фонди, коли метрик бракує.",
+      "why_now": "",
+      "sources": [
+        "https://uk.wikipedia.org/wiki/Волость"
+      ],
+      "images": [],
+      "status": "proposed",
+      "thread": {
+        "status": "none",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-10-02T07:00:00+00:00",
+          "event": "proposed by ideas routine"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-02-08",
+      "proposed_at": "2026-10-02",
+      "stream": "small",
+      "title": "Повіт зник 1922–1923: чому стару справу шукають не в «районі»",
+      "summary": "В УРСР повіти скасували реформою 1922–1923 рр., тому справи до того часу групують за повітами, а не районами. Порада: перш ніж писати в архів, з'ясуйте повіт і губернію свого села за старим адмінподілом.",
+      "why_now": "",
+      "sources": [
+        "https://uk.wikipedia.org/wiki/Повіт"
+      ],
+      "images": [],
+      "status": "proposed",
+      "thread": {
+        "status": "none",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-10-02T07:00:00+00:00",
+          "event": "proposed by ideas routine"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-02-09",
+      "proposed_at": "2026-10-02",
+      "stream": "small",
+      "title": "Метрики після 1918 року: чому предків 1920-х шукають у ЗАГС",
+      "summary": "Із 1917 р. метричні книги вилучили, а з 1918 р. запис актів перейшов до відділів ЗАГС. Практична порада: для подій 1918+ шукати не в церковних, а в книгах РАЦС/ЗАГС і дізнатися, де вони зберігаються.",
+      "why_now": "",
+      "sources": [
+        "https://uk.wikipedia.org/wiki/Метричні_книги"
+      ],
+      "images": [],
+      "status": "proposed",
+      "thread": {
+        "status": "none",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-10-02T07:00:00+00:00",
+          "event": "proposed by ideas routine"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-02-10",
+      "proposed_at": "2026-10-02",
+      "stream": "small",
+      "title": "«Генеалогічний навігатор»: розділи «Ресурси» і «Карта» для старту",
+      "summary": "Сайт uagenealogy.com має розділи «Ресурси», «Карта» і систему «Карма» учасників спільноти. Короткий огляд: що там шукати на старті пошуку й чого не очікувати (деталей розділів без входу не видно).",
+      "why_now": "",
+      "sources": [
+        "https://uagenealogy.com/"
+      ],
+      "images": [],
+      "status": "proposed",
+      "thread": {
+        "status": "none",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-10-02T07:00:00+00:00",
+          "event": "proposed by ideas routine"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-02-10",
+      "proposed_at": "2026-10-02",
+      "stream": "small",
+      "title": "«Зерцало саксонів» і Хелмінське право: за чим судили предка-міщанина",
+      "summary": "У містах із магдебурзьким правом користувалися збірками «Зерцало саксонів» (1536), «Артикули права магдебурзького» (1557), «Право цивільне Хелмінське» (1584). Порада: якщо справа предка-міщанина в міських книгах незрозуміла, спершу з'ясуйте, яким правом судили його місто.",
+      "why_now": "",
+      "sources": [
+        "https://uk.wikipedia.org/wiki/Магдебурзьке_право"
+      ],
+      "images": [],
+      "status": "proposed",
+      "thread": {
+        "status": "none",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-10-02T07:00:00+00:00",
+          "event": "proposed by ideas routine"
+        }
+      ]
     }
   ]
 }
