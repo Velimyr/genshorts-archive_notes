@@ -82,7 +82,7 @@ HELP = ("Кнопки внизу: 💡 Ідеї — нові ідеї, ✍️ Т
 ASK_AT = {"ideas": 9, "texts": 12}  # година за Києвом
 REPORT_AT = (6, 18)  # неділя, 18:00 за Києвом — тижневий звіт
 SLOT_GAP = timedelta(hours=4)  # мінімальний проміжок між публікаціями бота
-DAILY_LIMIT = 2  # тредів бота на день: 1 серйозний + 1 жартівливий, або 2 жартівливі
+DAILY_LIMIT = 1  # тредів бота на день (автор: одна публікація щодня)
 ALTERNATION_HORIZON = timedelta(days=3)  # скільки шукати слот із чергуванням, перш ніж поступитися
 REMIND_BEFORE = timedelta(hours=1)  # нагадування, якщо на рекомендований час нічого не заплановано
 WEEKDAYS = ["Пн", "Вт", "Ср", "Чт", "Пт", "Сб", "Нд"]
@@ -832,6 +832,25 @@ class Bot:
                 self.send(f"🔎 Напишіть наступним повідомленням ключові слова для пошуку фото до «{idea['title']}» "
                           "(напр. «метрична книга 1850 Київська губернія»).",
                           None, {"kind": "photokw", "idea": idea["id"]})
+        elif action == "recs":
+            recs = load_json(RECS_FILE, {})
+            if recs.get("proposal_id") != parts[2] or not recs.get("proposed_slots"):
+                self.close_buttons(mid, "Пропозиція вже неактуальна")
+                return
+            if parts[1] == "yes":
+                recs["slots"] = recs["proposed_slots"]
+                recs["basis"] = "account (погоджено автором)"
+                recs["updated_at"] = datetime.now(KYIV).date().isoformat()
+                self.close_buttons(mid, "✅ Новий розклад погоджено")
+                self.send("✅ Нові години публікацій діють. Уже заплановані треди лишаються на своїх місцях — "
+                          "за потреби пересуньте їх у 📋 Черга.")
+            else:
+                recs.setdefault("rejected_proposals", []).append(
+                    {"id": parts[2], "slots": recs["proposed_slots"], "at": now()})
+                self.close_buttons(mid, "❌ Лишаємо як є")
+            for key in ("proposed_slots", "proposal_reason", "proposal_id"):
+                recs.pop(key, None)
+            save_json(RECS_FILE, recs)
         elif action == "move":
             idea = self.ideas.get(parts[1])
             if idea:
@@ -1178,6 +1197,22 @@ class Bot:
                 moments.append(slot - REMIND_BEFORE)
         return int(min(moments).timestamp()) if moments else 0
 
+    def send_slot_proposal(self) -> None:
+        """Пропозиція аналітики змінити години публікацій — лише з погодження автора."""
+        recs = load_json(RECS_FILE, {})
+        pid = recs.get("proposal_id")
+        if not recs.get("proposed_slots") or not pid or f"recs:{pid}" in self.state["sent"]:
+            return
+        def fmt(slots):
+            by_hour = {}
+            for slot in slots:
+                by_hour.setdefault(f"{slot.get('hour', 0):02d}:{slot.get('minute', 0):02d}", []).append(slot.get("weekday"))
+            return "; ".join(f"{', '.join(WEEKDAYS[w] for w in sorted(days))} {hour}" for hour, days in sorted(by_hour.items()))
+        self.state["sent"][f"recs:{pid}"] = self.send(
+            f"📊 Аналітика пропонує змінити час публікацій.\nЗараз: {fmt(recs.get('slots', []))}\n"
+            f"Пропонує: {fmt(recs['proposed_slots'])}\n\n{recs.get('proposal_reason', '')}",
+            kb([("✅ Погодити", f"recs:yes:{pid}"), ("❌ Лишити як є", f"recs:no:{pid}")]), {"kind": "recs"})
+
     def send_photo_results(self) -> None:
         """Повідомляє про завершений пошук фото, запитаний кнопкою."""
         for idea in self.ideas.values():
@@ -1304,6 +1339,7 @@ class Bot:
         self.send_ready_threads()
         self.send_reports()
         self.send_photo_results()
+        self.send_slot_proposal()
         self.token_reminder()
         self.scheduled_prompts()
         self.slot_reminders()
