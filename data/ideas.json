@@ -2457,7 +2457,7 @@
           "license": "Public domain"
         }
       ],
-      "status": "proposed",
+      "status": "rejected",
       "thread": {
         "status": "none",
         "file": null
@@ -2475,6 +2475,10 @@
         {
           "at": "2026-10-02T07:00:00+00:00",
           "event": "proposed by ideas routine"
+        },
+        {
+          "at": "2026-10-02T06:49:25+00:00",
+          "event": "idea rejected in telegram"
         }
       ]
     },
@@ -2489,7 +2493,7 @@
         "https://www.familysearch.org/search/collection/2290980"
       ],
       "images": [],
-      "status": "proposed",
+      "status": "rejected",
       "thread": {
         "status": "none",
         "file": null
@@ -2507,6 +2511,10 @@
         {
           "at": "2026-10-02T07:00:00+00:00",
           "event": "proposed by ideas routine"
+        },
+        {
+          "at": "2026-10-02T06:49:26+00:00",
+          "event": "idea rejected in telegram"
         }
       ]
     },
