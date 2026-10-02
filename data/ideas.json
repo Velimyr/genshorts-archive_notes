@@ -2640,7 +2640,7 @@
         "https://uk.wikipedia.org/wiki/Столипінська_аграрна_реформа"
       ],
       "images": [],
-      "status": "proposed",
+      "status": "approved",
       "thread": {
         "status": "none",
         "file": null
@@ -2658,6 +2658,10 @@
         {
           "at": "2026-10-02T07:00:00+00:00",
           "event": "proposed by ideas routine"
+        },
+        {
+          "at": "2026-10-02T06:50:24+00:00",
+          "event": "idea approved in telegram"
         }
       ]
     },
