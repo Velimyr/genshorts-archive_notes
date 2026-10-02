@@ -1819,9 +1819,10 @@
       ],
       "status": "approved",
       "thread": {
-        "status": "scheduled",
+        "status": "posted",
         "file": "data/texts/2026-10-01-a01/thread.md",
-        "approved_sha": "2ab04ffd2c3719d8"
+        "approved_sha": "2ab04ffd2c3719d8",
+        "permalink": "https://www.threads.com/@velimyr/post/Dd-yuV-G-Pa"
       },
       "script": {
         "status": "none",
@@ -1925,6 +1926,10 @@
         {
           "at": "2026-10-01T19:51:10+00:00",
           "event": "thread moved to 2026-10-02T09:00:00+03:00"
+        },
+        {
+          "at": "2026-10-02T06:02:46+00:00",
+          "event": "thread posted to Threads (5 posts)"
         }
       ]
     },
