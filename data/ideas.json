@@ -3352,7 +3352,7 @@
       ],
       "status": "approved",
       "thread": {
-        "status": "ready",
+        "status": "revise",
         "file": "data/texts/2026-10-03-a01/thread.md"
       },
       "script": {
@@ -3363,7 +3363,13 @@
         "status": "none",
         "telegram_message_id": null
       },
-      "revisions": [],
+      "revisions": [
+        {
+          "kind": "thread",
+          "text": "Додай повідомлення окреме про Анну Алоїзу яка перехрестила кості Острозького в католицтво (подай це окремо як цікавий факт)",
+          "at": "2026-10-03T14:50:58+00:00"
+        }
+      ],
       "history": [
         {
           "at": "2026-10-03T14:39:04+00:00",
@@ -3372,6 +3378,10 @@
         {
           "at": "2026-10-03T14:47:40+00:00",
           "event": "thread ready"
+        },
+        {
+          "at": "2026-10-03T14:50:58+00:00",
+          "event": "thread revision requested"
         }
       ]
     }
