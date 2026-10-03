@@ -3328,7 +3328,9 @@
         "https://uk.wikipedia.org/wiki/Єлизавета_(Гальшка)_Острозька",
         "https://uk.wikipedia.org/wiki/Історія_Острозької_академії",
         "https://uk.wikipedia.org/wiki/Острозька_академія",
-        "https://eprints.oa.edu.ua/9325/1/Ostrozka%20akademiia.pdf"
+        "https://eprints.oa.edu.ua/9325/1/Ostrozka%20akademiia.pdf",
+        "https://eprints.oa.edu.ua/8178/1/1.pdf",
+        "https://heritage.oa.edu.ua/assets/files/vykhovanets'_pokhovannya_kn_oleksandra.pdf"
       ],
       "images": [
         {
@@ -3352,7 +3354,7 @@
       ],
       "status": "approved",
       "thread": {
-        "status": "revise",
+        "status": "ready",
         "file": "data/texts/2026-10-03-a01/thread.md"
       },
       "script": {
@@ -3382,6 +3384,10 @@
         {
           "at": "2026-10-03T14:50:58+00:00",
           "event": "thread revision requested"
+        },
+        {
+          "at": "2026-10-03T14:53:24+00:00",
+          "event": "thread ready"
         }
       ]
     }
