@@ -3314,6 +3314,37 @@
           "event": "idea approved in telegram"
         }
       ]
+    },
+    {
+      "id": "2026-10-03-a01",
+      "proposed_at": "2026-10-03",
+      "stream": "big",
+      "origin": "author",
+      "title": "Костянтин Острозький не такий і меценат освіти.",
+      "summary": "Костянтин Острозький не такий і меценат освіти.",
+      "why_now": "",
+      "sources": [],
+      "images": [],
+      "status": "approved",
+      "thread": {
+        "status": "requested",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-10-03T14:39:04+00:00",
+          "event": "author topic from telegram; thread requested"
+        }
+      ]
     }
   ]
 }
