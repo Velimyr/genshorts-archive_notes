@@ -599,9 +599,37 @@ class Bot:
         self.fire.setdefault("texts", set()).add(idea["id"])
         self.send(f"✍️ Пишу тред ({stream_label(stream)}): «{idea['title']}». Надішлю, щойно буде готовий.")
 
+    @staticmethod
+    def day_slot(day, prev: datetime | None, window: dict, min_shift: int) -> datetime:
+        """Стабільний для дня час у вікні, що відрізняється від попереднього дня ≥ min_shift хв."""
+        start_h, start_m = map(int, window["start"].split(":"))
+        end_h, end_m = map(int, window["end"].split(":"))
+        first, last = start_h * 60 + start_m, end_h * 60 + end_m
+        minutes = list(range(first, last + 1))
+        if prev is not None:
+            prev_local = prev.astimezone(KYIV)
+            prev_minute = prev_local.hour * 60 + prev_local.minute
+            minutes = [m for m in minutes if abs(m - prev_minute) >= min_shift] or minutes
+        pick = minutes[int(hashlib.sha256(day.isoformat().encode()).hexdigest(), 16) % len(minutes)]
+        return datetime(day.year, day.month, day.day, pick // 60, pick % 60, tzinfo=KYIV)
+
     def recommended_slots(self, days: int = 7) -> list[datetime]:
         recs = load_json(RECS_FILE, {"slots": []})
         start = datetime.now(KYIV)
+        window = recs.get("window")
+        if window:
+            # Публікації бота, що вже стоять чи вийшли, задають «учорашній» час для наступного дня.
+            actual = {}
+            for moment, _ in self.bot_publications():
+                actual.setdefault(moment.astimezone(KYIV).date(), moment.astimezone(KYIV))
+            result, prev = [], None
+            for offset in range(-1, days + 1):
+                day = (start + timedelta(days=offset)).date()
+                chosen = actual.get(day) or self.day_slot(day, prev, window, recs.get("min_shift_minutes", 45))
+                if offset >= 0 and chosen > start + timedelta(minutes=15):
+                    result.append(chosen)
+                prev = chosen
+            return result
         result = []
         for offset in range(days + 1):
             day = (start + timedelta(days=offset)).date()
@@ -648,6 +676,22 @@ class Bot:
             if (before and before[-1] == cat) or (after and after[0] == cat):
                 return False
         return True
+
+    def retime_scheduled(self) -> list[tuple[str, datetime]]:
+        """Ставить заплановані (ще не розпочаті) треди на час вікна в межах їхніх днів."""
+        moved = []
+        future = sorted((m, i) for m, i, item in self.scheduled()
+                        if m > datetime.now(KYIV) + timedelta(minutes=15) and not item.get("posted_ids"))
+        for moment, idea_id in future:
+            item = self.state["approved_threads"][idea_id]
+            item["publish_at"] = "pending"
+            day = moment.astimezone(KYIV).date()
+            slot = next((s for s in self.recommended_slots(days=40) if s.date() == day), None)
+            item["publish_at"] = (slot or moment).isoformat()
+            if slot and slot != moment and idea_id in self.ideas:
+                history(self.ideas[idea_id], f"retimed to window: {item['publish_at']}")
+                moved.append((idea_id, slot))
+        return moved
 
     def free_slots(self, count: int = 3, idea: dict | None = None) -> list[datetime]:
         """Рекомендовані слоти за правилами: ліміт на день, проміжок, чергування категорій.
@@ -834,23 +878,27 @@ class Bot:
                           None, {"kind": "photokw", "idea": idea["id"]})
         elif action == "recs":
             recs = load_json(RECS_FILE, {})
-            if recs.get("proposal_id") != parts[2] or not recs.get("proposed_slots"):
+            if recs.get("proposal_id") != parts[2] or not recs.get("proposed_window"):
                 self.close_buttons(mid, "Пропозиція вже неактуальна")
                 return
-            if parts[1] == "yes":
-                recs["slots"] = recs["proposed_slots"]
+            approved = parts[1] == "yes"
+            if approved:
+                recs["window"] = recs["proposed_window"]
                 recs["basis"] = "account (погоджено автором)"
                 recs["updated_at"] = datetime.now(KYIV).date().isoformat()
-                self.close_buttons(mid, "✅ Новий розклад погоджено")
-                self.send("✅ Нові години публікацій діють. Уже заплановані треди лишаються на своїх місцях — "
-                          "за потреби пересуньте їх у 📋 Черга.")
+                self.close_buttons(mid, "✅ Новий діапазон погоджено")
             else:
                 recs.setdefault("rejected_proposals", []).append(
-                    {"id": parts[2], "slots": recs["proposed_slots"], "at": now()})
+                    {"id": parts[2], "window": recs["proposed_window"], "at": now()})
                 self.close_buttons(mid, "❌ Лишаємо як є")
-            for key in ("proposed_slots", "proposal_reason", "proposal_id"):
+            for key in ("proposed_window", "proposal_reason", "proposal_id"):
                 recs.pop(key, None)
             save_json(RECS_FILE, recs)
+            if approved:
+                moved = self.retime_scheduled()
+                lines = [f"• {fmt_slot(m)} — {self.ideas[i]['title']}" for i, m in moved]
+                self.send("✅ Новий діапазон діє." + ("\nЧас запланованих тредів перераховано:\n" + "\n".join(lines)
+                                                    if lines else ""))
         elif action == "move":
             idea = self.ideas.get(parts[1])
             if idea:
@@ -1201,16 +1249,13 @@ class Bot:
         """Пропозиція аналітики змінити години публікацій — лише з погодження автора."""
         recs = load_json(RECS_FILE, {})
         pid = recs.get("proposal_id")
-        if not recs.get("proposed_slots") or not pid or f"recs:{pid}" in self.state["sent"]:
+        if not recs.get("proposed_window") or not pid or f"recs:{pid}" in self.state["sent"]:
             return
-        def fmt(slots):
-            by_hour = {}
-            for slot in slots:
-                by_hour.setdefault(f"{slot.get('hour', 0):02d}:{slot.get('minute', 0):02d}", []).append(slot.get("weekday"))
-            return "; ".join(f"{', '.join(WEEKDAYS[w] for w in sorted(days))} {hour}" for hour, days in sorted(by_hour.items()))
+        def fmt(window):
+            return f"щодня {window.get('start')}–{window.get('end')}" if window else "—"
         self.state["sent"][f"recs:{pid}"] = self.send(
-            f"📊 Аналітика пропонує змінити час публікацій.\nЗараз: {fmt(recs.get('slots', []))}\n"
-            f"Пропонує: {fmt(recs['proposed_slots'])}\n\n{recs.get('proposal_reason', '')}",
+            f"📊 Аналітика пропонує змінити діапазон публікацій.\nЗараз: {fmt(recs.get('window'))}\n"
+            f"Пропонує: {fmt(recs['proposed_window'])}\n\n{recs.get('proposal_reason', '')}",
             kb([("✅ Погодити", f"recs:yes:{pid}"), ("❌ Лишити як є", f"recs:no:{pid}")]), {"kind": "recs"})
 
     def send_photo_results(self) -> None:
