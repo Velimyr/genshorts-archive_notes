@@ -1019,6 +1019,9 @@
     },
     "387": {
       "kind": "menu"
+    },
+    "388": {
+      "kind": "nav"
     }
   },
   "approved_threads": {
@@ -1148,8 +1151,17 @@
         "credit": "Невідомий автор (LVIA Wilno, 391/6/609, 1835) / Wikimedia Commons, Public domain"
       },
       "approved_at": "2026-10-01T09:15:23+00:00",
-      "posted": false,
-      "publish_at": "2026-10-04T13:22:00+03:00"
+      "posted": true,
+      "publish_at": "2026-10-04T13:22:00+03:00",
+      "posted_ids": [
+        "18070565258497444",
+        "18100038524634923",
+        "18116925299091860",
+        "18144638401583170",
+        "18069044369504955"
+      ],
+      "posted_at": "2026-10-04T10:27:35+00:00",
+      "permalink": "https://www.threads.com/@velimyr/post/DeEam9ynEtJ"
     },
     "2026-10-01-a01": {
       "sha": "2ab04ffd2c3719d8",
