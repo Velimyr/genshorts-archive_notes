@@ -4071,6 +4071,37 @@
           "event": "idea rejected in telegram"
         }
       ]
+    },
+    {
+      "id": "2026-10-06-a01",
+      "proposed_at": "2026-10-06",
+      "stream": "fun",
+      "origin": "author",
+      "title": "Чому генеалогія краще ніж психотерапія",
+      "summary": "Чому генеалогія краще ніж психотерапія",
+      "why_now": "",
+      "sources": [],
+      "images": [],
+      "status": "approved",
+      "thread": {
+        "status": "requested",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-10-06T07:46:13+00:00",
+          "event": "author topic from telegram; thread requested"
+        }
+      ]
     }
   ]
 }
