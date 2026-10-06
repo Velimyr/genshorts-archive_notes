@@ -3994,7 +3994,7 @@
         "https://biz.ligazakon.net/news/178589_mozhna-fotografuvati-ale-ne-mozhna-deformuvati"
       ],
       "images": [],
-      "status": "proposed",
+      "status": "rejected",
       "thread": {
         "status": "none",
         "file": null
@@ -4012,6 +4012,10 @@
         {
           "at": "2026-10-06T06:14:05+00:00",
           "event": "proposed by ideas routine"
+        },
+        {
+          "at": "2026-10-06T06:55:18+00:00",
+          "event": "idea rejected in telegram"
         }
       ]
     }
