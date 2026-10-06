@@ -14,7 +14,7 @@
         "reposts": 4,
         "quotes": 2,
         "shares": 17,
-        "at": "2026-10-06T07:45:59+00:00"
+        "at": "2026-10-06T09:01:14+00:00"
       },
       "h24": {
         "views": 5894,
@@ -53,7 +53,7 @@
         "reposts": 0,
         "quotes": 0,
         "shares": 0,
-        "at": "2026-10-06T07:45:59+00:00"
+        "at": "2026-10-06T09:01:15+00:00"
       },
       "h24": {
         "views": 2007,
@@ -86,7 +86,7 @@
         "reposts": 0,
         "quotes": 0,
         "shares": 0,
-        "at": "2026-10-06T07:45:59+00:00"
+        "at": "2026-10-06T09:01:15+00:00"
       },
       "h24": {
         "views": 571,
@@ -119,7 +119,7 @@
         "reposts": 0,
         "quotes": 0,
         "shares": 0,
-        "at": "2026-10-06T07:46:00+00:00"
+        "at": "2026-10-06T09:01:15+00:00"
       },
       "h24": {
         "views": 169,
@@ -754,7 +754,7 @@
         "reposts": 0,
         "quotes": 0,
         "shares": 0,
-        "at": "2026-10-06T07:45:59+00:00"
+        "at": "2026-10-06T09:01:14+00:00"
       },
       "h24": {
         "views": 2767,
@@ -787,13 +787,13 @@
       "has_photo": false,
       "scheduled": true,
       "latest": {
-        "views": 10838,
+        "views": 10839,
         "likes": 138,
         "replies": 34,
         "reposts": 0,
         "quotes": 1,
         "shares": 3,
-        "at": "2026-10-06T07:45:58+00:00"
+        "at": "2026-10-06T09:01:14+00:00"
       },
       "h24": {
         "views": 10512,
@@ -826,7 +826,7 @@
         "reposts": 3,
         "quotes": 0,
         "shares": 1,
-        "at": "2026-10-06T07:45:58+00:00"
+        "at": "2026-10-06T09:01:13+00:00"
       },
       "h24": {
         "views": 2495,
@@ -865,7 +865,7 @@
         "reposts": 0,
         "quotes": 0,
         "shares": 0,
-        "at": "2026-10-06T07:45:58+00:00"
+        "at": "2026-10-06T09:01:13+00:00"
       },
       "h24": {
         "views": 563,
@@ -892,13 +892,13 @@
       "origin": "manual",
       "has_photo": true,
       "latest": {
-        "views": 798,
+        "views": 799,
         "likes": 24,
         "replies": 12,
         "reposts": 0,
         "quotes": 1,
         "shares": 1,
-        "at": "2026-10-06T07:45:58+00:00"
+        "at": "2026-10-06T09:01:13+00:00"
       },
       "h24": {
         "views": 654,
@@ -931,17 +931,25 @@
       "has_photo": true,
       "scheduled": true,
       "latest": {
-        "views": 2770,
+        "views": 2779,
         "likes": 163,
         "replies": 14,
         "reposts": 3,
         "quotes": 0,
         "shares": 6,
-        "at": "2026-10-06T07:45:58+00:00"
+        "at": "2026-10-06T09:01:12+00:00"
       },
       "h24": {
         "views": 2610,
         "likes": 151,
+        "replies": 14,
+        "reposts": 3,
+        "quotes": 0,
+        "shares": 6
+      },
+      "h72": {
+        "views": 2779,
+        "likes": 163,
         "replies": 14,
         "reposts": 3,
         "quotes": 0,
@@ -956,13 +964,13 @@
       "origin": "manual",
       "has_photo": false,
       "latest": {
-        "views": 389,
+        "views": 390,
         "likes": 5,
         "replies": 7,
         "reposts": 0,
         "quotes": 0,
         "shares": 0,
-        "at": "2026-10-06T07:45:57+00:00"
+        "at": "2026-10-06T09:01:12+00:00"
       },
       "h24": {
         "views": 361,
@@ -987,13 +995,13 @@
       "has_photo": true,
       "scheduled": true,
       "latest": {
-        "views": 1792,
+        "views": 1799,
         "likes": 53,
         "replies": 5,
         "reposts": 2,
         "quotes": 1,
         "shares": 2,
-        "at": "2026-10-06T07:45:57+00:00"
+        "at": "2026-10-06T09:01:12+00:00"
       },
       "h24": {
         "views": 1705,
@@ -1018,13 +1026,21 @@
       "has_photo": true,
       "scheduled": true,
       "latest": {
-        "views": 3586,
-        "likes": 57,
+        "views": 3665,
+        "likes": 59,
         "replies": 30,
         "reposts": 3,
         "quotes": 0,
         "shares": 12,
-        "at": "2026-10-06T07:45:57+00:00"
+        "at": "2026-10-06T09:01:12+00:00"
+      },
+      "h24": {
+        "views": 3665,
+        "likes": 59,
+        "replies": 30,
+        "reposts": 3,
+        "quotes": 0,
+        "shares": 12
       }
     },
     "18179932933434799": {
@@ -1035,9 +1051,9 @@
       "origin": "manual",
       "has_photo": true,
       "latest": {
-        "at": "2026-10-06T07:45:57+00:00"
+        "at": "2026-10-06T09:01:11+00:00"
       }
     }
   },
-  "updated_at": "2026-10-06T07:46:00+00:00"
+  "updated_at": "2026-10-06T09:01:15+00:00"
 }
