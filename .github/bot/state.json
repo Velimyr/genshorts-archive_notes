@@ -1283,6 +1283,9 @@
     },
     "485": {
       "kind": "menu"
+    },
+    "486": {
+      "kind": "nav"
     }
   },
   "approved_threads": {
@@ -1402,8 +1405,17 @@
         "credit": "Державний архів Житомирської області / Wikimedia Commons, Public domain"
       },
       "approved_at": "2026-10-01T07:11:21+00:00",
-      "posted": false,
-      "publish_at": "2026-10-06T13:19:00+03:00"
+      "posted": true,
+      "publish_at": "2026-10-06T13:19:00+03:00",
+      "posted_ids": [
+        "18220900738341797",
+        "17910777732544798",
+        "18139862275621461",
+        "18131513668748647",
+        "18194378362390165"
+      ],
+      "posted_at": "2026-10-06T10:22:58+00:00",
+      "permalink": "https://www.threads.com/@velimyr/post/DeJjomPoNAj"
     },
     "2026-09-30-03": {
       "sha": "33de8a3a69a07650",
