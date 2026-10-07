@@ -2800,7 +2800,7 @@
       ],
       "status": "approved",
       "thread": {
-        "status": "approved",
+        "status": "scheduled",
         "file": "data/texts/2026-10-02-05/thread.md",
         "approved_sha": "e48f55ece0998572"
       },
@@ -2868,6 +2868,14 @@
         {
           "at": "2026-10-07T09:25:21+00:00",
           "event": "photos found"
+        },
+        {
+          "at": "2026-10-07T09:27:20+00:00",
+          "event": "thread approved for Threads, awaiting time"
+        },
+        {
+          "at": "2026-10-07T09:27:20+00:00",
+          "event": "thread auto-scheduled: 2026-10-14T13:01:00+03:00"
         }
       ],
       "photo_request": false,
