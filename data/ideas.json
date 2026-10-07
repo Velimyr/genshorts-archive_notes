@@ -1485,9 +1485,10 @@
       ],
       "status": "approved",
       "thread": {
-        "status": "scheduled",
+        "status": "posted",
         "file": "data/texts/2026-09-30-03/thread.md",
-        "approved_sha": "33de8a3a69a07650"
+        "approved_sha": "33de8a3a69a07650",
+        "permalink": "https://www.threads.com/@velimyr/post/DeLyHmwm3-s"
       },
       "script": {
         "status": "none",
@@ -1589,6 +1590,10 @@
         {
           "at": "2026-10-04T06:43:05+00:00",
           "event": "retimed to window: 2026-10-07T10:02:00+03:00"
+        },
+        {
+          "at": "2026-10-07T07:06:58+00:00",
+          "event": "thread posted to Threads (3 posts)"
         }
       ],
       "photo_request": false,

@@ -1289,6 +1289,9 @@
     },
     "487": {
       "kind": "ask"
+    },
+    "488": {
+      "kind": "nav"
     }
   },
   "approved_threads": {
@@ -1429,8 +1432,15 @@
         "credit": "Петро Боклевський (Городничий, ілюстрація до «Ревізора») / Wikimedia Commons, Public domain"
       },
       "approved_at": "2026-10-01T07:46:50+00:00",
-      "posted": false,
-      "publish_at": "2026-10-07T10:02:00+03:00"
+      "posted": true,
+      "publish_at": "2026-10-07T10:02:00+03:00",
+      "posted_ids": [
+        "17887634919479965",
+        "18099671225534355",
+        "18001854176797055"
+      ],
+      "posted_at": "2026-10-07T07:06:58+00:00",
+      "permalink": "https://www.threads.com/@velimyr/post/DeLyHmwm3-s"
     },
     "2026-09-29-16": {
       "sha": "73e10ccbbc6dc17c",
