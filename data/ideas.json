@@ -4504,7 +4504,7 @@
           "license": "Public domain"
         }
       ],
-      "status": "proposed",
+      "status": "rejected",
       "thread": {
         "status": "none",
         "file": null
@@ -4522,6 +4522,10 @@
         {
           "at": "2026-10-08T06:16:44+00:00",
           "event": "proposed by ideas routine"
+        },
+        {
+          "at": "2026-10-08T06:18:31+00:00",
+          "event": "idea rejected in telegram"
         }
       ]
     },
