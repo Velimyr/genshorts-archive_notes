@@ -4563,8 +4563,9 @@
       "images": [],
       "status": "approved",
       "thread": {
-        "status": "ready",
-        "file": "data/texts/2026-10-08-05/thread.md"
+        "status": "approved",
+        "file": "data/texts/2026-10-08-05/thread.md",
+        "approved_sha": "3d47cd04e04e860e"
       },
       "script": {
         "status": "none",
@@ -4591,6 +4592,10 @@
         {
           "at": "2026-10-10T09:02:29+00:00",
           "event": "thread ready"
+        },
+        {
+          "at": "2026-10-10T09:10:03+00:00",
+          "event": "thread text approved in telegram"
         }
       ]
     },
