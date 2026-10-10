@@ -1572,6 +1572,9 @@
       "sha": "3d47cd04e04e860e",
       "text": "Ваш рід із Закарпаття? Тоді імена предків XVII–XVIII століть варто шукати не в Ужгороді, а в Будапешті. Про Ясіню там є урбари 1678, 1684, 1711 і 1754 років, і до кожного є скани.\n\nУрбар — це опис повинностей підданих: хто з селян що мав і що за це був винен панові. Для генеалога це перелік господарів села.\n---\nЗакарпаття тоді належало Угорському королівству, тому урбари зберігаються в Угорському національному архіві. У шифрі це позначено як HU MNL OL. E 156 і C 59 у шифрі — це фонди. Фонд — це великий масив документів однієї установи.\n\nОдин урбар часто охоплює цілий маєток. Справа E 156 - a. - Fasc. 148. - No. 031 (1678) — це маєток Бичків: Великий Бичків, Рахів, Луг, Ясіня та ще кілька сіл.\n---\nЯк знайти своє село: введіть його назву в пошук Інвентаріуму й відфільтруйте записи за типом «Урбар». Звірте давню назву: Ясіня — Kőrösmező, Стеблівка — Száldobos. У записі є шифр, сторінка, з якої починається ваше село, і посилання на скани.\n\nБільше — у «Записках диванного архівіста»: https://t.me/archivist_notes\n---\nДжерела:\nhttps://inventarium.org.ua/search?q=Урбар\nhttps://inventarium.org.ua/search?q=Ясіня\nhttps://inventarium.org.ua/case?case_signature=HU%20MNL%20OL%20E%20156%20-%20a.%20-%20Fasc.%20148.%20-%20No.%20031\nhttps://inventarium.org.ua/record/f32329a6-93f7-4482-9cd0-6faee1d03d43\nhttps://inventarium.org.ua/record/d4ef8287-022c-45af-ac10-024eb0fac441\nhttps://archives.hungaricana.hu/hu/urbarium/hu_mnl_ol_e156_a_fasc148_no031/",
       "topic": "Генеалогія"
+    },
+    "588": {
+      "kind": "when"
     }
   },
   "approved_threads": {
@@ -1932,7 +1935,7 @@
         "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0e/M%C3%A1ramaros_county_administrative_map.jpg/1280px-M%C3%A1ramaros_county_administrative_map.jpg",
         "credit": "Невідомий автор / Wikimedia Commons, Public domain"
       },
-      "approved_at": "2026-10-10T09:41:05+00:00",
+      "approved_at": "2026-10-10T09:44:15+00:00",
       "posted": false,
       "publish_at": "pending"
     }
@@ -2222,7 +2225,8 @@
     928737210,
     928737211,
     928737212,
-    928737213
+    928737213,
+    928737214
   ],
   "analytics_at": "2026-10-10T09:01:01+00:00",
   "reminded_slots": [
