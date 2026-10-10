@@ -4560,7 +4560,26 @@
         "https://inventarium.org.ua/",
         "https://inventarium.org.ua/search?q=Урбар"
       ],
-      "images": [],
+      "images": [
+        {
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c0/20190502_National_Archives_of_Hungary_in_Budapest_1021_1960_DxO.jpg/1280px-20190502_National_Archives_of_Hungary_in_Budapest_1021_1960_DxO.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:20190502_National_Archives_of_Hungary_in_Budapest_1021_1960_DxO.jpg",
+          "credit": "Jakub Hałun / Wikimedia Commons, CC BY-SA 4.0",
+          "license": "CC BY-SA 4.0"
+        },
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/3/3d/Kola%C4%8D%C3%ADn_urb%C3%A1r_1555.png",
+          "page": "https://commons.wikimedia.org/wiki/File:Kola%C4%8D%C3%ADn_urb%C3%A1r_1555.png",
+          "credit": "Thesilentman / Wikimedia Commons, CC BY-SA 4.0",
+          "license": "CC BY-SA 4.0"
+        },
+        {
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0e/M%C3%A1ramaros_county_administrative_map.jpg/1280px-M%C3%A1ramaros_county_administrative_map.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:M%C3%A1ramaros_county_administrative_map.jpg",
+          "credit": "Невідомий автор / Wikimedia Commons, Public domain",
+          "license": "Public domain"
+        }
+      ],
       "status": "approved",
       "thread": {
         "status": "approved",
@@ -4600,9 +4619,13 @@
         {
           "at": "2026-10-10T09:28:37+00:00",
           "event": "photo search requested in telegram"
+        },
+        {
+          "at": "2026-10-10T09:36:18+00:00",
+          "event": "photos found"
         }
       ],
-      "photo_request": true,
+      "photo_request": false,
       "photo_error": "",
       "photo_keywords": "",
       "photo_requested_at": "2026-10-10T09:28:37+00:00"
