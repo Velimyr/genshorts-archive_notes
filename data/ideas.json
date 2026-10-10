@@ -3540,7 +3540,7 @@
       ],
       "status": "approved",
       "thread": {
-        "status": "ready",
+        "status": "revise",
         "file": "data/texts/2026-10-03-06/thread.md"
       },
       "script": {
@@ -3551,7 +3551,13 @@
         "status": "none",
         "telegram_message_id": null
       },
-      "revisions": [],
+      "revisions": [
+        {
+          "kind": "thread",
+          "text": "Додай примітку що варто орієнтуватися на правильний календар. Замість таблиця вживай родовід. Додай примітку що може бути виключення",
+          "at": "2026-10-10T06:45:23+00:00"
+        }
+      ],
       "history": [
         {
           "at": "2026-10-03T07:29:22+00:00",
@@ -3568,6 +3574,10 @@
         {
           "at": "2026-10-10T06:34:25+00:00",
           "event": "thread ready"
+        },
+        {
+          "at": "2026-10-10T06:45:23+00:00",
+          "event": "thread revision requested"
         }
       ]
     },
