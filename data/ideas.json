@@ -5220,7 +5220,7 @@
           "license": "Public domain"
         }
       ],
-      "status": "proposed",
+      "status": "rejected",
       "thread": {
         "status": "none",
         "file": null
@@ -5238,6 +5238,10 @@
         {
           "at": "2026-10-11T06:34:46+00:00",
           "event": "proposed by ideas routine"
+        },
+        {
+          "at": "2026-10-11T09:10:09+00:00",
+          "event": "idea rejected in telegram"
         }
       ]
     },
@@ -5265,7 +5269,7 @@
           "license": "Public domain"
         }
       ],
-      "status": "proposed",
+      "status": "rejected",
       "thread": {
         "status": "none",
         "file": null
@@ -5283,6 +5287,10 @@
         {
           "at": "2026-10-11T06:34:46+00:00",
           "event": "proposed by ideas routine"
+        },
+        {
+          "at": "2026-10-11T09:10:08+00:00",
+          "event": "idea rejected in telegram"
         }
       ]
     },
