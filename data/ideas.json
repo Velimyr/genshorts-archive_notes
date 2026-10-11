@@ -2510,7 +2510,26 @@
         "https://chtyvo.org.ua/authors/Mytsyk_Yurii/Liubetske_starostvo_v_opysu_maloznanoi_liustratsii_1631_1633_rr.pdf",
         "https://eprints.oa.edu.ua/8641/1/10.pdf"
       ],
-      "images": [],
+      "images": [
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/4/4b/Liubech._%D0%9B%D1%8E%D0%B1%D0%B5%D1%87_%28A._Westerveld%2C_1651%29.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Liubech._%D0%9B%D1%8E%D0%B1%D0%B5%D1%87_(A._Westerveld,_1651).jpg",
+          "credit": "Abraham van Westerveld / Wikimedia Commons, Public domain",
+          "license": "Public domain"
+        },
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/74-244-0013._%D0%93%D0%BE%D1%80%D0%BE%D0%B4%D0%B8%D1%89%D0%B5_%C2%AB%D0%97%D0%B0%D0%BC%D0%BE%D0%BA%C2%BB_%28%D0%B4%D0%B8%D1%82%D0%B8%D0%BD%D0%B5%D1%86%D1%8C_%D0%BB%D0%B5%D0%B3%D0%B5%D0%BD%D0%B4%D0%B0%D1%80%D0%BD%D0%BE%D0%B3%D0%BE_%D0%BC%D1%96%D1%81%D1%82%D0%B0_%D0%9B%D1%8E%D0%B1%D0%B5%D1%87%2C_882%29-1.jpg/1280px-74-244-0013._%D0%93%D0%BE%D1%80%D0%BE%D0%B4%D0%B8%D1%89%D0%B5_%C2%AB%D0%97%D0%B0%D0%BC%D0%BE%D0%BA%C2%BB_%28%D0%B4%D0%B8%D1%82%D0%B8%D0%BD%D0%B5%D1%86%D1%8C_%D0%BB%D0%B5%D0%B3%D0%B5%D0%BD%D0%B4%D0%B0%D1%80%D0%BD%D0%BE%D0%B3%D0%BE_%D0%BC%D1%96%D1%81%D1%82%D0%B0_%D0%9B%D1%8E%D0%B1%D0%B5%D1%87%2C_882%29-1.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:74-244-0013._%D0%93%D0%BE%D1%80%D0%BE%D0%B4%D0%B8%D1%89%D0%B5_%C2%AB%D0%97%D0%B0%D0%BC%D0%BE%D0%BA%C2%BB_(%D0%B4%D0%B8%D1%82%D0%B8%D0%BD%D0%B5%D1%86%D1%8C_%D0%BB%D0%B5%D0%B3%D0%B5%D0%BD%D0%B4%D0%B0%D1%80%D0%BD%D0%BE%D0%B3%D0%BE_%D0%BC%D1%96%D1%81%D1%82%D0%B0_%D0%9B%D1%8E%D0%B1%D0%B5%D1%87,_882)-1.jpg",
+          "credit": "Demmarcos / Wikimedia Commons, CC BY-SA 4.0",
+          "license": "CC BY-SA 4.0"
+        },
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/c/c8/Battle_of_Loyew_by_Westerveld.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Battle_of_Loyew_by_Westerveld.jpg",
+          "credit": "Abraham van Westerveld / Wikimedia Commons, Public domain",
+          "license": "Public domain"
+        }
+      ],
       "status": "approved",
       "thread": {
         "status": "approved",
@@ -2550,9 +2569,13 @@
         {
           "at": "2026-10-11T09:17:10+00:00",
           "event": "photo search requested in telegram"
+        },
+        {
+          "at": "2026-10-11T09:31:12+00:00",
+          "event": "photos found"
         }
       ],
-      "photo_request": true,
+      "photo_request": false,
       "photo_error": "",
       "photo_keywords": "",
       "photo_requested_at": "2026-10-11T09:17:10+00:00"
