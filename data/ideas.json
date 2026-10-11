@@ -2513,7 +2513,7 @@
       "images": [],
       "status": "approved",
       "thread": {
-        "status": "none",
+        "status": "requested",
         "file": null
       },
       "script": {
@@ -2533,6 +2533,10 @@
         {
           "at": "2026-10-01T20:15:30+00:00",
           "event": "idea approved in telegram"
+        },
+        {
+          "at": "2026-10-11T09:11:31+00:00",
+          "event": "thread requested in telegram"
         }
       ]
     },
