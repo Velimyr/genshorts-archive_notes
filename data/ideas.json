@@ -4865,7 +4865,7 @@
           "license": "Public domain"
         }
       ],
-      "status": "proposed",
+      "status": "approved",
       "thread": {
         "status": "none",
         "file": null
@@ -4883,6 +4883,10 @@
         {
           "at": "2026-10-11T06:34:46+00:00",
           "event": "proposed by ideas routine"
+        },
+        {
+          "at": "2026-10-11T07:11:46+00:00",
+          "event": "idea approved in telegram"
         }
       ]
     },
