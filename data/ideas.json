@@ -4840,6 +4840,468 @@
           "event": "idea rejected in telegram"
         }
       ]
+    },
+    {
+      "id": "2026-10-11-01",
+      "proposed_at": "2026-10-11",
+      "stream": "big",
+      "title": "Генеральне слідство про маєтності 1729–1731: хто чим володів у Гетьманщині",
+      "summary": "Сотні сіл десяти полків Лівобережжя опитали старожилів: засновники, власники, кількість дворів, документи на землю. Розбираємо шість категорій маєтностей, де зберігаються книги (РДАДА, мікрокопії в ЦДІАК Київ) і де їхні видання — для пошуку села й власника до 1730-х.",
+      "why_now": "Практичний джерельний тред про Гетьманщину; доповнює ідею про полково-сотенний поділ, але про інше джерело.",
+      "sources": [
+        "https://uk.wikipedia.org/wiki/Генеральне_слідство_про_маєтності"
+      ],
+      "images": [
+        {
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/aa/%D0%93%D0%B5%D0%BD%D0%B5%D1%80%D0%B0%D0%BB%D1%8C%D0%BD%D0%B5_%D1%81%D0%BB%D1%96%D0%B4%D1%81%D1%82%D0%B2%D0%BE_%D0%BF%D1%80%D0%BE_%D0%BC%D0%B0%D1%94%D1%82%D0%BD%D0%BE%D1%81%D1%82%D1%96_%D0%A1%D1%82%D0%B0%D1%80%D0%BE%D0%B4%D1%83%D0%B1%D1%81%D1%8C%D0%BA%D0%BE%D0%B3%D0%BE_%D0%BF%D0%BE%D0%BB%D0%BA%D1%83_%281929%29.djvu/page1-1280px-%D0%93%D0%B5%D0%BD%D0%B5%D1%80%D0%B0%D0%BB%D1%8C%D0%BD%D0%B5_%D1%81%D0%BB%D1%96%D0%B4%D1%81%D1%82%D0%B2%D0%BE_%D0%BF%D1%80%D0%BE_%D0%BC%D0%B0%D1%94%D1%82%D0%BD%D0%BE%D1%81%D1%82%D1%96_%D0%A1%D1%82%D0%B0%D1%80%D0%BE%D0%B4%D1%83%D0%B1%D1%81%D1%8C%D0%BA%D0%BE%D0%B3%D0%BE_%D0%BF%D0%BE%D0%BB%D0%BA%D1%83_%281929%29.djvu.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:%D0%93%D0%B5%D0%BD%D0%B5%D1%80%D0%B0%D0%BB%D1%8C%D0%BD%D0%B5_%D1%81%D0%BB%D1%96%D0%B4%D1%81%D1%82%D0%B2%D0%BE_%D0%BF%D1%80%D0%BE_%D0%BC%D0%B0%D1%94%D1%82%D0%BD%D0%BE%D1%81%D1%82%D1%96_%D0%A1%D1%82%D0%B0%D1%80%D0%BE%D0%B4%D1%83%D0%B1%D1%81%D1%8C%D0%BA%D0%BE%D0%B3%D0%BE_%D0%BF%D0%BE%D0%BB%D0%BA%D1%83_(1929).djvu",
+          "credit": "Катерина Олександрівна Лазаревська / Wikimedia Commons, Public domain",
+          "license": "Public domain"
+        },
+        {
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b0/%D0%93%D0%B5%D0%BD%D0%B5%D1%80%D0%B0%D0%BB%D1%8C%D0%BD%D0%B5_%D1%81%D0%BB%D1%96%D0%B4%D1%81%D1%82%D0%B2%D0%BE_%D0%BF%D1%80%D0%BE_%D0%BC%D0%B0%D1%94%D1%82%D0%BD%D0%BE%D1%81%D1%82%D1%96_%D0%9B%D1%83%D0%B1%D0%B5%D0%BD%D1%81%D1%8C%D0%BA%D0%BE%D0%B3%D0%BE_%D0%BF%D0%BE%D0%BB%D0%BA%D1%83_1729_%E2%80%93_1730_%D1%80%D1%80._%281931%29.pdf/page1-960px-%D0%93%D0%B5%D0%BD%D0%B5%D1%80%D0%B0%D0%BB%D1%8C%D0%BD%D0%B5_%D1%81%D0%BB%D1%96%D0%B4%D1%81%D1%82%D0%B2%D0%BE_%D0%BF%D1%80%D0%BE_%D0%BC%D0%B0%D1%94%D1%82%D0%BD%D0%BE%D1%81%D1%82%D1%96_%D0%9B%D1%83%D0%B1%D0%B5%D0%BD%D1%81%D1%8C%D0%BA%D0%BE%D0%B3%D0%BE_%D0%BF%D0%BE%D0%BB%D0%BA%D1%83_1729_%E2%80%93_1730_%D1%80%D1%80._%281931%29.pdf.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:%D0%93%D0%B5%D0%BD%D0%B5%D1%80%D0%B0%D0%BB%D1%8C%D0%BD%D0%B5_%D1%81%D0%BB%D1%96%D0%B4%D1%81%D1%82%D0%B2%D0%BE_%D0%BF%D1%80%D0%BE_%D0%BC%D0%B0%D1%94%D1%82%D0%BD%D0%BE%D1%81%D1%82%D1%96_%D0%9B%D1%83%D0%B1%D0%B5%D0%BD%D1%81%D1%8C%D0%BA%D0%BE%D0%B3%D0%BE_%D0%BF%D0%BE%D0%BB%D0%BA%D1%83_1729_%E2%80%93_1730_%D1%80%D1%80._(1931).pdf",
+          "credit": "Kateryna Lazarevska / Wikimedia Commons, Public domain",
+          "license": "Public domain"
+        }
+      ],
+      "status": "proposed",
+      "thread": {
+        "status": "none",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-10-11T06:34:46+00:00",
+          "event": "proposed by ideas routine"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-11-02",
+      "proposed_at": "2026-10-11",
+      "stream": "big",
+      "title": "Мапа Мієґа 1779–1783: найдокладніша мапа Галичини до кадастру",
+      "summary": "413 аркушів у масштабі 1:28 800, рукопис у Воєнному архіві у Відні, шість томів описів. Що на ній видно про ваше село за 1780-ми, чому вона довго лишалась секретною і як нею користуватися разом із друкованим виданням.",
+      "why_now": "Огляд картографічного ресурсу для пошуку села; позачасова тема.",
+      "sources": [
+        "https://iaepan.edu.pl/galicja/index-en.html"
+      ],
+      "images": [
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/b/b2/Dobrowlany%2C_1779%E2%80%931783.png",
+          "page": "https://commons.wikimedia.org/wiki/File:Dobrowlany,_1779%E2%80%931783.png",
+          "credit": "Friedrich von Mieg / Wikimedia Commons, Public domain",
+          "license": "Public domain"
+        },
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/d/df/Uhryniv%2C_1779%E2%80%931783%2C_map.png",
+          "page": "https://commons.wikimedia.org/wiki/File:Uhryniv,_1779%E2%80%931783,_map.png",
+          "credit": "Josephinische Landesaufnahme / Wikimedia Commons, Public domain",
+          "license": "Public domain"
+        },
+        {
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/59/%D0%9F%D0%BE%D1%85%D1%96%D0%B2%D0%BA%D0%B0_%D0%BD%D0%B0_%D0%BC%D0%B0%D0%BF%D1%96_1779%E2%80%931783.png/1280px-%D0%9F%D0%BE%D1%85%D1%96%D0%B2%D0%BA%D0%B0_%D0%BD%D0%B0_%D0%BC%D0%B0%D0%BF%D1%96_1779%E2%80%931783.png",
+          "page": "https://commons.wikimedia.org/wiki/File:%D0%9F%D0%BE%D1%85%D1%96%D0%B2%D0%BA%D0%B0_%D0%BD%D0%B0_%D0%BC%D0%B0%D0%BF%D1%96_1779%E2%80%931783.png",
+          "credit": "Friedrich von Mieg / Wikimedia Commons, Public domain",
+          "license": "Public domain"
+        }
+      ],
+      "status": "proposed",
+      "thread": {
+        "status": "none",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-10-11T06:34:46+00:00",
+          "event": "proposed by ideas routine"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-11-03",
+      "proposed_at": "2026-10-11",
+      "stream": "big",
+      "title": "Słownik geograficzny 1880–1902: енциклопедія сіл, яку варто відкрити першою",
+      "summary": "Багатотомний польський словник із описом містечок і сіл (власники, парафії, населення), що охоплює й українські землі. Як користуватися Wikisource і скановані копії, як шукати за польською назвою та чим словник не замінює архівних джерел.",
+      "why_now": "Огляд ресурсу, корисний будь-якому дослідникові, який читає польською чи латиною.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Geographical_Dictionary_of_the_Kingdom_of_Poland"
+      ],
+      "images": [
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/1/17/Karta_tytu%C5%82owa_S%C5%82ownika_geograficznego_Kr%C3%B3lestwa_Polskiego_i_innych_kraj%C3%B3w_s%C5%82owia%C5%84skich.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Karta_tytu%C5%82owa_S%C5%82ownika_geograficznego_Kr%C3%B3lestwa_Polskiego_i_innych_kraj%C3%B3w_s%C5%82owia%C5%84skich.jpg",
+          "credit": "ICM UW / Wikimedia Commons, CC BY 3.0",
+          "license": "CC BY 3.0"
+        },
+        {
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3e/PL_S%C5%82ownik_geograficzny_Kr%C3%B3lestwa_Polskiego_i_innych_kraj%C3%B3w_s%C5%82owia%C5%84skich._T._1.djvu/page1-1280px-PL_S%C5%82ownik_geograficzny_Kr%C3%B3lestwa_Polskiego_i_innych_kraj%C3%B3w_s%C5%82owia%C5%84skich._T._1.djvu.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:PL_S%C5%82ownik_geograficzny_Kr%C3%B3lestwa_Polskiego_i_innych_kraj%C3%B3w_s%C5%82owia%C5%84skich._T._1.djvu",
+          "credit": "Filip Sulimierski / Bronisław Chlebowski / Władysław Walewsk / Wikimedia Commons, Public domain",
+          "license": "Public domain"
+        }
+      ],
+      "status": "proposed",
+      "thread": {
+        "status": "none",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-10-11T06:34:46+00:00",
+          "event": "proposed by ideas routine"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-11-04",
+      "proposed_at": "2026-10-11",
+      "stream": "big",
+      "title": "Малоросійський гербовник 1914: 700 гербів старшинських родів",
+      "summary": "Видання Лукомського й Модзалевського з малюнками Нарбута: що воно містить і чого не варто чекати (герб не доводить спорідненість). Поруч — «Малороссийский родословник» Модзалевського на Commons: як шукати предків у родоводах старшини.",
+      "why_now": "Огляд друкованого довідника для тих, хто шукає старшинських предків; страхує від міфу «герб = рід».",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Armorial_of_Little_Russia"
+      ],
+      "images": [
+        {
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/03/%D0%93%D0%B5%D1%80%D0%B1_%D0%9E%D1%81%D1%82%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%B4%D1%81%D1%8C%D0%BA%D0%B8%D1%85.png/1280px-%D0%93%D0%B5%D1%80%D0%B1_%D0%9E%D1%81%D1%82%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%B4%D1%81%D1%8C%D0%BA%D0%B8%D1%85.png",
+          "page": "https://commons.wikimedia.org/wiki/File:%D0%93%D0%B5%D1%80%D0%B1_%D0%9E%D1%81%D1%82%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%B4%D1%81%D1%8C%D0%BA%D0%B8%D1%85.png",
+          "credit": "Screwhead95 / Wikimedia Commons, CC BY-SA 4.0",
+          "license": "CC BY-SA 4.0"
+        },
+        {
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/02/%D0%9C%D0%B0%D0%BB%D0%BE%D1%80%D0%BE%D1%81%D1%81%D0%B8%D0%B9%D1%81%D0%BA%D0%B8%D0%B9_%D0%93%D0%B5%D1%80%D0%B1%D0%BE%D0%B2%D0%BD%D0%B8%D0%BA_%D0%92._%D0%9A._%D0%9B%D1%83%D0%BA%D0%BE%D0%BC%D1%81%D0%BA%D0%B8%D0%B9%2C_%D0%A1%D0%B0%D0%BD%D0%BA%D1%82-%D0%9F%D0%B5%D1%82%D0%B5%D1%80%D0%B1%D1%83%D1%80%D0%B3%2C_1914._%D0%91%D0%BE%D1%80%D0%BE%D1%85%D0%BE%D0%B2%D0%B8%D1%87%D1%96.pdf/page1-960px-%D0%9C%D0%B0%D0%BB%D0%BE%D1%80%D0%BE%D1%81%D1%81%D0%B8%D0%B9%D1%81%D0%BA%D0%B8%D0%B9_%D0%93%D0%B5%D1%80%D0%B1%D0%BE%D0%B2%D0%BD%D0%B8%D0%BA_%D0%92._%D0%9A._%D0%9B%D1%83%D0%BA%D0%BE%D0%BC%D1%81%D0%BA%D0%B8%D0%B9%2C_%D0%A1%D0%B0%D0%BD%D0%BA%D1%82-%D0%9F%D0%B5%D1%82%D0%B5%D1%80%D0%B1%D1%83%D1%80%D0%B3%2C_1914._%D0%91%D0%BE%D1%80%D0%BE%D1%85%D0%BE%D0%B2%D0%B8%D1%87%D1%96.pdf.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:%D0%9C%D0%B0%D0%BB%D0%BE%D1%80%D0%BE%D1%81%D1%81%D0%B8%D0%B9%D1%81%D0%BA%D0%B8%D0%B9_%D0%93%D0%B5%D1%80%D0%B1%D0%BE%D0%B2%D0%BD%D0%B8%D0%BA_%D0%92._%D0%9A._%D0%9B%D1%83%D0%BA%D0%BE%D0%BC%D1%81%D0%BA%D0%B8%D0%B9,_%D0%A1%D0%B0%D0%BD%D0%BA%D1%82-%D0%9F%D0%B5%D1%82%D0%B5%D1%80%D0%B1%D1%83%D1%80%D0%B3,_1914._%D0%91%D0%BE%D1%80%D0%BE%D1%85%D0%BE%D0%B2%D0%B8%D1%87%D1%96.pdf",
+          "credit": "В. К. Лукомский / Wikimedia Commons, Public domain",
+          "license": "Public domain"
+        },
+        {
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/32/%D0%9C%D0%B0%D0%BB%D0%BE%D1%80%D0%BE%D1%81%D1%81%D0%B8%D0%B9%D1%81%D0%BA%D0%B8%D0%B9_%D1%80%D0%BE%D0%B4%D0%BE%D1%81%D0%BB%D0%BE%D0%B2%D0%BD%D0%B8%D0%BA._%D0%A2%D0%BE%D0%BC_4_%28%D1%81%D1%82%D1%80._220-432%29.pdf/page1-960px-%D0%9C%D0%B0%D0%BB%D0%BE%D1%80%D0%BE%D1%81%D1%81%D0%B8%D0%B9%D1%81%D0%BA%D0%B8%D0%B9_%D1%80%D0%BE%D0%B4%D0%BE%D1%81%D0%BB%D0%BE%D0%B2%D0%BD%D0%B8%D0%BA._%D0%A2%D0%BE%D0%BC_4_%28%D1%81%D1%82%D1%80._220-432%29.pdf.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:%D0%9C%D0%B0%D0%BB%D0%BE%D1%80%D0%BE%D1%81%D1%81%D0%B8%D0%B9%D1%81%D0%BA%D0%B8%D0%B9_%D1%80%D0%BE%D0%B4%D0%BE%D1%81%D0%BB%D0%BE%D0%B2%D0%BD%D0%B8%D0%BA._%D0%A2%D0%BE%D0%BC_4_(%D1%81%D1%82%D1%80._220-432).pdf",
+          "credit": "Модзалевский Вадим Львович / Wikimedia Commons, Public domain",
+          "license": "Public domain"
+        }
+      ],
+      "status": "proposed",
+      "thread": {
+        "status": "none",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-10-11T06:34:46+00:00",
+          "event": "proposed by ideas routine"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-11-05",
+      "proposed_at": "2026-10-11",
+      "stream": "big",
+      "title": "Arolsen Archives: де шукати примусових робітників з України",
+      "summary": "Мільйони документів про переслідуваних і примусових робітників; онлайн-архів, форма запиту, кампанія #StolenMemory і історія повернення гаманця родині зі Стрийщини. Як підготувати запит про родича, вивезеного до Німеччини.",
+      "why_now": "Огляд ресурсу для сімей, чиї родичі працювали примусово в Рейху; на сайті постійно додають оцифроване.",
+      "sources": [
+        "https://arolsen-archives.org/en/news/searching-for-traces-in-the-ukraine/"
+      ],
+      "images": [
+        {
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d2/2019-06_arolsen_archives_01.jpg/1280px-2019-06_arolsen_archives_01.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:2019-06_arolsen_archives_01.jpg",
+          "credit": "Ziko van Dijk / Wikimedia Commons, CC BY-SA 4.0",
+          "license": "CC BY-SA 4.0"
+        },
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/1/1c/ITS_Arolsen_main_building.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:ITS_Arolsen_main_building.jpg",
+          "credit": "ITS Arolsen / Wikimedia Commons, CC BY-SA 3.0",
+          "license": "CC BY-SA 3.0"
+        }
+      ],
+      "status": "proposed",
+      "thread": {
+        "status": "none",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-10-11T06:34:46+00:00",
+          "event": "proposed by ideas routine"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-11-06",
+      "proposed_at": "2026-10-11",
+      "stream": "big",
+      "title": "Одеські метричні книги 1780–1898 на FamilySearch: 2,2 млн записів",
+      "summary": "Колекція з Державного архіву Одеської області: 358 915 зображень, 5,5 млн осіб, колишня Херсонська губернія. Паралельно на Commons викладено окремі книги ДАОО. Як працювати з обома джерелами й що перевіряти в шифрі справи.",
+      "why_now": "Огляд оцифрованої колекції для пошуку на півдні України.",
+      "sources": [
+        "https://www.familysearch.org/de/search/collection/3754709"
+      ],
+      "images": [
+        {
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/52/%D0%94%D0%90%D0%9E%D0%9E_37-2-16._1870._%D0%9C%D0%B5%D1%82%D1%80%D0%B8%D1%87%D0%BD%D0%B0_%D0%BA%D0%BD%D0%B8%D0%B3%D0%B0_%D0%A3%D1%81%D0%BF%D0%B5%D0%BD%D1%81%D1%8C%D0%BA%D0%BE%D1%97_%D0%A2%D0%B0%D1%82%D0%B0%D1%80%D0%BA%D0%BE%D0%B2%D1%81%D1%8C%D0%BA%D0%BE%D1%97_%D1%86%D0%B5%D1%80%D0%BA%D0%B2%D0%B8_%D0%BC._%D0%9E%D0%B4%D0%B5%D1%81%D0%B0.djvu/page1-1280px-%D0%94%D0%90%D0%9E%D0%9E_37-2-16._1870._%D0%9C%D0%B5%D1%82%D1%80%D0%B8%D1%87%D0%BD%D0%B0_%D0%BA%D0%BD%D0%B8%D0%B3%D0%B0_%D0%A3%D1%81%D0%BF%D0%B5%D0%BD%D1%81%D1%8C%D0%BA%D0%BE%D1%97_%D0%A2%D0%B0%D1%82%D0%B0%D1%80%D0%BA%D0%BE%D0%B2%D1%81%D1%8C%D0%BA%D0%BE%D1%97_%D1%86%D0%B5%D1%80%D0%BA%D0%B2%D0%B8_%D0%BC._%D0%9E%D0%B4%D0%B5%D1%81%D0%B0.djvu.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:%D0%94%D0%90%D0%9E%D0%9E_37-2-16._1870._%D0%9C%D0%B5%D1%82%D1%80%D0%B8%D1%87%D0%BD%D0%B0_%D0%BA%D0%BD%D0%B8%D0%B3%D0%B0_%D0%A3%D1%81%D0%BF%D0%B5%D0%BD%D1%81%D1%8C%D0%BA%D0%BE%D1%97_%D0%A2%D0%B0%D1%82%D0%B0%D1%80%D0%BA%D0%BE%D0%B2%D1%81%D1%8C%D0%BA%D0%BE%D1%97_%D1%86%D0%B5%D1%80%D0%BA%D0%B2%D0%B8_%D0%BC._%D0%9E%D0%B4%D0%B5%D1%81%D0%B0.djvu",
+          "credit": "Державний архів Одеської області / Wikimedia Commons, Public domain",
+          "license": "Public domain"
+        },
+        {
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c5/%D0%94%D0%90%D0%9E%D0%9E_37-3-129._1808._%D0%9C%D0%B5%D1%82%D1%80%D0%B8%D1%87%D0%BD%D0%B0_%D0%BA%D0%BD%D0%B8%D0%B3%D0%B0_%D0%A1%D0%B2._%D0%9C%D0%B8%D0%BA%D0%BE%D0%BB%D0%B0%D1%97%D0%B2%D1%81%D1%8C%D0%BA%D0%BE%D1%97_%D1%86%D0%B5%D1%80%D0%BA%D0%B2%D0%B8_%D0%BC._%D0%9E%D0%B4%D0%B5%D1%81%D0%B0.pdf/page1-1280px-%D0%94%D0%90%D0%9E%D0%9E_37-3-129._1808._%D0%9C%D0%B5%D1%82%D1%80%D0%B8%D1%87%D0%BD%D0%B0_%D0%BA%D0%BD%D0%B8%D0%B3%D0%B0_%D0%A1%D0%B2._%D0%9C%D0%B8%D0%BA%D0%BE%D0%BB%D0%B0%D1%97%D0%B2%D1%81%D1%8C%D0%BA%D0%BE%D1%97_%D1%86%D0%B5%D1%80%D0%BA%D0%B2%D0%B8_%D0%BC._%D0%9E%D0%B4%D0%B5%D1%81%D0%B0.pdf.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:%D0%94%D0%90%D0%9E%D0%9E_37-3-129._1808._%D0%9C%D0%B5%D1%82%D1%80%D0%B8%D1%87%D0%BD%D0%B0_%D0%BA%D0%BD%D0%B8%D0%B3%D0%B0_%D0%A1%D0%B2._%D0%9C%D0%B8%D0%BA%D0%BE%D0%BB%D0%B0%D1%97%D0%B2%D1%81%D1%8C%D0%BA%D0%BE%D1%97_%D1%86%D0%B5%D1%80%D0%BA%D0%B2%D0%B8_%D0%BC._%D0%9E%D0%B4%D0%B5%D1%81%D0%B0.pdf",
+          "credit": "Державний архів Одеської області / Wikimedia Commons, Public domain",
+          "license": "Public domain"
+        },
+        {
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/57/%D0%94%D0%90%D0%9E%D0%9E_37-13-32._1885_%D1%80%D1%96%D0%BA._%D0%9C%D0%B5%D1%82%D1%80%D0%B8%D1%87%D0%BD%D0%B0_%D0%BA%D0%BD%D0%B8%D0%B3%D0%B0_%D0%9C%D0%B8%D1%85%D0%B0%D0%B9%D0%BB%D1%96%D0%B2%D1%81%D1%8C%D0%BA%D0%BE%D1%97%2C_%D1%89%D0%BE_%D0%BD%D0%B0_%D0%9C%D0%BE%D0%BB%D0%B4%D0%B0%D0%B2%D0%B0%D0%BD%D1%86%D1%96_%D1%86%D0%B5%D1%80%D0%BA%D0%B2%D0%B8_%D0%BC._%D0%9E%D0%B4%D0%B5%D1%81%D0%B0._%D0%9D%D0%B0%D1%80%D0%BE%D0%B4%D0%B6%D0%B5%D0%BD%D0%BD%D1%8F%2C_%D1%88%D0%BB%D1%8E%D0%B1%2C_%D1%81%D0%BC%D0%B5%D1%80%D1%82%D1%8C.pdf/page1-1280px-thumbnail.pdf.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:%D0%94%D0%90%D0%9E%D0%9E_37-13-32._1885_%D1%80%D1%96%D0%BA._%D0%9C%D0%B5%D1%82%D1%80%D0%B8%D1%87%D0%BD%D0%B0_%D0%BA%D0%BD%D0%B8%D0%B3%D0%B0_%D0%9C%D0%B8%D1%85%D0%B0%D0%B9%D0%BB%D1%96%D0%B2%D1%81%D1%8C%D0%BA%D0%BE%D1%97,_%D1%89%D0%BE_%D0%BD%D0%B0_%D0%9C%D0%BE%D0%BB%D0%B4%D0%B0%D0%B2%D0%B0%D0%BD%D1%86%D1%96_%D1%86%D0%B5%D1%80%D0%BA%D0%B2%D0%B8_%D0%BC._%D0%9E%D0%B4%D0%B5%D1%81%D0%B0._%D0%9D%D0%B0%D1%80%D0%BE%D0%B4%D0%B6%D0%B5%D0%BD%D0%BD%D1%8F,_%D1%88%D0%BB%D1%8E%D0%B1,_%D1%81%D0%BC%D0%B5%D1%80%D1%82%D1%8C.pdf",
+          "credit": "Alexkrakovsky / Wikimedia Commons, CC BY-SA 4.0",
+          "license": "CC BY-SA 4.0"
+        }
+      ],
+      "status": "proposed",
+      "thread": {
+        "status": "none",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-10-11T06:34:46+00:00",
+          "event": "proposed by ideas routine"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-11-07",
+      "proposed_at": "2026-10-11",
+      "stream": "big",
+      "title": "«Архив Юго-Западной России»: 35 томів актів, які ніхто не читає цілком",
+      "summary": "Видання Київської комісії для розбору давніх актів 1859–1914: церква, шляхетські сеймики, козаччина, міста, землеволодіння. Приклад — частина 8, том 4 (1907, 772 с.), де є документи про землеволодіння XV–XVIII ст. і де знайти скани.",
+      "why_now": "Огляд публікації джерел, що часто пропускають у родинних пошуках.",
+      "sources": [
+        "https://uknol.info/en/Records/ArchivJuZR_8_04.html"
+      ],
+      "images": [
+        {
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/63/%D0%90%D1%80%D1%85%D0%B8%D0%B2_%D0%AE%D0%B3%D0%BE-%D0%97%D0%B0%D0%BF%D0%B0%D0%B4%D0%BD%D0%BE%D0%B9_%D0%A0%D0%BE%D1%81%D1%81%D0%B8%D0%B8_%D0%A7%D0%B0%D1%81%D1%82%D1%8C_08_%D0%A2%D0%BE%D0%BC_06_1911.djvu/page1-1280px-%D0%90%D1%80%D1%85%D0%B8%D0%B2_%D0%AE%D0%B3%D0%BE-%D0%97%D0%B0%D0%BF%D0%B0%D0%B4%D0%BD%D0%BE%D0%B9_%D0%A0%D0%BE%D1%81%D1%81%D0%B8%D0%B8_%D0%A7%D0%B0%D1%81%D1%82%D1%8C_08_%D0%A2%D0%BE%D0%BC_06_1911.djvu.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:%D0%90%D1%80%D1%85%D0%B8%D0%B2_%D0%AE%D0%B3%D0%BE-%D0%97%D0%B0%D0%BF%D0%B0%D0%B4%D0%BD%D0%BE%D0%B9_%D0%A0%D0%BE%D1%81%D1%81%D0%B8%D0%B8_%D0%A7%D0%B0%D1%81%D1%82%D1%8C_08_%D0%A2%D0%BE%D0%BC_06_1911.djvu",
+          "credit": "дореволюционное издание / Wikimedia Commons, Public domain",
+          "license": "Public domain"
+        },
+        {
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/06/%D0%90%D1%80%D1%85%D0%B8%D0%B2_%D0%AE%D0%B3%D0%BE-%D0%97%D0%B0%D0%BF%D0%B0%D0%B4%D0%BD%D0%BE%D0%B9_%D0%A0%D0%BE%D1%81%D1%81%D0%B8%D0%B8_%D0%A7%D0%B0%D1%81%D1%82%D1%8C_01_%D0%A2%D0%BE%D0%BC_01_1859.djvu/page1-1280px-%D0%90%D1%80%D1%85%D0%B8%D0%B2_%D0%AE%D0%B3%D0%BE-%D0%97%D0%B0%D0%BF%D0%B0%D0%B4%D0%BD%D0%BE%D0%B9_%D0%A0%D0%BE%D1%81%D1%81%D0%B8%D0%B8_%D0%A7%D0%B0%D1%81%D1%82%D1%8C_01_%D0%A2%D0%BE%D0%BC_01_1859.djvu.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:%D0%90%D1%80%D1%85%D0%B8%D0%B2_%D0%AE%D0%B3%D0%BE-%D0%97%D0%B0%D0%BF%D0%B0%D0%B4%D0%BD%D0%BE%D0%B9_%D0%A0%D0%BE%D1%81%D1%81%D0%B8%D0%B8_%D0%A7%D0%B0%D1%81%D1%82%D1%8C_01_%D0%A2%D0%BE%D0%BC_01_1859.djvu",
+          "credit": "дореволюционное издание / Wikimedia Commons, Public domain",
+          "license": "Public domain"
+        },
+        {
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a3/%D0%90%D1%80%D1%85%D0%B8%D0%B2_%D0%AE%D0%B3%D0%BE-%D0%97%D0%B0%D0%BF%D0%B0%D0%B4%D0%BD%D0%BE%D0%B9_%D0%A0%D0%BE%D1%81%D1%81%D0%B8%D0%B8_%D0%A7%D0%B0%D1%81%D1%82%D1%8C_07_%D0%A2%D0%BE%D0%BC_03_1905.djvu/page1-1280px-%D0%90%D1%80%D1%85%D0%B8%D0%B2_%D0%AE%D0%B3%D0%BE-%D0%97%D0%B0%D0%BF%D0%B0%D0%B4%D0%BD%D0%BE%D0%B9_%D0%A0%D0%BE%D1%81%D1%81%D0%B8%D0%B8_%D0%A7%D0%B0%D1%81%D1%82%D1%8C_07_%D0%A2%D0%BE%D0%BC_03_1905.djvu.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:%D0%90%D1%80%D1%85%D0%B8%D0%B2_%D0%AE%D0%B3%D0%BE-%D0%97%D0%B0%D0%BF%D0%B0%D0%B4%D0%BD%D0%BE%D0%B9_%D0%A0%D0%BE%D1%81%D1%81%D0%B8%D0%B8_%D0%A7%D0%B0%D1%81%D1%82%D1%8C_07_%D0%A2%D0%BE%D0%BC_03_1905.djvu",
+          "credit": "дореволюционное издание / Wikimedia Commons, Public domain",
+          "license": "Public domain"
+        }
+      ],
+      "status": "proposed",
+      "thread": {
+        "status": "none",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-10-11T06:34:46+00:00",
+          "event": "proposed by ideas routine"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-11-08",
+      "proposed_at": "2026-10-11",
+      "stream": "big",
+      "title": "Фільтраційні справи остарбайтерів: кейс Анни Островської з Макарівщини",
+      "summary": "Краєзнавець Віталій Гедз знайшов її справу в бліндажі біля Макарова; справу оцифрував проєкт H-Files. Що таке фільтрація, чому люди приховували роки в Німеччині і як шукати такі документи в обласних архівах.",
+      "why_now": "Кейс і методика для родин, у яких «мовчали про Німеччину».",
+      "sources": [
+        "https://zaxid.net/listi_z_togo_svitu_n1613410"
+      ],
+      "images": [
+        {
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/08/%D0%9E%D1%81%D1%82%D0%B0%D1%80%D0%B1%D0%B0%D0%B9%D1%82%D0%B5%D1%80%D0%B8_1942.jpg/1280px-%D0%9E%D1%81%D1%82%D0%B0%D1%80%D0%B1%D0%B0%D0%B9%D1%82%D0%B5%D1%80%D0%B8_1942.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:%D0%9E%D1%81%D1%82%D0%B0%D1%80%D0%B1%D0%B0%D0%B9%D1%82%D0%B5%D1%80%D0%B8_1942.jpg",
+          "credit": "Unknown authorUnknown author / Wikimedia Commons, Public domain",
+          "license": "Public domain"
+        },
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/d/d6/Cherkaschyna_deportation_1942.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Cherkaschyna_deportation_1942.jpg",
+          "credit": "died / Wikimedia Commons, Public domain",
+          "license": "Public domain"
+        }
+      ],
+      "status": "proposed",
+      "thread": {
+        "status": "none",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-10-11T06:34:46+00:00",
+          "event": "proposed by ideas routine"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-11-09",
+      "proposed_at": "2026-10-11",
+      "stream": "big",
+      "title": "Київські консисторські дублікати метрик: 12,8 млн записів у FamilySearch",
+      "summary": "Дублікати метрик православних парафій Київської єпархії (теперішні Київська, Житомирська, Вінницька, Черкаська області): роки 1734–1930, 2,16 млн зображень, оригінали в ЦДІАК. Як шукати і чому індекс неповний.",
+      "why_now": "Огляд колекції для центральної України; практична методика.",
+      "sources": [
+        "https://familysearch.org/search/collection/1503045"
+      ],
+      "images": [
+        {
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/30/Inside_Central_State_Historical_Archives_in_Kyiv.jpg/1280px-Inside_Central_State_Historical_Archives_in_Kyiv.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Inside_Central_State_Historical_Archives_in_Kyiv.jpg",
+          "credit": "Anntinomy / Wikimedia Commons, CC BY 4.0",
+          "license": "CC BY 4.0"
+        },
+        {
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/82/%D0%A6%D0%94%D0%86%D0%90%D0%9A_%D1%84%D0%BE%D0%BD%D0%B4_1040%2C_%D0%BE%D0%BF%D0%B8%D1%81_2%2C_%D1%81%D0%BF%D1%80%D0%B0%D0%B2%D0%B0_474._1899_%D1%80%D1%96%D0%BA._%D0%A1%D0%BF%D0%BE%D0%B2%D1%96%D0%B4%D0%BD%D0%B8%D0%B9_%D1%80%D0%BE%D0%B7%D0%BF%D0%B8%D1%81_%D0%BA%D0%BE%D1%81%D1%82%D0%B5%D0%BB%D1%83_%D0%A5%D0%B0%D0%B1%D0%BD%D0%B5.pdf/page1-960px-%D0%A6%D0%94%D0%86%D0%90%D0%9A_%D1%84%D0%BE%D0%BD%D0%B4_1040%2C_%D0%BE%D0%BF%D0%B8%D1%81_2%2C_%D1%81%D0%BF%D1%80%D0%B0%D0%B2%D0%B0_474._1899_%D1%80%D1%96%D0%BA._%D0%A1%D0%BF%D0%BE%D0%B2%D1%96%D0%B4%D0%BD%D0%B8%D0%B9_%D1%80%D0%BE%D0%B7%D0%BF%D0%B8%D1%81_%D0%BA%D0%BE%D1%81%D1%82%D0%B5%D0%BB%D1%83_%D0%A5%D0%B0%D0%B1%D0%BD%D0%B5.pdf.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:%D0%A6%D0%94%D0%86%D0%90%D0%9A_%D1%84%D0%BE%D0%BD%D0%B4_1040,_%D0%BE%D0%BF%D0%B8%D1%81_2,_%D1%81%D0%BF%D1%80%D0%B0%D0%B2%D0%B0_474._1899_%D1%80%D1%96%D0%BA._%D0%A1%D0%BF%D0%BE%D0%B2%D1%96%D0%B4%D0%BD%D0%B8%D0%B9_%D1%80%D0%BE%D0%B7%D0%BF%D0%B8%D1%81_%D0%BA%D0%BE%D1%81%D1%82%D0%B5%D0%BB%D1%83_%D0%A5%D0%B0%D0%B1%D0%BD%D0%B5.pdf",
+          "credit": "ЦДІАК України / Wikimedia Commons, Public domain",
+          "license": "Public domain"
+        }
+      ],
+      "status": "proposed",
+      "thread": {
+        "status": "none",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-10-11T06:34:46+00:00",
+          "event": "proposed by ideas routine"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-11-10",
+      "proposed_at": "2026-10-11",
+      "stream": "big",
+      "title": "Чорноморські німці: колоністи півдня України й сліди в документах",
+      "summary": "Колонізація з 1787 р. (пік 1803–1805), округи Глюксталь, Кучурган, Либенталь, Березань і Молочна, еміграція та депортації 1941 р. Ключ для пошуку: колонії та їхні округи, а також метричні книги Одещини.",
+      "why_now": "Огляд тематичного напряму для родин колоністів; теми депортацій викладаємо без жартів.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Black_Sea_Germans",
+        "https://www.familysearch.org/de/search/collection/3754709"
+      ],
+      "images": [],
+      "status": "proposed",
+      "thread": {
+        "status": "none",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-10-11T06:34:46+00:00",
+          "event": "proposed by ideas routine"
+        }
+      ]
     }
   ]
 }
