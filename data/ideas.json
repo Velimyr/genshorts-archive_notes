@@ -5168,7 +5168,7 @@
       ],
       "status": "approved",
       "thread": {
-        "status": "approved",
+        "status": "queued",
         "file": "data/texts/2026-10-11-04/thread.md",
         "approved_sha": "b14659d979ccd63d"
       },
@@ -5201,6 +5201,10 @@
         {
           "at": "2026-10-12T10:00:03+00:00",
           "event": "thread text approved in telegram"
+        },
+        {
+          "at": "2026-10-12T10:00:41+00:00",
+          "event": "thread approved for Threads, awaiting time"
         }
       ]
     },
