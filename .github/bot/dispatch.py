@@ -698,7 +698,7 @@ class Bot:
         Чергування поступається лише тоді, коли в найближчі дні підходящого слоту немає."""
         cat = self.category(idea)
         pubs = self.bot_publications(exclude=(idea or {}).get("id"))
-        slots = self.recommended_slots()
+        slots = self.recommended_slots(days=60)
         horizon = datetime.now(KYIV) + ALTERNATION_HORIZON
         strict = [s for s in slots if s <= horizon and self.slot_allowed(s, cat, pubs, strict=True)]
         loose = [s for s in slots if s not in strict and self.slot_allowed(s, cat, pubs, strict=False)]
@@ -723,7 +723,7 @@ class Bot:
         rows = [[(f"🕒 {fmt_slot(s)}", f"when:{idea['id']}:{int(s.timestamp())}")] for s in self.free_slots(3, idea)]
         rows += [[("⚡ Опублікувати зараз", f"when:{idea['id']}:now")], [("↩️ Не публікувати", f"unq:{idea['id']}")]]
         self.send(f"🕒 Коли публікуємо «{idea['title']}»?\nЗапропоновано найближчі рекомендовані години за правилами розкладу "
-                  "(до 2 тредів на день, 1 серйозний, серйозні й жартівливі по черзі).",
+                  "(одна публікація на день, серйозні й жартівливі по черзі).",
                   kb(*rows), {"kind": "when"})
 
     # ------------------------------------------------------------ вхідні
