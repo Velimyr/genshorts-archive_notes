@@ -4619,22 +4619,22 @@
       ],
       "images": [
         {
-          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c0/20190502_National_Archives_of_Hungary_in_Budapest_1021_1960_DxO.jpg/1280px-20190502_National_Archives_of_Hungary_in_Budapest_1021_1960_DxO.jpg",
-          "page": "https://commons.wikimedia.org/wiki/File:20190502_National_Archives_of_Hungary_in_Budapest_1021_1960_DxO.jpg",
-          "credit": "Jakub Hałun / Wikimedia Commons, CC BY-SA 4.0",
-          "license": "CC BY-SA 4.0"
-        },
-        {
-          "url": "https://upload.wikimedia.org/wikipedia/commons/3/3d/Kola%C4%8D%C3%ADn_urb%C3%A1r_1555.png",
-          "page": "https://commons.wikimedia.org/wiki/File:Kola%C4%8D%C3%ADn_urb%C3%A1r_1555.png",
-          "credit": "Thesilentman / Wikimedia Commons, CC BY-SA 4.0",
-          "license": "CC BY-SA 4.0"
-        },
-        {
-          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0e/M%C3%A1ramaros_county_administrative_map.jpg/1280px-M%C3%A1ramaros_county_administrative_map.jpg",
-          "page": "https://commons.wikimedia.org/wiki/File:M%C3%A1ramaros_county_administrative_map.jpg",
-          "credit": "Невідомий автор / Wikimedia Commons, Public domain",
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cd/Constitutio_rei_urbarialis_regni_Hungariae._Opera%2C_et_studio_Caroli_Pauly_%28IA_constitutioreiur01paul%29.pdf/page1-500px-Constitutio_rei_urbarialis_regni_Hungariae._Opera%2C_et_studio_Caroli_Pauly_%28IA_constitutioreiur01paul%29.pdf.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Constitutio_rei_urbarialis_regni_Hungariae._Opera,_et_studio_Caroli_Pauly_(IA_constitutioreiur01paul).pdf",
+          "credit": "Károly Pauly / Wikimedia Commons, Public domain",
           "license": "Public domain"
+        },
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/4/4f/National_Archives_of_Hungary%2C_Budapest.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:National_Archives_of_Hungary,_Budapest.jpg",
+          "credit": "József Rozsnyai / Wikimedia Commons, CC BY-SA 3.0",
+          "license": "CC BY-SA 3.0"
+        },
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/e/e0/Yasinia_view.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Yasinia_view.jpg",
+          "credit": "Varga Attila / Wikimedia Commons, CC BY-SA 2.5",
+          "license": "CC BY-SA 2.5"
         }
       ],
       "status": "approved",
@@ -4692,9 +4692,13 @@
         {
           "at": "2026-10-12T06:25:35+00:00",
           "event": "photo search requested in telegram (more)"
+        },
+        {
+          "at": "2026-10-12T07:00:00+00:00",
+          "event": "photos found"
         }
       ],
-      "photo_request": true,
+      "photo_request": false,
       "photo_error": "",
       "photo_keywords": "",
       "photo_requested_at": "2026-10-12T06:25:35+00:00",
