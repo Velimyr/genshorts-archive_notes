@@ -1740,6 +1740,9 @@
     "650": {
       "kind": "photokw",
       "idea": "2026-09-30-08"
+    },
+    "653": {
+      "kind": "nav"
     }
   },
   "approved_threads": {
@@ -2057,8 +2060,17 @@
         "credit": "Невідомий автор, сімейне фото родини Атрощенків (до 1920) / Wikimedia Commons, Public domain"
       },
       "approved_at": "2026-10-06T07:57:37+00:00",
-      "posted": false,
-      "publish_at": "2026-10-12T10:10:00+03:00"
+      "posted": true,
+      "publish_at": "2026-10-12T10:10:00+03:00",
+      "posted_ids": [
+        "18012870800971239",
+        "18145123276574109",
+        "18096786989414769",
+        "18126566281848025",
+        "18052237460805901"
+      ],
+      "posted_at": "2026-10-12T07:12:34+00:00",
+      "permalink": "https://www.threads.com/@velimyr/post/DeYqpxCFQFU"
     },
     "2026-10-02-05": {
       "sha": "e48f55ece0998572",
