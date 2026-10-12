@@ -1887,7 +1887,7 @@
       ],
       "status": "approved",
       "thread": {
-        "status": "approved",
+        "status": "queued",
         "file": "data/texts/2026-09-30-08/thread.md",
         "approved_sha": "e2704e8ee9bf359d"
       },
@@ -1944,6 +1944,10 @@
         {
           "at": "2026-10-12T07:11:25+00:00",
           "event": "photos found"
+        },
+        {
+          "at": "2026-10-12T07:13:58+00:00",
+          "event": "thread approved for Threads, awaiting time"
         }
       ],
       "photo_request": false,
