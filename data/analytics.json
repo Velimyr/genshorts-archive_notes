@@ -1184,7 +1184,7 @@
       "origin": "manual",
       "has_photo": true,
       "latest": {
-        "at": "2026-10-13T10:01:51+00:00"
+        "at": "2026-10-13T11:01:37+00:00"
       },
       "h24": {},
       "h72": {},
@@ -1210,7 +1210,7 @@
         "reposts": 0,
         "quotes": 0,
         "shares": 1,
-        "at": "2026-10-13T10:01:51+00:00"
+        "at": "2026-10-13T11:01:37+00:00"
       },
       "h24": {
         "views": 505,
@@ -1223,6 +1223,14 @@
       "h72": {
         "views": 572,
         "likes": 34,
+        "replies": 13,
+        "reposts": 0,
+        "quotes": 0,
+        "shares": 1
+      },
+      "h168": {
+        "views": 640,
+        "likes": 35,
         "replies": 13,
         "reposts": 0,
         "quotes": 0,
@@ -1243,7 +1251,7 @@
         "reposts": 0,
         "quotes": 0,
         "shares": 0,
-        "at": "2026-10-13T10:01:50+00:00"
+        "at": "2026-10-13T11:01:36+00:00"
       },
       "h24": {
         "views": 3430,
@@ -1276,7 +1284,7 @@
         "reposts": 0,
         "quotes": 0,
         "shares": 0,
-        "at": "2026-10-13T10:01:51+00:00"
+        "at": "2026-10-13T11:01:36+00:00"
       },
       "h24": {
         "views": 251,
@@ -1315,7 +1323,7 @@
         "reposts": 0,
         "quotes": 0,
         "shares": 1,
-        "at": "2026-10-13T10:01:50+00:00"
+        "at": "2026-10-13T11:01:36+00:00"
       },
       "h24": {
         "views": 552,
@@ -1348,13 +1356,13 @@
       "has_photo": true,
       "scheduled": true,
       "latest": {
-        "views": 621,
+        "views": 622,
         "likes": 28,
         "replies": 29,
         "reposts": 0,
         "quotes": 0,
         "shares": 0,
-        "at": "2026-10-13T10:01:50+00:00"
+        "at": "2026-10-13T11:01:36+00:00"
       },
       "h24": {
         "views": 558,
@@ -1381,13 +1389,13 @@
       "origin": "manual",
       "has_photo": true,
       "latest": {
-        "views": 394,
+        "views": 395,
         "likes": 56,
         "replies": 5,
         "reposts": 3,
         "quotes": 0,
         "shares": 3,
-        "at": "2026-10-13T10:01:49+00:00"
+        "at": "2026-10-13T11:01:35+00:00"
       },
       "h24": {
         "views": 334,
@@ -1420,7 +1428,7 @@
         "reposts": 0,
         "quotes": 0,
         "shares": 0,
-        "at": "2026-10-13T10:01:49+00:00"
+        "at": "2026-10-13T11:01:35+00:00"
       },
       "h24": {
         "views": 217,
@@ -1453,13 +1461,13 @@
       "has_photo": true,
       "scheduled": true,
       "latest": {
-        "views": 1700,
+        "views": 1706,
         "likes": 31,
         "replies": 35,
         "reposts": 1,
         "quotes": 0,
         "shares": 3,
-        "at": "2026-10-13T10:01:49+00:00"
+        "at": "2026-10-13T11:01:35+00:00"
       },
       "h24": {
         "views": 1380,
@@ -1486,13 +1494,13 @@
       "origin": "manual",
       "has_photo": false,
       "latest": {
-        "views": 2065,
+        "views": 2066,
         "likes": 78,
         "replies": 54,
         "reposts": 2,
         "quotes": 0,
         "shares": 0,
-        "at": "2026-10-13T10:01:49+00:00"
+        "at": "2026-10-13T11:01:35+00:00"
       },
       "h24": {
         "views": 2002,
@@ -1519,13 +1527,13 @@
       "origin": "manual",
       "has_photo": false,
       "latest": {
-        "views": 367,
+        "views": 368,
         "likes": 13,
         "replies": 23,
         "reposts": 0,
         "quotes": 0,
         "shares": 0,
-        "at": "2026-10-13T10:01:48+00:00"
+        "at": "2026-10-13T11:01:34+00:00"
       },
       "h24": {
         "views": 305,
@@ -1552,13 +1560,13 @@
       "origin": "manual",
       "has_photo": false,
       "latest": {
-        "views": 166,
+        "views": 167,
         "likes": 5,
         "replies": 10,
         "reposts": 0,
         "quotes": 0,
         "shares": 0,
-        "at": "2026-10-13T10:01:49+00:00"
+        "at": "2026-10-13T11:01:35+00:00"
       },
       "h24": {
         "views": 144,
@@ -1585,13 +1593,13 @@
       "origin": "manual",
       "has_photo": false,
       "latest": {
-        "views": 52,
+        "views": 53,
         "likes": 1,
         "replies": 0,
         "reposts": 0,
         "quotes": 0,
         "shares": 0,
-        "at": "2026-10-13T10:01:48+00:00"
+        "at": "2026-10-13T11:01:34+00:00"
       },
       "h24": {
         "views": 40,
@@ -1624,13 +1632,13 @@
       "has_photo": true,
       "scheduled": true,
       "latest": {
-        "views": 677,
+        "views": 678,
         "likes": 17,
         "replies": 9,
         "reposts": 1,
         "quotes": 0,
         "shares": 0,
-        "at": "2026-10-13T10:01:48+00:00"
+        "at": "2026-10-13T11:01:34+00:00"
       },
       "h24": {
         "views": 646,
@@ -1657,13 +1665,13 @@
       "origin": "manual",
       "has_photo": false,
       "latest": {
-        "views": 4852,
+        "views": 4854,
         "likes": 50,
         "replies": 48,
         "reposts": 0,
         "quotes": 0,
         "shares": 7,
-        "at": "2026-10-13T10:01:47+00:00"
+        "at": "2026-10-13T11:01:34+00:00"
       },
       "h24": {
         "views": 4826,
@@ -1682,13 +1690,13 @@
       "origin": "manual",
       "has_photo": true,
       "latest": {
-        "views": 586,
+        "views": 588,
         "likes": 20,
         "replies": 5,
         "reposts": 0,
         "quotes": 0,
         "shares": 0,
-        "at": "2026-10-13T10:01:47+00:00"
+        "at": "2026-10-13T11:01:34+00:00"
       },
       "h24": {
         "views": 560,
@@ -1713,13 +1721,13 @@
       "has_photo": true,
       "scheduled": true,
       "latest": {
-        "views": 338,
+        "views": 339,
         "likes": 18,
         "replies": 21,
         "reposts": 0,
         "quotes": 0,
         "shares": 1,
-        "at": "2026-10-13T10:01:47+00:00"
+        "at": "2026-10-13T11:01:33+00:00"
       },
       "h24": {
         "views": 314,
@@ -1744,13 +1752,13 @@
       "has_photo": true,
       "scheduled": true,
       "latest": {
-        "views": 590,
+        "views": 592,
         "likes": 40,
         "replies": 4,
         "reposts": 0,
         "quotes": 0,
         "shares": 0,
-        "at": "2026-10-13T10:01:46+00:00"
+        "at": "2026-10-13T11:01:33+00:00"
       },
       "h24": {
         "views": 588,
@@ -1769,13 +1777,13 @@
       "origin": "manual",
       "has_photo": false,
       "latest": {
-        "views": 102,
+        "views": 105,
         "likes": 3,
         "replies": 9,
         "reposts": 0,
         "quotes": 0,
         "shares": 0,
-        "at": "2026-10-13T10:01:46+00:00"
+        "at": "2026-10-13T11:01:33+00:00"
       }
     },
     "17919880509239877": {
@@ -1786,7 +1794,7 @@
       "origin": "manual",
       "has_photo": true,
       "latest": {
-        "at": "2026-10-13T10:01:46+00:00"
+        "at": "2026-10-13T11:01:33+00:00"
       }
     },
     "18130236911499381": {
@@ -1803,15 +1811,15 @@
       "has_photo": true,
       "scheduled": true,
       "latest": {
-        "views": 169,
-        "likes": 12,
+        "views": 258,
+        "likes": 15,
         "replies": 12,
         "reposts": 0,
         "quotes": 0,
         "shares": 1,
-        "at": "2026-10-13T10:01:46+00:00"
+        "at": "2026-10-13T11:01:32+00:00"
       }
     }
   },
-  "updated_at": "2026-10-13T10:01:51+00:00"
+  "updated_at": "2026-10-13T11:01:37+00:00"
 }
