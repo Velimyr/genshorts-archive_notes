@@ -3617,7 +3617,7 @@
       ],
       "status": "approved",
       "thread": {
-        "status": "ready",
+        "status": "revise",
         "file": "data/texts/2026-10-03-05/thread.md"
       },
       "script": {
@@ -3628,7 +3628,13 @@
         "status": "none",
         "telegram_message_id": null
       },
-      "revisions": [],
+      "revisions": [
+        {
+          "kind": "thread",
+          "text": "Перепиши на більш серйоний лад",
+          "at": "2026-10-13T07:08:46+00:00"
+        }
+      ],
       "history": [
         {
           "at": "2026-10-03T07:29:22+00:00",
@@ -3645,6 +3651,10 @@
         {
           "at": "2026-10-13T07:07:03+00:00",
           "event": "thread ready"
+        },
+        {
+          "at": "2026-10-13T07:08:46+00:00",
+          "event": "thread revision requested"
         }
       ]
     },
