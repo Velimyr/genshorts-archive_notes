@@ -2544,7 +2544,7 @@
       ],
       "status": "approved",
       "thread": {
-        "status": "none",
+        "status": "requested",
         "file": null
       },
       "script": {
@@ -2564,6 +2564,10 @@
         {
           "at": "2026-10-01T20:15:43+00:00",
           "event": "idea approved in telegram"
+        },
+        {
+          "at": "2026-10-14T09:10:15+00:00",
+          "event": "thread requested in telegram"
         }
       ]
     },
