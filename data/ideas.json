@@ -2577,8 +2577,20 @@
         {
           "at": "2026-10-14T09:49:08+00:00",
           "event": "thread text approved in telegram"
+        },
+        {
+          "at": "2026-10-14T09:51:34+00:00",
+          "event": "photo search requested in telegram (more)"
         }
-      ]
+      ],
+      "images_excluded": [
+        "https://upload.wikimedia.org/wikipedia/commons/d/d6/A.I._Rumyantsev_by_Borovikovsky.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "https://upload.wikimedia.org/wikipedia/commons/d/dd/Rumyantsev-Zadunaisky.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
+      ],
+      "photo_request": true,
+      "photo_error": "",
+      "photo_keywords": "",
+      "photo_requested_at": "2026-10-14T09:51:34+00:00"
     },
     {
       "id": "2026-10-01-07",
