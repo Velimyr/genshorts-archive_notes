@@ -92,7 +92,12 @@ STREAMS = {
     "big": ("🧵", "Великий серйозний"),
     "small": ("📌", "Малий серйозний"),
     "fun": ("😏", "Жартівливий"),
+    "tg": ("📰", "Telegram-допис"),
 }
+# Telegram-дописи: окрема черга — щовівторка о 19:00 у канал автора.
+TG_CHANNEL_ID = os.environ.get("TG_CHANNEL_ID", "").strip()
+TG_SLOT = (1, 19, 0)  # вівторок, 19:00 за Києвом
+TG_POST_LIMIT = 4096
 
 
 def now() -> str:
@@ -493,7 +498,8 @@ class Bot:
             return
         current = parse_time(item["publish_at"])
         earliest = datetime.now(KYIV) + timedelta(minutes=15)
-        slots = [s for s in self.recommended_slots(days=21) if s >= earliest]
+        source = self.tg_slots() if self.category(idea) == "T" else self.recommended_slots(days=21)
+        slots = [s for s in source if s >= earliest]
         if direction == "down":
             target = next((s for s in slots if s > current + timedelta(minutes=1)), None)
         else:
@@ -513,6 +519,8 @@ class Bot:
                 history(self.ideas[other], f"thread swapped to {other_item['publish_at']}")
             notes.append(f"🔁 Обмін: «{self.ideas.get(other, {}).get('title', other)}» → {fmt_slot(current)}.")
         for idea_id, moment in [(idea["id"], target)] + ([(other, current)] if other else []):
+            if self.category(self.ideas.get(idea_id)) == "T":
+                continue
             warning = self.rule_warning(idea_id, moment)
             if warning:
                 notes.append(f"{warning} («{self.ideas.get(idea_id, {}).get('title', idea_id)}»)")
@@ -544,6 +552,19 @@ class Bot:
     def send_preview(self, idea: dict, body: str, topic: str) -> None:
         digest = sha(body)
         photos = self.show_photos(idea)
+        if self.category(idea) == "T":
+            rows = [[(f"🕒 Запланувати з фото {n}", f"confirm:{idea['id']}:{digest}:{n}")] for n in photos]
+            rows.append([("🕒 Запланувати без фото", f"confirm:{idea['id']}:{digest}:0")])
+            rows.append([("🔄 Інші фото", f"photos:{idea['id']}:more") if photos else ("🖼 Знайти фото", f"photos:{idea['id']}"),
+                         ("🔎 Фото за словами", f"photokw:{idea['id']}")])
+            rows.append([("❌ Скасувати", "cancel")])
+            size = len("\n\n".join(thread_posts(body)))
+            self.send(f"{stream_label(idea.get('stream'))} · фінальна перевірка — «{idea['title']}»\n\n{body}"
+                      f"\n\nℹ️ Блок «Джерела» в канал не публікується. Розмір допису: {size} з {TG_POST_LIMIT} символів."
+                      + (f"\n📷 Фото над текстом: варіанти {', '.join(map(str, photos))} вище." if photos else "")
+                      + "\n🕒 Після вибору фото допис стане на найближчий вільний вівторок о 19:00.",
+                      kb(*rows), {"kind": "preview", "idea": idea["id"], "sha": digest, "text": body, "topic": ""})
+            return
         topic_line = (f"🏷 Тема поста: {topic}" if topic else "🏷 Тема поста не обрана — оберіть кнопкою нижче.")
         photo_line = (f"\n📷 Фото до першого поста: варіанти {', '.join(map(str, photos))} вище." if photos else "")
         rows = []
@@ -650,19 +671,35 @@ class Bot:
 
     @staticmethod
     def category(idea: dict | None) -> str:
-        """«S» — серйозний (великий чи малий), «F» — жартівливий."""
-        return "F" if (idea or {}).get("stream") == "fun" else "S"
+        """«S» — серйозний тред, «F» — жартівливий тред, «T» — Telegram-допис."""
+        stream = (idea or {}).get("stream")
+        return "T" if stream == "tg" else "F" if stream == "fun" else "S"
 
-    def bot_publications(self, exclude: str | None = None) -> list[tuple[datetime, str]]:
-        """Заплановані й уже опубліковані треди бота: (момент, категорія)."""
+    def bot_publications(self, exclude: str | None = None, channel: str = "threads") -> list[tuple[datetime, str]]:
+        """Заплановані й уже опубліковані публікації бота: (момент, категорія).
+        channel="threads" — треди (S/F), channel="tg" — Telegram-дописи (T)."""
         result = []
         for idea_id, item in self.state["approved_threads"].items():
             if idea_id == exclude or item.get("failed"):
                 continue
+            cat = self.category(self.ideas.get(idea_id))
+            if (cat == "T") != (channel == "tg"):
+                continue
             at = item.get("posted_at") if item.get("posted") else item.get("publish_at")
             if at and at != "pending":
-                result.append((parse_time(at), self.category(self.ideas.get(idea_id))))
+                result.append((parse_time(at), cat))
         return sorted(result)
+
+    def tg_slots(self, days: int = 120) -> list[datetime]:
+        start = datetime.now(KYIV)
+        result = []
+        for offset in range(days + 1):
+            day = (start + timedelta(days=offset)).date()
+            if day.weekday() == TG_SLOT[0]:
+                moment = datetime(day.year, day.month, day.day, TG_SLOT[1], TG_SLOT[2], tzinfo=KYIV)
+                if moment > start + timedelta(minutes=15):
+                    result.append(moment)
+        return result
 
     def slot_allowed(self, slot: datetime, cat: str, pubs, strict: bool) -> bool:
         if any(abs(slot - moment) < SLOT_GAP for moment, _ in pubs):
@@ -681,7 +718,8 @@ class Bot:
         """Ставить заплановані (ще не розпочаті) треди на час вікна в межах їхніх днів."""
         moved = []
         future = sorted((m, i) for m, i, item in self.scheduled()
-                        if m > datetime.now(KYIV) + timedelta(minutes=15) and not item.get("posted_ids"))
+                        if m > datetime.now(KYIV) + timedelta(minutes=15) and not item.get("posted_ids")
+                        and self.category(self.ideas.get(i)) != "T")
         for moment, idea_id in future:
             item = self.state["approved_threads"][idea_id]
             item["publish_at"] = "pending"
@@ -697,6 +735,9 @@ class Bot:
         """Рекомендовані слоти за правилами: ліміт на день, проміжок, чергування категорій.
         Чергування поступається лише тоді, коли в найближчі дні підходящого слоту немає."""
         cat = self.category(idea)
+        if cat == "T":
+            taken = {m.astimezone(KYIV).date() for m, _ in self.bot_publications((idea or {}).get("id"), "tg")}
+            return [s for s in self.tg_slots() if s.date() not in taken][:count]
         pubs = self.bot_publications(exclude=(idea or {}).get("id"))
         slots = self.recommended_slots(days=60)
         horizon = datetime.now(KYIV) + ALTERNATION_HORIZON
@@ -1030,16 +1071,68 @@ class Bot:
             kb([("✅ Готово", f"done:{idea['id']}"), ("🗑 Скасувати тему", f"drop:{idea['id']}")]),
             {"kind": "thread", "idea": idea["id"], "sha": sha(body)})
 
-    def publish_queued(self):
-        """Публікує один тред за запуск; прогрес зберігає після кожного поста."""
-        if not (THREADS_TOKEN and THREADS_USER_ID):
+    def publish_tg(self, idea_id: str, item: dict) -> None:
+        """Telegram-допис у канал: одне повідомлення, фото — великим прев'ю над текстом."""
+        idea = self.ideas.get(idea_id, {"title": idea_id})
+        if not TG_CHANNEL_ID:
+            if not item.get("channel_warned"):
+                item["channel_warned"] = True
+                self.send(f"⚠️ «{idea['title']}»: канал для Telegram-дописів не вказано — не публікую.")
             return
+        if unverified(item["text"]):
+            item["failed"] = "у тексті є [ПЕРЕВІРИТИ]"
+            self.send(f"⚠️ Не публікую «{idea['title']}»: у тексті є [ПЕРЕВІРИТИ].")
+            return
+        text = "\n\n".join(thread_posts(item["text"]))
+        if not text or len(text) > TG_POST_LIMIT:
+            item["failed"] = f"допис довший за {TG_POST_LIMIT} символів ({len(text)})" if text else "порожній допис"
+            self.send(f"⚠️ Не публікую «{idea['title']}»: {item['failed']}.")
+            return
+        image = item.get("image")
+        preview = ({"url": image["url"], "prefer_large_media": True, "show_above_text": True}
+                   if image and image.get("url") else {"is_disabled": True})
+        request = urllib.request.Request(
+            f"https://api.telegram.org/bot{TOKEN}/sendMessage",
+            data=json.dumps({"chat_id": TG_CHANNEL_ID, "text": text, "link_preview_options": preview}).encode("utf-8"),
+            headers={"Content-Type": "application/json"},
+        )
+        try:
+            with urllib.request.urlopen(request, timeout=30) as response:
+                message_id = json.load(response)["result"]["message_id"]
+        except (urllib.error.URLError, OSError, ValueError, KeyError) as exc:
+            try:
+                reason = json.load(exc).get("description", "") if isinstance(exc, urllib.error.HTTPError) else str(exc)
+            except ValueError:
+                reason = str(exc)
+            item["attempts"] = item.get("attempts", 0) + 1
+            if item["attempts"] >= 3:
+                item["failed"] = reason
+            self.send(f"⚠️ Telegram-допис «{idea['title']}» не опубліковано: {reason}."
+                      + (" Більше не пробую — напишіть мені." if item.get("failed") else " Повторю протягом години."))
+            return
+        channel = TG_CHANNEL_ID
+        permalink = (f"https://t.me/{channel[1:]}/{message_id}" if channel.startswith("@")
+                     else f"https://t.me/c/{channel[4:]}/{message_id}" if channel.startswith("-100") else "")
+        item.update({"posted": True, "posted_at": now(), "permalink": permalink, "posted_ids": [str(message_id)]})
+        if idea_id in self.ideas:
+            self.ideas[idea_id]["thread"]["status"] = "posted"
+            self.ideas[idea_id]["thread"]["permalink"] = permalink
+            history(self.ideas[idea_id], "telegram post published to channel")
+        self.send(f"✅ Telegram-допис опубліковано: «{idea['title']}»\n{permalink}")
+
+    def publish_queued(self):
+        """Публікує одну публікацію за запуск; прогрес тредів зберігає після кожного поста."""
         current = datetime.now(timezone.utc)
         for idea_id, item in self.state["approved_threads"].items():
             if item.get("posted") or item.get("failed"):
                 continue
             at = item.get("publish_at")
             if at == "pending" or (at and parse_time(at) > current):
+                continue
+            if self.category(self.ideas.get(idea_id)) == "T":
+                self.publish_tg(idea_id, item)
+                return
+            if not (THREADS_TOKEN and THREADS_USER_ID):
                 continue
             idea = self.ideas.get(idea_id, {"title": idea_id})
             if unverified(item["text"]):
@@ -1214,7 +1307,7 @@ class Bot:
     def slot_reminders(self) -> None:
         current = datetime.now(KYIV)
         reminded = self.state.setdefault("reminded_slots", [])
-        busy = [moment for moment, _, _ in self.scheduled()]
+        busy = [moment for moment, _ in self.bot_publications()]
         for slot in self.recommended_slots(days=1):
             if not (timedelta(0) < slot - current <= REMIND_BEFORE + timedelta(minutes=5)):
                 continue
@@ -1230,14 +1323,30 @@ class Bot:
             else:
                 self.send(f"⏰ {slot:%H:%M} — рекомендований час публікації, але готових тредів немає.{serious}",
                           kb([("✍️ Написати тред", "go:texts")]), {"kind": "nav"})
+        tg_taken = {m.astimezone(KYIV).date() for m, _ in self.bot_publications(channel="tg")}
+        for slot in self.tg_slots(days=1):
+            key = f"tg:{slot.isoformat()}"
+            if not (timedelta(0) < slot - current <= REMIND_BEFORE + timedelta(minutes=5)) \
+                    or key in reminded or slot.date() in tg_taken:
+                continue
+            reminded.append(key)
+            ready = self.grouped(lambda i: i.get("stream") == "tg" and i.get("thread", {}).get("status") == "approved")
+            self.send(f"⏰ {slot:%H:%M} — час Telegram-допису, але нічого не заплановано"
+                      + ("." if ready else ", і готових дописів немає."),
+                      kb([("📣 Обрати допис", "go:publish")] if ready else [("✍️ Написати допис", "go:texts")]),
+                      {"kind": "nav"})
         self.state["reminded_slots"] = reminded[-50:]
 
     def next_due(self) -> int:
         """Найближчий момент, коли воркер має розбудити диспетчер: публікація чи нагадування."""
         current = datetime.now(KYIV)
-        busy = [m for m, _, _ in self.scheduled()]
-        moments = [m for m in busy if m > current]
+        moments = [m for m, _, _ in self.scheduled() if m > current]
+        busy = [m for m, _ in self.bot_publications()]
         reminded = set(self.state.get("reminded_slots", []))
+        tg_taken = {m.astimezone(KYIV).date() for m, _ in self.bot_publications(channel="tg")}
+        for slot in self.tg_slots(days=8):
+            if slot.date() not in tg_taken and f"tg:{slot.isoformat()}" not in reminded and slot - REMIND_BEFORE > current:
+                moments.append(slot - REMIND_BEFORE)
         for slot in self.recommended_slots(days=2):
             if any(abs(slot - b) < SLOT_GAP / 2 for b in busy):
                 continue
