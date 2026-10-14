@@ -1903,6 +1903,9 @@
     },
     "712": {
       "kind": "when"
+    },
+    "713": {
+      "kind": "nav"
     }
   },
   "approved_threads": {
@@ -2250,8 +2253,19 @@
         "credit": "Alexander Volok / Flickr, Public Domain Mark 1.0"
       },
       "approved_at": "2026-10-07T09:27:20+00:00",
-      "posted": false,
-      "publish_at": "2026-10-14T13:01:00+03:00"
+      "posted": true,
+      "publish_at": "2026-10-14T13:01:00+03:00",
+      "posted_ids": [
+        "18094536437432763",
+        "18110590742180297",
+        "18124664812901496",
+        "17912718570518669",
+        "17885463741502216",
+        "18237519718316643",
+        "18176680159443430"
+      ],
+      "posted_at": "2026-10-14T10:07:42+00:00",
+      "permalink": "https://www.threads.com/@velimyr/post/DeeINRDFpgx"
     },
     "2026-10-03-10": {
       "sha": "7eca7e2bb4957f32",
