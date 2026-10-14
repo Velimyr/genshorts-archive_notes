@@ -70,14 +70,14 @@ THREADS_POST_LIMIT = 500
 KYIV = ZoneInfo("Europe/Kyiv")
 DEFAULT_TAG = "Генеалогія"  # стандартна тема поста в Threads
 STALE_AFTER = timedelta(minutes=30)  # незавершена робота без запуску задачі довше — перезапуск
-MENU_VERSION = 2
+MENU_VERSION = 3
 MENU_BUTTONS = {"💡 Ідеї": "/ideas", "✍️ Тексти": "/texts", "📣 Публікація": "/publish", "📋 Черга": "/queue",
-                "📤 Опубліковані": "/published"}
+                "📰 TG-черга": "/tgqueue", "📤 Опубліковані": "/published"}
 MAIN_KEYBOARD = {"keyboard": [[{"text": "💡 Ідеї"}, {"text": "✍️ Тексти"}], [{"text": "📣 Публікація"}, {"text": "📋 Черга"}],
-                              [{"text": "📤 Опубліковані"}]],
+                              [{"text": "📰 TG-черга"}, {"text": "📤 Опубліковані"}]],
                  "is_persistent": True, "resize_keyboard": True}
 HELP = ("Кнопки внизу: 💡 Ідеї — нові ідеї, ✍️ Тексти — написати тред, 📣 Публікація — опублікувати, "
-        "📋 Черга — стан тем, 📤 Опубліковані — треди в Threads зі статистикою.\n"
+        "📋 Черга — треди Threads, 📰 TG-черга — Telegram-дописи, 📤 Опубліковані — що вже вийшло.\n"
         "Своя тема — просто напишіть її звичайним повідомленням.")
 ASK_AT = {"ideas": 9, "texts": 12}  # година за Києвом
 REPORT_AT = (6, 18)  # неділя, 18:00 за Києвом — тижневий звіт
@@ -359,8 +359,8 @@ class Bot:
             self.grouped(lambda i: i.get("thread", {}).get("status") == "approved"),
             "pub", "📣 Немає готових тредів. Написати: /texts", quiet)
 
-    def show_queue(self):
-        """Зведення тем за стадіями з кнопками дій."""
+    def show_queue(self, channel: str = "threads"):
+        """Зведення тем за стадіями: окремо треди Threads і Telegram-дописи."""
         stream_icon = {s: icon for s, (icon, _) in STREAMS.items()}
         items = self.state["approved_threads"]
         stages = [
@@ -374,6 +374,8 @@ class Bot:
             thread = idea.get("thread", {}).get("status", "none")
             if idea.get("test") or idea.get("status") != "approved" or thread == "posted":
                 continue
+            if (self.category(idea) == "T") != (channel == "tg"):
+                continue
             item = items.get(idea["id"], {})
             if thread == "none":
                 stages[0][3].append((idea, ""))
@@ -386,7 +388,7 @@ class Bot:
             elif thread == "scheduled" and item.get("publish_at") not in (None, "pending"):
                 stages[4][3].append((idea, fmt_slot(parse_time(item["publish_at"]))))
         stages[4][3].sort(key=lambda x: parse_time(items[x[0]["id"]]["publish_at"]))
-        lines, buttons, n = ["📋 Стан тем"], [], 0
+        lines, buttons, n = ["📰 Черга Telegram-дописів" if channel == "tg" else "📋 Черга тредів Threads"], [], 0
         for title, icon, action, rows in stages:
             if not rows:
                 continue
@@ -398,7 +400,8 @@ class Bot:
                 lines.append(f"{stream_icon.get(idea.get('stream'), '•')} {n}. {label}{idea['title']}{suffix}")
                 buttons.append((str(n), f"item:{idea['id']}"))
         if n == 0:
-            self.send("📋 Погоджених тем немає. Нові ідеї — 💡 Ідеї.")
+            self.send("📰 Погоджених тем для Telegram-дописів немає. Нові ідеї — 💡 Ідеї → 📰." if channel == "tg"
+                      else "📋 Погоджених тем для Threads немає. Нові ідеї — 💡 Ідеї.")
             return
         lines.append("\nНатисніть номер теми, щоб побачити, що з нею можна зробити.")
         self.send("\n".join(lines), kb(*chunks(buttons, 5)), {"kind": "menu"})
@@ -992,6 +995,8 @@ class Bot:
             return self.menu_publish()
         if command == "/queue":
             return self.show_queue()
+        if command == "/tgqueue":
+            return self.show_queue("tg")
         if command == "/published":
             return self.show_published()
         if command in ("/start", "/help"):
@@ -1453,7 +1458,8 @@ class Bot:
             {"command": "ideas", "description": "Нові ідеї"},
             {"command": "texts", "description": "Написати тред"},
             {"command": "publish", "description": "Публікація"},
-            {"command": "queue", "description": "Стан тем"},
+            {"command": "queue", "description": "Черга тредів Threads"},
+            {"command": "tgqueue", "description": "Черга Telegram-дописів"},
             {"command": "published", "description": "Опубліковані треди"},
             {"command": "help", "description": "Довідка"},
         ])
