@@ -6035,9 +6035,10 @@
       ],
       "status": "approved",
       "thread": {
-        "status": "scheduled",
+        "status": "posted",
         "file": "data/texts/2026-10-14-10/thread.md",
-        "approved_sha": "90476ae86be489ac"
+        "approved_sha": "90476ae86be489ac",
+        "permalink": "https://t.me/testvelimyr/319"
       },
       "script": {
         "status": "none",
@@ -6076,6 +6077,14 @@
         {
           "at": "2026-10-14T20:54:47+00:00",
           "event": "thread auto-scheduled: 2026-10-20T19:00:00+03:00"
+        },
+        {
+          "at": "2026-10-14T20:55:01+00:00",
+          "event": "thread scheduled: 2026-10-14T20:55:01+00:00"
+        },
+        {
+          "at": "2026-10-14T20:55:02+00:00",
+          "event": "telegram post published to channel"
         }
       ]
     }

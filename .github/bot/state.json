@@ -2477,8 +2477,13 @@
         "credit": "Alphathon / Wikimedia Commons, CC BY-SA 4.0"
       },
       "approved_at": "2026-10-14T20:54:46+00:00",
-      "posted": false,
-      "publish_at": "2026-10-20T19:00:00+03:00"
+      "posted": true,
+      "publish_at": "2026-10-14T20:55:01+00:00",
+      "posted_at": "2026-10-14T20:55:02+00:00",
+      "permalink": "https://t.me/testvelimyr/319",
+      "posted_ids": [
+        "319"
+      ]
     }
   },
   "asked": {
@@ -2834,7 +2839,8 @@
     928737278,
     928737279,
     928737280,
-    928737281
+    928737281,
+    928737282
   ],
   "analytics_at": "2026-10-14T20:52:44+00:00",
   "reminded_slots": [
