@@ -5632,6 +5632,415 @@
           "event": "idea approved in telegram"
         }
       ]
+    },
+    {
+      "id": "2026-10-14-01",
+      "proposed_at": "2026-10-14",
+      "stream": "tg",
+      "title": "ЦДІАК у Києві: 1,3 млн справ від XIV ст. до 1917 р. і що з них шукати родоводу",
+      "summary": "Глибокий розбір найбільшого історичного архіву України: від Київського центрального архіву давніх актів (1852) до сучасної назви (1992). Що там є — актові книги (~2 тис.), Гетьманщина, родинні фонди Галаганів, Скоропадських, Терещенків, колекція документів 17 мовами; як працювати: онлайн-каталог Archium, запити, мікрофотокопії.",
+      "why_now": "Практичний вступ для тих, чий рід із Лівобережжя чи Правобережжя: коли писати саме в ЦДІАК, а не в обласний архів. Дані джерел розходяться щодо року заснування (1941/1943/1944) — у тексті варто назвати це чесно.",
+      "sources": [
+        "https://www.encyclopediaofukraine.com/display.asp?linkpath=pages%5CC%5CE%5CCentralStateHistoricalArchiveofUkraineinKyiv.htm",
+        "https://armyinform.com.ua/2023/01/13/u-czentralnomu-derzhavnomu-istorychnomu-arhivi-ukrayiny-v-kyyevi-ponad-1-mln-300-tysyach-odynycz-zberigannya-olga-vovk/",
+        "https://interfax.com.ua/news/culture/1143775.html"
+      ],
+      "images": [
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/3/30/Inside_Central_State_Historical_Archives_in_Kyiv.jpg",
+          "page": "https://commons.wikimedia.org/w/index.php?curid=89477044",
+          "credit": "Anntinomy / Wikimedia Commons, CC BY 4.0",
+          "license": "CC BY 4.0"
+        }
+      ],
+      "status": "proposed",
+      "thread": {
+        "status": "none",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-10-14T20:55:00+00:00",
+          "event": "proposed by ideas routine"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-14-02",
+      "proposed_at": "2026-10-14",
+      "stream": "tg",
+      "title": "ЦДІАЛ у Львові: Йосифінська метрика, консисторія й книги магістрату",
+      "summary": "Розбір головного архіву для галицьких предків: історія від Бернардинського архіву 1784 р. і Центрального архіву давніх актів 1939 р., вивезення фондів до Німеччини 1943–44 і повернення, 765 фондів та понад 1,1 млн справ. Ключові фонди: ф. 19–20 (кадастри), ф. 146 (намісництво), ф. 201 (греко-католицька консисторія), ф. 52 (магістрат), ф. 131 (грамоти з 1233 р.); іменні бази ЦДІАЛ.",
+      "why_now": "Допис-довідник «з чого починати пошук у Львові»; у джерелах трохи різняться цифри (762/765 фондів) — подати як «понад 760».",
+      "sources": [
+        "https://uk.wikipedia.org/wiki/Центральний_державний_історичний_архів_України,_Львів",
+        "https://www.encyclopediaofukraine.com/display.asp?linkpath=pages%5CC%5CE%5CCentralStateHistoricalArchiveofUkraineinLviv.htm",
+        "https://www.encyclopediaofukraine.com/display.asp?linkpath=pages%5CG%5CA%5CGalicia.htm"
+      ],
+      "images": [
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/c/c4/Lviv_-_Bernardyny_-_Archive.jpg",
+          "page": "https://commons.wikimedia.org/w/index.php?curid=3507428",
+          "credit": "Yarema Dukh / Wikimedia Commons, CC BY-SA 3.0",
+          "license": "CC BY-SA 3.0"
+        }
+      ],
+      "status": "proposed",
+      "thread": {
+        "status": "none",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-10-14T20:55:00+00:00",
+          "event": "proposed by ideas routine"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-14-03",
+      "proposed_at": "2026-10-14",
+      "stream": "tg",
+      "title": "Актові книги ґродських і земських судів: золото для шляхетських родів",
+      "summary": "Розбір головного джерела XV–XVIII ст. для шляхти й міщан Правобережжя та Галичини: ґродські суди (з 1434 р. на українських землях), земські та підкоморські суди, магістратські книги. Що вносили — вироки, купівлю-продаж, заповіти, угоди; чому книги прошивали шнурівкою; втрати (з ~6 тис. книг у Києві до кінця XIX ст. 4 тис. загинули у Другу світову; нині ~2 тис., оцифровані); у ЦДІАЛ — понад 6,5 тис. книг Східної Галичини.",
+      "why_now": "Тема мало розкрита на каналі; корисна всім, хто «дійшов до шляхетського прізвища» й не знає, куди далі.",
+      "sources": [
+        "https://interfax.com.ua/news/culture/1143775.html",
+        "https://uk.wikipedia.org/wiki/Гродський_суд",
+        "https://armyinform.com.ua/2023/01/13/u-czentralnomu-derzhavnomu-istorychnomu-arhivi-ukrayiny-v-kyyevi-ponad-1-mln-300-tysyach-odynycz-zberigannya-olga-vovk/",
+        "https://www.encyclopediaofukraine.com/display.asp?linkpath=pages%5CC%5CE%5CCentralStateHistoricalArchiveofUkraineinKyiv.htm"
+      ],
+      "images": [],
+      "status": "proposed",
+      "thread": {
+        "status": "none",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-10-14T20:55:00+00:00",
+          "event": "proposed by ideas routine"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-14-04",
+      "proposed_at": "2026-10-14",
+      "stream": "tg",
+      "title": "Округи УСРР 1923–1930: куди зникли повіти й де шукати справи цих років",
+      "summary": "Адмінреформа 12 квітня 1923 р.: 102 повіти й 1989 волостей замінено 53 округами й 706 районами; 1925 — скасування губерній (41 округ і 680 районів); 1930 — ліквідація округів. Приклади: Полтавщина (7 округ і 89 районів з 7.03.1923), Поділля (6 повітів ліквідовано 31.01.1923). Як з'ясувати, у чий архівний фонд потрапила ваша місцевість.",
+      "why_now": "Позачасова методична тема: допис рятує від «село є в метриці 1920-х, а в архіві повіту немає». У джерелах є розбіжності (41/40 округів, 3.06 чи 1.08.1925) — зазначити.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Okruhas_of_the_Ukrainian_Soviet_Socialist_Republic",
+        "https://uk.wikipedia.org/wiki/Полтавська_губернія",
+        "https://uk.wikipedia.org/wiki/Подільська_губернія"
+      ],
+      "images": [],
+      "status": "proposed",
+      "thread": {
+        "status": "none",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-10-14T20:55:00+00:00",
+          "event": "proposed by ideas routine"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-14-05",
+      "proposed_at": "2026-10-14",
+      "stream": "tg",
+      "title": "Перепис 1926 року в УСРР: 29 млн людей і 14 питань програми",
+      "summary": "Розбір всесоюзного перепису (17 грудня 1926 р.): програма з 14 ознак (вік, національність, рідна мова, місце народження, грамотність), 29 018 187 жителів УСРР, 23,2 млн українців, 56 томів публікацій 1928–33. Чим корисний родоводу: статистика по округах і районах, відтворення середовища предків; чому особових листків для пошуку імен немає в публікаціях. Застереження: нац. категорії і критика методики.",
+      "why_now": "Дає контекст для предків 1920-х і доповнює допис про перепис 1897. Тема сухо-фактична, обережно з інтерпретаціями — лише цифри з відкритих джерел.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/1926_Soviet_census",
+        "https://uk.wikipedia.org/wiki/Перепис_населення_СРСР_1926",
+        "https://ru.wikipedia.org/wiki/Всесоюзная_перепись_населения_1926_года"
+      ],
+      "images": [
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/b/be/UaFirstNationality1926.PNG",
+          "page": "https://commons.wikimedia.org/w/index.php?curid=44685090",
+          "credit": "Tovel / Wikimedia Commons, CC BY-SA 4.0",
+          "license": "CC BY-SA 4.0"
+        }
+      ],
+      "status": "proposed",
+      "thread": {
+        "status": "none",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-10-14T20:55:00+00:00",
+          "event": "proposed by ideas routine"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-14-06",
+      "proposed_at": "2026-10-14",
+      "stream": "tg",
+      "title": "Подільська губернія 1796–1925: 12 повітів, Кам'янець, Вінниця й архіви",
+      "summary": "Довідник по краю: утворення 12 грудня 1796 р., 12 повітів (від Балтського до Ямпільського), центр Кам'янець-Подільський до 1914, далі Вінниця; перепис 1897 — ~3,02 млн, 81% українців, 12% євреїв; ліквідація повітів 1923 і губернії 1925. Яких архівів шукати (Хмельницький, Вінниця) і як співвіднести з сучасними районами.",
+      "why_now": "Серія «губернії предків»; для Поділля в джерелах розходяться дата створення (1793/1796) і кількість округ — вказати.",
+      "sources": [
+        "https://uk.wikipedia.org/wiki/Подільська_губернія",
+        "https://en.wikipedia.org/wiki/Podolia_Governorate",
+        "https://en.wikipedia.org/wiki/Okruhas_of_the_Ukrainian_Soviet_Socialist_Republic"
+      ],
+      "images": [
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/e/e5/Kamianets-Podilskyi-2007.jpg",
+          "page": "https://commons.wikimedia.org/w/index.php?curid=15502900",
+          "credit": "Håkan Henriksson (Narking) / Wikimedia Commons, CC BY 3.0",
+          "license": "CC BY 3.0"
+        }
+      ],
+      "status": "proposed",
+      "thread": {
+        "status": "none",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-10-14T20:55:00+00:00",
+          "event": "proposed by ideas routine"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-14-07",
+      "proposed_at": "2026-10-14",
+      "stream": "tg",
+      "title": "Волинська губернія 1796–1925: Житомир, 12 повітів і поділ за Ризьким миром",
+      "summary": "Розбір краю: утворення 12 грудня 1796 р., центр у Новограді-Волинському, з 1804 р. — Житомир; 12 повітів; населення 2,99 млн у 1897 р., українці 70%, євреї 13%, поляки 6%, німці 5,7%; західні повіти за Ризьким миром 1921 р. до Польщі, решта у 1925 р. — Житомирська, Коростенська, Шепетівська округи. Що це означає для пошуку метрик у різних державах.",
+      "why_now": "Для предків з Рівненщини, Волині, Житомирщини; одразу пояснює, чому документи лежать і в Україні, і в Польщі.",
+      "sources": [
+        "https://uk.wikipedia.org/wiki/Волинська_губернія",
+        "https://en.wikipedia.org/wiki/Volhynian_Governorate",
+        "https://www.encyclopediaofukraine.com/display.asp?linkpath=pages%5CV%5CO%5CVolhyniagubernia.htm"
+      ],
+      "images": [
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/d/d9/LiteracyVolynGovernorate1897.PNG",
+          "page": "https://commons.wikimedia.org/w/index.php?curid=28860750",
+          "credit": "Tovel / Wikimedia Commons, CC BY-SA 3.0",
+          "license": "CC BY-SA 3.0"
+        }
+      ],
+      "status": "proposed",
+      "thread": {
+        "status": "none",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-10-14T20:55:00+00:00",
+          "event": "proposed by ideas routine"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-14-08",
+      "proposed_at": "2026-10-14",
+      "stream": "tg",
+      "title": "Полтавська губернія 1802–1925: 15 повітів і 7 округ у 1923 році",
+      "summary": "Розбір краю: утворення 1802 р. після розділу Малоросійської губернії, 15 повітів (1803), 2 778 151 жителів 1897 р., 93% українців; Кременчуцька губернія 1920–22, передача Переяславського повіту до Київської 1921 р.; 1923 — 7 округ і 89 районів. Побутові й соціальні деталі (аграрність, відхід на Сибір 1906–12).",
+      "why_now": "Для лівобережних родоводів; розбіжності в датах ліквідації (3.06 чи 1.08.1925) і площі згадати.",
+      "sources": [
+        "https://uk.wikipedia.org/wiki/Полтавська_губернія",
+        "https://en.wikipedia.org/wiki/Poltava_Governorate",
+        "https://www.encyclopediaofukraine.com/display.asp?linkpath=pages%5CP%5CO%5CPoltavagubernia.htm"
+      ],
+      "images": [
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/8/8c/Ukrainian_language_in_Poltava_Governorate%2C_1897.png",
+          "page": "https://commons.wikimedia.org/w/index.php?curid=90360440",
+          "credit": "ZxcvU / Wikimedia Commons, CC BY-SA 4.0",
+          "license": "CC BY-SA 4.0"
+        }
+      ],
+      "status": "proposed",
+      "thread": {
+        "status": "none",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-10-14T20:55:00+00:00",
+          "event": "proposed by ideas routine"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-14-09",
+      "proposed_at": "2026-10-14",
+      "stream": "tg",
+      "title": "Королівство Галичини й Лодомерії 1772–1918: 19 округів і 82 повіти",
+      "summary": "Розбір адмінподілу: утворення 5 серпня 1772 р., 6 округів 1773, 19 округів 1782–87 (з Буковиною), апеляційні округи 1850, 74 повіти 1867, 82 у 1914; населення 8 млн у 1910 р.; як це впливає на пошук парафій у ЦДІАЛ, Перемишлі, Кракові та польських архівах. Коротко про Тернопільський край 1809–15.",
+      "why_now": "Фундаментальний контекст до галицьких тредів (шематизми, кадастри); різні джерела дають різні цифри — наводити діапазони.",
+      "sources": [
+        "https://uk.wikipedia.org/wiki/Королівство_Галичини_та_Володимирії",
+        "https://en.wikipedia.org/wiki/Kingdom_of_Galicia_and_Lodomeria",
+        "https://www.encyclopediaofukraine.com/display.asp?linkpath=pages%5CG%5CA%5CGalicia.htm"
+      ],
+      "images": [
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/f/f7/Galicia_and_Lodomeria_within_Austria-Hungary_1914.png",
+          "page": "https://commons.wikimedia.org/w/index.php?curid=148861385",
+          "credit": "Alphathon / Wikimedia Commons, CC BY-SA 4.0",
+          "license": "CC BY-SA 4.0"
+        },
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/1/1f/Administrative_Austria-Hungary_Galicia.png",
+          "page": "https://commons.wikimedia.org/w/index.php?curid=163282819",
+          "credit": "Qualimac / Wikimedia Commons, CC0 1.0",
+          "license": "CC0 1.0"
+        }
+      ],
+      "status": "proposed",
+      "thread": {
+        "status": "none",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-10-14T20:55:00+00:00",
+          "event": "proposed by ideas routine"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-14-10",
+      "proposed_at": "2026-10-14",
+      "stream": "tg",
+      "title": "Герцогство Буковина 1849–1918: Чернівці й метрики між двома державами",
+      "summary": "Розбір краю: приєднання 1774–75 до Габсбургів, 1787–1849 у складі Галичини, коронний край 4 березня 1849 р.; повіти 1850 (6) — 1854 (15) — 11 у 1914; 1910 р.: ~795 тис. жителів, русини 38%, румуни 34%; еміграція ~50 тис. 1891–1910; поділ 1918–19. Куди звертатися: Чернівецький архів, румунські архіви.",
+      "why_now": "Розбіжності: одні джерела — 800 тис., інші — 795 тис.; повітів 1868 — 8 чи 11. Для предків із Буковини.",
+      "sources": [
+        "https://uk.wikipedia.org/wiki/Герцогство_Буковина",
+        "https://en.wikipedia.org/wiki/Duchy_of_Bukovina",
+        "https://www.encyclopediaofukraine.com/display.asp?linkpath=pages%5CB%5CU%5CBukovyna.htm"
+      ],
+      "images": [
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/e/ec/Duchy_of_Bukovina_within_Austria-Hungary_1914.png",
+          "page": "https://commons.wikimedia.org/w/index.php?curid=148696248",
+          "credit": "Alphathon / Wikimedia Commons, CC BY-SA 4.0",
+          "license": "CC BY-SA 4.0"
+        },
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/3/3f/Administrative_Austria-Hungary_Bukowina.png",
+          "page": "https://commons.wikimedia.org/w/index.php?curid=163282812",
+          "credit": "Qualimac / Wikimedia Commons, CC0 1.0",
+          "license": "CC0 1.0"
+        }
+      ],
+      "status": "proposed",
+      "thread": {
+        "status": "none",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-10-14T20:55:00+00:00",
+          "event": "proposed by ideas routine"
+        }
+      ]
     }
   ]
 }
