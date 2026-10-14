@@ -100,6 +100,8 @@ TG_CHANNEL_ID = os.environ.get("TG_CHANNEL_ID", "").strip()
 TG_POSTER_TOKEN = os.environ.get("TG_POSTER_TOKEN", "").strip()
 TG_SLOT = (1, 19, 0)  # вівторок, 19:00 за Києвом
 TG_POST_LIMIT = 4096
+# Рубрика вівторкових дописів: перший рядок кожного допису (клікабельний хештег у каналі).
+TG_RUBRIC = "#фонд_опис_вівторок"
 
 
 def now() -> str:
@@ -276,6 +278,14 @@ def thread_posts(text: str) -> list[str]:
     """Пости треду без службового блоку «Джерела»."""
     blocks = [b.strip() for b in re.split(r"\n\s*---\s*\n", text) if b.strip()]
     return [b for b in blocks if not b.lower().startswith("джерела")]
+
+
+def tg_post_text(text: str) -> str:
+    """Текст Telegram-допису для каналу: завжди починається з рубрики TG_RUBRIC."""
+    body = "\n\n".join(thread_posts(text))
+    if not body or body.lower().startswith(TG_RUBRIC.lower()):
+        return body
+    return f"{TG_RUBRIC}\n{body}"
 
 
 class Bot:
@@ -563,7 +573,7 @@ class Bot:
             rows.append([("🔄 Інші фото", f"photos:{idea['id']}:more") if photos else ("🖼 Знайти фото", f"photos:{idea['id']}"),
                          ("🔎 Фото за словами", f"photokw:{idea['id']}")])
             rows.append([("❌ Скасувати", "cancel")])
-            size = len("\n\n".join(thread_posts(body)))
+            size = len(tg_post_text(body))
             self.send(f"{stream_label(idea.get('stream'))} · фінальна перевірка — «{idea['title']}»\n\n{body}"
                       f"\n\nℹ️ Блок «Джерела» в канал не публікується. Розмір допису: {size} з {TG_POST_LIMIT} символів."
                       + (f"\n📷 Фото над текстом: варіанти {', '.join(map(str, photos))} вище." if photos else "")
@@ -1090,7 +1100,7 @@ class Bot:
             item["failed"] = "у тексті є [ПЕРЕВІРИТИ]"
             self.send(f"⚠️ Не публікую «{idea['title']}»: у тексті є [ПЕРЕВІРИТИ].")
             return
-        text = "\n\n".join(thread_posts(item["text"]))
+        text = tg_post_text(item["text"])
         if not text or len(text) > TG_POST_LIMIT:
             item["failed"] = f"допис довший за {TG_POST_LIMIT} символів ({len(text)})" if text else "порожній допис"
             self.send(f"⚠️ Не публікую «{idea['title']}»: {item['failed']}.")
