@@ -96,6 +96,8 @@ STREAMS = {
 }
 # Telegram-дописи: окрема черга — щовівторка о 19:00 у канал автора.
 TG_CHANNEL_ID = os.environ.get("TG_CHANNEL_ID", "").strip()
+# Окремий бот автора, який уже є адміністратором каналу; без нього — бот пайплайна.
+TG_POSTER_TOKEN = os.environ.get("TG_POSTER_TOKEN", "").strip()
 TG_SLOT = (1, 19, 0)  # вівторок, 19:00 за Києвом
 TG_POST_LIMIT = 4096
 
@@ -1092,7 +1094,7 @@ class Bot:
         preview = ({"url": image["url"], "prefer_large_media": True, "show_above_text": True}
                    if image and image.get("url") else {"is_disabled": True})
         request = urllib.request.Request(
-            f"https://api.telegram.org/bot{TOKEN}/sendMessage",
+            f"https://api.telegram.org/bot{TG_POSTER_TOKEN or TOKEN}/sendMessage",
             data=json.dumps({"chat_id": TG_CHANNEL_ID, "text": text, "link_preview_options": preview}).encode("utf-8"),
             headers={"Content-Type": "application/json"},
         )

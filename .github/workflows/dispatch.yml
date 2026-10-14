@@ -47,6 +47,7 @@ jobs:
           QUEUE_URL: ${{ vars.QUEUE_URL }}
           QUEUE_SECRET: ${{ secrets.QUEUE_SECRET }}
           TG_CHANNEL_ID: ${{ vars.TG_CHANNEL_ID }}
+          TG_POSTER_TOKEN: ${{ secrets.TG_POSTER_TOKEN }}
           EVENT_UPDATE: ${{ inputs.update }}
         run: python3 .github/bot/dispatch.py
 
