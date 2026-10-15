@@ -2261,6 +2261,9 @@
       "kind": "thread",
       "idea": "2026-10-15-13",
       "sha": "f4ba6986c773ead4"
+    },
+    "824": {
+      "kind": "nav"
     }
   },
   "approved_threads": {
@@ -2631,8 +2634,17 @@
         "credit": "Хрестовоздвиженська церква с.Гуляйполе / Wikimedia Commons, CC0"
       },
       "approved_at": "2026-10-08T09:09:11+00:00",
-      "posted": false,
-      "publish_at": "2026-10-15T10:21:00+03:00"
+      "posted": true,
+      "publish_at": "2026-10-15T10:21:00+03:00",
+      "posted_ids": [
+        "18114701759021664",
+        "18125363159310443",
+        "18155973547455077",
+        "18028657937691653",
+        "18640936153023052"
+      ],
+      "posted_at": "2026-10-15T07:26:57+00:00",
+      "permalink": "https://www.threads.com/@velimyr/post/Degas7dFevg"
     },
     "2026-10-01-10": {
       "sha": "cdba9cc58469e26d",
