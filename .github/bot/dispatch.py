@@ -44,6 +44,7 @@ REQUESTS_FILE = ROOT / "data" / "requests.json"
 STRESS_FILE = ROOT / "data" / "stress_requests.json"
 ANALYTICS_FILE = ROOT / "data" / "analytics.json"
 RECS_FILE = ROOT / "data" / "recommendations.json"
+RUBRICS_FILE = ROOT / "data" / "rubrics.json"
 REPORTS_DIR = ROOT / "data" / "reports"
 STATE_FILE = Path(__file__).resolve().parent / "state.json"
 FIRE_FILE = Path(os.environ.get("RUNNER_TEMP", "/tmp")) / "genshorts_fire.json"
@@ -1193,9 +1194,16 @@ class Bot:
         if not fresh:
             return
         self.send(f"💡 Нові ідеї: {len(fresh)}. Позначте ✅ ті, що подобаються.")
+        rubrics = {r.get("id"): r for r in load_json(RUBRICS_FILE, {"rubrics": []}).get("rubrics", [])}
         for idea in fresh:
             sources = "\n".join(f"• {s}" for s in idea.get("sources", [])[:4])
-            text = f"{stream_label(idea.get('stream'))}\n💡 {idea['title']}\n\n{idea.get('summary', '')}"
+            rubric = rubrics.get(idea.get("rubric"))
+            used_before = any(i.get("rubric") == idea.get("rubric") and i.get("proposed_at", "") < idea.get("proposed_at", "")
+                              for i in self.ideas.values())
+            rubric_line = (f"\n🏷 {rubric.get('name', idea['rubric'])}"
+                           + (" — нова рубрика: " + rubric.get("about", "") if rubric.get("added_by") == "routine"
+                              and not used_before else "")) if rubric else ""
+            text = f"{stream_label(idea.get('stream'))}{rubric_line}\n💡 {idea['title']}\n\n{idea.get('summary', '')}"
             if idea.get("why_now"):
                 text += f"\n\nЧому зараз: {idea['why_now']}"
             if sources:
