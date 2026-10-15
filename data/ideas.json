@@ -6393,7 +6393,7 @@
           "license": "Public domain"
         }
       ],
-      "status": "proposed",
+      "status": "rejected",
       "thread": {
         "status": "none",
         "file": null
@@ -6411,6 +6411,10 @@
         {
           "at": "2026-10-15T06:30:00+00:00",
           "event": "proposed by ideas routine"
+        },
+        {
+          "at": "2026-10-15T05:56:31+00:00",
+          "event": "idea rejected in telegram"
         }
       ]
     },
@@ -6434,7 +6438,7 @@
           "license": "Public domain"
         }
       ],
-      "status": "proposed",
+      "status": "rejected",
       "thread": {
         "status": "none",
         "file": null
@@ -6452,6 +6456,10 @@
         {
           "at": "2026-10-15T06:30:00+00:00",
           "event": "proposed by ideas routine"
+        },
+        {
+          "at": "2026-10-15T05:56:32+00:00",
+          "event": "idea rejected in telegram"
         }
       ]
     },
@@ -6476,7 +6484,7 @@
           "license": "Public domain"
         }
       ],
-      "status": "proposed",
+      "status": "rejected",
       "thread": {
         "status": "none",
         "file": null
@@ -6494,6 +6502,10 @@
         {
           "at": "2026-10-15T06:30:00+00:00",
           "event": "proposed by ideas routine"
+        },
+        {
+          "at": "2026-10-15T05:56:33+00:00",
+          "event": "idea rejected in telegram"
         }
       ]
     },
@@ -6562,7 +6574,7 @@
           "license": "CC BY-SA 4.0"
         }
       ],
-      "status": "proposed",
+      "status": "rejected",
       "thread": {
         "status": "none",
         "file": null
@@ -6580,6 +6592,10 @@
         {
           "at": "2026-10-15T06:30:00+00:00",
           "event": "proposed by ideas routine"
+        },
+        {
+          "at": "2026-10-15T05:56:33+00:00",
+          "event": "idea rejected in telegram"
         }
       ]
     },
@@ -6603,7 +6619,7 @@
           "license": "CC0 1.0"
         }
       ],
-      "status": "proposed",
+      "status": "rejected",
       "thread": {
         "status": "none",
         "file": null
@@ -6621,6 +6637,10 @@
         {
           "at": "2026-10-15T06:30:00+00:00",
           "event": "proposed by ideas routine"
+        },
+        {
+          "at": "2026-10-15T05:56:34+00:00",
+          "event": "idea rejected in telegram"
         }
       ]
     }
