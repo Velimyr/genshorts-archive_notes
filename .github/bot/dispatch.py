@@ -284,6 +284,72 @@ def thread_posts(text: str) -> list[str]:
     return [b for b in blocks if not b.lower().startswith("джерела")]
 
 
+def edit_hint(plain_reply: str) -> str:
+    """Підказка про правки під текстом; plain_reply — що робить звичайна відповідь без цитати й «→»."""
+    return ("✏️ Як правити — відповіддю на це повідомлення:\n"
+            "• одне місце: виділіть фрагмент у тексті → «Відповісти» → напишіть, на що замінити "
+            "(«-» — видалити фрагмент);\n"
+            "• кілька місць: кожна заміна окремим рядком «старе → нове»;\n"
+            f"• {plain_reply}\n"
+            "Точкова правка змінює лише вказаний фрагмент; виправлений текст прийде на повторне погодження.")
+
+
+EDIT_ARROW = re.compile(r"\s*(?:→|=>|->)\s*")
+EDIT_DELETE = {"-", "—", "видалити", "видали", "прибрати", "прибери"}
+
+
+def unquote(text: str) -> str:
+    text = text.strip()
+    for left, right in (("«", "»"), ('"', '"'), ("“", "”"), ("'", "'")):
+        if len(text) >= 2 and text.startswith(left) and text.endswith(right):
+            return text[1:-1]
+    return text
+
+
+def parse_edits(text: str, quote: str = "") -> list[tuple[str, str]] | None:
+    """Точкові правки з відповіді автора або None, якщо це звичайні побажання для переписування.
+    Цитата (Telegram «Відповісти» з виділеним фрагментом) + текст — фрагмент замінюється текстом;
+    рядки «старе → нове» — кожен рядок окрема заміна. Порожнє «нове» або «-» — видалити фрагмент."""
+    if quote.strip():
+        new = "" if text.strip().lower() in EDIT_DELETE else unquote(text)
+        return [(quote.strip(), new)]
+    lines = [line for line in text.splitlines() if line.strip()]
+    if not lines or not all(EDIT_ARROW.search(line) for line in lines):
+        return None
+    edits = []
+    for line in lines:
+        old, new = EDIT_ARROW.split(line, maxsplit=1)
+        new = "" if new.strip().lower() in EDIT_DELETE else unquote(new)
+        if not unquote(old):
+            return None
+        edits.append((unquote(old), new))
+    return edits
+
+
+def fragment_pattern(fragment: str) -> re.Pattern:
+    """Шукає фрагмент, не зважаючи на різницю в пробілах/переносах і на вид апострофа."""
+    words = [re.sub(r"['’ʼ`]", "['’ʼ`]", re.escape(w).replace("\\'", "'")) for w in fragment.split()]
+    return re.compile(r"\s+".join(words))
+
+
+def apply_edits(body: str, edits: list[tuple[str, str]]) -> tuple[str, list[str]]:
+    """Застосовує всі правки або жодної: (новий текст, список проблем)."""
+    problems = []
+    for old, new in edits:
+        matches = list(fragment_pattern(old).finditer(body))
+        short = old if len(old) <= 60 else old[:57] + "…"
+        if not matches:
+            problems.append(f"не знайшов «{short}»")
+        elif len(matches) > 1:
+            problems.append(f"«{short}» трапляється {len(matches)} рази — дайте довший фрагмент")
+        else:
+            left, right = body[:matches[0].start()], body[matches[0].end():]
+            if not new and left.endswith(" ") and (right[:1] in ("", " ", "\n") or right[:1] in ",.;:!?…)»"):
+                left = left[:-1]  # після видалення не лишати зайвого пробілу
+            body = left + new + right
+    return body, problems
+
+
 def tg_permalink(channel: str, message_id) -> str:
     return (f"https://t.me/{channel[1:]}/{message_id}" if channel.startswith("@")
             else f"https://t.me/c/{channel[4:]}/{message_id}" if channel.startswith("-100") else "")
@@ -607,7 +673,8 @@ class Bot:
                       f"\n\nℹ️ Блок «Джерела» в канал не публікується. Розмір допису: {size} з {TG_POST_LIMIT} символів."
                       + (f"\n📷 Фото над текстом: варіанти {', '.join(map(str, photos))} вище." if photos else "")
                       + "\n🕒 Після вибору фото допис стане на найближчий вільний вівторок: о 16:00 — тестовий канал, "
-                        "потім у випадковий час 17:00–19:00 — основний.",
+                        "потім у випадковий час 17:00–19:00 — основний."
+                      "\n\n" + edit_hint("ширші зміни — у повідомленні з текстом і кнопкою «✅ Готово»."),
                       kb(*rows), {"kind": "preview", "idea": idea["id"], "sha": digest, "text": body, "topic": ""})
             return
         topic_line = (f"🏷 Тема поста: {topic}" if topic else "🏷 Тема поста не обрана — оберіть кнопкою нижче.")
@@ -624,7 +691,8 @@ class Bot:
         rows.append([("❌ Скасувати", "cancel")])
         self.send(f"{stream_label(idea.get('stream'))} · фінальна перевірка — «{idea['title']}»\n\n{body}"
                   f"\n\nℹ️ Блок «Джерела» в Threads не публікується.{photo_line}\n{topic_line}\n"
-                  "🕒 Після вибору фото тред автоматично стане на найближчу вільну рекомендовану годину.",
+                  "🕒 Після вибору фото тред автоматично стане на найближчу вільну рекомендовану годину."
+                  "\n\n" + edit_hint("звичайна відповідь без цитати й «→» — нова тема поста."),
                   kb(*rows),
                   {"kind": "preview", "idea": idea["id"], "sha": digest, "text": body, "topic": topic})
 
@@ -1052,6 +1120,11 @@ class Bot:
 
         reply_id = (msg.get("reply_to_message") or {}).get("message_id")
         record = self.state["messages"].get(str(reply_id)) if reply_id else None
+        if text and record and record.get("kind") in ("thread", "preview"):
+            edits = parse_edits(text, (msg.get("quote") or {}).get("text", ""))
+            idea = self.ideas.get(record.get("idea"))
+            if edits is not None and idea:
+                return self.edit_thread(idea, edits, msg["message_id"])
         if text and record and record.get("kind") in ("photos", "photokw"):
             idea = self.ideas.get(record["idea"])
             if idea:
@@ -1059,7 +1132,10 @@ class Bot:
             return
         if text and record and record.get("kind") == "preview":
             idea = self.ideas.get(record["idea"])
-            if idea:
+            if idea and self.category(idea) == "T":
+                self.send("✏️ Тут працюють лише точкові правки: виділіть фрагмент → «Відповісти» → заміна, "
+                          "або рядок «старе → нове».", reply_to=msg["message_id"])
+            elif idea:
                 self.close_buttons(reply_id, "🏷 Тему змінено")
                 self.apply_topic(idea, text)
             return
@@ -1082,6 +1158,33 @@ class Bot:
             history(idea, "thread revision requested")
             self.fire.setdefault("texts", set()).add(idea["id"])
             self.send("✏️ Правки прийнято, нова версія прийде сюди.", reply_to=msg["message_id"])
+
+    def edit_thread(self, idea: dict, edits: list[tuple[str, str]], reply_to: int) -> None:
+        """Точкова правка тексту без переписування: замінює лише вказані фрагменти у файлі."""
+        status = idea.get("thread", {}).get("status")
+        if status in ("queued", "scheduled"):
+            self.send("🕒 Текст уже в розкладі. Щоб виправити, зніміть його з розкладу (↩️ у картці теми), "
+                      "потім надішліть правку ще раз.", reply_to=reply_to)
+            return
+        if status not in ("ready", "approved"):
+            self.send("✍️ Зараз цей текст переписується або вже опублікований — правку не застосовано.", reply_to=reply_to)
+            return
+        path = ROOT / idea["thread"]["file"]
+        body = path.read_text(encoding="utf-8")
+        new_body, problems = apply_edits(body, edits)
+        if problems:
+            self.send("✂️ Нічого не змінив: " + "; ".join(problems) + ".\n\nВиділіть фрагмент у тексті й натисніть "
+                      "«Відповісти» (цитата), або напишіть «старе → нове».", reply_to=reply_to)
+            return
+        if new_body == body:
+            self.send("✂️ Текст і так такий — нічого не змінив.", reply_to=reply_to)
+            return
+        path.write_text(new_body, encoding="utf-8")
+        idea["thread"]["status"] = "ready"
+        idea["thread"].pop("approved_sha", None)
+        history(idea, f"thread edited in telegram ({len(edits)} fragment(s))")
+        done = "\n".join(f"• «{old}» → «{new}»" if new else f"• «{old}» — видалено" for old, new in edits)
+        self.send(f"✂️ Виправлено:\n{done}\n\nОновлений текст — нижче; погодьте його ще раз.", reply_to=reply_to)
 
     # ------------------------------------------------------------ вихідні
 
@@ -1120,7 +1223,8 @@ class Bot:
         warning = f"\n\n⚠️ Є позначки [ПЕРЕВІРИТИ] ({marks}). {UNVERIFIED_HINT}" if marks else ""
         return self.send(
             f"{stream_label(idea.get('stream'))} · тред — «{idea['title']}»\n\n{body}{warning}\n\n"
-            "↩️ Правки — відповіддю на це повідомлення.",
+            + edit_hint("побажання своїми словами (напр. «скороти вступ») — текст доопрацюють, "
+                        "змінивши лише потрібне місце."),
             kb([("✅ Готово", f"done:{idea['id']}"), ("🗑 Скасувати тему", f"drop:{idea['id']}")]),
             {"kind": "thread", "idea": idea["id"], "sha": sha(body)})
 
