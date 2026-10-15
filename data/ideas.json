@@ -7094,7 +7094,26 @@
         "https://doaj.org/article/a528405d832c4ecbb3b739a60eaa964f",
         "https://nasplib.isofts.kiev.ua/handle/123456789/184660"
       ],
-      "images": [],
+      "images": [
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/c/cb/Unknown_artist_-_Thomas_Braithwaite_of_Ambleside_Making_His_Will_-_AH_2351-81_-_Abbot_Hall_Art_Gallery.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Unknown_artist_-_Thomas_Braithwaite_of_Ambleside_Making_His_Will_-_AH_2351-81_-_Abbot_Hall_Art_Gallery.jpg",
+          "credit": "Невідомий художник, «Томас Брейтвейт з Емблсайда складає заповіт» (1607), Abbot Hall Art Gallery / Wikimedia Commons, Public domain",
+          "license": "Public domain"
+        },
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/e/ed/An-Officer-dictating-a-Letter-1655-58-Gerard-ter-Borch.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:An-Officer-dictating-a-Letter-1655-58-Gerard-ter-Borch.jpg",
+          "credit": "Gerard ter Borch, «Офіцер диктує листа» (бл. 1655–1658) / Wikimedia Commons, Public domain",
+          "license": "Public domain"
+        },
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/9/9b/De_boerenadvocaat%2C_1620%2C_Groeningemuseum%2C_0040203001.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:De_boerenadvocaat,_1620,_Groeningemuseum,_0040203001.jpg",
+          "credit": "Pieter Brueghel the Younger, «Сільський адвокат» (1620), Musea Brugge – Groeningemuseum / Wikimedia Commons, CC0",
+          "license": "CC0"
+        }
+      ],
       "status": "approved",
       "thread": {
         "status": "approved",
@@ -7134,12 +7153,16 @@
         {
           "at": "2026-10-15T09:56:40+00:00",
           "event": "photo search requested in telegram: Чоловік підписує заповіт 17 ст"
+        },
+        {
+          "at": "2026-10-15T10:20:00+00:00",
+          "event": "photos found: 3"
         }
       ],
       "images_excluded": [],
-      "photo_request": true,
+      "photo_request": false,
       "photo_error": "",
-      "photo_keywords": "Чоловік підписує заповіт 17 ст",
+      "photo_keywords": "",
       "photo_requested_at": "2026-10-15T09:56:40+00:00"
     },
     {
