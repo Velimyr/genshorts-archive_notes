@@ -6213,7 +6213,7 @@
           "license": "Public domain"
         }
       ],
-      "status": "proposed",
+      "status": "rejected",
       "thread": {
         "status": "none",
         "file": null
@@ -6231,6 +6231,10 @@
         {
           "at": "2026-10-15T06:30:00+00:00",
           "event": "proposed by ideas routine"
+        },
+        {
+          "at": "2026-10-15T05:55:58+00:00",
+          "event": "idea rejected in telegram"
         }
       ]
     },
@@ -6254,7 +6258,7 @@
           "license": "Public domain"
         }
       ],
-      "status": "proposed",
+      "status": "rejected",
       "thread": {
         "status": "none",
         "file": null
@@ -6272,6 +6276,10 @@
         {
           "at": "2026-10-15T06:30:00+00:00",
           "event": "proposed by ideas routine"
+        },
+        {
+          "at": "2026-10-15T05:55:59+00:00",
+          "event": "idea rejected in telegram"
         }
       ]
     },
@@ -6295,7 +6303,7 @@
           "license": "Public domain"
         }
       ],
-      "status": "proposed",
+      "status": "rejected",
       "thread": {
         "status": "none",
         "file": null
@@ -6313,6 +6321,10 @@
         {
           "at": "2026-10-15T06:30:00+00:00",
           "event": "proposed by ideas routine"
+        },
+        {
+          "at": "2026-10-15T05:55:59+00:00",
+          "event": "idea rejected in telegram"
         }
       ]
     },
@@ -6336,7 +6348,7 @@
           "license": "Public domain"
         }
       ],
-      "status": "proposed",
+      "status": "rejected",
       "thread": {
         "status": "none",
         "file": null
@@ -6354,6 +6366,10 @@
         {
           "at": "2026-10-15T06:30:00+00:00",
           "event": "proposed by ideas routine"
+        },
+        {
+          "at": "2026-10-15T05:56:01+00:00",
+          "event": "idea rejected in telegram"
         }
       ]
     },
