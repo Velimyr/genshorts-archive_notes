@@ -26,6 +26,7 @@
 import hashlib
 import json
 import os
+import random
 import re
 import sys
 import time
@@ -94,11 +95,14 @@ STREAMS = {
     "fun": ("😏", "Жартівливий"),
     "tg": ("📰", "Telegram-допис"),
 }
-# Telegram-дописи: окрема черга — щовівторка о 19:00 у канал автора.
+# Telegram-дописи: окрема черга. Щовівторка о 16:00 — у тестовий канал (TG_CHANNEL_ID),
+# потім той самий допис — в основний у випадковий час 17:00–19:00. Опубліковано = вийшов в основному.
 TG_CHANNEL_ID = os.environ.get("TG_CHANNEL_ID", "").strip()
-# Окремий бот автора, який уже є адміністратором каналу; без нього — бот пайплайна.
+TG_MAIN_CHANNEL_ID = os.environ.get("TG_MAIN_CHANNEL_ID", "").strip() or "@archivist_notes"
+# Окремий бот автора, який уже є адміністратором обох каналів; без нього — бот пайплайна.
 TG_POSTER_TOKEN = os.environ.get("TG_POSTER_TOKEN", "").strip()
-TG_SLOT = (1, 19, 0)  # вівторок, 19:00 за Києвом
+TG_SLOT = (1, 16, 0)  # вівторок, 16:00 за Києвом — тестовий канал
+TG_MAIN_WINDOW = ((17, 0), (19, 0))  # основний канал — випадковий час у цьому вікні
 TG_POST_LIMIT = 4096
 # Рубрика вівторкових дописів: перший рядок кожного допису (клікабельний хештег у каналі).
 TG_RUBRIC = "#РодовіднаПросвіта"
@@ -280,6 +284,24 @@ def thread_posts(text: str) -> list[str]:
     return [b for b in blocks if not b.lower().startswith("джерела")]
 
 
+def tg_permalink(channel: str, message_id) -> str:
+    return (f"https://t.me/{channel[1:]}/{message_id}" if channel.startswith("@")
+            else f"https://t.me/c/{channel[4:]}/{message_id}" if channel.startswith("-100") else "")
+
+
+def tg_main_slot(after: datetime) -> datetime:
+    """Випадковий момент (з точністю до хвилини) у вікні основного каналу, не раніше ніж за 5 хв."""
+    earliest = after.astimezone(KYIV) + timedelta(minutes=5)
+    day = earliest.date()
+    while True:
+        (h1, m1), (h2, m2) = TG_MAIN_WINDOW
+        start = max(datetime(day.year, day.month, day.day, h1, m1, tzinfo=KYIV), earliest.replace(second=0, microsecond=0))
+        end = datetime(day.year, day.month, day.day, h2, m2, tzinfo=KYIV)
+        if start < end:
+            return start + timedelta(minutes=random.randrange(int((end - start).total_seconds() // 60)))
+        day += timedelta(days=1)
+
+
 def tg_post_text(text: str) -> str:
     """Текст Telegram-допису для каналу: завжди починається з рубрики TG_RUBRIC."""
     body = "\n\n".join(thread_posts(text))
@@ -395,9 +417,12 @@ class Bot:
                 stages[2][3].append((idea, ""))
             elif thread == "approved" or (thread == "queued" and item.get("publish_at") == "pending"):
                 stages[3][3].append((idea, ""))
+            elif thread == "scheduled" and item.get("test_id") and item.get("main_at"):
+                stages[4][3].append((idea, f"🧪→ основний {fmt_slot(parse_time(item['main_at']))}"))
             elif thread == "scheduled" and item.get("publish_at") not in (None, "pending"):
                 stages[4][3].append((idea, fmt_slot(parse_time(item["publish_at"]))))
-        stages[4][3].sort(key=lambda x: parse_time(items[x[0]["id"]]["publish_at"]))
+        due = {i: m for m, i, _ in self.scheduled()}
+        stages[4][3].sort(key=lambda x: due.get(x[0]["id"]) or parse_time(items[x[0]["id"]]["publish_at"]))
         lines, buttons, n = ["📰 Черга Telegram-дописів" if channel == "tg" else "📋 Черга тредів Threads"], [], 0
         for title, icon, action, rows in stages:
             if not rows:
@@ -454,6 +479,10 @@ class Bot:
         elif thread == "approved" or (thread == "queued" and item.get("publish_at") == "pending"):
             lines.append("✅ Тред готовий, час публікації не обрано.")
             rows = [[("🕒 Запланувати", f"pub:{iid}")]]
+        elif thread == "scheduled" and item.get("test_id") and item.get("main_at"):
+            lines.append(f"🧪 Вийшов у тестовому каналі{(': ' + item['test_permalink']) if item.get('test_permalink') else '.'}"
+                         f"\n🕒 В основний канал — {fmt_slot(parse_time(item['main_at']))}.")
+            rows = [[("⚡ В основний зараз", f"when:{iid}:now")]]
         elif thread == "scheduled" and item.get("publish_at") not in (None, "pending"):
             lines.append(f"🕒 Заплановано на {fmt_slot(parse_time(item['publish_at']))}.")
             rows = [[("⬆️ Раніше", f"move:{iid}:up"), ("⬇️ Пізніше", f"move:{iid}:down")],
@@ -468,7 +497,7 @@ class Bot:
             lines.append(f"📤 Опубліковано{(' ' + fmt_slot(parse_time(item['posted_at']))) if item.get('posted_at') else ''}."
                          + (f"\n{stats}" if stats else "")
                          + (f"\n{idea['thread'].get('permalink')}" if idea["thread"].get("permalink") else ""))
-        if thread in ("ready", "approved", "queued", "scheduled"):
+        if thread in ("ready", "approved", "queued", "scheduled") and not item.get("test_id"):
             count = len(idea.get("images", []))
             rows.append([(f"🔄 Інші фото ({count})", f"photos:{iid}:more") if count
                          else ("🖼 Знайти фото", f"photos:{iid}"),
@@ -509,7 +538,7 @@ class Bot:
     def move_item(self, idea: dict, direction: str) -> None:
         """Переносить заплановану тему на сусідній рекомендований слот; зайнятий — обмін."""
         item = self.state["approved_threads"].get(idea["id"], {})
-        if item.get("posted") or item.get("posted_ids") or item.get("publish_at") in (None, "pending"):
+        if item.get("posted") or item.get("posted_ids") or item.get("test_id") or item.get("publish_at") in (None, "pending"):
             return
         current = parse_time(item["publish_at"])
         earliest = datetime.now(KYIV) + timedelta(minutes=15)
@@ -577,7 +606,8 @@ class Bot:
             self.send(f"{stream_label(idea.get('stream'))} · фінальна перевірка — «{idea['title']}»\n\n{body}"
                       f"\n\nℹ️ Блок «Джерела» в канал не публікується. Розмір допису: {size} з {TG_POST_LIMIT} символів."
                       + (f"\n📷 Фото над текстом: варіанти {', '.join(map(str, photos))} вище." if photos else "")
-                      + "\n🕒 Після вибору фото допис стане на найближчий вільний вівторок о 19:00.",
+                      + "\n🕒 Після вибору фото допис стане на найближчий вільний вівторок: о 16:00 — тестовий канал, "
+                        "потім у випадковий час 17:00–19:00 — основний.",
                       kb(*rows), {"kind": "preview", "idea": idea["id"], "sha": digest, "text": body, "topic": ""})
             return
         topic_line = (f"🏷 Тема поста: {topic}" if topic else "🏷 Тема поста не обрана — оберіть кнопкою нижче.")
@@ -679,7 +709,7 @@ class Bot:
     def scheduled(self) -> list[tuple[datetime, str, dict]]:
         items = []
         for idea_id, item in self.state["approved_threads"].items():
-            at = item.get("publish_at")
+            at = item.get("main_at") if item.get("test_id") else item.get("publish_at")
             if not item.get("posted") and not item.get("failed") and at and at != "pending":
                 items.append((parse_time(at), idea_id, item))
         return sorted(items, key=lambda x: x[0])
@@ -850,7 +880,7 @@ class Bot:
                     idea.get("thread", {}).get("status") not in ("approved", "queued", "scheduled"):
                 return
             previous = self.state["approved_threads"].get(idea["id"], {})
-            if previous.get("posted") or previous.get("posted_ids"):
+            if previous.get("posted") or previous.get("posted_ids") or previous.get("test_id"):
                 return
             keep_time = previous.get("publish_at") if previous.get("publish_at") not in (None, "pending") else None
             # У чергу йде саме той текст, який користувач щойно бачив.
@@ -880,6 +910,12 @@ class Bot:
             idea, item = self.ideas.get(parts[1]), self.state["approved_threads"].get(parts[1])
             if not idea or not item or item.get("posted") or item.get("posted_ids"):
                 return
+            if item.get("test_id"):  # уже в тестовому каналі: можна лише прискорити основний
+                if parts[2] == "now":
+                    item["main_at"] = now()
+                    history(idea, "telegram main channel: publish now")
+                    self.close_buttons(mid, "⚡ Публікую в основний канал")
+                return
             if parts[2] == "now":
                 item["publish_at"] = now()
                 label = "⚡ Публікую зараз"
@@ -893,7 +929,7 @@ class Bot:
                 self.send(f"🕒 «{idea['title']}» заплановано на {label[2:]}. Змінити чи зняти — у 📋 Черга.")
         elif action == "unq":
             idea, item = self.ideas.get(parts[1]), self.state["approved_threads"].get(parts[1])
-            if not idea or not item or item.get("posted") or item.get("posted_ids"):
+            if not idea or not item or item.get("posted") or item.get("posted_ids") or item.get("test_id"):
                 return
             self.state["approved_threads"].pop(idea["id"])
             idea["thread"]["status"] = "approved"
@@ -1089,13 +1125,9 @@ class Bot:
             {"kind": "thread", "idea": idea["id"], "sha": sha(body)})
 
     def publish_tg(self, idea_id: str, item: dict) -> None:
-        """Telegram-допис у канал: одне повідомлення, фото — великим прев'ю над текстом."""
+        """Telegram-допис: спершу тестовий канал, потім той самий текст в основний у випадковий час
+        вікна TG_MAIN_WINDOW. Одне повідомлення, фото — великим прев'ю над текстом."""
         idea = self.ideas.get(idea_id, {"title": idea_id})
-        if not TG_CHANNEL_ID:
-            if not item.get("channel_warned"):
-                item["channel_warned"] = True
-                self.send(f"⚠️ «{idea['title']}»: канал для Telegram-дописів не вказано — не публікую.")
-            return
         if unverified(item["text"]):
             item["failed"] = "у тексті є [ПЕРЕВІРИТИ]"
             self.send(f"⚠️ Не публікую «{idea['title']}»: у тексті є [ПЕРЕВІРИТИ].")
@@ -1105,12 +1137,18 @@ class Bot:
             item["failed"] = f"допис довший за {TG_POST_LIMIT} символів ({len(text)})" if text else "порожній допис"
             self.send(f"⚠️ Не публікую «{idea['title']}»: {item['failed']}.")
             return
+        test_stage = not item.get("test_id")
+        if test_stage and not TG_CHANNEL_ID:  # тестового каналу немає — одразу в основний за розкладом
+            item.update({"test_id": "skipped", "main_at": tg_main_slot(datetime.now(KYIV)).isoformat()})
+            return
+        channel = TG_CHANNEL_ID if test_stage else TG_MAIN_CHANNEL_ID
+        where = "тестовому" if test_stage else "основному"
         image = item.get("image")
         preview = ({"url": image["url"], "prefer_large_media": True, "show_above_text": True}
                    if image and image.get("url") else {"is_disabled": True})
         request = urllib.request.Request(
             f"https://api.telegram.org/bot{TG_POSTER_TOKEN or TOKEN}/sendMessage",
-            data=json.dumps({"chat_id": TG_CHANNEL_ID, "text": text, "link_preview_options": preview}).encode("utf-8"),
+            data=json.dumps({"chat_id": channel, "text": text, "link_preview_options": preview}).encode("utf-8"),
             headers={"Content-Type": "application/json"},
         )
         try:
@@ -1124,18 +1162,26 @@ class Bot:
             item["attempts"] = item.get("attempts", 0) + 1
             if item["attempts"] >= 3:
                 item["failed"] = reason
-            self.send(f"⚠️ Telegram-допис «{idea['title']}» не опубліковано: {reason}."
+            self.send(f"⚠️ Telegram-допис «{idea['title']}» не опубліковано в {where} каналі: {reason}."
                       + (" Більше не пробую — напишіть мені." if item.get("failed") else " Повторю протягом години."))
             return
-        channel = TG_CHANNEL_ID
-        permalink = (f"https://t.me/{channel[1:]}/{message_id}" if channel.startswith("@")
-                     else f"https://t.me/c/{channel[4:]}/{message_id}" if channel.startswith("-100") else "")
+        permalink = tg_permalink(channel, message_id)
+        item["attempts"] = 0
+        if test_stage:
+            item.update({"test_id": str(message_id), "test_permalink": permalink, "test_posted_at": now(),
+                         "main_at": tg_main_slot(datetime.now(KYIV)).isoformat()})
+            if idea_id in self.ideas:
+                history(self.ideas[idea_id], f"telegram post published to test channel, main at {item['main_at']}")
+            self.send(f"🧪 Допис у тестовому каналі: «{idea['title']}»\n{permalink}\n\n"
+                      f"🕒 В основний канал — {fmt_slot(parse_time(item['main_at']))}.",
+                      kb([("⚡ В основний зараз", f"when:{idea_id}:now")]), {"kind": "when"})
+            return
         item.update({"posted": True, "posted_at": now(), "permalink": permalink, "posted_ids": [str(message_id)]})
         if idea_id in self.ideas:
             self.ideas[idea_id]["thread"]["status"] = "posted"
             self.ideas[idea_id]["thread"]["permalink"] = permalink
-            history(self.ideas[idea_id], "telegram post published to channel")
-        self.send(f"✅ Telegram-допис опубліковано: «{idea['title']}»\n{permalink}")
+            history(self.ideas[idea_id], "telegram post published to main channel")
+        self.send(f"✅ Telegram-допис опубліковано в основному каналі: «{idea['title']}»\n{permalink}")
 
     def publish_queued(self):
         """Публікує одну публікацію за запуск; прогрес тредів зберігає після кожного поста."""
@@ -1143,7 +1189,7 @@ class Bot:
         for idea_id, item in self.state["approved_threads"].items():
             if item.get("posted") or item.get("failed"):
                 continue
-            at = item.get("publish_at")
+            at = item.get("main_at") if item.get("test_id") else item.get("publish_at")
             if at == "pending" or (at and parse_time(at) > current):
                 continue
             if self.category(self.ideas.get(idea_id)) == "T":
