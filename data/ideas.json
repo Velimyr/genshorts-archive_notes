@@ -6752,7 +6752,7 @@
       ],
       "status": "approved",
       "thread": {
-        "status": "ready",
+        "status": "revise",
         "file": "data/texts/2026-10-15-13/thread.md"
       },
       "script": {
@@ -6763,7 +6763,13 @@
         "status": "none",
         "telegram_message_id": null
       },
-      "revisions": [],
+      "revisions": [
+        {
+          "kind": "thread",
+          "text": "прибери згадки про єврейську генеалогію. Дай приклади сайтів де можна за цим методом перевірити написання прізвищ",
+          "at": "2026-10-15T07:13:34+00:00"
+        }
+      ],
       "history": [
         {
           "at": "2026-10-15T07:00:00+00:00",
@@ -6784,6 +6790,10 @@
         {
           "at": "2026-10-15T07:11:30+00:00",
           "event": "thread edited in telegram (1 fragment(s))"
+        },
+        {
+          "at": "2026-10-15T07:13:34+00:00",
+          "event": "thread revision requested"
         }
       ]
     },
