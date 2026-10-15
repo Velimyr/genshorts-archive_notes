@@ -6665,7 +6665,7 @@
           "license": "Public domain"
         }
       ],
-      "status": "proposed",
+      "status": "approved",
       "thread": {
         "status": "none",
         "file": null
@@ -6683,6 +6683,10 @@
         {
           "at": "2026-10-15T07:00:00+00:00",
           "event": "proposed by ideas routine"
+        },
+        {
+          "at": "2026-10-15T06:31:16+00:00",
+          "event": "idea approved in telegram"
         }
       ]
     },
@@ -6700,7 +6704,7 @@
         "https://encyclopediaofukraine.com/pages%5CP%5CY%5CPylypowIvan.htm"
       ],
       "images": [],
-      "status": "proposed",
+      "status": "rejected",
       "thread": {
         "status": "none",
         "file": null
@@ -6718,6 +6722,10 @@
         {
           "at": "2026-10-15T07:00:00+00:00",
           "event": "proposed by ideas routine"
+        },
+        {
+          "at": "2026-10-15T06:31:16+00:00",
+          "event": "idea rejected in telegram"
         }
       ]
     },
