@@ -6192,6 +6192,417 @@
           "event": "telegram post published to channel"
         }
       ]
+    },
+    {
+      "id": "2026-10-15-01",
+      "proposed_at": "2026-10-15",
+      "stream": "tg",
+      "title": "Харківська губернія 1835–1925: 11 повітів, Слобожанщина і 1923 рік",
+      "summary": "Розбір краю: Слобідсько-Українська губернія 1765–1780/1797–1835, Харківське намісництво 1780–1796, власне Харківська 1835–1925. Повіти (11 за переписом 1897), населення 2 492 316 (українська мова 80,6%), Ізюмський і Старобільський повіти до Донецької губернії 1920, ліквідація Чугуївського 1922, скасування губернії серпнем 1925. Куди звертатися за справами.",
+      "why_now": "Джерела розходяться: у статті 13 повітів до 1856 р., у таблиці 11; губернію скасували 1 серпня (укр. вікі) або в червні (англ.) 1925; частка українців 80,6% (за мовою) чи 82,7% (за ЕУ).",
+      "sources": [
+        "https://uk.wikipedia.org/wiki/Харківська_губернія",
+        "https://en.wikipedia.org/wiki/Kharkov_Governorate",
+        "https://www.encyclopediaofukraine.com/display.asp?linkpath=pages%5CK%5CH%5CKharkivgubernia.htm"
+      ],
+      "images": [
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Kharkov_Governorate_%281913%29.png/1280px-Kharkov_Governorate_%281913%29.png",
+          "page": "https://commons.wikimedia.org/wiki/File:Kharkov_Governorate_(1913).png",
+          "credit": "Рябченко А. Е., Руднев Д. М. / Wikimedia Commons, Public domain",
+          "license": "Public domain"
+        }
+      ],
+      "status": "proposed",
+      "thread": {
+        "status": "none",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-10-15T06:30:00+00:00",
+          "event": "proposed by ideas routine"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-15-02",
+      "proposed_at": "2026-10-15",
+      "stream": "tg",
+      "title": "Катеринославська губернія 1802–1925: від Дніпра до Маріуполя",
+      "summary": "Розбір краю: утворена 8 жовтня 1802 р. після ліквідації Новоросійської губернії; повіти Катеринославський, Бахмутський, Маріупольський (з 1874), Олександрівський, Верхньодніпровський, Новомосковський, Павлоградський, Слов'яносербський; населення 2 113 674 (1897), українська мова 68,9%, значні німецькі й грецькі громади. Зміни меж 1919–1922, 7 округ 1923, скасування 1 серпня 1925.",
+      "why_now": "Джерела розходяться щодо того, коли Ростов і Таганрог передали Області Війська Донського (1887 чи 1897). Для предків з Придніпров'я та Донеччини.",
+      "sources": [
+        "https://uk.wikipedia.org/wiki/Катеринославська_губернія",
+        "https://en.wikipedia.org/wiki/Yekaterinoslav_Governorate",
+        "https://ru.wikipedia.org/wiki/Екатеринославская_губерния"
+      ],
+      "images": [
+        {
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/75/1913._Yekaterinoslav_Governorate.gif/1280px-1913._Yekaterinoslav_Governorate.gif",
+          "page": "https://commons.wikimedia.org/wiki/File:1913._Yekaterinoslav_Governorate.gif",
+          "credit": "Д. Руднев / Wikimedia Commons, Public domain",
+          "license": "Public domain"
+        }
+      ],
+      "status": "proposed",
+      "thread": {
+        "status": "none",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-10-15T06:30:00+00:00",
+          "event": "proposed by ideas routine"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-15-03",
+      "proposed_at": "2026-10-15",
+      "stream": "tg",
+      "title": "Херсонська губернія 1803–1922: Одеса, Миколаїв, Єлисаветград і 6 повітів",
+      "summary": "Розбір краю: Миколаївська губернія 1802–1803, Херсонська з 1803; повіти (4 у 1803, 5 у 1806, Одеський 1825, Бобринецький 1828–1865, Ананьївський 1834, 6 у 1894); населення 2 733 612 (1897), українська 53,5%, російська 21%, єврейська 11,8%, румунська 5,4%, німецька 4,5%; 46% жителів народилися поза губернією. Ліквідація 1922, наступниця — Одеська.",
+      "why_now": "Джерела розходяться: укр. вікі — 1803 р. створення, ЕУ — 1802 (як Миколаївська). Мігранти й колоністи — головна причина «втрачених» предків.",
+      "sources": [
+        "https://uk.wikipedia.org/wiki/Херсонська_губернія",
+        "https://en.wikipedia.org/wiki/Kherson_Governorate",
+        "https://www.encyclopediaofukraine.com/display.asp?linkpath=pages%5CK%5CH%5CKhersongubernia.htm"
+      ],
+      "images": [
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Kherson_Governorate.png/1280px-Kherson_Governorate.png",
+          "page": "https://commons.wikimedia.org/wiki/File:Kherson_Governorate.png",
+          "credit": "Рябченко А. Е., Руднев Д. М. / Wikimedia Commons, Public domain",
+          "license": "Public domain"
+        }
+      ],
+      "status": "proposed",
+      "thread": {
+        "status": "none",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-10-15T06:30:00+00:00",
+          "event": "proposed by ideas routine"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-15-04",
+      "proposed_at": "2026-10-15",
+      "stream": "tg",
+      "title": "Чернігівська губернія 1802–1925: 15 повітів і північ, що відійшла 1919 року",
+      "summary": "Розбір краю: створена 11 березня 1802 р. з Малоросійської губернії, 15 повітів (від 1803), 187 волостей; населення 2 297 854 (1897), українська мова 66,4%, російська 21,6%, білоруська 6,6%; чотири північні повіти (Мглинський, Новозибківський, Стародубський, Суразький) передані Гомельській губернії 1919, 1926 — Брянській. Округи 1925: Глухівська, Конотопська, Ніжинська, Чернігівська.",
+      "why_now": "Джерела розходяться: ЕУ — 11 повітів в українській етнічній території + 4 змішані; англ. вікі згадує 18 повітів за часів УНР. Предки з Стародубщини часто «зникають» через кордон.",
+      "sources": [
+        "https://uk.wikipedia.org/wiki/Чернігівська_губернія",
+        "https://en.wikipedia.org/wiki/Chernigov_Governorate",
+        "https://www.encyclopediaofukraine.com/display.asp?linkpath=pages%5CC%5CH%5CChernihivgubernia.htm"
+      ],
+      "images": [
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Chernigov_Governorate_%281913%29.png/1280px-Chernigov_Governorate_%281913%29.png",
+          "page": "https://commons.wikimedia.org/wiki/File:Chernigov_Governorate_(1913).png",
+          "credit": "Рябченко А. Е., Руднев Д. М. / Wikimedia Commons, Public domain",
+          "license": "Public domain"
+        }
+      ],
+      "status": "proposed",
+      "thread": {
+        "status": "none",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-10-15T06:30:00+00:00",
+          "event": "proposed by ideas routine"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-15-05",
+      "proposed_at": "2026-10-15",
+      "stream": "tg",
+      "title": "Київська губернія 1796–1925: 12 повітів і найбільше населення імперії",
+      "summary": "Розбір краю: нова Київська губернія 1796 р. на Правобережжі (історія від 1708), 12 повітів від 1846 р.; населення 3 559 229 (1897) — найбільше серед губерній імперії; українська мова 79,2%, єврейська 12,1%, польська 1,9%; таблиця повітів із населенням; 1923 р. — 7 округ, 1925 р. — ліквідація та 5 округ.",
+      "why_now": "Джерела розходяться щодо дати ліквідації (березень/3 червня/6 червня/1 серпня 1925) і щодо Чигиринського повіту. Київщина — стартова точка для багатьох правобережних родоводів.",
+      "sources": [
+        "https://uk.wikipedia.org/wiki/Київська_губернія",
+        "https://en.wikipedia.org/wiki/Kiev_Governorate",
+        "https://www.encyclopediaofukraine.com/display.asp?linkpath=pages%5CK%5CY%5CKyivgubernia.htm"
+      ],
+      "images": [
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Kiev_Governorate_%281913%29.png/1280px-Kiev_Governorate_%281913%29.png",
+          "page": "https://commons.wikimedia.org/wiki/File:Kiev_Governorate_(1913).png",
+          "credit": "Рябченко А. Е., Руднев Д. М. / Wikimedia Commons, Public domain",
+          "license": "Public domain"
+        }
+      ],
+      "status": "proposed",
+      "thread": {
+        "status": "none",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-10-15T06:30:00+00:00",
+          "event": "proposed by ideas routine"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-15-06",
+      "proposed_at": "2026-10-15",
+      "stream": "tg",
+      "title": "Таврійська губернія 1802–1921: Крим і степ між Дніпром та Азовом",
+      "summary": "Розбір краю: утворена 8 жовтня 1802 р., центр — Сімферополь; три материкові повіти (Бердянський, Дніпровський, Мелітопольський) і п'ять кримських, градоначальства Севастополь і Керч-Єнікале; 1 447 790 жителів (1897): українська 42,2%, російська 27,9%, кримськотатарська 13,6%, німецька 5,4%. Материкова частина — до УСРР. Історія межі й чому метрики мелітопольців зберігаються в Запоріжжі й Херсоні.",
+      "why_now": "Джерела розходяться щодо дат: укр. вікі — зникла 1921, рос. вікі — упразднена 21 березня 1918; Бердянський повіт утворено 1843 (інфобокс — 1838). Для предків з Півдня.",
+      "sources": [
+        "https://uk.wikipedia.org/wiki/Таврійська_губернія",
+        "https://en.wikipedia.org/wiki/Taurida_Governorate",
+        "https://ru.wikipedia.org/wiki/Таврическая_губерния"
+      ],
+      "images": [
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/4/46/1822._Taurida_governorate.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:1822._Taurida_governorate.jpg",
+          "credit": "В. П. Пядышев / Wikimedia Commons, Public domain",
+          "license": "Public domain"
+        }
+      ],
+      "status": "proposed",
+      "thread": {
+        "status": "none",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-10-15T06:30:00+00:00",
+          "event": "proposed by ideas routine"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-15-07",
+      "proposed_at": "2026-10-15",
+      "stream": "tg",
+      "title": "Підкарпатська Русь 1919–1939: жупи, округи і предки з-під Карпат",
+      "summary": "Розбір краю: 10 вересня 1919 р. (Сен-Жерменський договір) — автономія в Чехословаччині; жупи Ужгородська, Мукачівська, Мармароська, з 1927 р. 12 округів; губернатори Жаткович, Еренфельд, Бескид, Розсипал, Грабар; 1910 р. — 605 942 жителі (русини 54,5%, угорці 30,6%, німці 10,6%); Карпатська Україна і 15 березня 1939 р. Де шукати документи: Державний архів Закарпатської області (5072 фонди, 1 383 401 справа на 2019 р.; метричних книг збереглося мало, тож допомагають переписні аркуші 1921 р.).",
+      "why_now": "Різні джерела дають різний склад населення: 572 028 (без року, укр. вікі) проти 605 942 за угорським переписом 1910 (англ. вікі). Угорські комітати Берег, Унг, Угоча, Мармарош — основа для пошуку.",
+      "sources": [
+        "https://uk.wikipedia.org/wiki/Підкарпатська_Русь",
+        "https://en.wikipedia.org/wiki/Subcarpathian_Rus%27",
+        "https://uk.wikipedia.org/wiki/Державний_архів_Закарпатської_області",
+        "https://uk.wikipedia.org/wiki/Закарпатська_область"
+      ],
+      "images": [
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/9/98/Podkarpatsk%C3%A1_Rus.png",
+          "page": "https://commons.wikimedia.org/wiki/File:Podkarpatská_Rus.png",
+          "credit": "STS Chvojkovice-Brod / Wikimedia Commons, Public domain",
+          "license": "Public domain"
+        }
+      ],
+      "status": "proposed",
+      "thread": {
+        "status": "none",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-10-15T06:30:00+00:00",
+          "event": "proposed by ideas routine"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-15-08",
+      "proposed_at": "2026-10-15",
+      "stream": "tg",
+      "title": "Холмська губернія 1912–1919: українська Холмщина на мапі імперії",
+      "summary": "Розбір краю: закон від 6 липня 1912 р., відкриття 8 вересня 1913 р.; вісім повітів (Білгорайський, Більський, Володавський, Грубешівський, Замостський, Костянтинівський, Томашівський, Холмський); 758–912 тис. жителів залежно від року й меж; частка українців близько 50%; чому створили (відокремлення від Царства Польського) і де шукати документи після 1920 р.",
+      "why_now": "Дуже різні цифри: площа 10 460 км² чи ~16 тис.; населення 703 тис. (1909), 758 408 (1912), 896 316 чи 912 095 (1914) — залежить від меж. Цікаво для предків із Холмщини й Підляшшя.",
+      "sources": [
+        "https://uk.wikipedia.org/wiki/Холмська_губернія",
+        "https://pl.wikipedia.org/wiki/Gubernia_chełmska",
+        "https://ru.wikipedia.org/wiki/Холмская_губерния"
+      ],
+      "images": [
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/e/e9/Kholm_Governorate_1913_uk.png",
+          "page": "https://commons.wikimedia.org/wiki/File:Kholm_Governorate_1913_uk.png",
+          "credit": "XrysD, ZxcvU / Wikimedia Commons, CC BY-SA 4.0",
+          "license": "CC BY-SA 4.0"
+        }
+      ],
+      "status": "proposed",
+      "thread": {
+        "status": "none",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-10-15T06:30:00+00:00",
+          "event": "proposed by ideas routine"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-15-09",
+      "proposed_at": "2026-10-15",
+      "stream": "tg",
+      "title": "Слобідські козацькі полки 1651–1765: Харків, Суми, Охтирка, Ізюм, Острогозьк",
+      "summary": "Розбір краю: п'ять полків (Харківський, Сумський, Охтирський, Острогозький, Ізюмський) і 98 сотень у 1734 р.; хвилі заселення з 1630-х рр.; населення: ~120 тис. наприкінці XVII ст., ~400 тис. у 1732 р., 660+ тис. у 1773 р.; 28 липня 1765 р. маніфест Катерини II скасував козацький устрій; заміна гусарськими полками і Слобідсько-Українська губернія. Які документи полкового періоду шукати.",
+      "why_now": "Дата утворення Ізюмського полку (1685), Балаклійського (1669–1677) й Зміївського (1660–1670) — у джерелах різна; англ. вікі не дає чисельності. Дає пояснення прізвищ слобожан.",
+      "sources": [
+        "https://uk.wikipedia.org/wiki/Слобідська_Україна",
+        "https://uk.wikipedia.org/wiki/Слобідські_козацькі_полки",
+        "https://en.wikipedia.org/wiki/Sloboda_Ukraine"
+      ],
+      "images": [
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Sloboda_Ukraine_1764.png/1280px-Sloboda_Ukraine_1764.png",
+          "page": "https://commons.wikimedia.org/wiki/File:Sloboda_Ukraine_1764.png",
+          "credit": "Riwnodennyk / Wikimedia Commons, CC BY-SA 4.0",
+          "license": "CC BY-SA 4.0"
+        }
+      ],
+      "status": "proposed",
+      "thread": {
+        "status": "none",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-10-15T06:30:00+00:00",
+          "event": "proposed by ideas routine"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-15-10",
+      "proposed_at": "2026-10-15",
+      "stream": "tg",
+      "title": "Паланки Війська Запорозького Низового: 8 округів Вольностей до 1775 року",
+      "summary": "Розбір краю: система паланок у Новій Січі (1734–1775): 8 паланок (Бугогардівська, Кодацька, Інгульська, Протовчанська, Орільська, Самарська, Кальміуська, Прогноївська — за ЕУ), центри — слободи з гарнізоном, полковник із військовою, адміністративною, судовою й фінансовою владою; 5 червня 1775 р. Січ оточено, 3 серпня маніфест Катерини II; приєднання до Новоросійської губернії. Реєстр 1756 р.: 12 758 козаків.",
+      "why_now": "Джерела розходяться щодо складу паланок (англ. вікі — Перевізька й Орільська, ЕУ — Інгульська та Орільська) і щодо дати ліквідації. Для предків із Запорожжя.",
+      "sources": [
+        "https://www.encyclopediaofukraine.com/display.asp?linkpath=pages%5CP%5CA%5CPalanka.htm",
+        "https://en.wikipedia.org/wiki/Zaporozhian_Sich",
+        "https://uk.wikipedia.org/wiki/Запорозька_Січ"
+      ],
+      "images": [
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/%D0%9F%D0%BE%D0%BB%D0%BA%D0%B8_1750.png/1280px-%D0%9F%D0%BE%D0%BB%D0%BA%D0%B8_1750.png",
+          "page": "https://commons.wikimedia.org/wiki/File:Полки_1750.png",
+          "credit": "Skoropadsky / Wikimedia Commons, CC0",
+          "license": "CC0 1.0"
+        }
+      ],
+      "status": "proposed",
+      "thread": {
+        "status": "none",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-10-15T06:30:00+00:00",
+          "event": "proposed by ideas routine"
+        }
+      ]
     }
   ]
 }
