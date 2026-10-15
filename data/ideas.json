@@ -6821,8 +6821,19 @@
         {
           "at": "2026-10-15T07:45:38+00:00",
           "event": "thread text approved in telegram"
+        },
+        {
+          "at": "2026-10-15T07:50:02+00:00",
+          "event": "photo search requested in telegram (more)"
         }
-      ]
+      ],
+      "images_excluded": [
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/66/%28Soundex%29_index_to_1900_census%2C_Alabama%29_%28microform_%28IA_soundex1900al034%29.pdf/page1-1280px-%28Soundex%29_index_to_1900_census%2C_Alabama%29_%28microform_%28IA_soundex1900al034%29.pdf.jpg"
+      ],
+      "photo_request": true,
+      "photo_error": "",
+      "photo_keywords": "",
+      "photo_requested_at": "2026-10-15T07:50:02+00:00"
     },
     {
       "id": "2026-10-15-14",
