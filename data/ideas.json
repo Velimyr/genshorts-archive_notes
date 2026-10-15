@@ -6643,6 +6643,416 @@
           "event": "idea rejected in telegram"
         }
       ]
+    },
+    {
+      "id": "2026-10-15-11",
+      "proposed_at": "2026-10-15",
+      "stream": "tg",
+      "rubric": "maps",
+      "title": "Трьохверстівка: військова мапа 1:126 000, на якій видно хутір предків",
+      "summary": "Військово-топографічна мапа Європейської Росії 1:126 000 («трьохверстівка») показує села, хутори, млини й шляхи 2-ї пол. XIX ст. Розповідаємо, чим вона відрізняється від мап Шуберта 1:420 000, де шукати листи (RCIN, Wikimedia Commons, архіви) і як зіставити з метричною парафією.",
+      "why_now": "Нова рубрика для каналу: карти як джерело про місцевість предків.",
+      "sources": [
+        "https://www.rcin.org.pl/dlibra/publication/112727/edition/110652/content",
+        "https://www.ra.ee/kaardid/index.php/en/map/view?id=225181",
+        "https://commons.wikimedia.org/wiki/File:Henichesk_Rayon_in_Maps_created_by_Schubert_in_1859.jpg"
+      ],
+      "images": [
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/f/f8/Henichesk_Rayon_in_Maps_created_by_Schubert_in_1859.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Henichesk_Rayon_in_Maps_created_by_Schubert_in_1859.jpg",
+          "credit": "Schbert, 1859 / Wikimedia Commons, Public domain",
+          "license": "Public domain"
+        }
+      ],
+      "status": "proposed",
+      "thread": {
+        "status": "none",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-10-15T07:00:00+00:00",
+          "event": "proposed by ideas routine"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-15-12",
+      "proposed_at": "2026-10-15",
+      "stream": "tg",
+      "rubric": "migrations",
+      "title": "Небилів–Едмонтон: два селяни з Галичини, що відкрили Канаду для українців",
+      "summary": "1891 рік: Іван Пилипів і Василь Єлиняк з Небилова на Калущині їдуть на розвідку до Канади. Пилипова судять в Австрії за «підбурювання до еміграції», а вже 1893-го він оселяється в Една-Стар. Загалом у 1891–1914 роках виїхало близько 180 тисяч. Розбираємо, де шукати слід таких родин: списки пасажирів і гомстеди.",
+      "why_now": "",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Iwan_Pylypow",
+        "https://communitystories.ca/projects/first-wave-of-ukrainian-immigration-to-canada-1891-1914",
+        "https://encyclopediaofukraine.com/pages%5CP%5CY%5CPylypowIvan.htm"
+      ],
+      "images": [],
+      "status": "proposed",
+      "thread": {
+        "status": "none",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-10-15T07:00:00+00:00",
+          "event": "proposed by ideas routine"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-15-13",
+      "proposed_at": "2026-10-15",
+      "stream": "tg",
+      "rubric": "method",
+      "title": "Soundex Дайча–Мокотоффа: як шукати прізвище, яке писали десятьма способами",
+      "summary": "Алгоритм 1985 року (Гері Мокотофф і Ренді Дайч) кодує прізвища шестицифровим кодом і зводить Grynsztajn/Grünstein до одного значення. Пояснюємо, як це застосувати до галицьких і слов'янських прізвищ у базах JewishGen (напр., адресна книга Галичини 1891 р. на 20 тис. імен) і чому все одно треба вручну перевіряти кирилицю й німецькі назви міст.",
+      "why_now": "",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Daitch%E2%80%93Mokotoff_Soundex",
+        "https://www.jewishgen.org/databases/Poland/galicia1891.htm",
+        "https://www.jewishgen.org/databases/GivenNames/howto.htm"
+      ],
+      "images": [
+        {
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/66/%28Soundex%29_index_to_1900_census%2C_Alabama%29_%28microform_%28IA_soundex1900al034%29.pdf/page1-1280px-%28Soundex%29_index_to_1900_census%2C_Alabama%29_%28microform_%28IA_soundex1900al034%29.pdf.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:(Soundex)_index_to_1900_census,_Alabama)_(microform_(IA_soundex1900al034).pdf",
+          "credit": "United States. Census Office. 12th Census, 1900 / Wikimedia Commons, Public domain",
+          "license": "Public domain"
+        }
+      ],
+      "status": "proposed",
+      "thread": {
+        "status": "none",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-10-15T07:00:00+00:00",
+          "event": "proposed by ideas routine"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-15-14",
+      "proposed_at": "2026-10-15",
+      "stream": "tg",
+      "rubric": "resources",
+      "title": "Gesher Galicia: кадастрові мапи й будинок, де жила родина",
+      "summary": "Безкоштовні All Galicia Database та Map Room накладають австрійські кадастрові мапи (1840–60-ті) на супутникові знімки й прив'язують записи до номерів будинків — у пілоті Хирів, Надвірна, Рогатин, Скала. Показуємо, як з номера будинку в метриці дійти до точки на мапі.",
+      "why_now": "",
+      "sources": [
+        "https://maps.geshergalicia.org/datamap/",
+        "https://www.lvivcenter.org/en/discussions/the-gesher-galicia-project/",
+        "https://www.jgscv.org/pdf/handouts/Gesher%20Galicia%20SIG%20Handout%202014.pdf"
+      ],
+      "images": [],
+      "status": "proposed",
+      "thread": {
+        "status": "none",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-10-15T07:00:00+00:00",
+          "event": "proposed by ideas routine"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-15-15",
+      "proposed_at": "2026-10-15",
+      "stream": "tg",
+      "rubric": "losses",
+      "title": "Хто врятував римо-католицькі метрики Галичини: ЦДІАЛ, фонд 618",
+      "summary": "Колекція римо-католицьких метричних книг у ЦДІАЛ склалась по війні: ліквідація архідієцезіального архіву, часткова евакуація до Польщі, реевакуація, вилучення радянською владою; пізніше надходили книги з Дрогобицького (1954) й Львівського (1980) архівів. Розповідаємо, чому це пояснює «дивні» прогалини й як шукати книги вашої парафії.",
+      "why_now": "",
+      "sources": [
+        "https://tsdial.archives.gov.ua/pdf/F.%20618%20op.%202%20(2026).pdf",
+        "https://nasplib.isofts.kiev.ua/handle/123456789/179589",
+        "https://au.archives.gov.ua/index.php/au/article/download/254/218/849"
+      ],
+      "images": [],
+      "status": "proposed",
+      "thread": {
+        "status": "none",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-10-15T07:00:00+00:00",
+          "event": "proposed by ideas routine"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-15-16",
+      "proposed_at": "2026-10-15",
+      "stream": "tg",
+      "rubric": "news",
+      "title": "27 жовтня — День писемності: найдавніші письмові сліди наших предків",
+      "summary": "Свято, засноване 1997 р. і перенесене 2023-го з 9 листопада на 27 жовтня (день пам'яті Нестора-Літописця). Нагода розповісти про графіті Софії Київської та про те, які імена і написи зберегла давня писемність — і чому для генеалога це перше «джерело людей».",
+      "why_now": "27 жовтня 2026 — День української писемності та мови.",
+      "sources": [
+        "https://glavcom.ua/country/society/den-ukrajinskoji-pisemnosti-ta-movi-istorija-traditsiji-svjata-ta-privitannja-1027547.html",
+        "https://www.hsa.org.ua/blog/9-lystopada-den-ukrayinskoyi-pysemnosti-ta-movy",
+        "https://chtyvo.org.ua/authors/Korniienko_Viacheslav/Naidavnishi_hrafiti_Sofii_Kyivskoi_ta_ii_datuvannia.pdf"
+      ],
+      "images": [
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/4/4e/Tarasevich_Nestor_Litopisec.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Tarasevich_Nestor_Litopisec.jpg",
+          "credit": "Leontii Tarasevych / Wikimedia Commons, Public domain",
+          "license": "Public domain"
+        },
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/d/d6/Graffiti_St._Sophia%27s_Cathedral_in_Kiev_%28Graffiti_%E2%84%96_61%29.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Graffiti_St._Sophia%27s_Cathedral_in_Kiev_(Graffiti_%E2%84%96_61).jpg",
+          "credit": "Невідомий / Wikimedia Commons, Public domain",
+          "license": "Public domain"
+        }
+      ],
+      "status": "proposed",
+      "thread": {
+        "status": "none",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-10-15T07:00:00+00:00",
+          "event": "proposed by ideas routine"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-15-17",
+      "proposed_at": "2026-10-15",
+      "stream": "tg",
+      "rubric": "myths",
+      "title": "Чумаки — не козаки й не купці: ким були сіль-перевізники предків",
+      "summary": "Промисел з кінця XV ст.: спершу «соленики», «коломийці», «торяни», на солі Перекопа й Євпаторії. Пояснюємо, чому «мій прадід — чумак» не означає «козак», які родини вийшли з чумацтва (Харитоненки, Терещенки) і де в документах можна знайти слід.",
+      "why_now": "",
+      "sources": [
+        "https://glavred.net/culture/ne-kazaki-i-ne-kupcy-kem-na-samom-dele-byli-chumaki-i-pochemu-ih-tak-nazyvali-10736495.html",
+        "https://er.chdtu.edu.ua/bitstream/ChSTU/3959/3/%d0%a3%d0%ba%d1%80%d0%b0%d1%97%d0%bd%d1%81%d1%8c%d0%ba%d0%b5%20%d1%87%d1%83%d0%bc%d0%b0%d1%86%d1%82%d0%b2%d0%be.pdf",
+        "https://suspilne.media/159928-na-kpvv-kalancak-vidkrili-pamatnij-znak-cumackij-slah/"
+      ],
+      "images": [
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/7/7f/Aivasovsky_Ivan_Constantinovich_-_Chumaks_Waggons.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Aivasovsky_Ivan_Constantinovich_-_Chumaks_Waggons.jpg",
+          "credit": "Ivan Aivazovsky / Wikimedia Commons, Public domain",
+          "license": "Public domain"
+        },
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/8/8d/Chumaks_by_Sloboda_Ukraine.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Chumaks_by_Sloboda_Ukraine.jpg",
+          "credit": "Unknown authorUnknown author / Wikimedia Commons, Public domain",
+          "license": "Public domain"
+        }
+      ],
+      "status": "proposed",
+      "thread": {
+        "status": "none",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-10-15T07:00:00+00:00",
+          "event": "proposed by ideas routine"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-15-18",
+      "proposed_at": "2026-10-15",
+      "stream": "tg",
+      "rubric": "people",
+      "title": "Родина Шевченка в документах: Моринці, Кирилівка й кріпацька метрика",
+      "summary": "Тарас народився 9 березня 1814 р. (25 лютого за ст. ст.) в Моринцях Звенигородського повіту в родині кріпаків Григорія й Катерини, а за два роки родина переїхала до Кирилівки. Розбираємо, що можна довідатися про рід із метричної книги Моринців (Київська духовна консисторія) і хроніки Кониського.",
+      "why_now": "9 березня — день народження; тема про родовід найвідомішого українця.",
+      "sources": [
+        "https://netfreedom.org.ua/dytynstvo-tarasa-shevchenka-vid-kripatskoi-khaty-do-pershykh-krokiv-heniia/",
+        "https://osvita.ua/school/literature/k/70016/",
+        "https://commons.wikimedia.org/wiki/File:%D0%9C%D0%B5%D1%82%D1%80%D0%B8%D1%87%D0%BD%D0%B0_%D0%BA%D0%BD%D0%B8%D0%B3%D0%B0_%D1%81._%D0%9C%D0%BE%D1%80%D0%B8%D0%BD%D0%B5%D1%86%D1%8C_%D0%97%D0%B2%D0%B5%D0%BD%D0%B8%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D1%81%D1%8C%D0%BA%D0%BE%D0%B3%D0%BE_%D0%BF%D0%BE%D0%B2%D1%96%D1%82%D1%83.pdf"
+      ],
+      "images": [
+        {
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bf/%D0%9C%D0%B5%D1%82%D1%80%D0%B8%D1%87%D0%BD%D0%B0_%D0%BA%D0%BD%D0%B8%D0%B3%D0%B0_%D1%81._%D0%9C%D0%BE%D1%80%D0%B8%D0%BD%D0%B5%D1%86%D1%8C_%D0%97%D0%B2%D0%B5%D0%BD%D0%B8%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D1%81%D1%8C%D0%BA%D0%BE%D0%B3%D0%BE_%D0%BF%D0%BE%D0%B2%D1%96%D1%82%D1%83.pdf/page1-500px-%D0%9C%D0%B5%D1%82%D1%80%D0%B8%D1%87%D0%BD%D0%B0_%D0%BA%D0%BD%D0%B8%D0%B3%D0%B0_%D1%81._%D0%9C%D0%BE%D1%80%D0%B8%D0%BD%D0%B5%D1%86%D1%8C_%D0%97%D0%B2%D0%B5%D0%BD%D0%B8%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D1%81%D1%8C%D0%BA%D0%BE%D0%B3%D0%BE_%D0%BF%D0%BE%D0%B2%D1%96%D1%82%D1%83.pdf.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:%D0%9C%D0%B5%D1%82%D1%80%D0%B8%D1%87%D0%BD%D0%B0_%D0%BA%D0%BD%D0%B8%D0%B3%D0%B0_%D1%81._%D0%9C%D0%BE%D1%80%D0%B8%D0%BD%D0%B5%D1%86%D1%8C_%D0%97%D0%B2%D0%B5%D0%BD%D0%B8%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D1%81%D1%8C%D0%BA%D0%BE%D0%B3%D0%BE_%D0%BF%D0%BE%D0%B2%D1%96%D1%82%D1%83.pdf",
+          "credit": "Київська духовна консисторія / Wikimedia Commons, Public domain",
+          "license": "Public domain"
+        },
+        {
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/eb/%D0%A5%D0%B0%D1%82%D0%B0_%D1%83_%D1%81%D0%B5%D0%BB%D1%96_%D0%9C%D0%BE%D1%80%D0%B8%D0%BD%D1%86%D1%96_%28%D0%A7%D0%B5%D1%80%D0%BA%D0%B0%D1%81%D1%8C%D0%BA%D0%B0_%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D1%8C%29%2C_%D0%B2_%D1%8F%D0%BA%D1%96%D0%B9_%D0%BD%D0%B0%D1%80%D0%BE%D0%B4%D0%B8%D0%B2%D1%81%D1%8F_%D0%B2%D0%B8%D0%B4%D0%B0%D1%82%D0%BD%D0%B8%D0%B9_%D1%83%D0%BA%D1%80%D0%B0%D1%97%D0%BD%D1%81%D1%8C%D0%BA%D0%B8%D0%B9_%D0%BF%D0%BE%D0%B5%D1%82_%D0%A2%D0%B0%D1%80%D0%B0%D1%81_%D0%93%D1%80%D0%B8%D0%B3%D0%BE%D1%80%D0%BE%D0%B2%D0%B8%D1%87_%D0%A8%D0%B5%D0%B2%D1%87%D0%B5%D0%BD%D0%BA%D0%BE.jpg/1280px-thumbnail.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:%D0%A5%D0%B0%D1%82%D0%B0_%D1%83_%D1%81%D0%B5%D0%BB%D1%96_%D0%9C%D0%BE%D1%80%D0%B8%D0%BD%D1%86%D1%96_(%D0%A7%D0%B5%D1%80%D0%BA%D0%B0%D1%81%D1%8C%D0%BA%D0%B0_%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D1%8C),_%D0%B2_%D1%8F%D0%BA%D1%96%D0%B9_%D0%BD%D0%B0%D1%80%D0%BE%D0%B4%D0%B8%D0%B2%D1%81%D1%8F_%D0%B2%D0%B8%D0%B4%D0%B0%D1%82%D0%BD%D0%B8%D0%B9_%D1%83%D0%BA%D1%80%D0%B0%D1%97%D0%BD%D1%81%D1%8C%D0%BA%D0%B8%D0%B9_%D0%BF%D0%BE%D0%B5%D1%82_%D0%A2%D0%B0%D1%80%D0%B0%D1%81_%D0%93%D1%80%D0%B8%D0%B3%D0%BE%D1%80%D0%BE%D0%B2%D0%B8%D1%87_%D0%A8%D0%B5%D0%B2%D1%87%D0%B5%D0%BD%D0%BA%D0%BE.jpg",
+          "credit": "Мандрівниця / Wikimedia Commons, CC BY-SA 4.0",
+          "license": "CC BY-SA 4.0"
+        }
+      ],
+      "status": "proposed",
+      "thread": {
+        "status": "none",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-10-15T07:00:00+00:00",
+          "event": "proposed by ideas routine"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-15-19",
+      "proposed_at": "2026-10-15",
+      "stream": "tg",
+      "rubric": "document",
+      "title": "Духівниця козацької старшини: що заповіт каже про родину",
+      "summary": "Тестаменти XVII–XVIII ст. — єдині тексти, де старшина сама називає дружину, дітей, кумів, борги й храми. Збереглося мало: Ірина Кривошея зібрала 62 доступні тестаменти жінок зі старшинських родів; є й перший реєстр заповітів XVIII ст. Пояснюємо, як їх читати й шукати.",
+      "why_now": "",
+      "sources": [
+        "https://dspace.udpu.edu.ua/bitstream/123456789/12041/1/Kryvosheia_Ir_Kryvosheia_I_UIJ_2019_5_10.pdf",
+        "https://doaj.org/article/a528405d832c4ecbb3b739a60eaa964f",
+        "https://nasplib.isofts.kiev.ua/handle/123456789/184660"
+      ],
+      "images": [],
+      "status": "proposed",
+      "thread": {
+        "status": "none",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-10-15T07:00:00+00:00",
+          "event": "proposed by ideas routine"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-15-20",
+      "proposed_at": "2026-10-15",
+      "stream": "tg",
+      "rubric": "document",
+      "title": "Графіті Софії Київської: автографи XI століття як «метрика» без реєстру",
+      "summary": "На стінах собору збереглися тисячі написів: імена, молитви, княжі знаки; корпус графіті публікували частинами у 2010–2011 рр. Показуємо, як датують графіті, чому прочитання Висоцького подекуди оскаржують і що це дає для вивчення давніх імен.",
+      "why_now": "",
+      "sources": [
+        "https://chtyvo.org.ua/authors/Korniienko_Viacheslav/Naidavnishi_hrafiti_Sofii_Kyivskoi_ta_ii_datuvannia.pdf",
+        "https://chtyvo.org.ua/authors/Nikitenko_Nadiia/Atrybutsiia_kniazhoho_znaku-hrafiti_v_pivnichnii_vnutrishnii_halerei_Sofii_Kyivskoi.pdf",
+        "https://life.pravda.com.ua/society/2010/03/04/42062/"
+      ],
+      "images": [
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/a/a3/Graffiti_St._Sophia%27s_Cathedral_in_Kiev_%28Graffiti_%E2%84%96_1058%29.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Graffiti_St._Sophia%27s_Cathedral_in_Kiev_(Graffiti_%E2%84%96_1058).jpg",
+          "credit": "Unknown authorUnknown author / Wikimedia Commons, Public domain",
+          "license": "Public domain"
+        }
+      ],
+      "status": "proposed",
+      "thread": {
+        "status": "none",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-10-15T07:00:00+00:00",
+          "event": "proposed by ideas routine"
+        }
+      ]
     }
   ]
 }
