@@ -7326,7 +7326,7 @@
         "https://www.familysearch.org/en/wiki/Ukraine_Genealogy"
       ],
       "images": [],
-      "status": "proposed",
+      "status": "approved",
       "thread": {
         "status": "none",
         "file": null
@@ -7344,6 +7344,10 @@
         {
           "at": "2026-10-16T15:10:00+00:00",
           "event": "proposed by ideas routine"
+        },
+        {
+          "at": "2026-10-16T14:55:27+00:00",
+          "event": "idea approved in telegram"
         }
       ]
     },
