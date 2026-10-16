@@ -7312,6 +7312,340 @@
           "event": "proposed by ideas routine"
         }
       ]
+    },
+    {
+      "id": "2026-10-16-01",
+      "proposed_at": "2026-10-16",
+      "stream": "provoke",
+      "rubric": "method",
+      "title": "Дерево з MyHeritage без джерел — це фанфік",
+      "summary": "Теза: дерево, у якому біля кожного предка нема архівного шифру, — не дослідження, а жанр фанфіку. Стандарт доказовості в генеалогії (GPS) вимагає п'яти речей, з яких «з'явилося в підказках» немає жодної: ґрунтовний пошук, повні посилання на джерела, зіставлення інформації, розв'язання суперечностей і обґрунтований висновок.",
+      "why_now": "Читачі масово копіюють гілки з чужих дерев.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Genealogical_Proof_Standard",
+        "https://www.familysearch.org/en/wiki/Ukraine_Genealogy"
+      ],
+      "images": [],
+      "status": "proposed",
+      "thread": {
+        "status": "none",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-10-16T15:10:00+00:00",
+          "event": "proposed by ideas routine"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-16-02",
+      "proposed_at": "2026-10-16",
+      "stream": "provoke",
+      "rubric": "ancestors",
+      "title": "У вас не 1024 предки на десятому коліні — і це добра новина для критиків дерев",
+      "summary": "Теза: «дерево на 20 поколінь» — арифметична фантазія. Без повторів було б 2^10 = 1024 предки на десятому коліні, 2^20 — понад мільйон, а 2^30 — близько мільярда, більше за населення світу тих часів. Реальність рятує «колапс родоводу»: одні й ті самі люди повторюються у вашому дереві.",
+      "why_now": "",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Pedigree_collapse"
+      ],
+      "images": [],
+      "status": "proposed",
+      "thread": {
+        "status": "none",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-10-16T15:10:00+00:00",
+          "event": "proposed by ideas routine"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-16-03",
+      "proposed_at": "2026-10-16",
+      "stream": "provoke",
+      "rubric": "dna",
+      "title": "ДНК-тест не зробить вас козаком: він бачить 2 предків із 1024",
+      "summary": "Теза: Y-ДНК іде лише по прямій чоловічій лінії, мтДНК — по прямій жіночій; на десятому коліні це 2 з 1024 предків. Відсотки «етнічності» у кабінеті тесту — оцінка алгоритму компанії, яку самі генетичні генеалоги радять сприймати як приблизну.",
+      "why_now": "",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Genetic_genealogy"
+      ],
+      "images": [],
+      "status": "proposed",
+      "thread": {
+        "status": "none",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-10-16T15:10:00+00:00",
+          "event": "proposed by ideas routine"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-16-04",
+      "proposed_at": "2026-10-16",
+      "stream": "provoke",
+      "rubric": "ai",
+      "title": "Нейромережа прочитає скоропис за вас — і впевнено прочитає неправильно",
+      "summary": "Теза: розпізнавання рукописів — інструмент, не оракул. Transkribus, платформа для розпізнавання тексту історичних документів, виросла з європейських проєктів tranScriptorium (2013–2015) і READ (2016–2019) та з 2019 року підтримується кооперативом READ-COOP. Але розшифровку однаково звіряють зі сканом очима.",
+      "why_now": "Хвиля інтересу до автоматичної розшифровки рукописів.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Transkribus"
+      ],
+      "images": [],
+      "status": "proposed",
+      "thread": {
+        "status": "none",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-10-16T15:10:00+00:00",
+          "event": "proposed by ideas routine"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-16-05",
+      "proposed_at": "2026-10-16",
+      "stream": "provoke",
+      "rubric": "document",
+      "title": "Метрика — не свідоцтво про народження, а запис про хрещення",
+      "summary": "Теза: «дата народження з метрики» — часто дата обряду. У російських метричних книгах основною датою був день хрещення, а в габсбурзьких у графі «місяць і день» вказували день народження, а хрещення іноді дописували окремо. Тож різниця в днях між «народився» і «хрещений» — не помилка писаря, а особливість жанру.",
+      "why_now": "",
+      "sources": [
+        "https://uk.wikipedia.org/wiki/Метричні_книги"
+      ],
+      "images": [],
+      "status": "proposed",
+      "thread": {
+        "status": "none",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-10-16T15:10:00+00:00",
+          "event": "proposed by ideas routine"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-16-06",
+      "proposed_at": "2026-10-16",
+      "stream": "provoke",
+      "rubric": "customs",
+      "title": "Ваші предки одружувалися з родичами — і церква про це знала",
+      "summary": "Теза: «в селі всі однофамільці — рід» і «наш рід чистий» не працюють. Католицька церква забороняла шлюби в межах кількох ступенів спорідненості, у IX ст. розширила заборону до семи, а Четвертий Латеранський собор 1215 р. повернув чотири; винятки давали дозволом (диспенсацією). Для генеалога це підказка: дозвіл на шлюб — додатковий документ про родинні зв'язки.",
+      "why_now": "",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Cousin_marriage",
+        "https://en.wikipedia.org/wiki/Pedigree_collapse"
+      ],
+      "images": [],
+      "status": "proposed",
+      "thread": {
+        "status": "none",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-10-16T15:10:00+00:00",
+          "event": "proposed by ideas routine"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-16-07",
+      "proposed_at": "2026-10-16",
+      "stream": "provoke",
+      "rubric": "resources",
+      "title": "Хто шукає предків лише в метриках, не знає про маєткові інвентарі",
+      "summary": "Теза: метрика фіксує обряди, а інвентар маєтку — землю, будівлі, населення й повинності селян. Інвентаріум збирає такі описи в реєстр з пошуком за населеним пунктом і мапою. Перевірте своє село — інколи хата «знайдена» на 300 років раніше за метрики.",
+      "why_now": "",
+      "sources": [
+        "https://inventarium.org.ua/"
+      ],
+      "images": [],
+      "status": "proposed",
+      "thread": {
+        "status": "none",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-10-16T15:10:00+00:00",
+          "event": "proposed by ideas routine"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-16-08",
+      "proposed_at": "2026-10-16",
+      "stream": "provoke",
+      "rubric": "losses",
+      "title": "«Архів згорів» — найзручніше виправдання, щоб не шукати далі",
+      "summary": "Теза: втрати архівів у війну були масштабні, але «все знищено» — не діагноз. Інститут історії України досліджує, які чинники призвели до втрат, але також — як документи вилучали й переміщували. Є й довідники: каталог метричних книг за адмінподілом 1933 р. від Держархівслужби. Спершу довідник і запит, потім — «згоріло».",
+      "why_now": "",
+      "sources": [
+        "https://nasplib.isofts.kiev.ua/handle/123456789/179589",
+        "https://tsdial.archives.gov.ua/pdf/%D0%9A%D0%B0%D1%82%D0%B0%D0%BB%D0%BE%D0%B3%20%D1%80%D0%B8%D0%BC.%20%D0%BA%D0%B0%D1%82.%202026.pdf"
+      ],
+      "images": [],
+      "status": "proposed",
+      "thread": {
+        "status": "none",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-10-16T15:10:00+00:00",
+          "event": "proposed by ideas routine"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-16-09",
+      "proposed_at": "2026-10-16",
+      "stream": "provoke",
+      "rubric": "document",
+      "title": "Перепис 1897 року — не істина, а відповіді людей на запитання",
+      "summary": "Теза: цифри перепису — свідчення опитаних, а не вирок. Дослідники зазначають, що перепис дав багато даних, які не завжди відповідали дійсності, зокрема про віросповідання й писемність рідною мовою. Користуйтеся ним як джерелом, але звіряйте з метриками.",
+      "why_now": "",
+      "sources": [
+        "https://uk.wikipedia.org/wiki/Перепис_населення_Російської_імперії_(1897)",
+        "https://kpi.kharkov.ua/archive/MicroCAD/2025/%D0%A1%D0%B5%D0%BA%D1%86%D1%96%D1%8F%208.%20%D0%A1%D0%BE%D1%86%D1%96%D0%B0%D0%BB%D1%8C%D0%BD%D0%BE-%D0%B3%D1%83%D0%BC%D0%B0%D0%BD%D1%96%D1%82%D0%B0%D1%80%D0%BD%D1%96%20%D1%82%D0%B5%D1%85%D0%BD%D0%BE%D0%BB%D0%BE%D0%B3%D1%96%D1%97/%D0%94%D0%95%D0%AF%D0%9A%D0%86%20%D0%A1%D0%A2%D0%90%D0%A2%D0%98%D0%A1%D0%A2%D0%98%D0%A7%D0%9D%D0%86%20%D0%94%D0%90%D0%9D%D0%86%20%D0%9F%D0%95%D0%A0%D0%95%D0%9F%D0%98%D0%A1%D0%A3%20%D0%9D%D0%90%D0%A1%D0%95%D0%9B%D0%95%D0%9D%D0%9D%D0%AF%201897%20%D0%A0..pdf"
+      ],
+      "images": [],
+      "status": "proposed",
+      "thread": {
+        "status": "none",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-10-16T15:10:00+00:00",
+          "event": "proposed by ideas routine"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-16-10",
+      "proposed_at": "2026-10-16",
+      "stream": "provoke",
+      "rubric": "resources",
+      "title": "Ваше село «не знайшлося» не в архіві, а в транслітерації",
+      "summary": "Теза: пошук у каталогах зазнає невдачі через написання. У FamilySearch назви трапляються у трьох формах: традиційна англійська, ALA-LC (Бібліотека Конгресу і каталог FamilySearch) та російська. Спершу перебирайте всі форми назви — потім звинувачуйте архів.",
+      "why_now": "",
+      "sources": [
+        "https://www.familysearch.org/en/wiki/Ukraine_Genealogy"
+      ],
+      "images": [],
+      "status": "proposed",
+      "thread": {
+        "status": "none",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-10-16T15:10:00+00:00",
+          "event": "proposed by ideas routine"
+        }
+      ]
     }
   ]
 }
