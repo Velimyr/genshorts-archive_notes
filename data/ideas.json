@@ -4177,10 +4177,22 @@
       ],
       "images": [
         {
-          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bf/%D0%9C%D0%B5%D1%82%D1%80%D0%B8%D1%87%D0%BD%D0%B0_%D0%BA%D0%BD%D0%B8%D0%B3%D0%B0_%D1%81._%D0%9C%D0%BE%D1%80%D0%B8%D0%BD%D0%B5%D1%86%D1%8C_%D0%97%D0%B2%D0%B5%D0%BD%D0%B8%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D1%81%D1%8C%D0%BA%D0%BE%D0%B3%D0%BE_%D0%BF%D0%BE%D0%B2%D1%96%D1%82%D1%83.pdf/page1-500px-%D0%9C%D0%B5%D1%82%D1%80%D0%B8%D1%87%D0%BD%D0%B0%20%D0%BA%D0%BD%D0%B8%D0%B3%D0%B0%20%D1%81.%20%D0%9C%D0%BE%D1%80%D0%B8%D0%BD%D0%B5%D1%86%D1%8C%20%D0%97%D0%B2%D0%B5%D0%BD%D0%B8%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D1%81%D1%8C%D0%BA%D0%BE%D0%B3%D0%BE%20%D0%BF%D0%BE%D0%B2%D1%96%D1%82%D1%83.pdf.jpg",
-          "page": "https://commons.wikimedia.org/wiki/File:%D0%9C%D0%B5%D1%82%D1%80%D0%B8%D1%87%D0%BD%D0%B0_%D0%BA%D0%BD%D0%B8%D0%B3%D0%B0_%D1%81._%D0%9C%D0%BE%D1%80%D0%B8%D0%BD%D0%B5%D1%86%D1%8C_%D0%97%D0%B2%D0%B5%D0%BD%D0%B8%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D1%81%D1%8C%D0%BA%D0%BE%D0%B3%D0%BE_%D0%BF%D0%BE%D0%B2%D1%96%D1%82%D1%83.pdf",
-          "credit": "Київська духовна консисторія / Wikimedia Commons, Public domain",
-          "license": "Public domain"
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f5/Traditional_Ukrainian_Christening_Toronto_2019.jpg/1280px-Traditional_Ukrainian_Christening_Toronto_2019.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Traditional_Ukrainian_Christening_Toronto_2019.jpg",
+          "credit": "Mykola Swarnyk / Wikimedia Commons, CC BY-SA 4.0",
+          "license": "CC BY-SA 4.0"
+        },
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/7/7c/%D0%A5%D1%80%D0%B5%D1%81%D1%82%D0%B8%D0%BD%D0%B8%2C_%D1%83_%D0%B2%D1%96%D0%B2%D1%82%D0%B0%D1%80%D1%96_%D0%90%D0%BD%D0%B4%D1%80%D1%96%D1%97%D0%B2%D1%81%D1%8C%D0%BA%D0%BE%D1%97_%D1%86%D0%B5%D1%80%D0%BA%D0%B2%D0%B8.jpeg",
+          "page": "https://commons.wikimedia.org/wiki/File:%D0%A5%D1%80%D0%B5%D1%81%D1%82%D0%B8%D0%BD%D0%B8,_%D1%83_%D0%B2%D1%96%D0%B2%D1%82%D0%B0%D1%80%D1%96_%D0%90%D0%BD%D0%B4%D1%80%D1%96%D1%97%D0%B2%D1%81%D1%8C%D0%BA%D0%BE%D1%97_%D1%86%D0%B5%D1%80%D0%BA%D0%B2%D0%B8.jpeg",
+          "credit": "Czcau / Wikimedia Commons, CC BY-SA 3.0",
+          "license": "CC BY-SA 3.0"
+        },
+        {
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b6/%D0%A5%D1%80%D0%B5%D1%81%D1%82%D0%B8%D0%BD%D0%B8_%D0%B2_%D1%81%D1%82%D0%B0%D1%80%D0%BE%D0%B2%D0%B8%D0%BD%D0%BD%D1%96%D0%B9_%D1%86%D0%B5%D1%80%D0%BA%D0%B2%D1%96.jpg/1280px-%D0%A5%D1%80%D0%B5%D1%81%D1%82%D0%B8%D0%BD%D0%B8_%D0%B2_%D1%81%D1%82%D0%B0%D1%80%D0%BE%D0%B2%D0%B8%D0%BD%D0%BD%D1%96%D0%B9_%D1%86%D0%B5%D1%80%D0%BA%D0%B2%D1%96.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:%D0%A5%D1%80%D0%B5%D1%81%D1%82%D0%B8%D0%BD%D0%B8_%D0%B2_%D1%81%D1%82%D0%B0%D1%80%D0%BE%D0%B2%D0%B8%D0%BD%D0%BD%D1%96%D0%B9_%D1%86%D0%B5%D1%80%D0%BA%D0%B2%D1%96.jpg",
+          "credit": "Yulia Aurelia / Wikimedia Commons, CC BY-SA 4.0",
+          "license": "CC BY-SA 4.0"
         }
       ],
       "status": "approved",
@@ -4240,14 +4252,18 @@
         {
           "at": "2026-10-16T09:12:44+00:00",
           "event": "photo search requested in telegram: Куми"
+        },
+        {
+          "at": "2026-10-16T09:21:06+00:00",
+          "event": "photos found: 3"
         }
       ],
       "images_excluded": [
         "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bf/%D0%9C%D0%B5%D1%82%D1%80%D0%B8%D1%87%D0%BD%D0%B0_%D0%BA%D0%BD%D0%B8%D0%B3%D0%B0_%D1%81._%D0%9C%D0%BE%D1%80%D0%B8%D0%BD%D0%B5%D1%86%D1%8C_%D0%97%D0%B2%D0%B5%D0%BD%D0%B8%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D1%81%D1%8C%D0%BA%D0%BE%D0%B3%D0%BE_%D0%BF%D0%BE%D0%B2%D1%96%D1%82%D1%83.pdf/page1-500px-%D0%9C%D0%B5%D1%82%D1%80%D0%B8%D1%87%D0%BD%D0%B0%20%D0%BA%D0%BD%D0%B8%D0%B3%D0%B0%20%D1%81.%20%D0%9C%D0%BE%D1%80%D0%B8%D0%BD%D0%B5%D1%86%D1%8C%20%D0%97%D0%B2%D0%B5%D0%BD%D0%B8%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D1%81%D1%8C%D0%BA%D0%BE%D0%B3%D0%BE%20%D0%BF%D0%BE%D0%B2%D1%96%D1%82%D1%83.pdf.jpg"
       ],
-      "photo_request": true,
+      "photo_request": false,
       "photo_error": "",
-      "photo_keywords": "Куми",
+      "photo_keywords": "",
       "photo_requested_at": "2026-10-16T09:12:44+00:00"
     },
     {
