@@ -2493,6 +2493,12 @@
     "701": {
       "kind": "item",
       "idea": "p"
+    },
+    "903": {
+      "kind": "ask"
+    },
+    "904": {
+      "kind": "nav"
     }
   },
   "approved_threads": {
@@ -2502,12 +2508,14 @@
       "topic": "",
       "image": null,
       "approved_at": "2026-10-16T14:27:05+00:00",
-      "posted": false,
+      "posted": true,
       "publish_at": "2026-10-16T14:27:05+00:00",
       "posted_ids": [
         "m3",
         "m6"
-      ]
+      ],
+      "posted_at": "2026-10-16T14:50:35+00:00",
+      "permalink": ""
     }
   },
   "asked": {
@@ -2944,7 +2952,8 @@
     928737355,
     928737356,
     928737357,
-    928737358
+    928737358,
+    928737359
   ],
   "analytics_at": "2026-10-16T14:01:24+00:00",
   "reminded_slots": [
