@@ -94,6 +94,7 @@ STREAMS = {
     "big": ("🧵", "Великий серйозний"),
     "small": ("📌", "Малий серйозний"),
     "fun": ("😏", "Жартівливий"),
+    "provoke": ("🌶", "Провокація"),
     "tg": ("📰", "Telegram-допис"),
 }
 # Telegram-дописи: окрема черга. Щовівторка о 16:00 — у тестовий канал (TG_CHANNEL_ID),
@@ -543,6 +544,10 @@ class Bot:
         elif thread == "ready":
             lines.append("👀 Тред написано, чекає вашого погодження.")
             rows = [[("👀 Показати тред", f"show:{iid}")]]
+        elif (thread == "approved" or (thread == "queued" and item.get("publish_at") == "pending")) \
+                and self.category(idea) == "P":
+            lines.append("✅ Провокація готова. Публікується лише вручну, без теми.")
+            rows = [[("⚡ Опублікувати", f"pub:{iid}")]]
         elif thread == "approved" or (thread == "queued" and item.get("publish_at") == "pending"):
             lines.append("✅ Тред готовий, час публікації не обрано.")
             rows = [[("🕒 Запланувати", f"pub:{iid}")]]
@@ -564,7 +569,8 @@ class Bot:
             lines.append(f"📤 Опубліковано{(' ' + fmt_slot(parse_time(item['posted_at']))) if item.get('posted_at') else ''}."
                          + (f"\n{stats}" if stats else "")
                          + (f"\n{idea['thread'].get('permalink')}" if idea["thread"].get("permalink") else ""))
-        if thread in ("ready", "approved", "queued", "scheduled") and not item.get("test_id"):
+        if thread in ("ready", "approved", "queued", "scheduled") and not item.get("test_id") \
+                and self.category(idea) != "P":
             count = len(idea.get("images", []))
             rows.append([(f"🔄 Інші фото ({count})", f"photos:{iid}:more") if count
                          else ("🖼 Знайти фото", f"photos:{iid}"),
@@ -662,7 +668,7 @@ class Bot:
 
     def send_preview(self, idea: dict, body: str, topic: str) -> None:
         digest = sha(body)
-        photos = self.show_photos(idea)
+        photos = self.show_photos(idea) if self.category(idea) != "P" else []
         if self.category(idea) == "T":
             rows = [[(f"🕒 Запланувати з фото {n}", f"confirm:{idea['id']}:{digest}:{n}")] for n in photos]
             rows.append([("🕒 Запланувати без фото", f"confirm:{idea['id']}:{digest}:0")])
@@ -677,6 +683,14 @@ class Bot:
                         "потім у випадковий час 17:00–19:00 — основний."
                       "\n\n" + edit_hint("ширші зміни — у повідомленні з текстом і кнопкою «✅ Готово»."),
                       kb(*rows), {"kind": "preview", "idea": idea["id"], "sha": digest, "text": body, "topic": ""})
+            return
+        if self.category(idea) == "P":
+            self.send(f"{stream_label(idea.get('stream'))} · фінальна перевірка — «{idea['title']}»\n\n{body}"
+                      "\n\nℹ️ Блок «Джерела» в Threads не публікується. Провокація виходить без теми й без фото, "
+                      "лише вручну — коли натиснете кнопку."
+                      "\n\n" + edit_hint("ширші зміни — у повідомленні з текстом і кнопкою «✅ Готово»."),
+                      kb([("⚡ Опублікувати зараз", f"confirm:{idea['id']}:{digest}:0")], [("❌ Не зараз", "cancel")]),
+                      {"kind": "preview", "idea": idea["id"], "sha": digest, "text": body, "topic": ""})
             return
         topic_line = (f"🏷 Тема поста: {topic}" if topic else "🏷 Тема поста не обрана — оберіть кнопкою нижче.")
         photo_line = (f"\n📷 Фото до першого поста: варіанти {', '.join(map(str, photos))} вище." if photos else "")
@@ -785,9 +799,9 @@ class Bot:
 
     @staticmethod
     def category(idea: dict | None) -> str:
-        """«S» — серйозний тред, «F» — жартівливий тред, «T» — Telegram-допис."""
+        """«S» — серйозний тред, «F» — жартівливий, «P» — провокація (лише вручну), «T» — Telegram-допис."""
         stream = (idea or {}).get("stream")
-        return "T" if stream == "tg" else "F" if stream == "fun" else "S"
+        return {"tg": "T", "fun": "F", "provoke": "P"}.get(stream, "S")
 
     def bot_publications(self, exclude: str | None = None, channel: str = "threads") -> list[tuple[datetime, str]]:
         """Заплановані й уже опубліковані публікації бота: (момент, категорія).
@@ -797,7 +811,7 @@ class Bot:
             if idea_id == exclude or item.get("failed"):
                 continue
             cat = self.category(self.ideas.get(idea_id))
-            if (cat == "T") != (channel == "tg"):
+            if cat == "P" or (cat == "T") != (channel == "tg"):  # провокації — поза розкладом
                 continue
             at = item.get("posted_at") if item.get("posted") else item.get("publish_at")
             if at and at != "pending":
@@ -962,6 +976,12 @@ class Bot:
                                                                     if image else None),
                                                           "approved_at": now(), "posted": False,
                                                           "publish_at": "pending"}
+            if self.category(idea) == "P":  # лише вручну: публікується одразу, без теми й фото
+                self.state["approved_threads"][idea["id"]].update(topic="", image=None, publish_at=now())
+                idea["thread"]["status"] = "scheduled"
+                history(idea, "provocation published manually")
+                self.close_buttons(mid, "⚡ Публікую зараз")
+                return
             idea["thread"]["status"] = "queued"
             history(idea, "thread approved for Threads, awaiting time")
             self.close_buttons(mid, "✅ Текст і фото обрано")
@@ -1133,7 +1153,7 @@ class Bot:
             return
         if text and record and record.get("kind") == "preview":
             idea = self.ideas.get(record["idea"])
-            if idea and self.category(idea) == "T":
+            if idea and self.category(idea) in ("T", "P"):
                 self.send("✏️ Тут працюють лише точкові правки: виділіть фрагмент → «Відповісти» → заміна, "
                           "або рядок «старе → нове».", reply_to=msg["message_id"])
             elif idea:
@@ -1492,7 +1512,8 @@ class Bot:
             reminded.append(key)
             day_cats = [c for moment, c in self.bot_publications() if moment.astimezone(KYIV).date() == slot.date()]
             serious = "" if "S" in day_cats else " Серйозного треду на сьогодні теж немає."
-            if self.grouped(lambda i: i.get("thread", {}).get("status") == "approved"):
+            if self.grouped(lambda i: i.get("thread", {}).get("status") == "approved"
+                            and i.get("stream") not in ("tg", "provoke")):
                 self.send(f"⏰ {slot:%H:%M} — рекомендований час публікації, але нічого не заплановано.{serious}",
                           kb([("📣 Обрати тред", "go:publish")]), {"kind": "nav"})
             else:
