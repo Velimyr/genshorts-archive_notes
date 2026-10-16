@@ -7400,7 +7400,7 @@
         "https://en.wikipedia.org/wiki/Genetic_genealogy"
       ],
       "images": [],
-      "status": "proposed",
+      "status": "approved",
       "thread": {
         "status": "none",
         "file": null
@@ -7418,6 +7418,10 @@
         {
           "at": "2026-10-16T15:10:00+00:00",
           "event": "proposed by ideas routine"
+        },
+        {
+          "at": "2026-10-16T14:55:57+00:00",
+          "event": "idea approved in telegram"
         }
       ]
     },
