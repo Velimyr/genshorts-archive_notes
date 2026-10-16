@@ -2428,6 +2428,9 @@
     },
     "875": {
       "kind": "when"
+    },
+    "876": {
+      "kind": "nav"
     }
   },
   "approved_threads": {
@@ -2819,8 +2822,22 @@
         "credit": "Guillaume Le Vasseur de Beauplan / Wikimedia Commons, Public domain"
       },
       "approved_at": "2026-10-09T09:18:41+00:00",
-      "posted": false,
-      "publish_at": "2026-10-16T11:11:00+03:00"
+      "posted": true,
+      "publish_at": "2026-10-16T11:11:00+03:00",
+      "posted_ids": [
+        "18008468288990711",
+        "18342659389250448",
+        "17908050594329296",
+        "18144030955591519",
+        "18449313985125062",
+        "18053282288598157",
+        "18170497780470502",
+        "18096229127350609",
+        "18117748990994378",
+        "17912793447493265"
+      ],
+      "posted_at": "2026-10-16T08:19:43+00:00",
+      "permalink": "https://www.threads.com/@velimyr/post/DejFTajlUg6"
     },
     "2026-09-29-18": {
       "sha": "d6d9d2fadfa1c500",
