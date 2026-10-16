@@ -4213,6 +4213,10 @@
         {
           "at": "2026-10-16T09:05:43+00:00",
           "event": "thread ready"
+        },
+        {
+          "at": "2026-10-16T09:07:56+00:00",
+          "event": "thread edited in telegram (1 fragment(s))"
         }
       ]
     },
