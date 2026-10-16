@@ -7670,6 +7670,336 @@
           "event": "idea rejected in telegram"
         }
       ]
+    },
+    {
+      "id": "2026-10-16-11",
+      "proposed_at": "2026-10-16",
+      "stream": "provoke",
+      "rubric": "migrations",
+      "title": "«Вам змінили прізвище на Елліс-Айленді» — казка для тих, хто не читав маніфест",
+      "summary": "Теза-сарказм про типаж, який переказує, що чиновник на острові «не зрозумів» і дописав прізвищу пів алфавіту. Факт-жало: за Вікіпедією, ідея примусового перейменування не підтверджена доказами, чиновники брали імена з маніфестів пароплавних компаній, а прізвища часто змінювали самі родини вже в Америці.",
+      "why_now": "",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Ellis_Island"
+      ],
+      "images": [],
+      "status": "proposed",
+      "thread": {
+        "status": "none",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-10-16T16:00:00+00:00",
+          "event": "proposed by ideas routine"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-16-12",
+      "proposed_at": "2026-10-16",
+      "stream": "provoke",
+      "rubric": "myths",
+      "title": "Герб за 500 грн: вітаємо, у вас тепер є герб. Роду нема",
+      "summary": "Фальшива дефініція-оголошення для покупців «родового герба по прізвищу». Жало спирається на факт: герб належав роду чи окремій особі й передавався нащадкам, а не вішався на прізвище; «називні» герби лише натякали на нього.",
+      "why_now": "",
+      "sources": [
+        "https://uk.wikipedia.org/wiki/Герб"
+      ],
+      "images": [],
+      "status": "proposed",
+      "thread": {
+        "status": "none",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-10-16T16:00:00+00:00",
+          "event": "proposed by ideas routine"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-16-13",
+      "proposed_at": "2026-10-16",
+      "stream": "provoke",
+      "rubric": "ancestors",
+      "title": "«Предок із козацької старшини»: у реєстрі 1649 року 40 тисяч козаків і 18 полків",
+      "summary": "Фальшива «пам'ятка» для власника старшинського походження: Зборівський реєстр охопив понад 40 тис. козаків у 18 полках. Жало в арифметиці: козаків десятки тисяч, а старшина в родинних легендах чомусь у кожному другому роду.",
+      "why_now": "",
+      "sources": [
+        "https://uk.wikipedia.org/wiki/Зборівський_реєстр"
+      ],
+      "images": [],
+      "status": "proposed",
+      "thread": {
+        "status": "none",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-10-16T16:00:00+00:00",
+          "event": "proposed by ideas routine"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-16-14",
+      "proposed_at": "2026-10-16",
+      "stream": "provoke",
+      "rubric": "myths",
+      "title": "Кожен другий — нащадок шляхти, а комісія розжалувала 340 тисяч шляхтичів",
+      "summary": "Іронічна новина для любителів «шляхетського кореня». Факт: під час верифікації 1832–1852 рр. шляхетства позбавили 340 тис. осіб, походження легалізувало близько 70 тис.; декласованих перевели в однодвірці. Жало: «дід був з панів» — а чи пройшов він розбір?",
+      "why_now": "",
+      "sources": [
+        "https://uk.wikipedia.org/wiki/Шляхта"
+      ],
+      "images": [],
+      "status": "proposed",
+      "thread": {
+        "status": "none",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-10-16T16:00:00+00:00",
+          "event": "proposed by ideas routine"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-16-15",
+      "proposed_at": "2026-10-16",
+      "stream": "provoke",
+      "rubric": "bureaucracy",
+      "title": "Архів не відповів за 3 дні — отже, архів ненавидить вас особисто",
+      "summary": "Діагноз для автора обурливого листа «вже тиждень мовчать!». Факт: закон про звернення громадян дає на розгляд місяць (до 45 днів із продовженням), прості звернення — до 15 днів. Жало: ви чекали 72 години, ваші предки чекали ревізії десятиліттями.",
+      "why_now": "",
+      "sources": [
+        "https://ombudsman.gov.ua/news_details/shcho-potribno-znati-pro-termini-rozglyadu-zvernen-gromadyan"
+      ],
+      "images": [],
+      "status": "proposed",
+      "thread": {
+        "status": "none",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-10-16T16:00:00+00:00",
+          "event": "proposed by ideas routine"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-16-16",
+      "proposed_at": "2026-10-16",
+      "stream": "provoke",
+      "rubric": "method",
+      "title": "Дерево на 3000 осіб у спільній базі: 14 версій прадіда, і всі «вірні»",
+      "summary": "Сатира на колекціонера гілок, який приєднує кожного «схожого». Факт: у спільному дереві FamilySearch будь-який користувач додає людей, зв'язує їх чи зливає дублікати, а попередня версія дерева страждала від неможливості визначити правильні дані. Жало: колективна істина — це голосування без шифру справи.",
+      "why_now": "",
+      "sources": [
+        "https://en.wikipedia.org/wiki/FamilySearch"
+      ],
+      "images": [],
+      "status": "proposed",
+      "thread": {
+        "status": "none",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-10-16T16:00:00+00:00",
+          "event": "proposed by ideas routine"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-16-17",
+      "proposed_at": "2026-10-16",
+      "stream": "provoke",
+      "rubric": "ancestors",
+      "title": "Колекціонер однофамільців: Коваленко — це «син Коваля», а не ваш родич",
+      "summary": "Оголошення для тих, хто збирає всіх «Мельників» у «великий рід». Факт: прізвища на -енко означають «син» (Василенко), а ремісничі (Коваль, Мельник) виникали незалежно в різних місцях; обов'язковими й спадковими вони стали на межі XVIII–XIX ст.",
+      "why_now": "",
+      "sources": [
+        "https://uk.wikipedia.org/wiki/Українські_прізвища"
+      ],
+      "images": [],
+      "status": "proposed",
+      "thread": {
+        "status": "none",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-10-16T16:00:00+00:00",
+          "event": "proposed by ideas routine"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-16-18",
+      "proposed_at": "2026-10-16",
+      "stream": "provoke",
+      "rubric": "document",
+      "title": "«Пан» у метриці — це не шляхта, а ввічливість писаря",
+      "summary": "Діагноз для тих, хто побачив «пан» біля імені прадіда й записав його в шляхту. Факт: «пан» — шанобливе звернення до чоловіка; окремо слово означало й знатну верству шляхти, тож без контексту це лотерея.",
+      "why_now": "",
+      "sources": [
+        "https://uk.wikipedia.org/wiki/Пан"
+      ],
+      "images": [],
+      "status": "proposed",
+      "thread": {
+        "status": "none",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-10-16T16:00:00+00:00",
+          "event": "proposed by ideas routine"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-16-19",
+      "proposed_at": "2026-10-16",
+      "stream": "provoke",
+      "rubric": "maps",
+      "title": "«Село зникло з карти» — і це змова архіву, а не Київське водосховище",
+      "summary": "Гіпербола про дослідника, що не знайшов село на сучасній карті й оголосив архів змовником. Факт: під час наповнення Київського водосховища затопили багато сіл, переважно на лівому березі. Жало: село не зникло — ви просто не глянули в давні карти.",
+      "why_now": "",
+      "sources": [
+        "https://uk.wikipedia.org/wiki/Київське_водосховище"
+      ],
+      "images": [],
+      "status": "proposed",
+      "thread": {
+        "status": "none",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-10-16T16:00:00+00:00",
+          "event": "proposed by ideas routine"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-16-20",
+      "proposed_at": "2026-10-16",
+      "stream": "provoke",
+      "rubric": "dna",
+      "title": "Збіг зі США — «родич!»: 55% четвертих кузенів із вами взагалі не збіжаться",
+      "summary": "Фальшива інструкція для тих, хто пише «родич!» кожному слабкому збігу. Факт: за Вікіпедією, ~10% третіх, 55% четвертих і 85% п'ятих кузенів не діляться значущим сегментом ДНК, а його відсутність не спростовує спільного предка. Жало: «вже все знайшов» — а знайшов статистику.",
+      "why_now": "",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Genetic_genealogy"
+      ],
+      "images": [],
+      "status": "proposed",
+      "thread": {
+        "status": "none",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-10-16T16:00:00+00:00",
+          "event": "proposed by ideas routine"
+        }
+      ]
     }
   ]
 }
