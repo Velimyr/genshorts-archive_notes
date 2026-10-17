@@ -8094,7 +8094,7 @@
         "https://uk.wikipedia.org/wiki/Григоріанський_календар"
       ],
       "images": [],
-      "status": "proposed",
+      "status": "rejected",
       "thread": {
         "status": "none",
         "file": null
@@ -8112,6 +8112,10 @@
         {
           "at": "2026-10-17T07:00:00+00:00",
           "event": "proposed by ideas routine"
+        },
+        {
+          "at": "2026-10-17T06:07:11+00:00",
+          "event": "idea rejected in telegram"
         }
       ]
     },
