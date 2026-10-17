@@ -2740,6 +2740,9 @@
     },
     "970": {
       "kind": "nav"
+    },
+    "971": {
+      "kind": "nav"
     }
   },
   "approved_threads": {
@@ -3157,8 +3160,17 @@
         "credit": "Державний архів Житомирської області / Wikimedia Commons, Public domain"
       },
       "approved_at": "2026-10-10T06:14:54+00:00",
-      "posted": false,
-      "publish_at": "2026-10-17T10:04:00+03:00"
+      "posted": true,
+      "publish_at": "2026-10-17T10:04:00+03:00",
+      "posted_ids": [
+        "18062840021554100",
+        "18119586485319290",
+        "17999850494817921",
+        "18114287459034492",
+        "17908140414582915"
+      ],
+      "posted_at": "2026-10-17T07:07:45+00:00",
+      "permalink": "https://www.threads.com/@velimyr/post/DeliEw-G2-O"
     },
     "2026-10-08-05": {
       "sha": "3d47cd04e04e860e",

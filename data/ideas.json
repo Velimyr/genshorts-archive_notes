@@ -1199,9 +1199,10 @@
       ],
       "status": "approved",
       "thread": {
-        "status": "scheduled",
+        "status": "posted",
         "file": "data/texts/2026-09-29-18/thread.md",
-        "approved_sha": "d6d9d2fadfa1c500"
+        "approved_sha": "d6d9d2fadfa1c500",
+        "permalink": "https://www.threads.com/@velimyr/post/DeliEw-G2-O"
       },
       "script": {
         "status": "none",
@@ -1248,6 +1249,10 @@
         {
           "at": "2026-10-10T06:14:54+00:00",
           "event": "thread auto-scheduled: 2026-10-17T10:04:00+03:00"
+        },
+        {
+          "at": "2026-10-17T07:07:45+00:00",
+          "event": "thread posted to Threads (5 posts)"
         }
       ],
       "photo_request": false,
