@@ -8046,6 +8046,338 @@
           "event": "proposed by ideas routine"
         }
       ]
+    },
+    {
+      "id": "2026-10-17-01",
+      "proposed_at": "2026-10-17",
+      "stream": "provoke",
+      "rubric": "customs",
+      "title": "Усі ваші предки помирали рівно у 60, 70 і 80 — як зручно для писаря",
+      "summary": "Вдала «пам'ятка» для дослідника: якщо у справі всі діди мають вік на 0 чи 5 — це не довголіття, а округлення. Жарт про віру в точні цифри в документах, де вік називали «на око». Типаж: той, хто будує по метриках точні роки народження.",
+      "why_now": "",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Age_heaping",
+        "https://uk.wikipedia.org/wiki/Сповідні_розписи"
+      ],
+      "images": [],
+      "status": "proposed",
+      "thread": {
+        "status": "none",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-10-17T07:00:00+00:00",
+          "event": "proposed by ideas routine"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-17-02",
+      "proposed_at": "2026-10-17",
+      "stream": "provoke",
+      "rubric": "document",
+      "title": "Святкуєте день народження прадіда за метрикою? Привітайте його на 13 днів раніше",
+      "summary": "Оголошення для родинного свята: дати до 1918 р. — за старим стилем. Григоріанський календар в Україні почав діяти 16 лютого 1918 р. (рахувався як 1 березня), а у 1901–2099 різниця з юліанським — 13 днів. Типаж: той, хто переписує дату з метрики в календар «як є».",
+      "why_now": "",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Julian_calendar",
+        "https://uk.wikipedia.org/wiki/Григоріанський_календар"
+      ],
+      "images": [],
+      "status": "proposed",
+      "thread": {
+        "status": "none",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-10-17T07:00:00+00:00",
+          "event": "proposed by ideas routine"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-17-03",
+      "proposed_at": "2026-10-17",
+      "stream": "provoke",
+      "rubric": "ancestors",
+      "title": "Шукаєте прабабусю в підсумках ревізії? Вона там була, тільки ніхто не рахував",
+      "summary": "Підсумкові таблиці ревізій жінок не містили — «жіноча стать ніколи не фігурувала». Сама казка ж називала жінок поіменно, тож сарказм адресовано тим, хто читає лише підсумок і дивується, що прабабусі нема. Типаж: дослідник, що береться лише за чоловічу лінію.",
+      "why_now": "",
+      "sources": [
+        "https://uk.wikipedia.org/wiki/Ревізька_казка"
+      ],
+      "images": [],
+      "status": "proposed",
+      "thread": {
+        "status": "none",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-10-17T07:00:00+00:00",
+          "event": "proposed by ideas routine"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-17-04",
+      "proposed_at": "2026-10-17",
+      "stream": "provoke",
+      "rubric": "myths",
+      "title": "Понад 300 графських родів на всю імперію — і кожен, виявляється, ваш родич",
+      "summary": "Оголошення-«розшук»: до кінця XIX ст. в Російській імперії налічувалося понад 300 графських родів, а титул скасовано 11 листопада 1917 р. Жарт про любителів графства в роду, що знаходять його швидше за метрику. Типаж: любитель графа в родоводі.",
+      "why_now": "",
+      "sources": [
+        "https://uk.wikipedia.org/wiki/Граф"
+      ],
+      "images": [],
+      "status": "proposed",
+      "thread": {
+        "status": "none",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-10-17T07:00:00+00:00",
+          "event": "proposed by ideas routine"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-17-05",
+      "proposed_at": "2026-10-17",
+      "stream": "provoke",
+      "rubric": "myths",
+      "title": "Словникова стаття: «козацьке прізвище» — будь-яке, що закінчується на -енко",
+      "summary": "Дефініція-пародія: суфікс -енко засвідчений у західноукраїнських джерелах із першої половини XV ст., тобто раніше за козацтво, а польські джерела дають топоніми з ним із середини XIV ст. Для тих, хто бачить Сагайдачного у кожному Петренку. Типаж: колекціонер «козацьких» прізвищ.",
+      "why_now": "",
+      "sources": [
+        "https://uk.wikipedia.org/wiki/Українські_прізвища"
+      ],
+      "images": [],
+      "status": "proposed",
+      "thread": {
+        "status": "none",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-10-17T07:00:00+00:00",
+          "event": "proposed by ideas routine"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-17-06",
+      "proposed_at": "2026-10-17",
+      "stream": "provoke",
+      "rubric": "community",
+      "title": "«Допоможіть знайти предків!» Прізвище: Коваленко. Село: десь на Полтавщині",
+      "summary": "Пародія на допис у чаті без села, року й джерела. Навіть для міст існує два варіанти написання назв, тож «десь там» — не локація. Сміх упізнавання для адмінів генеалогічних груп. Типаж: автор допису-загадки в генеалогічному чаті.",
+      "why_now": "",
+      "sources": [
+        "https://www.familysearch.org/en/wiki/Ukraine_Genealogy"
+      ],
+      "images": [],
+      "status": "proposed",
+      "thread": {
+        "status": "none",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-10-17T07:00:00+00:00",
+          "event": "proposed by ideas routine"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-17-07",
+      "proposed_at": "2026-10-17",
+      "stream": "provoke",
+      "rubric": "customs",
+      "title": "Ваш «дід, що ніколи не ходив до церкви» — у сповідному розписі поіменно",
+      "summary": "Священник вів облік і тих, хто не сповідався: з 1722 р. у Гетьманщині — для всіх від семи років, а штраф за пропуск скасували лише 1800-го. Героїчний «вільнодумний» предок у ті часи був записом у списку неслухняних. Типаж: романтизатор «непокірного» діда.",
+      "why_now": "",
+      "sources": [
+        "https://uk.wikipedia.org/wiki/Сповідні_розписи"
+      ],
+      "images": [],
+      "status": "proposed",
+      "thread": {
+        "status": "none",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-10-17T07:00:00+00:00",
+          "event": "proposed by ideas routine"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-17-08",
+      "proposed_at": "2026-10-17",
+      "stream": "provoke",
+      "rubric": "resources",
+      "title": "«Чому в реєстрі нема мого села?» Скарга прийнята. Виконавець — ви",
+      "summary": "Інвентаріум — волонтерська ініціатива, відкрита до внесків: можна надсилати відомості про інвентарі й допомагати з описами. Жарт про тих, хто вимагає повноти від ресурсу, що живе на волонтерах. Типаж: споживач безкоштовних баз, що ображений на їхню неповноту.",
+      "why_now": "",
+      "sources": [
+        "https://inventarium.org.ua/about"
+      ],
+      "images": [],
+      "status": "proposed",
+      "thread": {
+        "status": "none",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-10-17T07:00:00+00:00",
+          "event": "proposed by ideas routine"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-17-09",
+      "proposed_at": "2026-10-17",
+      "stream": "provoke",
+      "rubric": "bureaucracy",
+      "title": "П'ять стадій пошуку в ревізьких казках: заперечення, торг, 1719, 1858 і «а може, він не жив»",
+      "summary": "«П'ять стадій» для того, хто не знайшов предка. Десять ревізій від 1719 до 1858 р., а на Правобережжі перша — п'ята (1794–1808): шукаєте не в тій ревізії — не знайдете й за 10 років. Типаж: дослідник, що шукає не в тій ревізії.",
+      "why_now": "",
+      "sources": [
+        "https://uk.wikipedia.org/wiki/Ревізька_казка"
+      ],
+      "images": [],
+      "status": "proposed",
+      "thread": {
+        "status": "none",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-10-17T07:00:00+00:00",
+          "event": "proposed by ideas routine"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-17-10",
+      "proposed_at": "2026-10-17",
+      "stream": "provoke",
+      "rubric": "document",
+      "title": "Синод затвердив форму метрики у 1724-му. Триста років — а почерк у кожного свій",
+      "summary": "Іронічна пам'ятка: Петро I вимагав вести метричні записи (1722), форму затвердили 1724-го — три розділи: народжені, шлюби, померлі. Усе стандартизовано, окрім руки того, хто писав. Типаж: той, хто чекав «читабельних бланків».",
+      "why_now": "",
+      "sources": [
+        "https://uk.wikipedia.org/wiki/Метрична_книга"
+      ],
+      "images": [],
+      "status": "proposed",
+      "thread": {
+        "status": "none",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-10-17T07:00:00+00:00",
+          "event": "proposed by ideas routine"
+        }
+      ]
     }
   ]
 }
