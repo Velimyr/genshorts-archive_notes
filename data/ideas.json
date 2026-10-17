@@ -8304,7 +8304,7 @@
         "https://inventarium.org.ua/about"
       ],
       "images": [],
-      "status": "proposed",
+      "status": "approved",
       "thread": {
         "status": "none",
         "file": null
@@ -8322,6 +8322,10 @@
         {
           "at": "2026-10-17T07:00:00+00:00",
           "event": "proposed by ideas routine"
+        },
+        {
+          "at": "2026-10-17T06:11:36+00:00",
+          "event": "idea approved in telegram"
         }
       ]
     },
