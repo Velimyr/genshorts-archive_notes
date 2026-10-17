@@ -8394,6 +8394,316 @@
           "event": "proposed by ideas routine"
         }
       ]
+    },
+    {
+      "id": "2026-10-17-11",
+      "proposed_at": "2026-10-17",
+      "stream": "provoke",
+      "rubric": "provoke",
+      "title": "«Ми з козацької старшини» — каже тітка, у якої прадід усе життя пас чужих корів. Тост за тітку: нехай хоч одна корова була її.",
+      "summary": "Тост для тітки з козацькою легендою; механіка — впізнавання («покажіть це тітці»).",
+      "why_now": "",
+      "sources": [],
+      "images": [],
+      "status": "proposed",
+      "thread": {
+        "status": "none",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-10-17T08:00:00+00:00",
+          "event": "proposed by ideas routine"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-17-12",
+      "proposed_at": "2026-10-17",
+      "stream": "provoke",
+      "rubric": "provoke",
+      "title": "Вакансія: родич, який «знає все про рід». Вимоги: жодного документа, абсолютна впевненість, голос на застіллі гучніший за архів.",
+      "summary": "Фальшива вакансія для всезнайки на застіллі; механіка — впізнавання й «відмітьте свого родича».",
+      "why_now": "",
+      "sources": [],
+      "images": [],
+      "status": "proposed",
+      "thread": {
+        "status": "none",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-10-17T08:00:00+00:00",
+          "event": "proposed by ideas routine"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-17-13",
+      "proposed_at": "2026-10-17",
+      "stream": "provoke",
+      "rubric": "provoke",
+      "title": "Діагноз: «синдром третьої ночі». Симптоми: ви читаєте метрики села, де у вас нікого немає, і ви вже переживаєте за чужого Мартина.",
+      "summary": "Діагноз для генеалога, що о третій ночі застряг у чужих метриках; механіка — «хто ще такий?».",
+      "why_now": "",
+      "sources": [],
+      "images": [],
+      "status": "proposed",
+      "thread": {
+        "status": "none",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-10-17T08:00:00+00:00",
+          "event": "proposed by ideas routine"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-17-14",
+      "proposed_at": "2026-10-17",
+      "stream": "provoke",
+      "rubric": "provoke",
+      "title": "Некролог легенді «у нас у роду всі були пани». Померла в читальній залі від першого ж документа. Квіти — на ксерокопію.",
+      "summary": "Некролог родинній легенді про панів; механіка — запитання «яку легенду поховали ви?».",
+      "why_now": "",
+      "sources": [],
+      "images": [],
+      "status": "proposed",
+      "thread": {
+        "status": "none",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-10-17T08:00:00+00:00",
+          "event": "proposed by ideas routine"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-17-15",
+      "proposed_at": "2026-10-17",
+      "stream": "provoke",
+      "rubric": "provoke",
+      "title": "Відгук на ДНК-тест: «Замовив — вийшов на дванадцять відсотків вікінг. Рід став значно цікавіший, а борщ — ні. Одна зірка».",
+      "summary": "Відгук-пародія на ДНК-тест; механіка — тест «ким вас записали?» у коментарях.",
+      "why_now": "",
+      "sources": [],
+      "images": [],
+      "status": "proposed",
+      "thread": {
+        "status": "none",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-10-17T08:00:00+00:00",
+          "event": "proposed by ideas routine"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-17-16",
+      "proposed_at": "2026-10-17",
+      "stream": "provoke",
+      "rubric": "provoke",
+      "title": "Непопулярна думка: ображатися на архів за довгу відповідь — це як ображатися на льох, що там темно й холодно.",
+      "summary": "Непопулярна думка для ображеного на архів; механіка — вибір сторони.",
+      "why_now": "",
+      "sources": [],
+      "images": [],
+      "status": "proposed",
+      "thread": {
+        "status": "none",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-10-17T08:00:00+00:00",
+          "event": "proposed by ideas routine"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-17-17",
+      "proposed_at": "2026-10-17",
+      "stream": "provoke",
+      "rubric": "provoke",
+      "title": "Генеалогічний чат, допис дня: «Шукаю предків. Допоможіть». Допомагаю: починайте з прізвища, села й року. Або з чайника, бо це надовго.",
+      "summary": "Сатира на допис «я тільки спитати» без даних; механіка — вимога до авторів таких дописів.",
+      "why_now": "",
+      "sources": [],
+      "images": [],
+      "status": "proposed",
+      "thread": {
+        "status": "none",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-10-17T08:00:00+00:00",
+          "event": "proposed by ideas routine"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-17-18",
+      "proposed_at": "2026-10-17",
+      "stream": "provoke",
+      "rubric": "provoke",
+      "title": "Дерево на п'ять тисяч осіб, а свого прадіда в ньому немає. Зате є Наполеон — ну як же без нього.",
+      "summary": "Роуст власника велетенського дерева з MyHeritage; механіка — «якщо у вашому дереві… ви…».",
+      "why_now": "",
+      "sources": [],
+      "images": [],
+      "status": "proposed",
+      "thread": {
+        "status": "none",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-10-17T08:00:00+00:00",
+          "event": "proposed by ideas routine"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-17-19",
+      "proposed_at": "2026-10-17",
+      "stream": "provoke",
+      "rubric": "provoke",
+      "title": "Словникова стаття: «Командна гра». Команда метрик — докази. Команда легенд — «так мені розповіли». Обирайте сторону, рахунок у коментарях.",
+      "summary": "Словникова стаття й вибір сторони «метрики проти легенд»; механіка — голосування в коментарях.",
+      "why_now": "",
+      "sources": [],
+      "images": [],
+      "status": "proposed",
+      "thread": {
+        "status": "none",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-10-17T08:00:00+00:00",
+          "event": "proposed by ideas routine"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-17-20",
+      "proposed_at": "2026-10-17",
+      "stream": "provoke",
+      "rubric": "provoke",
+      "title": "Новий товар: «Дідусів герб, ручна робота, доставка за три дні». Предків у комплекті немає, їх доведеться шукати самотужки.",
+      "summary": "Відгук-оголошення для покупця герба; механіка — запитання «хто купував?».",
+      "why_now": "",
+      "sources": [],
+      "images": [],
+      "status": "proposed",
+      "thread": {
+        "status": "none",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-10-17T08:00:00+00:00",
+          "event": "proposed by ideas routine"
+        }
+      ]
     }
   ]
 }
