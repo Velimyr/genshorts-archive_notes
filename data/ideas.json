@@ -8234,7 +8234,7 @@
       "images": [],
       "status": "approved",
       "thread": {
-        "status": "none",
+        "status": "requested",
         "file": null
       },
       "script": {
@@ -8254,6 +8254,10 @@
         {
           "at": "2026-10-17T06:07:43+00:00",
           "event": "idea approved in telegram"
+        },
+        {
+          "at": "2026-10-18T06:36:37+00:00",
+          "event": "thread requested in telegram"
         }
       ]
     },
