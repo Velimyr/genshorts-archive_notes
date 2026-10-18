@@ -8942,7 +8942,7 @@
       ],
       "status": "approved",
       "thread": {
-        "status": "revise",
+        "status": "ready",
         "file": "data/texts/2026-10-18-a01/thread.md"
       },
       "script": {
@@ -8980,6 +8980,10 @@
         {
           "at": "2026-10-18T14:44:37+00:00",
           "event": "thread revision requested"
+        },
+        {
+          "at": "2026-10-18T14:46:17+00:00",
+          "event": "thread ready"
         }
       ]
     }
