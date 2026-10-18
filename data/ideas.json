@@ -8905,6 +8905,37 @@
           "event": "proposed by ideas routine"
         }
       ]
+    },
+    {
+      "id": "2026-10-18-a01",
+      "proposed_at": "2026-10-18",
+      "stream": "tg",
+      "origin": "author",
+      "title": "Про сімейні артефакти - на сволоку в старій хаті прадід вирізьбив дату побудови…",
+      "summary": "Про сімейні артефакти - на сволоку в старій хаті прадід вирізьбив дату побудови, прабаба отримала на весілля ікону і зберегла її, передала онуці - тепер це сімейні артефакти. Щоб у ваших нащадків такі артефакти теж були - вам варто почати їх створювати",
+      "why_now": "",
+      "sources": [],
+      "images": [],
+      "status": "approved",
+      "thread": {
+        "status": "requested",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-10-18T09:51:09+00:00",
+          "event": "author topic from telegram; thread requested"
+        }
+      ]
     }
   ]
 }
