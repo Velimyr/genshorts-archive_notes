@@ -8942,7 +8942,7 @@
       ],
       "status": "approved",
       "thread": {
-        "status": "ready",
+        "status": "revise",
         "file": "data/texts/2026-10-18-a01/thread.md"
       },
       "script": {
@@ -8953,7 +8953,13 @@
         "status": "none",
         "telegram_message_id": null
       },
-      "revisions": [],
+      "revisions": [
+        {
+          "kind": "thread",
+          "text": "Дуже коротко і обірвано. Додай ще тексту з прикладами сімейних реліквій. Перепиши завершення , щоб воно було сильне",
+          "at": "2026-10-18T14:44:37+00:00"
+        }
+      ],
       "history": [
         {
           "at": "2026-10-18T09:51:09+00:00",
@@ -8970,6 +8976,10 @@
         {
           "at": "2026-10-18T14:43:00+00:00",
           "event": "thread edited in telegram (1 fragment(s))"
+        },
+        {
+          "at": "2026-10-18T14:44:37+00:00",
+          "event": "thread revision requested"
         }
       ]
     }
