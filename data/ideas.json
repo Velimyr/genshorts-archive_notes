@@ -8234,7 +8234,7 @@
       "images": [],
       "status": "approved",
       "thread": {
-        "status": "ready",
+        "status": "revise",
         "file": "data/texts/2026-10-17-04/thread.md"
       },
       "script": {
@@ -8245,7 +8245,13 @@
         "status": "none",
         "telegram_message_id": null
       },
-      "revisions": [],
+      "revisions": [
+        {
+          "kind": "thread",
+          "text": "Ок, але трохи менше рубаних фраз, більше схоже на людську оповідь",
+          "at": "2026-10-18T06:38:38+00:00"
+        }
+      ],
       "history": [
         {
           "at": "2026-10-17T07:00:00+00:00",
@@ -8262,6 +8268,10 @@
         {
           "at": "2026-10-18T06:37:10+00:00",
           "event": "thread ready"
+        },
+        {
+          "at": "2026-10-18T06:38:38+00:00",
+          "event": "thread revision requested"
         }
       ]
     },
