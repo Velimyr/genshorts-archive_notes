@@ -9333,7 +9333,7 @@
         "https://www.deeplearning.ai/the-batch/written-by-quill-read-by-computer"
       ],
       "images": [],
-      "status": "proposed",
+      "status": "rejected",
       "thread": {
         "status": "none",
         "file": null
@@ -9351,6 +9351,10 @@
         {
           "at": "2026-10-19T07:00:00+00:00",
           "event": "proposed by ideas routine"
+        },
+        {
+          "at": "2026-10-19T06:18:50+00:00",
+          "event": "idea rejected in telegram"
         }
       ]
     },
