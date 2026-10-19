@@ -2372,11 +2372,30 @@
       "sources": [
         "https://uk.wikipedia.org/wiki/Шематизм"
       ],
-      "images": [],
+      "images": [
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Schematismus_Universi_Venerabilis_Cleri_Archidioeceseos_Metropolitanae_Graeco_Catholicae_Leopoliensis_pro_Anno_Domini_1839.png/1280px-Schematismus_Universi_Venerabilis_Cleri_Archidioeceseos_Metropolitanae_Graeco_Catholicae_Leopoliensis_pro_Anno_Domini_1839.png",
+          "page": "https://commons.wikimedia.org/wiki/File:Schematismus_Universi_Venerabilis_Cleri_Archidioeceseos_Metropolitanae_Graeco_Catholicae_Leopoliensis_pro_Anno_Domini_1839.png",
+          "credit": "Roman Ivanovych Kovalchuk / Wikimedia Commons, CC BY-SA 4.0",
+          "license": "CC BY-SA 4.0"
+        },
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Schematismus_Universi_Venerabilis_Cleri_Archidioeceseos_Metropolitanae_Graeco_Catholicae_Leopoliensis_pro_Anno_Domini_1858.png/1280px-Schematismus_Universi_Venerabilis_Cleri_Archidioeceseos_Metropolitanae_Graeco_Catholicae_Leopoliensis_pro_Anno_Domini_1858.png",
+          "page": "https://commons.wikimedia.org/wiki/File:Schematismus_Universi_Venerabilis_Cleri_Archidioeceseos_Metropolitanae_Graeco_Catholicae_Leopoliensis_pro_Anno_Domini_1858.png",
+          "credit": "Roman Ivanovych Kovalchuk / Wikimedia Commons, CC BY-SA 4.0",
+          "license": "CC BY-SA 4.0"
+        },
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Schematismus_Universi_Venerabilis_Cleri_Archidioeceseos_Metropolitanae_Graeco_Catholicae_Leopoliensis_pro_Anno_Domini_1878.png/1280px-Schematismus_Universi_Venerabilis_Cleri_Archidioeceseos_Metropolitanae_Graeco_Catholicae_Leopoliensis_pro_Anno_Domini_1878.png",
+          "page": "https://commons.wikimedia.org/wiki/File:Schematismus_Universi_Venerabilis_Cleri_Archidioeceseos_Metropolitanae_Graeco_Catholicae_Leopoliensis_pro_Anno_Domini_1878.png",
+          "credit": "Roman Ivanovych Kovalchuk / Wikimedia Commons, CC BY-SA 4.0",
+          "license": "CC BY-SA 4.0"
+        }
+      ],
       "status": "approved",
       "thread": {
-        "status": "requested",
-        "file": null
+        "status": "ready",
+        "file": "data/texts/2026-10-01-03/thread.md"
       },
       "script": {
         "status": "none",
@@ -2399,6 +2418,10 @@
         {
           "at": "2026-10-19T09:03:45+00:00",
           "event": "thread requested in telegram"
+        },
+        {
+          "at": "2026-10-19T09:12:39+00:00",
+          "event": "thread ready"
         }
       ]
     },
