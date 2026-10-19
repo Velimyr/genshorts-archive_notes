@@ -3097,6 +3097,9 @@
     },
     "1099": {
       "kind": "nav"
+    },
+    "1100": {
+      "kind": "nav"
     }
   },
   "approved_threads": {
@@ -3535,8 +3538,15 @@
         "credit": "Varga Attila / Wikimedia Commons, CC BY-SA 2.5"
       },
       "approved_at": "2026-10-12T06:28:14+00:00",
-      "posted": false,
-      "publish_at": "2026-10-19T11:54:00+03:00"
+      "posted": true,
+      "publish_at": "2026-10-19T11:54:00+03:00",
+      "posted_ids": [
+        "17958878733255826",
+        "18131055034696953",
+        "18069318917785083"
+      ],
+      "posted_at": "2026-10-19T08:56:52+00:00",
+      "permalink": "https://www.threads.com/@velimyr/post/Deq4OrZFgVg"
     },
     "2026-10-01-07": {
       "sha": "54db74f983f1733f",
@@ -4261,7 +4271,7 @@
     928737458,
     928737461
   ],
-  "analytics_at": "2026-10-19T08:00:57+00:00",
+  "analytics_at": "2026-10-19T08:56:53+00:00",
   "reminded_slots": [
     "2026-10-01T13:00:00+03:00",
     "2026-10-02T11:00:00+03:00"
