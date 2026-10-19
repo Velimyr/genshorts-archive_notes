@@ -9500,7 +9500,7 @@
           "license": "CC0 1.0"
         }
       ],
-      "status": "proposed",
+      "status": "rejected",
       "thread": {
         "status": "none",
         "file": null
@@ -9518,6 +9518,10 @@
         {
           "at": "2026-10-19T06:27:30+00:00",
           "event": "proposed by ideas routine"
+        },
+        {
+          "at": "2026-10-19T06:29:35+00:00",
+          "event": "idea rejected in telegram"
         }
       ]
     },
