@@ -9406,7 +9406,7 @@
         "https://geneteka.genealodzy.pl/"
       ],
       "images": [],
-      "status": "proposed",
+      "status": "rejected",
       "thread": {
         "status": "none",
         "file": null
@@ -9424,6 +9424,10 @@
         {
           "at": "2026-10-19T06:27:30+00:00",
           "event": "proposed by ideas routine"
+        },
+        {
+          "at": "2026-10-19T06:30:00+00:00",
+          "event": "idea rejected in telegram"
         }
       ]
     },
@@ -9671,7 +9675,7 @@
         "https://www.familysearch.org/en/wiki/Ukraine_Naming_Customs"
       ],
       "images": [],
-      "status": "proposed",
+      "status": "rejected",
       "thread": {
         "status": "none",
         "file": null
@@ -9689,6 +9693,10 @@
         {
           "at": "2026-10-19T06:27:30+00:00",
           "event": "proposed by ideas routine"
+        },
+        {
+          "at": "2026-10-19T06:30:01+00:00",
+          "event": "idea rejected in telegram"
         }
       ]
     },
