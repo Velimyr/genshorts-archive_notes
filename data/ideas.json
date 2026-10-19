@@ -9394,6 +9394,418 @@
           "event": "idea rejected in telegram"
         }
       ]
+    },
+    {
+      "id": "2026-10-19-11",
+      "proposed_at": "2026-10-19",
+      "stream": "small",
+      "title": "Geneteka: чи є ваша українська парафія в польській базі ПТГ",
+      "summary": "Польське генеалогічне товариство веде індекс метрик Geneteka, де окремий регіон — «Україна». На момент перевірки: 605 парафій, 1645 реєстрів, понад 3 млн записів. Покажемо, як перевірити парафію предків і чому це лише індекс, а не скан.",
+      "why_now": "Позачасова, але база росте — зручно перевірити парафію зараз.",
+      "sources": [
+        "https://geneteka.genealodzy.pl/"
+      ],
+      "images": [],
+      "status": "proposed",
+      "thread": {
+        "status": "none",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-10-19T06:27:30+00:00",
+          "event": "proposed by ideas routine"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-19-12",
+      "proposed_at": "2026-10-19",
+      "stream": "small",
+      "title": "Шематизм: друкований довідник, що називає священника й парафію вашого села",
+      "summary": "Шематизми — друковані списки духовенства й парафій єпархій. Найстаріший вийшов 1814 року в Мукачівській єпархії, у Перемиській — з 1828, у Львівській — з 1832, у Станиславівській — з 1886. Корисно, щоб зрозуміти, до якої парафії належало село і хто вів метрики.",
+      "why_now": "",
+      "sources": [
+        "https://uk.wikipedia.org/wiki/Шематизм"
+      ],
+      "images": [
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/d/d9/Schematismus_Universi_Venerabilis_Cleri_Archidioeceseos_Metropolitanae_Graeco_Catholicae_Leopoliensis_pro_Anno_Domini_1878.png",
+          "page": "https://commons.wikimedia.org/w/index.php?curid=141908018",
+          "credit": "Roman Ivanovych Kovalchuk / Wikimedia, CC BY-SA 4.0",
+          "license": "CC BY-SA 4.0"
+        },
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/f/fe/Schematismus_Universi_Venerabilis_Cleri_Archidioeceseos_Metropolitanae_Graeco_Catholicae_Leopoliensis_pro_Anno_Domini_1839.png",
+          "page": "https://commons.wikimedia.org/w/index.php?curid=141899933",
+          "credit": "Roman Ivanovych Kovalchuk / Wikimedia, CC BY-SA 4.0",
+          "license": "CC BY-SA 4.0"
+        },
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/4/40/Schematismus_cleri_archidioeceseos_metropolitanae_graeco_catholicae_Leopolensis.jpg",
+          "page": "https://commons.wikimedia.org/w/index.php?curid=130589906",
+          "credit": "Yuriy Fedyshyn / Wikimedia, CC BY-SA 4.0",
+          "license": "CC BY-SA 4.0"
+        }
+      ],
+      "status": "proposed",
+      "thread": {
+        "status": "none",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-10-19T06:27:30+00:00",
+          "event": "proposed by ideas routine"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-19-13",
+      "proposed_at": "2026-10-19",
+      "stream": "small",
+      "title": "Skorowidz 1934: польський довідник, де є села сучасної Західної України",
+      "summary": "Skorowidz miejscowości Rzeczypospolitej Polskiej (Перемишль, 1934, 2 томи) охоплює й території, що відійшли до УРСР. Для кожного пункту — тип, юрисдикції та парафії. Поради FamilySearch: як читати колонки й польський алфавіт.",
+      "why_now": "",
+      "sources": [
+        "https://www.familysearch.org/en/wiki/Ukraine_Gazetteers"
+      ],
+      "images": [
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/f/fd/Skorowidz_miejscowo%C5%9Bci_Rzeczypospolitej_Polskiej_1921_r._T2_Wojew%C3%B3dztwo_%C5%81%C3%B3dzkie%2C_Powiat_%C5%81%C3%B3d%C5%BA%2C_Gmina_Nakielnica_s.64.png",
+          "page": "https://commons.wikimedia.org/w/index.php?curid=138378028",
+          "credit": "Główny Urząd Statystyczny Rzeczypospolitej Polskiej / Wikimedia, CC0 1.0",
+          "license": "CC0 1.0"
+        }
+      ],
+      "status": "proposed",
+      "thread": {
+        "status": "none",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-10-19T06:27:30+00:00",
+          "event": "proposed by ideas routine"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-19-14",
+      "proposed_at": "2026-10-19",
+      "stream": "small",
+      "title": "Gesher Galicia Town Locator: знайти парафію села в Галичині",
+      "summary": "Попри «єврейську» назву, Town Locator від Gesher Galicia перелічує всі міста Галичини з римо- й греко-католицькими парафіями та округом. Це швидкий перший крок, якщо село перейменували чи воно в іншій громаді.",
+      "why_now": "",
+      "sources": [
+        "https://www.familysearch.org/en/wiki/Ukraine_Gazetteers"
+      ],
+      "images": [
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/3/37/01900_Karte_des_K%C3%B6nigreichs_Galizien_und_Lodomerien_von_Karol_Lange.jpg",
+          "page": "https://commons.wikimedia.org/w/index.php?curid=74773160",
+          "credit": "Encyklopedia Rolnicza / Wikimedia, CC BY-SA 4.0",
+          "license": "CC BY-SA 4.0"
+        },
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/d/d3/Empire_d%27Autriche_1914_Galicie.png",
+          "page": "https://commons.wikimedia.org/w/index.php?curid=67062423",
+          "credit": "Ludovic Lepeltier-Kutasi / Wikimedia, CC BY-SA 4.0",
+          "license": "CC BY-SA 4.0"
+        }
+      ],
+      "status": "proposed",
+      "thread": {
+        "status": "none",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-10-19T06:27:30+00:00",
+          "event": "proposed by ideas routine"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-19-15",
+      "proposed_at": "2026-10-19",
+      "stream": "small",
+      "title": "Австрія чи Росія? Слова з американських записів, що видають імперію вашого села",
+      "summary": "Перш ніж обирати архів, з'ясуйте імперію. «Galicia», «Austrian Poland» чи «near Lemberg» — Австро-Угорщина; «Volhynia», «Podolia», «Kherson», «near Kiev» — Російська. Корисна таблиця-підказка від FamilySearch.",
+      "why_now": "",
+      "sources": [
+        "https://www.familysearch.org/en/wiki/Ukraine_Gazetteers"
+      ],
+      "images": [
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/d/d3/Empire_d%27Autriche_1914_Galicie.png",
+          "page": "https://commons.wikimedia.org/w/index.php?curid=67062423",
+          "credit": "Ludovic Lepeltier-Kutasi / Wikimedia, CC BY-SA 4.0",
+          "license": "CC BY-SA 4.0"
+        }
+      ],
+      "status": "proposed",
+      "thread": {
+        "status": "none",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-10-19T06:27:30+00:00",
+          "event": "proposed by ideas routine"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-19-16",
+      "proposed_at": "2026-10-19",
+      "stream": "small",
+      "title": "Latin у метриці: чому Petrus у родовому відмінку — це все ще Петро",
+      "summary": "Католицькі метрики вели латиною, а слова змінюються за відмінками. FamilySearch радить шукати форму, що записана в словнику, і знати рід, число та скорочення. Одна порада — читати закінчення, не лише корінь.",
+      "why_now": "",
+      "sources": [
+        "https://www.familysearch.org/en/wiki/Latin_Genealogical_Word_List"
+      ],
+      "images": [
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/b/b2/Wojciech_Augusty%C5%84ski%2C_ksi%C4%99ga_chrzt%C3%B3w.jpg",
+          "page": "https://commons.wikimedia.org/w/index.php?curid=80397325",
+          "credit": "Augustyński / Wikimedia, CC BY-SA 4.0",
+          "license": "CC BY-SA 4.0"
+        }
+      ],
+      "status": "proposed",
+      "thread": {
+        "status": "none",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-10-19T06:27:30+00:00",
+          "event": "proposed by ideas routine"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-19-17",
+      "proposed_at": "2026-10-19",
+      "stream": "small",
+      "title": "Прізвище, ім'я й по батькові: як читати «-ович» і «-івна» в записах",
+      "summary": "FamilySearch пояснює східнослов'янську модель імені: ім'я, по батькові (-ович/-івна), прізвище. Типові закінчення прізвищ: -енко, -ук, -ський, -ич, -ів. Є й Słownik imion — таблиця відповідників імен різними мовами.",
+      "why_now": "",
+      "sources": [
+        "https://www.familysearch.org/en/wiki/Ukraine_Naming_Customs"
+      ],
+      "images": [],
+      "status": "proposed",
+      "thread": {
+        "status": "none",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-10-19T06:27:30+00:00",
+          "event": "proposed by ideas routine"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-19-18",
+      "proposed_at": "2026-10-19",
+      "stream": "small",
+      "title": "Книга Пам'яті України 1993–2006: де шукати воїна, що пропав у Другу світову",
+      "summary": "Серіал про демографічні втрати України у Другій світовій війні: томи по областях, джерела — військкомати, архіви Міноборони. У статті — список інтернет-ресурсів для пошуку полеглих і зниклих безвісти.",
+      "why_now": "",
+      "sources": [
+        "https://uk.wikipedia.org/wiki/Книга_Пам'яті_України"
+      ],
+      "images": [
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/9/9d/1970_-_Pustovity%2C_Ukraine._Visiting_WWII_memorial.png",
+          "page": "https://commons.wikimedia.org/w/index.php?curid=138529637",
+          "credit": "Palm Er001 / Wikimedia, CC BY-SA 4.0",
+          "license": "CC BY-SA 4.0"
+        }
+      ],
+      "status": "proposed",
+      "thread": {
+        "status": "none",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-10-19T06:27:30+00:00",
+          "event": "proposed by ideas routine"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-19-19",
+      "proposed_at": "2026-10-19",
+      "stream": "small",
+      "title": "«Реабілітовані історією»: національний банк даних про репресованих",
+      "summary": "Проєкт Інституту історії НАН та інших установ — книги по всіх областях, журнал «З архівів ВУЧК-ГПУ-НКВД-КГБ» і банк даних жертв політичних репресій. Корисно для родин із прогалиною після 1920-х.",
+      "why_now": "",
+      "sources": [
+        "http://www.reabit.org.ua/"
+      ],
+      "images": [
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/6/6f/Kyiv_Bykivnia_monument_3.JPG",
+          "page": "https://commons.wikimedia.org/w/index.php?curid=4344230",
+          "credit": "Levchuk Volodymyr (UAWeBeR) / Wikimedia, CC BY-SA 3.0",
+          "license": "CC BY-SA 3.0"
+        },
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/9/9e/Bykivnia_Graves1.JPG",
+          "page": "https://commons.wikimedia.org/w/index.php?curid=48810209",
+          "credit": "Аимаина хикари / Wikimedia, CC0 1.0",
+          "license": "CC0 1.0"
+        },
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/1/11/Kyiv_Bykivnia_map.JPG",
+          "page": "https://commons.wikimedia.org/w/index.php?curid=4344196",
+          "credit": "Levchuk Volodymyr (UAWeBeR) / Wikimedia, CC BY-SA 3.0",
+          "license": "CC BY-SA 3.0"
+        }
+      ],
+      "status": "proposed",
+      "thread": {
+        "status": "none",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-10-19T06:27:30+00:00",
+          "event": "proposed by ideas routine"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-19-20",
+      "proposed_at": "2026-10-19",
+      "stream": "small",
+      "title": "1 листопада 1918: Листопадовий чин і ЗУНР — що змінилося в документах Галичини",
+      "summary": "ЗУНР існувала з жовтня-листопада 1918 до 18 липня 1919; польсько-українська війна почалася 2 листопада 1918. Злука з УНР — 22 січня 1919. Після цього змінилася влада, записи й юрисдикції — це видно в актах і метриках цього періоду.",
+      "why_now": "1 листопада — річниця Листопадового чину.",
+      "sources": [
+        "https://uk.wikipedia.org/wiki/Західноукраїнська_Народна_Республіка"
+      ],
+      "images": [
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/c/c6/West-Ukraine_1918.jpg",
+          "page": "https://commons.wikimedia.org/w/index.php?curid=18910939",
+          "credit": "Spiridon Ion Cepleanu / Wikimedia, CC BY-SA 3.0",
+          "license": "CC BY-SA 3.0"
+        },
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/b/bc/Coat_of_Arms_of_the_West_Ukrainian_People%27s_Republic_%281918%E2%80%941919%29.png",
+          "page": "https://commons.wikimedia.org/w/index.php?curid=144721752",
+          "credit": "User:NorthTension / Wikimedia, CC BY 4.0",
+          "license": "CC BY 4.0"
+        }
+      ],
+      "status": "proposed",
+      "thread": {
+        "status": "none",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-10-19T06:27:30+00:00",
+          "event": "proposed by ideas routine"
+        }
+      ]
     }
   ]
 }
