@@ -10435,8 +10435,21 @@
         {
           "at": "2026-10-20T11:27:16+00:00",
           "event": "thread text approved in telegram"
+        },
+        {
+          "at": "2026-10-20T11:27:56+00:00",
+          "event": "photo search requested in telegram (more)"
         }
-      ]
+      ],
+      "images_excluded": [
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/57/Soviet_passport_1953_01.jpg/1280px-Soviet_passport_1953_01.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/5/5a/Soviet_passport_1957.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/9/9b/Ost-Balizka-02.jpg"
+      ],
+      "photo_request": true,
+      "photo_error": "",
+      "photo_keywords": "",
+      "photo_requested_at": "2026-10-20T11:27:56+00:00"
     }
   ]
 }
