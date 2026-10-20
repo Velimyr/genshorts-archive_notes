@@ -10343,6 +10343,37 @@
           "event": "proposed by ideas routine"
         }
       ]
+    },
+    {
+      "id": "2026-10-20-a01",
+      "proposed_at": "2026-10-20",
+      "stream": "big",
+      "origin": "author",
+      "title": "Чому в покоління 1920-1940-х часто дата народження в документах не співпадає з …",
+      "summary": "Чому в покоління 1920-1940-х часто дата народження в документах не співпадає з реальною",
+      "why_now": "",
+      "sources": [],
+      "images": [],
+      "status": "approved",
+      "thread": {
+        "status": "requested",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-10-20T08:27:11+00:00",
+          "event": "author topic from telegram; thread requested"
+        }
+      ]
     }
   ]
 }
