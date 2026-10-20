@@ -9972,7 +9972,7 @@
           "license": "CC BY-SA 4.0"
         }
       ],
-      "status": "proposed",
+      "status": "approved",
       "thread": {
         "status": "none",
         "file": null
@@ -9990,6 +9990,10 @@
         {
           "at": "2026-10-20T06:08:12+00:00",
           "event": "proposed by ideas routine"
+        },
+        {
+          "at": "2026-10-20T07:20:22+00:00",
+          "event": "idea approved in telegram"
         }
       ]
     },
