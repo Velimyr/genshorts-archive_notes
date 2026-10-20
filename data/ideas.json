@@ -1897,9 +1897,10 @@
       ],
       "status": "approved",
       "thread": {
-        "status": "scheduled",
+        "status": "posted",
         "file": "data/texts/2026-09-30-08/thread.md",
-        "approved_sha": "e2704e8ee9bf359d"
+        "approved_sha": "e2704e8ee9bf359d",
+        "permalink": "https://www.threads.com/@velimyr/post/DetOJW-kZuQ"
       },
       "script": {
         "status": "none",
@@ -1962,6 +1963,10 @@
         {
           "at": "2026-10-12T10:03:01+00:00",
           "event": "thread auto-scheduled: 2026-10-20T09:41:00+03:00"
+        },
+        {
+          "at": "2026-10-20T06:46:49+00:00",
+          "event": "thread posted to Threads (3 posts)"
         }
       ],
       "photo_request": false,

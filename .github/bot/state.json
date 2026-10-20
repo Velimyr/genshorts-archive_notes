@@ -3204,6 +3204,9 @@
     },
     "1131": {
       "kind": "nav"
+    },
+    "1132": {
+      "kind": "nav"
     }
   },
   "approved_threads": {
@@ -3687,8 +3690,15 @@
         "credit": "Sergey Lvovich Levitsky / Wikimedia Commons, Public domain"
       },
       "approved_at": "2026-10-12T07:13:58+00:00",
-      "posted": false,
-      "publish_at": "2026-10-20T09:41:00+03:00"
+      "posted": true,
+      "publish_at": "2026-10-20T09:41:00+03:00",
+      "posted_ids": [
+        "18118636919071084",
+        "18001293383810603",
+        "18023739050714059"
+      ],
+      "posted_at": "2026-10-20T06:46:49+00:00",
+      "permalink": "https://www.threads.com/@velimyr/post/DetOJW-kZuQ"
     },
     "2026-10-11-04": {
       "sha": "b14659d979ccd63d",
