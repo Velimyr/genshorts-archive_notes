@@ -9900,6 +9900,424 @@
           "event": "idea rejected in telegram"
         }
       ]
+    },
+    {
+      "id": "2026-10-20-01",
+      "proposed_at": "2026-10-20",
+      "stream": "fun",
+      "rubric": "customs",
+      "title": "«Удар землі», «грудна жаба», «родимець»: від чого помирали ваші предки",
+      "summary": "Метрика не знає слова «діагноз»: причину смерті записував священник зі слів родини. Тому предок помирає від «удару землі» (епілепсія), «антонова вогню» (гангрена) чи «грудної жаби» (стенокардія). Розбираємо словничок із жартом, але без глузування з покійних, — і чому до цих «діагнозів» варто ставитись умовно.",
+      "why_now": "",
+      "sources": [
+        "https://teletype.in/@ukr_free_genealogy/Khvoroby",
+        "https://uk.wikipedia.org/wiki/Метрична_книга"
+      ],
+      "images": [
+        {
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c6/%D0%A6%D0%94%D0%86%D0%90%D0%9A_127-1014-54._1769-1796._%D0%9C%D0%B5%D1%82%D1%80%D0%B8%D1%87%D0%BD%D0%B0_%D0%BA%D0%BD%D0%B8%D0%B3%D0%B0_%D1%86%D0%B5%D1%80%D0%BA%D0%B2%D0%B8_%D1%81%D0%B2._%D0%9C%D0%B8%D0%BA%D0%BE%D0%BB%D0%B0%D1%8F_%D1%81._%D0%92%D0%BE%D1%80%D1%81%D1%96%D0%B2%D0%BA%D0%B0_%D0%A0%D0%B0%D0%B4%D0%BE%D0%BC%D0%B8%D1%88%D0%BB%D1%8C%D1%81%D1%8C%D0%BA%D0%BE%D0%B3%D0%BE_%D0%BF%D0%BE%D0%B2.pdf/page1-1280px-%D0%A6%D0%94%D0%86%D0%90%D0%9A_127-1014-54._1769-1796._%D0%9C%D0%B5%D1%82%D1%80%D0%B8%D1%87%D0%BD%D0%B0_%D0%BA%D0%BD%D0%B8%D0%B3%D0%B0_%D1%86%D0%B5%D1%80%D0%BA%D0%B2%D0%B8_%D1%81%D0%B2._%D0%9C%D0%B8%D0%BA%D0%BE%D0%BB%D0%B0%D1%8F_%D1%81._%D0%92%D0%BE%D1%80%D1%81%D1%96%D0%B2%D0%BA%D0%B0_%D0%A0%D0%B0%D0%B4%D0%BE%D0%BC%D0%B8%D1%88%D0%BB%D1%8C%D1%81%D1%8C%D0%BA%D0%BE%D0%B3%D0%BE_%D0%BF%D0%BE%D0%B2.pdf.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:%D0%A6%D0%94%D0%86%D0%90%D0%9A_127-1014-54._1769-1796._%D0%9C%D0%B5%D1%82%D1%80%D0%B8%D1%87%D0%BD%D0%B0_%D0%BA%D0%BD%D0%B8%D0%B3%D0%B0_%D1%86%D0%B5%D1%80%D0%BA%D0%B2%D0%B8_%D1%81%D0%B2._%D0%9C%D0%B8%D0%BA%D0%BE%D0%BB%D0%B0%D1%8F_%D1%81._%D0%92%D0%BE%D1%80%D1%81%D1%96%D0%B2%D0%BA%D0%B0_%D0%A0%D0%B0%D0%B4%D0%BE%D0%BC%D0%B8%D1%88%D0%BB%D1%8C%D1%81%D1%8C%D0%BA%D0%BE%D0%B3%D0%BE_%D0%BF%D0%BE%D0%B2.pdf",
+          "credit": "ЦДІАК / Wikimedia Commons, Public domain",
+          "license": "Public domain"
+        },
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/3/3e/%D0%9C%D0%B5%D1%82%D1%80%D0%B8%D1%87%D0%BD%D0%B0_%D0%BA%D0%BD%D0%B8%D0%B3%D0%B0.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:%D0%9C%D0%B5%D1%82%D1%80%D0%B8%D1%87%D0%BD%D0%B0_%D0%BA%D0%BD%D0%B8%D0%B3%D0%B0.jpg",
+          "credit": "Vukic88 / Wikimedia Commons, CC BY-SA 4.0",
+          "license": "CC BY-SA 4.0"
+        }
+      ],
+      "status": "proposed",
+      "thread": {
+        "status": "none",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-10-20T06:08:12+00:00",
+          "event": "proposed by ideas routine"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-20-02",
+      "proposed_at": "2026-10-20",
+      "stream": "fun",
+      "rubric": "names",
+      "title": "Литвин, Татарин, Турчин: чому прізвище не дорівнює національності",
+      "summary": "Суфікс -ин у прізвищах Русин, Литвин, Татарин, Волошин, Угрин, Турчин, Грузин вказує на народ чи місцевість, звідки прийшов предок чи його прапредок, а не на його власну етнічність. Тред із самоіронією для тих, хто після побачених «татарських» коренів уже збирається вимагати кримськотатарське громадянство.",
+      "why_now": "",
+      "sources": [
+        "https://uk.wikipedia.org/wiki/Українські_прізвища"
+      ],
+      "images": [
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/3/3e/%D0%9C%D0%B5%D1%82%D1%80%D0%B8%D1%87%D0%BD%D0%B0_%D0%BA%D0%BD%D0%B8%D0%B3%D0%B0.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:%D0%9C%D0%B5%D1%82%D1%80%D0%B8%D1%87%D0%BD%D0%B0_%D0%BA%D0%BD%D0%B8%D0%B3%D0%B0.jpg",
+          "credit": "Vukic88 / Wikimedia Commons, CC BY-SA 4.0",
+          "license": "CC BY-SA 4.0"
+        }
+      ],
+      "status": "proposed",
+      "thread": {
+        "status": "none",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-10-20T06:08:12+00:00",
+          "event": "proposed by ideas routine"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-20-03",
+      "proposed_at": "2026-10-20",
+      "stream": "fun",
+      "rubric": "document",
+      "title": "Найстаріша метрика України — книга шлюбів, а не народжень",
+      "summary": "Найдавніша відома в Україні метрична книга — шлюбна книга латинського кафедрального собору у Львові за 1554–1591 роки. Тобто першими в чергу до реєстратора стали наречені, а не немовлята. Жартуємо про те, що ваші предки ще в XVI ст. мусили вчасно оформити документи, та про те, звідки взялися метрики.",
+      "why_now": "",
+      "sources": [
+        "https://uk.wikipedia.org/wiki/Метричні_книги"
+      ],
+      "images": [
+        {
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3a/%D0%9C%D0%B5%D1%82%D1%80%D0%B8%D0%BA%D0%B0_%D0%B7_%D0%BA%D0%BE%D1%81%D1%82%D0%B5%D0%BB%D1%83.jpg/1280px-%D0%9C%D0%B5%D1%82%D1%80%D0%B8%D0%BA%D0%B0_%D0%B7_%D0%BA%D0%BE%D1%81%D1%82%D0%B5%D0%BB%D1%83.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:%D0%9C%D0%B5%D1%82%D1%80%D0%B8%D0%BA%D0%B0_%D0%B7_%D0%BA%D0%BE%D1%81%D1%82%D0%B5%D0%BB%D1%83.jpg",
+          "credit": "ЦДІАК / Wikimedia Commons, CC BY-SA 4.0",
+          "license": "CC BY-SA 4.0"
+        },
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/3/3e/%D0%9C%D0%B5%D1%82%D1%80%D0%B8%D1%87%D0%BD%D0%B0_%D0%BA%D0%BD%D0%B8%D0%B3%D0%B0.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:%D0%9C%D0%B5%D1%82%D1%80%D0%B8%D1%87%D0%BD%D0%B0_%D0%BA%D0%BD%D0%B8%D0%B3%D0%B0.jpg",
+          "credit": "Vukic88 / Wikimedia Commons, CC BY-SA 4.0",
+          "license": "CC BY-SA 4.0"
+        }
+      ],
+      "status": "proposed",
+      "thread": {
+        "status": "none",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-10-20T06:08:12+00:00",
+          "event": "proposed by ideas routine"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-20-04",
+      "proposed_at": "2026-10-20",
+      "stream": "fun",
+      "rubric": "document",
+      "title": "Номер хати в метриці: адреса предка, на яку не прийде кур'єр",
+      "summary": "У греко-католицьких метриках Галичини запис про народження містив номер будинку, законність народження, батьків і хрещених. Для генеалога це «поштова адреса» родини: за номером хати й селом можна простежити, хто жив у тому самому дворі через покоління. Тред про те, як знайти хату, якої давно немає.",
+      "why_now": "",
+      "sources": [
+        "https://uk.wikipedia.org/wiki/Метричні_книги"
+      ],
+      "images": [
+        {
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bf/%D0%9C%D0%B5%D1%82%D1%80%D0%B8%D1%87%D0%BD%D0%B0_%D0%BA%D0%BD%D0%B8%D0%B3%D0%B0_%D1%81._%D0%9C%D0%BE%D1%80%D0%B8%D0%BD%D0%B5%D1%86%D1%8C_%D0%97%D0%B2%D0%B5%D0%BD%D0%B8%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D1%81%D1%8C%D0%BA%D0%BE%D0%B3%D0%BE_%D0%BF%D0%BE%D0%B2%D1%96%D1%82%D1%83.pdf/page1-500px-%D0%9C%D0%B5%D1%82%D1%80%D0%B8%D1%87%D0%BD%D0%B0_%D0%BA%D0%BD%D0%B8%D0%B3%D0%B0_%D1%81._%D0%9C%D0%BE%D1%80%D0%B8%D0%BD%D0%B5%D1%86%D1%8C_%D0%97%D0%B2%D0%B5%D0%BD%D0%B8%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D1%81%D1%8C%D0%BA%D0%BE%D0%B3%D0%BE_%D0%BF%D0%BE%D0%B2%D1%96%D1%82%D1%83.pdf.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:%D0%9C%D0%B5%D1%82%D1%80%D0%B8%D1%87%D0%BD%D0%B0_%D0%BA%D0%BD%D0%B8%D0%B3%D0%B0_%D1%81._%D0%9C%D0%BE%D1%80%D0%B8%D0%BD%D0%B5%D1%86%D1%8C_%D0%97%D0%B2%D0%B5%D0%BD%D0%B8%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D1%81%D1%8C%D0%BA%D0%BE%D0%B3%D0%BE_%D0%BF%D0%BE%D0%B2%D1%96%D1%82%D1%83.pdf",
+          "credit": "Київська духовна консисторія / Wikimedia Commons, Public domain",
+          "license": "Public domain"
+        },
+        {
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3a/%D0%9C%D0%B5%D1%82%D1%80%D0%B8%D0%BA%D0%B0_%D0%B7_%D0%BA%D0%BE%D1%81%D1%82%D0%B5%D0%BB%D1%83.jpg/1280px-%D0%9C%D0%B5%D1%82%D1%80%D0%B8%D0%BA%D0%B0_%D0%B7_%D0%BA%D0%BE%D1%81%D1%82%D0%B5%D0%BB%D1%83.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:%D0%9C%D0%B5%D1%82%D1%80%D0%B8%D0%BA%D0%B0_%D0%B7_%D0%BA%D0%BE%D1%81%D1%82%D0%B5%D0%BB%D1%83.jpg",
+          "credit": "ЦДІАК / Wikimedia Commons, CC BY-SA 4.0",
+          "license": "CC BY-SA 4.0"
+        }
+      ],
+      "status": "proposed",
+      "thread": {
+        "status": "none",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-10-20T06:08:12+00:00",
+          "event": "proposed by ideas routine"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-20-05",
+      "proposed_at": "2026-10-20",
+      "stream": "fun",
+      "rubric": "maps",
+      "title": "Єлисаветград, Зінов'євськ, Кірово, Кіровоград: одне місто, чотири назви в метриках",
+      "summary": "Місто з 1784 до 2016 року мало п'ять назв: Єлисаветград, Зінов'євськ (1924–1934), Кірово (1934–1939), Кіровоград (1939–2016), Кропивницький. Додайте розмовні Лисаветград і Лизавет та належність то до Катеринославського намісництва, то до Херсонської губернії. Іронічний тред про предка, який «народився в одному місті, а помер у чотирьох».",
+      "why_now": "",
+      "sources": [
+        "https://uk.wikipedia.org/wiki/Кропивницький"
+      ],
+      "images": [
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/a/a3/Central_Square_of_Kropyvnytskyi_%2C_2023.png",
+          "page": "https://commons.wikimedia.org/wiki/File:Central_Square_of_Kropyvnytskyi_,_2023.png",
+          "credit": "Valerygtyuhgujj / Wikimedia Commons, CC BY-SA 4.0",
+          "license": "CC BY-SA 4.0"
+        }
+      ],
+      "status": "proposed",
+      "thread": {
+        "status": "none",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-10-20T06:08:12+00:00",
+          "event": "proposed by ideas routine"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-20-06",
+      "proposed_at": "2026-10-20",
+      "stream": "fun",
+      "rubric": "language",
+      "title": "«Помер від живота»? У старих текстах «живіт» — це життя",
+      "summary": "Застаріле значення слова «живіт» — «життя» (а в давніх текстах також майно й худоба). Тому «не жалів живота» не про дієту, а в документі XVII–XVIII ст. «живіт» може означати все нажите. Тред про фальшиві друзі в архівних текстах — і про те, як легко неправильно прочитати прадіда.",
+      "why_now": "",
+      "sources": [
+        "https://uk.wiktionary.org/wiki/живіт"
+      ],
+      "images": [
+        {
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bf/%D0%9C%D0%B5%D1%82%D1%80%D0%B8%D1%87%D0%BD%D0%B0_%D0%BA%D0%BD%D0%B8%D0%B3%D0%B0_%D1%81._%D0%9C%D0%BE%D1%80%D0%B8%D0%BD%D0%B5%D1%86%D1%8C_%D0%97%D0%B2%D0%B5%D0%BD%D0%B8%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D1%81%D1%8C%D0%BA%D0%BE%D0%B3%D0%BE_%D0%BF%D0%BE%D0%B2%D1%96%D1%82%D1%83.pdf/page1-500px-%D0%9C%D0%B5%D1%82%D1%80%D0%B8%D1%87%D0%BD%D0%B0_%D0%BA%D0%BD%D0%B8%D0%B3%D0%B0_%D1%81._%D0%9C%D0%BE%D1%80%D0%B8%D0%BD%D0%B5%D1%86%D1%8C_%D0%97%D0%B2%D0%B5%D0%BD%D0%B8%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D1%81%D1%8C%D0%BA%D0%BE%D0%B3%D0%BE_%D0%BF%D0%BE%D0%B2%D1%96%D1%82%D1%83.pdf.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:%D0%9C%D0%B5%D1%82%D1%80%D0%B8%D1%87%D0%BD%D0%B0_%D0%BA%D0%BD%D0%B8%D0%B3%D0%B0_%D1%81._%D0%9C%D0%BE%D1%80%D0%B8%D0%BD%D0%B5%D1%86%D1%8C_%D0%97%D0%B2%D0%B5%D0%BD%D0%B8%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D1%81%D1%8C%D0%BA%D0%BE%D0%B3%D0%BE_%D0%BF%D0%BE%D0%B2%D1%96%D1%82%D1%83.pdf",
+          "credit": "Київська духовна консисторія / Wikimedia Commons, Public domain",
+          "license": "Public domain"
+        }
+      ],
+      "status": "proposed",
+      "thread": {
+        "status": "none",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-10-20T06:08:12+00:00",
+          "event": "proposed by ideas routine"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-20-07",
+      "proposed_at": "2026-10-20",
+      "stream": "fun",
+      "rubric": "myths",
+      "title": "Сагайдак — не татарин: чому тюркський корінь не робить вас ордою",
+      "summary": "Прізвища Сагайдак, Сагайдачний, Сагайдаченко пов'язують із козацьким луком-сагайдаком, тобто зі зброєю, а не з національністю. Тюркське слово в прізвищі — не доказ тюркського роду. Жартуємо про любителів «татарських коренів» після одного слова в дереві.",
+      "why_now": "",
+      "sources": [
+        "https://uk.wikipedia.org/wiki/Прізвище"
+      ],
+      "images": [],
+      "status": "proposed",
+      "thread": {
+        "status": "none",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-10-20T06:08:12+00:00",
+          "event": "proposed by ideas routine"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-20-08",
+      "proposed_at": "2026-10-20",
+      "stream": "fun",
+      "rubric": "people",
+      "title": "Дяк — не священник: хто насправді писав вашу метрику",
+      "summary": "Дяк у церковному значенні — помічник священника, що читав і співав на службі, а в XVI–XVII ст. дяки-вчителі часто мандрували від села до села. У Росії до відокремлення церкви від держави дяки нерідко вели метричні книги. Тред про те, чому почерк у вашій метриці — це, ймовірно, не парох, а втомлений дяк.",
+      "why_now": "",
+      "sources": [
+        "https://uk.wikipedia.org/wiki/Дяк"
+      ],
+      "images": [
+        {
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c6/%D0%A6%D0%94%D0%86%D0%90%D0%9A_127-1014-54._1769-1796._%D0%9C%D0%B5%D1%82%D1%80%D0%B8%D1%87%D0%BD%D0%B0_%D0%BA%D0%BD%D0%B8%D0%B3%D0%B0_%D1%86%D0%B5%D1%80%D0%BA%D0%B2%D0%B8_%D1%81%D0%B2._%D0%9C%D0%B8%D0%BA%D0%BE%D0%BB%D0%B0%D1%8F_%D1%81._%D0%92%D0%BE%D1%80%D1%81%D1%96%D0%B2%D0%BA%D0%B0_%D0%A0%D0%B0%D0%B4%D0%BE%D0%BC%D0%B8%D1%88%D0%BB%D1%8C%D1%81%D1%8C%D0%BA%D0%BE%D0%B3%D0%BE_%D0%BF%D0%BE%D0%B2.pdf/page1-1280px-%D0%A6%D0%94%D0%86%D0%90%D0%9A_127-1014-54._1769-1796._%D0%9C%D0%B5%D1%82%D1%80%D0%B8%D1%87%D0%BD%D0%B0_%D0%BA%D0%BD%D0%B8%D0%B3%D0%B0_%D1%86%D0%B5%D1%80%D0%BA%D0%B2%D0%B8_%D1%81%D0%B2._%D0%9C%D0%B8%D0%BA%D0%BE%D0%BB%D0%B0%D1%8F_%D1%81._%D0%92%D0%BE%D1%80%D1%81%D1%96%D0%B2%D0%BA%D0%B0_%D0%A0%D0%B0%D0%B4%D0%BE%D0%BC%D0%B8%D1%88%D0%BB%D1%8C%D1%81%D1%8C%D0%BA%D0%BE%D0%B3%D0%BE_%D0%BF%D0%BE%D0%B2.pdf.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:%D0%A6%D0%94%D0%86%D0%90%D0%9A_127-1014-54._1769-1796._%D0%9C%D0%B5%D1%82%D1%80%D0%B8%D1%87%D0%BD%D0%B0_%D0%BA%D0%BD%D0%B8%D0%B3%D0%B0_%D1%86%D0%B5%D1%80%D0%BA%D0%B2%D0%B8_%D1%81%D0%B2._%D0%9C%D0%B8%D0%BA%D0%BE%D0%BB%D0%B0%D1%8F_%D1%81._%D0%92%D0%BE%D1%80%D1%81%D1%96%D0%B2%D0%BA%D0%B0_%D0%A0%D0%B0%D0%B4%D0%BE%D0%BC%D0%B8%D1%88%D0%BB%D1%8C%D1%81%D1%8C%D0%BA%D0%BE%D0%B3%D0%BE_%D0%BF%D0%BE%D0%B2.pdf",
+          "credit": "ЦДІАК / Wikimedia Commons, Public domain",
+          "license": "Public domain"
+        }
+      ],
+      "status": "proposed",
+      "thread": {
+        "status": "none",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-10-20T06:08:12+00:00",
+          "event": "proposed by ideas routine"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-20-09",
+      "proposed_at": "2026-10-20",
+      "stream": "fun",
+      "rubric": "ancestors",
+      "title": "«Бежал», «в солдатах», «умер»: чому прадід зник між ревізіями",
+      "summary": "У ревізьких казках відсутність людини фіксували з причиною: помер, утік, переселився, у солдатах. Зміни вносили лише до наступної ревізії, а їх було десять — між 1719 і 1858 роками. Жартівливий розбір того, куди ваш предок міг подітися, і де шукати його наступний слід.",
+      "why_now": "",
+      "sources": [
+        "https://uk.wikipedia.org/wiki/Ревізькі_казки"
+      ],
+      "images": [
+        {
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c6/%D0%A6%D0%94%D0%86%D0%90%D0%9A_127-1014-54._1769-1796._%D0%9C%D0%B5%D1%82%D1%80%D0%B8%D1%87%D0%BD%D0%B0_%D0%BA%D0%BD%D0%B8%D0%B3%D0%B0_%D1%86%D0%B5%D1%80%D0%BA%D0%B2%D0%B8_%D1%81%D0%B2._%D0%9C%D0%B8%D0%BA%D0%BE%D0%BB%D0%B0%D1%8F_%D1%81._%D0%92%D0%BE%D1%80%D1%81%D1%96%D0%B2%D0%BA%D0%B0_%D0%A0%D0%B0%D0%B4%D0%BE%D0%BC%D0%B8%D1%88%D0%BB%D1%8C%D1%81%D1%8C%D0%BA%D0%BE%D0%B3%D0%BE_%D0%BF%D0%BE%D0%B2.pdf/page1-1280px-%D0%A6%D0%94%D0%86%D0%90%D0%9A_127-1014-54._1769-1796._%D0%9C%D0%B5%D1%82%D1%80%D0%B8%D1%87%D0%BD%D0%B0_%D0%BA%D0%BD%D0%B8%D0%B3%D0%B0_%D1%86%D0%B5%D1%80%D0%BA%D0%B2%D0%B8_%D1%81%D0%B2._%D0%9C%D0%B8%D0%BA%D0%BE%D0%BB%D0%B0%D1%8F_%D1%81._%D0%92%D0%BE%D1%80%D1%81%D1%96%D0%B2%D0%BA%D0%B0_%D0%A0%D0%B0%D0%B4%D0%BE%D0%BC%D0%B8%D1%88%D0%BB%D1%8C%D1%81%D1%8C%D0%BA%D0%BE%D0%B3%D0%BE_%D0%BF%D0%BE%D0%B2.pdf.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:%D0%A6%D0%94%D0%86%D0%90%D0%9A_127-1014-54._1769-1796._%D0%9C%D0%B5%D1%82%D1%80%D0%B8%D1%87%D0%BD%D0%B0_%D0%BA%D0%BD%D0%B8%D0%B3%D0%B0_%D1%86%D0%B5%D1%80%D0%BA%D0%B2%D0%B8_%D1%81%D0%B2._%D0%9C%D0%B8%D0%BA%D0%BE%D0%BB%D0%B0%D1%8F_%D1%81._%D0%92%D0%BE%D1%80%D1%81%D1%96%D0%B2%D0%BA%D0%B0_%D0%A0%D0%B0%D0%B4%D0%BE%D0%BC%D0%B8%D1%88%D0%BB%D1%8C%D1%81%D1%8C%D0%BA%D0%BE%D0%B3%D0%BE_%D0%BF%D0%BE%D0%B2.pdf",
+          "credit": "ЦДІАК / Wikimedia Commons, Public domain",
+          "license": "Public domain"
+        }
+      ],
+      "status": "proposed",
+      "thread": {
+        "status": "none",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-10-20T06:08:12+00:00",
+          "event": "proposed by ideas routine"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-20-10",
+      "proposed_at": "2026-10-20",
+      "stream": "fun",
+      "rubric": "bureaucracy",
+      "title": "Метрика теж закривала рік підсумками: бухгалтерія душ",
+      "summary": "Метричні книги Російської імперії вели щороку, у трьох частинах (народження, шлюби, смерті), і закінчували річним підсумком. Тобто священник був ще й бухгалтером душ — а книг велося два примірники. Тред про те, як звести дебет із кредитом у вашому дереві так само акуратно.",
+      "why_now": "",
+      "sources": [
+        "https://uk.wikipedia.org/wiki/Метричні_книги"
+      ],
+      "images": [
+        {
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bf/%D0%9C%D0%B5%D1%82%D1%80%D0%B8%D1%87%D0%BD%D0%B0_%D0%BA%D0%BD%D0%B8%D0%B3%D0%B0_%D1%81._%D0%9C%D0%BE%D1%80%D0%B8%D0%BD%D0%B5%D1%86%D1%8C_%D0%97%D0%B2%D0%B5%D0%BD%D0%B8%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D1%81%D1%8C%D0%BA%D0%BE%D0%B3%D0%BE_%D0%BF%D0%BE%D0%B2%D1%96%D1%82%D1%83.pdf/page1-500px-%D0%9C%D0%B5%D1%82%D1%80%D0%B8%D1%87%D0%BD%D0%B0_%D0%BA%D0%BD%D0%B8%D0%B3%D0%B0_%D1%81._%D0%9C%D0%BE%D1%80%D0%B8%D0%BD%D0%B5%D1%86%D1%8C_%D0%97%D0%B2%D0%B5%D0%BD%D0%B8%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D1%81%D1%8C%D0%BA%D0%BE%D0%B3%D0%BE_%D0%BF%D0%BE%D0%B2%D1%96%D1%82%D1%83.pdf.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:%D0%9C%D0%B5%D1%82%D1%80%D0%B8%D1%87%D0%BD%D0%B0_%D0%BA%D0%BD%D0%B8%D0%B3%D0%B0_%D1%81._%D0%9C%D0%BE%D1%80%D0%B8%D0%BD%D0%B5%D1%86%D1%8C_%D0%97%D0%B2%D0%B5%D0%BD%D0%B8%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D1%81%D1%8C%D0%BA%D0%BE%D0%B3%D0%BE_%D0%BF%D0%BE%D0%B2%D1%96%D1%82%D1%83.pdf",
+          "credit": "Київська духовна консисторія / Wikimedia Commons, Public domain",
+          "license": "Public domain"
+        },
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/d/d1/%D0%97%D0%B0%D0%BF%D0%B8%D1%81_%D0%BF%D1%80%D0%BE_%D0%B7%D0%B0%D1%82%D0%B5%D0%BC%D0%BD%D0%B5%D0%BD%D0%BD%D1%8F_%D1%81%D0%BE%D0%BD%D1%86%D1%8F._%D0%9C%D0%B5%D1%82%D1%80%D0%B8%D1%87%D0%BD%D0%B0_%D0%BA%D0%BD%D0%B8%D0%B3%D0%B0%2C_%D0%A2%D1%83%D1%80%D1%96%D1%8F%2C_1793_%D1%80%D1%96%D0%BA.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:%D0%97%D0%B0%D0%BF%D0%B8%D1%81_%D0%BF%D1%80%D0%BE_%D0%B7%D0%B0%D1%82%D0%B5%D0%BC%D0%BD%D0%B5%D0%BD%D0%BD%D1%8F_%D1%81%D0%BE%D0%BD%D1%86%D1%8F._%D0%9C%D0%B5%D1%82%D1%80%D0%B8%D1%87%D0%BD%D0%B0_%D0%BA%D0%BD%D0%B8%D0%B3%D0%B0,_%D0%A2%D1%83%D1%80%D1%96%D1%8F,_1793_%D1%80%D1%96%D0%BA.jpg",
+          "credit": "Ієрей Іоанн Кохановський / Wikimedia Commons, Public domain",
+          "license": "Public domain"
+        }
+      ],
+      "status": "proposed",
+      "thread": {
+        "status": "none",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-10-20T06:08:12+00:00",
+          "event": "proposed by ideas routine"
+        }
+      ]
     }
   ]
 }
