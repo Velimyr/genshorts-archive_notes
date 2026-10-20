@@ -10383,7 +10383,7 @@
       ],
       "status": "approved",
       "thread": {
-        "status": "ready",
+        "status": "revise",
         "file": "data/texts/2026-10-20-a01/thread.md"
       },
       "script": {
@@ -10394,7 +10394,13 @@
         "status": "none",
         "telegram_message_id": null
       },
-      "revisions": [],
+      "revisions": [
+        {
+          "kind": "thread",
+          "text": "Прибери згадку про досліжницю аліну Іваненко",
+          "at": "2026-10-20T10:38:55+00:00"
+        }
+      ],
       "history": [
         {
           "at": "2026-10-20T08:27:11+00:00",
@@ -10403,6 +10409,10 @@
         {
           "at": "2026-10-20T08:34:50+00:00",
           "event": "thread ready"
+        },
+        {
+          "at": "2026-10-20T10:38:55+00:00",
+          "event": "thread revision requested"
         }
       ]
     }
