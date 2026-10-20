@@ -10363,22 +10363,22 @@
       ],
       "images": [
         {
-          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/57/Soviet_passport_1953_01.jpg/1280px-Soviet_passport_1953_01.jpg",
-          "page": "https://commons.wikimedia.org/wiki/File:Soviet_passport_1953_01.jpg",
-          "credit": "Rakoon / Wikimedia Commons, Public domain",
-          "license": "Public domain"
+          "url": "https://upload.wikimedia.org/wikipedia/commons/1/14/Birth_Certificate_of_Zhukovskaya_Lyubov_in_Odessa_Soviet_Union.jpg",
+          "page": "https://commons.wikimedia.org/w/index.php?curid=60586893",
+          "credit": "Грищук ЮН / Wikimedia Commons, CC BY-SA 3.0",
+          "license": "CC BY-SA 3.0"
         },
         {
-          "url": "https://upload.wikimedia.org/wikipedia/commons/5/5a/Soviet_passport_1957.jpg",
-          "page": "https://commons.wikimedia.org/wiki/File:Soviet_passport_1957.jpg",
-          "credit": "Government of the Soviet Union / Wikimedia Commons, Public domain",
-          "license": "Public domain"
+          "url": "https://upload.wikimedia.org/wikipedia/commons/f/fd/Bundesarchiv_Bild_183-J10854%2C_Ausl%C3%A4ndische_Arbeitskr%C3%A4fte%2C_Bekanntmachung_Kiew.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Bundesarchiv_Bild_183-J10854,_Ausl%C3%A4ndische_Arbeitskr%C3%A4fte,_Bekanntmachung_Kiew.jpg",
+          "credit": "Bundesarchiv, Bild 183-J10854 / Wikimedia Commons, CC BY-SA 3.0 de",
+          "license": "CC BY-SA 3.0 de"
         },
         {
-          "url": "https://upload.wikimedia.org/wikipedia/commons/9/9b/Ost-Balizka-02.jpg",
-          "page": "https://commons.wikimedia.org/wiki/File:Ost-Balizka-02.jpg",
-          "credit": "Kirov k / Wikimedia Commons, CC BY-SA 4.0",
-          "license": "CC BY-SA 4.0"
+          "url": "https://upload.wikimedia.org/wikipedia/commons/2/2d/Soviet_passport_issued_at_1965.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Soviet_passport_issued_at_1965.jpg",
+          "credit": "МВД СССР / Wikimedia Commons, Public domain",
+          "license": "Public domain"
         }
       ],
       "status": "approved",
@@ -10439,6 +10439,10 @@
         {
           "at": "2026-10-20T11:27:56+00:00",
           "event": "photo search requested in telegram (more)"
+        },
+        {
+          "at": "2026-10-20T11:33:36+00:00",
+          "event": "photos found"
         }
       ],
       "images_excluded": [
@@ -10446,7 +10450,7 @@
         "https://upload.wikimedia.org/wikipedia/commons/5/5a/Soviet_passport_1957.jpg",
         "https://upload.wikimedia.org/wikipedia/commons/9/9b/Ost-Balizka-02.jpg"
       ],
-      "photo_request": true,
+      "photo_request": false,
       "photo_error": "",
       "photo_keywords": "",
       "photo_requested_at": "2026-10-20T11:27:56+00:00"
