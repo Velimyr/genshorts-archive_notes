@@ -3394,6 +3394,9 @@
     },
     "1196": {
       "kind": "menu"
+    },
+    "1198": {
+      "kind": "nav"
     }
   },
   "approved_threads": {
@@ -3921,8 +3924,17 @@
         "credit": "Осип Курилас / Wikimedia Commons, Public domain"
       },
       "approved_at": "2026-10-13T07:36:50+00:00",
-      "posted": false,
-      "publish_at": "2026-10-22T12:45:00+03:00"
+      "posted": true,
+      "publish_at": "2026-10-22T12:45:00+03:00",
+      "posted_ids": [
+        "17991590417863166",
+        "18120683644951398",
+        "17983729436903056",
+        "18116311516824924",
+        "18039357470838690"
+      ],
+      "posted_at": "2026-10-22T09:47:47+00:00",
+      "permalink": "https://www.threads.com/@velimyr/post/DeysWq1m5qC"
     },
     "2026-10-01-06": {
       "sha": "d4013ee82043de42",
