@@ -7993,9 +7993,10 @@
       "images": [],
       "status": "approved",
       "thread": {
-        "status": "approved",
+        "status": "posted",
         "file": "data/texts/2026-10-16-12/thread.md",
-        "approved_sha": "c18840823173f94a"
+        "approved_sha": "c18840823173f94a",
+        "permalink": "https://www.threads.com/@velimyr/post/DezSPkakSiD"
       },
       "script": {
         "status": "none",
@@ -8034,6 +8035,14 @@
         {
           "at": "2026-10-18T06:25:35+00:00",
           "event": "thread text approved in telegram"
+        },
+        {
+          "at": "2026-10-22T15:17:11+00:00",
+          "event": "provocation published manually"
+        },
+        {
+          "at": "2026-10-22T15:18:07+00:00",
+          "event": "thread posted to Threads (3 posts)"
         }
       ]
     },
