@@ -1061,12 +1061,30 @@
         {
           "at": "2026-10-22T09:38:15+00:00",
           "event": "photo search requested in telegram"
+        },
+        {
+          "at": "2026-10-22T11:07:28+00:00",
+          "event": "photos found"
         }
       ],
-      "photo_request": true,
+      "photo_request": false,
       "photo_error": "",
       "photo_keywords": "",
-      "photo_requested_at": "2026-10-22T09:38:15+00:00"
+      "photo_requested_at": "2026-10-22T09:38:15+00:00",
+      "images": [
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/1/15/Skoropys_tables.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Skoropys_tables.jpg",
+          "credit": "Fordman / Wikimedia Commons, CC BY-SA 3.0",
+          "license": "CC BY-SA 3.0"
+        },
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Skoropadsky_1721.jpg/1280px-Skoropadsky_1721.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Skoropadsky_1721.jpg",
+          "credit": "Іван Скоропадський / Wikimedia Commons, CC0",
+          "license": "CC0"
+        }
+      ]
     },
     {
       "id": "2026-09-29-16",
