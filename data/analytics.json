@@ -2204,7 +2204,7 @@
         "reposts": 0,
         "quotes": 0,
         "shares": 0,
-        "at": "2026-10-23T08:01:13+00:00"
+        "at": "2026-10-23T09:01:15+00:00"
       },
       "h24": {
         "views": 359,
@@ -2245,13 +2245,13 @@
       "has_photo": true,
       "scheduled": true,
       "latest": {
-        "views": 2728,
+        "views": 2729,
         "likes": 57,
         "replies": 14,
         "reposts": 1,
         "quotes": 0,
         "shares": 10,
-        "at": "2026-10-23T08:01:13+00:00"
+        "at": "2026-10-23T09:01:15+00:00"
       },
       "h24": {
         "views": 2633,
@@ -2263,6 +2263,14 @@
       },
       "h72": {
         "views": 2713,
+        "likes": 57,
+        "replies": 14,
+        "reposts": 1,
+        "quotes": 0,
+        "shares": 10
+      },
+      "h168": {
+        "views": 2729,
         "likes": 57,
         "replies": 14,
         "reposts": 1,
@@ -2284,13 +2292,13 @@
       "has_photo": false,
       "scheduled": true,
       "latest": {
-        "views": 19049,
+        "views": 19050,
         "likes": 207,
         "replies": 62,
         "reposts": 3,
         "quotes": 0,
         "shares": 0,
-        "at": "2026-10-23T08:01:12+00:00"
+        "at": "2026-10-23T09:01:15+00:00"
       },
       "h24": {
         "views": 18870,
@@ -2317,13 +2325,13 @@
       "origin": "manual",
       "has_photo": true,
       "latest": {
-        "views": 125,
+        "views": 126,
         "likes": 4,
         "replies": 0,
         "reposts": 0,
         "quotes": 0,
         "shares": 0,
-        "at": "2026-10-23T08:01:12+00:00"
+        "at": "2026-10-23T09:01:15+00:00"
       },
       "h24": {
         "views": 109,
@@ -2356,13 +2364,13 @@
       "has_photo": true,
       "scheduled": true,
       "latest": {
-        "views": 1419,
+        "views": 1420,
         "likes": 29,
         "replies": 11,
         "reposts": 0,
         "quotes": 0,
         "shares": 1,
-        "at": "2026-10-23T08:01:12+00:00"
+        "at": "2026-10-23T09:01:14+00:00"
       },
       "h24": {
         "views": 1385,
@@ -2395,13 +2403,13 @@
       "has_photo": false,
       "scheduled": true,
       "latest": {
-        "views": 626,
+        "views": 627,
         "likes": 21,
         "replies": 25,
         "reposts": 0,
         "quotes": 0,
         "shares": 0,
-        "at": "2026-10-23T08:01:11+00:00"
+        "at": "2026-10-23T09:01:14+00:00"
       },
       "h24": {
         "views": 554,
@@ -2434,13 +2442,13 @@
       "has_photo": true,
       "scheduled": true,
       "latest": {
-        "views": 322,
+        "views": 323,
         "likes": 12,
         "replies": 9,
         "reposts": 0,
         "quotes": 0,
         "shares": 0,
-        "at": "2026-10-23T08:01:11+00:00"
+        "at": "2026-10-23T09:01:14+00:00"
       },
       "h24": {
         "views": 286,
@@ -2473,13 +2481,13 @@
       "has_photo": true,
       "scheduled": true,
       "latest": {
-        "views": 466,
+        "views": 467,
         "likes": 26,
         "replies": 6,
         "reposts": 1,
         "quotes": 0,
         "shares": 3,
-        "at": "2026-10-23T08:01:11+00:00"
+        "at": "2026-10-23T09:01:13+00:00"
       },
       "h24": {
         "views": 414,
@@ -2512,13 +2520,13 @@
       "has_photo": false,
       "scheduled": true,
       "latest": {
-        "views": 2087,
+        "views": 2088,
         "likes": 25,
         "replies": 27,
         "reposts": 0,
         "quotes": 0,
         "shares": 1,
-        "at": "2026-10-23T08:01:10+00:00"
+        "at": "2026-10-23T09:01:13+00:00"
       },
       "h24": {
         "views": 2005,
@@ -2551,13 +2559,13 @@
       "has_photo": true,
       "scheduled": true,
       "latest": {
-        "views": 1009,
+        "views": 1010,
         "likes": 30,
         "replies": 7,
         "reposts": 0,
         "quotes": 0,
         "shares": 1,
-        "at": "2026-10-23T08:01:10+00:00"
+        "at": "2026-10-23T09:01:13+00:00"
       },
       "h24": {
         "views": 952,
@@ -2590,13 +2598,13 @@
       "has_photo": true,
       "scheduled": true,
       "latest": {
-        "views": 2087,
+        "views": 2089,
         "likes": 25,
         "replies": 10,
         "reposts": 0,
         "quotes": 0,
         "shares": 3,
-        "at": "2026-10-23T08:01:10+00:00"
+        "at": "2026-10-23T09:01:12+00:00"
       },
       "h24": {
         "views": 2028,
@@ -2615,13 +2623,13 @@
       "origin": "manual",
       "has_photo": false,
       "latest": {
-        "views": 184,
+        "views": 186,
         "likes": 21,
         "replies": 0,
         "reposts": 0,
         "quotes": 0,
         "shares": 0,
-        "at": "2026-10-23T08:01:10+00:00"
+        "at": "2026-10-23T09:01:12+00:00"
       },
       "h24": {
         "views": 170,
@@ -2646,13 +2654,13 @@
       "has_photo": true,
       "scheduled": true,
       "latest": {
-        "views": 280,
+        "views": 281,
         "likes": 9,
         "replies": 4,
         "reposts": 0,
         "quotes": 0,
         "shares": 0,
-        "at": "2026-10-23T08:01:09+00:00"
+        "at": "2026-10-23T09:01:12+00:00"
       }
     },
     "18492250309111450": {
@@ -2663,13 +2671,13 @@
       "origin": "manual",
       "has_photo": false,
       "latest": {
-        "views": 161,
+        "views": 166,
         "likes": 7,
         "replies": 6,
         "reposts": 0,
         "quotes": 1,
         "shares": 0,
-        "at": "2026-10-23T08:01:09+00:00"
+        "at": "2026-10-23T09:01:11+00:00"
       }
     },
     "17978208099138605": {
@@ -2686,15 +2694,38 @@
       "has_photo": false,
       "scheduled": true,
       "latest": {
-        "views": 1089,
+        "views": 1118,
         "likes": 16,
-        "replies": 32,
+        "replies": 33,
         "reposts": 0,
         "quotes": 0,
         "shares": 0,
-        "at": "2026-10-23T08:01:09+00:00"
+        "at": "2026-10-23T09:01:12+00:00"
+      }
+    },
+    "18119570008967513": {
+      "timestamp": "2026-10-23T08:41:13+0000",
+      "permalink": "https://www.threads.com/@velimyr/post/De1JtaTlvTJ",
+      "media_type": "IMAGE",
+      "text_len": 412,
+      "origin": "bot",
+      "idea": "2026-10-01-06",
+      "title": "Генеральний опис Лівобережної України 1765–1769: перепис усіх 10 полків",
+      "stream": "big",
+      "topic": "Генеалогія",
+      "posts_count": 8,
+      "has_photo": true,
+      "scheduled": true,
+      "latest": {
+        "views": 0,
+        "likes": 1,
+        "replies": 7,
+        "reposts": 0,
+        "quotes": 0,
+        "shares": 0,
+        "at": "2026-10-23T09:01:11+00:00"
       }
     }
   },
-  "updated_at": "2026-10-23T08:01:13+00:00"
+  "updated_at": "2026-10-23T09:01:15+00:00"
 }
