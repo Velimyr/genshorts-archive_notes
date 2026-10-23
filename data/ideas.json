@@ -9950,6 +9950,10 @@
         {
           "at": "2026-10-23T06:45:15+00:00",
           "event": "thread ready"
+        },
+        {
+          "at": "2026-10-23T06:47:02+00:00",
+          "event": "thread edited in telegram (1 fragment(s))"
         }
       ]
     },
