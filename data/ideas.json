@@ -11011,7 +11011,7 @@
           "license": "Public domain"
         }
       ],
-      "status": "proposed",
+      "status": "rejected",
       "thread": {
         "status": "none",
         "file": null
@@ -11029,6 +11029,10 @@
         {
           "at": "2026-10-23T10:12:10+00:00",
           "event": "proposed by ideas routine"
+        },
+        {
+          "at": "2026-10-23T10:14:02+00:00",
+          "event": "idea rejected in telegram"
         }
       ]
     },
@@ -11097,7 +11101,7 @@
           "license": "CC BY-SA 3.0"
         }
       ],
-      "status": "proposed",
+      "status": "approved",
       "thread": {
         "status": "none",
         "file": null
@@ -11115,6 +11119,10 @@
         {
           "at": "2026-10-23T10:12:10+00:00",
           "event": "proposed by ideas routine"
+        },
+        {
+          "at": "2026-10-23T10:14:02+00:00",
+          "event": "idea approved in telegram"
         }
       ]
     },
@@ -11131,7 +11139,7 @@
         "https://files.znu.edu.ua/files/Bibliobooks/Inshi47/0037988.pdf"
       ],
       "images": [],
-      "status": "proposed",
+      "status": "rejected",
       "thread": {
         "status": "none",
         "file": null
@@ -11149,6 +11157,10 @@
         {
           "at": "2026-10-23T10:12:10+00:00",
           "event": "proposed by ideas routine"
+        },
+        {
+          "at": "2026-10-23T10:14:04+00:00",
+          "event": "idea rejected in telegram"
         }
       ]
     },
