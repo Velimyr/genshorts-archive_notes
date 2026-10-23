@@ -9994,7 +9994,7 @@
       ],
       "status": "approved",
       "thread": {
-        "status": "ready",
+        "status": "revise",
         "file": "data/texts/2026-10-19-19/thread.md"
       },
       "script": {
@@ -10005,7 +10005,13 @@
         "status": "none",
         "telegram_message_id": null
       },
-      "revisions": [],
+      "revisions": [
+        {
+          "kind": "thread",
+          "text": "Розшир кількість повідомлень в ланцюжку додай пояснення які дані можна знайти в цьому банку",
+          "at": "2026-10-23T09:09:01+00:00"
+        }
+      ],
       "history": [
         {
           "at": "2026-10-19T06:27:30+00:00",
@@ -10022,6 +10028,10 @@
         {
           "at": "2026-10-23T09:02:44+00:00",
           "event": "thread ready"
+        },
+        {
+          "at": "2026-10-23T09:09:01+00:00",
+          "event": "thread revision requested"
         }
       ]
     },
