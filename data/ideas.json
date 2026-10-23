@@ -5929,7 +5929,26 @@
         "https://en.wikipedia.org/wiki/Black_Sea_Germans",
         "https://www.familysearch.org/de/search/collection/3754709"
       ],
-      "images": [],
+      "images": [
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/0/04/Plan_Grossliebental.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Plan_Grossliebental.jpg",
+          "credit": "Невідомий автор (план заснування колоній Гросс- і Кляйнлібенталь, 1803) / Wikimedia Commons, Public domain",
+          "license": "Public domain"
+        },
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/4/49/Plan_Glueckstal.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Plan_Glueckstal.jpg",
+          "credit": "Невідомий автор (план Глюкстальського колоністського округу з землями колонії Кассель, 1809) / Wikimedia Commons, Public domain",
+          "license": "Public domain"
+        },
+        {
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a1/Mennonitenansiedlung_Molotschna_1852.jpg/1280px-Mennonitenansiedlung_Molotschna_1852.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Mennonitenansiedlung_Molotschna_1852.jpg",
+          "credit": "Невідомий автор (мапа менонітських поселень на Молочній, 1852) / Wikimedia Commons, Public domain",
+          "license": "Public domain"
+        }
+      ],
       "status": "approved",
       "thread": {
         "status": "approved",
@@ -5969,9 +5988,13 @@
         {
           "at": "2026-10-23T09:37:19+00:00",
           "event": "photo search requested in telegram"
+        },
+        {
+          "at": "2026-10-23T09:47:48+00:00",
+          "event": "photos found"
         }
       ],
-      "photo_request": true,
+      "photo_request": false,
       "photo_error": "",
       "photo_keywords": "",
       "photo_requested_at": "2026-10-23T09:37:19+00:00"
