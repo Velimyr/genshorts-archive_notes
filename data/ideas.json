@@ -10892,7 +10892,7 @@
       "images": [],
       "status": "approved",
       "thread": {
-        "status": "ready",
+        "status": "revise",
         "file": "data/texts/2026-10-23-03/thread.md"
       },
       "script": {
@@ -10903,7 +10903,13 @@
         "status": "none",
         "telegram_message_id": null
       },
-      "revisions": [],
+      "revisions": [
+        {
+          "kind": "thread",
+          "text": "Зміни тип цього треду на великий серйощний і перепиши під ці розміри збільшивши обсяг",
+          "at": "2026-10-23T10:27:57+00:00"
+        }
+      ],
       "history": [
         {
           "at": "2026-10-23T10:12:10+00:00",
@@ -10920,6 +10926,10 @@
         {
           "at": "2026-10-23T10:16:59+00:00",
           "event": "thread ready"
+        },
+        {
+          "at": "2026-10-23T10:27:57+00:00",
+          "event": "thread revision requested"
         }
       ]
     },
