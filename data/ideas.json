@@ -10808,7 +10808,7 @@
         "https://teletype.in/@ukr_free_genealogy/Rekruty-12-02"
       ],
       "images": [],
-      "status": "proposed",
+      "status": "approved",
       "thread": {
         "status": "none",
         "file": null
@@ -10826,6 +10826,10 @@
         {
           "at": "2026-10-23T10:12:10+00:00",
           "event": "proposed by ideas routine"
+        },
+        {
+          "at": "2026-10-23T10:12:55+00:00",
+          "event": "idea approved in telegram"
         }
       ]
     },
