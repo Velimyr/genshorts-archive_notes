@@ -10853,7 +10853,7 @@
           "license": "Public domain"
         }
       ],
-      "status": "proposed",
+      "status": "rejected",
       "thread": {
         "status": "none",
         "file": null
@@ -10871,6 +10871,10 @@
         {
           "at": "2026-10-23T10:12:10+00:00",
           "event": "proposed by ideas routine"
+        },
+        {
+          "at": "2026-10-23T10:13:10+00:00",
+          "event": "idea rejected in telegram"
         }
       ]
     },
@@ -10886,7 +10890,7 @@
         "https://uk.wikipedia.org/wiki/Однодворці"
       ],
       "images": [],
-      "status": "proposed",
+      "status": "approved",
       "thread": {
         "status": "none",
         "file": null
@@ -10904,6 +10908,10 @@
         {
           "at": "2026-10-23T10:12:10+00:00",
           "event": "proposed by ideas routine"
+        },
+        {
+          "at": "2026-10-23T10:13:10+00:00",
+          "event": "idea approved in telegram"
         }
       ]
     },
@@ -10921,7 +10929,7 @@
         "https://teletype.in/@ukr_free_genealogy/Rekruty-12-02"
       ],
       "images": [],
-      "status": "proposed",
+      "status": "approved",
       "thread": {
         "status": "none",
         "file": null
@@ -10939,6 +10947,10 @@
         {
           "at": "2026-10-23T10:12:10+00:00",
           "event": "proposed by ideas routine"
+        },
+        {
+          "at": "2026-10-23T10:13:11+00:00",
+          "event": "idea approved in telegram"
         }
       ]
     },
@@ -10954,7 +10966,7 @@
         "https://inventarium.org.ua/search?q=люстрація"
       ],
       "images": [],
-      "status": "proposed",
+      "status": "rejected",
       "thread": {
         "status": "none",
         "file": null
@@ -10972,6 +10984,10 @@
         {
           "at": "2026-10-23T10:12:10+00:00",
           "event": "proposed by ideas routine"
+        },
+        {
+          "at": "2026-10-23T10:13:11+00:00",
+          "event": "idea rejected in telegram"
         }
       ]
     },
