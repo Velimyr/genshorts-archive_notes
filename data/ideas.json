@@ -10041,8 +10041,21 @@
         {
           "at": "2026-10-23T09:11:46+00:00",
           "event": "thread text approved in telegram"
+        },
+        {
+          "at": "2026-10-23T09:13:16+00:00",
+          "event": "photo search requested in telegram (more)"
         }
-      ]
+      ],
+      "images_excluded": [
+        "https://upload.wikimedia.org/wikipedia/commons/6/6f/Kyiv_Bykivnia_monument_3.JPG",
+        "https://upload.wikimedia.org/wikipedia/commons/9/9e/Bykivnia_Graves1.JPG",
+        "https://upload.wikimedia.org/wikipedia/commons/1/11/Kyiv_Bykivnia_map.JPG"
+      ],
+      "photo_request": true,
+      "photo_error": "",
+      "photo_keywords": "",
+      "photo_requested_at": "2026-10-23T09:13:16+00:00"
     },
     {
       "id": "2026-10-19-20",
