@@ -10795,6 +10795,371 @@
       "photo_error": "",
       "photo_keywords": "",
       "photo_requested_at": "2026-10-20T11:27:56+00:00"
+    },
+    {
+      "id": "2026-10-23-01",
+      "proposed_at": "2026-10-23",
+      "stream": "small",
+      "rubric": "military",
+      "title": "Рекрут у документі: зріст, волосся, прикмети й грамотність предка",
+      "summary": "Формулярні списки рекрутів фіксували ім'я, стан, грамотність і зовнішність: зріст, колір волосся й очей, форму обличчя, прикмети. Шукати їх треба у фондах повітових і губернських рекрутських присутностей. Рідкісний шанс «побачити» предка до фотографії.",
+      "why_now": "Корисно перед тим, як писати в архів: вже знаєте, у якому фонді просити.",
+      "sources": [
+        "https://teletype.in/@ukr_free_genealogy/Rekruty-12-02"
+      ],
+      "images": [],
+      "status": "proposed",
+      "thread": {
+        "status": "none",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-10-23T10:12:10+00:00",
+          "event": "proposed by ideas routine"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-23-02",
+      "proposed_at": "2026-10-23",
+      "stream": "small",
+      "rubric": "resources",
+      "title": "JewishGen: 182 703 записи ревізьких казок України 1719–1874",
+      "summary": "В індексі JewishGen — записи ревізьких казок України за 1719–1874 роки (ім'я, склад домогосподарства, зв'язок із главою, вік). Там є й нееврейські мешканці, а покриття залежить від того, які повіти вже розшифровано. Як шукати й на що зважати.",
+      "why_now": "",
+      "sources": [
+        "https://www.jewishgen.org/databases/ukraine/revision.html",
+        "https://www.myheritage.ro/research/collection-20234/ukraine-revision-lists-from-jewishgen"
+      ],
+      "images": [
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/b/b1/1850_Novaya_Ushitsya_Burgher_revision_list_sample.png",
+          "page": "https://commons.wikimedia.org/wiki/File:1850_Novaya_Ushitsya_Burgher_revision_list_sample.png",
+          "credit": "Alex Krakovsky / Wikimedia Commons, Public domain",
+          "license": "Public domain"
+        }
+      ],
+      "status": "proposed",
+      "thread": {
+        "status": "none",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-10-23T10:12:10+00:00",
+          "event": "proposed by ideas routine"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-23-03",
+      "proposed_at": "2026-10-23",
+      "stream": "small",
+      "rubric": "ancestors",
+      "title": "Предок-«однодворець»: це ще не селянин і вже не дворянин",
+      "summary": "В документах ХІХ ст. трапляється стан «однодворці»: нащадки дрібних служилих людей, що платили подушне й оброк і несли рекрутську повинність. Після 1831 року сюди записували й польську шляхту, яка не довела дворянства; 1868-го їх зрівняли з селянами.",
+      "why_now": "",
+      "sources": [
+        "https://uk.wikipedia.org/wiki/Однодворці"
+      ],
+      "images": [],
+      "status": "proposed",
+      "thread": {
+        "status": "none",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-10-23T10:12:10+00:00",
+          "event": "proposed by ideas routine"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-23-04",
+      "proposed_at": "2026-10-23",
+      "stream": "small",
+      "rubric": "ancestors",
+      "title": "Кантоністи: коли записаний у школу солдатський син — це не сирота",
+      "summary": "Військові діти були військовозобов'язаними з народження й потрапляли до шкіл кантоністів; з 1827 року туди відправляли і євреїв-рекрутів від 12 років. Систему скасовано 26 серпня 1856 року. Що це означає для запису про предка і де шукати сліди.",
+      "why_now": "",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Cantonist",
+        "https://www.culture.ru/s/vopros/kantonisty",
+        "https://teletype.in/@ukr_free_genealogy/Rekruty-12-02"
+      ],
+      "images": [],
+      "status": "proposed",
+      "thread": {
+        "status": "none",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-10-23T10:12:10+00:00",
+          "event": "proposed by ideas routine"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-23-05",
+      "proposed_at": "2026-10-23",
+      "stream": "small",
+      "rubric": "document",
+      "title": "Люстрація — не інвентар: чим відрізняються два типи джерел",
+      "summary": "В Інвентаріумі «Люстрація» — окремий тип документа поряд з інвентарем, урбаром, фасією і дефтером. Приклади записів: люстрація Луцького староства, Галицького староства, войтівства Межирова (копія 1712 р.). Коротко: що описує люстрація і як відфільтрувати її в реєстрі.",
+      "why_now": "",
+      "sources": [
+        "https://inventarium.org.ua/search?q=люстрація"
+      ],
+      "images": [],
+      "status": "proposed",
+      "thread": {
+        "status": "none",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-10-23T10:12:10+00:00",
+          "event": "proposed by ideas routine"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-23-06",
+      "proposed_at": "2026-10-23",
+      "stream": "small",
+      "rubric": "document",
+      "title": "Йосифінська і Францисканська метрики: два земельні кадастри Галичини",
+      "summary": "Йосифінська метрика (1785–1788) — перший кадастр Галичини; Францисканська (1819 і пізніше) його уточнювала, бо дані застаріли для справедливого розподілу податку. Опис фонду з Францисканською метрикою є на сайті ЦДІА у Львові. Де шукати свій населений пункт.",
+      "why_now": "",
+      "sources": [
+        "https://presstoarch.amu.edu.pl/index.php/sho/article/view/47735",
+        "https://tsdial.archives.gov.ua/pdf/F.%2020,%20op.%20XVII.pdf"
+      ],
+      "images": [
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/6/63/Romanowka_1782.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Romanowka_1782.jpg",
+          "credit": "Військова карта (перше військове картографування), Wikimedia Commons, Public domain",
+          "license": "Public domain"
+        }
+      ],
+      "status": "proposed",
+      "thread": {
+        "status": "none",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-10-23T10:12:10+00:00",
+          "event": "proposed by ideas routine"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-23-07",
+      "proposed_at": "2026-10-23",
+      "stream": "small",
+      "rubric": "resources",
+      "title": "Libraria: пошук по 700 000 сторінок преси відкритий, читання — лише через бібліо",
+      "summary": "На libraria.ua понад 700 000 сторінок і 400 видань (укр., пол., нім., їдиш…). Повнотекстовий пошук відкритий усім, а повний доступ до сканів — платний і для бібліотек, не для окремих людей. Як використати пошук, щоб знайти згадку про предка та де потім читати.",
+      "why_now": "",
+      "sources": [
+        "https://nedila.lem.fm/libraria.ua/en/about.html",
+        "https://www.lvivcenter.org/en/updates/libraria-2/"
+      ],
+      "images": [
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/0/0e/Dilo_newspaper_31.08.1939.png",
+          "page": "https://commons.wikimedia.org/wiki/File:Dilo_newspaper_31.08.1939.png",
+          "credit": "Wikimedia Commons, Public domain",
+          "license": "Public domain"
+        }
+      ],
+      "status": "proposed",
+      "thread": {
+        "status": "none",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-10-23T10:12:10+00:00",
+          "event": "proposed by ideas routine"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-23-08",
+      "proposed_at": "2026-10-23",
+      "stream": "small",
+      "rubric": "news",
+      "title": "Національна книга пам'яті жертв Голодомору: 19 томів і чому там може не бути ваш",
+      "summary": "Книга вийшла 2008 року: 17 обласних томів, том Києва й загальнонаціональний. У ній засвідчено майже 900 тисяч імен, але директор Меморіалу визнавав труднощі з іменами, і частину додавали після звернень відвідувачів. Як перевірити свою родину й що додати. Тон: стримано.",
+      "why_now": "Четверта субота листопада (28.11.2026) — День пам'яті жертв Голодомору.",
+      "sources": [
+        "https://gazeta.ua/articles/history/_nikoli-radyanska-vlada-ne-hotila-shukati-imen-predstavili-narodnu-knigu-pamyati-zhertv-golodomoru/469243",
+        "https://www.radiosvoboda.org/a/1144140.html"
+      ],
+      "images": [
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/e/e8/HolodomorKyivSvichky.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:HolodomorKyivSvichky.jpg",
+          "credit": "maidan.org.ua / Wikimedia Commons, CC BY-SA 3.0",
+          "license": "CC BY-SA 3.0"
+        }
+      ],
+      "status": "proposed",
+      "thread": {
+        "status": "none",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-10-23T10:12:10+00:00",
+          "event": "proposed by ideas routine"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-23-09",
+      "proposed_at": "2026-10-23",
+      "stream": "small",
+      "rubric": "myths",
+      "title": "Перепис 1897 року: єдиний загальний, але «українців» у ньому не рахували",
+      "summary": "Єдиний загальний перепис на українських землях у складі Російської імперії відбувся 1897 року: 37 млн населення. Він фіксував рідну мову, а не національність, тож «скільки було українців» — лише оцінка. Чому в родинних легендах не варто ставити його за доказ.",
+      "why_now": "",
+      "sources": [
+        "https://www.radiosvoboda.org/a/908791.html",
+        "https://files.znu.edu.ua/files/Bibliobooks/Inshi47/0037988.pdf"
+      ],
+      "images": [],
+      "status": "proposed",
+      "thread": {
+        "status": "none",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-10-23T10:12:10+00:00",
+          "event": "proposed by ideas routine"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-23-10",
+      "proposed_at": "2026-10-23",
+      "stream": "small",
+      "rubric": "military",
+      "title": "Солдатка й дозвіл на шлюб: де в архівах слід військових родин",
+      "summary": "Сповідні розписи окремо фіксують солдатів і солдаток, а справи про дозволи на шлюб солдатам лежать у фондах губернських духовних консисторій. Це швидкий шлях, коли у метриці предка з'являється слово «солдат».",
+      "why_now": "",
+      "sources": [
+        "https://teletype.in/@ukr_free_genealogy/Rekruty-12-02"
+      ],
+      "images": [],
+      "status": "proposed",
+      "thread": {
+        "status": "none",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-10-23T10:12:10+00:00",
+          "event": "proposed by ideas routine"
+        }
+      ]
     }
   ]
 }
