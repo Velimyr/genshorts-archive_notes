@@ -11832,7 +11832,7 @@
         "https://genealogyblog.com/?p=26080"
       ],
       "images": [],
-      "status": "proposed",
+      "status": "approved",
       "thread": {
         "status": "none",
         "file": null
@@ -11850,6 +11850,10 @@
         {
           "at": "2026-10-24T08:00:00+00:00",
           "event": "proposed by ideas routine"
+        },
+        {
+          "at": "2026-10-24T07:02:03+00:00",
+          "event": "idea approved in telegram"
         }
       ]
     },
