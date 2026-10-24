@@ -11276,6 +11276,316 @@
           "event": "idea rejected in telegram"
         }
       ]
+    },
+    {
+      "id": "2026-10-24-01",
+      "proposed_at": "2026-10-24",
+      "stream": "provoke",
+      "rubric": "provoke",
+      "title": "Оголошення: «Прочитайте, що тут написано». Фото метрики з відблиском лампи, під кутом, пальцем на пів-запису.",
+      "summary": "Оголошення від типажу «скинув фото без контексту»; механіка — впізнавання, кожен адмін чату має історію.",
+      "why_now": "",
+      "sources": [],
+      "images": [],
+      "status": "proposed",
+      "thread": {
+        "status": "none",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-10-24T06:00:00+00:00",
+          "event": "proposed by ideas routine"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-24-02",
+      "proposed_at": "2026-10-24",
+      "stream": "provoke",
+      "rubric": "provoke",
+      "title": "Рейтинг рідні: хто зберег фото без підписів. 1) бабуся 2) тітка 3) коробка з-під взуття. Усі підписані: «ну це ж він».",
+      "summary": "Рейтинг про сімейний архів із безіменними фото; механіка — «покажіть це тітці» і своя історія про коробку.",
+      "why_now": "",
+      "sources": [],
+      "images": [],
+      "status": "proposed",
+      "thread": {
+        "status": "none",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-10-24T06:00:00+00:00",
+          "event": "proposed by ideas routine"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-24-03",
+      "proposed_at": "2026-10-24",
+      "stream": "provoke",
+      "rubric": "provoke",
+      "title": "«Допоможіть знайти предків: прізвище є, села нема, року нема, зате впевненість — є». Це не запит, це молитва.",
+      "summary": "Роуст на запит без даних у чаті; механіка — впізнавання.",
+      "why_now": "",
+      "sources": [],
+      "images": [],
+      "status": "proposed",
+      "thread": {
+        "status": "none",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-10-24T06:00:00+00:00",
+          "event": "proposed by ideas routine"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-24-04",
+      "proposed_at": "2026-10-24",
+      "stream": "provoke",
+      "rubric": "provoke",
+      "title": "Діагноз: «знайшов, але не скажу». Симптоми: має скан, має джерело, має вигляд, що там таємниця Ватикану.",
+      "summary": "Діагноз для генеалога-скнари, що не ділиться знахідками; механіка — впізнавання й вибір сторони.",
+      "why_now": "",
+      "sources": [],
+      "images": [],
+      "status": "proposed",
+      "thread": {
+        "status": "none",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-10-24T06:00:00+00:00",
+          "event": "proposed by ideas routine"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-24-05",
+      "proposed_at": "2026-10-24",
+      "stream": "provoke",
+      "rubric": "provoke",
+      "title": "Вакансія: безкоштовно скласти повне дерево до Адама. Оплата — «дуже вдячний будь-коли». Досвід від вас, гроші від нас не чекайте.",
+      "summary": "Вакансія-роуст на тих, хто просить дослідження задарма; механіка — «скільки разів вам таке писали?».",
+      "why_now": "",
+      "sources": [],
+      "images": [],
+      "status": "proposed",
+      "thread": {
+        "status": "none",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-10-24T06:00:00+00:00",
+          "event": "proposed by ideas routine"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-24-06",
+      "proposed_at": "2026-10-24",
+      "stream": "provoke",
+      "rubric": "provoke",
+      "title": "«Писар помилився, мій дід був Іван, а не Йван». Так, а ще писар сфальшував усю ту сторінку, де це не підходить.",
+      "summary": "Роуст на людину, що «виправляє» документ під легенду; механіка — виклик «доведіть, що я неправий».",
+      "why_now": "",
+      "sources": [],
+      "images": [],
+      "status": "proposed",
+      "thread": {
+        "status": "none",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-10-24T06:00:00+00:00",
+          "event": "proposed by ideas routine"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-24-07",
+      "proposed_at": "2026-10-24",
+      "stream": "provoke",
+      "rubric": "provoke",
+      "title": "Якщо ваше прізвище Попович, Князь чи Гетьман — вітаю, ви з роду... людей, у яких був дуже амбітний прадід-жартівник.",
+      "summary": "Тест «якщо ваше прізвище…» про гучні прізвища як доказ походження; механіка — ранжування й коментар від носіїв прізвищ.",
+      "why_now": "",
+      "sources": [],
+      "images": [],
+      "status": "proposed",
+      "thread": {
+        "status": "none",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-10-24T06:00:00+00:00",
+          "event": "proposed by ideas routine"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-24-08",
+      "proposed_at": "2026-10-24",
+      "stream": "provoke",
+      "rubric": "provoke",
+      "title": "П'ять стадій новачка: знайшов одну метрику — «я вже експерт». Друга метрика — «ой». Третя — «хто всі ці люди?»",
+      "summary": "«П'ять стадій» для початківця, що після першої знахідки ставить себе в експерти; механіка — «я такий був».",
+      "why_now": "",
+      "sources": [],
+      "images": [],
+      "status": "proposed",
+      "thread": {
+        "status": "none",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-10-24T06:00:00+00:00",
+          "event": "proposed by ideas routine"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-24-09",
+      "proposed_at": "2026-10-24",
+      "stream": "provoke",
+      "rubric": "provoke",
+      "title": "Тост за вчасно здану в архів справу: «Нехай шукає вас так само вперто, як ви шукаєте прабабусю».",
+      "summary": "Тост-жарт про вічний пошук; механіка — розповідь «а в мене прабабуся шукається N років».",
+      "why_now": "",
+      "sources": [],
+      "images": [],
+      "status": "proposed",
+      "thread": {
+        "status": "none",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-10-24T06:00:00+00:00",
+          "event": "proposed by ideas routine"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-24-10",
+      "proposed_at": "2026-10-24",
+      "stream": "provoke",
+      "rubric": "provoke",
+      "title": "Книга про рід, що пишеться третій рік. Вступ — ідеальний. Далі — коробка скриншотів і два абзаци про Адама.",
+      "summary": "Діагноз перфекціоніста, що пише родинну книгу вічно; механіка — впізнавання й питання «скільки років у вашій чернетці?».",
+      "why_now": "",
+      "sources": [],
+      "images": [],
+      "status": "proposed",
+      "thread": {
+        "status": "none",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-10-24T06:00:00+00:00",
+          "event": "proposed by ideas routine"
+        }
+      ]
     }
   ]
 }
