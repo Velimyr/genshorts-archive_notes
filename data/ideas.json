@@ -11610,6 +11610,390 @@
           "event": "idea approved in telegram"
         }
       ]
+    },
+    {
+      "id": "2026-10-24-11",
+      "proposed_at": "2026-10-24",
+      "stream": "tg",
+      "rubric": "local",
+      "title": "Кременчуцьке море: 212 зниклих сіл і де шукати їхніх людей",
+      "summary": "Водосховище 1959–1961 рр. сховало за різними оцінками 186–212 населених пунктів і понад 133 тис. людей залишили домівки. Розбираємо, чому цифри різняться, куди «поїхали» жителі й документи (Новогеоргіївськ, переселення сіл) і як шукати предків із затоплених місць.",
+      "why_now": "Тема дніпровських водосховищ зачіпає тисячі родин; сіл більше нема на мапі, а документи лишилися в архівах.",
+      "sources": [
+        "https://uk.wikipedia.org/wiki/Кременчуцьке_водосховище",
+        "https://engage.org.ua/?p=13488",
+        "https://zn.ua/ukr/HISTORY/kremenchucka-ges-more-ukrayinskogo-gorya-266592_.html"
+      ],
+      "images": [
+        {
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/aa/%D0%9D%D0%BE%D0%B2%D0%BE%D0%B3%D0%B5%D0%BE%D1%80%D0%B3%D1%96%D1%97%D0%B2%D1%81%D1%8C%D0%BA_%D0%BD%D0%B0_%D0%BC%D0%B0%D0%BF%D1%96_%D0%A8%D1%83%D0%B1%D0%B5%D1%80%D1%82%D0%B0%2C_1877_%D1%80.jpg/1280px-%D0%9D%D0%BE%D0%B2%D0%BE%D0%B3%D0%B5%D0%BE%D1%80%D0%B3%D1%96%D1%97%D0%B2%D1%81%D1%8C%D0%BA_%D0%BD%D0%B0_%D0%BC%D0%B0%D0%BF%D1%96_%D0%A8%D1%83%D0%B1%D0%B5%D1%80%D1%82%D0%B0%2C_1877_%D1%80.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "page": "https://commons.wikimedia.org/wiki/File:%D0%9D%D0%BE%D0%B2%D0%BE%D0%B3%D0%B5%D0%BE%D1%80%D0%B3%D1%96%D1%97%D0%B2%D1%81%D1%8C%D0%BA_%D0%BD%D0%B0_%D0%BC%D0%B0%D0%BF%D1%96_%D0%A8%D1%83%D0%B1%D0%B5%D1%80%D1%82%D0%B0,_1877_%D1%80.jpg",
+          "credit": "Nikolay.sinitskiy / Wikimedia Commons, Public domain",
+          "license": "Public domain"
+        },
+        {
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/51/Kremenchuk_Reservoir.jpg/1280px-Kremenchuk_Reservoir.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "page": "https://commons.wikimedia.org/wiki/File:Kremenchuk_Reservoir.jpg",
+          "credit": "TheVovaNik / Wikimedia Commons, CC BY-SA 4.0",
+          "license": "CC BY-SA 4.0"
+        }
+      ],
+      "status": "proposed",
+      "thread": {
+        "status": "none",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-10-24T08:00:00+00:00",
+          "event": "proposed by ideas routine"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-24-12",
+      "proposed_at": "2026-10-24",
+      "stream": "tg",
+      "rubric": "myths",
+      "title": "«Ми з шляхти»: розбір шляхти 1830–60-х і як предки стали однодворцями",
+      "summary": "Після 1831 р. російська влада вимагала від шляхти документів на походження; тих, хто не довів, записували в селяни, міщани чи державні селяни. Розповідаємо, які докази вимагали, скільки людей втратили стан і чому «шляхетський» запис у родині міг опинитися в однодворцях.",
+      "why_now": "",
+      "sources": [
+        "https://uk.wikipedia.org/wiki/Розбір_шляхти",
+        "https://uk.wikipedia.org/wiki/Однодворці",
+        "https://en.wikipedia.org/wiki/Szlachta"
+      ],
+      "images": [],
+      "status": "proposed",
+      "thread": {
+        "status": "none",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-10-24T08:00:00+00:00",
+          "event": "proposed by ideas routine"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-24-13",
+      "proposed_at": "2026-10-24",
+      "stream": "tg",
+      "rubric": "bureaucracy",
+      "title": "Скільки чекати відповіді архіву: місяць, 45 днів чи 5 робочих",
+      "summary": "Звернення громадян розглядають до місяця (за потреби до 45 днів), запит на публічну інформацію має власні строки. Пояснюємо, який закон до чого застосовний, що робити із запізненням і як оскаржити відписку; плюс зміни 2023 р. щодо довідок за цифровими копіями.",
+      "why_now": "",
+      "sources": [
+        "https://zakon.rada.gov.ua/laws/show/393/96-вр",
+        "https://zakon.rada.gov.ua/laws/show/2939-17",
+        "https://www.kmu.gov.ua/news/arkhivy-nadavatymut-arkhivni-dovidky-navit-pry-vidsutnosti-oryhinaliv"
+      ],
+      "images": [],
+      "status": "proposed",
+      "thread": {
+        "status": "none",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-10-24T08:00:00+00:00",
+          "event": "proposed by ideas routine"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-24-14",
+      "proposed_at": "2026-10-24",
+      "stream": "tg",
+      "rubric": "document",
+      "title": "Клірова відомість: щорічне «досьє» на священника й усю його родину",
+      "summary": "З 1769 р. при кожному храмі складали відомість про причт: освіта, служба, сімейні зв'язки, діти, майно; форму з трьох частин затвердили 1829 р. Для родів духовенства це часто джерело там, де метрик замало. Покажемо структуру документа й де його шукати (консисторські фонди).",
+      "why_now": "",
+      "sources": [
+        "https://uk.wikipedia.org/wiki/Клірова_відомість",
+        "https://teletype.in/@ukr_free_genealogy/Klirovi_i_shematyzmy",
+        "https://commons.wikimedia.org/wiki/Category:Documents_of_the_State_Archive_of_Zhytomyr_Oblast"
+      ],
+      "images": [
+        {
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3d/%D0%94%D0%90%D0%96%D0%9E_1-78-398._1910._%D0%9A%D0%BB%D1%96%D1%80%D0%BE%D0%B2%D0%B0_%D0%B2%D1%96%D0%B4%D0%BE%D0%BC%D1%96%D1%81%D1%82%D1%8C_1-%D0%B3%D0%BE_%D0%BE%D0%BA%D1%80%D1%83%D0%B3%D1%83_%D0%A1%D1%82%D0%B0%D1%80%D0%BE%D0%BA%D0%BE%D1%81%D1%82%D1%8F%D0%BD%D1%82%D0%B8%D0%BD%D1%96%D0%B2%D1%81%D1%8C%D0%BA%D0%BE%D0%B3%D0%BE_%D0%BF%D0%BE%D0%B2%D1%96%D1%82%D1%83.pdf/page1-1280px-%D0%94%D0%90%D0%96%D0%9E_1-78-398._1910._%D0%9A%D0%BB%D1%96%D1%80%D0%BE%D0%B2%D0%B0_%D0%B2%D1%96%D0%B4%D0%BE%D0%BC%D1%96%D1%81%D1%82%D1%8C_1-%D0%B3%D0%BE_%D0%BE%D0%BA%D1%80%D1%83%D0%B3%D1%83_%D0%A1%D1%82%D0%B0%D1%80%D0%BE%D0%BA%D0%BE%D1%81%D1%82%D1%8F%D0%BD%D1%82%D0%B8%D0%BD%D1%96%D0%B2%D1%81%D1%8C%D0%BA%D0%BE%D0%B3%D0%BE_%D0%BF%D0%BE%D0%B2%D1%96%D1%82%D1%83.pdf.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "page": "https://commons.wikimedia.org/wiki/File:%D0%94%D0%90%D0%96%D0%9E_1-78-398._1910._%D0%9A%D0%BB%D1%96%D1%80%D0%BE%D0%B2%D0%B0_%D0%B2%D1%96%D0%B4%D0%BE%D0%BC%D1%96%D1%81%D1%82%D1%8C_1-%D0%B3%D0%BE_%D0%BE%D0%BA%D1%80%D1%83%D0%B3%D1%83_%D0%A1%D1%82%D0%B0%D1%80%D0%BE%D0%BA%D0%BE%D1%81%D1%82%D1%8F%D0%BD%D1%82%D0%B8%D0%BD%D1%96%D0%B2%D1%81%D1%8C%D0%BA%D0%BE%D0%B3%D0%BE_%D0%BF%D0%BE%D0%B2%D1%96%D1%82%D1%83.pdf",
+          "credit": "Волинська духовна консисторія / Wikimedia Commons, Public domain",
+          "license": "Public domain"
+        }
+      ],
+      "status": "proposed",
+      "thread": {
+        "status": "none",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-10-24T08:00:00+00:00",
+          "event": "proposed by ideas routine"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-24-15",
+      "proposed_at": "2026-10-24",
+      "stream": "tg",
+      "rubric": "dna",
+      "title": "Y-ДНК і прізвище: що тест справді підтверджує, а що ні",
+      "summary": "Y-хромосома передається від батька до сина, тож працює для прізвищ по батьківській лінії. Українські популяції за Y-маркерами однорідні, тому гаплогрупа рідко вказує на конкретне село. Розбираємо, чого чекати від тесту та як поєднувати його з архівними документами.",
+      "why_now": "",
+      "sources": [
+        "https://periodicals.karazin.ua/biology/article/view/13742",
+        "https://periodicals.karazin.ua/biology/article/view/5522",
+        "https://utgis.org.ua/journals/index.php/Faktory/article/view/194"
+      ],
+      "images": [],
+      "status": "proposed",
+      "thread": {
+        "status": "none",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-10-24T08:00:00+00:00",
+          "event": "proposed by ideas routine"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-24-16",
+      "proposed_at": "2026-10-24",
+      "stream": "tg",
+      "rubric": "photos",
+      "title": "Як датувати родинне фото XIX ст.: формат, картон, ательє",
+      "summary": "Дагеротип 1840-х, амбротип, карта-де-візит (з 1859), кабінетна картка (з 1866): формат знімка й колір та кант паспарту дають хронологічні рамки. Покажемо, як звіряти ці ознаки зі штампом ательє й одягом і чого не варто довіряти (дописані підписи).",
+      "why_now": "",
+      "sources": [
+        "https://photohistory-sussex.co.uk/PhotoDatingPage.htm",
+        "https://blog.scienceandmediamuseum.org.uk/find-out-when-a-photo-was-taken-identify...",
+        "https://genealogyblog.com/?p=26080"
+      ],
+      "images": [],
+      "status": "proposed",
+      "thread": {
+        "status": "none",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-10-24T08:00:00+00:00",
+          "event": "proposed by ideas routine"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-24-17",
+      "proposed_at": "2026-10-24",
+      "stream": "tg",
+      "rubric": "cemeteries",
+      "title": "Надгробки як джерело: «Магурич» і найстаріші хрести 1644–1805 рр.",
+      "summary": "Польське товариство «Магурич» 40 років впорядковує занедбані українські цвинтарі: понад 100 таборів, 157 цвинтарів, 2200 надгробків українців у Польщі; найстаріший датовано 1644 р. Розповімо, що дають написи на хрестах для родоводу і чому цифри в різних публікаціях різняться (120 чи 157 цвинтарів).",
+      "why_now": "",
+      "sources": [
+        "https://zaxid.net/magurich_40_rokiv_vporyadkovuye_ukrayinski_kladovishha_v_polshhi_shimon_modzheyevskiy_pro_pidsumki_n1629651",
+        "https://texty.org.ua/fragments/71815/Normalni_polaky_vidnovlujut_ukrajinski_nadgrobky_rujnujut_-71815/",
+        "https://ekmair.ukma.edu.ua/items/72b366ee-f333-4b1f-86eb-26e6b04adc3f"
+      ],
+      "images": [
+        {
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1e/Tymkiv01.JPG/1280px-Tymkiv01.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "page": "https://commons.wikimedia.org/wiki/File:Tymkiv01.JPG",
+          "credit": "Birczanin / Wikimedia Commons, CC BY-SA 3.0",
+          "license": "CC BY-SA 3.0"
+        }
+      ],
+      "status": "proposed",
+      "thread": {
+        "status": "none",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-10-24T08:00:00+00:00",
+          "event": "proposed by ideas routine"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-24-18",
+      "proposed_at": "2026-10-24",
+      "stream": "tg",
+      "rubric": "losses",
+      "title": "Якщо оригінал втрачено: архівна довідка за цифровою копією (з 2023 р.)",
+      "summary": "Наказ Мін'юсту 2023 р. дозволяє видавати довідки та витяги за оцифрованими документами, якщо оригіналів нема: пошкодження, викрадення, незаконне вивезення. Для окупованих територій фонд користування може тимчасово передати іншому архіву. Що це змінює для дослідника.",
+      "why_now": "Триває оцифрування як спосіб захисту спадщини в умовах війни.",
+      "sources": [
+        "https://www.kmu.gov.ua/news/arkhivy-nadavatymut-arkhivni-dovidky-navit-pry-vidsutnosti-oryhinaliv",
+        "https://interfax.com.ua/news/culture/1147369.html",
+        "https://interfax.com.ua/news/culture/1169075-amp.html"
+      ],
+      "images": [
+        {
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/96/%D0%94%D0%90%D0%92%D1%96%D0%9E_397-2-1._1834._%D0%9C%D0%B5%D1%82%D1%80%D0%B8%D1%87%D0%BD%D0%B0_%D0%BA%D0%BD%D0%B8%D0%B3%D0%B0_%D1%94%D0%B2%D1%80%D0%B5%D1%97%D0%B2_%D0%BC%D1%96%D1%81%D1%82%D0%B0_%D0%92%D1%96%D0%BD%D0%BD%D0%B8%D1%86%D1%8F._%D0%A8%D0%BB%D1%8E%D0%B1.pdf/page1-1280px-%D0%94%D0%90%D0%92%D1%96%D0%9E_397-2-1._1834._%D0%9C%D0%B5%D1%82%D1%80%D0%B8%D1%87%D0%BD%D0%B0_%D0%BA%D0%BD%D0%B8%D0%B3%D0%B0_%D1%94%D0%B2%D1%80%D0%B5%D1%97%D0%B2_%D0%BC%D1%96%D1%81%D1%82%D0%B0_%D0%92%D1%96%D0%BD%D0%BD%D0%B8%D1%86%D1%8F._%D0%A8%D0%BB%D1%8E%D0%B1.pdf.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "page": "https://commons.wikimedia.org/wiki/File:%D0%94%D0%90%D0%92%D1%96%D0%9E_397-2-1._1834._%D0%9C%D0%B5%D1%82%D1%80%D0%B8%D1%87%D0%BD%D0%B0_%D0%BA%D0%BD%D0%B8%D0%B3%D0%B0_%D1%94%D0%B2%D1%80%D0%B5%D1%97%D0%B2_%D0%BC%D1%96%D1%81%D1%82%D0%B0_%D0%92%D1%96%D0%BD%D0%BD%D0%B8%D1%86%D1%8F._%D0%A8%D0%BB%D1%8E%D0%B1.pdf",
+          "credit": "Вінницький рабинат / Wikimedia Commons, Public domain",
+          "license": "Public domain"
+        }
+      ],
+      "status": "proposed",
+      "thread": {
+        "status": "none",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-10-24T08:00:00+00:00",
+          "event": "proposed by ideas routine"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-24-19",
+      "proposed_at": "2026-10-24",
+      "stream": "tg",
+      "rubric": "news",
+      "title": "Оцифрування 2025: майже 53 млн копій і програма на 2026–2030 роки",
+      "summary": "За даними Укрдержархіву, 2025 р. створено майже 53 млн цифрових копій (2023 — понад 21 млн, 2024 — 34 млн), близько 20 млн доступні через Міжархівний портал. Нова програма 2026–2030 передбачає понад 150 млн копій. Що це дасть генеалогам.",
+      "why_now": "Свіжі підсумки Укрдержархіву (лютий–травень 2026) і нова програма оцифрування.",
+      "sources": [
+        "https://interfax.com.ua/news/culture/1147369.html",
+        "https://interfax.com.ua/news/culture/1169075-amp.html",
+        "https://jitas.donnu.edu.ua/article/view/19791/19706"
+      ],
+      "images": [],
+      "status": "proposed",
+      "thread": {
+        "status": "none",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-10-24T08:00:00+00:00",
+          "event": "proposed by ideas routine"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-24-20",
+      "proposed_at": "2026-10-24",
+      "stream": "tg",
+      "rubric": "ancestors",
+      "title": "Греки Одеси: 12 000 імен у покажчиках метрик Свято-Троїцької церкви",
+      "summary": "Державний архів Одеської області видав іменні покажчики до метричних книг Грецької Свято-Троїцької церкви (частина за 1907–1920 рр. охоплює понад 12 000 парафіян); метричні книги Одещини 1780–1898 є на FamilySearch. Як шукати грецьких та болгарських предків і чого очікувати від записів.",
+      "why_now": "",
+      "sources": [
+        "https://repo.odmu.edu.ua/xmlui/handle/123456789/11464",
+        "https://archive.od.gov.ua/wp-content/old-files/PUBLIC/books/2009_greeks_06.pdf",
+        "https://www.familysearch.org/sv/search/collection/3754709"
+      ],
+      "images": [],
+      "status": "proposed",
+      "thread": {
+        "status": "none",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-10-24T08:00:00+00:00",
+          "event": "proposed by ideas routine"
+        }
+      ]
     }
   ]
 }
