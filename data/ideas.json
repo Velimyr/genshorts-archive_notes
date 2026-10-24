@@ -6227,8 +6227,8 @@
       "images": [],
       "status": "approved",
       "thread": {
-        "status": "requested",
-        "file": null
+        "status": "ready",
+        "file": "data/texts/2026-10-14-04/thread.md"
       },
       "script": {
         "status": "none",
@@ -6251,6 +6251,10 @@
         {
           "at": "2026-10-24T10:42:04+00:00",
           "event": "thread requested in telegram"
+        },
+        {
+          "at": "2026-10-24T10:45:47+00:00",
+          "event": "thread ready"
         }
       ]
     },
