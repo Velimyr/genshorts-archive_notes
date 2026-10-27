@@ -4547,13 +4547,18 @@
         "credit": "Tovel / Wikimedia Commons, CC BY-SA 4.0"
       },
       "approved_at": "2026-10-15T05:40:07+00:00",
-      "posted": false,
+      "posted": true,
       "publish_at": "2026-10-27T16:00:00+02:00",
       "attempts": 0,
       "test_id": "325",
       "test_permalink": "https://t.me/testvelimyr/325",
       "test_posted_at": "2026-10-27T14:00:25+00:00",
-      "main_at": "2026-10-27T18:27:00+02:00"
+      "main_at": "2026-10-27T18:27:00+02:00",
+      "posted_at": "2026-10-27T16:30:25+00:00",
+      "permalink": "https://t.me/archivist_notes/595",
+      "posted_ids": [
+        "595"
+      ]
     },
     "2026-10-15-13": {
       "sha": "04b8d0480a684e44",

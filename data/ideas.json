@@ -6339,9 +6339,10 @@
       ],
       "status": "approved",
       "thread": {
-        "status": "scheduled",
+        "status": "posted",
         "file": "data/texts/2026-10-14-05/thread.md",
-        "approved_sha": "0913ddfceb71c34a"
+        "approved_sha": "0913ddfceb71c34a",
+        "permalink": "https://t.me/archivist_notes/595"
       },
       "script": {
         "status": "none",
@@ -6398,6 +6399,10 @@
         {
           "at": "2026-10-27T14:00:25+00:00",
           "event": "telegram post published to test channel, main at 2026-10-27T18:27:00+02:00"
+        },
+        {
+          "at": "2026-10-27T16:30:25+00:00",
+          "event": "telegram post published to main channel"
         }
       ]
     },
