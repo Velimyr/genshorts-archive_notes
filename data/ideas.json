@@ -12096,6 +12096,37 @@
           "event": "proposed by ideas routine"
         }
       ]
+    },
+    {
+      "id": "2026-10-29-a01",
+      "proposed_at": "2026-10-29",
+      "stream": "big",
+      "origin": "author",
+      "title": "Чому не можна довіряти шляхетським родоводам на основі матеріалу https://www.fa…",
+      "summary": "Чому не можна довіряти шляхетським родоводам на основі матеріалу https://www.facebook.com/share/p/1HozET4urP/",
+      "why_now": "",
+      "sources": [],
+      "images": [],
+      "status": "approved",
+      "thread": {
+        "status": "requested",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-10-29T07:08:15+00:00",
+          "event": "author topic from telegram; thread requested"
+        }
+      ]
     }
   ]
 }
