@@ -12105,12 +12105,37 @@
       "title": "Чому не можна довіряти шляхетським родоводам на основі матеріалу https://www.fa…",
       "summary": "Чому не можна довіряти шляхетським родоводам на основі матеріалу https://www.facebook.com/share/p/1HozET4urP/",
       "why_now": "",
-      "sources": [],
-      "images": [],
+      "sources": [
+        "https://www.facebook.com/share/p/1HozET4urP/",
+        "https://nz.lviv.ua/archiv/2025-6/9.pdf",
+        "https://nz.lviv.ua/?p=14050",
+        "https://www.encyclopediaofukraine.com/pages%5CO%5CL%5COlyzar.htm",
+        "https://ru.wikisource.org/wiki/Жалованная_грамота_дворянству"
+      ],
+      "images": [
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/0/0d/Korona_Polska_Kaspra_Niesieckiego.png",
+          "page": "https://commons.wikimedia.org/wiki/File:Korona_Polska_Kaspra_Niesieckiego.png",
+          "credit": "Kasper Niesiecki, «Korona Polska», т. 3, Львів 1740, с. 505 / Wikimedia Commons, Public domain",
+          "license": "Public domain"
+        },
+        {
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7a/Portret_van_Narcyz_Olizar%2C_RP-P-1905-4245.jpg/1280px-Portret_van_Narcyz_Olizar%2C_RP-P-1905-4245.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Portret_van_Narcyz_Olizar,_RP-P-1905-4245.jpg",
+          "credit": "Портрет Нарциза Олізара, гравюра (Rijksmuseum) / Wikimedia Commons, CC0",
+          "license": "CC0"
+        },
+        {
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c3/Grave_of_Gustaw_Olizar_in_Dresden.jpg/1280px-Grave_of_Gustaw_Olizar_in_Dresden.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Grave_of_Gustaw_Olizar_in_Dresden.jpg",
+          "credit": "Невідомий автор, надгробок Густава Олізара в Дрездені / Wikimedia Commons, Public domain",
+          "license": "Public domain"
+        }
+      ],
       "status": "approved",
       "thread": {
-        "status": "requested",
-        "file": null
+        "status": "ready",
+        "file": "data/texts/2026-10-29-a01/thread.md"
       },
       "script": {
         "status": "none",
@@ -12125,6 +12150,10 @@
         {
           "at": "2026-10-29T07:08:15+00:00",
           "event": "author topic from telegram; thread requested"
+        },
+        {
+          "at": "2026-10-29T07:25:00+00:00",
+          "event": "thread ready"
         }
       ]
     }
