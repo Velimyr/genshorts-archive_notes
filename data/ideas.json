@@ -6030,6 +6030,10 @@
         {
           "at": "2026-10-23T09:49:18+00:00",
           "event": "thread auto-scheduled: 2026-11-02T10:28:00+02:00"
+        },
+        {
+          "at": "2026-11-01T04:06:21+00:00",
+          "event": "rescheduled by author (+1 day after GitHub outage): 2026-11-03T10:28:00+02:00"
         }
       ],
       "photo_request": false,
@@ -10404,6 +10408,10 @@
         {
           "at": "2026-10-23T09:31:12+00:00",
           "event": "thread auto-scheduled: 2026-11-01T12:21:00+02:00"
+        },
+        {
+          "at": "2026-11-01T04:06:21+00:00",
+          "event": "rescheduled by author (+1 day after GitHub outage): 2026-11-02T12:21:00+02:00"
         }
       ],
       "images_excluded": [
@@ -10528,6 +10536,10 @@
         {
           "at": "2026-10-23T09:55:55+00:00",
           "event": "thread auto-scheduled: 2026-11-03T12:38:00+02:00"
+        },
+        {
+          "at": "2026-11-01T04:06:21+00:00",
+          "event": "rescheduled by author (+1 day after GitHub outage): 2026-11-04T12:38:00+02:00"
         }
       ]
     },
@@ -11084,6 +11096,10 @@
         {
           "at": "2026-10-23T10:38:53+00:00",
           "event": "thread auto-scheduled: 2026-11-04T09:21:00+02:00"
+        },
+        {
+          "at": "2026-11-01T04:06:21+00:00",
+          "event": "rescheduled by author (+1 day after GitHub outage): 2026-11-05T09:21:00+02:00"
         }
       ],
       "images_excluded": [],
