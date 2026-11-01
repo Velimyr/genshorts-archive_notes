@@ -10629,8 +10629,8 @@
       ],
       "status": "approved",
       "thread": {
-        "status": "requested",
-        "file": null
+        "status": "ready",
+        "file": "data/texts/2026-10-20-06/thread.md"
       },
       "script": {
         "status": "none",
@@ -10653,6 +10653,10 @@
         {
           "at": "2026-11-01T10:06:17+00:00",
           "event": "thread requested in telegram"
+        },
+        {
+          "at": "2026-11-01T10:09:01+00:00",
+          "event": "thread ready"
         }
       ]
     },
