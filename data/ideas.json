@@ -12592,7 +12592,7 @@
         "https://uk.wikipedia.org/wiki/Хутір"
       ],
       "images": [],
-      "status": "proposed",
+      "status": "approved",
       "thread": {
         "status": "none",
         "file": null
@@ -12610,6 +12610,10 @@
         {
           "at": "2026-11-02T09:00:00+00:00",
           "event": "proposed by ideas routine"
+        },
+        {
+          "at": "2026-11-02T09:33:19+00:00",
+          "event": "idea approved in telegram"
         }
       ]
     }
