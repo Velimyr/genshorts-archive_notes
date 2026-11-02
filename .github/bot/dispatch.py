@@ -418,6 +418,18 @@ class Bot:
     def close_buttons(self, message_id: int, label: str) -> None:
         tg("editMessageReplyMarkup", chat_id=CHAT_ID, message_id=message_id, reply_markup=kb([(label, "noop")]))
 
+    def mark_publishing(self, item: dict, message_id: int, label: str = "⏳ Публікується…") -> None:
+        """Замість кнопок — статус; після виходу publish_done замінить його на посилання."""
+        self.close_buttons(message_id, label)
+        item["status_mid"] = message_id
+
+    def publish_done(self, item: dict, permalink: str) -> None:
+        message_id = item.pop("status_mid", None)
+        if message_id:
+            markup = ({"inline_keyboard": [[{"text": "✅ Опубліковано — відкрити", "url": permalink}]]} if permalink
+                      else kb([("✅ Опубліковано", "noop")]))
+            tg("editMessageReplyMarkup", chat_id=CHAT_ID, message_id=message_id, reply_markup=markup)
+
     def thread_text(self, idea: dict) -> str | None:
         path = idea.get("thread", {}).get("file")
         if path and (ROOT / path).is_file():
@@ -988,7 +1000,7 @@ class Bot:
                 self.state["approved_threads"][idea["id"]].update(topic="", image=None, publish_at=now())
                 idea["thread"]["status"] = "scheduled"
                 history(idea, "provocation published manually")
-                self.close_buttons(mid, "⚡ Публікую зараз")
+                self.mark_publishing(self.state["approved_threads"][idea["id"]], mid)
                 return
             idea["thread"]["status"] = "queued"
             history(idea, "thread approved for Threads, awaiting time")
@@ -1011,17 +1023,20 @@ class Bot:
                 if parts[2] == "now":
                     item["main_at"] = now()
                     history(idea, "telegram main channel: publish now")
-                    self.close_buttons(mid, "⚡ Публікую в основний канал")
+                    self.mark_publishing(item, mid, "⏳ Публікується в основний канал…")
                 return
             if parts[2] == "now":
                 item["publish_at"] = now()
-                label = "⚡ Публікую зараз"
+                label = "⏳ Публікується…"
             else:
                 item["publish_at"] = datetime.fromtimestamp(int(parts[2]), KYIV).isoformat()
                 label = f"🕒 {fmt_slot(parse_time(item['publish_at']))}"
             idea["thread"]["status"] = "scheduled"
             history(idea, f"thread scheduled: {item['publish_at']}")
-            self.close_buttons(mid, label)
+            if parts[2] == "now":
+                self.mark_publishing(item, mid, "⏳ Публікується в тестовий канал…" if self.category(idea) == "T" else label)
+            else:
+                self.close_buttons(mid, label)
             if parts[2] != "now":
                 self.send(f"🕒 «{idea['title']}» заплановано на {label[2:]}. Змінити чи зняти — у 📋 Черга.")
         elif action == "unq":
@@ -1312,6 +1327,8 @@ class Bot:
                          "main_at": tg_main_slot(datetime.now(KYIV)).isoformat()})
             if idea_id in self.ideas:
                 history(self.ideas[idea_id], f"telegram post published to test channel, main at {item['main_at']}")
+            if item.get("status_mid"):
+                self.close_buttons(item["status_mid"], f"🧪 У тестовому · основний {fmt_slot(parse_time(item['main_at']))}")
             self.send(f"🧪 Допис у тестовому каналі: «{idea['title']}»\n{permalink}\n\n"
                       f"🕒 В основний канал — {fmt_slot(parse_time(item['main_at']))}.",
                       kb([("⚡ В основний зараз", f"when:{idea_id}:now")]), {"kind": "when"})
@@ -1321,6 +1338,7 @@ class Bot:
             self.ideas[idea_id]["thread"]["status"] = "posted"
             self.ideas[idea_id]["thread"]["permalink"] = permalink
             history(self.ideas[idea_id], "telegram post published to main channel")
+        self.publish_done(item, permalink)
         self.send(f"✅ Telegram-допис опубліковано в основному каналі: «{idea['title']}»\n{permalink}")
 
     def publish_queued(self):
@@ -1402,6 +1420,7 @@ class Bot:
                 self.ideas[idea_id]["thread"]["status"] = "posted"
                 self.ideas[idea_id]["thread"]["permalink"] = permalink
                 history(self.ideas[idea_id], f"thread posted to Threads ({len(posted)} posts)")
+            self.publish_done(item, permalink)
             self.send(f"✅ Опубліковано в Threads: «{idea['title']}» ({len(posted)} постів)\n{permalink}",
                       kb([("📣 Ще публікація", "go:publish")]), {"kind": "nav"})
             return
