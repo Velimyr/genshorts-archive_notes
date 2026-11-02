@@ -72,6 +72,13 @@ THREADS_POST_LIMIT = 500
 KYIV = ZoneInfo("Europe/Kyiv")
 DEFAULT_TAG = "Генеалогія"  # стандартна тема поста в Threads
 STALE_AFTER = timedelta(minutes=30)  # незавершена робота без запуску задачі довше — перезапуск
+ANALYTICS_EVERY = timedelta(hours=3)  # як часто оновлювати статистику Threads
+DAY_HOURS = (7, 23)  # коли диспетчер прокидається на планові справи (аналітика), за Києвом
+# Хвилини GitHub Actions округлюються вгору до цілої хвилини, тож після роботи диспетчер
+# ще чекає нові натискання до кінця вже оплаченої хвилини (крім часу на коміт і пуш).
+JOB_STARTED_AT = float(os.environ.get("JOB_STARTED_AT") or time.time())
+LINGER_MARGIN = 20  # секунд лишаємо на збереження стану й запуск задач після скрипта
+LINGER_POLL = 5  # як часто перевіряти чергу натискань, секунд
 MENU_VERSION = 3
 MENU_BUTTONS = {"💡 Ідеї": "/ideas", "✍️ Тексти": "/texts", "📣 Публікація": "/publish", "📋 Черга": "/queue",
                 "📰 TG-черга": "/tgqueue", "📤 Опубліковані": "/published"}
@@ -388,6 +395,7 @@ class Bot:
         for key, default in (("offset", 0), ("sent", {}), ("messages", {}), ("approved_threads", {}), ("asked", {})):
             self.state.setdefault(key, default)
         self.fire = {}  # routine -> set(ids)
+        self.acked = set()  # оновлення з черги воркера, які можна підтвердити після пушу
 
     # ------------------------------------------------------------ відправка
 
@@ -409,6 +417,18 @@ class Bot:
 
     def close_buttons(self, message_id: int, label: str) -> None:
         tg("editMessageReplyMarkup", chat_id=CHAT_ID, message_id=message_id, reply_markup=kb([(label, "noop")]))
+
+    def mark_publishing(self, item: dict, message_id: int, label: str = "⏳ Публікується…") -> None:
+        """Замість кнопок — статус; після виходу publish_done замінить його на посилання."""
+        self.close_buttons(message_id, label)
+        item["status_mid"] = message_id
+
+    def publish_done(self, item: dict, permalink: str) -> None:
+        message_id = item.pop("status_mid", None)
+        if message_id:
+            markup = ({"inline_keyboard": [[{"text": "✅ Опубліковано — відкрити", "url": permalink}]]} if permalink
+                      else kb([("✅ Опубліковано", "noop")]))
+            tg("editMessageReplyMarkup", chat_id=CHAT_ID, message_id=message_id, reply_markup=markup)
 
     def thread_text(self, idea: dict) -> str | None:
         path = idea.get("thread", {}).get("file")
@@ -980,7 +1000,7 @@ class Bot:
                 self.state["approved_threads"][idea["id"]].update(topic="", image=None, publish_at=now())
                 idea["thread"]["status"] = "scheduled"
                 history(idea, "provocation published manually")
-                self.close_buttons(mid, "⚡ Публікую зараз")
+                self.mark_publishing(self.state["approved_threads"][idea["id"]], mid)
                 return
             idea["thread"]["status"] = "queued"
             history(idea, "thread approved for Threads, awaiting time")
@@ -1003,17 +1023,20 @@ class Bot:
                 if parts[2] == "now":
                     item["main_at"] = now()
                     history(idea, "telegram main channel: publish now")
-                    self.close_buttons(mid, "⚡ Публікую в основний канал")
+                    self.mark_publishing(item, mid, "⏳ Публікується в основний канал…")
                 return
             if parts[2] == "now":
                 item["publish_at"] = now()
-                label = "⚡ Публікую зараз"
+                label = "⏳ Публікується…"
             else:
                 item["publish_at"] = datetime.fromtimestamp(int(parts[2]), KYIV).isoformat()
                 label = f"🕒 {fmt_slot(parse_time(item['publish_at']))}"
             idea["thread"]["status"] = "scheduled"
             history(idea, f"thread scheduled: {item['publish_at']}")
-            self.close_buttons(mid, label)
+            if parts[2] == "now":
+                self.mark_publishing(item, mid, "⏳ Публікується в тестовий канал…" if self.category(idea) == "T" else label)
+            else:
+                self.close_buttons(mid, label)
             if parts[2] != "now":
                 self.send(f"🕒 «{idea['title']}» заплановано на {label[2:]}. Змінити чи зняти — у 📋 Черга.")
         elif action == "unq":
@@ -1304,6 +1327,8 @@ class Bot:
                          "main_at": tg_main_slot(datetime.now(KYIV)).isoformat()})
             if idea_id in self.ideas:
                 history(self.ideas[idea_id], f"telegram post published to test channel, main at {item['main_at']}")
+            if item.get("status_mid"):
+                self.close_buttons(item["status_mid"], f"🧪 У тестовому · основний {fmt_slot(parse_time(item['main_at']))}")
             self.send(f"🧪 Допис у тестовому каналі: «{idea['title']}»\n{permalink}\n\n"
                       f"🕒 В основний канал — {fmt_slot(parse_time(item['main_at']))}.",
                       kb([("⚡ В основний зараз", f"when:{idea_id}:now")]), {"kind": "when"})
@@ -1313,6 +1338,7 @@ class Bot:
             self.ideas[idea_id]["thread"]["status"] = "posted"
             self.ideas[idea_id]["thread"]["permalink"] = permalink
             history(self.ideas[idea_id], "telegram post published to main channel")
+        self.publish_done(item, permalink)
         self.send(f"✅ Telegram-допис опубліковано в основному каналі: «{idea['title']}»\n{permalink}")
 
     def publish_queued(self):
@@ -1394,6 +1420,7 @@ class Bot:
                 self.ideas[idea_id]["thread"]["status"] = "posted"
                 self.ideas[idea_id]["thread"]["permalink"] = permalink
                 history(self.ideas[idea_id], f"thread posted to Threads ({len(posted)} posts)")
+            self.publish_done(item, permalink)
             self.send(f"✅ Опубліковано в Threads: «{idea['title']}» ({len(posted)} постів)\n{permalink}",
                       kb([("📣 Ще публікація", "go:publish")]), {"kind": "nav"})
             return
@@ -1424,11 +1451,11 @@ class Bot:
         return None
 
     def collect_analytics(self) -> None:
-        """Раз на годину: список постів акаунта й статистика; зрізи через 24 год, 3 і 7 днів."""
+        """Раз на ANALYTICS_EVERY: список постів акаунта й статистика; зрізи через 24 год, 3 і 7 днів."""
         if not (THREADS_TOKEN and THREADS_USER_ID):
             return
         last = self.state.get("analytics_at")
-        if last and datetime.now(timezone.utc) - parse_time(last) < timedelta(minutes=50):
+        if last and datetime.now(timezone.utc) - parse_time(last) < ANALYTICS_EVERY - timedelta(minutes=10):
             return
         self.state["analytics_at"] = now()
         data = load_json(ANALYTICS_FILE, {"posts": {}})
@@ -1534,9 +1561,11 @@ class Bot:
         self.state["reminded_slots"] = reminded[-50:]
 
     def next_due(self) -> int:
-        """Найближчий момент, коли воркер має розбудити диспетчер: публікація чи нагадування."""
+        """Найближчий момент, коли воркер має розбудити диспетчер: публікація, нагадування,
+        ранкові питання, аналітика, тижневий звіт чи перезапуск задачі. Щогодинних запусків немає."""
         current = datetime.now(KYIV)
         moments = [m for m, _, _ in self.scheduled() if m > current]
+        moments += self.planned_moments(current)
         busy = [m for m, _ in self.bot_publications()]
         reminded = set(self.state.get("reminded_slots", []))
         tg_taken = {m.astimezone(KYIV).date() for m, _ in self.bot_publications(channel="tg")}
@@ -1549,6 +1578,35 @@ class Bot:
             if slot.isoformat() not in reminded and slot - REMIND_BEFORE > current:
                 moments.append(slot - REMIND_BEFORE)
         return int(min(moments).timestamp()) if moments else 0
+
+    def planned_moments(self, current: datetime) -> list[datetime]:
+        """Планові справи, які раніше чекали щогодинного запуску."""
+        moments = []
+        for name, hour in ASK_AT.items():  # питання про ідеї й тексти
+            day = current.date() if self.state["asked"].get(name) != current.date().isoformat() else \
+                current.date() + timedelta(days=1)
+            moments.append(datetime(day.year, day.month, day.day, hour, 0, tzinfo=KYIV))
+        days_to_report = (REPORT_AT[0] - current.weekday()) % 7  # тижневий звіт
+        report = datetime.combine(current.date() + timedelta(days=days_to_report),
+                                  datetime.min.time(), KYIV).replace(hour=REPORT_AT[1])
+        if report <= current and self.state.get("report_week") == current.strftime("%G-%V"):
+            report += timedelta(days=7)
+        moments.append(report)
+        if THREADS_TOKEN and THREADS_USER_ID:  # аналітика — лише вдень
+            last = self.state.get("analytics_at")
+            at = (parse_time(last) + ANALYTICS_EVERY).astimezone(KYIV) if last else current
+            if not DAY_HOURS[0] <= at.hour < DAY_HOURS[1]:
+                day = at.date() if at.hour < DAY_HOURS[0] else at.date() + timedelta(days=1)
+                at = datetime(day.year, day.month, day.day, DAY_HOURS[0], 5, tzinfo=KYIV)
+            moments.append(at)
+        fired = self.state.get("fired_at", {})  # незавершена робота задач — перевірити, чи не зависла
+        busy = {"texts": any(i.get("thread", {}).get("status") in ("requested", "revise") or i.get("photo_request")
+                             for i in self.ideas.values()),
+                "ideas": any(r.get("status") == "pending" for r in self.requests.get("ideas", []))}
+        for name, has_work in busy.items():
+            if has_work and fired.get(name):
+                moments.append(parse_time(fired[name]).astimezone(KYIV) + STALE_AFTER + timedelta(minutes=2))
+        return [m for m in moments if m > current]
 
     def send_slot_proposal(self) -> None:
         """Пропозиція аналітики змінити години публікацій — лише з погодження автора."""
@@ -1670,11 +1728,10 @@ class Bot:
         for update in queue_call("GET", "/pending"):
             found[update["update_id"]] = update
         done = set(self.state.setdefault("processed", []))
-        save_json(ACK_FILE, sorted(found))
+        self.acked.update(found)
         return [found[i] for i in sorted(found) if i not in done]
 
-    def run(self) -> int:
-        updates = self.collect_updates()
+    def handle(self, updates: list[dict]) -> None:
         for update in updates:
             self.state.setdefault("processed", []).append(update["update_id"])
             self.state["processed"] = self.state["processed"][-500:]
@@ -1682,6 +1739,53 @@ class Bot:
                 self.on_callback(update["callback_query"])
             elif "message" in update:
                 self.on_message(update["message"])
+
+    def take_pending(self) -> int:
+        """Забирає з черги воркера ще не оброблені натискання й одразу на них відповідає."""
+        done = set(self.state.get("processed", []))
+        fresh = sorted((u for u in queue_call("GET", "/pending") if u["update_id"] not in done),
+                       key=lambda u: u["update_id"])
+        self.acked.update(u["update_id"] for u in fresh)
+        if fresh:
+            self.handle(fresh)
+            self.publish_queued()  # «⚡ Опублікувати зараз»
+            self.send_ready_threads()  # текст після точкової правки
+        return len(fresh)
+
+    def linger(self) -> int:
+        """До кінця вже оплаченої хвилини Actions забирає нові натискання з черги й одразу
+        відповідає на них. Поки диспетчер чекає, воркер не створює нових запусків (/live).
+        Зупиняється, щойно треба запустити хмарну задачу: вона клонує репозиторій і має
+        побачити збережений стан."""
+        if not (QUEUE_URL and QUEUE_SECRET):
+            return 0
+        handled, announced = 0, 0
+        try:
+            while not self.fire:
+                elapsed = time.time() - JOB_STARTED_AT
+                stop = JOB_STARTED_AT + max(1, -(-(elapsed + LINGER_MARGIN) // 60)) * 60 - LINGER_MARGIN
+                if stop - time.time() < LINGER_POLL + 1:
+                    break
+                if stop != announced:
+                    queue_call("POST", "/live", {"until": int(stop)})
+                    announced = stop
+                time.sleep(LINGER_POLL)
+                handled += self.take_pending()
+        except (urllib.error.URLError, OSError, ValueError) as exc:
+            print(f"[linger] {exc}")
+        if announced:
+            try:
+                queue_call("POST", "/live", {"until": 0})  # нові натискання знову запускають диспетчер
+                handled += self.take_pending()  # що прийшло, поки диспетчер завершував чекати
+                # Воркер звірить: якщо пропущене натискання новіше за побачені — запустить диспетчер.
+                queue_call("POST", "/live", {"until": 0, "seen": max(self.state.get("processed") or [0])})
+            except (urllib.error.URLError, OSError, ValueError) as exc:
+                print(f"[linger] {exc}")
+        return handled
+
+    def run(self) -> int:
+        updates = self.collect_updates()
+        self.handle(updates)
 
         self.ensure_menu()
         self.publish_queued()
@@ -1697,6 +1801,9 @@ class Bot:
         self.weekly_report()
 
         self.revive_stale_work()
+        lingered = self.linger()
+        if QUEUE_URL and QUEUE_SECRET:
+            save_json(ACK_FILE, sorted(self.acked))
         save_json(IDEAS_FILE, self.ideas_doc)
         save_json(REQUESTS_FILE, self.requests)
         save_json(STRESS_FILE, self.stress)
@@ -1707,7 +1814,7 @@ class Bot:
                 queue_call("POST", "/due", {"at": self.next_due()})
             except (urllib.error.URLError, ValueError) as exc:
                 print(f"[due] {exc}")
-        print(f"[dispatch] updates: {len(updates)}, to fire: {sorted(self.fire)}")
+        print(f"[dispatch] updates: {len(updates)} + {lingered} while waiting, to fire: {sorted(self.fire)}")
         return 0
 
 
