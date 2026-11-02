@@ -12363,7 +12363,7 @@
         "https://uk.wikipedia.org/wiki/Параскева_П'ятниця"
       ],
       "images": [],
-      "status": "proposed",
+      "status": "rejected",
       "thread": {
         "status": "none",
         "file": null
@@ -12381,6 +12381,10 @@
         {
           "at": "2026-11-02T09:00:00+00:00",
           "event": "proposed by ideas routine"
+        },
+        {
+          "at": "2026-11-02T09:32:16+00:00",
+          "event": "idea rejected in telegram"
         }
       ]
     },
