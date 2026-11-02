@@ -78,7 +78,7 @@ DAY_HOURS = (7, 23)  # коли диспетчер прокидається на
 # ще чекає нові натискання до кінця вже оплаченої хвилини (крім часу на коміт і пуш).
 JOB_STARTED_AT = float(os.environ.get("JOB_STARTED_AT") or time.time())
 LINGER_MARGIN = 20  # секунд лишаємо на збереження стану й запуск задач після скрипта
-LINGER_POLL = 5  # як часто перевіряти чергу натискань, секунд
+LINGER_POLL = 2.5  # як часто перевіряти чергу натискань, секунд
 MENU_VERSION = 3
 MENU_BUTTONS = {"💡 Ідеї": "/ideas", "✍️ Тексти": "/texts", "📣 Публікація": "/publish", "📋 Черга": "/queue",
                 "📰 TG-черга": "/tgqueue", "📤 Опубліковані": "/published"}
@@ -396,6 +396,7 @@ class Bot:
             self.state.setdefault(key, default)
         self.fire = {}  # routine -> set(ids)
         self.acked = set()  # оновлення з черги воркера, які можна підтвердити після пушу
+        self.announced = 0  # до якого моменту диспетчер пообіцяв воркеру опитувати чергу (/live)
 
     # ------------------------------------------------------------ відправка
 
@@ -1752,6 +1753,19 @@ class Bot:
             self.send_ready_threads()  # текст після точкової правки
         return len(fresh)
 
+    def announce_live(self) -> float:
+        """Каже воркеру, до якого моменту диспетчер опитуватиме чергу (кінець уже оплаченої
+        хвилини мінус час на коміт і пуш), щоб нові натискання не створювали запусків.
+        0 — чекати вже ніколи."""
+        elapsed = time.time() - JOB_STARTED_AT
+        stop = JOB_STARTED_AT + max(1, -(-(elapsed + LINGER_MARGIN) // 60)) * 60 - LINGER_MARGIN
+        if stop - time.time() < LINGER_POLL + 1:
+            return 0
+        if stop != self.announced:
+            queue_call("POST", "/live", {"until": int(stop)})
+            self.announced = stop
+        return stop
+
     def linger(self) -> int:
         """До кінця вже оплаченої хвилини Actions забирає нові натискання з черги й одразу
         відповідає на них. Поки диспетчер чекає, воркер не створює нових запусків (/live).
@@ -1759,21 +1773,15 @@ class Bot:
         побачити збережений стан."""
         if not (QUEUE_URL and QUEUE_SECRET):
             return 0
-        handled, announced = 0, 0
+        handled = 0
         try:
-            while not self.fire:
-                elapsed = time.time() - JOB_STARTED_AT
-                stop = JOB_STARTED_AT + max(1, -(-(elapsed + LINGER_MARGIN) // 60)) * 60 - LINGER_MARGIN
-                if stop - time.time() < LINGER_POLL + 1:
-                    break
-                if stop != announced:
-                    queue_call("POST", "/live", {"until": int(stop)})
-                    announced = stop
-                time.sleep(LINGER_POLL)
-                handled += self.take_pending()
+            while not self.fire and self.announce_live():
+                handled += self.take_pending()  # спершу — що прийшло, поки йшла основна робота
+                if not self.fire:
+                    time.sleep(LINGER_POLL)
         except (urllib.error.URLError, OSError, ValueError) as exc:
             print(f"[linger] {exc}")
-        if announced:
+        if self.announced:
             try:
                 queue_call("POST", "/live", {"until": 0})  # нові натискання знову запускають диспетчер
                 handled += self.take_pending()  # що прийшло, поки диспетчер завершував чекати
@@ -1785,6 +1793,11 @@ class Bot:
 
     def run(self) -> int:
         updates = self.collect_updates()
+        if QUEUE_URL and QUEUE_SECRET:
+            try:  # одразу: натискання під час основної роботи підхопить цей же запуск
+                self.announce_live()
+            except (urllib.error.URLError, OSError, ValueError) as exc:
+                print(f"[linger] {exc}")
         self.handle(updates)
 
         self.ensure_menu()
