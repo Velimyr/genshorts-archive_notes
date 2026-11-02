@@ -12437,7 +12437,7 @@
         "https://www.radiosvoboda.org/a/the-strange-portrait-photo-trend-in-tsarist-russia-to-pose-in-canvas-boats-cars-and-planes/30404654.html"
       ],
       "images": [],
-      "status": "proposed",
+      "status": "approved",
       "thread": {
         "status": "none",
         "file": null
@@ -12455,6 +12455,10 @@
         {
           "at": "2026-11-02T09:00:00+00:00",
           "event": "proposed by ideas routine"
+        },
+        {
+          "at": "2026-11-02T09:32:41+00:00",
+          "event": "idea approved in telegram"
         }
       ]
     },
@@ -12470,7 +12474,7 @@
         "https://ru.wikipedia.org/wiki/Брачный_возраст"
       ],
       "images": [],
-      "status": "proposed",
+      "status": "approved",
       "thread": {
         "status": "none",
         "file": null
@@ -12488,6 +12492,10 @@
         {
           "at": "2026-11-02T09:00:00+00:00",
           "event": "proposed by ideas routine"
+        },
+        {
+          "at": "2026-11-02T09:32:41+00:00",
+          "event": "idea approved in telegram"
         }
       ]
     },
@@ -12510,7 +12518,7 @@
           "license": "Public domain"
         }
       ],
-      "status": "proposed",
+      "status": "approved",
       "thread": {
         "status": "none",
         "file": null
@@ -12528,6 +12536,10 @@
         {
           "at": "2026-11-02T09:00:00+00:00",
           "event": "proposed by ideas routine"
+        },
+        {
+          "at": "2026-11-02T09:32:42+00:00",
+          "event": "idea approved in telegram"
         }
       ]
     },
