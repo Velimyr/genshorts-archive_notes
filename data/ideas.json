@@ -8790,9 +8790,10 @@
       "images": [],
       "status": "approved",
       "thread": {
-        "status": "approved",
+        "status": "posted",
         "file": "data/texts/2026-10-17-08/thread.md",
-        "approved_sha": "5eb64d9c6670cc8c"
+        "approved_sha": "5eb64d9c6670cc8c",
+        "permalink": "https://www.threads.com/@velimyr/post/DfQM6-mEqQW"
       },
       "script": {
         "status": "none",
@@ -8835,6 +8836,14 @@
         {
           "at": "2026-11-02T20:48:08+00:00",
           "event": "thread text approved in telegram"
+        },
+        {
+          "at": "2026-11-02T20:48:39+00:00",
+          "event": "provocation published manually"
+        },
+        {
+          "at": "2026-11-02T20:49:30+00:00",
+          "event": "thread posted to Threads (3 posts)"
         }
       ]
     },
