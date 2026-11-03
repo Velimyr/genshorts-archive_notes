@@ -7348,6 +7348,10 @@
         {
           "at": "2026-10-15T08:05:24+00:00",
           "event": "thread auto-scheduled: 2026-11-03T16:00:00+02:00"
+        },
+        {
+          "at": "2026-11-03T14:00:25+00:00",
+          "event": "telegram post published to test channel, main at 2026-11-03T17:54:00+02:00"
         }
       ],
       "images_excluded": [
