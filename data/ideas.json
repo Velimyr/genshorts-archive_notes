@@ -6002,9 +6002,10 @@
       ],
       "status": "approved",
       "thread": {
-        "status": "scheduled",
+        "status": "posted",
         "file": "data/texts/2026-10-11-10/thread.md",
-        "approved_sha": "985ebb29ef6afaec"
+        "approved_sha": "985ebb29ef6afaec",
+        "permalink": "https://www.threads.com/@velimyr/post/DfRdOyDG0JP"
       },
       "script": {
         "status": "none",
@@ -6055,6 +6056,10 @@
         {
           "at": "2026-11-01T04:06:21+00:00",
           "event": "rescheduled by author (+1 day after GitHub outage): 2026-11-03T10:28:00+02:00"
+        },
+        {
+          "at": "2026-11-03T08:33:18+00:00",
+          "event": "thread posted to Threads (9 posts)"
         }
       ],
       "photo_request": false,
