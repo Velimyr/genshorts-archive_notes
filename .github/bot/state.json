@@ -4821,13 +4821,18 @@
       "topic": "",
       "image": null,
       "approved_at": "2026-10-15T08:05:23+00:00",
-      "posted": false,
+      "posted": true,
       "publish_at": "2026-11-03T16:00:00+02:00",
       "attempts": 0,
       "test_id": "327",
       "test_permalink": "https://t.me/testvelimyr/327",
       "test_posted_at": "2026-11-03T14:00:25+00:00",
-      "main_at": "2026-11-03T17:54:00+02:00"
+      "main_at": "2026-11-03T17:54:00+02:00",
+      "posted_at": "2026-11-03T15:55:27+00:00",
+      "permalink": "https://t.me/archivist_notes/600",
+      "posted_ids": [
+        "600"
+      ]
     },
     "2026-10-15-19": {
       "sha": "e6b0d84b399cab8b",
