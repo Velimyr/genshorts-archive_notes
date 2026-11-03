@@ -12656,6 +12656,37 @@
           "event": "idea approved in telegram"
         }
       ]
+    },
+    {
+      "id": "2026-11-03-a01",
+      "proposed_at": "2026-11-03",
+      "stream": "provoke",
+      "origin": "author",
+      "title": "Кожен поважаючий себе генеалог мусить мати добірку  написаних ним статей чи від…",
+      "summary": "Кожен поважаючий себе генеалог мусить мати добірку  написаних ним статей чи відео на тему \"як почати\" генеалогічне дослідження. Але я вирішив піти далі. От вам покрокова інструкція як закінчити досліжження. (спойлер - ніяк, скоріше закінчитеся ви)",
+      "why_now": "",
+      "sources": [],
+      "images": [],
+      "status": "approved",
+      "thread": {
+        "status": "requested",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-11-03T19:05:57+00:00",
+          "event": "author topic from telegram; thread requested"
+        }
+      ]
     }
   ]
 }
