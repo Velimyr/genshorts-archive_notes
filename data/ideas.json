@@ -11409,7 +11409,7 @@
       ],
       "status": "approved",
       "thread": {
-        "status": "none",
+        "status": "requested",
         "file": null
       },
       "script": {
@@ -11429,6 +11429,10 @@
         {
           "at": "2026-10-23T10:13:23+00:00",
           "event": "idea approved in telegram"
+        },
+        {
+          "at": "2026-11-04T21:02:33+00:00",
+          "event": "thread requested in telegram"
         }
       ]
     },
