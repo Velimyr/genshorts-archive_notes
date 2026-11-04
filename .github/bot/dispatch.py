@@ -596,9 +596,68 @@ class Bot:
             rows.append([(f"🔄 Інші фото ({count})", f"photos:{iid}:more") if count
                          else ("🖼 Знайти фото", f"photos:{iid}"),
                          ("🔎 Фото за словами", f"photokw:{iid}")])
+        if self.format_changeable(idea):
+            rows.append([("🔀 Змінити формат", f"fmt:{iid}")])
         if thread not in ("posted", "cancelled") and idea.get("status") != "cancelled":
             rows.append([("🗑 Скасувати тему", f"drop:{iid}")])
         self.send("\n".join(lines), kb(*rows) if rows else None, {"kind": "item", "idea": iid})
+
+    def format_changeable(self, idea: dict) -> bool:
+        """Формат (потік) можна змінити, поки тред не пишеться, не в розкладі й не опублікований."""
+        thread = idea.get("thread", {}).get("status", "none")
+        item = self.state["approved_threads"].get(idea["id"], {})
+        if idea.get("status") == "cancelled" or item.get("posted_ids") or item.get("test_id"):
+            return False
+        return thread in ("none", "ready", "approved") or (thread == "queued" and item.get("publish_at") == "pending")
+
+    def ask_format(self, idea: dict) -> None:
+        thread = idea.get("thread", {}).get("status", "none")
+        if thread in ("requested", "revise"):
+            self.send(f"✍️ «{idea['title']}» зараз пишеться. Змінити формат можна, щойно текст прийде.")
+            return
+        if thread == "scheduled":
+            self.send(f"🕒 «{idea['title']}» уже в розкладі. Щоб змінити формат, спершу зніміть тред з розкладу "
+                      "(↩️ у картці теми).")
+            return
+        if not self.format_changeable(idea):
+            self.send(f"Формат «{idea['title']}» вже не змінити: тред опубліковано або тему скасовано.")
+            return
+        rows = [[(stream_label(s), f"fmtset:{idea['id']}:{s}")] for s in STREAMS if s != idea.get("stream")]
+        rewrite = "" if thread == "none" else "\nТред буде переписано під новий формат, і його треба буде погодити ще раз."
+        self.send(f"🔀 Зараз: {stream_label(idea.get('stream'))}. На який формат змінити «{idea['title']}»?{rewrite}",
+                  kb(*rows, [("❌ Скасувати", "cancel")]), {"kind": "format", "idea": idea["id"]})
+
+    def change_format(self, idea: dict, stream: str) -> str:
+        """Міняє потік ідеї; написаний тред іде на переписування під новий формат. Повертає підпис кнопки."""
+        old = idea.get("stream")
+        if stream not in STREAMS or stream == old:
+            return "Формат не змінено"
+        if not self.format_changeable(idea):
+            return "Формат уже не змінити"
+        thread = idea.setdefault("thread", {"status": "none"})
+        idea["stream"] = stream
+        history(idea, f"stream changed in telegram: {old} → {stream}")
+        if thread.get("status", "none") == "none":
+            self.send(f"🔀 «{idea['title']}»: тепер {stream_label(stream)}.",
+                      kb([("✍️ Написати тред", f"write:{idea['id']}")]), {"kind": "item", "idea": idea["id"]})
+            return f"✅ {stream_label(stream)}"
+        # Попередній текст більше не актуальний: знімаємо його кнопки й чергу без часу.
+        for key, message_id in list(self.state["sent"].items()):
+            if key.startswith(f"thread:{idea['id']}:") and message_id:
+                try:
+                    self.close_buttons(message_id, "🔀 Формат змінено")
+                except SystemExit:
+                    pass
+        self.state["approved_threads"].pop(idea["id"], None)
+        thread.pop("approved_sha", None)
+        thread["status"] = "revise"
+        idea.setdefault("revisions", []).append({
+            "kind": "format", "at": now(),
+            "text": f"Автор змінив формат з «{stream_label(old)}» на «{stream_label(stream)}». "
+                    f"Перепиши тред повністю з нуля за правилами потоку `{stream}`."})
+        self.fire.setdefault("texts", set()).add(idea["id"])
+        self.send(f"🔀 «{idea['title']}»: тепер {stream_label(stream)}. Переписую тред — нова версія прийде сюди.")
+        return f"✅ {stream_label(stream)}"
 
     def request_photos(self, idea: dict, more: bool = False, keywords: str = "") -> None:
         """Запит на пошук фото; «інші» й пошук за словами виключають уже показані фото."""
@@ -1135,6 +1194,14 @@ class Bot:
             self.state["approved_threads"].pop(idea["id"], None)
             history(idea, "cancelled by author in telegram")
             self.close_buttons(mid, "🗑 Тему скасовано")
+        elif action == "fmt":
+            idea = self.ideas.get(parts[1])
+            if idea:
+                self.ask_format(idea)
+        elif action == "fmtset":
+            idea = self.ideas.get(parts[1])
+            if idea:
+                self.close_buttons(mid, self.change_format(idea, parts[2]))
         elif action == "cancel":
             self.close_buttons(mid, "Скасовано")
 
@@ -1277,7 +1344,8 @@ class Bot:
             f"{stream_label(idea.get('stream'))} · тред — «{idea['title']}»\n\n{body}{warning}\n\n"
             + edit_hint("побажання своїми словами (напр. «скороти вступ») — текст доопрацюють, "
                         "змінивши лише потрібне місце."),
-            kb([("✅ Готово", f"done:{idea['id']}"), ("🗑 Скасувати тему", f"drop:{idea['id']}")]),
+            kb([("✅ Готово", f"done:{idea['id']}"), ("🔀 Змінити формат", f"fmt:{idea['id']}")],
+               [("🗑 Скасувати тему", f"drop:{idea['id']}")]),
             {"kind": "thread", "idea": idea["id"], "sha": sha(body)})
 
     def publish_tg(self, idea_id: str, item: dict) -> None:
