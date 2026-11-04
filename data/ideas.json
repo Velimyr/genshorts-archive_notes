@@ -10990,8 +10990,19 @@
         {
           "at": "2026-11-01T10:14:54+00:00",
           "event": "thread text approved in telegram"
+        },
+        {
+          "at": "2026-11-04T21:49:59+00:00",
+          "event": "photo search requested in telegram: Метричний запис про смерть"
         }
-      ]
+      ],
+      "images_excluded": [
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bf/%D0%9C%D0%B5%D1%82%D1%80%D0%B8%D1%87%D0%BD%D0%B0_%D0%BA%D0%BD%D0%B8%D0%B3%D0%B0_%D1%81._%D0%9C%D0%BE%D1%80%D0%B8%D0%BD%D0%B5%D1%86%D1%8C_%D0%97%D0%B2%D0%B5%D0%BD%D0%B8%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D1%81%D1%8C%D0%BA%D0%BE%D0%B3%D0%BE_%D0%BF%D0%BE%D0%B2%D1%96%D1%82%D1%83.pdf/page1-500px-%D0%9C%D0%B5%D1%82%D1%80%D0%B8%D1%87%D0%BD%D0%B0_%D0%BA%D0%BD%D0%B8%D0%B3%D0%B0_%D1%81._%D0%9C%D0%BE%D1%80%D0%B8%D0%BD%D0%B5%D1%86%D1%8C_%D0%97%D0%B2%D0%B5%D0%BD%D0%B8%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D1%81%D1%8C%D0%BA%D0%BE%D0%B3%D0%BE_%D0%BF%D0%BE%D0%B2%D1%96%D1%82%D1%83.pdf.jpg"
+      ],
+      "photo_request": true,
+      "photo_error": "",
+      "photo_keywords": "Метричний запис про смерть",
+      "photo_requested_at": "2026-11-04T21:49:59+00:00"
     },
     {
       "id": "2026-10-20-07",
