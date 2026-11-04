@@ -15,8 +15,8 @@
    найближчий рекомендований слот або «зараз». Заплановане публікується саме
    (воркер будить диспетчер у потрібний момент). Якщо на рекомендований час нічого
    не заплановано — нагадування за годину.
-4. Аналітика: щогодини статистика всіх постів акаунта в data/analytics.json
-   (тижневий звіт більше не надсилається).
+4. Аналітика: статистика всіх постів акаунта в data/analytics.json — раз на 3 години
+   під час інших запусків, без окремих пробуджень (тижневий звіт більше не надсилається).
 
 Команди: /ideas, /texts, /publish, /queue.
 Режим `--fire` (окремий крок workflow після пушу) запускає хмарні задачі, щоб вони
@@ -72,7 +72,8 @@ KYIV = ZoneInfo("Europe/Kyiv")
 DEFAULT_TAG = "Генеалогія"  # стандартна тема поста в Threads
 STALE_AFTER = timedelta(minutes=30)  # незавершена робота без запуску задачі довше — перезапуск
 ANALYTICS_EVERY = timedelta(hours=3)  # як часто оновлювати статистику Threads
-DAY_HOURS = (7, 23)  # коли диспетчер прокидається на планові справи (аналітика), за Києвом
+# Окремо заради статистики диспетчер не прокидається: збирає її під час інших запусків
+# (щонайменше запобіжні о 08:00 і 20:00 за Києвом).
 # Хвилини GitHub Actions округлюються вгору до цілої хвилини, тож після роботи диспетчер
 # ще чекає нові натискання до кінця вже оплаченої хвилини (крім часу на коміт і пуш).
 JOB_STARTED_AT = float(os.environ.get("JOB_STARTED_AT") or time.time())
@@ -1635,13 +1636,6 @@ class Bot:
             day = current.date() if self.state["asked"].get(name) != current.date().isoformat() else \
                 current.date() + timedelta(days=1)
             moments.append(datetime(day.year, day.month, day.day, hour, 0, tzinfo=KYIV))
-        if THREADS_TOKEN and THREADS_USER_ID:  # аналітика — лише вдень
-            last = self.state.get("analytics_at")
-            at = (parse_time(last) + ANALYTICS_EVERY).astimezone(KYIV) if last else current
-            if not DAY_HOURS[0] <= at.hour < DAY_HOURS[1]:
-                day = at.date() if at.hour < DAY_HOURS[0] else at.date() + timedelta(days=1)
-                at = datetime(day.year, day.month, day.day, DAY_HOURS[0], 5, tzinfo=KYIV)
-            moments.append(at)
         fired = self.state.get("fired_at", {})  # незавершена робота задач — перевірити, чи не зависла
         busy = {"texts": any(i.get("thread", {}).get("status") in ("requested", "revise") or i.get("photo_request")
                              for i in self.ideas.values()),
