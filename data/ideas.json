@@ -7171,7 +7171,7 @@
       ],
       "status": "approved",
       "thread": {
-        "status": "ready",
+        "status": "revise",
         "file": "data/texts/2026-10-15-11/thread.md"
       },
       "script": {
@@ -7182,7 +7182,13 @@
         "status": "none",
         "telegram_message_id": null
       },
-      "revisions": [],
+      "revisions": [
+        {
+          "kind": "thread",
+          "text": "Чому ти вирішив що триверстівки це не карти шуберта? В прикладах дай конкретні Українські сайти де їх можна знайти",
+          "at": "2026-11-04T20:24:45+00:00"
+        }
+      ],
       "history": [
         {
           "at": "2026-10-15T07:00:00+00:00",
@@ -7199,6 +7205,10 @@
         {
           "at": "2026-11-04T10:26:25+00:00",
           "event": "thread ready"
+        },
+        {
+          "at": "2026-11-04T20:24:45+00:00",
+          "event": "thread revision requested"
         }
       ]
     },
