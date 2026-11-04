@@ -12824,7 +12824,7 @@
           "license": "CC BY-SA 4.0"
         }
       ],
-      "status": "proposed",
+      "status": "rejected",
       "thread": {
         "status": "none",
         "file": null
@@ -12842,6 +12842,10 @@
         {
           "at": "2026-11-04T08:00:00+00:00",
           "event": "proposed by ideas routine"
+        },
+        {
+          "at": "2026-11-04T07:58:43+00:00",
+          "event": "idea rejected in telegram"
         }
       ]
     },
@@ -12978,7 +12982,7 @@
         "https://repo.odmu.edu.ua/xmlui/handle/123456789/11464"
       ],
       "images": [],
-      "status": "proposed",
+      "status": "rejected",
       "thread": {
         "status": "none",
         "file": null
@@ -12996,6 +13000,10 @@
         {
           "at": "2026-11-04T08:00:00+00:00",
           "event": "proposed by ideas routine"
+        },
+        {
+          "at": "2026-11-04T07:59:14+00:00",
+          "event": "idea rejected in telegram"
         }
       ]
     },
