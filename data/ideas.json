@@ -7226,6 +7226,10 @@
         {
           "at": "2026-11-04T20:39:44+00:00",
           "event": "thread ready"
+        },
+        {
+          "at": "2026-11-04T20:47:45+00:00",
+          "event": "thread edited in telegram (1 fragment(s))"
         }
       ]
     },
