@@ -4,7 +4,7 @@
 після змін у data/ і вручну. Рішень не приймає — веде діалог з користувачем кнопками
 й переносить його вибір у data/, а хмарні задачі запускає через API.
 
-Три потоки тредів: 🧵 великий серйозний, 📌 малий серйозний, 😏 жартівливий.
+Потоки: 🧵 серйозний тред, 😏 жартівливий, 🌶 провокація, 📰 Telegram-допис.
 Кожна ідея належить одному потоку.
 
 1. Ідеї (09:00): «Готовий до ідей?» → користувач обирає потік → запит у
@@ -15,8 +15,8 @@
    найближчий рекомендований слот або «зараз». Заплановане публікується саме
    (воркер будить диспетчер у потрібний момент). Якщо на рекомендований час нічого
    не заплановано — нагадування за годину.
-4. Аналітика: щогодини статистика всіх постів акаунта в data/analytics.json;
-   щонеділі о 18:00 задача «Аналітика» пише звіт і оновлює data/recommendations.json.
+4. Аналітика: щогодини статистика всіх постів акаунта в data/analytics.json
+   (тижневий звіт більше не надсилається).
 
 Команди: /ideas, /texts, /publish, /queue.
 Режим `--fire` (окремий крок workflow після пушу) запускає хмарні задачі, щоб вони
@@ -45,7 +45,6 @@ STRESS_FILE = ROOT / "data" / "stress_requests.json"
 ANALYTICS_FILE = ROOT / "data" / "analytics.json"
 RECS_FILE = ROOT / "data" / "recommendations.json"
 RUBRICS_FILE = ROOT / "data" / "rubrics.json"
-REPORTS_DIR = ROOT / "data" / "reports"
 STATE_FILE = Path(__file__).resolve().parent / "state.json"
 FIRE_FILE = Path(os.environ.get("RUNNER_TEMP", "/tmp")) / "genshorts_fire.json"
 ACK_FILE = Path(os.environ.get("RUNNER_TEMP", "/tmp")) / "genshorts_ack.json"
@@ -89,7 +88,6 @@ HELP = ("Кнопки внизу: 💡 Ідеї — нові ідеї, ✍️ Т
         "📋 Черга — треди Threads, 📰 TG-черга — Telegram-дописи, 📤 Опубліковані — що вже вийшло.\n"
         "Своя тема — просто напишіть її звичайним повідомленням.")
 ASK_AT = {"ideas": 9, "texts": 12}  # година за Києвом
-REPORT_AT = (6, 18)  # неділя, 18:00 за Києвом — тижневий звіт
 SLOT_GAP = timedelta(hours=4)  # мінімальний проміжок між публікаціями бота
 DAILY_LIMIT = 1  # тредів бота на день (автор: одна публікація щодня)
 ALTERNATION_HORIZON = timedelta(days=3)  # скільки шукати слот із чергуванням, перш ніж поступитися
@@ -98,8 +96,7 @@ WEEKDAYS = ["Пн", "Вт", "Ср", "Чт", "Пт", "Сб", "Нд"]
 METRICS = "views,likes,replies,reposts,quotes,shares"
 TG_LIMIT = 3900
 STREAMS = {
-    "big": ("🧵", "Великий серйозний"),
-    "small": ("📌", "Малий серйозний"),
+    "big": ("🧵", "Серйозний"),  # колишні «малі серйозні» (small) злиті сюди
     "fun": ("😏", "Жартівливий"),
     "provoke": ("🌶", "Провокація"),
     "tg": ("📰", "Telegram-допис"),
@@ -1578,23 +1575,6 @@ class Bot:
         data["updated_at"] = now()
         save_json(ANALYTICS_FILE, data)
 
-    def weekly_report(self) -> None:
-        local = datetime.now(KYIV)
-        week = local.strftime("%G-%V")
-        if (local.weekday(), local.hour) >= REPORT_AT and local.weekday() == REPORT_AT[0] \
-                and self.state.get("report_week") != week:
-            self.state["report_week"] = week
-            self.fire.setdefault("analytics", set()).add(week)
-            self.send("📊 Готую тижневий звіт про ефективність тредів — надішлю, щойно буде готовий.")
-
-    def send_reports(self) -> None:
-        if not REPORTS_DIR.is_dir():
-            return
-        for path in sorted(REPORTS_DIR.glob("*.md")):
-            key = f"report:{path.name}"
-            if key not in self.state["sent"]:
-                self.state["sent"][key] = self.send(path.read_text(encoding="utf-8").strip())
-
     def slot_reminders(self) -> None:
         current = datetime.now(KYIV)
         reminded = self.state.setdefault("reminded_slots", [])
@@ -1655,12 +1635,6 @@ class Bot:
             day = current.date() if self.state["asked"].get(name) != current.date().isoformat() else \
                 current.date() + timedelta(days=1)
             moments.append(datetime(day.year, day.month, day.day, hour, 0, tzinfo=KYIV))
-        days_to_report = (REPORT_AT[0] - current.weekday()) % 7  # тижневий звіт
-        report = datetime.combine(current.date() + timedelta(days=days_to_report),
-                                  datetime.min.time(), KYIV).replace(hour=REPORT_AT[1])
-        if report <= current and self.state.get("report_week") == current.strftime("%G-%V"):
-            report += timedelta(days=7)
-        moments.append(report)
         if THREADS_TOKEN and THREADS_USER_ID:  # аналітика — лише вдень
             last = self.state.get("analytics_at")
             at = (parse_time(last) + ANALYTICS_EVERY).astimezone(KYIV) if last else current
@@ -1873,13 +1847,11 @@ class Bot:
         self.collect_analytics()
         self.send_new_ideas()
         self.send_ready_threads()
-        self.send_reports()
         self.send_photo_results()
         self.send_slot_proposal()
         self.token_reminder()
         self.scheduled_prompts()
         self.slot_reminders()
-        self.weekly_report()
 
         self.revive_stale_work()
         lingered = self.linger()

@@ -6,8 +6,8 @@ https://t.me/archivist_notes; українська генеалогія й кр�
 
 ## Дані
 - `data/analytics.json` → `posts`: усі кореневі пости акаунта. Поля: `timestamp` (UTC),
-  `origin` (`bot` — опубліковано пайплайном, `manual` — вручну), `stream` (`big`/`small`/
-  `fun`, лише для `bot`), `topic`, `posts_count`, `has_photo`, `scheduled`, `text_len`,
+  `origin` (`bot` — опубліковано пайплайном, `manual` — вручну), `stream` (`big`/`fun`/
+  `provoke`/`tg`, лише для `bot`), `topic`, `posts_count`, `has_photo`, `scheduled`, `text_len`,
   метрики `views`, `likes`, `replies`, `reposts`, `quotes`, `shares` у зрізах `h24`, `h72`,
   `h168` (через 24 год / 3 / 7 днів) і `latest`.
 - `data/recommendations.json` — поточні рекомендації (слоти публікації, нотатки, джерела).
