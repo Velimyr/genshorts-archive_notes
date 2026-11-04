@@ -11409,7 +11409,7 @@
       ],
       "status": "approved",
       "thread": {
-        "status": "ready",
+        "status": "revise",
         "file": "data/texts/2026-10-23-07/thread.md"
       },
       "script": {
@@ -11420,7 +11420,13 @@
         "status": "none",
         "telegram_message_id": null
       },
-      "revisions": [],
+      "revisions": [
+        {
+          "kind": "thread",
+          "text": "Окей але розпиши на більшу кількість дописів в ланцюжку",
+          "at": "2026-11-04T21:16:33+00:00"
+        }
+      ],
       "history": [
         {
           "at": "2026-10-23T10:12:10+00:00",
@@ -11437,6 +11443,10 @@
         {
           "at": "2026-11-04T21:04:40+00:00",
           "event": "thread ready"
+        },
+        {
+          "at": "2026-11-04T21:16:33+00:00",
+          "event": "thread revision requested"
         }
       ]
     },
