@@ -12724,6 +12724,385 @@
           "event": "thread ready"
         }
       ]
+    },
+    {
+      "id": "2026-11-04-01",
+      "proposed_at": "2026-11-04",
+      "stream": "tg",
+      "rubric": "military",
+      "title": "Кантоністи: діти-солдати, яких записували в армію з 12 років",
+      "summary": "Синів солдатів із 1721 р. вчили в полкових школах, а за Миколи I кантоністів було близько 36 тис.; указ про скасування — 26.08.1856. Де шукати формулярні списки рекрутів, ревізькі позначки й сповідні розписи солдатів та солдаток.",
+      "why_now": "Пошукові запити про «загубленого» в армії предка — постійна тема генеалогічних чатів.",
+      "sources": [
+        "https://teletype.in/@ukr_free_genealogy/Rekruty-12-02",
+        "https://repository.sspu.edu.ua/items/8ee1789a-fbaa-411e-9eff-f274d2219dcc/full",
+        "https://en.wikipedia.org/wiki/Cantonist"
+      ],
+      "images": [],
+      "status": "proposed",
+      "thread": {
+        "status": "none",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-11-04T08:00:00+00:00",
+          "event": "proposed by ideas routine"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-04-02",
+      "proposed_at": "2026-11-04",
+      "stream": "tg",
+      "rubric": "customs",
+      "title": "Холера в метриках: 1831, 1847–55, 1865–72 і чому в селі раптом багато поховань",
+      "summary": "Хвилі холери в Україні: пік 1831 р. (повернення військ з турецької війни), 1847 р. — Одеса й Київ, 1865–66 рр. — вся Україна; влітку 1871-го в Києві за день помирало до 140 осіб. Як за роками смертей пояснити «аномалії» у книгах померлих.",
+      "why_now": "",
+      "sources": [
+        "https://espreso.tv/article/2020/03/29/10_faktiv_pro_epidemiyi_yaki_perezhyla_ukrayina",
+        "https://uk.wikipedia.org/wiki/Холера",
+        "https://en.wikipedia.org/wiki/Cholera_pandemic",
+        "https://www.jewishgen.org/Ukraine/RES_project.asp?id=803"
+      ],
+      "images": [
+        {
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c9/German_map_showing_the_path_of_cholera_in_Poland%2C_1831._Wellcome_L0076254.jpg/1280px-German_map_showing_the_path_of_cholera_in_Poland%2C_1831._Wellcome_L0076254.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:German_map_showing_the_path_of_cholera_in_Poland,_1831._Wellcome_L0076254.jpg",
+          "credit": "Wellcome Collection / Wikimedia Commons, CC BY 4.0",
+          "license": "CC BY 4.0"
+        }
+      ],
+      "status": "proposed",
+      "thread": {
+        "status": "none",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-11-04T08:00:00+00:00",
+          "event": "proposed by ideas routine"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-04-03",
+      "proposed_at": "2026-11-04",
+      "stream": "tg",
+      "rubric": "ai",
+      "title": "Transkribus і український рукопис: модель з похибкою 4,2 % і що це дає генеалогу",
+      "summary": "Тихонов і Рабус (2024) створили на Transkribus загальну модель розпізнавання українського рукопису (CER 4,2 %), навчену на Шевченку, Лесі Українці, листах і щоденнику з Музею Голодомору. Платформа дає 50 безкоштовних кредитів щомісяця. Що можна й чого не можна чекати від неї на метриках XIX ст.",
+      "why_now": "",
+      "sources": [
+        "https://ekmair.ukma.edu.ua/items/899d344d-591b-42ea-9db0-6dfbb99de950/full",
+        "https://www.transkribus.org/",
+        "https://en.wikipedia.org/wiki/Transkribus"
+      ],
+      "images": [
+        {
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/67/Transkribus-workspace.png/1280px-Transkribus-workspace.png",
+          "page": "https://commons.wikimedia.org/wiki/File:Transkribus-workspace.png",
+          "credit": "Wikimedia Commons contributors, CC BY-SA 4.0",
+          "license": "CC BY-SA 4.0"
+        }
+      ],
+      "status": "proposed",
+      "thread": {
+        "status": "none",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-11-04T08:00:00+00:00",
+          "event": "proposed by ideas routine"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-04-04",
+      "proposed_at": "2026-11-04",
+      "stream": "tg",
+      "rubric": "migrations",
+      "title": "Кубань 1792–1793: 40 куренів і 25 тисяч переселенців із родинами",
+      "summary": "Указ Катерини II від 2.07.1792, прибуття до Темрюка 25.08.1792, 8 200 козаків і майже 25 тис. людей разом із родинами, 40 куренів, Катеринодар 1793 р.; пізніші хвилі — 1808–11, 1820–21, 1832, 1848–49. Як за куренем шукати рід.",
+      "why_now": "",
+      "sources": [
+        "https://uk.wikipedia.org/wiki/Чорноморське_козацьке_військо",
+        "https://osvita.ua/vnz/reports/history/4748/",
+        "https://espreso.tv/istoriya-ukrayiny-istoriya-pro-yaku-v-rosii-voliyut-movchati-108-rokiv-tomu-kuban-obrala-svobodu-ta-ukrainu"
+      ],
+      "images": [
+        {
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/de/KOZAKS_of_the_BLACK_SEA_on_the_MAP_of_1806.JPG/1280px-KOZAKS_of_the_BLACK_SEA_on_the_MAP_of_1806.JPG",
+          "page": "https://commons.wikimedia.org/wiki/File:KOZAKS_of_the_BLACK_SEA_on_the_MAP_of_1806.JPG",
+          "credit": "Wikimedia Commons contributors, CC BY-SA 3.0",
+          "license": "CC BY-SA 3.0"
+        }
+      ],
+      "status": "proposed",
+      "thread": {
+        "status": "none",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-11-04T08:00:00+00:00",
+          "event": "proposed by ideas routine"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-04-05",
+      "proposed_at": "2026-11-04",
+      "stream": "tg",
+      "rubric": "migrations",
+      "title": "Зелений Клин: з Одеси морем на Амур — 1882 і наступні переселенці",
+      "summary": "З 1882 р. за Унтербергера українців безкоштовно перевозили з Одеси в Уссурійсько-Ханківську низовину; 1883–1905 з України прибуло 109 510 осіб, 1907 р. — пік близько 78 тис. Що це означає для пошуку предків, які «зникли» з рідного села.",
+      "why_now": "",
+      "sources": [
+        "https://uk.wikipedia.org/wiki/Зелений_Клин",
+        "https://en.wikipedia.org/wiki/Green_Ukraine",
+        "https://uk.wikipedia.org/wiki/Столипінська_аграрна_реформа"
+      ],
+      "images": [],
+      "status": "proposed",
+      "thread": {
+        "status": "none",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-11-04T08:00:00+00:00",
+          "event": "proposed by ideas routine"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-04-06",
+      "proposed_at": "2026-11-04",
+      "stream": "tg",
+      "rubric": "method",
+      "title": "Старий стиль у метриках: +11, +12, +13 діб і 16 лютого 1918 р., що став 1 березня",
+      "summary": "Різниця юліанського й григоріанського календарів: XVIII ст. — 11 діб, XIX — 12, XX — 13. В УНР закон ухвалили 12.02.1918, і 16 лютого вважали 1 березня; у Галичині нова ера почалася раніше. Практика перерахунку дат народження.",
+      "why_now": "",
+      "sources": [
+        "https://uk.wikipedia.org/wiki/Григоріанський_календар",
+        "https://uk.wikipedia.org/wiki/Юліанський_календар",
+        "https://en.wikipedia.org/wiki/Old_Style_and_New_Style_dates"
+      ],
+      "images": [
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/e/e8/Sovnarkom-Gregorian-Calendar-Decree-izo39.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Sovnarkom-Gregorian-Calendar-Decree-izo39.jpg",
+          "credit": "V. Ulyanov / Wikimedia Commons, Public domain",
+          "license": "Public domain"
+        }
+      ],
+      "status": "proposed",
+      "thread": {
+        "status": "none",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-11-04T08:00:00+00:00",
+          "event": "proposed by ideas routine"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-04-07",
+      "proposed_at": "2026-11-04",
+      "stream": "tg",
+      "rubric": "customs",
+      "title": "«Помер на 100 років»: що ховається за довголіттям у метриках і на полях",
+      "summary": "За Євгеном Букетом, у метриках «100 років» часто означало 75–85, а дві третини дітей помирали до трьох років; священики дописували прізвиська, законність народження, навіть малюнки. Чому книги треба читати постранично з полями.",
+      "why_now": "",
+      "sources": [
+        "https://www.radiosvoboda.org/a/sekret-dovgolittya-ta-inshi-osoblyvosti-metrychnyh-knyg/31294708.html",
+        "https://uk.wikipedia.org/wiki/Метрична_книга",
+        "https://repo.odmu.edu.ua/xmlui/handle/123456789/11464"
+      ],
+      "images": [],
+      "status": "proposed",
+      "thread": {
+        "status": "none",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-11-04T08:00:00+00:00",
+          "event": "proposed by ideas routine"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-04-08",
+      "proposed_at": "2026-11-04",
+      "stream": "tg",
+      "rubric": "ancestors",
+      "title": "Меноніти Хортиці з 1789 р.: перша колонія й німецькі колоністи півдня України",
+      "summary": "Колонія Хортиця (Chortitza) заснована 1789 р. менонітами з дельти Вісли, села по 15–30 родин; 1897 р. у Бессарабії, Херсонській, Катеринославській і Таврійській губерніях жило близько 345 тис. німців. Де лежать їхні метрики (лютеранські дублікати 1833–1885 на FamilySearch).",
+      "why_now": "",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Chortitza_Colony",
+        "https://en.wikipedia.org/wiki/Germans_in_Ukraine",
+        "https://en.wikipedia.org/wiki/Black_Sea_Germans"
+      ],
+      "images": [],
+      "status": "proposed",
+      "thread": {
+        "status": "none",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-11-04T08:00:00+00:00",
+          "event": "proposed by ideas routine"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-04-09",
+      "proposed_at": "2026-11-04",
+      "stream": "tg",
+      "rubric": "kinship",
+      "title": "Кум, кума й «стрічні куми»: хто був поруч у метриці і чому це ключ до родини",
+      "summary": "У метриках хресні — хід до сусідів, родичів і покровителів; слово «кум» колись означало «друг», а «стрічні куми» — запрошені випадкові люди. Як проаналізувати хресних і знайти нові гілки дерева.",
+      "why_now": "",
+      "sources": [
+        "https://uk.wikipedia.org/wiki/Кумівство",
+        "https://uk.wikipedia.org/wiki/Хрещення",
+        "https://www.radiosvoboda.org/a/sekret-dovgolittya-ta-inshi-osoblyvosti-metrychnyh-knyg/31294708.html"
+      ],
+      "images": [],
+      "status": "proposed",
+      "thread": {
+        "status": "none",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-11-04T08:00:00+00:00",
+          "event": "proposed by ideas routine"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-04-10",
+      "proposed_at": "2026-11-04",
+      "stream": "tg",
+      "rubric": "law",
+      "title": "Хутори Столипіна: 225 тис. дворів вийшли з общини, 1,2 млн селян рушили до Азії",
+      "summary": "Указ 1906 р. і закон 1910 р. дозволили виходити з общини; 1907–1911 в Україні це зробили близько 225,5 тис. дворів на 1,8 млн десятин; 1906–1913 з дев'яти губерній до Азіатської Росії перемістилося близько 1,2 млн осіб, чверть повернулася.",
+      "why_now": "",
+      "sources": [
+        "https://uk.wikipedia.org/wiki/Столипінська_аграрна_реформа",
+        "https://uk.wikipedia.org/wiki/Зелений_Клин",
+        "https://en.wikipedia.org/wiki/Green_Ukraine"
+      ],
+      "images": [],
+      "status": "proposed",
+      "thread": {
+        "status": "none",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-11-04T08:00:00+00:00",
+          "event": "proposed by ideas routine"
+        }
+      ]
     }
   ]
 }
