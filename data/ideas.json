@@ -7235,8 +7235,19 @@
         {
           "at": "2026-11-04T20:48:35+00:00",
           "event": "thread text approved in telegram"
+        },
+        {
+          "at": "2026-11-04T20:49:33+00:00",
+          "event": "photo search requested in telegram (more)"
         }
-      ]
+      ],
+      "images_excluded": [
+        "https://upload.wikimedia.org/wikipedia/commons/f/f8/Henichesk_Rayon_in_Maps_created_by_Schubert_in_1859.jpg"
+      ],
+      "photo_request": true,
+      "photo_error": "",
+      "photo_keywords": "",
+      "photo_requested_at": "2026-11-04T20:49:33+00:00"
     },
     {
       "id": "2026-10-15-12",
