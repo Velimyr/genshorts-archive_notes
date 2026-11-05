@@ -11438,9 +11438,10 @@
       ],
       "status": "approved",
       "thread": {
-        "status": "scheduled",
+        "status": "posted",
         "file": "data/texts/2026-10-23-03/thread.md",
-        "approved_sha": "d876600fdac2fa51"
+        "approved_sha": "d876600fdac2fa51",
+        "permalink": "https://www.threads.com/@velimyr/post/DfWfYVEkSXE"
       },
       "script": {
         "status": "none",
@@ -11509,6 +11510,10 @@
         {
           "at": "2026-11-04T21:40:37+00:00",
           "event": "stream changed: small → big (малий і великий серйозний злито)"
+        },
+        {
+          "at": "2026-11-05T07:28:00+00:00",
+          "event": "thread posted to Threads (8 posts)"
         }
       ],
       "images_excluded": [],
