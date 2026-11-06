@@ -3793,8 +3793,8 @@
       ],
       "status": "approved",
       "thread": {
-        "status": "requested",
-        "file": null
+        "status": "ready",
+        "file": "data/texts/2026-10-03-01/thread.md"
       },
       "script": {
         "status": "none",
@@ -3817,6 +3817,10 @@
         {
           "at": "2026-11-06T07:13:40+00:00",
           "event": "thread requested in telegram"
+        },
+        {
+          "at": "2026-11-06T07:15:24+00:00",
+          "event": "thread ready"
         }
       ]
     },
