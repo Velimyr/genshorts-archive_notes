@@ -18,7 +18,10 @@
 4. Аналітика: статистика всіх постів акаунта в data/analytics.json — раз на 3 години
    під час інших запусків, без окремих пробуджень (тижневий звіт більше не надсилається).
 
-Команди: /ideas, /texts, /publish, /queue.
+5. Дашборд: закріплене rich-повідомлення (конвеєр, розклад на 7 днів, стан системи);
+   редагується наприкінці запуску, лише якщо зміст змінився (або раз на 3 години).
+
+Команди: /ideas, /texts, /publish, /queue, /tgqueue, /published, /dashboard.
 Режим `--fire` (окремий крок workflow після пушу) запускає хмарні задачі, щоб вони
 бачили вже збережені в репозиторії запити.
 """
@@ -79,15 +82,20 @@ ANALYTICS_EVERY = timedelta(hours=3)  # як часто оновлювати с�
 JOB_STARTED_AT = float(os.environ.get("JOB_STARTED_AT") or time.time())
 LINGER_MARGIN = 20  # секунд лишаємо на збереження стану й запуск задач після скрипта
 LINGER_POLL = 2.5  # як часто перевіряти чергу натискань, секунд
-MENU_VERSION = 3
+MENU_VERSION = 4
 MENU_BUTTONS = {"💡 Ідеї": "/ideas", "✍️ Тексти": "/texts", "📣 Публікація": "/publish", "📋 Черга": "/queue",
-                "📰 TG-черга": "/tgqueue", "📤 Опубліковані": "/published"}
+                "📰 TG-черга": "/tgqueue", "📤 Опубліковані": "/published", "📊 Дашборд": "/dashboard"}
 MAIN_KEYBOARD = {"keyboard": [[{"text": "💡 Ідеї"}, {"text": "✍️ Тексти"}], [{"text": "📣 Публікація"}, {"text": "📋 Черга"}],
-                              [{"text": "📰 TG-черга"}, {"text": "📤 Опубліковані"}]],
+                              [{"text": "📰 TG-черга"}, {"text": "📤 Опубліковані"}], [{"text": "📊 Дашборд"}]],
                  "is_persistent": True, "resize_keyboard": True}
 HELP = ("Кнопки внизу: 💡 Ідеї — нові ідеї, ✍️ Тексти — написати тред, 📣 Публікація — опублікувати, "
-        "📋 Черга — треди Threads, 📰 TG-черга — Telegram-дописи, 📤 Опубліковані — що вже вийшло.\n"
+        "📋 Черга — треди Threads, 📰 TG-черга — Telegram-дописи, 📤 Опубліковані — що вже вийшло, "
+        "📊 Дашборд — закріплене зведення (конвеєр, розклад, стан системи), що оновлюється само.\n"
         "Своя тема — просто напишіть її звичайним повідомленням.")
+# Дашборд — закріплене rich-повідомлення (Bot API 10.1+, sendRichMessage). Диспетчер редагує
+# його наприкінці кожного запуску, якщо дані змінилися, або щонайменше раз на DASH_REFRESH.
+DASH_DAYS = 7  # скільки днів розкладу показувати
+DASH_REFRESH = timedelta(hours=3)
 ASK_AT = {"ideas": 9, "texts": 12}  # година за Києвом
 SLOT_GAP = timedelta(hours=4)  # мінімальний проміжок між публікаціями бота
 DAILY_LIMIT = 1  # тредів бота на день (автор: одна публікація щодня)
@@ -150,6 +158,40 @@ def tg(method: str, **params):
             print(f"[tg] {method}: {description}")
             return None
         raise SystemExit(f"[tg] {method} failed: {description}")
+
+
+def tg_try(method: str, **params):
+    """Як tg(), але не зупиняє диспетчер: (результат, None) або (None, опис помилки)."""
+    request = urllib.request.Request(
+        f"https://api.telegram.org/bot{TOKEN}/{method}",
+        data=json.dumps(params).encode("utf-8"),
+        headers={"Content-Type": "application/json"},
+    )
+    try:
+        with urllib.request.urlopen(request, timeout=30) as response:
+            return json.load(response).get("result"), None
+    except urllib.error.HTTPError as exc:
+        try:
+            return None, json.load(exc).get("description", f"HTTP {exc.code}")
+        except ValueError:
+            return None, f"HTTP {exc.code}"
+    except (urllib.error.URLError, OSError) as exc:
+        return None, str(exc)
+
+
+def esc(text) -> str:
+    """Екранування для rich HTML (підтримуються лише базові іменовані сутності)."""
+    return str(text).replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;").replace('"', "&quot;")
+
+
+def short(text: str, limit: int = 48) -> str:
+    text = " ".join(str(text).split())
+    return text if len(text) <= limit else text[:limit - 1].rstrip() + "…"
+
+
+def tg_time(moment: datetime, fmt: str, fallback: str) -> str:
+    """Дата-час, який Telegram показує в часовому поясі й мові читача (r — «5 хв тому»)."""
+    return f'<tg-time unix="{int(moment.timestamp())}" format="{fmt}">{esc(fallback)}</tg-time>'
 
 
 def fmt_slot(moment: datetime) -> str:
@@ -997,6 +1039,13 @@ class Bot:
         elif action == "go":
             self.close_buttons(mid, "➡️")
             self.menu_texts() if parts[1] == "texts" else self.menu_publish()
+        elif action == "dash":  # кнопки закріпленого дашборда — самі кнопки лишаються
+            if parts[1] == "refresh":
+                self.refresh_dashboard(force=True)
+            elif parts[1] == "publish":
+                self.menu_publish()
+            elif parts[1] in ("queue", "tgqueue"):
+                self.show_queue("tg" if parts[1] == "tgqueue" else "threads")
         elif action == "idea":
             idea = self.ideas.get(parts[1])
             if idea and idea.get("status") == "proposed":
@@ -1223,6 +1272,8 @@ class Bot:
             return self.show_queue("tg")
         if command == "/published":
             return self.show_published()
+        if command == "/dashboard":
+            return self.refresh_dashboard(repost=True)
         if command in ("/start", "/help"):
             return self.send(HELP, MAIN_KEYBOARD)
         if command:
@@ -1733,6 +1784,235 @@ class Bot:
             elif name == "texts":
                 self.menu_texts(quiet=True)
 
+    # ------------------------------------------------------------ дашборд
+
+    def dash_stage(self, idea: dict) -> str | None:
+        """Етап конвеєра для дашборда (ті самі правила, що в show_queue)."""
+        status = idea.get("status")
+        thread = idea.get("thread", {}).get("status", "none")
+        item = self.state["approved_threads"].get(idea["id"], {})
+        if status == "proposed":
+            return "proposed"
+        if status != "approved" or thread == "cancelled":
+            return None
+        if thread == "none":
+            return "none"
+        if thread in ("requested", "revise"):
+            return "writing"
+        if thread == "ready":
+            return "ready"
+        if thread == "approved" or (thread == "queued" and item.get("publish_at") in (None, "pending")):
+            return "approved"
+        if thread in ("queued", "scheduled"):
+            return "scheduled"
+        if thread == "posted":
+            return "posted"
+        return None
+
+    def dash_pipeline(self) -> list[str]:
+        stages = [("proposed", "💡 Нові ідеї на розгляді"), ("none", "✅ Погоджені, тексту немає"),
+                  ("writing", "✍️ Пишеться"), ("ready", "👀 Чекає погодження"),
+                  ("approved", "📦 Готові, без часу"), ("scheduled", "🕒 Заплановано")]
+        attention = {"proposed", "ready", "approved"}  # де чекають саме автора
+        counts = {(key, ch): 0 for key, _ in stages + [("posted", "")] for ch in ("threads", "tg")}
+        week_ago = datetime.now(timezone.utc) - timedelta(days=7)
+        recent = {"threads": 0, "tg": 0}
+        for idea in self.ideas.values():
+            stage = self.dash_stage(idea) if not idea.get("test") else None
+            if not stage:
+                continue
+            channel = "tg" if self.category(idea) == "T" else "threads"
+            counts[(stage, channel)] += 1
+            posted_at = self.state["approved_threads"].get(idea["id"], {}).get("posted_at")
+            if stage == "posted" and posted_at and parse_time(posted_at) >= week_ago:
+                recent[channel] += 1
+
+        def cell(key: str, channel: str) -> str:
+            value = counts[(key, channel)]
+            if not value:
+                return '<td align="center">·</td>'
+            text = f"<b>{value}</b>" if key in attention else str(value)
+            return f'<td align="center">{text}</td>'
+
+        rows = ['<tr><th align="left">Етап</th><th align="center">🧵 Threads</th><th align="center">📰 TG</th></tr>']
+        for key, title in stages:
+            rows.append(f'<tr><td align="left">{title}</td>{cell(key, "threads")}{cell(key, "tg")}</tr>')
+        rows.append('<tr><td align="left">📤 Опубліковано: 7 днів / усього</td>'
+                    + "".join(f'<td align="center">{recent[ch]} / {counts[("posted", ch)]}</td>' for ch in ("threads", "tg"))
+                    + "</tr>")
+        return ["<h3>🏭 Конвеєр тем</h3>",
+                "<table bordered striped compact><caption>Жирним — там, де чекають вашого рішення</caption>"
+                f"{''.join(rows)}</table>"]
+
+    def dash_schedule(self) -> list[str]:
+        current = datetime.now(KYIV)
+        icons = {s: icon for s, (icon, _) in STREAMS.items()}
+        days = {}  # дата -> {"threads": [...], "tg": [...]}
+        for idea_id, item in self.state["approved_threads"].items():
+            idea = self.ideas.get(idea_id)
+            if not idea or idea.get("test"):
+                continue
+            cat = self.category(idea)
+            if item.get("posted") and item.get("posted_at"):
+                moment, mark = parse_time(item["posted_at"]), "✅"
+            elif item.get("failed"):
+                at = item.get("main_at") if item.get("test_id") else item.get("publish_at")
+                if not at or at == "pending":
+                    continue
+                moment, mark = parse_time(at), "❗"
+            else:
+                at = item.get("main_at") if item.get("test_id") else item.get("publish_at")
+                if not at or at == "pending" or cat == "P":
+                    continue
+                moment, mark = parse_time(at), "🧪" if item.get("test_id") else "🕒"
+            local = moment.astimezone(KYIV)
+            entry = f"{mark} {local:%H:%M} {icons.get(idea.get('stream'), '•')} {esc(short(idea['title'], 40))}"
+            days.setdefault(local.date(), {"threads": [], "tg": []})["tg" if cat == "T" else "threads"].append((local, entry))
+        threads_slots = {s.date() for s in self.recommended_slots(days=DASH_DAYS)}
+        tg_slots = {s.date() for s in self.tg_slots(days=DASH_DAYS)}
+        rows = ['<tr><th align="left">День</th><th align="left">🧵 Threads</th><th align="left">📰 TG</th></tr>']
+        empty_days = 0
+        for offset in range(DASH_DAYS):
+            day = (current + timedelta(days=offset)).date()
+            label = {0: "сьогодні", 1: "завтра"}.get(offset, f"{WEEKDAYS[day.weekday()]} {day:%d.%m}")
+            found = days.get(day, {"threads": [], "tg": []})
+            cells = []
+            for channel, slots in (("threads", threads_slots), ("tg", tg_slots)):
+                entries = [e for _, e in sorted(found[channel])]
+                if entries:
+                    cells.append(" · ".join(entries))
+                elif day in slots:
+                    cells.append("⚠️ <i>порожньо</i>")
+                    empty_days += channel == "threads"
+                else:
+                    cells.append("·")
+            rows.append(f'<tr><td align="left"><b>{label}</b></td><td align="left">{cells[0]}</td>'
+                        f'<td align="left">{cells[1]}</td></tr>')
+        parts = ["<h3>🗓 Розклад</h3>",
+                 "<table bordered striped compact>"
+                 "<caption>🕒 заплановано · 🧪 вийшло в тестовому, чекає основного · ✅ вийшло · ❗ помилка</caption>"
+                 f"{''.join(rows)}</table>"]
+        notes = []
+        free = self.free_slots(1)
+        if free:
+            notes.append(f"Найближча вільна година для треду: <b>{fmt_slot(free[0])}</b>")
+        ready = sum(1 for i in self.ideas.values() if not i.get("test") and self.dash_stage(i) == "approved"
+                    and self.category(i) in ("S", "F"))
+        if empty_days and ready:
+            notes.append(f"Порожніх днів: {empty_days}, а готових тредів без часу: {ready} — можна запланувати.")
+        elif empty_days:
+            notes.append(f"Порожніх днів: {empty_days}, готових тредів немає — варто написати нові.")
+        parts += [f"<p>{n}</p>" for n in notes]
+        return parts
+
+    def dash_system(self) -> list[str]:
+        current = datetime.now(timezone.utc)
+        fired = self.state.get("fired_at", {})
+        items = []
+
+        def ago(at: str | None) -> str:
+            return tg_time(parse_time(at), "r", fmt_slot(parse_time(at))) if at else "ще ні разу"
+
+        writing = [i for i in self.ideas.values() if i.get("thread", {}).get("status") in ("requested", "revise")]
+        photos = [i for i in self.ideas.values() if i.get("photo_request")]
+        if writing or photos:
+            stale = fired.get("texts") and current - parse_time(fired["texts"]) > STALE_AFTER
+            what = ", ".join(f"«{esc(short(i['title'], 32))}»" for i in writing[:3])
+            extra = f" (+{len(writing) - 3})" if len(writing) > 3 else ""
+            jobs = [f"текстів: {len(writing)}"] if writing else []
+            jobs += [f"пошуків фото: {len(photos)}"] if photos else []
+            items.append(f"{'⚠️' if stale else '⏳'} Задача «Тексти» працює ({', '.join(jobs)}) — запущена "
+                         f"{ago(fired.get('texts'))}{'; довго немає результату' if stale else ''}"
+                         + (f". {what}{extra}" if what else ""))
+        else:
+            items.append(f"✅ Задача «Тексти» вільна; востаннє запускалася {ago(fired.get('texts'))}")
+        pending = [r for r in self.requests.get("ideas", []) if r.get("status") == "pending"]
+        if pending:
+            stale = fired.get("ideas") and current - parse_time(fired["ideas"]) > STALE_AFTER
+            streams = ", ".join(stream_label(r.get("stream")) for r in pending)
+            items.append(f"{'⚠️' if stale else '⏳'} Задача «Ідеї» шукає: {esc(streams)} — запит "
+                         f"{ago(pending[0].get('requested_at'))}")
+        else:
+            items.append(f"✅ Задача «Ідеї» вільна; востаннє запускалася {ago(fired.get('ideas'))}")
+        names = {"texts": "Тексти", "ideas": "Ідеї"}
+        for name, count in self.state.get("revive_count", {}).items():
+            if count > 3:
+                items.append(f"🛑 Задача «{names.get(name, name)}» тричі не завершила роботу — автоматичні "
+                             "перезапуски зупинено, потрібне втручання")
+        failed = [(i, item) for i, item in self.state["approved_threads"].items()
+                  if item.get("failed") and not item.get("posted") and i in self.ideas
+                  and self.ideas[i].get("thread", {}).get("status") not in ("posted", "cancelled")]
+        for idea_id, item in failed[:5]:
+            items.append(f"❗ Не опубліковано «{esc(short(self.ideas[idea_id]['title'], 40))}»: "
+                         f"{esc(short(item['failed'], 80))}")
+        if not failed:
+            items.append("✅ Помилок публікації немає")
+        items.append(f"📈 Статистика Threads оновлена {ago(self.state.get('analytics_at'))}")
+        if THREADS_TOKEN_UPDATED:
+            age = (datetime.now(KYIV).date() - datetime.fromisoformat(THREADS_TOKEN_UPDATED).date()).days
+            items.append(f"{'⚠️' if age >= 50 else '🔑'} Токену Threads {age} дн. із 60"
+                         + (" — час оновити" if age >= 50 else ""))
+        if not (THREADS_TOKEN and THREADS_USER_ID):
+            items.append("⚠️ Threads не підключено (немає токена чи ID користувача)")
+        return ["<h3>⚙️ Стан системи</h3>", "<ul>" + "".join(f"<li>{i}</li>" for i in items) + "</ul>"]
+
+    def dashboard_html(self) -> tuple[str, str]:
+        """HTML дашборда й відбиток його змісту (без позначки часу оновлення)."""
+        body = ["<h2>📊 Записки диванного архівіста</h2>"]
+        body += self.dash_pipeline() + ["<hr/>"] + self.dash_schedule() + ["<hr/>"] + self.dash_system()
+        body.append('<tg-button-row align="center">'
+                    '<tg-button type="callback_data" data="dash:refresh">🔄 Оновити</tg-button>'
+                    '<tg-button type="callback_data" data="dash:publish">📣 Публікація</tg-button>'
+                    '</tg-button-row>'
+                    '<tg-button-row align="center">'
+                    '<tg-button type="callback_data" data="dash:queue">📋 Черга</tg-button>'
+                    '<tg-button type="callback_data" data="dash:tgqueue">📰 TG-черга</tg-button>'
+                    '</tg-button-row>')
+        content = "".join(body)
+        stamp = datetime.now(timezone.utc)
+        footer = f"<footer>Оновлено {tg_time(stamp, 'r', fmt_slot(stamp))} · час розкладу — київський</footer>"
+        return content + footer, sha(content)
+
+    def refresh_dashboard(self, force: bool = False, repost: bool = False) -> None:
+        """Редагує закріплений дашборд, якщо зміст змінився (або force); repost — надіслати
+        заново внизу чату й закріпити, старий прибрати. Помилки дашборда не зупиняють диспетчер."""
+        try:
+            html, digest = self.dashboard_html()
+        except Exception as exc:  # noqa: BLE001 — дашборд не має ламати основну роботу
+            print(f"[dashboard] build failed: {exc!r}")
+            return
+        dash = self.state.setdefault("dashboard", {})
+        fresh = dash.get("at") and datetime.now(timezone.utc) - parse_time(dash["at"]) < DASH_REFRESH
+        if dash.get("mid") and not repost:
+            if dash.get("sha") == digest and fresh and not force:
+                return
+            _, error = tg_try("editMessageText", chat_id=CHAT_ID, message_id=dash["mid"],
+                              rich_message={"html": html})
+            if error is None or "not modified" in error:
+                dash.update({"sha": digest, "at": now()})
+                dash.pop("error", None)
+                return
+            print(f"[dashboard] edit: {error}")
+            if "not found" not in error and "can't be edited" not in error:
+                return  # тимчасовий збій — спробуємо наступного запуску
+        result, error = tg_try("sendRichMessage", chat_id=CHAT_ID, rich_message={"html": html},
+                               disable_notification=True)
+        if error:
+            print(f"[dashboard] send: {error}")
+            if dash.get("error") != error:  # повідомити автора лише раз про кожну нову помилку
+                dash["error"] = error
+                self.send(f"⚠️ Не вдалося оновити дашборд: {error}")
+            return
+        old = dash.get("mid")
+        if old:
+            tg_try("unpinChatMessage", chat_id=CHAT_ID, message_id=old)
+            tg_try("deleteMessage", chat_id=CHAT_ID, message_id=old)
+            self.state["messages"].pop(str(old), None)
+        mid = result["message_id"]
+        tg_try("pinChatMessage", chat_id=CHAT_ID, message_id=mid, disable_notification=True)
+        self.state["messages"][str(mid)] = {"kind": "dashboard"}
+        self.state["dashboard"] = {"mid": mid, "sha": digest, "at": now()}
+
     # ------------------------------------------------------------ запуск
 
     def ensure_menu(self) -> None:
@@ -1745,6 +2025,7 @@ class Bot:
             {"command": "queue", "description": "Черга тредів Threads"},
             {"command": "tgqueue", "description": "Черга Telegram-дописів"},
             {"command": "published", "description": "Опубліковані треди"},
+            {"command": "dashboard", "description": "Дашборд: конвеєр, розклад, стан"},
             {"command": "help", "description": "Довідка"},
         ])
         self.send("Меню оновлено 👇\n" + HELP, MAIN_KEYBOARD)
@@ -1787,6 +2068,7 @@ class Bot:
             self.handle(fresh)
             self.publish_queued()  # «⚡ Опублікувати зараз»
             self.send_ready_threads()  # текст після точкової правки
+            self.refresh_dashboard()  # редагує лише якщо зміст змінився
         return len(fresh)
 
     def announce_live(self) -> float:
@@ -1848,6 +2130,7 @@ class Bot:
         self.slot_reminders()
 
         self.revive_stale_work()
+        self.refresh_dashboard()
         lingered = self.linger()
         if QUEUE_URL and QUEUE_SECRET:
             save_json(ACK_FILE, sorted(self.acked))
