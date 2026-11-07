@@ -4556,6 +4556,9 @@
     },
     "1607": {
       "kind": "menu"
+    },
+    "1608": {
+      "kind": "nav"
     }
   },
   "approved_threads": {
@@ -5637,8 +5640,19 @@
         "credit": "Wikimedia Commons, Public domain"
       },
       "approved_at": "2026-11-04T21:19:44+00:00",
-      "posted": false,
-      "publish_at": "2026-11-07T13:56:00+02:00"
+      "posted": true,
+      "publish_at": "2026-11-07T13:56:00+02:00",
+      "posted_ids": [
+        "17950755354346946",
+        "17990150658078974",
+        "18015687938976087",
+        "17915503749557737",
+        "18026458706706473",
+        "18431818774148701",
+        "18646204591052449"
+      ],
+      "posted_at": "2026-11-07T12:02:34+00:00",
+      "permalink": "https://www.threads.com/@velimyr/post/DfcIcMVG7B0"
     },
     "2026-10-20-06": {
       "sha": "70062661bdad5855",
