@@ -3826,8 +3826,20 @@
         {
           "at": "2026-11-06T08:56:28+00:00",
           "event": "thread text approved in telegram"
+        },
+        {
+          "at": "2026-11-07T12:04:32+00:00",
+          "event": "photo search requested in telegram (more)"
         }
-      ]
+      ],
+      "images_excluded": [
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6a/Ellis_Island_Passenger_Manifest_-_1903_-_Italy.png/1280px-Ellis_Island_Passenger_Manifest_-_1903_-_Italy.png",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/93/The_Registry_Room%2C_Ellis_Island%27s_Great_Hall_%2832dd2c98-1dd8-b71b-0baa-d21a283d8f42%29.jpg/1280px-The_Registry_Room%2C_Ellis_Island%27s_Great_Hall_%2832dd2c98-1dd8-b71b-0baa-d21a283d8f42%29.jpg"
+      ],
+      "photo_request": true,
+      "photo_error": "",
+      "photo_keywords": "",
+      "photo_requested_at": "2026-11-07T12:04:32+00:00"
     },
     {
       "id": "2026-10-03-02",
