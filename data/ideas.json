@@ -11507,8 +11507,9 @@
       "images": [],
       "status": "approved",
       "thread": {
-        "status": "ready",
-        "file": "data/texts/2026-10-23-01/thread.md"
+        "status": "approved",
+        "file": "data/texts/2026-10-23-01/thread.md",
+        "approved_sha": "4fb3c14dbd17ab82"
       },
       "script": {
         "status": "none",
@@ -11539,8 +11540,20 @@
         {
           "at": "2026-11-08T10:44:24+00:00",
           "event": "thread ready"
+        },
+        {
+          "at": "2026-11-08T11:24:45+00:00",
+          "event": "thread text approved in telegram"
+        },
+        {
+          "at": "2026-11-08T11:25:16+00:00",
+          "event": "photo search requested in telegram"
         }
-      ]
+      ],
+      "photo_request": true,
+      "photo_error": "",
+      "photo_keywords": "",
+      "photo_requested_at": "2026-11-08T11:25:16+00:00"
     },
     {
       "id": "2026-10-23-02",
