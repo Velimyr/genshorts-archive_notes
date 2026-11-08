@@ -3515,7 +3515,7 @@
         "reposts": 0,
         "quotes": 0,
         "shares": 0,
-        "at": "2026-11-08T05:00:27+00:00"
+        "at": "2026-11-08T10:02:07+00:00"
       },
       "h24": {
         "views": 163,
@@ -3550,13 +3550,13 @@
       "origin": "manual",
       "has_photo": true,
       "latest": {
-        "views": 1391,
+        "views": 1393,
         "likes": 27,
         "replies": 13,
         "reposts": 3,
         "quotes": 8,
         "shares": 2,
-        "at": "2026-11-08T05:00:28+00:00"
+        "at": "2026-11-08T10:02:07+00:00"
       },
       "h24": {
         "views": 1123,
@@ -3581,7 +3581,8 @@
         "reposts": 3,
         "quotes": 8,
         "shares": 2
-      }
+      },
+      "final": true
     },
     "18630339115021898": {
       "timestamp": "2026-10-30T20:51:56+0000",
@@ -3744,7 +3745,7 @@
         "reposts": 0,
         "quotes": 0,
         "shares": 0,
-        "at": "2026-11-08T05:00:27+00:00"
+        "at": "2026-11-08T10:02:06+00:00"
       },
       "h24": {
         "views": 128,
@@ -3785,7 +3786,7 @@
         "reposts": 0,
         "quotes": 0,
         "shares": 0,
-        "at": "2026-11-08T05:00:27+00:00"
+        "at": "2026-11-08T10:02:06+00:00"
       },
       "h24": {
         "views": 108,
@@ -3797,6 +3798,14 @@
       },
       "h72": {
         "views": 134,
+        "likes": 4,
+        "replies": 0,
+        "reposts": 0,
+        "quotes": 0,
+        "shares": 0
+      },
+      "h168": {
+        "views": 141,
         "likes": 4,
         "replies": 0,
         "reposts": 0,
@@ -3818,7 +3827,7 @@
         "reposts": 2,
         "quotes": 0,
         "shares": 3,
-        "at": "2026-11-08T05:00:27+00:00"
+        "at": "2026-11-08T10:02:06+00:00"
       },
       "h24": {
         "views": 412,
@@ -3857,7 +3866,7 @@
         "reposts": 0,
         "quotes": 0,
         "shares": 0,
-        "at": "2026-11-08T05:00:27+00:00"
+        "at": "2026-11-08T10:02:06+00:00"
       },
       "h24": {
         "views": 123,
@@ -3884,7 +3893,7 @@
       "origin": "manual",
       "has_photo": true,
       "latest": {
-        "at": "2026-11-08T05:00:26+00:00"
+        "at": "2026-11-08T10:02:05+00:00"
       },
       "h24": {},
       "h72": {}
@@ -3909,7 +3918,7 @@
         "reposts": 0,
         "quotes": 0,
         "shares": 0,
-        "at": "2026-11-08T05:00:26+00:00"
+        "at": "2026-11-08T10:02:05+00:00"
       },
       "h24": {
         "views": 308,
@@ -3948,7 +3957,7 @@
         "reposts": 0,
         "quotes": 0,
         "shares": 0,
-        "at": "2026-11-08T05:00:26+00:00"
+        "at": "2026-11-08T10:02:05+00:00"
       },
       "h24": {
         "views": 146,
@@ -3987,7 +3996,7 @@
         "reposts": 0,
         "quotes": 0,
         "shares": 0,
-        "at": "2026-11-08T05:00:26+00:00"
+        "at": "2026-11-08T10:02:04+00:00"
       },
       "h24": {
         "views": 326,
@@ -4014,13 +4023,13 @@
       "origin": "manual",
       "has_photo": true,
       "latest": {
-        "views": 2140,
+        "views": 2144,
         "likes": 61,
         "replies": 29,
         "reposts": 0,
         "quotes": 0,
         "shares": 7,
-        "at": "2026-11-08T05:00:26+00:00"
+        "at": "2026-11-08T10:02:05+00:00"
       },
       "h24": {
         "views": 2047,
@@ -4059,10 +4068,18 @@
         "reposts": 0,
         "quotes": 0,
         "shares": 0,
-        "at": "2026-11-08T05:00:25+00:00"
+        "at": "2026-11-08T10:02:04+00:00"
       },
       "h24": {
         "views": 265,
+        "likes": 12,
+        "replies": 7,
+        "reposts": 0,
+        "quotes": 0,
+        "shares": 0
+      },
+      "h72": {
+        "views": 291,
         "likes": 12,
         "replies": 7,
         "reposts": 0,
@@ -4084,7 +4101,7 @@
         "reposts": 0,
         "quotes": 0,
         "shares": 0,
-        "at": "2026-11-08T05:00:25+00:00"
+        "at": "2026-11-08T10:02:04+00:00"
       },
       "h24": {
         "views": 115,
@@ -4103,13 +4120,13 @@
       "origin": "manual",
       "has_photo": false,
       "latest": {
-        "views": 74,
-        "likes": 3,
-        "replies": 0,
+        "views": 82,
+        "likes": 4,
+        "replies": 2,
         "reposts": 0,
         "quotes": 0,
         "shares": 0,
-        "at": "2026-11-08T05:00:25+00:00"
+        "at": "2026-11-08T10:02:03+00:00"
       },
       "h24": {
         "views": 68,
@@ -4128,7 +4145,7 @@
       "origin": "manual",
       "has_photo": true,
       "latest": {
-        "at": "2026-11-08T05:00:25+00:00"
+        "at": "2026-11-08T10:02:03+00:00"
       },
       "h24": {}
     },
@@ -4146,13 +4163,13 @@
       "has_photo": true,
       "scheduled": true,
       "latest": {
-        "views": 167,
+        "views": 168,
         "likes": 5,
         "replies": 10,
         "reposts": 0,
         "quotes": 0,
         "shares": 2,
-        "at": "2026-11-08T05:00:25+00:00"
+        "at": "2026-11-08T10:02:03+00:00"
       },
       "h24": {
         "views": 141,
@@ -4171,13 +4188,13 @@
       "origin": "manual",
       "has_photo": false,
       "latest": {
-        "views": 252,
-        "likes": 11,
-        "replies": 18,
+        "views": 302,
+        "likes": 13,
+        "replies": 20,
         "reposts": 0,
         "quotes": 0,
         "shares": 0,
-        "at": "2026-11-08T05:00:24+00:00"
+        "at": "2026-11-08T10:02:02+00:00"
       }
     },
     "17950755354346946": {
@@ -4194,15 +4211,38 @@
       "has_photo": true,
       "scheduled": true,
       "latest": {
-        "views": 179,
+        "views": 192,
         "likes": 10,
         "replies": 6,
         "reposts": 0,
         "quotes": 0,
         "shares": 2,
-        "at": "2026-11-08T05:00:25+00:00"
+        "at": "2026-11-08T10:02:03+00:00"
+      }
+    },
+    "18380721496240904": {
+      "timestamp": "2026-11-08T10:00:41+0000",
+      "permalink": "https://www.threads.com/@velimyr/post/DfefhTPm9ps",
+      "media_type": "IMAGE",
+      "text_len": 304,
+      "origin": "bot",
+      "idea": "2026-10-20-06",
+      "title": "«Помер від живота»? У старих текстах «живіт» — це життя",
+      "stream": "fun",
+      "topic": "Генеалогія",
+      "posts_count": 5,
+      "has_photo": true,
+      "scheduled": true,
+      "latest": {
+        "views": 0,
+        "likes": 0,
+        "replies": 4,
+        "reposts": 0,
+        "quotes": 0,
+        "shares": 0,
+        "at": "2026-11-08T10:02:02+00:00"
       }
     }
   },
-  "updated_at": "2026-11-08T05:00:28+00:00"
+  "updated_at": "2026-11-08T10:02:07+00:00"
 }
