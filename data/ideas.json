@@ -14277,7 +14277,7 @@
       "images": [],
       "status": "approved",
       "thread": {
-        "status": "none",
+        "status": "requested",
         "file": null
       },
       "script": {
@@ -14297,6 +14297,10 @@
         {
           "at": "2026-11-10T07:38:27+00:00",
           "event": "idea approved in telegram"
+        },
+        {
+          "at": "2026-11-10T10:00:53+00:00",
+          "event": "thread requested in telegram"
         }
       ]
     },
