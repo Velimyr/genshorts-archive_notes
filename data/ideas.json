@@ -14913,7 +14913,7 @@
         "https://citizen.co.za/alex-news/?p=74159"
       ],
       "images": [],
-      "status": "proposed",
+      "status": "approved",
       "thread": {
         "status": "none",
         "file": null
@@ -14931,6 +14931,10 @@
         {
           "at": "2026-11-10T09:00:00+00:00",
           "event": "proposed by ideas routine"
+        },
+        {
+          "at": "2026-11-10T09:34:04+00:00",
+          "event": "idea approved in telegram"
         }
       ]
     },
@@ -14979,7 +14983,7 @@
         "https://uk.wikipedia.org/wiki/Рекрутська_повинність"
       ],
       "images": [],
-      "status": "proposed",
+      "status": "approved",
       "thread": {
         "status": "none",
         "file": null
@@ -14997,6 +15001,10 @@
         {
           "at": "2026-11-10T09:00:00+00:00",
           "event": "proposed by ideas routine"
+        },
+        {
+          "at": "2026-11-10T09:34:16+00:00",
+          "event": "idea approved in telegram"
         }
       ]
     },
