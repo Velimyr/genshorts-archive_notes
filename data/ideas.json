@@ -14678,6 +14678,356 @@
           "event": "proposed by ideas routine"
         }
       ]
+    },
+    {
+      "id": "2026-11-10-21",
+      "proposed_at": "2026-11-10",
+      "stream": "fun",
+      "rubric": "dna",
+      "title": "Ваш прапрадід міг не залишити вам жодного гена. Привіт, родинне дерево",
+      "summary": "Від кожного предка ви в середньому маєте половину попереднього: 50, 25, 12,5, 6,25, 3,125%. Але це середнє: рекомбінація тасує шматки випадково, тож з далеких гілок можна не отримати нічого. Тред про те, чому «в мені тече кров гетьмана» — не результат тесту, а лише питання віри.",
+      "why_now": "",
+      "sources": [
+        "https://www.thetech.org/ask-a-geneticist/ask445"
+      ],
+      "images": [
+        {
+          "url": "https://live.staticflickr.com/2552/3746669149_7b420723ab_b.jpg",
+          "page": "https://www.flickr.com/photos/86524377@N00/3746669149",
+          "credit": "tmkeesey / Flickr, CC BY 2.0",
+          "license": "CC BY 2.0"
+        }
+      ],
+      "status": "proposed",
+      "thread": {
+        "status": "none",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-11-10T09:00:00+00:00",
+          "event": "proposed by ideas routine"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-10-22",
+      "proposed_at": "2026-11-10",
+      "stream": "fun",
+      "rubric": "ai",
+      "title": "Транскрибус читає Шевченка краще, ніж ви — вашу прабабусю",
+      "summary": "Для Transkribus створили першу загальну модель для українського рукопису: навчали на рукописах Шевченка й Лесі Українки, приватних листах і щоденнику з Музею Голодомору, похибка на символ — 4,2%. Тред про те, що ШІ вже розбирає почерки класиків, а вам ще й скоропис писаря; з застереженням, що на метриках точність буде нижчою.",
+      "why_now": "",
+      "sources": [
+        "https://kmhj.ukma.edu.ua/article/view/320422"
+      ],
+      "images": [],
+      "status": "proposed",
+      "thread": {
+        "status": "none",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-11-10T09:00:00+00:00",
+          "event": "proposed by ideas routine"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-10-23",
+      "proposed_at": "2026-11-10",
+      "stream": "fun",
+      "rubric": "toponyms",
+      "title": "Пуків: назва кумедна, а перша згадка серйозна — 1419 рік",
+      "summary": "Село на Прикарпатті має три версії назви: від імені Пук, від «путь» чи від «Буків» — історики не виводять її зі слова, про яке ви подумали. Перша згадка — 1419 рік у Литовській метриці. Тред про те, що кумедну назву не слід «виправляти»: у старих документах шукайте ранні форми.",
+      "why_now": "",
+      "sources": [
+        "https://news.telegraf.com.ua/ukr/ukraina/2025-10-31/5924467-bez-ulybki-ne-prochest-chto-skryvaet-pakhuchee-nazvanie-sela-na-frankovshchine"
+      ],
+      "images": [],
+      "status": "proposed",
+      "thread": {
+        "status": "none",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-11-10T09:00:00+00:00",
+          "event": "proposed by ideas routine"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-10-24",
+      "proposed_at": "2026-11-10",
+      "stream": "fun",
+      "rubric": "toponyms",
+      "title": "Негровець — це не те, що ви подумали. До 1944 року це була Верхня Колочава",
+      "summary": "Два закарпатські села, Негрово й Негровець, звучать схоже, але назви не пов'язані: Негрово вперше згадане 1398 року як «Massor» і перейменоване у 1995-му; Негровець названий від гори і до 1944 року звався Верхня Колочава. Тред про те, що кумедна назва в сучасному списку не обов'язково та, що в метриці предків.",
+      "why_now": "",
+      "sources": [
+        "https://news.telegraf.com.ua/ukr/obshhestvo/2025-11-28/5926723-zhodnogo-rasizmu-dva-sela-z-duzhe-nezvichaynimi-nazvami-e-v-ukraini-mapa"
+      ],
+      "images": [],
+      "status": "proposed",
+      "thread": {
+        "status": "none",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-11-10T09:00:00+00:00",
+          "event": "proposed by ideas routine"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-10-25",
+      "proposed_at": "2026-11-10",
+      "stream": "fun",
+      "rubric": "language",
+      "title": "Деньги́: село не про гроші, а наголос — на останньому складі",
+      "summary": "У Золотоніському районі є село Деньги з правильним наголосом на останньому складі. Одна версія виводить назву з тюркського «теньга» — монета, інша пов'язує її з Деньгівською сотнею. Тред про те, що наголос і історія назви — частина пошуку, а жарт про гроші — лише привід.",
+      "why_now": "",
+      "sources": [
+        "https://news.telegraf.com.ua/ukr/obshhestvo/2025-12-04/5927232-vsim-bi-i-pobilshe-v-ukraini-e-selo-z-chudernatskoyu-nazvoyu-foto/amp"
+      ],
+      "images": [],
+      "status": "proposed",
+      "thread": {
+        "status": "none",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-11-10T09:00:00+00:00",
+          "event": "proposed by ideas routine"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-10-26",
+      "proposed_at": "2026-11-10",
+      "stream": "fun",
+      "rubric": "photos",
+      "title": "Мати під простирадлом: у ательє мамі казали «сховайся», щоб дитина не смикнулася",
+      "summary": "Довгі витримки ранньої фотографії породили жанр «схованих матерів»: мама ховалася під тканиною чи в кріслі, щоб дитина не рухалася. Тред про фото з «дивною меблею» в кадрі — це нерідко жива родичка, і її не варто обрізати при скануванні.",
+      "why_now": "",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Post-mortem_photography"
+      ],
+      "images": [
+        {
+          "url": "https://live.staticflickr.com/2853/10155620173_fb7714a8a9_b.jpg",
+          "page": "https://www.flickr.com/photos/95329455@N02/10155620173",
+          "credit": "simpleinsomnia / Flickr, CC BY 2.0",
+          "license": "CC BY 2.0"
+        },
+        {
+          "url": "https://live.staticflickr.com/7319/12220170954_20b54d108a_b.jpg",
+          "page": "https://www.flickr.com/photos/95329455@N02/12220170954",
+          "credit": "simpleinsomnia / Flickr, CC BY 2.0",
+          "license": "CC BY 2.0"
+        }
+      ],
+      "status": "proposed",
+      "thread": {
+        "status": "none",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-11-10T09:00:00+00:00",
+          "event": "proposed by ideas routine"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-10-27",
+      "proposed_at": "2026-11-10",
+      "stream": "fun",
+      "rubric": "photos",
+      "title": "«Предки ніколи не усміхалися» — бо витримка? Не лише: тут цілих п'ять причин",
+      "summary": "Довга витримка справді полегшувала нейтральне обличчя, але не вона одна: усмішку вважали ознакою нижчих класів, знімків було мало й кожен мав бути «вдалим», а фотографія успадкувала манеру живопису. Тред для тих, хто пояснює суворий погляд прадіда одним словом.",
+      "why_now": "",
+      "sources": [
+        "https://citizen.co.za/alex-news/?p=74159"
+      ],
+      "images": [],
+      "status": "proposed",
+      "thread": {
+        "status": "none",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-11-10T09:00:00+00:00",
+          "event": "proposed by ideas routine"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-10-28",
+      "proposed_at": "2026-11-10",
+      "stream": "fun",
+      "rubric": "myths",
+      "title": "Батько «граф», а в метриці — Illegitimi: у галицьких книгах він просто відсутній",
+      "summary": "У метричних книгах Галичини після реформи Йосифа II, зокрема Matrikenpatent 1784 року, окремо позначали Legitimi та Illegitimi, і для позашлюбної дитини вказували лише матір. Жартівливий, але обережний тред про те, що легенда про «графа» у книзі виглядає як порожня графа.",
+      "why_now": "",
+      "sources": [
+        "https://uk.wikipedia.org/wiki/Метричні_книги"
+      ],
+      "images": [],
+      "status": "proposed",
+      "thread": {
+        "status": "none",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-11-10T09:00:00+00:00",
+          "event": "proposed by ideas routine"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-10-29",
+      "proposed_at": "2026-11-10",
+      "stream": "fun",
+      "rubric": "military",
+      "title": "Рекрутчину обходили купці й сім'ї священників: шукайте «зниклого» прадіда там",
+      "summary": "Серед звільнених від рекрутської повинності були купці та сім'ї священнослужителів; дворянство звільнили з 1762 року, а викуп дозволили з 1872-го. Іронічний тред про те, що відсутність у списках новобранців — не обов'язково втеча, а часто станова належність.",
+      "why_now": "",
+      "sources": [
+        "https://uk.wikipedia.org/wiki/Рекрутська_повинність"
+      ],
+      "images": [],
+      "status": "proposed",
+      "thread": {
+        "status": "none",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-11-10T09:00:00+00:00",
+          "event": "proposed by ideas routine"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-10-30",
+      "proposed_at": "2026-11-10",
+      "stream": "fun",
+      "rubric": "cemeteries",
+      "title": "Козацький хрест 1655 року пережив радянські бульдозери: його сховали на цвинтарі",
+      "summary": "У Бучачі курган з могилою 1655 року розрівняли в радянський час, а кам'яний хрест місцеві заховали на сусідньому цвинтарі; після незалежності хрест повернули, а нині відреставрували й знову насипали курган. Тред про те, що надгробок міг пережити всіх, бо хтось вчасно його сховав.",
+      "why_now": "",
+      "sources": [
+        "https://zaxid.net/na_ternopilshhini_onovili_kozatskiy_kurgan_1655_roku_n1574243"
+      ],
+      "images": [],
+      "status": "proposed",
+      "thread": {
+        "status": "none",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-11-10T09:00:00+00:00",
+          "event": "proposed by ideas routine"
+        }
+      ]
     }
   ]
 }
