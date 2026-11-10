@@ -14024,7 +14024,7 @@
           "license": "CC BY 4.0"
         }
       ],
-      "status": "proposed",
+      "status": "rejected",
       "thread": {
         "status": "none",
         "file": null
@@ -14042,6 +14042,10 @@
         {
           "at": "2026-11-10T12:00:00+00:00",
           "event": "proposed by ideas routine"
+        },
+        {
+          "at": "2026-11-10T07:38:26+00:00",
+          "event": "idea rejected in telegram"
         }
       ]
     },
@@ -14108,7 +14112,7 @@
           "license": "Public domain"
         }
       ],
-      "status": "proposed",
+      "status": "approved",
       "thread": {
         "status": "none",
         "file": null
@@ -14126,6 +14130,10 @@
         {
           "at": "2026-11-10T12:00:00+00:00",
           "event": "proposed by ideas routine"
+        },
+        {
+          "at": "2026-11-10T07:38:25+00:00",
+          "event": "idea approved in telegram"
         }
       ]
     },
@@ -14148,7 +14156,7 @@
           "license": "CC BY-SA 4.0"
         }
       ],
-      "status": "proposed",
+      "status": "approved",
       "thread": {
         "status": "none",
         "file": null
@@ -14166,6 +14174,10 @@
         {
           "at": "2026-11-10T12:00:00+00:00",
           "event": "proposed by ideas routine"
+        },
+        {
+          "at": "2026-11-10T07:38:17+00:00",
+          "event": "idea approved in telegram"
         }
       ]
     },
@@ -14181,7 +14193,7 @@
         "https://uk.wikipedia.org/wiki/Посполиті"
       ],
       "images": [],
-      "status": "proposed",
+      "status": "approved",
       "thread": {
         "status": "none",
         "file": null
@@ -14199,6 +14211,10 @@
         {
           "at": "2026-11-10T12:00:00+00:00",
           "event": "proposed by ideas routine"
+        },
+        {
+          "at": "2026-11-10T07:38:27+00:00",
+          "event": "idea approved in telegram"
         }
       ]
     },
@@ -14214,7 +14230,7 @@
         "https://en.wikipedia.org/wiki/Emancipation_reform_of_1861"
       ],
       "images": [],
-      "status": "proposed",
+      "status": "approved",
       "thread": {
         "status": "none",
         "file": null
@@ -14232,6 +14248,10 @@
         {
           "at": "2026-11-10T12:00:00+00:00",
           "event": "proposed by ideas routine"
+        },
+        {
+          "at": "2026-11-10T07:38:27+00:00",
+          "event": "idea approved in telegram"
         }
       ]
     }
