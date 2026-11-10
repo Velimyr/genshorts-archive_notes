@@ -14259,6 +14259,369 @@
           "event": "idea approved in telegram"
         }
       ]
+    },
+    {
+      "id": "2026-11-10-11",
+      "proposed_at": "2026-11-10",
+      "stream": "fun",
+      "rubric": "document",
+      "title": "Рік 7208 у старому документі — це не опечатка, а 1700-й",
+      "summary": "До 1700 року документи в Русі датували «від створення світу». Пітер I вказав вважати 1700-й першим роком нового літочислення, і 7208-й зник — але в старих актах і церковних книгах ви його ще зустрінете. Жартуємо над тим, як предок «народився» у 7 тисячах із чимось.",
+      "why_now": "Новорічна тема: 1 січня.",
+      "sources": [
+        "https://ru.wikipedia.org/wiki/Новолетие",
+        "https://en.wikipedia.org/wiki/Byzantine_calendar"
+      ],
+      "images": [
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/a/a5/Peter_I_by_Kneller_%28cropped%29.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Peter_I_by_Kneller_(cropped).jpg",
+          "credit": "Godfrey Kneller / Wikimedia Commons, Public domain",
+          "license": "Public domain"
+        }
+      ],
+      "status": "proposed",
+      "thread": {
+        "status": "none",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-11-10T08:00:00+00:00",
+          "event": "proposed by ideas routine"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-10-12",
+      "proposed_at": "2026-11-10",
+      "stream": "fun",
+      "rubric": "language",
+      "title": "Ревізька «казка» — не казка, а список душ, і писали його не ті, на кого ви думаєте",
+      "summary": "Слово «казка» у ревізьких казках — це «сказка», тобто письмова відомість. У селах державних селян її складали старости, у приватних маєтках — поміщики чи управителі, у містах — міська влада. Тред про жанр, де кожен рядок — чиясь «душа», і чому предка шукають саме там.",
+      "why_now": "",
+      "sources": [
+        "https://ru.wikipedia.org/wiki/Ревизская_сказка"
+      ],
+      "images": [
+        {
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/59/%D0%94%D0%90%D0%9A%D0%9E_1453-1-111._1795._%D0%A0%D0%B5%D0%B2%D0%B8%D0%B7%D1%81%D0%BA%D0%B0%D1%8F_%D1%81%D0%BA%D0%B0%D0%B7%D0%BA%D0%B0_%D1%81._%D0%94%D1%83%D0%B1%D1%80%D0%BE%D0%B2%D0%BA%D0%B0_%D0%9F%D1%8F%D1%82%D0%B8%D0%B3%D0%BE%D1%80%D1%81%D0%BA%D0%BE%D0%B3%D0%BE_%D1%83%D0%B5%D0%B7%D0%B4%D0%B0_%D0%91%D1%80%D0%B0%D1%86%D0%BB%D0%B0%D0%B2%D1%81%D0%BA%D0%BE%D0%B9_%D0%B3%D1%83%D0%B1%D0%B5%D1%80%D0%BD%D0%B8%D0%B8.pdf/page1-500px-%D0%94%D0%90%D0%9A%D0%9E_1453-1-111._1795._%D0%A0%D0%B5%D0%B2%D0%B8%D0%B7%D1%81%D0%BA%D0%B0%D1%8F_%D1%81%D0%BA%D0%B0%D0%B7%D0%BA%D0%B0_%D1%81._%D0%94%D1%83%D0%B1%D1%80%D0%BE%D0%B2%D0%BA%D0%B0_%D0%9F%D1%8F%D1%82%D0%B8%D0%B3%D0%BE%D1%80%D1%81%D0%BA%D0%BE%D0%B3%D0%BE_%D1%83%D0%B5%D0%B7%D0%B4%D0%B0_%D0%91%D1%80%D0%B0%D1%86%D0%BB%D0%B0%D0%B2%D1%81%D0%BA%D0%BE%D0%B9_%D0%B3%D1%83%D0%B1%D0%B5%D1%80%D0%BD%D0%B8%D0%B8.pdf.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:%D0%94%D0%90%D0%9A%D0%9E_1453-1-111._1795._%D0%A0%D0%B5%D0%B2%D0%B8%D0%B7%D1%81%D0%BA%D0%B0%D1%8F_%D1%81%D0%BA%D0%B0%D0%B7%D0%BA%D0%B0_%D1%81._%D0%94%D1%83%D0%B1%D1%80%D0%BE%D0%B2%D0%BA%D0%B0_%D0%9F%D1%8F%D1%82%D0%B8%D0%B3%D0%BE%D1%80%D1%81%D0%BA%D0%BE%D0%B3%D0%BE_%D1%83%D0%B5%D0%B7%D0%B4%D0%B0_%D0%91%D1%80%D0%B0%D1%86%D0%BB%D0%B0%D0%B2%D1%81%D0%BA%D0%BE%D0%B9_%D0%B3%D1%83%D0%B1%D0%B5%D1%80%D0%BD%D0%B8%D0%B8.pdf",
+          "credit": "Державний архів Київської області / Wikimedia Commons, Public domain",
+          "license": "Public domain"
+        }
+      ],
+      "status": "proposed",
+      "thread": {
+        "status": "none",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-11-10T08:00:00+00:00",
+          "event": "proposed by ideas routine"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-10-13",
+      "proposed_at": "2026-11-10",
+      "stream": "fun",
+      "rubric": "customs",
+      "title": "Третій шлюб — «послаблення», четвертий — не благословляється: правила для серійних наречених",
+      "summary": "Православна церква терпіла третій шлюб лише як послаблення (людям до 40 років і без дітей), а четвертий і наступні не благословляла зовсім. Тред про предка з трьома дружинами й питання, чому в метриках це видно по записах про вдівців і вдів.",
+      "why_now": "",
+      "sources": [
+        "https://ru.wikipedia.org/wiki/Брак_в_православии"
+      ],
+      "images": [],
+      "status": "proposed",
+      "thread": {
+        "status": "none",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-11-10T08:00:00+00:00",
+          "event": "proposed by ideas routine"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-10-14",
+      "proposed_at": "2026-11-10",
+      "stream": "fun",
+      "rubric": "document",
+      "title": "Рукоприкладчик: хто розписувався за вашого неписьменного прадіда",
+      "summary": "У старих актах підпис неписьменного ставив «рукоприкладчик» — людина, що розписалася за іншого. Колись «руку прикладали» навіть буквально: обмазану чорнилом долоню. Жарт про те, що підпис у документі не завжди належить тому, чий це документ.",
+      "why_now": "",
+      "sources": [
+        "https://ru.wikipedia.org/wiki/Рукоприкладство"
+      ],
+      "images": [],
+      "status": "proposed",
+      "thread": {
+        "status": "none",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-11-10T08:00:00+00:00",
+          "event": "proposed by ideas routine"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-10-15",
+      "proposed_at": "2026-11-10",
+      "stream": "fun",
+      "rubric": "bureaucracy",
+      "title": "Подушна подать: платила «душа» чоловічої статі — навіть немовля",
+      "summary": "Податок збирали з кожного чоловіка податних станів незалежно від віку; перепис для цього почався з указу Петра I 1718 року («зібрати сказки»). У 1794 році подать становила 1 рубль, а до 1867-го — від 1 руб. 15 коп. до 2 руб. 61 коп. Тред: чому ваш прапрадід з'явився у списках раніше, ніж навчився ходити.",
+      "why_now": "",
+      "sources": [
+        "https://ru.wikipedia.org/wiki/Подушная_подать",
+        "https://ru.wikipedia.org/wiki/Ревизская_сказка"
+      ],
+      "images": [],
+      "status": "proposed",
+      "thread": {
+        "status": "none",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-11-10T08:00:00+00:00",
+          "event": "proposed by ideas routine"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-10-16",
+      "proposed_at": "2026-11-10",
+      "stream": "fun",
+      "rubric": "literacy",
+      "title": "«Чи вмієте читати?» — єдине питання про грамотність у переписі 1897 року",
+      "summary": "Переписний лист 1897 року питав лише «чи вміє читати», а через низьку грамотність більшість бланків заповнювали переписувачі (їх було до 150 тис.). Загалом грамотними визнали 21,1 % — 29,3 % чоловіків і 13,1 % жінок. Тред про цифри, з яких насміхаються архівісти, і про те, що вони означають для пошуку предків.",
+      "why_now": "",
+      "sources": [
+        "https://ru.wikipedia.org/wiki/Перепись_населения_Российской_империи_(1897)",
+        "https://ru.wikipedia.org/wiki/Грамотность"
+      ],
+      "images": [
+        {
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b2/Russian-census-1897-p1.jpg/1280px-Russian-census-1897-p1.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Russian-census-1897-p1.jpg",
+          "credit": "Håkan Henriksson (Narking) / Wikimedia Commons, Public domain",
+          "license": "Public domain"
+        }
+      ],
+      "status": "proposed",
+      "thread": {
+        "status": "none",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-11-10T08:00:00+00:00",
+          "event": "proposed by ideas routine"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-10-17",
+      "proposed_at": "2026-11-10",
+      "stream": "fun",
+      "rubric": "ancestors",
+      "title": "Міщанин — друга за чисельністю верства імперії, а в родинних легендах їх немає",
+      "summary": "За переписом 1897 року мещан у Російській імперії було 13,4 млн — друга верства після селян. Мешканця міста з цим станом не випускали з міста без тимчасового паспорта. Тред про те, чому у кожного в легенді «козак» чи «шляхтич», а в документах — міщани.",
+      "why_now": "",
+      "sources": [
+        "https://ru.wikipedia.org/wiki/Мещанство",
+        "https://uk.wikipedia.org/wiki/Міщанство"
+      ],
+      "images": [],
+      "status": "proposed",
+      "thread": {
+        "status": "none",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-11-10T08:00:00+00:00",
+          "event": "proposed by ideas routine"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-10-18",
+      "proposed_at": "2026-11-10",
+      "stream": "fun",
+      "rubric": "military",
+      "title": "«Грамотний» новобранець умів написати лише власне прізвище",
+      "summary": "За даними БСЕ, частка «грамотних» серед новобранців зросла з 21 % у 1875 до 73 % у 1913 році, але за грамотного брали й того, хто вмів написати своє прізвище. Тред про статистику, яку треба читати з гумором, і про те, що ваш прадід-новобранець міг бути «грамотним» лише у власному підписі.",
+      "why_now": "",
+      "sources": [
+        "https://ru.wikipedia.org/wiki/Грамотность"
+      ],
+      "images": [],
+      "status": "proposed",
+      "thread": {
+        "status": "none",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-11-10T08:00:00+00:00",
+          "event": "proposed by ideas routine"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-10-19",
+      "proposed_at": "2026-11-10",
+      "stream": "fun",
+      "rubric": "law",
+      "title": "Дослужитися до дворянина: у Табелі про ранги його давав восьмий клас, а з 1845-го — п'ятий",
+      "summary": "З 1722 року чин за Табелем про ранги давав дворянство: 14-й клас — особисте, 8-й — спадкове. Микола I підняв планку до 5-го класу 1845 року, а 1856-го — до 4-го для цивільної й 6-го для військової служби. Тред про легенду «ми з дворян» і про те, що дворянство могли заробити за чин, а не лише успадкувати.",
+      "why_now": "",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Table_of_Ranks",
+        "https://ru.wikipedia.org/wiki/Табель_про_ранги"
+      ],
+      "images": [
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/2/2f/Tabel_o_rangah.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Tabel_o_rangah.jpg",
+          "credit": "Peter I of Russia / Wikimedia Commons, Public domain",
+          "license": "Public domain"
+        }
+      ],
+      "status": "proposed",
+      "thread": {
+        "status": "none",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-11-10T08:00:00+00:00",
+          "event": "proposed by ideas routine"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-10-20",
+      "proposed_at": "2026-11-10",
+      "stream": "fun",
+      "rubric": "names",
+      "title": "Покровський, Колоколов, Преображенський: прізвища семінаристів вигадували просто в училищі",
+      "summary": "Духовенство було єдиним станом у Російській імперії, яке могло вільно міняти прізвище; семінаристам видавали «благозвучні» нові, а брати могли мати різні прізвища. Указ Синоду 1846 року обмежив цю практику. Тред про те, чому пошук родини священника починається з питання «яке це прізвище насправді».",
+      "why_now": "",
+      "sources": [
+        "https://ru.wikipedia.org/wiki/Фамилии_духовенства"
+      ],
+      "images": [],
+      "status": "proposed",
+      "thread": {
+        "status": "none",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-11-10T08:00:00+00:00",
+          "event": "proposed by ideas routine"
+        }
+      ]
     }
   ]
 }
