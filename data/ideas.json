@@ -15020,7 +15020,7 @@
         "https://zaxid.net/na_ternopilshhini_onovili_kozatskiy_kurgan_1655_roku_n1574243"
       ],
       "images": [],
-      "status": "proposed",
+      "status": "approved",
       "thread": {
         "status": "none",
         "file": null
@@ -15038,6 +15038,10 @@
         {
           "at": "2026-11-10T09:00:00+00:00",
           "event": "proposed by ideas routine"
+        },
+        {
+          "at": "2026-11-10T09:34:57+00:00",
+          "event": "idea approved in telegram"
         }
       ]
     }
