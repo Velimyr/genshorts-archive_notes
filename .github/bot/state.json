@@ -5588,13 +5588,18 @@
         "credit": "Невідомий художник, «Томас Брейтвейт з Емблсайда складає заповіт» (1607), Abbot Hall Art Gallery / Wikimedia Commons, Public domain"
       },
       "approved_at": "2026-10-15T10:05:14+00:00",
-      "posted": false,
+      "posted": true,
       "publish_at": "2026-11-10T16:00:00+02:00",
       "attempts": 0,
       "test_id": "328",
       "test_permalink": "https://t.me/testvelimyr/328",
       "test_posted_at": "2026-11-10T14:00:23+00:00",
-      "main_at": "2026-11-10T17:45:00+02:00"
+      "main_at": "2026-11-10T17:45:00+02:00",
+      "posted_at": "2026-11-10T15:45:24+00:00",
+      "permalink": "https://t.me/archivist_notes/607",
+      "posted_ids": [
+        "607"
+      ]
     },
     "2026-10-11-07": {
       "sha": "cfb2e3f18523205a",
@@ -7070,12 +7075,12 @@
     "analytics": "2026-11-01T16:00:27+00:00"
   },
   "revive_count": {
-    "texts": 5
+    "texts": 6
   },
   "report_week": "2026-44",
   "dashboard": {
     "mid": 1672,
-    "sha": "2ff605d11484e46e",
-    "at": "2026-11-10T14:00:29+00:00"
+    "sha": "2efd70262339f702",
+    "at": "2026-11-10T15:45:24+00:00"
   }
 }
