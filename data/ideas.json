@@ -1555,7 +1555,7 @@
       "thread": {
         "status": "scheduled",
         "file": "data/texts/2026-09-30-02/thread.md",
-        "approved_sha": "207faf0636ae7885"
+        "approved_sha": "04d9ee9d6789aa8c"
       },
       "script": {
         "status": "none",
@@ -1602,6 +1602,18 @@
         {
           "at": "2026-11-05T10:24:28+00:00",
           "event": "thread auto-scheduled: 2026-11-11T13:41:00+02:00"
+        },
+        {
+          "at": "2026-11-10T08:08:04+00:00",
+          "event": "thread unscheduled for rewrite (red lines: russia)"
+        },
+        {
+          "at": "2026-11-10T08:08:04+00:00",
+          "event": "thread rewritten by author request (red lines: russia)"
+        },
+        {
+          "at": "2026-11-10T08:08:04+00:00",
+          "event": "thread rescheduled to the same slot: 2026-11-11T13:41:00+02:00"
         }
       ]
     },
@@ -5335,6 +5347,10 @@
         {
           "at": "2026-11-04T21:40:37+00:00",
           "event": "stream changed: small → big (малий і великий серйозний злито)"
+        },
+        {
+          "at": "2026-11-10T08:08:04+00:00",
+          "event": "thread rewritten by author request (red lines: russia)"
         }
       ]
     },
@@ -7508,7 +7524,7 @@
       "thread": {
         "status": "scheduled",
         "file": "data/texts/2026-10-15-11/thread.md",
-        "approved_sha": "9d7c6c5811be91fc"
+        "approved_sha": "2a00b78a08abc3f6"
       },
       "script": {
         "status": "none",
@@ -7586,6 +7602,18 @@
         {
           "at": "2026-11-04T20:54:43+00:00",
           "event": "thread auto-scheduled: 2026-11-24T16:00:00+02:00"
+        },
+        {
+          "at": "2026-11-10T08:08:04+00:00",
+          "event": "thread unscheduled for rewrite (red lines: russia)"
+        },
+        {
+          "at": "2026-11-10T08:08:04+00:00",
+          "event": "thread rewritten by author request (red lines: russia)"
+        },
+        {
+          "at": "2026-11-10T08:08:04+00:00",
+          "event": "thread rescheduled to the same slot: 2026-11-24T16:00:00+02:00"
         }
       ],
       "images_excluded": [
@@ -11568,7 +11596,7 @@
       "thread": {
         "status": "scheduled",
         "file": "data/texts/2026-10-23-01/thread.md",
-        "approved_sha": "4fb3c14dbd17ab82"
+        "approved_sha": "afc2a976a51497d3"
       },
       "script": {
         "status": "none",
@@ -11619,6 +11647,18 @@
         {
           "at": "2026-11-08T11:30:35+00:00",
           "event": "thread auto-scheduled: 2026-11-14T09:42:00+02:00"
+        },
+        {
+          "at": "2026-11-10T08:08:04+00:00",
+          "event": "thread unscheduled for rewrite (red lines: russia)"
+        },
+        {
+          "at": "2026-11-10T08:08:04+00:00",
+          "event": "thread rewritten by author request (red lines: russia)"
+        },
+        {
+          "at": "2026-11-10T08:08:04+00:00",
+          "event": "thread rescheduled to the same slot: 2026-11-14T09:42:00+02:00"
         }
       ],
       "photo_request": false,
