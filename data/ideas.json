@@ -14398,7 +14398,7 @@
         "https://ru.wikipedia.org/wiki/Рукоприкладство"
       ],
       "images": [],
-      "status": "proposed",
+      "status": "approved",
       "thread": {
         "status": "none",
         "file": null
@@ -14416,6 +14416,10 @@
         {
           "at": "2026-11-10T08:00:00+00:00",
           "event": "proposed by ideas routine"
+        },
+        {
+          "at": "2026-11-10T08:01:03+00:00",
+          "event": "idea approved in telegram"
         }
       ]
     },
