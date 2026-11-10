@@ -8103,6 +8103,10 @@
         {
           "at": "2026-10-15T10:05:14+00:00",
           "event": "thread auto-scheduled: 2026-11-10T16:00:00+02:00"
+        },
+        {
+          "at": "2026-11-10T14:00:23+00:00",
+          "event": "telegram post published to test channel, main at 2026-11-10T17:45:00+02:00"
         }
       ],
       "images_excluded": [],
