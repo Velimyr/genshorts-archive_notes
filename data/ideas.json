@@ -13860,7 +13860,7 @@
         "https://uk.wikipedia.org/wiki/Литовські_статути"
       ],
       "images": [],
-      "status": "proposed",
+      "status": "approved",
       "thread": {
         "status": "none",
         "file": null
@@ -13878,6 +13878,10 @@
         {
           "at": "2026-11-10T12:00:00+00:00",
           "event": "proposed by ideas routine"
+        },
+        {
+          "at": "2026-11-10T07:37:24+00:00",
+          "event": "idea approved in telegram"
         }
       ]
     },
@@ -13939,7 +13943,7 @@
           "license": "Public domain"
         }
       ],
-      "status": "proposed",
+      "status": "approved",
       "thread": {
         "status": "none",
         "file": null
@@ -13957,6 +13961,10 @@
         {
           "at": "2026-11-10T12:00:00+00:00",
           "event": "proposed by ideas routine"
+        },
+        {
+          "at": "2026-11-10T07:37:54+00:00",
+          "event": "idea approved in telegram"
         }
       ]
     },
@@ -13972,7 +13980,7 @@
         "https://uk.wikipedia.org/wiki/Холера"
       ],
       "images": [],
-      "status": "proposed",
+      "status": "approved",
       "thread": {
         "status": "none",
         "file": null
@@ -13990,6 +13998,10 @@
         {
           "at": "2026-11-10T12:00:00+00:00",
           "event": "proposed by ideas routine"
+        },
+        {
+          "at": "2026-11-10T07:37:55+00:00",
+          "event": "idea approved in telegram"
         }
       ]
     },
@@ -14052,7 +14064,7 @@
           "license": "Public domain"
         }
       ],
-      "status": "proposed",
+      "status": "rejected",
       "thread": {
         "status": "none",
         "file": null
@@ -14070,6 +14082,10 @@
         {
           "at": "2026-11-10T12:00:00+00:00",
           "event": "proposed by ideas routine"
+        },
+        {
+          "at": "2026-11-10T07:37:56+00:00",
+          "event": "idea rejected in telegram"
         }
       ]
     },
