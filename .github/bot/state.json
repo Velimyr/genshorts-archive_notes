@@ -4936,6 +4936,9 @@
     },
     "1742": {
       "kind": "when"
+    },
+    "1744": {
+      "kind": "ask"
     }
   },
   "approved_threads": {
@@ -6191,7 +6194,7 @@
     }
   },
   "asked": {
-    "ideas": "2026-11-10",
+    "ideas": "2026-11-11",
     "texts": "2026-11-10",
     "publish": "2026-09-29"
   },
@@ -7075,7 +7078,7 @@
     "analytics": "2026-11-01T16:00:27+00:00"
   },
   "revive_count": {
-    "texts": 8
+    "texts": 9
   },
   "report_week": "2026-44",
   "dashboard": {
