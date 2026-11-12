@@ -4951,6 +4951,9 @@
     },
     "1748": {
       "kind": "menu"
+    },
+    "1749": {
+      "kind": "nav"
     }
   },
   "approved_threads": {
@@ -6153,8 +6156,16 @@
         "credit": "Underwood & Underwood / Wikimedia Commons, Public domain"
       },
       "approved_at": "2026-11-07T12:20:17+00:00",
-      "posted": false,
-      "publish_at": "2026-11-12T12:21:00+02:00"
+      "posted": true,
+      "publish_at": "2026-11-12T12:21:00+02:00",
+      "posted_ids": [
+        "17912231778589965",
+        "18115436864624321",
+        "17886231804523246",
+        "18220579075361114"
+      ],
+      "posted_at": "2026-11-12T10:26:41+00:00",
+      "permalink": "https://www.threads.com/@velimyr/post/Dfo1iqxoPHP"
     },
     "2026-10-23-08": {
       "sha": "7ac659ca11a5dbdd",
@@ -7103,12 +7114,12 @@
     "analytics": "2026-11-01T16:00:27+00:00"
   },
   "revive_count": {
-    "texts": 15
+    "texts": 16
   },
   "report_week": "2026-44",
   "dashboard": {
     "mid": 1672,
-    "sha": "e24a4234e533ae30",
-    "at": "2026-11-12T10:00:32+00:00"
+    "sha": "028b41c6d1453c87",
+    "at": "2026-11-12T10:26:42+00:00"
   }
 }
