@@ -4127,7 +4127,7 @@
         "reposts": 0,
         "quotes": 0,
         "shares": 0,
-        "at": "2026-11-13T05:00:27+00:00"
+        "at": "2026-11-13T08:56:54+00:00"
       },
       "h24": {
         "views": 265,
@@ -4152,7 +4152,8 @@
         "reposts": 0,
         "quotes": 0,
         "shares": 0
-      }
+      },
+      "final": true
     },
     "18106725548002275": {
       "timestamp": "2026-11-05T16:11:52+0000",
@@ -4168,7 +4169,7 @@
         "reposts": 0,
         "quotes": 0,
         "shares": 0,
-        "at": "2026-11-13T05:00:27+00:00"
+        "at": "2026-11-13T08:56:54+00:00"
       },
       "h24": {
         "views": 115,
@@ -4209,7 +4210,7 @@
         "reposts": 0,
         "quotes": 0,
         "shares": 0,
-        "at": "2026-11-13T05:00:26+00:00"
+        "at": "2026-11-13T08:56:53+00:00"
       },
       "h24": {
         "views": 68,
@@ -4236,7 +4237,7 @@
       "origin": "manual",
       "has_photo": true,
       "latest": {
-        "at": "2026-11-13T05:00:26+00:00"
+        "at": "2026-11-13T08:56:53+00:00"
       },
       "h24": {},
       "h72": {}
@@ -4261,7 +4262,7 @@
         "reposts": 0,
         "quotes": 0,
         "shares": 2,
-        "at": "2026-11-13T05:00:26+00:00"
+        "at": "2026-11-13T08:56:53+00:00"
       },
       "h24": {
         "views": 141,
@@ -4294,7 +4295,7 @@
         "reposts": 0,
         "quotes": 0,
         "shares": 0,
-        "at": "2026-11-13T05:00:25+00:00"
+        "at": "2026-11-13T08:56:51+00:00"
       },
       "h24": {
         "views": 358,
@@ -4327,13 +4328,13 @@
       "has_photo": true,
       "scheduled": true,
       "latest": {
-        "views": 258,
+        "views": 259,
         "likes": 13,
         "replies": 9,
         "reposts": 0,
         "quotes": 0,
         "shares": 3,
-        "at": "2026-11-13T05:00:26+00:00"
+        "at": "2026-11-13T08:56:51+00:00"
       },
       "h24": {
         "views": 211,
@@ -4366,13 +4367,13 @@
       "has_photo": true,
       "scheduled": true,
       "latest": {
-        "views": 181,
+        "views": 183,
         "likes": 9,
         "replies": 4,
         "reposts": 0,
         "quotes": 0,
         "shares": 0,
-        "at": "2026-11-13T05:00:24+00:00"
+        "at": "2026-11-13T08:56:51+00:00"
       },
       "h24": {
         "views": 145,
@@ -4399,7 +4400,7 @@
       "origin": "manual",
       "has_photo": true,
       "latest": {
-        "at": "2026-11-13T05:00:24+00:00"
+        "at": "2026-11-13T08:56:50+00:00"
       },
       "h24": {},
       "h72": {}
@@ -4418,7 +4419,7 @@
         "reposts": 1,
         "quotes": 0,
         "shares": 0,
-        "at": "2026-11-13T05:00:24+00:00"
+        "at": "2026-11-13T08:56:50+00:00"
       },
       "h24": {
         "views": 158,
@@ -4457,7 +4458,7 @@
         "reposts": 0,
         "quotes": 0,
         "shares": 0,
-        "at": "2026-11-13T05:00:24+00:00"
+        "at": "2026-11-13T08:56:50+00:00"
       },
       "h24": {
         "views": 732,
@@ -4496,7 +4497,7 @@
         "reposts": 0,
         "quotes": 0,
         "shares": 0,
-        "at": "2026-11-13T05:00:24+00:00"
+        "at": "2026-11-13T08:56:50+00:00"
       },
       "h24": {
         "views": 457,
@@ -4529,17 +4530,25 @@
       "has_photo": true,
       "scheduled": true,
       "latest": {
-        "views": 312,
+        "views": 314,
         "likes": 12,
         "replies": 4,
         "reposts": 1,
         "quotes": 0,
         "shares": 0,
-        "at": "2026-11-13T05:00:23+00:00"
+        "at": "2026-11-13T08:56:49+00:00"
       },
       "h24": {
         "views": 259,
         "likes": 11,
+        "replies": 4,
+        "reposts": 1,
+        "quotes": 0,
+        "shares": 0
+      },
+      "h72": {
+        "views": 314,
+        "likes": 12,
         "replies": 4,
         "reposts": 1,
         "quotes": 0,
@@ -4560,7 +4569,7 @@
         "reposts": 0,
         "quotes": 0,
         "shares": 0,
-        "at": "2026-11-13T05:00:23+00:00"
+        "at": "2026-11-13T08:56:49+00:00"
       },
       "h24": {
         "views": 222,
@@ -4585,13 +4594,13 @@
       "has_photo": false,
       "scheduled": true,
       "latest": {
-        "views": 344,
+        "views": 348,
         "likes": 14,
         "replies": 14,
         "reposts": 0,
         "quotes": 0,
         "shares": 1,
-        "at": "2026-11-13T05:00:23+00:00"
+        "at": "2026-11-13T08:56:49+00:00"
       },
       "h24": {
         "views": 335,
@@ -4616,7 +4625,7 @@
         "reposts": 0,
         "quotes": 0,
         "shares": 0,
-        "at": "2026-11-13T05:00:23+00:00"
+        "at": "2026-11-13T08:56:49+00:00"
       },
       "h24": {
         "views": 27,
@@ -4641,15 +4650,38 @@
       "has_photo": true,
       "scheduled": true,
       "latest": {
-        "views": 202,
-        "likes": 9,
+        "views": 211,
+        "likes": 10,
         "replies": 11,
         "reposts": 0,
         "quotes": 0,
         "shares": 0,
-        "at": "2026-11-13T05:00:23+00:00"
+        "at": "2026-11-13T08:56:48+00:00"
+      }
+    },
+    "17866275579692784": {
+      "timestamp": "2026-11-13T08:55:31+0000",
+      "permalink": "https://www.threads.com/@velimyr/post/DfrQCeXm66q",
+      "media_type": "IMAGE",
+      "text_len": 310,
+      "origin": "bot",
+      "idea": "2026-10-06-09",
+      "title": "Бабуся — Коваленчиха: чому жінки в старих записах зі «схованими» прізвищами",
+      "stream": "fun",
+      "topic": "Генеалогія",
+      "posts_count": 5,
+      "has_photo": true,
+      "scheduled": true,
+      "latest": {
+        "views": 0,
+        "likes": 0,
+        "replies": 4,
+        "reposts": 0,
+        "quotes": 0,
+        "shares": 0,
+        "at": "2026-11-13T08:56:48+00:00"
       }
     }
   },
-  "updated_at": "2026-11-13T05:00:27+00:00"
+  "updated_at": "2026-11-13T08:56:54+00:00"
 }
