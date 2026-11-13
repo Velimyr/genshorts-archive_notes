@@ -11352,8 +11352,8 @@
       ],
       "status": "approved",
       "thread": {
-        "status": "requested",
-        "file": null
+        "status": "ready",
+        "file": "data/texts/2026-10-20-08/thread.md"
       },
       "script": {
         "status": "none",
@@ -11376,6 +11376,10 @@
         {
           "at": "2026-11-13T10:04:53+00:00",
           "event": "thread requested in telegram"
+        },
+        {
+          "at": "2026-11-13T10:08:31+00:00",
+          "event": "thread ready"
         }
       ]
     },
@@ -14305,8 +14309,8 @@
       "images": [],
       "status": "approved",
       "thread": {
-        "status": "requested",
-        "file": null
+        "status": "ready",
+        "file": "data/texts/2026-11-10-10/thread.md"
       },
       "script": {
         "status": "none",
@@ -14329,6 +14333,10 @@
         {
           "at": "2026-11-10T10:00:53+00:00",
           "event": "thread requested in telegram"
+        },
+        {
+          "at": "2026-11-13T10:08:31+00:00",
+          "event": "thread ready"
         }
       ]
     },
