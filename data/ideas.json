@@ -13230,7 +13230,7 @@
       "images": [],
       "status": "approved",
       "thread": {
-        "status": "revise",
+        "status": "ready",
         "file": "data/texts/2026-11-02-05/thread.md"
       },
       "script": {
@@ -13268,6 +13268,10 @@
         {
           "at": "2026-11-14T07:12:12+00:00",
           "event": "thread revision requested"
+        },
+        {
+          "at": "2026-11-14T07:14:17+00:00",
+          "event": "thread ready"
         }
       ]
     },
