@@ -13230,7 +13230,7 @@
       "images": [],
       "status": "approved",
       "thread": {
-        "status": "ready",
+        "status": "revise",
         "file": "data/texts/2026-11-02-05/thread.md"
       },
       "script": {
@@ -13241,7 +13241,13 @@
         "status": "none",
         "telegram_message_id": null
       },
-      "revisions": [],
+      "revisions": [
+        {
+          "kind": "thread",
+          "text": "Перепиши згадки про бабусю і село, а також про 224 фонд не згадуй, заміни на 442-й. Зроби більш зрозумілим жарт про архівіста який отримав незрозумілий щапит",
+          "at": "2026-11-14T07:12:12+00:00"
+        }
+      ],
       "history": [
         {
           "at": "2026-11-02T09:00:00+00:00",
@@ -13258,6 +13264,10 @@
         {
           "at": "2026-11-14T07:05:22+00:00",
           "event": "thread ready"
+        },
+        {
+          "at": "2026-11-14T07:12:12+00:00",
+          "event": "thread revision requested"
         }
       ]
     },
