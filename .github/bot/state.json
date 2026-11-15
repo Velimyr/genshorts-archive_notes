@@ -5111,6 +5111,9 @@
     },
     "1807": {
       "kind": "nav"
+    },
+    "1808": {
+      "kind": "menu"
     }
   },
   "approved_threads": {
@@ -6434,7 +6437,7 @@
   },
   "asked": {
     "ideas": "2026-11-15",
-    "texts": "2026-11-14",
+    "texts": "2026-11-15",
     "publish": "2026-09-29"
   },
   "menu_version": 4,
