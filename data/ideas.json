@@ -13589,9 +13589,9 @@
           "license": "CC BY-SA 3.0"
         }
       ],
-      "status": "approved",
+      "status": "cancelled",
       "thread": {
-        "status": "ready",
+        "status": "cancelled",
         "file": "data/texts/2026-11-03-a01/thread.md"
       },
       "script": {
@@ -13625,6 +13625,10 @@
         {
           "at": "2026-11-03T19:20:46+00:00",
           "event": "thread ready"
+        },
+        {
+          "at": "2026-11-15T10:36:39+00:00",
+          "event": "cancelled by author in telegram"
         }
       ]
     },
