@@ -12126,9 +12126,10 @@
       ],
       "status": "approved",
       "thread": {
-        "status": "scheduled",
+        "status": "posted",
         "file": "data/texts/2026-10-23-08/thread.md",
-        "approved_sha": "7ac659ca11a5dbdd"
+        "approved_sha": "7ac659ca11a5dbdd",
+        "permalink": "https://www.threads.com/@velimyr/post/DfwX6DOG9i_"
       },
       "script": {
         "status": "none",
@@ -12175,6 +12176,10 @@
         {
           "at": "2026-11-08T07:36:49+00:00",
           "event": "thread scheduled: 2026-11-15T10:40:00+02:00"
+        },
+        {
+          "at": "2026-11-15T08:42:40+00:00",
+          "event": "thread posted to Threads (8 posts)"
         }
       ]
     },
