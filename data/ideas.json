@@ -6709,6 +6709,10 @@
         {
           "at": "2026-10-25T07:18:32+00:00",
           "event": "thread auto-scheduled: 2026-11-17T16:00:00+02:00"
+        },
+        {
+          "at": "2026-11-16T22:17:52+00:00",
+          "event": "rescheduled by author (one-off, Tuesday → Wednesday): 2026-11-18T16:00:00+02:00"
         }
       ],
       "photo_request": false,
