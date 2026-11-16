@@ -4412,7 +4412,7 @@
         "reposts": 0,
         "quotes": 0,
         "shares": 0,
-        "at": "2026-11-16T05:00:33+00:00"
+        "at": "2026-11-16T10:00:25+00:00"
       },
       "h24": {
         "views": 145,
@@ -4447,7 +4447,7 @@
       "origin": "manual",
       "has_photo": true,
       "latest": {
-        "at": "2026-11-16T05:00:32+00:00"
+        "at": "2026-11-16T10:00:25+00:00"
       },
       "h24": {},
       "h72": {},
@@ -4467,7 +4467,7 @@
         "reposts": 1,
         "quotes": 0,
         "shares": 0,
-        "at": "2026-11-16T05:00:32+00:00"
+        "at": "2026-11-16T10:00:25+00:00"
       },
       "h24": {
         "views": 158,
@@ -4506,7 +4506,7 @@
         "reposts": 0,
         "quotes": 0,
         "shares": 0,
-        "at": "2026-11-16T05:00:32+00:00"
+        "at": "2026-11-16T10:00:25+00:00"
       },
       "h24": {
         "views": 732,
@@ -4545,7 +4545,7 @@
         "reposts": 0,
         "quotes": 0,
         "shares": 0,
-        "at": "2026-11-16T05:00:31+00:00"
+        "at": "2026-11-16T10:00:25+00:00"
       },
       "h24": {
         "views": 457,
@@ -4584,7 +4584,7 @@
         "reposts": 1,
         "quotes": 0,
         "shares": 0,
-        "at": "2026-11-16T05:00:31+00:00"
+        "at": "2026-11-16T10:00:24+00:00"
       },
       "h24": {
         "views": 259,
@@ -4617,7 +4617,7 @@
         "reposts": 0,
         "quotes": 0,
         "shares": 0,
-        "at": "2026-11-16T05:00:31+00:00"
+        "at": "2026-11-16T10:00:24+00:00"
       },
       "h24": {
         "views": 222,
@@ -4656,7 +4656,7 @@
         "reposts": 0,
         "quotes": 0,
         "shares": 1,
-        "at": "2026-11-16T05:00:30+00:00"
+        "at": "2026-11-16T10:00:24+00:00"
       },
       "h24": {
         "views": 335,
@@ -4689,7 +4689,7 @@
         "reposts": 0,
         "quotes": 0,
         "shares": 0,
-        "at": "2026-11-16T05:00:30+00:00"
+        "at": "2026-11-16T10:00:24+00:00"
       },
       "h24": {
         "views": 27,
@@ -4728,7 +4728,7 @@
         "reposts": 0,
         "quotes": 0,
         "shares": 0,
-        "at": "2026-11-16T05:00:30+00:00"
+        "at": "2026-11-16T10:00:24+00:00"
       },
       "h24": {
         "views": 217,
@@ -4767,11 +4767,19 @@
         "reposts": 0,
         "quotes": 0,
         "shares": 0,
-        "at": "2026-11-16T05:00:29+00:00"
+        "at": "2026-11-16T10:00:23+00:00"
       },
       "h24": {
         "views": 109,
         "likes": 8,
+        "replies": 7,
+        "reposts": 0,
+        "quotes": 0,
+        "shares": 0
+      },
+      "h72": {
+        "views": 130,
+        "likes": 10,
         "replies": 7,
         "reposts": 0,
         "quotes": 0,
@@ -4786,13 +4794,13 @@
       "origin": "manual",
       "has_photo": false,
       "latest": {
-        "views": 136,
+        "views": 137,
         "likes": 12,
         "replies": 3,
         "reposts": 0,
         "quotes": 0,
         "shares": 0,
-        "at": "2026-11-16T05:00:29+00:00"
+        "at": "2026-11-16T10:00:23+00:00"
       },
       "h24": {
         "views": 60,
@@ -4817,13 +4825,13 @@
       "has_photo": true,
       "scheduled": true,
       "latest": {
-        "views": 215,
+        "views": 226,
         "likes": 11,
         "replies": 20,
         "reposts": 0,
         "quotes": 0,
         "shares": 0,
-        "at": "2026-11-16T05:00:28+00:00"
+        "at": "2026-11-16T10:00:23+00:00"
       },
       "h24": {
         "views": 188,
@@ -4848,13 +4856,21 @@
       "has_photo": false,
       "scheduled": true,
       "latest": {
-        "views": 152,
+        "views": 164,
         "likes": 7,
         "replies": 7,
         "reposts": 0,
         "quotes": 0,
         "shares": 0,
-        "at": "2026-11-16T05:00:28+00:00"
+        "at": "2026-11-16T10:00:23+00:00"
+      },
+      "h24": {
+        "views": 164,
+        "likes": 7,
+        "replies": 7,
+        "reposts": 0,
+        "quotes": 0,
+        "shares": 0
       }
     },
     "18378475681244707": {
@@ -4865,13 +4881,13 @@
       "origin": "manual",
       "has_photo": false,
       "latest": {
-        "views": 170,
+        "views": 175,
         "likes": 4,
         "replies": 4,
         "reposts": 0,
         "quotes": 1,
         "shares": 0,
-        "at": "2026-11-16T05:00:27+00:00"
+        "at": "2026-11-16T10:00:22+00:00"
       }
     },
     "18119870617793195": {
@@ -4888,15 +4904,55 @@
       "has_photo": false,
       "scheduled": true,
       "latest": {
-        "views": 333,
-        "likes": 18,
+        "views": 363,
+        "likes": 19,
         "replies": 11,
         "reposts": 0,
         "quotes": 0,
         "shares": 0,
-        "at": "2026-11-16T05:00:28+00:00"
+        "at": "2026-11-16T10:00:23+00:00"
+      }
+    },
+    "18137141638591297": {
+      "timestamp": "2026-11-16T07:40:31+0000",
+      "permalink": "https://www.threads.com/@velimyr/post/Dfy11yhlmM9",
+      "media_type": "IMAGE",
+      "text_len": 314,
+      "origin": "bot",
+      "idea": "2026-10-11-02",
+      "title": "Мапа Мієґа 1779–1783: найдокладніша мапа Галичини до кадастру",
+      "stream": "big",
+      "topic": "Генеалогія",
+      "posts_count": 9,
+      "has_photo": true,
+      "scheduled": true,
+      "latest": {
+        "views": 57,
+        "likes": 7,
+        "replies": 8,
+        "reposts": 0,
+        "quotes": 0,
+        "shares": 1,
+        "at": "2026-11-16T10:00:22+00:00"
+      }
+    },
+    "18246217705314698": {
+      "timestamp": "2026-11-16T06:57:32+0000",
+      "permalink": "https://www.threads.com/@velimyr/post/Dfyw71VkeZm",
+      "media_type": "IMAGE",
+      "text_len": 58,
+      "origin": "manual",
+      "has_photo": true,
+      "latest": {
+        "views": 126,
+        "likes": 21,
+        "replies": 4,
+        "reposts": 4,
+        "quotes": 0,
+        "shares": 0,
+        "at": "2026-11-16T10:00:22+00:00"
       }
     }
   },
-  "updated_at": "2026-11-16T05:00:33+00:00"
+  "updated_at": "2026-11-16T10:00:25+00:00"
 }
