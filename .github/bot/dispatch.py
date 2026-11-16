@@ -221,19 +221,19 @@ def history(idea: dict, event: str) -> None:
     idea.setdefault("history", []).append({"at": now(), "event": event})
 
 
-def split_for_telegram(text: str) -> list[str]:
-    """Ділить довгий текст на частини до TG_LIMIT, не розриваючи пости треду."""
+def split_for_telegram(text: str, limit: int = TG_LIMIT) -> list[str]:
+    """Ділить довгий текст на частини до limit, не розриваючи пости треду."""
     parts, current = [], ""
     for block in text.split("\n\n"):
         candidate = f"{current}\n\n{block}" if current else block
-        if len(candidate) <= TG_LIMIT:
+        if len(candidate) <= limit:
             current = candidate
             continue
         if current:
             parts.append(current)
-        while len(block) > TG_LIMIT:
-            parts.append(block[:TG_LIMIT])
-            block = block[TG_LIMIT:]
+        while len(block) > limit:
+            parts.append(block[:limit])
+            block = block[limit:]
         current = block
     if current:
         parts.append(current)
@@ -335,7 +335,7 @@ def thread_posts(text: str) -> list[str]:
 
 def edit_hint(plain_reply: str) -> str:
     """Підказка про правки під текстом; plain_reply — що робить звичайна відповідь без цитати й «→»."""
-    return ("✏️ Як правити — відповіддю на це повідомлення:\n"
+    return ("✏️ Як правити — відповіддю на повідомлення з текстом:\n"
             "• одне місце: виділіть фрагмент у тексті → «Відповісти» → напишіть, на що замінити "
             "(«-» — видалити фрагмент);\n"
             "• кілька місць: кожна заміна окремим рядком «старе → нове»;\n"
@@ -417,6 +417,12 @@ def tg_main_slot(after: datetime) -> datetime:
         day += timedelta(days=1)
 
 
+def sources_block(text: str) -> str:
+    """Службовий блок «Джерела» з thread.md (порожній рядок, якщо його немає)."""
+    blocks = [b.strip() for b in re.split(r"\n\s*---\s*\n", text) if b.strip()]
+    return "\n\n".join(b for b in blocks if b.lower().startswith("джерела"))
+
+
 def tg_post_text(text: str) -> str:
     """Текст Telegram-допису для каналу: завжди починається з рубрики TG_RUBRIC."""
     body = "\n\n".join(thread_posts(text))
@@ -440,9 +446,10 @@ class Bot:
 
     # ------------------------------------------------------------ відправка
 
-    def send(self, text: str, markup=None, record: dict | None = None, reply_to: int | None = None) -> int:
+    def send(self, text: str, markup=None, record: dict | None = None, reply_to: int | None = None,
+             limit: int = TG_LIMIT) -> int:
         """Надсилає текст (довгий — кількома повідомленнями); кнопки й запис — на останньому."""
-        pieces = split_for_telegram(text)
+        pieces = split_for_telegram(text, limit)
         message_id = None
         for n, piece in enumerate(pieces):
             last = n == len(pieces) - 1
@@ -786,6 +793,20 @@ class Bot:
             shown[key] = ok
         return shown[key]
 
+    def send_text_parts(self, idea: dict, body: str, info: str, markup, record: dict) -> int:
+        """Текст, джерела й пояснення — окремими повідомленнями, щоб було видно, чи текст влазить
+        в одне повідомлення Telegram. Запис (для правок відповіддю) — на всіх, кнопки — на поясненні."""
+        if self.category(idea) == "T":
+            text = tg_post_text(body)
+        else:
+            text = "\n---\n".join(thread_posts(body))
+        # Текст — до повної межі повідомлення Telegram (4096), щоб його поділ означав «не влазить».
+        self.send(text or body, None, record, limit=TG_POST_LIMIT)
+        sources = sources_block(body)
+        if sources:
+            self.send(sources, None, record)
+        return self.send(info, markup, record)
+
     def send_preview(self, idea: dict, body: str, topic: str) -> None:
         digest = sha(body)
         photos = self.show_photos(idea) if self.category(idea) != "P" else []
@@ -796,8 +817,10 @@ class Bot:
                          ("🔎 Фото за словами", f"photokw:{idea['id']}")])
             rows.append([("❌ Скасувати", "cancel")])
             size = len(tg_post_text(body))
-            self.send(f"{stream_label(idea.get('stream'))} · фінальна перевірка — «{idea['title']}»\n\n{body}"
-                      f"\n\nℹ️ Блок «Джерела» в канал не публікується. Розмір допису: {size} з {TG_POST_LIMIT} символів."
+            self.send_text_parts(idea, body,
+                      f"{stream_label(idea.get('stream'))} · фінальна перевірка — «{idea['title']}»"
+                      f"\n\nℹ️ Текст допису — у повідомленні вище{' — і він не вліз в одне повідомлення Telegram!' if size > TG_POST_LIMIT else ''}; "
+                      f"блок «Джерела» в канал не публікується. Розмір допису: {size} з {TG_POST_LIMIT} символів."
                       + (f"\n📷 Фото над текстом: варіанти {', '.join(map(str, photos))} вище." if photos else "")
                       + "\n🕒 Після вибору фото допис стане на найближчий вільний вівторок: о 16:00 — тестовий канал, "
                         "потім у випадковий час 17:00–19:00 — основний."
@@ -805,8 +828,9 @@ class Bot:
                       kb(*rows), {"kind": "preview", "idea": idea["id"], "sha": digest, "text": body, "topic": ""})
             return
         if self.category(idea) == "P":
-            self.send(f"{stream_label(idea.get('stream'))} · фінальна перевірка — «{idea['title']}»\n\n{body}"
-                      "\n\nℹ️ Блок «Джерела» в Threads не публікується. Провокація виходить без теми й без фото, "
+            self.send_text_parts(idea, body,
+                      f"{stream_label(idea.get('stream'))} · фінальна перевірка — «{idea['title']}»"
+                      "\n\nℹ️ Текст — у повідомленні вище; блок «Джерела» в Threads не публікується. Провокація виходить без теми й без фото, "
                       "лише вручну — коли натиснете кнопку."
                       "\n\n" + edit_hint("ширші зміни — у повідомленні з текстом і кнопкою «✅ Готово»."),
                       kb([("⚡ Опублікувати зараз", f"confirm:{idea['id']}:{digest}:0")], [("❌ Не зараз", "cancel")]),
@@ -824,8 +848,9 @@ class Bot:
         rows.append([("🔄 Інші фото", f"photos:{idea['id']}:more") if photos else ("🖼 Знайти фото", f"photos:{idea['id']}"),
                      ("🔎 Фото за словами", f"photokw:{idea['id']}")])
         rows.append([("❌ Скасувати", "cancel")])
-        self.send(f"{stream_label(idea.get('stream'))} · фінальна перевірка — «{idea['title']}»\n\n{body}"
-                  f"\n\nℹ️ Блок «Джерела» в Threads не публікується.{photo_line}\n{topic_line}\n"
+        self.send_text_parts(idea, body,
+                  f"{stream_label(idea.get('stream'))} · фінальна перевірка — «{idea['title']}»"
+                  f"\n\nℹ️ Тред — у повідомленні вище; блок «Джерела» в Threads не публікується.{photo_line}\n{topic_line}\n"
                   "🕒 Після вибору фото тред автоматично стане на найближчу вільну рекомендовану годину."
                   "\n\n" + edit_hint("звичайна відповідь без цитати й «→» — нова тема поста."),
                   kb(*rows),
@@ -1389,8 +1414,11 @@ class Bot:
     def send_thread(self, idea: dict, body: str) -> int:
         marks = unverified(body)
         warning = f"\n\n⚠️ Є позначки [ПЕРЕВІРИТИ] ({marks}). {UNVERIFIED_HINT}" if marks else ""
-        return self.send(
-            f"{stream_label(idea.get('stream'))} · тред — «{idea['title']}»\n\n{body}{warning}\n\n"
+        size = f" Розмір допису: {len(tg_post_text(body))} з {TG_POST_LIMIT} символів." if self.category(idea) == "T" else ""
+        return self.send_text_parts(
+            idea, body,
+            f"{stream_label(idea.get('stream'))} · тред — «{idea['title']}»\n\n"
+            f"ℹ️ Текст — у повідомленні вище, джерела — окремо.{size}{warning}\n\n"
             + edit_hint("побажання своїми словами (напр. «скороти вступ») — текст доопрацюють, "
                         "змінивши лише потрібне місце."),
             kb([("✅ Готово", f"done:{idea['id']}"), ("🔀 Змінити формат", f"fmt:{idea['id']}")],
