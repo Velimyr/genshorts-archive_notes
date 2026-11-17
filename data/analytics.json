@@ -4469,7 +4469,7 @@
         "reposts": 1,
         "quotes": 0,
         "shares": 0,
-        "at": "2026-11-17T05:00:30+00:00"
+        "at": "2026-11-17T08:52:02+00:00"
       },
       "h24": {
         "views": 158,
@@ -4516,7 +4516,7 @@
         "reposts": 0,
         "quotes": 0,
         "shares": 0,
-        "at": "2026-11-17T05:00:30+00:00"
+        "at": "2026-11-17T08:52:02+00:00"
       },
       "h24": {
         "views": 732,
@@ -4563,7 +4563,7 @@
         "reposts": 0,
         "quotes": 0,
         "shares": 0,
-        "at": "2026-11-17T05:00:29+00:00"
+        "at": "2026-11-17T08:52:01+00:00"
       },
       "h24": {
         "views": 457,
@@ -4610,7 +4610,7 @@
         "reposts": 1,
         "quotes": 0,
         "shares": 0,
-        "at": "2026-11-17T05:00:28+00:00"
+        "at": "2026-11-17T08:52:01+00:00"
       },
       "h24": {
         "views": 259,
@@ -4622,6 +4622,14 @@
       },
       "h72": {
         "views": 314,
+        "likes": 12,
+        "replies": 4,
+        "reposts": 1,
+        "quotes": 0,
+        "shares": 0
+      },
+      "h168": {
+        "views": 326,
         "likes": 12,
         "replies": 4,
         "reposts": 1,
@@ -4643,7 +4651,7 @@
         "reposts": 0,
         "quotes": 0,
         "shares": 0,
-        "at": "2026-11-17T05:00:28+00:00"
+        "at": "2026-11-17T08:52:01+00:00"
       },
       "h24": {
         "views": 222,
@@ -4682,7 +4690,7 @@
         "reposts": 0,
         "quotes": 0,
         "shares": 1,
-        "at": "2026-11-17T05:00:27+00:00"
+        "at": "2026-11-17T08:52:00+00:00"
       },
       "h24": {
         "views": 335,
@@ -4715,7 +4723,7 @@
         "reposts": 0,
         "quotes": 0,
         "shares": 0,
-        "at": "2026-11-17T05:00:27+00:00"
+        "at": "2026-11-17T08:52:01+00:00"
       },
       "h24": {
         "views": 27,
@@ -4754,7 +4762,7 @@
         "reposts": 0,
         "quotes": 0,
         "shares": 0,
-        "at": "2026-11-17T05:00:27+00:00"
+        "at": "2026-11-17T08:52:00+00:00"
       },
       "h24": {
         "views": 217,
@@ -4793,7 +4801,7 @@
         "reposts": 0,
         "quotes": 0,
         "shares": 0,
-        "at": "2026-11-17T05:00:27+00:00"
+        "at": "2026-11-17T08:52:00+00:00"
       },
       "h24": {
         "views": 109,
@@ -4826,7 +4834,7 @@
         "reposts": 0,
         "quotes": 0,
         "shares": 0,
-        "at": "2026-11-17T05:00:26+00:00"
+        "at": "2026-11-17T08:52:00+00:00"
       },
       "h24": {
         "views": 60,
@@ -4859,16 +4867,24 @@
       "has_photo": true,
       "scheduled": true,
       "latest": {
-        "views": 236,
+        "views": 238,
         "likes": 11,
         "replies": 20,
         "reposts": 0,
         "quotes": 0,
         "shares": 0,
-        "at": "2026-11-17T05:00:26+00:00"
+        "at": "2026-11-17T08:51:59+00:00"
       },
       "h24": {
         "views": 188,
+        "likes": 11,
+        "replies": 20,
+        "reposts": 0,
+        "quotes": 0,
+        "shares": 0
+      },
+      "h72": {
+        "views": 238,
         "likes": 11,
         "replies": 20,
         "reposts": 0,
@@ -4890,13 +4906,13 @@
       "has_photo": false,
       "scheduled": true,
       "latest": {
-        "views": 189,
+        "views": 193,
         "likes": 8,
         "replies": 7,
         "reposts": 0,
         "quotes": 0,
         "shares": 0,
-        "at": "2026-11-17T05:00:25+00:00"
+        "at": "2026-11-17T08:51:59+00:00"
       },
       "h24": {
         "views": 164,
@@ -4915,13 +4931,13 @@
       "origin": "manual",
       "has_photo": false,
       "latest": {
-        "views": 184,
+        "views": 187,
         "likes": 4,
         "replies": 4,
         "reposts": 0,
         "quotes": 1,
         "shares": 0,
-        "at": "2026-11-17T05:00:25+00:00"
+        "at": "2026-11-17T08:51:58+00:00"
       },
       "h24": {
         "views": 177,
@@ -4946,13 +4962,13 @@
       "has_photo": false,
       "scheduled": true,
       "latest": {
-        "views": 401,
+        "views": 409,
         "likes": 22,
         "replies": 11,
         "reposts": 0,
         "quotes": 0,
         "shares": 0,
-        "at": "2026-11-17T05:00:25+00:00"
+        "at": "2026-11-17T08:51:59+00:00"
       },
       "h24": {
         "views": 379,
@@ -4977,13 +4993,21 @@
       "has_photo": true,
       "scheduled": true,
       "latest": {
-        "views": 206,
-        "likes": 16,
+        "views": 233,
+        "likes": 17,
         "replies": 8,
         "reposts": 0,
         "quotes": 0,
         "shares": 4,
-        "at": "2026-11-17T05:00:24+00:00"
+        "at": "2026-11-17T08:51:57+00:00"
+      },
+      "h24": {
+        "views": 233,
+        "likes": 17,
+        "replies": 8,
+        "reposts": 0,
+        "quotes": 0,
+        "shares": 4
       }
     },
     "18246217705314698": {
@@ -4994,15 +5018,46 @@
       "origin": "manual",
       "has_photo": true,
       "latest": {
-        "views": 1063,
-        "likes": 89,
-        "replies": 19,
+        "views": 1161,
+        "likes": 96,
+        "replies": 21,
         "reposts": 6,
         "quotes": 0,
         "shares": 3,
-        "at": "2026-11-17T05:00:24+00:00"
+        "at": "2026-11-17T08:51:57+00:00"
+      },
+      "h24": {
+        "views": 1161,
+        "likes": 96,
+        "replies": 21,
+        "reposts": 6,
+        "quotes": 0,
+        "shares": 3
+      }
+    },
+    "18117237626167656": {
+      "timestamp": "2026-11-17T08:50:29+0000",
+      "permalink": "https://www.threads.com/@velimyr/post/Df1ipJ_kXL6",
+      "media_type": "IMAGE",
+      "text_len": 356,
+      "origin": "bot",
+      "idea": "2026-10-20-08",
+      "title": "Дяк — не священник: хто насправді писав вашу метрику",
+      "stream": "fun",
+      "topic": "Генеалогія",
+      "posts_count": 5,
+      "has_photo": true,
+      "scheduled": true,
+      "latest": {
+        "views": 0,
+        "likes": 0,
+        "replies": 4,
+        "reposts": 0,
+        "quotes": 0,
+        "shares": 0,
+        "at": "2026-11-17T08:51:57+00:00"
       }
     }
   },
-  "updated_at": "2026-11-17T05:00:30+00:00"
+  "updated_at": "2026-11-17T08:52:02+00:00"
 }
