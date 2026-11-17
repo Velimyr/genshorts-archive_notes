@@ -14331,7 +14331,26 @@
       "sources": [
         "https://uk.wikipedia.org/wiki/Холера"
       ],
-      "images": [],
+      "images": [
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/%D0%A6%D0%94%D0%86%D0%90%D0%9A_127-1012-1656._1831._%D0%9C%D0%B5%D1%82%D1%80%D0%B8%D1%87%D0%BD%D0%B0_%D0%BA%D0%BD%D0%B8%D0%B3%D0%B0_%D1%86%D0%B5%D1%80%D0%BA%D0%BE%D0%B2_%D0%9A%D0%B8%D1%97%D0%B2%D1%81%D1%8C%D0%BA%D0%BE%D0%B3%D0%BE_%D0%BF%D0%BE%D0%B2%D1%96%D1%82%D1%83.pdf/page1-1280px-%D0%A6%D0%94%D0%86%D0%90%D0%9A_127-1012-1656._1831._%D0%9C%D0%B5%D1%82%D1%80%D0%B8%D1%87%D0%BD%D0%B0_%D0%BA%D0%BD%D0%B8%D0%B3%D0%B0_%D1%86%D0%B5%D1%80%D0%BA%D0%BE%D0%B2_%D0%9A%D0%B8%D1%97%D0%B2%D1%81%D1%8C%D0%BA%D0%BE%D0%B3%D0%BE_%D0%BF%D0%BE%D0%B2%D1%96%D1%82%D1%83.pdf.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:%D0%A6%D0%94%D0%86%D0%90%D0%9A_127-1012-1656._1831._%D0%9C%D0%B5%D1%82%D1%80%D0%B8%D1%87%D0%BD%D0%B0_%D0%BA%D0%BD%D0%B8%D0%B3%D0%B0_%D1%86%D0%B5%D1%80%D0%BA%D0%BE%D0%B2_%D0%9A%D0%B8%D1%97%D0%B2%D1%81%D1%8C%D0%BA%D0%BE%D0%B3%D0%BE_%D0%BF%D0%BE%D0%B2%D1%96%D1%82%D1%83.pdf",
+          "credit": "ЦДІАК України / Wikimedia Commons, Public domain",
+          "license": "Public domain"
+        },
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/German_map_showing_the_path_of_cholera_in_Poland%2C_1831._Wellcome_L0076254.jpg/1280px-German_map_showing_the_path_of_cholera_in_Poland%2C_1831._Wellcome_L0076254.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:German_map_showing_the_path_of_cholera_in_Poland,_1831._Wellcome_L0076254.jpg",
+          "credit": "Wellcome Collection / Wikimedia Commons, CC BY 4.0",
+          "license": "CC BY 4.0"
+        },
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Cholera-tramples-the-victors-and-the-vanquished-both-robert-seymour-1831_u-l-pii0om0.jpg/960px-Cholera-tramples-the-victors-and-the-vanquished-both-robert-seymour-1831_u-l-pii0om0.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Cholera-tramples-the-victors-and-the-vanquished-both-robert-seymour-1831_u-l-pii0om0.jpg",
+          "credit": "Robert Seymour / Wikimedia Commons, Public domain",
+          "license": "Public domain"
+        }
+      ],
       "status": "approved",
       "thread": {
         "status": "approved",
@@ -14375,9 +14394,13 @@
         {
           "at": "2026-11-17T12:31:55+00:00",
           "event": "photo search requested in telegram"
+        },
+        {
+          "at": "2026-11-17T13:05:00+00:00",
+          "event": "photos found"
         }
       ],
-      "photo_request": true,
+      "photo_request": false,
       "photo_error": "",
       "photo_keywords": "",
       "photo_requested_at": "2026-11-17T12:31:55+00:00"
