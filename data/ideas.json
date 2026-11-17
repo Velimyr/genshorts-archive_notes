@@ -13522,7 +13522,26 @@
       "sources": [
         "https://www.radiosvoboda.org/a/the-strange-portrait-photo-trend-in-tsarist-russia-to-pose-in-canvas-boats-cars-and-planes/30404654.html"
       ],
-      "images": [],
+      "images": [
+        {
+          "url": "https://live.staticflickr.com/7700/17286579441_533eff400f_b.jpg",
+          "page": "https://www.flickr.com/photos/95329455@N02/17286579441",
+          "credit": "simpleinsomnia / Flickr, CC BY 2.0",
+          "license": "CC BY 2.0"
+        },
+        {
+          "url": "https://live.staticflickr.com/597/22679766118_afe8086b2f_b.jpg",
+          "page": "https://www.flickr.com/photos/122654055@N06/22679766118",
+          "credit": "UNC Libraries (unclibraries_commons) / Flickr, Public Domain Mark 1.0",
+          "license": "Public Domain Mark 1.0"
+        },
+        {
+          "url": "https://ids.si.edu/ids/deliveryService?id=NMAAHC-2014_37_36_12_001",
+          "page": "https://nmaahc.si.edu/object/nmaahc_2014.37.36.12",
+          "credit": "Auditorium Photography Studio / Smithsonian NMAAHC, CC0 1.0",
+          "license": "CC0 1.0"
+        }
+      ],
       "status": "approved",
       "thread": {
         "status": "approved",
@@ -13562,9 +13581,13 @@
         {
           "at": "2026-11-17T13:12:27+00:00",
           "event": "photo search requested in telegram"
+        },
+        {
+          "at": "2026-11-17T13:15:49+00:00",
+          "event": "photos found"
         }
       ],
-      "photo_request": true,
+      "photo_request": false,
       "photo_error": "",
       "photo_keywords": "",
       "photo_requested_at": "2026-11-17T13:12:27+00:00"
