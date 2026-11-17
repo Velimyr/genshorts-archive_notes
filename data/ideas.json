@@ -13525,7 +13525,7 @@
       "images": [],
       "status": "approved",
       "thread": {
-        "status": "none",
+        "status": "requested",
         "file": null
       },
       "script": {
@@ -13545,6 +13545,10 @@
         {
           "at": "2026-11-02T09:32:41+00:00",
           "event": "idea approved in telegram"
+        },
+        {
+          "at": "2026-11-17T12:59:49+00:00",
+          "event": "thread requested in telegram"
         }
       ]
     },
