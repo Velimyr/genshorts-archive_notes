@@ -376,9 +376,22 @@ def memegen_text(line: str) -> str:
     return urllib.parse.quote(line, safe="_~'")
 
 
-def meme_url(template: str, lines: list[str]) -> str:
+def meme_url(meme: dict, lines: list[str]) -> str:
+    """Адреса готового мему. Шаблон з каталогу memegen — з розміченими полями; «custom» — будь-яка
+    картинка з інтернету (meme["background"]) лише з верхнім і нижнім підписом."""
+    if meme.get("background"):
+        path = "/".join(memegen_text(line) for line in lines[:2]) or "_"
+        background = urllib.parse.quote(meme["background"], safe="")
+        return f"{MEMEGEN}/images/custom/{path}.jpg?font={MEME_FONT}&background={background}"
     path = "/".join(memegen_text(line) for line in lines) or "_"
-    return f"{MEMEGEN}/images/{urllib.parse.quote(template)}/{path}.jpg?font={MEME_FONT}"
+    return f"{MEMEGEN}/images/{urllib.parse.quote(meme.get('template', ''))}/{path}.jpg?font={MEME_FONT}"
+
+
+def meme_blank(meme: dict) -> str:
+    """Оригінальна картинка мему без нового тексту."""
+    if meme.get("background"):
+        return meme["background"]
+    return meme.get("blank") or (f"{MEMEGEN}/images/{meme['template']}.jpg" if meme.get("template") else "")
 
 
 def edit_hint(plain_reply: str) -> str:
@@ -623,9 +636,10 @@ class Bot:
         markup = kb([("✅ Беру", f"idea:{idea['id']}:yes"), ("❌ Ні", f"idea:{idea['id']}:no")])
         record = {"kind": "idea", "idea": idea["id"]}
         meme = idea.get("meme") or {}
-        photo = meme.get("blank") or (f"{MEMEGEN}/images/{meme['template']}.jpg" if meme.get("template") else "")
+        photo = meme_blank(meme)
         if self.category(idea) == "M" and photo:
-            caption = f"🖼 Шаблон: {meme.get('name') or meme.get('template')}\n\n{card}"
+            kind = " (своя картинка: лише верхній і нижній підпис)" if meme.get("background") else ""
+            caption = f"🖼 Шаблон: {meme.get('name') or meme.get('template')}{kind}\n\n{card}"
             short = len(caption) <= 1024  # межа підпису до фото в Telegram
             result = tg("sendPhoto", chat_id=CHAT_ID, photo=photo, caption=caption if short else caption[:1000] + "…",
                         **({"reply_markup": markup} if short else {}))
@@ -923,10 +937,11 @@ class Bot:
         meme = idea.get("meme") or {}
         lines = meme_lines(body)
         if final:
-            photo, caption = meme_url(meme.get("template", ""), lines), "🖼 Готовий мем"
+            photo, caption = meme_url(meme, lines), "🖼 Готовий мем"
         else:
-            photo = meme.get("blank") or (f"{MEMEGEN}/images/{meme['template']}.jpg" if meme.get("template") else "")
-            caption = f"🖼 Оригінал: {meme.get('name') or meme.get('template') or '—'}"
+            photo = meme_blank(meme)
+            caption = (f"🖼 Оригінал: {meme.get('name') or meme.get('template') or '—'}"
+                       + (" (своя картинка: верхній і нижній підпис)" if meme.get("background") else ""))
         result = tg("sendPhoto", chat_id=CHAT_ID, photo=photo, caption=caption) if photo else None
         if result:
             self.state["messages"][str(result["message_id"])] = record
@@ -1314,12 +1329,13 @@ class Bot:
                     return
                 meme = idea.get("meme") or {}
                 lines = meme_lines(record["text"])
-                if not meme.get("template") or not lines:
+                if not (meme.get("template") or meme.get("background")) or not lines:
                     self.send(f"⚠️ «{idea['title']}»: немає шаблону чи текстів мему — не публікую.")
                     return
                 self.state["approved_threads"][idea["id"]].update(
                     topic="", publish_at=now(),
-                    image={"url": meme_url(meme["template"], lines), "credit": f"Мем: {meme.get('name', meme['template'])} / memegen.link"})
+                    image={"url": meme_url(meme, lines),
+                           "credit": f"Мем: {meme.get('name') or meme.get('template', '')} / memegen.link"})
                 idea["thread"]["status"] = "scheduled"
                 history(idea, "meme published manually")
                 self.mark_publishing(self.state["approved_threads"][idea["id"]], mid)
