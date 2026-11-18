@@ -16439,7 +16439,7 @@
         "blank": "https://api.memegen.link/images/db.jpg",
         "lines": 3
       },
-      "status": "proposed",
+      "status": "approved",
       "thread": {
         "status": "none",
         "file": null
@@ -16457,6 +16457,10 @@
         {
           "at": "2026-11-18T19:00:00+00:00",
           "event": "proposed by ideas routine"
+        },
+        {
+          "at": "2026-11-18T18:13:04+00:00",
+          "event": "idea approved in telegram"
         }
       ]
     },
@@ -16476,7 +16480,7 @@
         "blank": "https://api.memegen.link/images/cmm.jpg",
         "lines": 1
       },
-      "status": "proposed",
+      "status": "approved",
       "thread": {
         "status": "none",
         "file": null
@@ -16494,6 +16498,10 @@
         {
           "at": "2026-11-18T19:00:00+00:00",
           "event": "proposed by ideas routine"
+        },
+        {
+          "at": "2026-11-18T18:13:05+00:00",
+          "event": "idea approved in telegram"
         }
       ]
     },
@@ -16513,7 +16521,7 @@
         "blank": "https://api.memegen.link/images/gb.jpg",
         "lines": 4
       },
-      "status": "proposed",
+      "status": "approved",
       "thread": {
         "status": "none",
         "file": null
@@ -16531,6 +16539,10 @@
         {
           "at": "2026-11-18T19:00:00+00:00",
           "event": "proposed by ideas routine"
+        },
+        {
+          "at": "2026-11-18T18:14:07+00:00",
+          "event": "idea approved in telegram"
         }
       ]
     },
