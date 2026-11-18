@@ -13685,7 +13685,26 @@
       "sources": [
         "https://ru.wikipedia.org/wiki/Брачный_возраст"
       ],
-      "images": [],
+      "images": [
+        {
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/96/%D0%94%D0%90%D0%92%D1%96%D0%9E_397-2-1._1834._%D0%9C%D0%B5%D1%82%D1%80%D0%B8%D1%87%D0%BD%D0%B0_%D0%BA%D0%BD%D0%B8%D0%B3%D0%B0_%D1%94%D0%B2%D1%80%D0%B5%D1%97%D0%B2_%D0%BC%D1%96%D1%81%D1%82%D0%B0_%D0%92%D1%96%D0%BD%D0%BD%D0%B8%D1%86%D1%8F._%D0%A8%D0%BB%D1%8E%D0%B1.pdf/page1-1280px-%D0%94%D0%90%D0%92%D1%96%D0%9E_397-2-1._1834._%D0%9C%D0%B5%D1%82%D1%80%D0%B8%D1%87%D0%BD%D0%B0_%D0%BA%D0%BD%D0%B8%D0%B3%D0%B0_%D1%94%D0%B2%D1%80%D0%B5%D1%97%D0%B2_%D0%BC%D1%96%D1%81%D1%82%D0%B0_%D0%92%D1%96%D0%BD%D0%BD%D0%B8%D1%86%D1%8F._%D0%A8%D0%BB%D1%8E%D0%B1.pdf.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:%D0%94%D0%90%D0%92%D1%96%D0%9E_397-2-1._1834._%D0%9C%D0%B5%D1%82%D1%80%D0%B8%D1%87%D0%BD%D0%B0_%D0%BA%D0%BD%D0%B8%D0%B3%D0%B0_%D1%94%D0%B2%D1%80%D0%B5%D1%97%D0%B2_%D0%BC%D1%96%D1%81%D1%82%D0%B0_%D0%92%D1%96%D0%BD%D0%BD%D0%B8%D1%86%D1%8F._%D0%A8%D0%BB%D1%8E%D0%B1.pdf",
+          "credit": "Вінницький рабинат / Wikimedia Commons, Public domain",
+          "license": "Public domain"
+        },
+        {
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8d/%D0%94%D0%90%D0%94%D0%BD%D0%9E_193-3-482._1887-1904._%D0%9C%D0%B5%D1%82%D1%80%D0%B8%D1%87%D0%BD%D0%B0_%D0%BA%D0%BD%D0%B8%D0%B3%D0%B0_%D0%92%D0%BE%D1%81%D0%BA%D1%80%D0%B5%D1%81%D0%B5%D0%BD%D1%81%D1%8C%D0%BA%D0%B0_%D1%86%D0%B5%D1%80%D0%BA%D0%B2%D0%B0_%D0%BC._%D0%9A%D0%B0%D1%82%D0%B5%D1%80%D0%B8%D0%BD%D0%BE%D1%81%D0%BB%D0%B0%D0%B2._%D0%A8%D0%BB%D1%8E%D0%B1.pdf/page1-500px-%D0%94%D0%90%D0%94%D0%BD%D0%9E_193-3-482._1887-1904._%D0%9C%D0%B5%D1%82%D1%80%D0%B8%D1%87%D0%BD%D0%B0_%D0%BA%D0%BD%D0%B8%D0%B3%D0%B0_%D0%92%D0%BE%D1%81%D0%BA%D1%80%D0%B5%D1%81%D0%B5%D0%BD%D1%81%D1%8C%D0%BA%D0%B0_%D1%86%D0%B5%D1%80%D0%BA%D0%B2%D0%B0_%D0%BC._%D0%9A%D0%B0%D1%82%D0%B5%D1%80%D0%B8%D0%BD%D0%BE%D1%81%D0%BB%D0%B0%D0%B2._%D0%A8%D0%BB%D1%8E%D0%B1.pdf.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:%D0%94%D0%90%D0%94%D0%BD%D0%9E_193-3-482._1887-1904._%D0%9C%D0%B5%D1%82%D1%80%D0%B8%D1%87%D0%BD%D0%B0_%D0%BA%D0%BD%D0%B8%D0%B3%D0%B0_%D0%92%D0%BE%D1%81%D0%BA%D1%80%D0%B5%D1%81%D0%B5%D0%BD%D1%81%D1%8C%D0%BA%D0%B0_%D1%86%D0%B5%D1%80%D0%BA%D0%B2%D0%B0_%D0%BC._%D0%9A%D0%B0%D1%82%D0%B5%D1%80%D0%B8%D0%BD%D0%BE%D1%81%D0%BB%D0%B0%D0%B2._%D0%A8%D0%BB%D1%8E%D0%B1.pdf",
+          "credit": "Катеринославська духовна консисторія / Wikimedia Commons, Public domain",
+          "license": "Public domain"
+        },
+        {
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a3/%D0%9F%D0%B8%D0%BC%D0%BE%D0%BD%D0%B5%D0%BD%D0%BA%D0%BE_%D0%9C_%D0%92%D0%B5%D1%81%D1%96%D0%BB%D0%BB%D1%8F_%D0%B2_%D0%9A%D0%B8%D1%97%D0%B2%D1%81%D1%8C%D0%BA%D1%96%D0%B9_%D0%B3%D1%83%D0%B1%D0%B5%D1%80%D0%BD%D1%96%D1%97_1891.PNG/1280px-%D0%9F%D0%B8%D0%BC%D0%BE%D0%BD%D0%B5%D0%BD%D0%BA%D0%BE_%D0%9C_%D0%92%D0%B5%D1%81%D1%96%D0%BB%D0%BB%D1%8F_%D0%B2_%D0%9A%D0%B8%D1%97%D0%B2%D1%81%D1%8C%D0%BA%D1%96%D0%B9_%D0%B3%D1%83%D0%B1%D0%B5%D1%80%D0%BD%D1%96%D1%97_1891.PNG",
+          "page": "https://commons.wikimedia.org/wiki/File:%D0%9F%D0%B8%D0%BC%D0%BE%D0%BD%D0%B5%D0%BD%D0%BA%D0%BE_%D0%9C_%D0%92%D0%B5%D1%81%D1%96%D0%BB%D0%BB%D1%8F_%D0%B2_%D0%9A%D0%B8%D1%97%D0%B2%D1%81%D1%8C%D0%BA%D1%96%D0%B9_%D0%B3%D1%83%D0%B1%D0%B5%D1%80%D0%BD%D1%96%D1%97_1891.PNG",
+          "credit": "Микола Пимоненко / Wikimedia Commons, Public domain",
+          "license": "Public domain"
+        }
+      ],
       "status": "approved",
       "thread": {
         "status": "approved",
@@ -13725,9 +13744,13 @@
         {
           "at": "2026-11-18T12:08:46+00:00",
           "event": "photo search requested in telegram"
+        },
+        {
+          "at": "2026-11-18T12:30:00+00:00",
+          "event": "photos found"
         }
       ],
-      "photo_request": true,
+      "photo_request": false,
       "photo_error": "",
       "photo_keywords": "",
       "photo_requested_at": "2026-11-18T12:08:46+00:00"
