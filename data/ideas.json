@@ -2673,7 +2673,7 @@
           "license": "Public domain"
         }
       ],
-      "status": "proposed",
+      "status": "rejected",
       "thread": {
         "status": "none",
         "file": null
@@ -2691,6 +2691,10 @@
         {
           "at": "2026-10-01T20:10:43+00:00",
           "event": "proposed by ideas routine"
+        },
+        {
+          "at": "2026-11-18T17:26:52+00:00",
+          "event": "idea rejected by author request (bulk, all proposed)"
         }
       ]
     },
@@ -2977,7 +2981,7 @@
           "license": "CC0"
         }
       ],
-      "status": "proposed",
+      "status": "rejected",
       "thread": {
         "status": "none",
         "file": null
@@ -2995,6 +2999,10 @@
         {
           "at": "2026-10-01T20:10:43+00:00",
           "event": "proposed by ideas routine"
+        },
+        {
+          "at": "2026-11-18T17:26:52+00:00",
+          "event": "idea rejected by author request (bulk, all proposed)"
         }
       ]
     },
@@ -3023,7 +3031,7 @@
           "license": "CC0"
         }
       ],
-      "status": "proposed",
+      "status": "rejected",
       "thread": {
         "status": "none",
         "file": null
@@ -3041,6 +3049,10 @@
         {
           "at": "2026-10-01T20:10:43+00:00",
           "event": "proposed by ideas routine"
+        },
+        {
+          "at": "2026-11-18T17:26:52+00:00",
+          "event": "idea rejected by author request (bulk, all proposed)"
         }
       ]
     },
@@ -3271,7 +3283,7 @@
           "license": "CC BY-SA 3.0"
         }
       ],
-      "status": "proposed",
+      "status": "rejected",
       "thread": {
         "status": "none",
         "file": null
@@ -3293,6 +3305,10 @@
         {
           "at": "2026-11-04T21:40:37+00:00",
           "event": "stream changed: small → big (малий і великий серйозний злито)"
+        },
+        {
+          "at": "2026-11-18T17:26:52+00:00",
+          "event": "idea rejected by author request (bulk, all proposed)"
         }
       ]
     },
@@ -3620,7 +3636,7 @@
         "https://uk.wikipedia.org/wiki/Волость"
       ],
       "images": [],
-      "status": "proposed",
+      "status": "rejected",
       "thread": {
         "status": "none",
         "file": null
@@ -3642,6 +3658,10 @@
         {
           "at": "2026-11-04T21:40:37+00:00",
           "event": "stream changed: small → big (малий і великий серйозний злито)"
+        },
+        {
+          "at": "2026-11-18T17:26:52+00:00",
+          "event": "idea rejected by author request (bulk, all proposed)"
         }
       ]
     },
@@ -3656,7 +3676,7 @@
         "https://uk.wikipedia.org/wiki/Повіт"
       ],
       "images": [],
-      "status": "proposed",
+      "status": "rejected",
       "thread": {
         "status": "none",
         "file": null
@@ -3678,6 +3698,10 @@
         {
           "at": "2026-11-04T21:40:37+00:00",
           "event": "stream changed: small → big (малий і великий серйозний злито)"
+        },
+        {
+          "at": "2026-11-18T17:26:52+00:00",
+          "event": "idea rejected by author request (bulk, all proposed)"
         }
       ]
     },
@@ -3692,7 +3716,7 @@
         "https://uk.wikipedia.org/wiki/Метричні_книги"
       ],
       "images": [],
-      "status": "proposed",
+      "status": "rejected",
       "thread": {
         "status": "none",
         "file": null
@@ -3714,6 +3738,10 @@
         {
           "at": "2026-11-04T21:40:37+00:00",
           "event": "stream changed: small → big (малий і великий серйозний злито)"
+        },
+        {
+          "at": "2026-11-18T17:26:52+00:00",
+          "event": "idea rejected by author request (bulk, all proposed)"
         }
       ]
     },
@@ -3728,7 +3756,7 @@
         "https://uagenealogy.com/"
       ],
       "images": [],
-      "status": "proposed",
+      "status": "rejected",
       "thread": {
         "status": "none",
         "file": null
@@ -3750,6 +3778,10 @@
         {
           "at": "2026-11-04T21:40:37+00:00",
           "event": "stream changed: small → big (малий і великий серйозний злито)"
+        },
+        {
+          "at": "2026-11-18T17:26:52+00:00",
+          "event": "idea rejected by author request (bulk, all proposed)"
         }
       ]
     },
@@ -3764,7 +3796,7 @@
         "https://uk.wikipedia.org/wiki/Магдебурзьке_право"
       ],
       "images": [],
-      "status": "proposed",
+      "status": "rejected",
       "thread": {
         "status": "none",
         "file": null
@@ -3786,6 +3818,10 @@
         {
           "at": "2026-11-04T21:40:37+00:00",
           "event": "stream changed: small → big (малий і великий серйозний злито)"
+        },
+        {
+          "at": "2026-11-18T17:26:52+00:00",
+          "event": "idea rejected by author request (bulk, all proposed)"
         }
       ]
     },
@@ -3947,7 +3983,7 @@
           "license": "Public domain"
         }
       ],
-      "status": "proposed",
+      "status": "rejected",
       "thread": {
         "status": "none",
         "file": null
@@ -3965,6 +4001,10 @@
         {
           "at": "2026-10-03T07:29:22+00:00",
           "event": "proposed by ideas routine"
+        },
+        {
+          "at": "2026-11-18T17:26:52+00:00",
+          "event": "idea rejected by author request (bulk, all proposed)"
         }
       ]
     },
@@ -3986,7 +4026,7 @@
           "license": "CC BY-SA 4.0"
         }
       ],
-      "status": "proposed",
+      "status": "rejected",
       "thread": {
         "status": "none",
         "file": null
@@ -4004,6 +4044,10 @@
         {
           "at": "2026-10-03T07:29:22+00:00",
           "event": "proposed by ideas routine"
+        },
+        {
+          "at": "2026-11-18T17:26:52+00:00",
+          "event": "idea rejected by author request (bulk, all proposed)"
         }
       ]
     },
@@ -4204,7 +4248,7 @@
           "license": "Public domain"
         }
       ],
-      "status": "proposed",
+      "status": "rejected",
       "thread": {
         "status": "none",
         "file": null
@@ -4222,6 +4266,10 @@
         {
           "at": "2026-10-03T07:29:22+00:00",
           "event": "proposed by ideas routine"
+        },
+        {
+          "at": "2026-11-18T17:26:52+00:00",
+          "event": "idea rejected by author request (bulk, all proposed)"
         }
       ]
     },
@@ -4243,7 +4291,7 @@
           "license": "Public domain"
         }
       ],
-      "status": "proposed",
+      "status": "rejected",
       "thread": {
         "status": "none",
         "file": null
@@ -4261,6 +4309,10 @@
         {
           "at": "2026-10-03T07:29:22+00:00",
           "event": "proposed by ideas routine"
+        },
+        {
+          "at": "2026-11-18T17:26:52+00:00",
+          "event": "idea rejected by author request (bulk, all proposed)"
         }
       ]
     },
@@ -4282,7 +4334,7 @@
           "license": "CC BY-SA 4.0"
         }
       ],
-      "status": "proposed",
+      "status": "rejected",
       "thread": {
         "status": "none",
         "file": null
@@ -4300,6 +4352,10 @@
         {
           "at": "2026-10-03T07:29:22+00:00",
           "event": "proposed by ideas routine"
+        },
+        {
+          "at": "2026-11-18T17:26:52+00:00",
+          "event": "idea rejected by author request (bulk, all proposed)"
         }
       ]
     },
@@ -4501,7 +4557,7 @@
           "license": "Public domain"
         }
       ],
-      "status": "proposed",
+      "status": "rejected",
       "thread": {
         "status": "none",
         "file": null
@@ -4519,6 +4575,10 @@
         {
           "at": "2026-10-06T06:14:05+00:00",
           "event": "proposed by ideas routine"
+        },
+        {
+          "at": "2026-11-18T17:26:52+00:00",
+          "event": "idea rejected by author request (bulk, all proposed)"
         }
       ]
     },
@@ -6503,7 +6563,7 @@
           "license": "CC BY 4.0"
         }
       ],
-      "status": "proposed",
+      "status": "rejected",
       "thread": {
         "status": "none",
         "file": null
@@ -6521,6 +6581,10 @@
         {
           "at": "2026-10-14T20:55:00+00:00",
           "event": "proposed by ideas routine"
+        },
+        {
+          "at": "2026-11-18T17:26:52+00:00",
+          "event": "idea rejected by author request (bulk, all proposed)"
         }
       ]
     },
@@ -6544,7 +6608,7 @@
           "license": "CC BY-SA 3.0"
         }
       ],
-      "status": "proposed",
+      "status": "rejected",
       "thread": {
         "status": "none",
         "file": null
@@ -6562,6 +6626,10 @@
         {
           "at": "2026-10-14T20:55:00+00:00",
           "event": "proposed by ideas routine"
+        },
+        {
+          "at": "2026-11-18T17:26:52+00:00",
+          "event": "idea rejected by author request (bulk, all proposed)"
         }
       ]
     },
@@ -6895,7 +6963,7 @@
           "license": "CC BY 3.0"
         }
       ],
-      "status": "proposed",
+      "status": "rejected",
       "thread": {
         "status": "none",
         "file": null
@@ -6913,6 +6981,10 @@
         {
           "at": "2026-10-14T20:55:00+00:00",
           "event": "proposed by ideas routine"
+        },
+        {
+          "at": "2026-11-18T17:26:52+00:00",
+          "event": "idea rejected by author request (bulk, all proposed)"
         }
       ]
     },
@@ -6936,7 +7008,7 @@
           "license": "CC BY-SA 3.0"
         }
       ],
-      "status": "proposed",
+      "status": "rejected",
       "thread": {
         "status": "none",
         "file": null
@@ -6954,6 +7026,10 @@
         {
           "at": "2026-10-14T20:55:00+00:00",
           "event": "proposed by ideas routine"
+        },
+        {
+          "at": "2026-11-18T17:26:52+00:00",
+          "event": "idea rejected by author request (bulk, all proposed)"
         }
       ]
     },
@@ -6977,7 +7053,7 @@
           "license": "CC BY-SA 4.0"
         }
       ],
-      "status": "proposed",
+      "status": "rejected",
       "thread": {
         "status": "none",
         "file": null
@@ -6995,6 +7071,10 @@
         {
           "at": "2026-10-14T20:55:00+00:00",
           "event": "proposed by ideas routine"
+        },
+        {
+          "at": "2026-11-18T17:26:52+00:00",
+          "event": "idea rejected by author request (bulk, all proposed)"
         }
       ]
     },
@@ -7024,7 +7104,7 @@
           "license": "CC0 1.0"
         }
       ],
-      "status": "proposed",
+      "status": "rejected",
       "thread": {
         "status": "none",
         "file": null
@@ -7042,6 +7122,10 @@
         {
           "at": "2026-10-14T20:55:00+00:00",
           "event": "proposed by ideas routine"
+        },
+        {
+          "at": "2026-11-18T17:26:52+00:00",
+          "event": "idea rejected by author request (bulk, all proposed)"
         }
       ]
     },
@@ -7901,7 +7985,7 @@
         "https://www.jgscv.org/pdf/handouts/Gesher%20Galicia%20SIG%20Handout%202014.pdf"
       ],
       "images": [],
-      "status": "proposed",
+      "status": "rejected",
       "thread": {
         "status": "none",
         "file": null
@@ -7919,6 +8003,10 @@
         {
           "at": "2026-10-15T07:00:00+00:00",
           "event": "proposed by ideas routine"
+        },
+        {
+          "at": "2026-11-18T17:26:52+00:00",
+          "event": "idea rejected by author request (bulk, all proposed)"
         }
       ]
     },
@@ -7988,7 +8076,7 @@
           "license": "Public domain"
         }
       ],
-      "status": "proposed",
+      "status": "rejected",
       "thread": {
         "status": "none",
         "file": null
@@ -8006,6 +8094,10 @@
         {
           "at": "2026-10-15T07:00:00+00:00",
           "event": "proposed by ideas routine"
+        },
+        {
+          "at": "2026-11-18T17:26:52+00:00",
+          "event": "idea rejected by author request (bulk, all proposed)"
         }
       ]
     },
@@ -8036,7 +8128,7 @@
           "license": "Public domain"
         }
       ],
-      "status": "proposed",
+      "status": "rejected",
       "thread": {
         "status": "none",
         "file": null
@@ -8054,6 +8146,10 @@
         {
           "at": "2026-10-15T07:00:00+00:00",
           "event": "proposed by ideas routine"
+        },
+        {
+          "at": "2026-11-18T17:26:52+00:00",
+          "event": "idea rejected by author request (bulk, all proposed)"
         }
       ]
     },
@@ -8231,7 +8327,7 @@
           "license": "Public domain"
         }
       ],
-      "status": "proposed",
+      "status": "rejected",
       "thread": {
         "status": "none",
         "file": null
@@ -8249,6 +8345,10 @@
         {
           "at": "2026-10-15T07:00:00+00:00",
           "event": "proposed by ideas routine"
+        },
+        {
+          "at": "2026-11-18T17:26:52+00:00",
+          "event": "idea rejected by author request (bulk, all proposed)"
         }
       ]
     },
@@ -8414,7 +8514,7 @@
         "https://en.wikipedia.org/wiki/Transkribus"
       ],
       "images": [],
-      "status": "proposed",
+      "status": "rejected",
       "thread": {
         "status": "none",
         "file": null
@@ -8432,6 +8532,10 @@
         {
           "at": "2026-10-16T15:10:00+00:00",
           "event": "proposed by ideas routine"
+        },
+        {
+          "at": "2026-11-18T17:26:52+00:00",
+          "event": "idea rejected by author request (bulk, all proposed)"
         }
       ]
     },
@@ -8447,7 +8551,7 @@
         "https://uk.wikipedia.org/wiki/Метричні_книги"
       ],
       "images": [],
-      "status": "proposed",
+      "status": "rejected",
       "thread": {
         "status": "none",
         "file": null
@@ -8465,6 +8569,10 @@
         {
           "at": "2026-10-16T15:10:00+00:00",
           "event": "proposed by ideas routine"
+        },
+        {
+          "at": "2026-11-18T17:26:52+00:00",
+          "event": "idea rejected by author request (bulk, all proposed)"
         }
       ]
     },
@@ -8518,7 +8626,7 @@
         "https://inventarium.org.ua/"
       ],
       "images": [],
-      "status": "proposed",
+      "status": "rejected",
       "thread": {
         "status": "none",
         "file": null
@@ -8536,6 +8644,10 @@
         {
           "at": "2026-10-16T15:10:00+00:00",
           "event": "proposed by ideas routine"
+        },
+        {
+          "at": "2026-11-18T17:26:52+00:00",
+          "event": "idea rejected by author request (bulk, all proposed)"
         }
       ]
     },
@@ -8612,7 +8724,7 @@
         "https://kpi.kharkov.ua/archive/MicroCAD/2025/%D0%A1%D0%B5%D0%BA%D1%86%D1%96%D1%8F%208.%20%D0%A1%D0%BE%D1%86%D1%96%D0%B0%D0%BB%D1%8C%D0%BD%D0%BE-%D0%B3%D1%83%D0%BC%D0%B0%D0%BD%D1%96%D1%82%D0%B0%D1%80%D0%BD%D1%96%20%D1%82%D0%B5%D1%85%D0%BD%D0%BE%D0%BB%D0%BE%D0%B3%D1%96%D1%97/%D0%94%D0%95%D0%AF%D0%9A%D0%86%20%D0%A1%D0%A2%D0%90%D0%A2%D0%98%D0%A1%D0%A2%D0%98%D0%A7%D0%9D%D0%86%20%D0%94%D0%90%D0%9D%D0%86%20%D0%9F%D0%95%D0%A0%D0%95%D0%9F%D0%98%D0%A1%D0%A3%20%D0%9D%D0%90%D0%A1%D0%95%D0%9B%D0%95%D0%9D%D0%9D%D0%AF%201897%20%D0%A0..pdf"
       ],
       "images": [],
-      "status": "proposed",
+      "status": "rejected",
       "thread": {
         "status": "none",
         "file": null
@@ -8630,6 +8742,10 @@
         {
           "at": "2026-10-16T15:10:00+00:00",
           "event": "proposed by ideas routine"
+        },
+        {
+          "at": "2026-11-18T17:26:52+00:00",
+          "event": "idea rejected by author request (bulk, all proposed)"
         }
       ]
     },
@@ -8823,7 +8939,7 @@
         "https://uk.wikipedia.org/wiki/Шляхта"
       ],
       "images": [],
-      "status": "proposed",
+      "status": "rejected",
       "thread": {
         "status": "none",
         "file": null
@@ -8841,6 +8957,10 @@
         {
           "at": "2026-10-16T16:00:00+00:00",
           "event": "proposed by ideas routine"
+        },
+        {
+          "at": "2026-11-18T17:26:52+00:00",
+          "event": "idea rejected by author request (bulk, all proposed)"
         }
       ]
     },
@@ -8856,7 +8976,7 @@
         "https://ombudsman.gov.ua/news_details/shcho-potribno-znati-pro-termini-rozglyadu-zvernen-gromadyan"
       ],
       "images": [],
-      "status": "proposed",
+      "status": "rejected",
       "thread": {
         "status": "none",
         "file": null
@@ -8874,6 +8994,10 @@
         {
           "at": "2026-10-16T16:00:00+00:00",
           "event": "proposed by ideas routine"
+        },
+        {
+          "at": "2026-11-18T17:26:52+00:00",
+          "event": "idea rejected by author request (bulk, all proposed)"
         }
       ]
     },
@@ -8963,7 +9087,7 @@
         "https://uk.wikipedia.org/wiki/Пан"
       ],
       "images": [],
-      "status": "proposed",
+      "status": "rejected",
       "thread": {
         "status": "none",
         "file": null
@@ -8981,6 +9105,10 @@
         {
           "at": "2026-10-16T16:00:00+00:00",
           "event": "proposed by ideas routine"
+        },
+        {
+          "at": "2026-11-18T17:26:52+00:00",
+          "event": "idea rejected by author request (bulk, all proposed)"
         }
       ]
     },
@@ -8996,7 +9124,7 @@
         "https://uk.wikipedia.org/wiki/Київське_водосховище"
       ],
       "images": [],
-      "status": "proposed",
+      "status": "rejected",
       "thread": {
         "status": "none",
         "file": null
@@ -9014,6 +9142,10 @@
         {
           "at": "2026-10-16T16:00:00+00:00",
           "event": "proposed by ideas routine"
+        },
+        {
+          "at": "2026-11-18T17:26:52+00:00",
+          "event": "idea rejected by author request (bulk, all proposed)"
         }
       ]
     },
@@ -9029,7 +9161,7 @@
         "https://en.wikipedia.org/wiki/Genetic_genealogy"
       ],
       "images": [],
-      "status": "proposed",
+      "status": "rejected",
       "thread": {
         "status": "none",
         "file": null
@@ -9047,6 +9179,10 @@
         {
           "at": "2026-10-16T16:00:00+00:00",
           "event": "proposed by ideas routine"
+        },
+        {
+          "at": "2026-11-18T17:26:52+00:00",
+          "event": "idea rejected by author request (bulk, all proposed)"
         }
       ]
     },
@@ -9063,7 +9199,7 @@
         "https://uk.wikipedia.org/wiki/Сповідні_розписи"
       ],
       "images": [],
-      "status": "proposed",
+      "status": "rejected",
       "thread": {
         "status": "none",
         "file": null
@@ -9081,6 +9217,10 @@
         {
           "at": "2026-10-17T07:00:00+00:00",
           "event": "proposed by ideas routine"
+        },
+        {
+          "at": "2026-11-18T17:26:52+00:00",
+          "event": "idea rejected by author request (bulk, all proposed)"
         }
       ]
     },
@@ -9134,7 +9274,7 @@
         "https://uk.wikipedia.org/wiki/Ревізька_казка"
       ],
       "images": [],
-      "status": "proposed",
+      "status": "rejected",
       "thread": {
         "status": "none",
         "file": null
@@ -9152,6 +9292,10 @@
         {
           "at": "2026-10-17T07:00:00+00:00",
           "event": "proposed by ideas routine"
+        },
+        {
+          "at": "2026-11-18T17:26:52+00:00",
+          "event": "idea rejected by author request (bulk, all proposed)"
         }
       ]
     },
@@ -9277,7 +9421,7 @@
         "https://www.familysearch.org/en/wiki/Ukraine_Genealogy"
       ],
       "images": [],
-      "status": "proposed",
+      "status": "rejected",
       "thread": {
         "status": "none",
         "file": null
@@ -9295,6 +9439,10 @@
         {
           "at": "2026-10-17T07:00:00+00:00",
           "event": "proposed by ideas routine"
+        },
+        {
+          "at": "2026-11-18T17:26:52+00:00",
+          "event": "idea rejected by author request (bulk, all proposed)"
         }
       ]
     },
@@ -9310,7 +9458,7 @@
         "https://uk.wikipedia.org/wiki/Сповідні_розписи"
       ],
       "images": [],
-      "status": "proposed",
+      "status": "rejected",
       "thread": {
         "status": "none",
         "file": null
@@ -9328,6 +9476,10 @@
         {
           "at": "2026-10-17T07:00:00+00:00",
           "event": "proposed by ideas routine"
+        },
+        {
+          "at": "2026-11-18T17:26:52+00:00",
+          "event": "idea rejected by author request (bulk, all proposed)"
         }
       ]
     },
@@ -9414,7 +9566,7 @@
         "https://uk.wikipedia.org/wiki/Ревізька_казка"
       ],
       "images": [],
-      "status": "proposed",
+      "status": "rejected",
       "thread": {
         "status": "none",
         "file": null
@@ -9432,6 +9584,10 @@
         {
           "at": "2026-10-17T07:00:00+00:00",
           "event": "proposed by ideas routine"
+        },
+        {
+          "at": "2026-11-18T17:26:52+00:00",
+          "event": "idea rejected by author request (bulk, all proposed)"
         }
       ]
     },
@@ -9447,7 +9603,7 @@
         "https://uk.wikipedia.org/wiki/Метрична_книга"
       ],
       "images": [],
-      "status": "proposed",
+      "status": "rejected",
       "thread": {
         "status": "none",
         "file": null
@@ -9465,6 +9621,10 @@
         {
           "at": "2026-10-17T07:00:00+00:00",
           "event": "proposed by ideas routine"
+        },
+        {
+          "at": "2026-11-18T17:26:52+00:00",
+          "event": "idea rejected by author request (bulk, all proposed)"
         }
       ]
     },
@@ -9513,7 +9673,7 @@
       "why_now": "",
       "sources": [],
       "images": [],
-      "status": "proposed",
+      "status": "rejected",
       "thread": {
         "status": "none",
         "file": null
@@ -9531,6 +9691,10 @@
         {
           "at": "2026-10-17T08:00:00+00:00",
           "event": "proposed by ideas routine"
+        },
+        {
+          "at": "2026-11-18T17:26:52+00:00",
+          "event": "idea rejected by author request (bulk, all proposed)"
         }
       ]
     },
@@ -9544,7 +9708,7 @@
       "why_now": "",
       "sources": [],
       "images": [],
-      "status": "proposed",
+      "status": "rejected",
       "thread": {
         "status": "none",
         "file": null
@@ -9562,6 +9726,10 @@
         {
           "at": "2026-10-17T08:00:00+00:00",
           "event": "proposed by ideas routine"
+        },
+        {
+          "at": "2026-11-18T17:26:52+00:00",
+          "event": "idea rejected by author request (bulk, all proposed)"
         }
       ]
     },
@@ -9797,7 +9965,7 @@
       "why_now": "",
       "sources": [],
       "images": [],
-      "status": "proposed",
+      "status": "rejected",
       "thread": {
         "status": "none",
         "file": null
@@ -9815,6 +9983,10 @@
         {
           "at": "2026-10-17T08:00:00+00:00",
           "event": "proposed by ideas routine"
+        },
+        {
+          "at": "2026-11-18T17:26:52+00:00",
+          "event": "idea rejected by author request (bulk, all proposed)"
         }
       ]
     },
@@ -9828,7 +10000,7 @@
       "why_now": "",
       "sources": [],
       "images": [],
-      "status": "proposed",
+      "status": "rejected",
       "thread": {
         "status": "none",
         "file": null
@@ -9846,6 +10018,10 @@
         {
           "at": "2026-10-17T08:00:00+00:00",
           "event": "proposed by ideas routine"
+        },
+        {
+          "at": "2026-11-18T17:26:52+00:00",
+          "event": "idea rejected by author request (bulk, all proposed)"
         }
       ]
     },
@@ -9859,7 +10035,7 @@
       "why_now": "",
       "sources": [],
       "images": [],
-      "status": "proposed",
+      "status": "rejected",
       "thread": {
         "status": "none",
         "file": null
@@ -9877,6 +10053,10 @@
         {
           "at": "2026-10-17T08:00:00+00:00",
           "event": "proposed by ideas routine"
+        },
+        {
+          "at": "2026-11-18T17:26:52+00:00",
+          "event": "idea rejected by author request (bulk, all proposed)"
         }
       ]
     },
@@ -11009,7 +11189,7 @@
           "license": "CC BY-SA 4.0"
         }
       ],
-      "status": "proposed",
+      "status": "rejected",
       "thread": {
         "status": "none",
         "file": null
@@ -11027,6 +11207,10 @@
         {
           "at": "2026-10-20T06:08:12+00:00",
           "event": "proposed by ideas routine"
+        },
+        {
+          "at": "2026-11-18T17:26:52+00:00",
+          "event": "idea rejected by author request (bulk, all proposed)"
         }
       ]
     },
@@ -11156,7 +11340,7 @@
           "license": "CC BY-SA 4.0"
         }
       ],
-      "status": "proposed",
+      "status": "rejected",
       "thread": {
         "status": "none",
         "file": null
@@ -11174,6 +11358,10 @@
         {
           "at": "2026-10-20T06:08:12+00:00",
           "event": "proposed by ideas routine"
+        },
+        {
+          "at": "2026-11-18T17:26:52+00:00",
+          "event": "idea rejected by author request (bulk, all proposed)"
         }
       ]
     },
@@ -11410,7 +11598,7 @@
         "https://uk.wikipedia.org/wiki/Прізвище"
       ],
       "images": [],
-      "status": "proposed",
+      "status": "rejected",
       "thread": {
         "status": "none",
         "file": null
@@ -11428,6 +11616,10 @@
         {
           "at": "2026-10-20T06:08:12+00:00",
           "event": "proposed by ideas routine"
+        },
+        {
+          "at": "2026-11-18T17:26:52+00:00",
+          "event": "idea rejected by author request (bulk, all proposed)"
         }
       ]
     },
@@ -11520,7 +11712,7 @@
           "license": "Public domain"
         }
       ],
-      "status": "proposed",
+      "status": "rejected",
       "thread": {
         "status": "none",
         "file": null
@@ -11538,6 +11730,10 @@
         {
           "at": "2026-10-20T06:08:12+00:00",
           "event": "proposed by ideas routine"
+        },
+        {
+          "at": "2026-11-18T17:26:52+00:00",
+          "event": "idea rejected by author request (bulk, all proposed)"
         }
       ]
     },
@@ -11566,7 +11762,7 @@
           "license": "Public domain"
         }
       ],
-      "status": "proposed",
+      "status": "rejected",
       "thread": {
         "status": "none",
         "file": null
@@ -11584,6 +11780,10 @@
         {
           "at": "2026-10-20T06:08:12+00:00",
           "event": "proposed by ideas routine"
+        },
+        {
+          "at": "2026-11-18T17:26:52+00:00",
+          "event": "idea rejected by author request (bulk, all proposed)"
         }
       ]
     },
@@ -12470,7 +12670,7 @@
       "why_now": "",
       "sources": [],
       "images": [],
-      "status": "proposed",
+      "status": "rejected",
       "thread": {
         "status": "none",
         "file": null
@@ -12488,6 +12688,10 @@
         {
           "at": "2026-10-24T06:00:00+00:00",
           "event": "proposed by ideas routine"
+        },
+        {
+          "at": "2026-11-18T17:26:52+00:00",
+          "event": "idea rejected by author request (bulk, all proposed)"
         }
       ]
     },
@@ -12501,7 +12705,7 @@
       "why_now": "",
       "sources": [],
       "images": [],
-      "status": "proposed",
+      "status": "rejected",
       "thread": {
         "status": "none",
         "file": null
@@ -12519,6 +12723,10 @@
         {
           "at": "2026-10-24T06:00:00+00:00",
           "event": "proposed by ideas routine"
+        },
+        {
+          "at": "2026-11-18T17:26:52+00:00",
+          "event": "idea rejected by author request (bulk, all proposed)"
         }
       ]
     },
@@ -12655,7 +12863,7 @@
       "why_now": "",
       "sources": [],
       "images": [],
-      "status": "proposed",
+      "status": "rejected",
       "thread": {
         "status": "none",
         "file": null
@@ -12673,6 +12881,10 @@
         {
           "at": "2026-10-24T06:00:00+00:00",
           "event": "proposed by ideas routine"
+        },
+        {
+          "at": "2026-11-18T17:26:52+00:00",
+          "event": "idea rejected by author request (bulk, all proposed)"
         }
       ]
     },
@@ -12686,7 +12898,7 @@
       "why_now": "",
       "sources": [],
       "images": [],
-      "status": "proposed",
+      "status": "rejected",
       "thread": {
         "status": "none",
         "file": null
@@ -12704,6 +12916,10 @@
         {
           "at": "2026-10-24T06:00:00+00:00",
           "event": "proposed by ideas routine"
+        },
+        {
+          "at": "2026-11-18T17:26:52+00:00",
+          "event": "idea rejected by author request (bulk, all proposed)"
         }
       ]
     },
@@ -12839,7 +13055,7 @@
           "license": "CC BY-SA 4.0"
         }
       ],
-      "status": "proposed",
+      "status": "rejected",
       "thread": {
         "status": "none",
         "file": null
@@ -12857,6 +13073,10 @@
         {
           "at": "2026-10-24T08:00:00+00:00",
           "event": "proposed by ideas routine"
+        },
+        {
+          "at": "2026-11-18T17:26:52+00:00",
+          "event": "idea rejected by author request (bulk, all proposed)"
         }
       ]
     },
@@ -12913,7 +13133,7 @@
         "https://www.kmu.gov.ua/news/arkhivy-nadavatymut-arkhivni-dovidky-navit-pry-vidsutnosti-oryhinaliv"
       ],
       "images": [],
-      "status": "proposed",
+      "status": "rejected",
       "thread": {
         "status": "none",
         "file": null
@@ -12931,6 +13151,10 @@
         {
           "at": "2026-10-24T08:00:00+00:00",
           "event": "proposed by ideas routine"
+        },
+        {
+          "at": "2026-11-18T17:26:52+00:00",
+          "event": "idea rejected by author request (bulk, all proposed)"
         }
       ]
     },
@@ -13114,7 +13338,7 @@
           "license": "CC BY-SA 3.0"
         }
       ],
-      "status": "proposed",
+      "status": "rejected",
       "thread": {
         "status": "none",
         "file": null
@@ -13132,6 +13356,10 @@
         {
           "at": "2026-10-24T08:00:00+00:00",
           "event": "proposed by ideas routine"
+        },
+        {
+          "at": "2026-11-18T17:26:52+00:00",
+          "event": "idea rejected by author request (bulk, all proposed)"
         }
       ]
     },
@@ -13156,7 +13384,7 @@
           "license": "Public domain"
         }
       ],
-      "status": "proposed",
+      "status": "rejected",
       "thread": {
         "status": "none",
         "file": null
@@ -13174,6 +13402,10 @@
         {
           "at": "2026-10-24T08:00:00+00:00",
           "event": "proposed by ideas routine"
+        },
+        {
+          "at": "2026-11-18T17:26:52+00:00",
+          "event": "idea rejected by author request (bulk, all proposed)"
         }
       ]
     },
@@ -13191,7 +13423,7 @@
         "https://jitas.donnu.edu.ua/article/view/19791/19706"
       ],
       "images": [],
-      "status": "proposed",
+      "status": "rejected",
       "thread": {
         "status": "none",
         "file": null
@@ -13209,6 +13441,10 @@
         {
           "at": "2026-10-24T08:00:00+00:00",
           "event": "proposed by ideas routine"
+        },
+        {
+          "at": "2026-11-18T17:26:52+00:00",
+          "event": "idea rejected by author request (bulk, all proposed)"
         }
       ]
     },
@@ -13226,7 +13462,7 @@
         "https://www.familysearch.org/sv/search/collection/3754709"
       ],
       "images": [],
-      "status": "proposed",
+      "status": "rejected",
       "thread": {
         "status": "none",
         "file": null
@@ -13244,6 +13480,10 @@
         {
           "at": "2026-10-24T08:00:00+00:00",
           "event": "proposed by ideas routine"
+        },
+        {
+          "at": "2026-11-18T17:26:52+00:00",
+          "event": "idea rejected by author request (bulk, all proposed)"
         }
       ]
     },
@@ -14002,7 +14242,7 @@
         "https://en.wikipedia.org/wiki/Cantonist"
       ],
       "images": [],
-      "status": "proposed",
+      "status": "rejected",
       "thread": {
         "status": "none",
         "file": null
@@ -14020,6 +14260,10 @@
         {
           "at": "2026-11-04T08:00:00+00:00",
           "event": "proposed by ideas routine"
+        },
+        {
+          "at": "2026-11-18T17:26:52+00:00",
+          "event": "idea rejected by author request (bulk, all proposed)"
         }
       ]
     },
@@ -14137,7 +14381,7 @@
           "license": "CC BY-SA 3.0"
         }
       ],
-      "status": "proposed",
+      "status": "rejected",
       "thread": {
         "status": "none",
         "file": null
@@ -14155,6 +14399,10 @@
         {
           "at": "2026-11-04T08:00:00+00:00",
           "event": "proposed by ideas routine"
+        },
+        {
+          "at": "2026-11-18T17:26:52+00:00",
+          "event": "idea rejected by author request (bulk, all proposed)"
         }
       ]
     },
@@ -14296,7 +14544,7 @@
         "https://en.wikipedia.org/wiki/Black_Sea_Germans"
       ],
       "images": [],
-      "status": "proposed",
+      "status": "rejected",
       "thread": {
         "status": "none",
         "file": null
@@ -14314,6 +14562,10 @@
         {
           "at": "2026-11-04T08:00:00+00:00",
           "event": "proposed by ideas routine"
+        },
+        {
+          "at": "2026-11-18T17:26:52+00:00",
+          "event": "idea rejected by author request (bulk, all proposed)"
         }
       ]
     },
@@ -14331,7 +14583,7 @@
         "https://www.radiosvoboda.org/a/sekret-dovgolittya-ta-inshi-osoblyvosti-metrychnyh-knyg/31294708.html"
       ],
       "images": [],
-      "status": "proposed",
+      "status": "rejected",
       "thread": {
         "status": "none",
         "file": null
@@ -14349,6 +14601,10 @@
         {
           "at": "2026-11-04T08:00:00+00:00",
           "event": "proposed by ideas routine"
+        },
+        {
+          "at": "2026-11-18T17:26:52+00:00",
+          "event": "idea rejected by author request (bulk, all proposed)"
         }
       ]
     },
@@ -14366,7 +14622,7 @@
         "https://en.wikipedia.org/wiki/Green_Ukraine"
       ],
       "images": [],
-      "status": "proposed",
+      "status": "rejected",
       "thread": {
         "status": "none",
         "file": null
@@ -14384,6 +14640,10 @@
         {
           "at": "2026-11-04T08:00:00+00:00",
           "event": "proposed by ideas routine"
+        },
+        {
+          "at": "2026-11-18T17:26:52+00:00",
+          "event": "idea rejected by author request (bulk, all proposed)"
         }
       ]
     },
@@ -14436,7 +14696,7 @@
         "https://uk.wikipedia.org/wiki/Українці_в_Канаді"
       ],
       "images": [],
-      "status": "proposed",
+      "status": "rejected",
       "thread": {
         "status": "none",
         "file": null
@@ -14454,6 +14714,10 @@
         {
           "at": "2026-11-10T12:00:00+00:00",
           "event": "proposed by ideas routine"
+        },
+        {
+          "at": "2026-11-18T17:26:52+00:00",
+          "event": "idea rejected by author request (bulk, all proposed)"
         }
       ]
     },
@@ -15181,7 +15445,7 @@
         "https://ru.wikipedia.org/wiki/Ревизская_сказка"
       ],
       "images": [],
-      "status": "proposed",
+      "status": "rejected",
       "thread": {
         "status": "none",
         "file": null
@@ -15199,6 +15463,10 @@
         {
           "at": "2026-11-10T08:00:00+00:00",
           "event": "proposed by ideas routine"
+        },
+        {
+          "at": "2026-11-18T17:26:52+00:00",
+          "event": "idea rejected by author request (bulk, all proposed)"
         }
       ]
     },
@@ -15222,7 +15490,7 @@
           "license": "Public domain"
         }
       ],
-      "status": "proposed",
+      "status": "rejected",
       "thread": {
         "status": "none",
         "file": null
@@ -15240,6 +15508,10 @@
         {
           "at": "2026-11-10T08:00:00+00:00",
           "event": "proposed by ideas routine"
+        },
+        {
+          "at": "2026-11-18T17:26:52+00:00",
+          "event": "idea rejected by author request (bulk, all proposed)"
         }
       ]
     },
@@ -15256,7 +15528,7 @@
         "https://uk.wikipedia.org/wiki/Міщанство"
       ],
       "images": [],
-      "status": "proposed",
+      "status": "rejected",
       "thread": {
         "status": "none",
         "file": null
@@ -15274,6 +15546,10 @@
         {
           "at": "2026-11-10T08:00:00+00:00",
           "event": "proposed by ideas routine"
+        },
+        {
+          "at": "2026-11-18T17:26:52+00:00",
+          "event": "idea rejected by author request (bulk, all proposed)"
         }
       ]
     },
@@ -15289,7 +15565,7 @@
         "https://ru.wikipedia.org/wiki/Грамотность"
       ],
       "images": [],
-      "status": "proposed",
+      "status": "rejected",
       "thread": {
         "status": "none",
         "file": null
@@ -15307,6 +15583,10 @@
         {
           "at": "2026-11-10T08:00:00+00:00",
           "event": "proposed by ideas routine"
+        },
+        {
+          "at": "2026-11-18T17:26:52+00:00",
+          "event": "idea rejected by author request (bulk, all proposed)"
         }
       ]
     },
@@ -15330,7 +15610,7 @@
           "license": "Public domain"
         }
       ],
-      "status": "proposed",
+      "status": "rejected",
       "thread": {
         "status": "none",
         "file": null
@@ -15348,6 +15628,10 @@
         {
           "at": "2026-11-10T08:00:00+00:00",
           "event": "proposed by ideas routine"
+        },
+        {
+          "at": "2026-11-18T17:26:52+00:00",
+          "event": "idea rejected by author request (bulk, all proposed)"
         }
       ]
     },
@@ -15363,7 +15647,7 @@
         "https://ru.wikipedia.org/wiki/Фамилии_духовенства"
       ],
       "images": [],
-      "status": "proposed",
+      "status": "rejected",
       "thread": {
         "status": "none",
         "file": null
@@ -15381,6 +15665,10 @@
         {
           "at": "2026-11-10T08:00:00+00:00",
           "event": "proposed by ideas routine"
+        },
+        {
+          "at": "2026-11-18T17:26:52+00:00",
+          "event": "idea rejected by author request (bulk, all proposed)"
         }
       ]
     },
@@ -15440,7 +15728,7 @@
         "https://kmhj.ukma.edu.ua/article/view/320422"
       ],
       "images": [],
-      "status": "proposed",
+      "status": "rejected",
       "thread": {
         "status": "none",
         "file": null
@@ -15458,6 +15746,10 @@
         {
           "at": "2026-11-10T09:00:00+00:00",
           "event": "proposed by ideas routine"
+        },
+        {
+          "at": "2026-11-18T17:26:52+00:00",
+          "event": "idea rejected by author request (bulk, all proposed)"
         }
       ]
     },
@@ -15473,7 +15765,7 @@
         "https://news.telegraf.com.ua/ukr/ukraina/2025-10-31/5924467-bez-ulybki-ne-prochest-chto-skryvaet-pakhuchee-nazvanie-sela-na-frankovshchine"
       ],
       "images": [],
-      "status": "proposed",
+      "status": "rejected",
       "thread": {
         "status": "none",
         "file": null
@@ -15491,6 +15783,10 @@
         {
           "at": "2026-11-10T09:00:00+00:00",
           "event": "proposed by ideas routine"
+        },
+        {
+          "at": "2026-11-18T17:26:52+00:00",
+          "event": "idea rejected by author request (bulk, all proposed)"
         }
       ]
     },
@@ -15506,7 +15802,7 @@
         "https://news.telegraf.com.ua/ukr/obshhestvo/2025-11-28/5926723-zhodnogo-rasizmu-dva-sela-z-duzhe-nezvichaynimi-nazvami-e-v-ukraini-mapa"
       ],
       "images": [],
-      "status": "proposed",
+      "status": "rejected",
       "thread": {
         "status": "none",
         "file": null
@@ -15524,6 +15820,10 @@
         {
           "at": "2026-11-10T09:00:00+00:00",
           "event": "proposed by ideas routine"
+        },
+        {
+          "at": "2026-11-18T17:26:52+00:00",
+          "event": "idea rejected by author request (bulk, all proposed)"
         }
       ]
     },
@@ -15539,7 +15839,7 @@
         "https://news.telegraf.com.ua/ukr/obshhestvo/2025-12-04/5927232-vsim-bi-i-pobilshe-v-ukraini-e-selo-z-chudernatskoyu-nazvoyu-foto/amp"
       ],
       "images": [],
-      "status": "proposed",
+      "status": "rejected",
       "thread": {
         "status": "none",
         "file": null
@@ -15557,6 +15857,10 @@
         {
           "at": "2026-11-10T09:00:00+00:00",
           "event": "proposed by ideas routine"
+        },
+        {
+          "at": "2026-11-18T17:26:52+00:00",
+          "event": "idea rejected by author request (bulk, all proposed)"
         }
       ]
     },
@@ -15585,7 +15889,7 @@
           "license": "CC BY 2.0"
         }
       ],
-      "status": "proposed",
+      "status": "rejected",
       "thread": {
         "status": "none",
         "file": null
@@ -15603,6 +15907,10 @@
         {
           "at": "2026-11-10T09:00:00+00:00",
           "event": "proposed by ideas routine"
+        },
+        {
+          "at": "2026-11-18T17:26:52+00:00",
+          "event": "idea rejected by author request (bulk, all proposed)"
         }
       ]
     },
@@ -15655,7 +15963,7 @@
         "https://uk.wikipedia.org/wiki/Метричні_книги"
       ],
       "images": [],
-      "status": "proposed",
+      "status": "rejected",
       "thread": {
         "status": "none",
         "file": null
@@ -15673,6 +15981,10 @@
         {
           "at": "2026-11-10T09:00:00+00:00",
           "event": "proposed by ideas routine"
+        },
+        {
+          "at": "2026-11-18T17:26:52+00:00",
+          "event": "idea rejected by author request (bulk, all proposed)"
         }
       ]
     },
