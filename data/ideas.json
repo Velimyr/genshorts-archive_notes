@@ -16385,6 +16385,376 @@
           "event": "idea approved in telegram"
         }
       ]
+    },
+    {
+      "id": "2026-11-18-01",
+      "proposed_at": "2026-11-18",
+      "stream": "meme",
+      "rubric": "meme",
+      "title": "Метрична книга з печаткою й підписом — ні; пост у фейсбуку «моя бабуся розповідала» — так",
+      "summary": "Drake відкидає одне й схвалює інше: генеалог, який для «доказу» довіряє родинній легенді, а не метриці.",
+      "why_now": "",
+      "sources": [],
+      "images": [],
+      "meme": {
+        "template": "drake",
+        "name": "Drakeposting",
+        "blank": "https://api.memegen.link/images/drake.jpg",
+        "lines": 2
+      },
+      "status": "proposed",
+      "thread": {
+        "status": "none",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-11-18T19:00:00+00:00",
+          "event": "proposed by ideas routine"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-18-02",
+      "proposed_at": "2026-11-18",
+      "stream": "meme",
+      "rubric": "meme",
+      "title": "Хлопець (генеалог) відвертається від своєї гілки з документами до гілки, де «козацька старшина»",
+      "summary": "Distracted Boyfriend: три поля — реальна гілка з метрик, хлопець-дослідник і спокуслива легенда про шляхетне походження.",
+      "why_now": "",
+      "sources": [],
+      "images": [],
+      "meme": {
+        "template": "db",
+        "name": "Distracted Boyfriend",
+        "blank": "https://api.memegen.link/images/db.jpg",
+        "lines": 3
+      },
+      "status": "proposed",
+      "thread": {
+        "status": "none",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-11-18T19:00:00+00:00",
+          "event": "proposed by ideas routine"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-18-03",
+      "proposed_at": "2026-11-18",
+      "stream": "meme",
+      "rubric": "meme",
+      "title": "Change my mind: прізвище Мельник не доводить, що ви з одного села",
+      "summary": "Change My Mind: одне твердження для суперечки, яке в генеалогічних чатах гарантовано збирає сотні коментарів.",
+      "why_now": "",
+      "sources": [],
+      "images": [],
+      "meme": {
+        "template": "cmm",
+        "name": "Change My Mind",
+        "blank": "https://api.memegen.link/images/cmm.jpg",
+        "lines": 1
+      },
+      "status": "proposed",
+      "thread": {
+        "status": "none",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-11-18T19:00:00+00:00",
+          "event": "proposed by ideas routine"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-18-04",
+      "proposed_at": "2026-11-18",
+      "stream": "meme",
+      "rubric": "meme",
+      "title": "Рівні свідомості генеалога: від «спитаю бабусю» до «читаю сповідні розписи о 3-й ночі»",
+      "summary": "Galaxy Brain: чотири ступені «просвітлення» — від наївного пошуку в гуглі до фанатичного занурення в архівні справи.",
+      "why_now": "",
+      "sources": [],
+      "images": [],
+      "meme": {
+        "template": "gb",
+        "name": "Galaxy Brain",
+        "blank": "https://api.memegen.link/images/gb.jpg",
+        "lines": 4
+      },
+      "status": "proposed",
+      "thread": {
+        "status": "none",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-11-18T19:00:00+00:00",
+          "event": "proposed by ideas routine"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-18-05",
+      "proposed_at": "2026-11-18",
+      "stream": "meme",
+      "rubric": "meme",
+      "title": "Я мав піти в архів по одну довідку — а звернув у фонд, де сидітиму до закриття",
+      "summary": "Left Exit 12 Off Ramp: машина різко звертає з прямої дороги; генеалог звертає від плану-мінімуму до безодні справ.",
+      "why_now": "",
+      "sources": [],
+      "images": [],
+      "meme": {
+        "template": "exit",
+        "name": "Left Exit 12 Off Ramp",
+        "blank": "https://api.memegen.link/images/exit.jpg",
+        "lines": 3
+      },
+      "status": "proposed",
+      "thread": {
+        "status": "none",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-11-18T19:00:00+00:00",
+          "event": "proposed by ideas routine"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-18-06",
+      "proposed_at": "2026-11-18",
+      "stream": "meme",
+      "rubric": "meme",
+      "title": "Усі записи про прадіда з трьома різними роками народження. Це нормально",
+      "summary": "This Is Fine: спокійне сидіння посеред пожежі — реакція дослідника на метрики, де писар щоразу вносив інший рік.",
+      "why_now": "",
+      "sources": [],
+      "images": [],
+      "meme": {
+        "template": "fine",
+        "name": "This is Fine",
+        "blank": "https://api.memegen.link/images/fine.jpg",
+        "lines": 2
+      },
+      "status": "proposed",
+      "thread": {
+        "status": "none",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-11-18T19:00:00+00:00",
+          "event": "proposed by ideas routine"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-18-07",
+      "proposed_at": "2026-11-18",
+      "stream": "meme",
+      "rubric": "meme",
+      "title": "Не можна просто так прийти в архів і сказати «покажіть мені все про мій рід»",
+      "summary": "One Does Not Simply: класична формула «не можна просто так» лягає на наївне прохання до читального залу.",
+      "why_now": "",
+      "sources": [],
+      "images": [],
+      "meme": {
+        "template": "mordor",
+        "name": "One Does Not Simply Walk into Mordor",
+        "blank": "https://api.memegen.link/images/mordor.jpg",
+        "lines": 2
+      },
+      "status": "proposed",
+      "thread": {
+        "status": "none",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-11-18T19:00:00+00:00",
+          "event": "proposed by ideas routine"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-18-08",
+      "proposed_at": "2026-11-18",
+      "stream": "meme",
+      "rubric": "meme",
+      "title": "Родичка: «У нас у роду були графи!» — Метрика: «Селянин»",
+      "summary": "Woman Yelling at a Cat: ліворуч голосна родинна легенда, праворуч незворушний документ, який з нею не згоден.",
+      "why_now": "",
+      "sources": [],
+      "images": [],
+      "meme": {
+        "template": "woman-cat",
+        "name": "Woman Yelling at a Cat",
+        "blank": "https://api.memegen.link/images/woman-cat.jpg",
+        "lines": 2
+      },
+      "status": "proposed",
+      "thread": {
+        "status": "none",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-11-18T19:00:00+00:00",
+          "event": "proposed by ideas routine"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-18-09",
+      "proposed_at": "2026-11-18",
+      "stream": "meme",
+      "rubric": "meme",
+      "title": "План: знайти село предків. Знайти метрику. Знайти запис. Запис — про іншого Іваненка",
+      "summary": "Gru's Plan: перші два пункти плану тішать, а третій і четвертий несподівано руйнують весь задум — як у пошуках однофамільців.",
+      "why_now": "",
+      "sources": [],
+      "images": [],
+      "meme": {
+        "template": "gru",
+        "name": "Gru's Plan",
+        "blank": "https://api.memegen.link/images/gru.jpg",
+        "lines": 4
+      },
+      "status": "proposed",
+      "thread": {
+        "status": "none",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-11-18T19:00:00+00:00",
+          "event": "proposed by ideas routine"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-18-10",
+      "proposed_at": "2026-11-18",
+      "stream": "meme",
+      "rubric": "meme",
+      "title": "Платити за ДНК-тест — так; ходити до архіву — ні",
+      "summary": "Drake: схвалення швидкого й гламурного та відмова від кропіткого — іронія про генеалога, який воліє слину в пробірку, а не сканам метрик.",
+      "why_now": "",
+      "sources": [],
+      "images": [],
+      "meme": {
+        "template": "drake",
+        "name": "Drakeposting",
+        "blank": "https://api.memegen.link/images/drake.jpg",
+        "lines": 2
+      },
+      "status": "proposed",
+      "thread": {
+        "status": "none",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-11-18T19:00:00+00:00",
+          "event": "proposed by ideas routine"
+        }
+      ]
     }
   ]
 }
