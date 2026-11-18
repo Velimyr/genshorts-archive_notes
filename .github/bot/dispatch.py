@@ -31,6 +31,7 @@ import json
 import os
 import random
 import re
+import subprocess
 import sys
 import time
 import unicodedata
@@ -77,11 +78,17 @@ STALE_AFTER = timedelta(minutes=30)  # незавершена робота бе�
 ANALYTICS_EVERY = timedelta(hours=3)  # як часто оновлювати статистику Threads
 # Окремо заради статистики диспетчер не прокидається: збирає її під час інших запусків
 # (щонайменше запобіжні о 08:00 і 20:00 за Києвом).
-# Хвилини GitHub Actions округлюються вгору до цілої хвилини, тож після роботи диспетчер
-# ще чекає нові натискання до кінця вже оплаченої хвилини (крім часу на коміт і пуш).
+# Після роботи диспетчер ще чекає нові натискання й одразу на них відповідає — без нового
+# запуску Actions (репозиторій публічний, хвилини не лімітовані). Опитування черги дешеве лише
+# з воркером версії 2 (/pending?after=N без list у KV); зі старим воркером — до кінця хвилини.
 JOB_STARTED_AT = float(os.environ.get("JOB_STARTED_AT") or time.time())
 LINGER_MARGIN = 20  # секунд лишаємо на збереження стану й запуск задач після скрипта
-LINGER_POLL = 2.5  # як часто перевіряти чергу натискань, секунд
+LINGER_POLL = 1.5  # як часто перевіряти чергу натискань, секунд
+LINGER_IDLE = 180  # скільки чекати після останнього натискання, секунд
+LINGER_QUIET = 30  # запуск без натискань (публікація, нагадування) чекає недовго
+LINGER_MAX = 480  # найдовше чекання від старту job (timeout-minutes: 20 — із запасом на публікацію)
+LINGER_CHECK = 20  # як часто перевіряти новий коміт у main і час публікацій під час чекання
+LINGER_REANNOUNCE = 120  # ключ live у воркері живе 300 с — оновлюємо раніше
 MENU_VERSION = 4
 MENU_BUTTONS = {"💡 Ідеї": "/ideas", "✍️ Тексти": "/texts", "📣 Публікація": "/publish", "📋 Черга": "/queue",
                 "📰 TG-черга": "/tgqueue", "📤 Опубліковані": "/published", "📊 Дашборд": "/dashboard"}
@@ -245,7 +252,7 @@ def split_for_telegram(text: str, limit: int = TG_LIMIT) -> list[str]:
     return parts
 
 
-def queue_call(method: str, path: str, body=None):
+def queue_call(method: str, path: str, body=None, with_headers: bool = False):
     request = urllib.request.Request(
         f"{QUEUE_URL}{path}", method=method,
         data=json.dumps(body).encode() if body is not None else None,
@@ -253,7 +260,18 @@ def queue_call(method: str, path: str, body=None):
                  "User-Agent": "genshorts-dispatch"},
     )
     with urllib.request.urlopen(request, timeout=30) as response:
-        return json.load(response)
+        data = json.load(response)
+        return (data, response.headers) if with_headers else data
+
+
+def main_head() -> str:
+    """Поточний коміт main на GitHub (порожньо, якщо не вдалося дізнатися)."""
+    try:
+        out = subprocess.run(["git", "ls-remote", "origin", "refs/heads/main"], cwd=ROOT,
+                             capture_output=True, text=True, timeout=15).stdout.split()
+        return out[0] if out else ""
+    except (OSError, subprocess.SubprocessError):
+        return ""
 
 
 def fire_routine(name: str, note: str) -> str | None:
@@ -473,6 +491,9 @@ class Bot:
         self.fire = {}  # routine -> set(ids)
         self.acked = set()  # оновлення з черги воркера, які можна підтвердити після пушу
         self.announced = 0  # до якого моменту диспетчер пообіцяв воркеру опитувати чергу (/live)
+        self.announced_at = 0.0  # коли востаннє оновлював /live
+        self.last_click = 0.0  # коли востаннє обробив натискання (для чекання після нього)
+        self.cheap_poll = False  # воркер версії 2: опитування без list у KV
 
     # ------------------------------------------------------------ відправка
 
@@ -2252,40 +2273,67 @@ class Bot:
     def take_pending(self) -> int:
         """Забирає з черги воркера ще не оброблені натискання й одразу на них відповідає."""
         done = set(self.state.get("processed", []))
-        fresh = sorted((u for u in queue_call("GET", "/pending") if u["update_id"] not in done),
-                       key=lambda u: u["update_id"])
+        pending, headers = queue_call("GET", f"/pending?after={max(done or {0})}", with_headers=True)
+        self.cheap_poll = headers.get("X-Queue-Version") == "2"
+        fresh = sorted((u for u in pending if u["update_id"] not in done), key=lambda u: u["update_id"])
         self.acked.update(u["update_id"] for u in fresh)
         if fresh:
+            self.last_click = time.time()
             self.handle(fresh)
             self.publish_queued()  # «⚡ Опублікувати зараз»
             self.send_ready_threads()  # текст після точкової правки
             self.refresh_dashboard()  # редагує лише якщо зміст змінився
         return len(fresh)
 
-    def announce_live(self) -> float:
-        """Каже воркеру, до якого моменту диспетчер опитуватиме чергу (кінець уже оплаченої
-        хвилини мінус час на коміт і пуш), щоб нові натискання не створювали запусків.
-        0 — чекати вже ніколи."""
+    def linger_until(self) -> float:
+        """До якого моменту чекати натискань: з воркером версії 2 — LINGER_IDLE після останнього
+        натискання (LINGER_QUIET, якщо їх не було), не довше LINGER_MAX; інакше — до кінця хвилини."""
+        if self.cheap_poll:
+            last = self.last_click or JOB_STARTED_AT
+            idle = LINGER_IDLE if self.last_click else LINGER_QUIET
+            return min(last + idle, JOB_STARTED_AT + LINGER_MAX)
         elapsed = time.time() - JOB_STARTED_AT
-        stop = JOB_STARTED_AT + max(1, -(-(elapsed + LINGER_MARGIN) // 60)) * 60 - LINGER_MARGIN
+        return JOB_STARTED_AT + max(1, -(-(elapsed + LINGER_MARGIN) // 60)) * 60 - LINGER_MARGIN
+
+    def announce_live(self) -> float:
+        """Каже воркеру, до якого моменту диспетчер опитуватиме чергу, щоб нові натискання не
+        створювали запусків. Запис у KV лімітований, тож оновлює лише помітні зміни. 0 — вже не чекає."""
+        stop = self.linger_until()
         if stop - time.time() < LINGER_POLL + 1:
             return 0
-        if stop != self.announced:
+        if stop - self.announced > 30 or (stop > self.announced and self.announced - time.time() < 45) \
+                or stop < self.announced - 5 or time.time() - self.announced_at > LINGER_REANNOUNCE:
             queue_call("POST", "/live", {"until": int(stop)})
-            self.announced = stop
+            self.announced, self.announced_at = stop, time.time()
         return stop
 
     def linger(self) -> int:
-        """До кінця вже оплаченої хвилини Actions забирає нові натискання з черги й одразу
-        відповідає на них. Поки диспетчер чекає, воркер не створює нових запусків (/live).
-        Зупиняється, щойно треба запустити хмарну задачу: вона клонує репозиторій і має
-        побачити збережений стан."""
+        """Після роботи ще якийсь час забирає нові натискання з черги й одразу відповідає на них
+        (див. linger_until). Поки диспетчер чекає, воркер не створює нових запусків (/live).
+        Зупиняється, щойно треба запустити хмарну задачу (вона має побачити збережений стан)
+        або в main з'явився новий коміт (його обробить наступний запуск). Тим часом сам
+        публікує те, чому настав час, щоб запуск від воркера не чекав у черзі."""
         if not (QUEUE_URL and QUEUE_SECRET):
             return 0
         handled = 0
+        try:  # з якого коміту стартував запуск: новіший у main — привід завершитися
+            head = subprocess.run(["git", "rev-parse", "HEAD"], cwd=ROOT, capture_output=True,
+                                  text=True, timeout=15).stdout.strip()
+        except (OSError, subprocess.SubprocessError):
+            head = ""
+        checked = time.time()
         try:
+            handled += self.take_pending()  # спершу — що прийшло, поки йшла основна робота
             while not self.fire and self.announce_live():
-                handled += self.take_pending()  # спершу — що прийшло, поки йшла основна робота
+                handled += self.take_pending()
+                if time.time() - checked >= LINGER_CHECK:
+                    checked = time.time()
+                    current = main_head()
+                    if head and current and current != head:
+                        print("[linger] new commit in main — finishing")
+                        break
+                    self.publish_queued()
+                    self.slot_reminders()
                 if not self.fire:
                     time.sleep(LINGER_POLL)
         except (urllib.error.URLError, OSError, ValueError) as exc:

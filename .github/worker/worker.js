@@ -6,7 +6,7 @@
 // диспетчер попросив через /due (публікація, нагадування, ранкові питання),
 // і двічі на добу — запобіжний запуск.
 //
-// Поки диспетчер чекає нових натискань до кінця оплаченої хвилини Actions, він тримає
+// Поки диспетчер після роботи чекає нових натискань, він тримає
 // ключ "live" (до якого моменту опитує чергу). Тоді нове натискання лише кладеться в чергу,
 // без нового запуску. Якщо диспетчер міг його не побачити — cron запускає диспетчер.
 //
@@ -51,6 +51,10 @@ export default {
       if (typeof update.update_id !== "number") return new Response("ok");
       const key = `u:${String(update.update_id).padStart(12, "0")}`;
       await env.QUEUE.put(key, JSON.stringify(update), { expirationTtl: 7 * 86400 });
+      // Найбільший update_id у черзі: /pending?after=N без нового натискання не перелічує чергу
+      // (list у KV безкоштовно — лише 1000 на добу, а диспетчер опитує чергу кожні кілька секунд).
+      const last = Number((await env.QUEUE.get("last")) || 0);
+      if (update.update_id > last) await env.QUEUE.put("last", String(update.update_id));
       // Диспетчер ще щонайменше LIVE_MARGIN секунд опитуватиме чергу — він і обробить.
       const nowSec = Date.now() / 1000;
       const live = Number((await env.QUEUE.get("live")) || 0);
@@ -68,13 +72,19 @@ export default {
 
     if (request.method === "GET" && url.pathname === "/pending") {
       if (!authorized(request, env)) return new Response("forbidden", { status: 403 });
+      const headers = { ...JSON_HEADERS, "X-Queue-Version": "2" };  // диспетчер: опитування дешеве
+      const after = Number(url.searchParams.get("after") || 0);
+      const last = await env.QUEUE.get("last");
+      if (after > 0 && last !== null && Number(last) <= after) {
+        return new Response("[]", { headers });
+      }
       const list = await env.QUEUE.list({ prefix: "u:" });
       const updates = [];
       for (const { name } of list.keys) {
         const value = await env.QUEUE.get(name);
         if (value) updates.push(JSON.parse(value));
       }
-      return new Response(JSON.stringify(updates), { headers: JSON_HEADERS });
+      return new Response(JSON.stringify(updates), { headers });
     }
 
     if (request.method === "POST" && url.pathname === "/ack") {

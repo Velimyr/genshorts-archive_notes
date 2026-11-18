@@ -25,9 +25,9 @@ permissions:
 jobs:
   dispatch:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 20
     steps:
-      # Від цього моменту диспетчер рахує вже оплачену хвилину, до кінця якої чекає натискань.
+      # Від цього моменту диспетчер рахує, скільки ще може чекати нових натискань (LINGER_MAX).
       - name: Mark job start
         run: echo "JOB_STARTED_AT=$(date +%s)" >> "$GITHUB_ENV"
 
