@@ -14956,7 +14956,7 @@
         "https://uk.wikipedia.org/wiki/Українці_в_Канаді"
       ],
       "images": [],
-      "status": "proposed",
+      "status": "rejected",
       "thread": {
         "status": "none",
         "file": null
@@ -14982,6 +14982,10 @@
         {
           "at": "2026-11-18T17:40:22+00:00",
           "event": "bulk rejection undone (back to proposed)"
+        },
+        {
+          "at": "2026-11-18T17:50:42+00:00",
+          "event": "idea rejected in telegram"
         }
       ]
     },
