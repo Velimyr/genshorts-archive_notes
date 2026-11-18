@@ -6770,6 +6770,10 @@
         {
           "at": "2026-11-16T22:17:52+00:00",
           "event": "rescheduled by author (one-off, Tuesday → Wednesday): 2026-11-18T16:00:00+02:00"
+        },
+        {
+          "at": "2026-11-18T14:00:25+00:00",
+          "event": "telegram post published to test channel, main at 2026-11-18T17:33:00+02:00"
         }
       ],
       "photo_request": false,
