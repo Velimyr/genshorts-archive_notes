@@ -16562,7 +16562,7 @@
         "blank": "https://api.memegen.link/images/exit.jpg",
         "lines": 3
       },
-      "status": "proposed",
+      "status": "approved",
       "thread": {
         "status": "none",
         "file": null
@@ -16580,6 +16580,10 @@
         {
           "at": "2026-11-18T19:00:00+00:00",
           "event": "proposed by ideas routine"
+        },
+        {
+          "at": "2026-11-18T18:14:27+00:00",
+          "event": "idea approved in telegram"
         }
       ]
     },
@@ -16599,7 +16603,7 @@
         "blank": "https://api.memegen.link/images/fine.jpg",
         "lines": 2
       },
-      "status": "proposed",
+      "status": "approved",
       "thread": {
         "status": "none",
         "file": null
@@ -16617,6 +16621,10 @@
         {
           "at": "2026-11-18T19:00:00+00:00",
           "event": "proposed by ideas routine"
+        },
+        {
+          "at": "2026-11-18T18:14:28+00:00",
+          "event": "idea approved in telegram"
         }
       ]
     },
@@ -16636,7 +16644,7 @@
         "blank": "https://api.memegen.link/images/mordor.jpg",
         "lines": 2
       },
-      "status": "proposed",
+      "status": "approved",
       "thread": {
         "status": "none",
         "file": null
@@ -16654,6 +16662,10 @@
         {
           "at": "2026-11-18T19:00:00+00:00",
           "event": "proposed by ideas routine"
+        },
+        {
+          "at": "2026-11-18T18:14:29+00:00",
+          "event": "idea approved in telegram"
         }
       ]
     },
@@ -16673,7 +16685,7 @@
         "blank": "https://api.memegen.link/images/woman-cat.jpg",
         "lines": 2
       },
-      "status": "proposed",
+      "status": "approved",
       "thread": {
         "status": "none",
         "file": null
@@ -16691,6 +16703,10 @@
         {
           "at": "2026-11-18T19:00:00+00:00",
           "event": "proposed by ideas routine"
+        },
+        {
+          "at": "2026-11-18T18:14:29+00:00",
+          "event": "idea approved in telegram"
         }
       ]
     },
@@ -16710,7 +16726,7 @@
         "blank": "https://api.memegen.link/images/gru.jpg",
         "lines": 4
       },
-      "status": "proposed",
+      "status": "approved",
       "thread": {
         "status": "none",
         "file": null
@@ -16728,6 +16744,10 @@
         {
           "at": "2026-11-18T19:00:00+00:00",
           "event": "proposed by ideas routine"
+        },
+        {
+          "at": "2026-11-18T18:14:58+00:00",
+          "event": "idea approved in telegram"
         }
       ]
     },
@@ -16747,7 +16767,7 @@
         "blank": "https://api.memegen.link/images/drake.jpg",
         "lines": 2
       },
-      "status": "proposed",
+      "status": "approved",
       "thread": {
         "status": "none",
         "file": null
@@ -16765,6 +16785,10 @@
         {
           "at": "2026-11-18T19:00:00+00:00",
           "event": "proposed by ideas routine"
+        },
+        {
+          "at": "2026-11-18T18:14:58+00:00",
+          "event": "idea approved in telegram"
         }
       ]
     }
