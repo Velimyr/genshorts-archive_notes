@@ -618,9 +618,22 @@ class Bot:
         return text
 
     def send_idea(self, idea: dict) -> int:
-        return self.send(self.idea_card(idea),
-                         kb([("✅ Беру", f"idea:{idea['id']}:yes"), ("❌ Ні", f"idea:{idea['id']}:no")]),
-                         {"kind": "idea", "idea": idea["id"]})
+        """Картка ідеї з ✅/❌; для мему — разом з картинкою шаблону."""
+        card = self.idea_card(idea)
+        markup = kb([("✅ Беру", f"idea:{idea['id']}:yes"), ("❌ Ні", f"idea:{idea['id']}:no")])
+        record = {"kind": "idea", "idea": idea["id"]}
+        meme = idea.get("meme") or {}
+        photo = meme.get("blank") or (f"{MEMEGEN}/images/{meme['template']}.jpg" if meme.get("template") else "")
+        if self.category(idea) == "M" and photo:
+            caption = f"🖼 Шаблон: {meme.get('name') or meme.get('template')}\n\n{card}"
+            short = len(caption) <= 1024  # межа підпису до фото в Telegram
+            result = tg("sendPhoto", chat_id=CHAT_ID, photo=photo, caption=caption if short else caption[:1000] + "…",
+                        **({"reply_markup": markup} if short else {}))
+            if result:
+                self.state["messages"][str(result["message_id"])] = record
+                if short:
+                    return result["message_id"]
+        return self.send(card, markup, record)
 
     def menu_texts(self, quiet=False):
         self.topic_menu(
