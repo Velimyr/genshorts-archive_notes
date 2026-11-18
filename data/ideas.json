@@ -16921,7 +16921,7 @@
         "blank": "https://api.memegen.link/images/rollsafe.jpg",
         "lines": 2
       },
-      "status": "proposed",
+      "status": "approved",
       "thread": {
         "status": "none",
         "file": null
@@ -16939,6 +16939,10 @@
         {
           "at": "2026-11-18T19:30:00+00:00",
           "event": "proposed by ideas routine"
+        },
+        {
+          "at": "2026-11-18T18:41:00+00:00",
+          "event": "idea approved in telegram"
         }
       ]
     },
