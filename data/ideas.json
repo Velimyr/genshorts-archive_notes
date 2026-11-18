@@ -5737,7 +5737,7 @@
       ],
       "status": "approved",
       "thread": {
-        "status": "ready",
+        "status": "revise",
         "file": "data/texts/2026-10-11-01/thread.md"
       },
       "script": {
@@ -5748,7 +5748,13 @@
         "status": "none",
         "telegram_message_id": null
       },
-      "revisions": [],
+      "revisions": [
+        {
+          "kind": "thread",
+          "text": "Не треба пояснювати що таке фонд і кодекція дай більше інформації про назви фондів де є це справи",
+          "at": "2026-11-18T11:20:51+00:00"
+        }
+      ],
       "history": [
         {
           "at": "2026-10-11T06:34:46+00:00",
@@ -5765,6 +5771,10 @@
         {
           "at": "2026-11-18T11:09:26+00:00",
           "event": "thread ready"
+        },
+        {
+          "at": "2026-11-18T11:20:51+00:00",
+          "event": "thread revision requested"
         }
       ]
     },
