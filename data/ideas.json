@@ -3828,7 +3828,7 @@
         "https://uk.wikipedia.org/wiki/Магдебурзьке_право"
       ],
       "images": [],
-      "status": "proposed",
+      "status": "rejected",
       "thread": {
         "status": "none",
         "file": null
@@ -3858,6 +3858,10 @@
         {
           "at": "2026-11-18T17:40:22+00:00",
           "event": "bulk rejection undone (back to proposed)"
+        },
+        {
+          "at": "2026-11-18T17:53:13+00:00",
+          "event": "idea rejected in telegram"
         }
       ]
     },
