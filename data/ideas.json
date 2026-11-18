@@ -16830,6 +16830,376 @@
           "event": "idea approved in telegram"
         }
       ]
+    },
+    {
+      "id": "2026-11-18-11",
+      "proposed_at": "2026-11-18",
+      "stream": "meme",
+      "rubric": "meme",
+      "title": "Два генеалоги в чаті показують один на одного: «це ж мої предки!» — «ні, мої!»",
+      "summary": "Spider-Man Pointing: два дослідники з однаковим прізвищем на два села сперечаються, чия це гілка; обидві — невідомо чиї.",
+      "why_now": "",
+      "sources": [],
+      "images": [],
+      "meme": {
+        "template": "spiderman",
+        "name": "Spider-Man Pointing at Spider-Man",
+        "blank": "https://api.memegen.link/images/spiderman.jpg",
+        "lines": 2
+      },
+      "status": "proposed",
+      "thread": {
+        "status": "none",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-11-18T19:30:00+00:00",
+          "event": "proposed by ideas routine"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-18-12",
+      "proposed_at": "2026-11-18",
+      "stream": "meme",
+      "rubric": "meme",
+      "title": "Знайшов у метриці прадіда з першої спроби. Це був однофамілець",
+      "summary": "Success Kid: тріумф першої спроби, що за секунду перетворюється на розчарування — «вдача» виявилась не тим Іваненком.",
+      "why_now": "",
+      "sources": [],
+      "images": [],
+      "meme": {
+        "template": "success",
+        "name": "Success Kid",
+        "blank": "https://api.memegen.link/images/success.jpg",
+        "lines": 2
+      },
+      "status": "proposed",
+      "thread": {
+        "status": "none",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-11-18T19:30:00+00:00",
+          "event": "proposed by ideas routine"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-18-13",
+      "proposed_at": "2026-11-18",
+      "stream": "meme",
+      "rubric": "meme",
+      "title": "Не можуть сказати, що ви помилилися з прізвищем, якщо в метриці його написали п'ятьма способами",
+      "summary": "Roll Safe: «розумний» трюк-обхід; хитра логіка генеалога, у якого писар кожного разу писав по-різному.",
+      "why_now": "",
+      "sources": [],
+      "images": [],
+      "meme": {
+        "template": "rollsafe",
+        "name": "Roll Safe",
+        "blank": "https://api.memegen.link/images/rollsafe.jpg",
+        "lines": 2
+      },
+      "status": "proposed",
+      "thread": {
+        "status": "none",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-11-18T19:30:00+00:00",
+          "event": "proposed by ideas routine"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-18-14",
+      "proposed_at": "2026-11-18",
+      "stream": "meme",
+      "rubric": "meme",
+      "title": "Генеалог, який мав «бабусин архів», а бабуся виявилась єдиним джерелом",
+      "summary": "Sad Joe Biden: сумний погляд — «бабусина історія», яку ніде не підтвердити, а бабусі вже немає.",
+      "why_now": "",
+      "sources": [],
+      "images": [],
+      "meme": {
+        "template": "sad-biden",
+        "name": "Sad Joe Biden",
+        "blank": "https://api.memegen.link/images/sad-biden.jpg",
+        "lines": 2
+      },
+      "status": "proposed",
+      "thread": {
+        "status": "none",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-11-18T19:30:00+00:00",
+          "event": "proposed by ideas routine"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-18-15",
+      "proposed_at": "2026-11-18",
+      "stream": "meme",
+      "rubric": "meme",
+      "title": "Генеалог: «Це ж метрична книга?» — Сповідний розпис — «Це ж метрична книга?»",
+      "summary": "Is This a Pigeon: персонаж помилково називає одну річ іншою; тут генеалог-початківець плутає сповідний розпис, ревізьку казку й метрику.",
+      "why_now": "",
+      "sources": [],
+      "images": [],
+      "meme": {
+        "template": "pigeon",
+        "name": "Is This a Pigeon?",
+        "blank": "https://api.memegen.link/images/pigeon.jpg",
+        "lines": 3
+      },
+      "status": "proposed",
+      "thread": {
+        "status": "none",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-11-18T19:30:00+00:00",
+          "event": "proposed by ideas routine"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-18-16",
+      "proposed_at": "2026-11-18",
+      "stream": "meme",
+      "rubric": "meme",
+      "title": "Ви отримуєте скан! Ви отримуєте скан! Усі скани — на 5000 мб і без OCR",
+      "summary": "Oprah You Get a Car: роздача «подарунків» — архів видає оцифровані справи без жодного пошуку, і кожен отримує купу нечитабельного рукопису.",
+      "why_now": "",
+      "sources": [],
+      "images": [],
+      "meme": {
+        "template": "oprah",
+        "name": "Oprah You Get a Car",
+        "blank": "https://api.memegen.link/images/oprah.jpg",
+        "lines": 2
+      },
+      "status": "proposed",
+      "thread": {
+        "status": "none",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-11-18T19:30:00+00:00",
+          "event": "proposed by ideas routine"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-18-17",
+      "proposed_at": "2026-11-18",
+      "stream": "meme",
+      "rubric": "meme",
+      "title": "Ви кажете, що розшифруєте почерк писаря за вечір — у вас буде поганий вечір",
+      "summary": "Ski Instructor: пересторога новачкові; тут — про самовпевнене «сам прочитаю» у скорописі XVIII століття.",
+      "why_now": "",
+      "sources": [],
+      "images": [],
+      "meme": {
+        "template": "ski",
+        "name": "Super Cool Ski Instructor",
+        "blank": "https://api.memegen.link/images/ski.jpg",
+        "lines": 2
+      },
+      "status": "proposed",
+      "thread": {
+        "status": "none",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-11-18T19:30:00+00:00",
+          "event": "proposed by ideas routine"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-18-18",
+      "proposed_at": "2026-11-18",
+      "stream": "meme",
+      "rubric": "meme",
+      "title": "О, ти знайшов три записи в метриці? Ти, мабуть, уже все знаєш про свій рід",
+      "summary": "Condescending Wonka: єхидне «ти мабуть експерт» після першого успіху; ідеально для новачка, що вже складає роди до X коліна.",
+      "why_now": "",
+      "sources": [],
+      "images": [],
+      "meme": {
+        "template": "wonka",
+        "name": "Condescending Wonka",
+        "blank": "https://api.memegen.link/images/wonka.jpg",
+        "lines": 2
+      },
+      "status": "proposed",
+      "thread": {
+        "status": "none",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-11-18T19:30:00+00:00",
+          "event": "proposed by ideas routine"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-18-19",
+      "proposed_at": "2026-11-18",
+      "stream": "meme",
+      "rubric": "meme",
+      "title": "А давайте всі родинні легенди візьмемо й покладемо в графу «джерела»",
+      "summary": "Push it somewhere else Patrick: «а давайте покладемо це туди, де воно не належить» — у генеалогічному дереві легенди без документів у графі «джерело».",
+      "why_now": "",
+      "sources": [],
+      "images": [],
+      "meme": {
+        "template": "patrick",
+        "name": "Push it somewhere else Patrick",
+        "blank": "https://api.memegen.link/images/patrick.jpg",
+        "lines": 2
+      },
+      "status": "proposed",
+      "thread": {
+        "status": "none",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-11-18T19:30:00+00:00",
+          "event": "proposed by ideas routine"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-18-20",
+      "proposed_at": "2026-11-18",
+      "stream": "meme",
+      "rubric": "meme",
+      "title": "Генеалог кладе чашку чаю на стіл, бо зараз прочитає ще одну метрику до півночі",
+      "summary": "Minor Mistake Marvin: маленька помилка з великими наслідками; одна «ще одна метрика» — і ніч пропала.",
+      "why_now": "",
+      "sources": [],
+      "images": [],
+      "meme": {
+        "template": "mmm",
+        "name": "Minor Mistake Marvin",
+        "blank": "https://api.memegen.link/images/mmm.jpg",
+        "lines": 2
+      },
+      "status": "proposed",
+      "thread": {
+        "status": "none",
+        "file": null
+      },
+      "script": {
+        "status": "none",
+        "file": null
+      },
+      "video": {
+        "status": "none",
+        "telegram_message_id": null
+      },
+      "revisions": [],
+      "history": [
+        {
+          "at": "2026-11-18T19:30:00+00:00",
+          "event": "proposed by ideas routine"
+        }
+      ]
     }
   ]
 }
