@@ -14636,9 +14636,21 @@
       ],
       "images": [
         {
-          "url": "https://upload.wikimedia.org/wikipedia/commons/8/84/Genetic_heterogeneity_in_Europe.png",
-          "page": "https://commons.wikimedia.org/wiki/File:Genetic_heterogeneity_in_Europe.png",
-          "credit": "Michaila vnuk / Wikimedia Commons, CC BY-SA 4.0",
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/12/Y-DNA_inheritance.svg/1280px-Y-DNA_inheritance.svg.png",
+          "page": "https://commons.wikimedia.org/wiki/File:Y-DNA_inheritance.svg",
+          "credit": "Jordi picart / Wikimedia Commons, CC BY-SA 4.0",
+          "license": "CC BY-SA 4.0"
+        },
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/f/f9/Human_male_karyotpe_high_resolution_-_Chromosome_Y.png",
+          "page": "https://commons.wikimedia.org/wiki/File:Human_male_karyotpe_high_resolution_-_Chromosome_Y.png",
+          "credit": "National Human Genome Research Institute / Wikimedia Commons, Public domain",
+          "license": "Public domain"
+        },
+        {
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/82/Y-DNA_tree.svg/1280px-Y-DNA_tree.svg.png",
+          "page": "https://commons.wikimedia.org/wiki/File:Y-DNA_tree.svg",
+          "credit": "Immanuelle / Wikimedia Commons, CC BY-SA 4.0",
           "license": "CC BY-SA 4.0"
         }
       ],
@@ -14681,12 +14693,16 @@
         {
           "at": "2026-11-18T10:43:27+00:00",
           "event": "photo search requested in telegram (more)"
+        },
+        {
+          "at": "2026-11-18T10:50:00+00:00",
+          "event": "photos found"
         }
       ],
       "images_excluded": [
         "https://upload.wikimedia.org/wikipedia/commons/8/84/Genetic_heterogeneity_in_Europe.png"
       ],
-      "photo_request": true,
+      "photo_request": false,
       "photo_error": "",
       "photo_keywords": "",
       "photo_requested_at": "2026-11-18T10:43:27+00:00"
