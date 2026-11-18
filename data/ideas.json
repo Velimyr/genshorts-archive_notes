@@ -14644,8 +14644,9 @@
       ],
       "status": "approved",
       "thread": {
-        "status": "ready",
-        "file": "data/texts/2026-11-10-08/thread.md"
+        "status": "approved",
+        "file": "data/texts/2026-11-10-08/thread.md",
+        "approved_sha": "d292035593af9013"
       },
       "script": {
         "status": "none",
@@ -14672,8 +14673,23 @@
         {
           "at": "2026-11-18T10:30:00+00:00",
           "event": "thread ready"
+        },
+        {
+          "at": "2026-11-18T10:42:56+00:00",
+          "event": "thread text approved in telegram"
+        },
+        {
+          "at": "2026-11-18T10:43:27+00:00",
+          "event": "photo search requested in telegram (more)"
         }
-      ]
+      ],
+      "images_excluded": [
+        "https://upload.wikimedia.org/wikipedia/commons/8/84/Genetic_heterogeneity_in_Europe.png"
+      ],
+      "photo_request": true,
+      "photo_error": "",
+      "photo_keywords": "",
+      "photo_requested_at": "2026-11-18T10:43:27+00:00"
     },
     {
       "id": "2026-11-10-09",
