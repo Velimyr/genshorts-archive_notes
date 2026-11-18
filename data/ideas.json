@@ -16847,7 +16847,7 @@
         "blank": "https://api.memegen.link/images/spiderman.jpg",
         "lines": 2
       },
-      "status": "proposed",
+      "status": "rejected",
       "thread": {
         "status": "none",
         "file": null
@@ -16865,6 +16865,10 @@
         {
           "at": "2026-11-18T19:30:00+00:00",
           "event": "proposed by ideas routine"
+        },
+        {
+          "at": "2026-11-18T18:42:28+00:00",
+          "event": "idea rejected in telegram"
         }
       ]
     },
@@ -16884,7 +16888,7 @@
         "blank": "https://api.memegen.link/images/success.jpg",
         "lines": 2
       },
-      "status": "proposed",
+      "status": "rejected",
       "thread": {
         "status": "none",
         "file": null
@@ -16902,6 +16906,10 @@
         {
           "at": "2026-11-18T19:30:00+00:00",
           "event": "proposed by ideas routine"
+        },
+        {
+          "at": "2026-11-18T18:42:27+00:00",
+          "event": "idea rejected in telegram"
         }
       ]
     },
@@ -16962,7 +16970,7 @@
         "blank": "https://api.memegen.link/images/sad-biden.jpg",
         "lines": 2
       },
-      "status": "proposed",
+      "status": "rejected",
       "thread": {
         "status": "none",
         "file": null
@@ -16980,6 +16988,10 @@
         {
           "at": "2026-11-18T19:30:00+00:00",
           "event": "proposed by ideas routine"
+        },
+        {
+          "at": "2026-11-18T18:42:27+00:00",
+          "event": "idea rejected in telegram"
         }
       ]
     },
@@ -16999,7 +17011,7 @@
         "blank": "https://api.memegen.link/images/pigeon.jpg",
         "lines": 3
       },
-      "status": "proposed",
+      "status": "rejected",
       "thread": {
         "status": "none",
         "file": null
@@ -17017,6 +17029,10 @@
         {
           "at": "2026-11-18T19:30:00+00:00",
           "event": "proposed by ideas routine"
+        },
+        {
+          "at": "2026-11-18T18:42:26+00:00",
+          "event": "idea rejected in telegram"
         }
       ]
     },
@@ -17036,7 +17052,7 @@
         "blank": "https://api.memegen.link/images/oprah.jpg",
         "lines": 2
       },
-      "status": "proposed",
+      "status": "rejected",
       "thread": {
         "status": "none",
         "file": null
@@ -17054,6 +17070,10 @@
         {
           "at": "2026-11-18T19:30:00+00:00",
           "event": "proposed by ideas routine"
+        },
+        {
+          "at": "2026-11-18T18:42:25+00:00",
+          "event": "idea rejected in telegram"
         }
       ]
     },
@@ -17073,7 +17093,7 @@
         "blank": "https://api.memegen.link/images/ski.jpg",
         "lines": 2
       },
-      "status": "proposed",
+      "status": "rejected",
       "thread": {
         "status": "none",
         "file": null
@@ -17091,6 +17111,10 @@
         {
           "at": "2026-11-18T19:30:00+00:00",
           "event": "proposed by ideas routine"
+        },
+        {
+          "at": "2026-11-18T18:41:54+00:00",
+          "event": "idea rejected in telegram"
         }
       ]
     },
@@ -17110,7 +17134,7 @@
         "blank": "https://api.memegen.link/images/wonka.jpg",
         "lines": 2
       },
-      "status": "proposed",
+      "status": "approved",
       "thread": {
         "status": "none",
         "file": null
@@ -17128,6 +17152,10 @@
         {
           "at": "2026-11-18T19:30:00+00:00",
           "event": "proposed by ideas routine"
+        },
+        {
+          "at": "2026-11-18T18:41:55+00:00",
+          "event": "idea approved in telegram"
         }
       ]
     },
@@ -17147,7 +17175,7 @@
         "blank": "https://api.memegen.link/images/patrick.jpg",
         "lines": 2
       },
-      "status": "proposed",
+      "status": "approved",
       "thread": {
         "status": "none",
         "file": null
@@ -17165,6 +17193,10 @@
         {
           "at": "2026-11-18T19:30:00+00:00",
           "event": "proposed by ideas routine"
+        },
+        {
+          "at": "2026-11-18T18:41:56+00:00",
+          "event": "idea approved in telegram"
         }
       ]
     },
@@ -17184,7 +17216,7 @@
         "blank": "https://api.memegen.link/images/mmm.jpg",
         "lines": 2
       },
-      "status": "proposed",
+      "status": "rejected",
       "thread": {
         "status": "none",
         "file": null
@@ -17202,6 +17234,10 @@
         {
           "at": "2026-11-18T19:30:00+00:00",
           "event": "proposed by ideas routine"
+        },
+        {
+          "at": "2026-11-18T18:42:54+00:00",
+          "event": "idea rejected in telegram"
         }
       ]
     }
