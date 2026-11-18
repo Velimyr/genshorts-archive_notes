@@ -670,8 +670,8 @@ class Bot:
             rows = [[("👀 Показати тред", f"show:{iid}")]]
         elif (thread == "approved" or (thread == "queued" and item.get("publish_at") == "pending")) \
                 and self.category(idea) == "P":
-            lines.append("✅ Провокація готова. Публікується лише вручну, без теми.")
-            rows = [[("⚡ Опублікувати", f"pub:{iid}")]]
+            lines.append("✅ Провокація готова, час публікації не обрано. Виходить без теми й без фото.")
+            rows = [[("🕒 Запланувати чи опублікувати", f"pub:{iid}")]]
         elif thread == "approved" or (thread == "queued" and item.get("publish_at") == "pending"):
             lines.append("✅ Тред готовий, час публікації не обрано.")
             rows = [[("🕒 Запланувати", f"pub:{iid}")]]
@@ -682,7 +682,7 @@ class Bot:
         elif thread == "scheduled" and item.get("publish_at") not in (None, "pending"):
             lines.append(f"🕒 Заплановано на {fmt_slot(parse_time(item['publish_at']))}.")
             rows = [[("⬆️ Раніше", f"move:{iid}:up"), ("⬇️ Пізніше", f"move:{iid}:down")],
-                    [("🖼 Фото й тема", f"pub:{iid}")],
+                    [("🖼 Фото й тема", f"pub:{iid}")] if self.category(idea) != "P" else [],
                     [("⚡ Опублікувати зараз", f"when:{iid}:now")],
                     [("🕒 Інший час", f"askwhen:{iid}"), ("↩️ Зняти з розкладу", f"unq:{iid}")]]
         elif thread == "posted":
@@ -886,10 +886,12 @@ class Bot:
         if self.category(idea) == "P":
             self.send_text_parts(idea, body,
                       f"{stream_label(idea.get('stream'))} · фінальна перевірка — «{idea['title']}»"
-                      "\n\nℹ️ Текст — у повідомленні вище; блок «Джерела» в Threads не публікується. Провокація виходить без теми й без фото, "
-                      "лише вручну — коли натиснете кнопку."
+                      "\n\nℹ️ Текст — у повідомленні вище; блок «Джерела» в Threads не публікується. Провокація виходить без теми й без фото."
+                      "\n🕒 «Запланувати» — на найближчу вільну рекомендовану годину, за тими самими правилами, що й треди "
+                      "(одна публікація на день)."
                       "\n\n" + edit_hint("ширші зміни — у повідомленні з текстом і кнопкою «✅ Готово»."),
-                      kb([("⚡ Опублікувати зараз", f"confirm:{idea['id']}:{digest}:0")], [("❌ Не зараз", "cancel")]),
+                      kb([("🕒 Запланувати", f"confirm:{idea['id']}:{digest}:0")],
+                         [("⚡ Опублікувати зараз", f"confirm:{idea['id']}:{digest}:now")], [("❌ Не зараз", "cancel")]),
                       {"kind": "preview", "idea": idea["id"], "sha": digest, "text": body, "topic": ""})
             return
         topic_line = (f"🏷 Тема поста: {topic}" if topic else "🏷 Тема поста не обрана — оберіть кнопкою нижче.")
@@ -1000,19 +1002,19 @@ class Bot:
 
     @staticmethod
     def category(idea: dict | None) -> str:
-        """«S» — серйозний тред, «F» — жартівливий, «P» — провокація (лише вручну), «T» — Telegram-допис."""
+        """«S» — серйозний тред, «F» — жартівливий, «P» — провокація, «T» — Telegram-допис."""
         stream = (idea or {}).get("stream")
         return {"tg": "T", "fun": "F", "provoke": "P"}.get(stream, "S")
 
     def bot_publications(self, exclude: str | None = None, channel: str = "threads") -> list[tuple[datetime, str]]:
         """Заплановані й уже опубліковані публікації бота: (момент, категорія).
-        channel="threads" — треди (S/F), channel="tg" — Telegram-дописи (T)."""
+        channel="threads" — треди (S/F/P), channel="tg" — Telegram-дописи (T)."""
         result = []
         for idea_id, item in self.state["approved_threads"].items():
             if idea_id == exclude or item.get("failed"):
                 continue
             cat = self.category(self.ideas.get(idea_id))
-            if cat == "P" or (cat == "T") != (channel == "tg"):  # провокації — поза розкладом
+            if (cat == "T") != (channel == "tg"):
                 continue
             at = item.get("posted_at") if item.get("posted") else item.get("publish_at")
             if at and at != "pending":
@@ -1210,15 +1212,17 @@ class Bot:
                                                                     if image else None),
                                                           "approved_at": now(), "posted": False,
                                                           "publish_at": "pending"}
-            if self.category(idea) == "P":  # лише вручну: публікується одразу, без теми й фото
-                self.state["approved_threads"][idea["id"]].update(topic="", image=None, publish_at=now())
-                idea["thread"]["status"] = "scheduled"
-                history(idea, "provocation published manually")
-                self.mark_publishing(self.state["approved_threads"][idea["id"]], mid)
-                return
+            if self.category(idea) == "P":  # провокація — завжди без теми й фото
+                self.state["approved_threads"][idea["id"]].update(topic="", image=None)
+                if len(parts) > 3 and parts[3] == "now":
+                    self.state["approved_threads"][idea["id"]]["publish_at"] = now()
+                    idea["thread"]["status"] = "scheduled"
+                    history(idea, "provocation published manually")
+                    self.mark_publishing(self.state["approved_threads"][idea["id"]], mid)
+                    return
             idea["thread"]["status"] = "queued"
             history(idea, "thread approved for Threads, awaiting time")
-            self.close_buttons(mid, "✅ Текст і фото обрано")
+            self.close_buttons(mid, "✅ Текст обрано" if self.category(idea) == "P" else "✅ Текст і фото обрано")
             if keep_time:
                 self.state["approved_threads"][idea["id"]]["publish_at"] = keep_time
                 idea["thread"]["status"] = "scheduled"
@@ -1738,7 +1742,7 @@ class Bot:
             day_cats = [c for moment, c in self.bot_publications() if moment.astimezone(KYIV).date() == slot.date()]
             serious = "" if "S" in day_cats else " Серйозного треду на сьогодні теж немає."
             if self.grouped(lambda i: i.get("thread", {}).get("status") == "approved"
-                            and i.get("stream") not in ("tg", "provoke")):
+                            and i.get("stream") != "tg"):
                 self.send(f"⏰ {slot:%H:%M} — рекомендований час публікації, але нічого не заплановано.{serious}",
                           kb([("📣 Обрати тред", "go:publish")]), {"kind": "nav"})
             else:
@@ -1959,7 +1963,7 @@ class Bot:
                 moment, mark = parse_time(at), "❗"
             else:
                 at = item.get("main_at") if item.get("test_id") else item.get("publish_at")
-                if not at or at == "pending" or cat == "P":
+                if not at or at == "pending":
                     continue
                 moment, mark = parse_time(at), "🧪" if item.get("test_id") else "🕒"
             local = moment.astimezone(KYIV)
