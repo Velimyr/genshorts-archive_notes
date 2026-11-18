@@ -21,7 +21,7 @@
 5. Дашборд: закріплене rich-повідомлення (конвеєр, розклад на 7 днів, стан системи);
    редагується наприкінці запуску, лише якщо зміст змінився (або раз на 3 години).
 
-Команди: /ideas, /texts, /publish, /queue, /tgqueue, /published, /dashboard.
+Команди: /ideas, /proposed, /texts, /publish, /queue, /tgqueue, /published, /dashboard.
 Режим `--fire` (окремий крок workflow після пушу) запускає хмарні задачі, щоб вони
 бачили вже збережені в репозиторії запити.
 """
@@ -513,7 +513,63 @@ class Bot:
 
     def ask_ideas(self):
         rows = [[(stream_label(s), f"ideas:{s}")] for s in STREAMS] + [[("Не сьогодні", "ideas:skip")]]
+        pending = len(self.proposed())
+        if pending:
+            rows.insert(0, [(f"💡 Нерозглянуті ідеї ({pending})", "ideas:review")])
         self.send("☀️ Готовий до нових ідей? Оберіть потік:", kb(*rows), {"kind": "ask"})
+
+    # ------------------------------------------------------------ нерозглянуті ідеї
+
+    def proposed(self, stream: str | None = None) -> list[dict]:
+        """Ідеї, які автор ще не погодив і не відхилив (найстаріші спершу)."""
+        return sorted((i for i in self.ideas.values() if i.get("status") == "proposed" and not i.get("test")
+                       and (stream is None or (i.get("stream") or "") == stream)),
+                      key=lambda i: (i.get("proposed_at", ""), i["id"]))
+
+    def show_proposed(self, stream: str | None = None) -> None:
+        """Без потоку — зведення за потоками; з потоком — список тем із кнопками перегляду."""
+        if stream is None:
+            groups = self.grouped(lambda i: i.get("status") == "proposed")
+            if not groups:
+                self.send("💡 Нерозглянутих ідей немає. Нові: /ideas")
+                return
+            total = sum(len(ideas) for _, ideas in groups)
+            rows = [[(f"{stream_label(s)} ({len(ideas)})", f"prop:{s or '-'}")] for s, ideas in groups]
+            self.send(f"💡 Нерозглянуті ідеї: {total}. Оберіть потік, щоб переглянути, погодити чи відхилити:",
+                      kb(*rows), {"kind": "menu"})
+            return
+        ideas = self.proposed("" if stream == "-" else stream)
+        if not ideas:
+            self.send(f"💡 У потоці «{stream_label(stream)}» нерозглянутих ідей немає.")
+            return
+        lines = [f"💡 Нерозглянуті · {stream_label(stream)}: {len(ideas)}\nНатисніть номер — покажу ідею з кнопками ✅/❌."]
+        buttons = []
+        for n, idea in enumerate(ideas, 1):
+            lines.append(f"{n}. {idea['title']} · {idea.get('proposed_at', '')}")
+            buttons.append((str(n), f"propshow:{idea['id']}"))
+        rows = chunks(buttons, 5) + [[(f"❌ Відхилити всі {len(ideas)}", f"proprej:{stream}")]]
+        self.send("\n".join(lines), kb(*rows), {"kind": "menu"})
+
+    def idea_card(self, idea: dict) -> str:
+        sources = "\n".join(f"• {s}" for s in idea.get("sources", [])[:4])
+        rubrics = {r.get("id"): r for r in load_json(RUBRICS_FILE, {"rubrics": []}).get("rubrics", [])}
+        rubric = rubrics.get(idea.get("rubric"))
+        used_before = any(i.get("rubric") == idea.get("rubric") and i.get("proposed_at", "") < idea.get("proposed_at", "")
+                          for i in self.ideas.values())
+        rubric_line = (f"\n🏷 {rubric.get('name', idea['rubric'])}"
+                       + (" — нова рубрика: " + rubric.get("about", "") if rubric.get("added_by") == "routine"
+                          and not used_before else "")) if rubric else ""
+        text = f"{stream_label(idea.get('stream'))}{rubric_line}\n💡 {idea['title']}\n\n{idea.get('summary', '')}"
+        if idea.get("why_now"):
+            text += f"\n\nЧому зараз: {idea['why_now']}"
+        if sources:
+            text += f"\n\nДжерела:\n{sources}"
+        return text
+
+    def send_idea(self, idea: dict) -> int:
+        return self.send(self.idea_card(idea),
+                         kb([("✅ Беру", f"idea:{idea['id']}:yes"), ("❌ Ні", f"idea:{idea['id']}:no")]),
+                         {"kind": "idea", "idea": idea["id"]})
 
     def menu_texts(self, quiet=False):
         self.topic_menu(
@@ -1055,7 +1111,30 @@ class Bot:
         parts = data.split(":")
         action = parts[0]
 
-        if action == "ideas":
+        if action == "ideas" and parts[1] == "review":
+            self.close_buttons(mid, "💡 Нерозглянуті ідеї")
+            self.show_proposed()
+        elif action == "prop":
+            self.show_proposed(parts[1])
+        elif action == "propshow":
+            idea = self.ideas.get(parts[1])
+            if idea and idea.get("status") == "proposed":
+                self.send_idea(idea)
+            elif idea:
+                self.send(f"«{idea['title']}» вже розглянуто.")
+        elif action == "proprej":
+            count = len(self.proposed("" if parts[1] == "-" else parts[1]))
+            if count:
+                self.send(f"❌ Відхилити всі нерозглянуті ідеї потоку «{stream_label(parts[1])}» ({count})?\n"
+                          "Вони лишаться в історії й не пропонуватимуться знову.",
+                          kb([("Так, відхилити", f"proprejyes:{parts[1]}"), ("Ні", "cancel")]), {"kind": "confirm"})
+        elif action == "proprejyes":
+            ideas = self.proposed("" if parts[1] == "-" else parts[1])
+            for idea in ideas:
+                idea["status"] = "rejected"
+                history(idea, "idea rejected in telegram (bulk)")
+            self.close_buttons(mid, f"❌ Відхилено: {len(ideas)}")
+        elif action == "ideas":
             if parts[1] in STREAMS:
                 self.close_buttons(mid, f"✅ {stream_label(parts[1])}")
                 self.request_ideas(parts[1])
@@ -1069,6 +1148,8 @@ class Bot:
                 self.refresh_dashboard(force=True)
             elif parts[1] == "publish":
                 self.menu_publish()
+            elif parts[1] == "proposed":
+                self.show_proposed()
             elif parts[1] in ("queue", "tgqueue"):
                 self.show_queue("tg" if parts[1] == "tgqueue" else "threads")
         elif action == "idea":
@@ -1076,7 +1157,8 @@ class Bot:
             if idea and idea.get("status") == "proposed":
                 idea["status"] = "approved" if parts[2] == "yes" else "rejected"
                 history(idea, f"idea {idea['status']} in telegram")
-            self.close_buttons(mid, "✅ Погоджено" if parts[2] == "yes" else "❌ Відхилено")
+            status = (idea or {}).get("status")
+            self.close_buttons(mid, {"approved": "✅ Погоджено", "rejected": "❌ Відхилено"}.get(status, "Тему вже розглянуто"))
         elif action == "write":
             idea = self.ideas.get(parts[1])
             if idea and idea.get("thread", {}).get("status", "none") == "none":
@@ -1297,6 +1379,8 @@ class Bot:
             return self.show_queue("tg")
         if command == "/published":
             return self.show_published()
+        if command == "/proposed":
+            return self.show_proposed()
         if command == "/dashboard":
             return self.refresh_dashboard(repost=True)
         if command in ("/start", "/help"):
@@ -1379,23 +1463,8 @@ class Bot:
         if not fresh:
             return
         self.send(f"💡 Нові ідеї: {len(fresh)}. Позначте ✅ ті, що подобаються.")
-        rubrics = {r.get("id"): r for r in load_json(RUBRICS_FILE, {"rubrics": []}).get("rubrics", [])}
         for idea in fresh:
-            sources = "\n".join(f"• {s}" for s in idea.get("sources", [])[:4])
-            rubric = rubrics.get(idea.get("rubric"))
-            used_before = any(i.get("rubric") == idea.get("rubric") and i.get("proposed_at", "") < idea.get("proposed_at", "")
-                              for i in self.ideas.values())
-            rubric_line = (f"\n🏷 {rubric.get('name', idea['rubric'])}"
-                           + (" — нова рубрика: " + rubric.get("about", "") if rubric.get("added_by") == "routine"
-                              and not used_before else "")) if rubric else ""
-            text = f"{stream_label(idea.get('stream'))}{rubric_line}\n💡 {idea['title']}\n\n{idea.get('summary', '')}"
-            if idea.get("why_now"):
-                text += f"\n\nЧому зараз: {idea['why_now']}"
-            if sources:
-                text += f"\n\nДжерела:\n{sources}"
-            mid = self.send(text, kb([("✅ Беру", f"idea:{idea['id']}:yes"), ("❌ Ні", f"idea:{idea['id']}:no")]),
-                            {"kind": "idea", "idea": idea["id"]})
-            self.state["sent"][f"idea:{idea['id']}"] = mid
+            self.state["sent"][f"idea:{idea['id']}"] = self.send_idea(idea)
         self.send("Коли оберете — переходьте до текстів.", kb([("➡️ До текстів", "go:texts")]), {"kind": "nav"})
 
     def send_ready_threads(self):
@@ -1992,7 +2061,10 @@ class Bot:
                     '<tg-button type="callback_data" data="dash:refresh">🔄 Оновити</tg-button>'
                     '<tg-button type="callback_data" data="dash:publish">📣 Публікація</tg-button>'
                     '</tg-button-row>'
-                    '<tg-button-row align="center">'
+                    + (f'<tg-button-row align="center"><tg-button type="callback_data" data="dash:proposed">'
+                       f'💡 Нерозглянуті ідеї ({len(self.proposed())})</tg-button></tg-button-row>'
+                       if self.proposed() else '')
+                    + '<tg-button-row align="center">'
                     '<tg-button type="callback_data" data="dash:queue">📋 Черга</tg-button>'
                     '<tg-button type="callback_data" data="dash:tgqueue">📰 TG-черга</tg-button>'
                     '</tg-button-row>')
