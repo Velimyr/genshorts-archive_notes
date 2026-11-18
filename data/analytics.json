@@ -4613,7 +4613,7 @@
         "reposts": 1,
         "quotes": 0,
         "shares": 0,
-        "at": "2026-11-18T05:00:27+00:00"
+        "at": "2026-11-18T08:06:39+00:00"
       },
       "h24": {
         "views": 259,
@@ -4638,7 +4638,8 @@
         "reposts": 1,
         "quotes": 0,
         "shares": 0
-      }
+      },
+      "final": true
     },
     "17993500488110253": {
       "timestamp": "2026-11-10T21:37:38+0000",
@@ -4654,7 +4655,7 @@
         "reposts": 0,
         "quotes": 0,
         "shares": 0,
-        "at": "2026-11-18T05:00:27+00:00"
+        "at": "2026-11-18T08:06:38+00:00"
       },
       "h24": {
         "views": 222,
@@ -4701,7 +4702,7 @@
         "reposts": 0,
         "quotes": 0,
         "shares": 1,
-        "at": "2026-11-18T05:00:26+00:00"
+        "at": "2026-11-18T08:06:38+00:00"
       },
       "h24": {
         "views": 335,
@@ -4734,7 +4735,7 @@
         "reposts": 0,
         "quotes": 0,
         "shares": 0,
-        "at": "2026-11-18T05:00:26+00:00"
+        "at": "2026-11-18T08:06:38+00:00"
       },
       "h24": {
         "views": 27,
@@ -4773,7 +4774,7 @@
         "reposts": 0,
         "quotes": 0,
         "shares": 0,
-        "at": "2026-11-18T05:00:26+00:00"
+        "at": "2026-11-18T08:06:38+00:00"
       },
       "h24": {
         "views": 217,
@@ -4812,7 +4813,7 @@
         "reposts": 0,
         "quotes": 0,
         "shares": 0,
-        "at": "2026-11-18T05:00:26+00:00"
+        "at": "2026-11-18T08:06:37+00:00"
       },
       "h24": {
         "views": 109,
@@ -4845,7 +4846,7 @@
         "reposts": 0,
         "quotes": 0,
         "shares": 0,
-        "at": "2026-11-18T05:00:25+00:00"
+        "at": "2026-11-18T08:06:37+00:00"
       },
       "h24": {
         "views": 60,
@@ -4878,13 +4879,13 @@
       "has_photo": true,
       "scheduled": true,
       "latest": {
-        "views": 247,
+        "views": 249,
         "likes": 11,
         "replies": 20,
         "reposts": 0,
         "quotes": 0,
         "shares": 0,
-        "at": "2026-11-18T05:00:25+00:00"
+        "at": "2026-11-18T08:06:37+00:00"
       },
       "h24": {
         "views": 188,
@@ -4917,13 +4918,13 @@
       "has_photo": false,
       "scheduled": true,
       "latest": {
-        "views": 195,
+        "views": 196,
         "likes": 8,
         "replies": 7,
         "reposts": 0,
         "quotes": 0,
         "shares": 0,
-        "at": "2026-11-18T05:00:25+00:00"
+        "at": "2026-11-18T08:06:37+00:00"
       },
       "h24": {
         "views": 164,
@@ -4942,13 +4943,13 @@
       "origin": "manual",
       "has_photo": false,
       "latest": {
-        "views": 189,
+        "views": 193,
         "likes": 4,
         "replies": 4,
         "reposts": 0,
         "quotes": 1,
         "shares": 0,
-        "at": "2026-11-18T05:00:24+00:00"
+        "at": "2026-11-18T08:06:36+00:00"
       },
       "h24": {
         "views": 177,
@@ -4973,13 +4974,13 @@
       "has_photo": false,
       "scheduled": true,
       "latest": {
-        "views": 416,
+        "views": 417,
         "likes": 23,
         "replies": 11,
         "reposts": 0,
         "quotes": 0,
         "shares": 0,
-        "at": "2026-11-18T05:00:24+00:00"
+        "at": "2026-11-18T08:06:36+00:00"
       },
       "h24": {
         "views": 379,
@@ -5004,13 +5005,13 @@
       "has_photo": true,
       "scheduled": true,
       "latest": {
-        "views": 266,
+        "views": 274,
         "likes": 19,
         "replies": 10,
         "reposts": 0,
         "quotes": 0,
         "shares": 4,
-        "at": "2026-11-18T05:00:24+00:00"
+        "at": "2026-11-18T08:06:36+00:00"
       },
       "h24": {
         "views": 233,
@@ -5029,13 +5030,13 @@
       "origin": "manual",
       "has_photo": true,
       "latest": {
-        "views": 1335,
-        "likes": 108,
+        "views": 1348,
+        "likes": 109,
         "replies": 21,
         "reposts": 6,
         "quotes": 0,
         "shares": 3,
-        "at": "2026-11-18T05:00:24+00:00"
+        "at": "2026-11-18T08:06:36+00:00"
       },
       "h24": {
         "views": 1161,
@@ -5060,13 +5061,13 @@
       "has_photo": true,
       "scheduled": true,
       "latest": {
-        "views": 163,
+        "views": 183,
         "likes": 12,
         "replies": 10,
         "reposts": 0,
         "quotes": 0,
         "shares": 0,
-        "at": "2026-11-18T05:00:23+00:00"
+        "at": "2026-11-18T08:06:36+00:00"
       }
     },
     "18217619110318823": {
@@ -5077,13 +5078,13 @@
       "origin": "manual",
       "has_photo": true,
       "latest": {
-        "views": 153,
-        "likes": 19,
-        "replies": 5,
+        "views": 189,
+        "likes": 22,
+        "replies": 9,
         "reposts": 0,
         "quotes": 0,
         "shares": 0,
-        "at": "2026-11-18T05:00:23+00:00"
+        "at": "2026-11-18T08:06:35+00:00"
       }
     },
     "18133759592501061": {
@@ -5094,15 +5095,38 @@
       "origin": "manual",
       "has_photo": false,
       "latest": {
-        "views": 1126,
-        "likes": 24,
+        "views": 1297,
+        "likes": 27,
         "replies": 6,
         "reposts": 0,
         "quotes": 0,
+        "shares": 1,
+        "at": "2026-11-18T08:06:35+00:00"
+      }
+    },
+    "18114095186131392": {
+      "timestamp": "2026-11-18T08:05:30+0000",
+      "permalink": "https://www.threads.com/@velimyr/post/Df4CSjgFXyv",
+      "media_type": "IMAGE",
+      "text_len": 417,
+      "origin": "bot",
+      "idea": "2026-11-02-05",
+      "title": "ЦДІАК 1-2-3 — це не пароль від Wi-Fi, а адреса вашого прадіда в архіві",
+      "stream": "fun",
+      "topic": "Генеалогія",
+      "posts_count": 4,
+      "has_photo": true,
+      "scheduled": true,
+      "latest": {
+        "views": 0,
+        "likes": 0,
+        "replies": 3,
+        "reposts": 0,
+        "quotes": 0,
         "shares": 0,
-        "at": "2026-11-18T05:00:23+00:00"
+        "at": "2026-11-18T08:06:35+00:00"
       }
     }
   },
-  "updated_at": "2026-11-18T05:00:27+00:00"
+  "updated_at": "2026-11-18T08:06:39+00:00"
 }
