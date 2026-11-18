@@ -109,7 +109,12 @@ STREAMS = {
     "fun": ("😏", "Жартівливий"),
     "provoke": ("🌶", "Провокація"),
     "tg": ("📰", "Telegram-допис"),
+    "meme": ("🖼", "Мем"),
 }
+# Меми: відомий шаблон (api.memegen.link/templates) з генеалогічним текстом. Картинку малює
+# memegen.link за адресою — її ж забирає Threads. У розклад меми не потрапляють: лише вручну.
+MEMEGEN = "https://api.memegen.link"
+MEME_FONT = "notosans"  # шрифт memegen з кирилицею
 # Telegram-дописи: окрема черга. Щовівторка о 16:00 — у тестовий канал (TG_CHANNEL_ID),
 # потім той самий допис — в основний у випадковий час 17:00–19:00. Опубліковано = вийшов в основному.
 TG_CHANNEL_ID = os.environ.get("TG_CHANNEL_ID", "").strip()
@@ -328,9 +333,34 @@ UNVERIFIED_HINT = ("Поки вони є, тред не можна погоди�
 
 
 def thread_posts(text: str) -> list[str]:
-    """Пости треду без службового блоку «Джерела»."""
+    """Пости треду без службових блоків «Джерела» і «Мем:» (тексти на картинці мему)."""
     blocks = [b.strip() for b in re.split(r"\n\s*---\s*\n", text) if b.strip()]
-    return [b for b in blocks if not b.lower().startswith("джерела")]
+    return [b for b in blocks if not b.lower().startswith(("джерела", "мем:"))]
+
+
+def meme_lines(text: str) -> list[str]:
+    """Тексти на картинці мему (блок «Мем:» у thread.md), по рядку на поле шаблону; «-» — порожнє поле."""
+    for block in re.split(r"\n\s*---\s*\n", text):
+        block = block.strip()
+        if block.lower().startswith("мем:"):
+            lines = [line.strip() for line in block.split("\n")[1:]]
+            return [re.sub(r"^\d+[.)]\s*", "", line) for line in lines if line]
+    return []
+
+
+def memegen_text(line: str) -> str:
+    """Кодування тексту для адреси memegen.link (його власні екранування + UTF-8)."""
+    if line.strip() in ("", "-", "—"):
+        return "_"
+    for old, new in (("_", "__"), ("-", "--"), (" ", "_"), ("?", "~q"), ("&", "~a"), ("%", "~p"), ("#", "~h"),
+                     ("/", "~s"), ("\\", "~b"), ("<", "~l"), (">", "~g"), ('"', "''"), ("\n", "~n")):
+        line = line.replace(old, new)
+    return urllib.parse.quote(line, safe="_~'")
+
+
+def meme_url(template: str, lines: list[str]) -> str:
+    path = "/".join(memegen_text(line) for line in lines) or "_"
+    return f"{MEMEGEN}/images/{urllib.parse.quote(template)}/{path}.jpg?font={MEME_FONT}"
 
 
 def edit_hint(plain_reply: str) -> str:
@@ -669,6 +699,10 @@ class Bot:
             lines.append("👀 Тред написано, чекає вашого погодження.")
             rows = [[("👀 Показати тред", f"show:{iid}")]]
         elif (thread == "approved" or (thread == "queued" and item.get("publish_at") == "pending")) \
+                and self.category(idea) == "M":
+            lines.append("✅ Мем готовий. Публікується лише вручну, без теми.")
+            rows = [[("⚡ Опублікувати", f"pub:{iid}")]]
+        elif (thread == "approved" or (thread == "queued" and item.get("publish_at") == "pending")) \
                 and self.category(idea) == "P":
             lines.append("✅ Провокація готова, час публікації не обрано. Виходить без теми й без фото.")
             rows = [[("🕒 Запланувати чи опублікувати", f"pub:{iid}")]]
@@ -694,7 +728,7 @@ class Bot:
                          + (f"\n{stats}" if stats else "")
                          + (f"\n{idea['thread'].get('permalink')}" if idea["thread"].get("permalink") else ""))
         if thread in ("ready", "approved", "queued", "scheduled") and not item.get("test_id") \
-                and self.category(idea) != "P":
+                and self.category(idea) not in ("P", "M"):
             count = len(idea.get("images", []))
             rows.append([(f"🔄 Інші фото ({count})", f"photos:{iid}:more") if count
                          else ("🖼 Знайти фото", f"photos:{iid}"),
@@ -849,6 +883,26 @@ class Bot:
             shown[key] = ok
         return shown[key]
 
+    def send_meme(self, idea: dict, body: str, info: str, markup, record: dict, final: bool) -> int:
+        """Мем: картинка (оригінальний шаблон на погодженні, готовий мем на фінальній перевірці),
+        тексти окремим повідомленням, далі пояснення з кнопками."""
+        meme = idea.get("meme") or {}
+        lines = meme_lines(body)
+        if final:
+            photo, caption = meme_url(meme.get("template", ""), lines), "🖼 Готовий мем"
+        else:
+            photo = meme.get("blank") or (f"{MEMEGEN}/images/{meme['template']}.jpg" if meme.get("template") else "")
+            caption = f"🖼 Оригінал: {meme.get('name') or meme.get('template') or '—'}"
+        result = tg("sendPhoto", chat_id=CHAT_ID, photo=photo, caption=caption) if photo else None
+        if result:
+            self.state["messages"][str(result["message_id"])] = record
+        elif photo:
+            info = f"⚠️ Картинку не вдалося показати: {photo}\n\n" + info
+        caption_post = "\n\n".join(thread_posts(body))
+        texts = "\n".join(f"{n}. {line}" for n, line in enumerate(lines, 1)) or "— (текстів для картинки немає)"
+        self.send(f"✏️ Текст на картинці:\n{texts}\n\n💬 Підпис до поста:\n{caption_post or '—'}", None, record)
+        return self.send(info, markup, record)
+
     def send_text_parts(self, idea: dict, body: str, info: str, markup, record: dict) -> int:
         """Текст, джерела й пояснення — окремими повідомленнями, щоб було видно, чи текст влазить
         в одне повідомлення Telegram. Запис (для правок відповіддю) — на всіх, кнопки — на поясненні."""
@@ -865,6 +919,15 @@ class Bot:
 
     def send_preview(self, idea: dict, body: str, topic: str) -> None:
         digest = sha(body)
+        if self.category(idea) == "M":
+            self.send_meme(idea, body,
+                           f"{stream_label(idea.get('stream'))} · фінальна перевірка — «{idea['title']}»"
+                           "\n\nℹ️ Так мем вийде в Threads: картинка й підпис, без теми. У розклад меми не ставляться — "
+                           "лише вручну, коли натиснете кнопку."
+                           "\n\n" + edit_hint("ширші зміни — у повідомленні з текстом і кнопкою «✅ Готово»."),
+                           kb([("⚡ Опублікувати зараз", f"confirm:{idea['id']}:{digest}:now")], [("❌ Не зараз", "cancel")]),
+                           {"kind": "preview", "idea": idea["id"], "sha": digest, "text": body, "topic": ""}, final=True)
+            return
         photos = self.show_photos(idea) if self.category(idea) != "P" else []
         if self.category(idea) == "T":
             rows = [[(f"🕒 Запланувати з фото {n}", f"confirm:{idea['id']}:{digest}:{n}")] for n in photos]
@@ -1002,9 +1065,9 @@ class Bot:
 
     @staticmethod
     def category(idea: dict | None) -> str:
-        """«S» — серйозний тред, «F» — жартівливий, «P» — провокація, «T» — Telegram-допис."""
+        """«S» — серйозний тред, «F» — жартівливий, «P» — провокація, «T» — Telegram-допис, «M» — мем (лише вручну)."""
         stream = (idea or {}).get("stream")
-        return {"tg": "T", "fun": "F", "provoke": "P"}.get(stream, "S")
+        return {"tg": "T", "fun": "F", "provoke": "P", "meme": "M"}.get(stream, "S")
 
     def bot_publications(self, exclude: str | None = None, channel: str = "threads") -> list[tuple[datetime, str]]:
         """Заплановані й уже опубліковані публікації бота: (момент, категорія).
@@ -1014,7 +1077,7 @@ class Bot:
             if idea_id == exclude or item.get("failed"):
                 continue
             cat = self.category(self.ideas.get(idea_id))
-            if (cat == "T") != (channel == "tg"):
+            if cat == "M" or (cat == "T") != (channel == "tg"):  # меми — поза розкладом
                 continue
             at = item.get("posted_at") if item.get("posted") else item.get("publish_at")
             if at and at != "pending":
@@ -1212,6 +1275,21 @@ class Bot:
                                                                     if image else None),
                                                           "approved_at": now(), "posted": False,
                                                           "publish_at": "pending"}
+            if self.category(idea) == "M":  # мем — лише вручну: картинка memegen і підпис, без теми
+                if len(parts) < 4 or parts[3] != "now":
+                    return
+                meme = idea.get("meme") or {}
+                lines = meme_lines(record["text"])
+                if not meme.get("template") or not lines:
+                    self.send(f"⚠️ «{idea['title']}»: немає шаблону чи текстів мему — не публікую.")
+                    return
+                self.state["approved_threads"][idea["id"]].update(
+                    topic="", publish_at=now(),
+                    image={"url": meme_url(meme["template"], lines), "credit": f"Мем: {meme.get('name', meme['template'])} / memegen.link"})
+                idea["thread"]["status"] = "scheduled"
+                history(idea, "meme published manually")
+                self.mark_publishing(self.state["approved_threads"][idea["id"]], mid)
+                return
             if self.category(idea) == "P":  # провокація — завжди без теми й фото
                 self.state["approved_threads"][idea["id"]].update(topic="", image=None)
                 if len(parts) > 3 and parts[3] == "now":
@@ -1406,7 +1484,7 @@ class Bot:
             return
         if text and record and record.get("kind") == "preview":
             idea = self.ideas.get(record["idea"])
-            if idea and self.category(idea) in ("T", "P"):
+            if idea and self.category(idea) in ("T", "P", "M"):
                 self.send("✏️ Тут працюють лише точкові правки: виділіть фрагмент → «Відповісти» → заміна, "
                           "або рядок «старе → нове».", reply_to=msg["message_id"])
             elif idea:
@@ -1487,6 +1565,15 @@ class Bot:
     def send_thread(self, idea: dict, body: str) -> int:
         marks = unverified(body)
         warning = f"\n\n⚠️ Є позначки [ПЕРЕВІРИТИ] ({marks}). {UNVERIFIED_HINT}" if marks else ""
+        if self.category(idea) == "M":
+            return self.send_meme(
+                idea, body,
+                f"{stream_label(idea.get('stream'))} · мем — «{idea['title']}»\n\n"
+                "ℹ️ Вище — оригінальна картинка й новий текст до неї. Готовий мем покажу після «✅ Готово»." + warning
+                + "\n\n" + edit_hint("побажання своїми словами (напр. «інший жарт у другому полі») — текст доопрацюють."),
+                kb([("✅ Готово", f"done:{idea['id']}"), ("🔀 Змінити формат", f"fmt:{idea['id']}")],
+                   [("🗑 Скасувати тему", f"drop:{idea['id']}")]),
+                {"kind": "thread", "idea": idea["id"], "sha": sha(body)}, final=False)
         size = f" Розмір допису: {len(tg_post_text(body))} з {TG_POST_LIMIT} символів." if self.category(idea) == "T" else ""
         return self.send_text_parts(
             idea, body,
@@ -1742,7 +1829,7 @@ class Bot:
             day_cats = [c for moment, c in self.bot_publications() if moment.astimezone(KYIV).date() == slot.date()]
             serious = "" if "S" in day_cats else " Серйозного треду на сьогодні теж немає."
             if self.grouped(lambda i: i.get("thread", {}).get("status") == "approved"
-                            and i.get("stream") != "tg"):
+                            and i.get("stream") not in ("tg", "meme")):
                 self.send(f"⏰ {slot:%H:%M} — рекомендований час публікації, але нічого не заплановано.{serious}",
                           kb([("📣 Обрати тред", "go:publish")]), {"kind": "nav"})
             else:
