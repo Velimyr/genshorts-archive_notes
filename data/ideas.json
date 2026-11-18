@@ -16646,8 +16646,9 @@
       },
       "status": "approved",
       "thread": {
-        "status": "ready",
-        "file": "data/texts/2026-11-18-07/thread.md"
+        "status": "approved",
+        "file": "data/texts/2026-11-18-07/thread.md",
+        "approved_sha": "0d3a10ad36338bdd"
       },
       "script": {
         "status": "none",
@@ -16674,6 +16675,10 @@
         {
           "at": "2026-11-18T19:30:00+00:00",
           "event": "thread ready"
+        },
+        {
+          "at": "2026-11-18T18:28:29+00:00",
+          "event": "thread text approved in telegram"
         }
       ]
     },
