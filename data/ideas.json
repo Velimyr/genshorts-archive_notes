@@ -6717,9 +6717,10 @@
       ],
       "status": "approved",
       "thread": {
-        "status": "scheduled",
+        "status": "posted",
         "file": "data/texts/2026-10-14-04/thread.md",
-        "approved_sha": "af0b0f1c83a98b9f"
+        "approved_sha": "af0b0f1c83a98b9f",
+        "permalink": "https://t.me/archivist_notes/616"
       },
       "script": {
         "status": "none",
@@ -6774,6 +6775,10 @@
         {
           "at": "2026-11-18T14:00:25+00:00",
           "event": "telegram post published to test channel, main at 2026-11-18T17:33:00+02:00"
+        },
+        {
+          "at": "2026-11-18T15:35:23+00:00",
+          "event": "telegram post published to main channel"
         }
       ],
       "photo_request": false,

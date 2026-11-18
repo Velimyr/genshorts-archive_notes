@@ -6910,13 +6910,18 @@
         "credit": "Наркомвнусправ УСРР, адміністративна карта після 12 квітня 1923 (скан AMY 81-412) / Wikimedia Commons, Public domain"
       },
       "approved_at": "2026-10-25T07:18:32+00:00",
-      "posted": false,
+      "posted": true,
       "publish_at": "2026-11-18T16:00:00+02:00",
       "attempts": 0,
       "test_id": "330",
       "test_permalink": "https://t.me/testvelimyr/330",
       "test_posted_at": "2026-11-18T14:00:25+00:00",
-      "main_at": "2026-11-18T17:33:00+02:00"
+      "main_at": "2026-11-18T17:33:00+02:00",
+      "posted_at": "2026-11-18T15:35:23+00:00",
+      "permalink": "https://t.me/archivist_notes/616",
+      "posted_ids": [
+        "616"
+      ]
     },
     "2026-10-11-05": {
       "sha": "20987cb94b292e78",
@@ -8364,7 +8369,7 @@
   "report_week": "2026-44",
   "dashboard": {
     "mid": 1959,
-    "sha": "82f73803a4295f88",
-    "at": "2026-11-18T14:00:32+00:00"
+    "sha": "56588b1044746eac",
+    "at": "2026-11-18T15:35:24+00:00"
   }
 }
