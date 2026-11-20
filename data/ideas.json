@@ -14362,7 +14362,7 @@
       ],
       "status": "approved",
       "thread": {
-        "status": "approved",
+        "status": "scheduled",
         "file": "data/texts/2026-11-02-09/thread.md",
         "approved_sha": "059ac397bd258f9a"
       },
@@ -14403,6 +14403,14 @@
         {
           "at": "2026-11-20T10:40:00+00:00",
           "event": "photos found"
+        },
+        {
+          "at": "2026-11-20T12:37:17+00:00",
+          "event": "thread approved for Threads, awaiting time"
+        },
+        {
+          "at": "2026-11-20T12:37:18+00:00",
+          "event": "thread auto-scheduled: 2026-11-28T12:50:00+02:00"
         }
       ],
       "photo_request": false,
