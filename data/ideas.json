@@ -14346,7 +14346,20 @@
       "sources": [
         "https://uk.wikipedia.org/wiki/Рекрутська_повинність"
       ],
-      "images": [],
+      "images": [
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/7/76/Shevch_soldat.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Shevch_soldat.jpg",
+          "credit": "Тарас Шевченко / Wikimedia Commons, Public domain",
+          "license": "Public domain"
+        },
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Taras_Shevchenko_painting_0096.jpg/1280px-Taras_Shevchenko_painting_0096.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Taras_Shevchenko_painting_0096.jpg",
+          "credit": "Тарас Шевченко / Wikimedia Commons, Public domain",
+          "license": "Public domain"
+        }
+      ],
       "status": "approved",
       "thread": {
         "status": "approved",
@@ -14386,9 +14399,13 @@
         {
           "at": "2026-11-20T10:24:13+00:00",
           "event": "photo search requested in telegram"
+        },
+        {
+          "at": "2026-11-20T10:40:00+00:00",
+          "event": "photos found"
         }
       ],
-      "photo_request": true,
+      "photo_request": false,
       "photo_error": "",
       "photo_keywords": "",
       "photo_requested_at": "2026-11-20T10:24:13+00:00"
