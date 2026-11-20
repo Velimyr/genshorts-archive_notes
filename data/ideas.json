@@ -14349,8 +14349,8 @@
       "images": [],
       "status": "approved",
       "thread": {
-        "status": "requested",
-        "file": null
+        "status": "ready",
+        "file": "data/texts/2026-11-02-09/thread.md"
       },
       "script": {
         "status": "none",
@@ -14373,6 +14373,10 @@
         {
           "at": "2026-11-20T10:13:32+00:00",
           "event": "thread requested in telegram"
+        },
+        {
+          "at": "2026-11-20T10:14:48+00:00",
+          "event": "thread ready"
         }
       ]
     },
