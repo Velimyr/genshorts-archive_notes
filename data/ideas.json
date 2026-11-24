@@ -15510,7 +15510,20 @@
       "sources": [
         "https://uk.wikipedia.org/wiki/Посполиті"
       ],
-      "images": [],
+      "images": [
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/9/9e/19._Ukr_selanyn.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:19._Ukr_selanyn.jpg",
+          "license": "Public domain",
+          "credit": "Тимофій Калинський / Wikimedia Commons, Public domain"
+        },
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/6/6b/15._Ukr_selanka.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:15._Ukr_selanka.jpg",
+          "license": "Public domain",
+          "credit": "Тимофій Калинський / Wikimedia Commons, Public domain"
+        }
+      ],
       "status": "approved",
       "thread": {
         "status": "approved",
@@ -15577,9 +15590,13 @@
         {
           "at": "2026-11-24T10:00:27+00:00",
           "event": "photo search requested in telegram"
+        },
+        {
+          "at": "2026-11-24T10:20:00+00:00",
+          "event": "photos found"
         }
       ],
-      "photo_request": true,
+      "photo_request": false,
       "photo_error": "",
       "photo_keywords": "",
       "photo_requested_at": "2026-11-24T10:00:27+00:00"
