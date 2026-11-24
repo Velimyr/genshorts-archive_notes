@@ -5207,7 +5207,7 @@
         "reposts": 0,
         "quotes": 0,
         "shares": 0,
-        "at": "2026-11-24T14:00:31+00:00"
+        "at": "2026-11-24T16:50:33+00:00"
       },
       "h24": {
         "views": 195,
@@ -5248,7 +5248,7 @@
         "reposts": 0,
         "quotes": 0,
         "shares": 0,
-        "at": "2026-11-24T14:00:31+00:00"
+        "at": "2026-11-24T16:50:32+00:00"
       },
       "h24": {
         "views": 235,
@@ -5265,6 +5265,14 @@
         "reposts": 0,
         "quotes": 0,
         "shares": 0
+      },
+      "h168": {
+        "views": 293,
+        "likes": 25,
+        "replies": 9,
+        "reposts": 0,
+        "quotes": 0,
+        "shares": 0
       }
     },
     "18133759592501061": {
@@ -5275,13 +5283,13 @@
       "origin": "manual",
       "has_photo": false,
       "latest": {
-        "views": 1535,
+        "views": 1536,
         "likes": 30,
         "replies": 6,
         "reposts": 0,
         "quotes": 0,
         "shares": 2,
-        "at": "2026-11-24T14:00:31+00:00"
+        "at": "2026-11-24T16:50:32+00:00"
       },
       "h24": {
         "views": 1483,
@@ -5293,6 +5301,14 @@
       },
       "h72": {
         "views": 1518,
+        "likes": 30,
+        "replies": 6,
+        "reposts": 0,
+        "quotes": 0,
+        "shares": 2
+      },
+      "h168": {
+        "views": 1536,
         "likes": 30,
         "replies": 6,
         "reposts": 0,
@@ -5320,7 +5336,7 @@
         "reposts": 0,
         "quotes": 0,
         "shares": 0,
-        "at": "2026-11-24T14:00:30+00:00"
+        "at": "2026-11-24T16:50:32+00:00"
       },
       "h24": {
         "views": 224,
@@ -5353,7 +5369,7 @@
         "reposts": 0,
         "quotes": 1,
         "shares": 1,
-        "at": "2026-11-24T14:00:29+00:00"
+        "at": "2026-11-24T16:50:32+00:00"
       },
       "h24": {
         "views": 1879,
@@ -5386,7 +5402,7 @@
         "reposts": 0,
         "quotes": 0,
         "shares": 0,
-        "at": "2026-11-24T14:00:30+00:00"
+        "at": "2026-11-24T16:50:32+00:00"
       },
       "h24": {
         "views": 151,
@@ -5425,7 +5441,7 @@
         "reposts": 0,
         "quotes": 0,
         "shares": 0,
-        "at": "2026-11-24T14:00:28+00:00"
+        "at": "2026-11-24T16:50:31+00:00"
       },
       "h24": {
         "views": 201,
@@ -5464,7 +5480,7 @@
         "reposts": 1,
         "quotes": 0,
         "shares": 1,
-        "at": "2026-11-24T14:00:28+00:00"
+        "at": "2026-11-24T16:50:31+00:00"
       },
       "h24": {
         "views": 346,
@@ -5497,13 +5513,13 @@
       "has_photo": true,
       "scheduled": true,
       "latest": {
-        "views": 126,
+        "views": 127,
         "likes": 6,
         "replies": 8,
         "reposts": 0,
         "quotes": 0,
         "shares": 0,
-        "at": "2026-11-24T14:00:28+00:00"
+        "at": "2026-11-24T16:50:31+00:00"
       },
       "h24": {
         "views": 102,
@@ -5536,13 +5552,13 @@
       "has_photo": true,
       "scheduled": true,
       "latest": {
-        "views": 233,
+        "views": 235,
         "likes": 11,
         "replies": 14,
         "reposts": 0,
         "quotes": 0,
         "shares": 0,
-        "at": "2026-11-24T14:00:28+00:00"
+        "at": "2026-11-24T16:50:31+00:00"
       },
       "h24": {
         "views": 209,
@@ -5575,13 +5591,13 @@
       "has_photo": true,
       "scheduled": true,
       "latest": {
-        "views": 126,
+        "views": 130,
         "likes": 6,
         "replies": 4,
         "reposts": 0,
         "quotes": 0,
         "shares": 0,
-        "at": "2026-11-24T14:00:27+00:00"
+        "at": "2026-11-24T16:50:30+00:00"
       },
       "h24": {
         "views": 109,
@@ -5606,13 +5622,13 @@
       "has_photo": true,
       "scheduled": true,
       "latest": {
-        "views": 167,
+        "views": 170,
         "likes": 8,
         "replies": 8,
         "reposts": 0,
         "quotes": 0,
         "shares": 0,
-        "at": "2026-11-24T14:00:27+00:00"
+        "at": "2026-11-24T16:50:30+00:00"
       },
       "h24": {
         "views": 167,
@@ -5622,7 +5638,30 @@
         "quotes": 0,
         "shares": 0
       }
+    },
+    "18034096202911034": {
+      "timestamp": "2026-11-24T14:01:00+0000",
+      "permalink": "https://www.threads.com/@velimyr/post/DgIHvkilVM9",
+      "media_type": "IMAGE",
+      "text_len": 361,
+      "origin": "bot",
+      "idea": "2026-11-10-08",
+      "title": "Y-ДНК: що тест розповість про батьківську лінію і чого не скаже",
+      "stream": "big",
+      "topic": "Генеалогія",
+      "posts_count": 8,
+      "has_photo": true,
+      "scheduled": true,
+      "latest": {
+        "views": 65,
+        "likes": 6,
+        "replies": 7,
+        "reposts": 0,
+        "quotes": 0,
+        "shares": 0,
+        "at": "2026-11-24T16:50:30+00:00"
+      }
     }
   },
-  "updated_at": "2026-11-24T14:00:31+00:00"
+  "updated_at": "2026-11-24T16:50:33+00:00"
 }

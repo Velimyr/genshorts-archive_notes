@@ -7605,13 +7605,18 @@
         "credit": "Трьохверстівка Київської губ., фрагмент (Соколівка), автор невідомий / Wikimedia Commons, Public domain"
       },
       "approved_at": "2026-11-04T20:54:42+00:00",
-      "posted": false,
+      "posted": true,
       "publish_at": "2026-11-24T16:00:00+02:00",
       "attempts": 0,
       "test_id": "331",
       "test_permalink": "https://t.me/testvelimyr/331",
       "test_posted_at": "2026-11-24T14:00:25+00:00",
-      "main_at": "2026-11-24T18:49:00+02:00"
+      "main_at": "2026-11-24T18:49:00+02:00",
+      "posted_at": "2026-11-24T16:50:28+00:00",
+      "permalink": "https://t.me/archivist_notes/618",
+      "posted_ids": [
+        "618"
+      ]
     },
     "2026-10-23-07": {
       "sha": "378c5e63a1ec08f9",
@@ -8684,7 +8689,7 @@
     928737951,
     928737952
   ],
-  "analytics_at": "2026-11-24T14:00:25+00:00",
+  "analytics_at": "2026-11-24T16:50:29+00:00",
   "reminded_slots": [
     "2026-10-01T13:00:00+03:00",
     "2026-10-02T11:00:00+03:00",
@@ -9138,8 +9143,8 @@
   "report_week": "2026-44",
   "dashboard": {
     "mid": 2243,
-    "sha": "444b04aa02a722a1",
-    "at": "2026-11-24T14:00:32+00:00"
+    "sha": "a25cf73f3edbb3b0",
+    "at": "2026-11-24T16:50:33+00:00"
   },
   "token_reminded": "2026-47"
 }
