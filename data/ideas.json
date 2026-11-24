@@ -8707,7 +8707,7 @@
       "images": [],
       "status": "approved",
       "thread": {
-        "status": "ready",
+        "status": "revise",
         "file": "data/texts/2026-10-16-06/thread.md"
       },
       "script": {
@@ -8718,7 +8718,13 @@
         "status": "none",
         "telegram_message_id": null
       },
-      "revisions": [],
+      "revisions": [
+        {
+          "kind": "thread",
+          "text": "Прибери оце \"робить вигляд що все гаразд\" розпиши що все ок, просто інших варіантів було не багато",
+          "at": "2026-11-24T07:20:15+00:00"
+        }
+      ],
       "history": [
         {
           "at": "2026-10-16T15:10:00+00:00",
@@ -8735,6 +8741,10 @@
         {
           "at": "2026-11-24T07:18:09+00:00",
           "event": "thread ready"
+        },
+        {
+          "at": "2026-11-24T07:20:15+00:00",
+          "event": "thread revision requested"
         }
       ]
     },
