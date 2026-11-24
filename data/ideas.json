@@ -15513,7 +15513,7 @@
       "images": [],
       "status": "approved",
       "thread": {
-        "status": "ready",
+        "status": "revise",
         "file": "data/texts/2026-11-10-09/thread.md"
       },
       "script": {
@@ -15524,7 +15524,13 @@
         "status": "none",
         "telegram_message_id": null
       },
-      "revisions": [],
+      "revisions": [
+        {
+          "kind": "thread",
+          "text": "Давай зразу домовимося що мова не тільки про Лівобережжя тож ці згадки прибирай і переписуй під всіх",
+          "at": "2026-11-24T07:31:28+00:00"
+        }
+      ],
       "history": [
         {
           "at": "2026-11-10T12:00:00+00:00",
@@ -15541,6 +15547,10 @@
         {
           "at": "2026-11-24T07:29:32+00:00",
           "event": "thread ready"
+        },
+        {
+          "at": "2026-11-24T07:31:28+00:00",
+          "event": "thread revision requested"
         }
       ]
     },
