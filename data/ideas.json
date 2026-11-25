@@ -17468,7 +17468,7 @@
         "https://www.radixindex.com/en/news/201809121833"
       ],
       "images": [],
-      "status": "proposed",
+      "status": "approved",
       "thread": {
         "status": "none",
         "file": null
@@ -17486,6 +17486,10 @@
         {
           "at": "2026-11-25T07:31:07+00:00",
           "event": "proposed by ideas routine"
+        },
+        {
+          "at": "2026-11-25T07:32:02+00:00",
+          "event": "idea approved in telegram"
         }
       ]
     },
