@@ -14491,7 +14491,26 @@
       "sources": [
         "https://uk.wikipedia.org/wiki/Хутір"
       ],
-      "images": [],
+      "images": [
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/6/6f/%D0%A5%D1%83%D1%82%D1%96%D1%80_%D0%A2%D1%80%D0%B8%D0%B3%D1%83%D0%B1%D1%96%D0%B2_%D0%BA%D0%BE%D0%BB%D0%BE_%D0%92%D1%96%D0%B2%D1%81%D1%8F.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:%D0%A5%D1%83%D1%82%D1%96%D1%80_%D0%A2%D1%80%D0%B8%D0%B3%D1%83%D0%B1%D1%96%D0%B2_%D0%BA%D0%BE%D0%BB%D0%BE_%D0%92%D1%96%D0%B2%D1%81%D1%8F.jpg",
+          "credit": "WIG (Mapa Szczegółowa Polski 1:25 000, 1929–1939) / Wikimedia Commons, CC BY-SA 4.0",
+          "license": "CC BY-SA 4.0"
+        },
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/9/9e/%D0%92%D1%96%D0%B2%D1%81%D1%8F%2C_%D0%9C%D0%B0%D0%BA%D0%BE%D0%B2%D0%B8%D1%81%D1%8C%D0%BA%D0%BE%2C_%D0%BA%D0%BE%D0%BB%D0%BE%D0%BD%D1%96%D1%8F_%D0%A2%D1%80%D0%B8%D0%B3%D1%83%D0%B1%D1%96%D0%B2%2C_1923_%D1%80.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:%D0%92%D1%96%D0%B2%D1%81%D1%8F,_%D0%9C%D0%B0%D0%BA%D0%BE%D0%B2%D0%B8%D1%81%D1%8C%D0%BA%D0%BE,_%D0%BA%D0%BE%D0%BB%D0%BE%D0%BD%D1%96%D1%8F_%D0%A2%D1%80%D0%B8%D0%B3%D1%83%D0%B1%D1%96%D0%B2,_1923_%D1%80.jpg",
+          "credit": "Невідомий автор (мапа 1923 р.) / Wikimedia Commons, CC0",
+          "license": "CC0"
+        },
+        {
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3c/%D0%A5%D1%83%D1%82%D1%96%D1%80_%D0%93%D0%BE%D0%B3%D0%BE%D0%BB%D1%8F_%D1%83_%D0%92%D0%B5%D0%BB%D0%B8%D0%BA%D0%B8%D1%85_%D0%A1%D0%BE%D1%80%D0%BE%D1%87%D0%B8%D0%BD%D1%86%D1%8F%D1%85_%2812%29.jpg/1280px-%D0%A5%D1%83%D1%82%D1%96%D1%80_%D0%93%D0%BE%D0%B3%D0%BE%D0%BB%D1%8F_%D1%83_%D0%92%D0%B5%D0%BB%D0%B8%D0%BA%D0%B8%D1%85_%D0%A1%D0%BE%D1%80%D0%BE%D1%87%D0%B8%D0%BD%D1%86%D1%8F%D1%85_%2812%29.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:%D0%A5%D1%83%D1%82%D1%96%D1%80_%D0%93%D0%BE%D0%B3%D0%BE%D0%BB%D1%8F_%D1%83_%D0%92%D0%B5%D0%BB%D0%B8%D0%BA%D0%B8%D1%85_%D0%A1%D0%BE%D1%80%D0%BE%D1%87%D0%B8%D0%BD%D1%86%D1%8F%D1%85_(12).jpg",
+          "credit": "Марися Лебідь / Wikimedia Commons, CC BY-SA 4.0",
+          "license": "CC BY-SA 4.0"
+        }
+      ],
       "status": "approved",
       "thread": {
         "status": "approved",
@@ -14545,12 +14564,16 @@
         {
           "at": "2026-11-25T08:17:47+00:00",
           "event": "photo search requested in telegram: Хутір"
+        },
+        {
+          "at": "2026-11-25T08:22:39+00:00",
+          "event": "photos found"
         }
       ],
       "images_excluded": [],
-      "photo_request": true,
+      "photo_request": false,
       "photo_error": "",
-      "photo_keywords": "Хутір",
+      "photo_keywords": "",
       "photo_requested_at": "2026-11-25T08:17:47+00:00"
     },
     {
