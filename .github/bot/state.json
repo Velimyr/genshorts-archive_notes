@@ -6632,6 +6632,9 @@
     "2276": {
       "kind": "photokw",
       "idea": "2026-11-02-10"
+    },
+    "2277": {
+      "kind": "nav"
     }
   },
   "approved_threads": {
@@ -8205,8 +8208,16 @@
       "topic": "Генеалогія",
       "image": null,
       "approved_at": "2026-11-18T11:05:00+00:00",
-      "posted": false,
-      "publish_at": "2026-11-25T10:14:00+02:00"
+      "posted": true,
+      "publish_at": "2026-11-25T10:14:00+02:00",
+      "posted_ids": [
+        "17916616953577792",
+        "17937595587419932",
+        "18174495232473932",
+        "18227033530341898"
+      ],
+      "posted_at": "2026-11-25T08:16:30+00:00",
+      "permalink": "https://www.threads.com/@velimyr/post/DgKFAlvG_s3"
     },
     "2026-10-11-01": {
       "sha": "cbd84a46983f5dd6",
@@ -9260,8 +9271,8 @@
   "report_week": "2026-44",
   "dashboard": {
     "mid": 2243,
-    "sha": "1b1e69e7c1cfb6a5",
-    "at": "2026-11-25T07:52:59+00:00"
+    "sha": "123bad49f0dc92e1",
+    "at": "2026-11-25T08:16:32+00:00"
   },
   "token_reminded": "2026-47",
   "awaiting": {
