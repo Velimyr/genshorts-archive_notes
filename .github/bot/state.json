@@ -6699,6 +6699,9 @@
     },
     "2296": {
       "kind": "when"
+    },
+    "2297": {
+      "kind": "menu"
     }
   },
   "approved_threads": {
@@ -8381,7 +8384,7 @@
   },
   "asked": {
     "ideas": "2026-11-25",
-    "texts": "2026-11-24",
+    "texts": "2026-11-25",
     "publish": "2026-09-29"
   },
   "menu_version": 4,
