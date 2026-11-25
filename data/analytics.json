@@ -5201,13 +5201,13 @@
       "has_photo": true,
       "scheduled": true,
       "latest": {
-        "views": 266,
+        "views": 267,
         "likes": 14,
         "replies": 10,
         "reposts": 0,
         "quotes": 0,
         "shares": 0,
-        "at": "2026-11-25T07:52:06+00:00"
+        "at": "2026-11-25T17:00:29+00:00"
       },
       "h24": {
         "views": 195,
@@ -5232,7 +5232,8 @@
         "reposts": 0,
         "quotes": 0,
         "shares": 0
-      }
+      },
+      "final": true
     },
     "18217619110318823": {
       "timestamp": "2026-11-17T15:21:58+0000",
@@ -5248,7 +5249,7 @@
         "reposts": 0,
         "quotes": 0,
         "shares": 0,
-        "at": "2026-11-25T07:52:05+00:00"
+        "at": "2026-11-25T17:00:29+00:00"
       },
       "h24": {
         "views": 235,
@@ -5273,7 +5274,8 @@
         "reposts": 0,
         "quotes": 0,
         "shares": 0
-      }
+      },
+      "final": true
     },
     "18133759592501061": {
       "timestamp": "2026-11-17T15:02:17+0000",
@@ -5289,7 +5291,7 @@
         "reposts": 0,
         "quotes": 0,
         "shares": 2,
-        "at": "2026-11-25T07:52:06+00:00"
+        "at": "2026-11-25T17:00:29+00:00"
       },
       "h24": {
         "views": 1483,
@@ -5314,7 +5316,8 @@
         "reposts": 0,
         "quotes": 0,
         "shares": 2
-      }
+      },
+      "final": true
     },
     "18114095186131392": {
       "timestamp": "2026-11-18T08:05:30+0000",
@@ -5336,7 +5339,7 @@
         "reposts": 0,
         "quotes": 0,
         "shares": 0,
-        "at": "2026-11-25T07:52:05+00:00"
+        "at": "2026-11-25T17:00:28+00:00"
       },
       "h24": {
         "views": 224,
@@ -5353,6 +5356,14 @@
         "reposts": 0,
         "quotes": 0,
         "shares": 0
+      },
+      "h168": {
+        "views": 288,
+        "likes": 11,
+        "replies": 5,
+        "reposts": 0,
+        "quotes": 0,
+        "shares": 0
       }
     },
     "18111785831343739": {
@@ -5363,13 +5374,13 @@
       "origin": "manual",
       "has_photo": false,
       "latest": {
-        "views": 2109,
+        "views": 2115,
         "likes": 46,
         "replies": 33,
         "reposts": 0,
         "quotes": 1,
         "shares": 1,
-        "at": "2026-11-25T07:52:03+00:00"
+        "at": "2026-11-25T17:00:28+00:00"
       },
       "h24": {
         "views": 1879,
@@ -5402,7 +5413,7 @@
         "reposts": 0,
         "quotes": 0,
         "shares": 0,
-        "at": "2026-11-25T07:52:03+00:00"
+        "at": "2026-11-25T17:00:28+00:00"
       },
       "h24": {
         "views": 151,
@@ -5435,13 +5446,13 @@
       "has_photo": true,
       "scheduled": true,
       "latest": {
-        "views": 305,
+        "views": 306,
         "likes": 8,
         "replies": 14,
         "reposts": 0,
         "quotes": 0,
         "shares": 0,
-        "at": "2026-11-25T07:52:02+00:00"
+        "at": "2026-11-25T17:00:27+00:00"
       },
       "h24": {
         "views": 201,
@@ -5480,7 +5491,7 @@
         "reposts": 1,
         "quotes": 0,
         "shares": 1,
-        "at": "2026-11-25T07:52:02+00:00"
+        "at": "2026-11-25T17:00:27+00:00"
       },
       "h24": {
         "views": 346,
@@ -5513,13 +5524,13 @@
       "has_photo": true,
       "scheduled": true,
       "latest": {
-        "views": 127,
+        "views": 128,
         "likes": 6,
         "replies": 8,
         "reposts": 0,
         "quotes": 0,
         "shares": 0,
-        "at": "2026-11-25T07:52:01+00:00"
+        "at": "2026-11-25T17:00:27+00:00"
       },
       "h24": {
         "views": 102,
@@ -5558,7 +5569,7 @@
         "reposts": 0,
         "quotes": 0,
         "shares": 0,
-        "at": "2026-11-25T07:52:01+00:00"
+        "at": "2026-11-25T17:00:27+00:00"
       },
       "h24": {
         "views": 209,
@@ -5591,16 +5602,24 @@
       "has_photo": true,
       "scheduled": true,
       "latest": {
-        "views": 131,
+        "views": 132,
         "likes": 6,
         "replies": 4,
         "reposts": 0,
         "quotes": 0,
         "shares": 0,
-        "at": "2026-11-25T07:52:01+00:00"
+        "at": "2026-11-25T17:00:27+00:00"
       },
       "h24": {
         "views": 109,
+        "likes": 6,
+        "replies": 4,
+        "reposts": 0,
+        "quotes": 0,
+        "shares": 0
+      },
+      "h72": {
+        "views": 132,
         "likes": 6,
         "replies": 4,
         "reposts": 0,
@@ -5622,13 +5641,13 @@
       "has_photo": true,
       "scheduled": true,
       "latest": {
-        "views": 178,
+        "views": 180,
         "likes": 9,
         "replies": 8,
         "reposts": 0,
         "quotes": 0,
         "shares": 0,
-        "at": "2026-11-25T07:52:01+00:00"
+        "at": "2026-11-25T17:00:26+00:00"
       },
       "h24": {
         "views": 167,
@@ -5653,15 +5672,46 @@
       "has_photo": true,
       "scheduled": true,
       "latest": {
-        "views": 129,
-        "likes": 8,
+        "views": 149,
+        "likes": 9,
         "replies": 7,
         "reposts": 0,
         "quotes": 0,
         "shares": 0,
-        "at": "2026-11-25T07:52:00+00:00"
+        "at": "2026-11-25T17:00:26+00:00"
+      },
+      "h24": {
+        "views": 149,
+        "likes": 9,
+        "replies": 7,
+        "reposts": 0,
+        "quotes": 0,
+        "shares": 0
+      }
+    },
+    "17916616953577792": {
+      "timestamp": "2026-11-25T08:15:34+0000",
+      "permalink": "https://www.threads.com/@velimyr/post/DgKFAlvG_s3",
+      "media_type": "TEXT_POST",
+      "text_len": 410,
+      "origin": "bot",
+      "idea": "2026-11-10-14",
+      "title": "Рукоприкладчик: хто розписувався за вашого неписьменного прадіда",
+      "stream": "fun",
+      "topic": "Генеалогія",
+      "posts_count": 4,
+      "has_photo": false,
+      "scheduled": true,
+      "latest": {
+        "views": 101,
+        "likes": 6,
+        "replies": 8,
+        "reposts": 0,
+        "quotes": 0,
+        "shares": 0,
+        "at": "2026-11-25T17:00:26+00:00"
       }
     }
   },
-  "updated_at": "2026-11-25T07:52:06+00:00"
+  "updated_at": "2026-11-25T17:00:29+00:00"
 }
