@@ -14494,7 +14494,7 @@
       "images": [],
       "status": "approved",
       "thread": {
-        "status": "ready",
+        "status": "revise",
         "file": "data/texts/2026-11-02-10/thread.md"
       },
       "script": {
@@ -14505,7 +14505,13 @@
         "status": "none",
         "telegram_message_id": null
       },
-      "revisions": [],
+      "revisions": [
+        {
+          "kind": "thread",
+          "text": "Не тільки в 60-х було укрупнення але і в 30-х",
+          "at": "2026-11-25T07:50:16+00:00"
+        }
+      ],
       "history": [
         {
           "at": "2026-11-02T09:00:00+00:00",
@@ -14522,6 +14528,10 @@
         {
           "at": "2026-11-25T07:37:30+00:00",
           "event": "thread ready"
+        },
+        {
+          "at": "2026-11-25T07:50:16+00:00",
+          "event": "thread revision requested"
         }
       ]
     },
