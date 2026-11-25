@@ -9241,8 +9241,9 @@
       "images": [],
       "status": "approved",
       "thread": {
-        "status": "ready",
-        "file": "data/texts/2026-10-16-17/thread.md"
+        "status": "scheduled",
+        "file": "data/texts/2026-10-16-17/thread.md",
+        "approved_sha": "de869127a8362a94"
       },
       "script": {
         "status": "none",
@@ -9269,6 +9270,18 @@
         {
           "at": "2026-11-25T09:08:20+00:00",
           "event": "thread ready"
+        },
+        {
+          "at": "2026-11-25T09:15:39+00:00",
+          "event": "thread text approved in telegram"
+        },
+        {
+          "at": "2026-11-25T09:16:10+00:00",
+          "event": "thread approved for Threads, awaiting time"
+        },
+        {
+          "at": "2026-11-25T09:16:11+00:00",
+          "event": "thread auto-scheduled: 2026-12-02T13:57:00+02:00"
         }
       ]
     },
