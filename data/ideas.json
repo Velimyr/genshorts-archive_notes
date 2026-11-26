@@ -5871,9 +5871,10 @@
       ],
       "status": "approved",
       "thread": {
-        "status": "scheduled",
+        "status": "posted",
         "file": "data/texts/2026-10-11-01/thread.md",
-        "approved_sha": "cbd84a46983f5dd6"
+        "approved_sha": "cbd84a46983f5dd6",
+        "permalink": "https://www.threads.com/@velimyr/post/DgM4rhkm2aH"
       },
       "script": {
         "status": "none",
@@ -5934,6 +5935,10 @@
         {
           "at": "2026-11-18T11:54:26+00:00",
           "event": "thread auto-scheduled: 2026-11-26T12:23:00+02:00"
+        },
+        {
+          "at": "2026-11-26T10:28:26+00:00",
+          "event": "thread posted to Threads (10 posts)"
         }
       ],
       "images_excluded": [
