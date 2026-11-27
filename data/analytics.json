@@ -5471,7 +5471,7 @@
         "reposts": 0,
         "quotes": 0,
         "shares": 0,
-        "at": "2026-11-27T08:31:44+00:00"
+        "at": "2026-11-27T17:00:27+00:00"
       },
       "h24": {
         "views": 201,
@@ -5496,7 +5496,8 @@
         "reposts": 0,
         "quotes": 0,
         "shares": 0
-      }
+      },
+      "final": true
     },
     "18118230770586528": {
       "timestamp": "2026-11-19T17:35:17+0000",
@@ -5512,13 +5513,13 @@
       "has_photo": true,
       "scheduled": true,
       "latest": {
-        "views": 374,
+        "views": 375,
         "likes": 29,
         "replies": 3,
         "reposts": 1,
         "quotes": 0,
         "shares": 1,
-        "at": "2026-11-27T08:31:43+00:00"
+        "at": "2026-11-27T17:00:26+00:00"
       },
       "h24": {
         "views": 346,
@@ -5565,7 +5566,7 @@
         "reposts": 0,
         "quotes": 0,
         "shares": 0,
-        "at": "2026-11-27T08:31:43+00:00"
+        "at": "2026-11-27T17:00:26+00:00"
       },
       "h24": {
         "views": 102,
@@ -5577,6 +5578,14 @@
       },
       "h72": {
         "views": 122,
+        "likes": 6,
+        "replies": 8,
+        "reposts": 0,
+        "quotes": 0,
+        "shares": 0
+      },
+      "h168": {
+        "views": 128,
         "likes": 6,
         "replies": 8,
         "reposts": 0,
@@ -5598,13 +5607,13 @@
       "has_photo": true,
       "scheduled": true,
       "latest": {
-        "views": 237,
+        "views": 239,
         "likes": 11,
         "replies": 14,
         "reposts": 0,
         "quotes": 0,
         "shares": 0,
-        "at": "2026-11-27T08:31:43+00:00"
+        "at": "2026-11-27T17:00:25+00:00"
       },
       "h24": {
         "views": 209,
@@ -5637,13 +5646,13 @@
       "has_photo": true,
       "scheduled": true,
       "latest": {
-        "views": 134,
+        "views": 136,
         "likes": 6,
         "replies": 4,
         "reposts": 0,
         "quotes": 0,
         "shares": 0,
-        "at": "2026-11-27T08:31:43+00:00"
+        "at": "2026-11-27T17:00:25+00:00"
       },
       "h24": {
         "views": 109,
@@ -5676,13 +5685,13 @@
       "has_photo": true,
       "scheduled": true,
       "latest": {
-        "views": 184,
+        "views": 186,
         "likes": 9,
         "replies": 8,
         "reposts": 0,
         "quotes": 0,
         "shares": 0,
-        "at": "2026-11-27T08:31:43+00:00"
+        "at": "2026-11-27T17:00:24+00:00"
       },
       "h24": {
         "views": 167,
@@ -5715,18 +5724,26 @@
       "has_photo": true,
       "scheduled": true,
       "latest": {
-        "views": 176,
+        "views": 177,
         "likes": 9,
         "replies": 8,
         "reposts": 0,
         "quotes": 0,
         "shares": 0,
-        "at": "2026-11-27T08:31:42+00:00"
+        "at": "2026-11-27T17:00:24+00:00"
       },
       "h24": {
         "views": 149,
         "likes": 9,
         "replies": 7,
+        "reposts": 0,
+        "quotes": 0,
+        "shares": 0
+      },
+      "h72": {
+        "views": 177,
+        "likes": 9,
+        "replies": 8,
         "reposts": 0,
         "quotes": 0,
         "shares": 0
@@ -5746,13 +5763,13 @@
       "has_photo": false,
       "scheduled": true,
       "latest": {
-        "views": 167,
+        "views": 169,
         "likes": 9,
         "replies": 9,
         "reposts": 0,
         "quotes": 0,
         "shares": 0,
-        "at": "2026-11-27T08:31:42+00:00"
+        "at": "2026-11-27T17:00:24+00:00"
       },
       "h24": {
         "views": 146,
@@ -5777,13 +5794,21 @@
       "has_photo": true,
       "scheduled": true,
       "latest": {
-        "views": 206,
-        "likes": 12,
+        "views": 229,
+        "likes": 13,
         "replies": 9,
         "reposts": 1,
         "quotes": 0,
         "shares": 1,
-        "at": "2026-11-27T08:31:42+00:00"
+        "at": "2026-11-27T17:00:23+00:00"
+      },
+      "h24": {
+        "views": 229,
+        "likes": 13,
+        "replies": 9,
+        "reposts": 1,
+        "quotes": 0,
+        "shares": 1
       }
     },
     "18116476103173215": {
@@ -5800,15 +5825,15 @@
       "has_photo": true,
       "scheduled": true,
       "latest": {
-        "views": 0,
-        "likes": 0,
-        "replies": 4,
+        "views": 140,
+        "likes": 7,
+        "replies": 7,
         "reposts": 0,
         "quotes": 0,
         "shares": 0,
-        "at": "2026-11-27T08:31:42+00:00"
+        "at": "2026-11-27T17:00:23+00:00"
       }
     }
   },
-  "updated_at": "2026-11-27T08:31:44+00:00"
+  "updated_at": "2026-11-27T17:00:27+00:00"
 }
