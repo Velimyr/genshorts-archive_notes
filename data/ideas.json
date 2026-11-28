@@ -5338,7 +5338,7 @@
       ],
       "status": "approved",
       "thread": {
-        "status": "none",
+        "status": "requested",
         "file": null
       },
       "script": {
@@ -5362,6 +5362,10 @@
         {
           "at": "2026-11-04T21:40:37+00:00",
           "event": "stream changed: small → big (малий і великий серйозний злито)"
+        },
+        {
+          "at": "2026-11-28T12:15:22+00:00",
+          "event": "thread requested in telegram"
         }
       ]
     },
