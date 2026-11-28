@@ -6792,6 +6792,9 @@
     },
     "2321": {
       "kind": "menu"
+    },
+    "2322": {
+      "kind": "nav"
     }
   },
   "approved_threads": {
@@ -8449,8 +8452,16 @@
         "credit": "Тарас Шевченко / Wikimedia Commons, Public domain"
       },
       "approved_at": "2026-11-20T12:37:17+00:00",
-      "posted": false,
-      "publish_at": "2026-11-28T12:50:00+02:00"
+      "posted": true,
+      "publish_at": "2026-11-28T12:50:00+02:00",
+      "posted_ids": [
+        "18115010870237681",
+        "18110080166194600",
+        "17994904853861962",
+        "18149782870573767"
+      ],
+      "posted_at": "2026-11-28T10:51:26+00:00",
+      "permalink": "https://www.threads.com/@velimyr/post/DgSFHfqIYBE"
     },
     "2026-10-16-06": {
       "sha": "46757a1acc04121b",
@@ -9495,8 +9506,8 @@
   "report_week": "2026-44",
   "dashboard": {
     "mid": 2243,
-    "sha": "e83e211b6e5ba88a",
-    "at": "2026-11-28T10:00:27+00:00"
+    "sha": "53fbefea79af4dcf",
+    "at": "2026-11-28T10:51:27+00:00"
   },
   "token_reminded": "2026-47"
 }
